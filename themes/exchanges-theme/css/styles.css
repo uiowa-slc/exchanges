@@ -1,0 +1,15 @@
+.singleColumn {
+	width: 100%;
+}
+
+.twoColumn {
+	width: 45%;
+	margin: 10px;
+	float: left;
+}
+
+.threeColumn {
+	width: 30%; 
+	margin: 10px;
+	float: left;
+}
