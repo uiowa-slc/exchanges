@@ -10,13 +10,15 @@ class Issue extends DataObjectAsPageHolder {
 	
 	public static $has_one = array(
 	
-		"Emblem" => "Image",
+		"Emblem" => "Image"
 	
 	);
 	
+	
 	public static $many_many = array(	
 		"Article" => "Article",
-		'TestObjects' => 'TestObject'
+		"LetterFromEditor" => "LetterFromEditor", 
+		"TableOfContents" => 'TableOfContents'
 	);
 	
 	
@@ -51,11 +53,21 @@ class Issue extends DataObjectAsPageHolder {
 	   new GridFieldFilterHeader()
 );
 */
-
+		
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
 		
 		$gridField = new GridField('Article', 'Articles', $this->Article(), $gridFieldConfig);
 		$fields->addFieldToTab("Root.Main", $gridField);
+				
+		$gridFieldConfigLetter = GridFieldConfig_RelationEditor::create();		
+		$gridFieldLetter = new GridField('LetterFromEditor', 'Letter From Editor', $this->LetterFromEditor(), $gridFieldConfigLetter);
+		$fields->addFieldToTab("Root.Main", $gridFieldLetter);
+		
+		$gridFieldConfigTOC = GridFieldConfig_RelationEditor::create();
+		$gridFieldTOC = new GridField('TableOfContents', 'Table Of Contents', $this->TableOfContents(), $gridFieldConfigTOC);		
+		$fields->addFieldToTab("Root.Main", $gridFieldTOC);
+		
+		
 		
 		/*
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
@@ -121,6 +133,24 @@ class Issue_Controller extends  DataObjectAsPageHolder_Controller {
 		$set = DataObjectAsPage::get();
 		return $set;
 	}
+	
+	public function getNewsItems() {
+		$holder = NewsPage::get()->limit(5);
+		return $holder;
+	}
+	
+	public function getLetterEditor(){
+		$letter = $this->LetterFromEditor()->First();
+		return $letter;
+	}
+	
+	public function getTOC(){
+		$toc = $this->TableOfContents()->First();
+		return $toc;
+	}
+	
+	
+	
 	/*
 	public function contributorItems(){
 	

@@ -37,6 +37,8 @@
 		 <link href="{$ThemeDir}/css/bootstrap.css" rel="stylesheet">
     <link href="{$ThemeDir}/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="{$ThemeDir}/css/style.css" rel="stylesheet">
+    
+     <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic|Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
 
 <body data-spy="scroll">
 <!--[if lte IE 6]><div id="IE6"> <![endif]-->
@@ -45,17 +47,17 @@
 <!--[if lte IE 9]><div id="IE9"> <![endif]-->
 
 
-	<% include DivisionBar %>
+	<!--<% include DivisionBar %>-->
 	
 	<% include Header %>
 	
-	<div class="container typography" id="layout">
+
 	
 	  $Layout
 	  	
 	  <hr>
 	
-	</div> <!-- /container -->
+ 
 	
 
 	<% if SiteConfig.GACode %>
