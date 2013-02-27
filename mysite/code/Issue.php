@@ -4,13 +4,15 @@ class Issue extends DataObjectAsPageHolder {
 	public static $db = array(
 	
 		"IssueDate" => "Date",
-		"Content2" => "HTMLText"
+		"IssueNumber" => "Text",
+		"TableOfContents" => "HTMLText"
 	
 	);
 	
 	public static $has_one = array(
 	
 		"Emblem" => "Image"
+		
 	
 	);
 	
@@ -18,7 +20,6 @@ class Issue extends DataObjectAsPageHolder {
 	public static $many_many = array(	
 		"Article" => "Article",
 		"LetterFromEditor" => "LetterFromEditor", 
-		"TableOfContents" => 'TableOfContents'
 	);
 	
 	
@@ -29,12 +30,16 @@ class Issue extends DataObjectAsPageHolder {
 		
 		$fields->removeByName('Metadata');
 		
-		$fields->addFieldToTab("Root.Main", new HTMLEditorField("Content2"));
+		$fields->addFieldToTab("Root.Main", new HTMLEditorField("TableOfContents"));
 		$fields->addFieldToTab("Root.Main", new UploadField("Emblem"));
+		
 		$fields->addFieldToTab("Root.Main", $dateField = new DateField("IssueDate"));
 		$dateField->setConfig('dateformat', 'MM/dd/YYYY');
         $dateField->setConfig('showcalendar', true);
         
+		$fields->addFieldToTab("Root.Main", new TextField("IssueNumber"));
+		
+
         
         
 		//$fields->addFieldToTab("Root.Style", new TextareaField("CustomStyle","Custom CSS:",32));
@@ -58,15 +63,19 @@ class Issue extends DataObjectAsPageHolder {
 		
 		$gridField = new GridField('Article', 'Articles', $this->Article(), $gridFieldConfig);
 		$fields->addFieldToTab("Root.Main", $gridField);
+		
+		
 				
-		$gridFieldConfigLetter = GridFieldConfig_RelationEditor::create();		
+		$gridFieldConfigLetter = GridFieldConfig_RelationEditor::create();	
+		
 		$gridFieldLetter = new GridField('LetterFromEditor', 'Letter From Editor', $this->LetterFromEditor(), $gridFieldConfigLetter);
 		$fields->addFieldToTab("Root.Main", $gridFieldLetter);
 		
+		/*
 		$gridFieldConfigTOC = GridFieldConfig_RelationEditor::create();
 		$gridFieldTOC = new GridField('TableOfContents', 'Table Of Contents', $this->TableOfContents(), $gridFieldConfigTOC);		
 		$fields->addFieldToTab("Root.Main", $gridFieldTOC);
-		
+		*/
 		
 		
 		/*
@@ -109,6 +118,17 @@ public function listContributors(){
 		public function listArticles(){
 			return $this->Article();
 		}
+		
+		public function getYear(){
+			//$date = (string) $this->IssueDate;
+			$dateArray = explode("-", $this->IssueDate);
+
+			if (isset($dateArray[0])){
+				$year = $dateArray[0]; 
+			}
+			return $year;
+		}
+
 	
 	
 }
@@ -149,6 +169,7 @@ class Issue_Controller extends  DataObjectAsPageHolder_Controller {
 		return $toc;
 	}
 	
+
 	
 	
 	/*

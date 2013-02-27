@@ -1,118 +1,40 @@
-<div class="container" id="content">
-	
 
+	<div class="container" id="content">
+	
 		<div class="row">
 		
       		<div class="span8 column">
-	      		<div id="featured">
-	      		<div id="emblem">
+      			<div id="emblem">
+      			
 	      			<span id="issue_num">Issue #14 for <span id="year">2013</span></span>
 	      			<span id="issue_name">Current Issue</span>
-	      			
-	      			<% loop getLetterEditor %>
-	      			
-		      			<h1>Letter From the Editor</h1>
-		      			<p>$Content.Summary(300)</p>
-		      			<a href="$Link">Read more</a>
-	      			<% end_loop %>
-	      			
-	      		</div>
-	      		</div>
-	      		
-	      		<% with getTOC %>
-	      	
-	      		<a href="$Link">
-	      		<div id="gotoissue">
-	      			<div>
-	      				<span>go to the <strong>Table of Contents</strong></span>
-	      			</div>
-	      		</div>
-	      		</a>
-	      		
-	      		<% end_with %>
-	      		
-	      		<h1 class="band">News</h1>
-
-	      		<% loop getNewsItems %>
-
-	      		<div class="blog_post">
-	      			<div class="postheader">
-	      				<h1>$Title</h1>
-	      				<span class="postdate">$Date</span>
-	      			</div>
-	      			<div class="img"></div>
-	      				<p>$Content.Summary(100)</p>
-	      		</div>
-	      		
-	      		<% end_loop %>
-
-	      	</div>
-
-
-	      	<% include PastIssues %>
-	      	
+      			<h1 class="toc">Table of Contents</h1>
+      			$TableOfContents
+				
+      		</div>
+      		</div>
+		
+      		<div class="span4 column">
+      			<h1 class="band">Past Issues</h1>
+      			<p><a href="#">Hackwork - Spring 2010</a></p>
+      			<p><a href="#">Exocity - Winter 2009</a></p>
+      			<p><a href="#">Mirrors and Masks - Spring 2009</a></p>
+      			<p><a href="#">Roots & Branches - Fall 2008</a></p>
+      			<p><a href="#">Silence & Song - Spring 2008</a></p>
+      			<p><a href="#">Black & White - Winter 2008</a></p>
+      			<p><a href="#">Sweet & Sour - Spring 2007</a></p>
+      			<p><a href="#">Saints & Sinners - Winter 2006</a></p>
+      			<p><a href="#">Bread & Circuses - Fall 2006</a></p>
+      			<p><a href="#">Beasts & Machines - Spring 2005</a></p>
+      			<p><a href="#">Madness & Civilization - Summer 2004</a></p>
+      			<p><a href="#">Sex & Death - Spring 2004</a></p>
+      			<p><a href="#">City & Country - Fall 2003</a></p>
+      			
+      		</div>
+      		
 		</div>
-</div> <!-- /container -->
 
-
-	
-	<!--
-	
-	<div id="toc"> $Content </div>
-	<div id="toc_extra">
-		<% if ContentsImage %>
-		$ContentsImage
-		<% end_if %>
-	</div>
-	<!--
-	<div id="emblem">
-		<% if Emblem %>
-			$Emblem
-		<% end_if %>
-	
-	</div>
-	
-	-->
-	
-	<!--
-	
-	BEFORE ITEMS 
-	 <% loop Items %>                <li>
-                <h2>$Title AAA</h2>
-                <p>$Content.FirstParagraph</p>
-                <a href="$Link">View</a>
-            </li>
-            $Debug
-   <% end_loop %>
-   
-   -->
-   
-   <!--
-   
-   CONTRIBUTORS ASSOCIATED WITH THIS ISSUE:<br><br>
-   <% loop listContributors %>
-   		Link = $Link<br><br>
-   <% end_loop %>
-   
-   -->
-   <br><br><br>
-   
-   <!--
-   ARTICLES ASSOCIATED WITH THIS ISSUE:<br><br>
-   <% loop listArticles %>
-   		Link = $Link<br><br>
-   		
-   <% end_loop %>
-   
-  dumbTest = $dumbTest
-  supperTest = $superTest
- 
-  <% loop getDataObjectAsPage %>
-  	$Debug
-  <% end_loop %>
-  
-  -->
-  
+    </div> <!-- /container -->
  
   
  

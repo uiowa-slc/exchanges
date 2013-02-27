@@ -11,12 +11,6 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	
-	<style type="text/css">
-	  body {
-	    /* padding-top: 60px; */ /* Required for top-fixed nav in smaller screen sizes  */
-	    padding-bottom: 20px;
-	  }
-	</style>
 	
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -47,7 +41,7 @@
 <!--[if lte IE 9]><div id="IE9"> <![endif]-->
 
 
-	<!--<% include DivisionBar %>-->
+
 	
 	<% include Header %>
 	
@@ -55,7 +49,6 @@
 	
 	  $Layout
 	  	
-	  <hr>
 	
  
 	

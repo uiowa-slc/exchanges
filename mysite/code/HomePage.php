@@ -2,12 +2,35 @@
 class HomePage extends ExpressHomePage {
 
 	public static $db = array(
+
+	
 	);
 
 	public static $has_one = array(
+		'FeaturedIssue' => 'SiteTree'
 	);
+	
+	function getCMSFields() {
+	
+		
+		$fields = parent::getCMSFields();
+		
+		$fields->removeByName('Content');
+		$fields->removeByName('LearnMorePageID'); //inherited from ExpressHomePage, I guess
+		$fields->removeByName('Metadata');
+		$fields->removeByName('Carousel');
+		$fields->removeByName('Quicklinks');
+		$fields->removeByName('Features');
+		
+		$treedropdownfield = new TreeDropdownField("FeaturedIssueID", "Choose an issue to feature on the right:", "SiteTree");
+		$fields->addFieldToTab('Root.Main', $treedropdownfield);
+		
+		return $fields;
+	}	
 
 }
+
+
 class HomePage_Controller extends ExpressHomePage_Controller {
 
 	/**
@@ -40,9 +63,30 @@ class HomePage_Controller extends ExpressHomePage_Controller {
 		Requirements::themedCSS('form'); 
 	}
 	
+	public function getDataObjectAsPage(){
+		$set = DataObjectAsPage::get();
+		return $set;
+	}
+	
 	public function getNewsItems() {
 		$holder = NewsPage::get()->limit(5);
 		return $holder;
 	}
+	
+	
+	public function getLetterEditor(){
+	
+	
+		$siteTreeID = $this->FeaturedIssue()->ID; 
+		$issue = Issue::get()->byID($siteTreeID);		
+		$editorLetter = $issue->LetterFromEditor()->First();
+		return $editorLetter;
+	}
+	
+	public function getFeaturedIssue(){
+		return $this->FeaturedIssue();
+	}
+
+	
 
 }

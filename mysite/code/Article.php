@@ -4,6 +4,9 @@ class Article extends DataObjectAsPage {
  static $db = array(
         'Date' => 'Date',
         'Author' => 'Text',
+        'Title' => 'Text',
+        'TranslatedTitle' => 'Text',
+        'Translator' => 'Text',
         "Content2" => "HTMLText",
 	    "Content3" => "HTMLText",
 		"TranslatorNote" => "HTMLText",
@@ -46,8 +49,12 @@ class Article extends DataObjectAsPage {
         $dateField->setConfig('dateformat', 'MM/dd/YYYY');
         $dateField->setConfig('showcalendar', true);
  
-        $fields->addFieldToTab('Root.Main', new UploadField('Image', 'Image'));
-        $fields->addFieldToTab('Root.Main', new TextField('Author',' Author Name'));
+       
+        $fields->addFieldToTab('Root.Main', new TextField('Author',' Author of original work'));
+        $fields->addFieldToTab('Root.Main', new TextField('Title',' Title of original work'));
+        $fields->addFieldToTab('Root.Main', new TextField('Translator',' Translator (if applicable)'));
+        $fields->addFieldToTab('Root.Main', new TextField('TranslatedTitle',' Translated Title (if applicable)'));
+        
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'First Column'));
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Second Column (if necessary)'));
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content3', 'Third Column (if necessary)'));
@@ -99,6 +106,11 @@ class Article extends DataObjectAsPage {
 	
 	public function getContributor(){
 		return "HIIII";
+	}
+	
+	function getParent(){
+		//print_r($this->Issue()->First());
+		return $this->Issue()->First();
 	}
 	
 }
