@@ -18,7 +18,7 @@
 	      text-align: center;
       }
       p{
-	      text-indent: 30px;
+	      /*text-indent: 30px;*/
       }
       .container{
 	      background: none;
@@ -253,7 +253,6 @@
 	      background-color: none;
 	      height: 100%;
 	      padding: 10px;
-	      padding-top: 16px;
 	      float: left;
 	      cursor: pointer;
 	      border-left: 1px solid rgba(255,255,255,.1);

@@ -9,16 +9,21 @@
 	      		
 	      			<% with FeaturedIssue %>
 	      			
-		      			<span id="issue_num">Issue #$IssueNumber for <span id="year">$getYear</span></span>
-		      			<span id="issue_name">Current Issue</span>
+		      			<span id="issue_num">Issue #$IssueNumber <% if IssueDate %> for <span id="year">$getYear</span><% end_if %></span>
+		      			<span id="issue_name">$Title</span>
 		      			
 		      		<% end_with %>
 	      			
 	      			<% loop getLetterEditor %>
-	      			
+	      				
 		      			<h1>Letter From the Editor</h1>
 		      			<p>$Content.Summary(300)</p>
+		      			
 		      			<a href="$Link">Read more</a>
+		      			
+		      			<% with getFeaturedIssue %>
+
+		      			<% end_with %> 
 	      			<% end_loop %>
 	      			
 	      		</div>
@@ -47,6 +52,7 @@
 	      			</div>
 	      			<div class="img"></div>
 	      				<p>$Content.Summary(100)</p>
+	      				<a href="{$Link}">Read More</a>
 	      		</div>
 	      		
 	      		<% end_loop %>

@@ -3,10 +3,10 @@ class Article extends DataObjectAsPage {
  
  static $db = array(
         'Date' => 'Date',
-        'Author' => 'Text',
-        'Title' => 'Text',
+        'Author' => 'HTMLText',
+        'UntranslatedTitle' => 'Text',
         'TranslatedTitle' => 'Text',
-        'Translator' => 'Text',
+        'Translator' => 'HTMLText',
         "Content2" => "HTMLText",
 	    "Content3" => "HTMLText",
 		"TranslatorNote" => "HTMLText",
@@ -18,12 +18,16 @@ class Article extends DataObjectAsPage {
 
  );
  
-
+ public static $plural_name = 'Articles';
  
  static $belongs_many_many = array(
- 	'Contributor'=> 'Contributor', 
+ 	'Contributor'=> 'Contributor',
  	 'Issue' => 'Issue'
  );
+ 
+  public static $has_many = array(
+    "TranslatorNote" => "TranslatorNote",
+  );
 
  
  static $defaults = array ('ProvideComments' => '1',
@@ -41,6 +45,7 @@ class Article extends DataObjectAsPage {
         
         $fields->removeByName('Contributor');
 		$fields->removeByName('Issue');
+		$fields->removeByName('Image');
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Content');
 		
@@ -50,15 +55,15 @@ class Article extends DataObjectAsPage {
         $dateField->setConfig('showcalendar', true);
  
        
-        $fields->addFieldToTab('Root.Main', new TextField('Author',' Author of original work'));
-        $fields->addFieldToTab('Root.Main', new TextField('Title',' Title of original work'));
-        $fields->addFieldToTab('Root.Main', new TextField('Translator',' Translator (if applicable)'));
+        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Author',' Author of original work'));
+        $fields->addFieldToTab('Root.Main', new TextField('UntranslatedTitle',' Title of original work'));
+        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Translator',' Translator (if applicable)'));
         $fields->addFieldToTab('Root.Main', new TextField('TranslatedTitle',' Translated Title (if applicable)'));
         
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'First Column'));
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Second Column (if necessary)'));
-        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content3', 'Third Column (if necessary)'));
-        $fields->addFieldToTab('Root.Main', new HTMLEditorField('TranslatorNote', 'Translator Note'));
+        //$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content3', 'Third Column (if necessary)'));
+        //$fields->addFieldToTab('Root.Main', new HTMLEditorField('TranslatorNote', 'Translator Note'));
         
         //$fields->removeFieldFromTab('Root.Main', array('Issues'));
         //$fields->removeFieldFromTab('Root.Content.Metadata', array('Content2'));
@@ -72,6 +77,13 @@ class Article extends DataObjectAsPage {
 		
 		$newGridField = new GridField('Contributor', 'Contributors', $this->Contributor(), $gridFieldConfig);
 		$fields->addFieldToTab('Root.Main', $newGridField);
+		
+		$gridFieldConfigTrans = GridFieldConfig_RelationEditor::create();
+		
+		$gridFieldTrans = new GridField('TranslatorNote', 'Translator Note', $this->TranslatorNote(), $gridFieldConfigTrans);
+		$fields->addFieldToTab('Root.Main', $gridFieldTrans);
+		
+		$fields->removeByName('Content3');
 
      
         return $fields;
@@ -86,7 +98,7 @@ class Article extends DataObjectAsPage {
 		$Content3 = $this->Content3;
 		$return = '';
 		
-		
+		/*
 		if ($Content){
 			if ($Content2){
 				if ($Content3){
@@ -100,6 +112,16 @@ class Article extends DataObjectAsPage {
 				$return = 'oneColumnPage';
 			}			
 		}
+		*/
+		
+		if ($Content){
+			if ($Content2){
+				$return = 'twoColumnPage';
+			}
+			else {
+				$return = 'oneColumnPage';
+			}	
+		}	
 		
 		return $return;
 	}

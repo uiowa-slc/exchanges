@@ -72,6 +72,7 @@ class HomePage_Controller extends ExpressHomePage_Controller {
 		$holder = NewsPage::get()->limit(5);
 		return $holder;
 	}
+
 	
 	
 	public function getLetterEditor(){

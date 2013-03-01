@@ -16,6 +16,7 @@ class Issue extends DataObjectAsPageHolder {
 	
 	);
 	
+	 public static $plural_name = 'Issues';
 	
 	public static $many_many = array(	
 		"Article" => "Article",
@@ -29,15 +30,16 @@ class Issue extends DataObjectAsPageHolder {
 		$fields = parent :: getCMSFields();
 		
 		$fields->removeByName('Metadata');
+		$fields->removeByName('Content');
 		
-		$fields->addFieldToTab("Root.Main", new HTMLEditorField("TableOfContents"));
-		$fields->addFieldToTab("Root.Main", new UploadField("Emblem"));
+		$fields->addFieldToTab("Root.Main", new HTMLEditorField("TableOfContents", "Table of contents"));
+		$fields->addFieldToTab("Root.Main", new UploadField("Emblem", "Unique image for issue"));
 		
-		$fields->addFieldToTab("Root.Main", $dateField = new DateField("IssueDate"));
+		$fields->addFieldToTab("Root.Main", $dateField = new DateField("IssueDate", "Issue date"));
 		$dateField->setConfig('dateformat', 'MM/dd/YYYY');
         $dateField->setConfig('showcalendar', true);
         
-		$fields->addFieldToTab("Root.Main", new TextField("IssueNumber"));
+		$fields->addFieldToTab("Root.Main", new TextField("IssueNumber", "Issue number"));
 		
 
         

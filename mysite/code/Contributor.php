@@ -3,6 +3,7 @@ class Contributor extends DataObjectAsPage {
 
  static $db = array(
         'Name' => 'Text',
+        
     );
     
  static $has_one = array( 
@@ -14,18 +15,24 @@ class Contributor extends DataObjectAsPage {
  public static $many_many = array(
  	'Articles' => 'Article'
  );   
+ 
+ static $listing_page_class = 'Issue'; 
     
    public function getCMSFields() {
         $fields = parent::getCMSFields();
 
         $fields->removeByName('Content');
         $fields->removeByName('Metadata');
+        $fields->removeByName('Image');
+        $fields->removeByName('Articles');
      
         $fields->addFieldToTab('Root.Main', new TextField('Name'));
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Biographical Details'));
      
         return $fields;
     }
+    
+   
     
       //SEE NOTE:
       

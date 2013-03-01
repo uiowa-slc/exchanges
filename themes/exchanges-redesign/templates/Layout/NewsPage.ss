@@ -1,20 +1,34 @@
-<div class="row">
+	<div class="container" id="content">
+	
+	
+		
+			<div class="row" id="backto">
+			
+				<div>
+					<span>$Title</span>
+				</div>
+			
+			</div>
+		
+			<div class="row">
+			
+	      		<div class="span8 column">
+	      			<p>
+	      				$Content
+	      			</p>
+	
+	      		</div>
+	      		<!--
+	      		<div class="span4 column">
+	      			<h1 class="band">Table of Contents</h1>
+	      			<% with getParent %>
+	      				$TableOfContents
+	      			<% end_with %>
+	
+	      		</div>
+	      		-->
+			</div>
+			
 
-	<section class="span9">
-		<article>
-			<header class="page-header">
-				<h1><span class="hidden">$SiteConfig.Title | </span>$Title</h1>
-			</header>			
-			<% include PrintShare %>
-			<p><% if Category %><a class="label label-inverse" href="">$Category.Title</a><% end_if %> <time datetime="$Date">$Date.nice</time></p>
-			$Content
-			$Form
-			$PageComments
-		</article>
-	</section>
-	<div class="span3">
-		<% with Parent %>
-			<% include NewsCategories %>
-		<% end_with %>
-	</div>
-</div>
+	
+	    </div> <!-- /container -->
