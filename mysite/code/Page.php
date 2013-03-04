@@ -85,6 +85,11 @@ class Page_Controller extends ContentController {
 	
 	}
 	
+	public function getCurrentIssue(){
+		$currentIssue = HomePage::get()->First();
+		return $currentIssue->FeaturedIssue();
+	}
+	
 	public function getEmblem(){
 		$two = 'one';
 		$page = Director::get_current_page();

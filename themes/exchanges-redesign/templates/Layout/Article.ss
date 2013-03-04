@@ -67,23 +67,25 @@
 		</div>
 		
 		<div class="row" id="to">
-			<a href="one-col.html">
-			<div>
-				<span>Notes on Translation</span>
-			</div>
-			</a>
+			<% with getTranslatorNote %>
+				<a href="{$Link}">
+				<div>
+					<span>Notes on Translation</span>
+				</div>
+				</a>
+			<% end_with %>
 		</div>
 	
 		<div class="row">
 		
       		<div class="span6 column">
-      			<span class="author"><a href="#">$Author</a></span>
+      			<span class="author">$Author</span>
 <h1>$TranslatedTitle</h1>
 $Content
 	      	</div>
 
       		<div class="span6 column">
-      			<span class="author"><a href="#">$Translator</a></span>
+      			<span class="author">$Translator</span>
 <h1>$UntranslatedTitle</h1>
 $Content2
       		</div>

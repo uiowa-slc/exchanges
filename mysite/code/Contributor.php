@@ -32,6 +32,13 @@ class Contributor extends DataObjectAsPage {
         return $fields;
     }
     
+    public function getTOC(){
+	    $test = $this->Articles()->First()->Issue()->First();
+	    return $test;
+    }
+    
+    
+    
    
     
       //SEE NOTE:

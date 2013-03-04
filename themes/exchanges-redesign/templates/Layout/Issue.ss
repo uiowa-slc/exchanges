@@ -4,10 +4,12 @@
 		<div class="row">
 		
       		<div class="span8 column">
-      			<div id="emblem">
+      			<div id="emblem" style="background-image: {$Emblem.URL}>
       			
 	      			<span id="issue_num">Issue #14 for <span id="year">2013</span></span>
 	      			<span id="issue_name">Current Issue</span>
+	      			
+	      			
       			<h1 class="toc">Table of Contents</h1>
       			$TableOfContents
 				
@@ -33,8 +35,12 @@
       		</div>
       		
 		</div>
+		
+		
 
     </div> <!-- /container -->
  
-  
+  <script>
+
+  </script>
  

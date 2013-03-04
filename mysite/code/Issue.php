@@ -162,7 +162,7 @@ class Issue_Controller extends  DataObjectAsPageHolder_Controller {
 	}
 	
 	public function getLetterEditor(){
-		$letter = $this->LetterFromEditor()->First();
+		$letter = LetterFromEditor::get()->First();
 		return $letter;
 	}
 	
@@ -170,6 +170,9 @@ class Issue_Controller extends  DataObjectAsPageHolder_Controller {
 		$toc = $this->TableOfContents()->First();
 		return $toc;
 	}
+	
+	
+	
 	
 
 	

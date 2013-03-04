@@ -87,6 +87,12 @@ class HomePage_Controller extends ExpressHomePage_Controller {
 	public function getFeaturedIssue(){
 		return $this->FeaturedIssue();
 	}
+	
+	public function getFeaturedSegment(){
+		return $this->FeaturedIssue()->URLSegment;
+	}
+	
+	
 
 	
 

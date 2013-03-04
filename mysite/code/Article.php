@@ -130,6 +130,10 @@ class Article extends DataObjectAsPage {
 		return "HIIII";
 	}
 	
+	public function getTranslatorNote(){
+		return $this->TranslatorNote()->First();
+	}
+	
 	function getParent(){
 		//print_r($this->Issue()->First());
 		return $this->Issue()->First();

@@ -19,11 +19,8 @@
 		      			<h1>Letter From the Editor</h1>
 		      			<p>$Content.Summary(300)</p>
 		      			
-		      			<a href="$Link">Read more</a>
+		      			<a href="{$BaseHref}{$Top.getFeaturedSegment}/show/{$URLSegment}">Read more</a>
 		      			
-		      			<% with getFeaturedIssue %>
-
-		      			<% end_with %> 
 	      			<% end_loop %>
 	      			
 	      		</div>
@@ -108,8 +105,6 @@
 		</div>
 		</div>
 
-
-	
 	<!--
 	
 	<div id="toc"> $Content </div>

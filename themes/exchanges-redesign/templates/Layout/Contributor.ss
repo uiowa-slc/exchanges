@@ -19,17 +19,19 @@
 	      			</p>
 	
 	      		</div>
-	      		<!--
+	      		
 	      		<div class="span4 column">
 	      			<h1 class="band">Table of Contents</h1>
-	      			<% with getParent %>
+	      			<% with getTOC %>
 	      				$TableOfContents
 	      			<% end_with %>
 	
 	      		</div>
-	      		-->
+	      		
 			</div>
 			
 		<% end_with %>
+		
+		
 	
 	    </div> <!-- /container -->
