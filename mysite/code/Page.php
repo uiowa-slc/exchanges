@@ -24,7 +24,7 @@ class Page_Controller extends ContentController {
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
 	 * permissions or conditions required to allow the user to access it.
 	 *
-	 * <code>
+	 * <code>ff
 	 * array (
 	 *     'action', // anyone can access this action
 	 *     'action' => true, // same as above
