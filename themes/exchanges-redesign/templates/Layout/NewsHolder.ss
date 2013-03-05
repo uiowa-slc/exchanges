@@ -1,36 +1,40 @@
-<div class="row">
-
-	<section class="span9 resultsList">
-		<header class="page-header">
-			<% include PrintShare %>
-			<h1><span class="hidden">$SiteConfig.Title | </span>$Title</h1>
-		</header>
-		$Content
+<div class="container" id="content">
+			
+	<div class="row" id="backto">
 	
-		<% if NewsItems %>			
-			<header class="resultsHeader">
-				<h2 class="pull-left">Latest in <% if Category %>$Category.Title<% else %>$Title<% end_if %></h2>
-				<p class="pull-right">Displaying $NewsItems.FirstItem - $NewsItems.LastItem of $NewsItems.count</p>
-			</header>
-		
-			<% loop NewsItems %>
-				<article class="$EvenOdd">
-					<% include NewsItem %>
-				</article>
-			<% end_loop %>
-
-			<% with NewsItems %>
-				<% include Pagination %>
-			<% end_with %>
-
-		<% end_if %>
-		
-		$Form
-		$PageComments
-
-	</section>
+		<div>
+			<span>$Title</span>
+		</div>
 	
-	<div class="span3">
-		<% include NewsCategories %>
 	</div>
-</div>
+
+	<div class="row">
+	
+  		<div class="span8 column">
+  			
+      		<% loop getNewsItems(3) %>
+
+      		<div class="blog_post">
+      			<div class="postheader">
+      				<h1><a href="$Link">$Title</a></h1>
+      				<span class="postdate">$Date.NiceUs</span>
+      			</div>
+      			<div class="img"></div>
+      				<p>$Content.Summary(100)</p>
+      				<a href="{$Link}">Read More</a>
+      		</div>
+      		
+      		
+      		<% end_loop %>
+
+  		</div>
+  			
+  		<% include PastIssues %>
+  		
+	</div>
+	
+	
+
+</div> <!-- /container -->
+	    
+	    

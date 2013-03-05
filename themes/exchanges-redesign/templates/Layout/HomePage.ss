@@ -10,9 +10,9 @@
 	      			<% with FeaturedIssue %>
 	      			
 		      			<span id="issue_num">$IssueDate</span></span>
-		      			<span id="issue_name"><a href="{$Link}">$Title</a></span>
+		      			<span id="issue_name"><a class="titleLink" href="{$Link}">$Title</a></span>
 		      			
-		      			<h1><a href="{$Link}letter">Letter From the Editor</a></h1>
+		      			<h1><a class="titleLink" href="{$Link}letter">Letter From the Editor</a></h1>
 		      			<p>$LetterFromEditor.Summary(300)</p>
 		      			
 		      			<a href="{$Link}letter">Read the letter from the editor</a>

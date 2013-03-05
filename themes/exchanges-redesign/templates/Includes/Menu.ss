@@ -29,6 +29,6 @@
 			</a>
 			<a href="issues/">
 			<div class="nav-link">
-				<span>Issue Archive</span>
+				<span>Archive</span>
 			</div>
 			</a>
