@@ -1,7 +1,4 @@
 
-<% with Item %>
-
-
      
 <% if $ArticleFormat = 'oneColumnPage' %>
 
@@ -97,73 +94,3 @@ $Content2
 		</div>
 
     </div> <!-- /container -->
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-<!--	
-<% else_if $ArticleFormat = 'threeColumnPage' %>
-
-	<div class="threeColumn">
-
-		$Content IS KING
-
-	</div>
-	
-	<div class="threeColumn">
-
-		$Content2
-
-	</div>
-	
-	<div class="threeColumn">
-
-		$Content3
-
-	</div>		
-
-<% end_if %>
-
-<% end_with %>
-
-
-
-
-
-
-<div id="Breadcrumbs">
-	<p>$Breadcrumbs</p>
-</div>
-		
-<% if Emblem %>
-	EMBLEM = $Emblem 
-<% end_if %> 
-
-<div id="contributor">
-
-<% with Item %>
-
-	<% loop getContributor %>
-	
-		Name: $Name <br>
-		Biography: $Content <br>
-		Image: $Image <br>
-		
-	
-	
-			
-	<% end_loop %>
-	
-<% end_with %> 
-
-</div>
-	
-
-</div>-->

@@ -1,5 +1,5 @@
 <?php
-class Contributor extends DataObjectAsPage {
+class Contributor extends DataObject {
 
  static $db = array(
         'Name' => 'Text',
@@ -13,10 +13,9 @@ class Contributor extends DataObjectAsPage {
  );
  
  public static $many_many = array(
- 	'Articles' => 'Article'
+ 
  );   
  
- static $listing_page_class = 'Issue'; 
     
    public function getCMSFields() {
         $fields = parent::getCMSFields();
@@ -32,17 +31,5 @@ class Contributor extends DataObjectAsPage {
         return $fields;
     }
     
-    public function getTOC(){
-	    $test = $this->Articles()->First()->Issue()->First();
-	    return $test;
-    }
-    
-    
-    
-   
-    
-      //SEE NOTE:
-      
-      //IS IT POSSIBLE THIS NEEDS TO BE LISTING_CLASS?  DOCUMENTATION IS UNCLEAR
-    //static $listing_page_class = 'Issue'; 
+
 }

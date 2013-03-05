@@ -12,16 +12,15 @@
 		      			<span id="issue_num">Issue #$IssueNumber <% if IssueDate %> for <span id="year">$getYear</span><% end_if %></span>
 		      			<span id="issue_name">$Title</span>
 		      			
-		      		<% end_with %>
+		      	
 	      			
-	      			<% loop getLetterEditor %>
 	      				
 		      			<h1>Letter From the Editor</h1>
-		      			<p>$Content.Summary(300)</p>
+		      			<p>$LetterFromEditor.Summary(300)</p>
 		      			
-		      			<a href="{$BaseHref}{$Top.getFeaturedSegment}/show/{$URLSegment}">Read more</a>
+		      			<a href="{$Link}letter">Read the letter from the editor</a>
 		      			
-	      			<% end_loop %>
+	      			<% end_with %>
 	      			
 	      		</div>
 	      		</div>
@@ -104,63 +103,4 @@
 		</div>
 		</div>
 		</div>
-
-	<!--
-	
-	<div id="toc"> $Content </div>
-	<div id="toc_extra">
-		<% if ContentsImage %>
-		$ContentsImage
-		<% end_if %>
-	</div>
-	<!--
-	<div id="emblem">
-		<% if Emblem %>
-			$Emblem
-		<% end_if %>
-	
-	</div>
-	
-	-->
-	
-	<!--
-	
-	BEFORE ITEMS 
-	 <% loop Items %>                <li>
-                <h2>$Title AAA</h2>
-                <p>$Content.FirstParagraph</p>
-                <a href="$Link">View</a>
-            </li>
-            $Debug
-   <% end_loop %>
-   
-   -->
-   
-   <!--
-   
-   CONTRIBUTORS ASSOCIATED WITH THIS ISSUE:<br><br>
-   <% loop listContributors %>
-   		Link = $Link<br><br>
-   <% end_loop %>
-   
-   -->
-   <br><br><br>
-   
-   <!--
-   ARTICLES ASSOCIATED WITH THIS ISSUE:<br><br>
-   <% loop listArticles %>
-   		Link = $Link<br><br>
-   		
-   <% end_loop %>
-   
-  dumbTest = $dumbTest
-  supperTest = $superTest
- 
-  <% loop getDataObjectAsPage %>
-  	$Debug
-  <% end_loop %>
-  
-  -->
-  
-
 

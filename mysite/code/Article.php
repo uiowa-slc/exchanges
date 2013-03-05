@@ -1,9 +1,9 @@
 <?php
-class Article extends DataObjectAsPage {
+class Article extends Page {
  
  static $db = array(
         'Date' => 'Date',
-        'Author' => 'HTMLText',
+        'OriginalLanguage' => 'Text',
         'UntranslatedTitle' => 'Text',
         'TranslatedTitle' => 'Text',
         'Translator' => 'HTMLText',
@@ -16,28 +16,34 @@ class Article extends DataObjectAsPage {
  static $has_one = array( 
  	'Image'=> 'Image',
 
+
  );
  
  public static $plural_name = 'Articles';
  
  static $belongs_many_many = array(
- 	'Contributor'=> 'Contributor',
- 	 'Issue' => 'Issue'
+ 	 'Issues' => 'Issue',
+ 	 'Authors' => 'Author',
+ 	 'Translators' => 'Translator'
  );
  
-  public static $has_many = array(
-    "TranslatorNote" => "TranslatorNote",
-  );
 
- 
- static $defaults = array ('ProvideComments' => '1',
+  public static $default_parent = "articles";
     
-   
-    
-    );
+  public static $can_be_root = false;
+  
+  /* TODO: Make this dynamically grab the article holder somehow */
+  static $defaults = array ('ProvideComments' => '1', "ParentID" => 39);
     
 
-    
+   public function getArticleHolder(){
+	   $holder = ArticleHolder::get_one();
+	   
+	   if($holder){
+		   return $holder;
+	   }
+   }
+      
    public function getCMSFields() {
    
    		
@@ -55,15 +61,16 @@ class Article extends DataObjectAsPage {
         $dateField->setConfig('showcalendar', true);
  
        
-        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Author',' Author of original work'));
+        /*$fields->addFieldToTab('Root.Main', new HTMLEditorField('Author',' Author of original work'));*/
         $fields->addFieldToTab('Root.Main', new TextField('UntranslatedTitle',' Title of original work'));
-        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Translator',' Translator (if applicable)'));
+        /*$fields->addFieldToTab('Root.Main', new HTMLEditorField('Translator',' Translator (if applicable)'));*/
+        $fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage','Original Language'));
         $fields->addFieldToTab('Root.Main', new TextField('TranslatedTitle',' Translated Title (if applicable)'));
         
-        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'First Column'));
-        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Second Column (if necessary)'));
+        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Original Work'));
+        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Translated Work (if necessary)'));
         //$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content3', 'Third Column (if necessary)'));
-        //$fields->addFieldToTab('Root.Main', new HTMLEditorField('TranslatorNote', 'Translator Note'));
+        $fields->addFieldToTab('Root.TranslatorNote', new HTMLEditorField('TranslatorNote', 'Translator Note'));
         
         //$fields->removeFieldFromTab('Root.Main', array('Issues'));
         //$fields->removeFieldFromTab('Root.Content.Metadata', array('Content2'));
@@ -74,14 +81,17 @@ class Article extends DataObjectAsPage {
 		//print("PARENT");
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
+		$newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
+		$fields->addFieldToTab('Root.Authors', $newGridField);
 		
-		$newGridField = new GridField('Contributor', 'Contributors', $this->Contributor(), $gridFieldConfig);
-		$fields->addFieldToTab('Root.Main', $newGridField);
+		$gridFieldConfig2 = GridFieldConfig_RelationEditor::create();
+		$newGridField2 = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);
+		$fields->addFieldToTab('Root.Translators', $newGridField2);
+
+		$gridFieldConfig3 = GridFieldConfig_RelationEditor::create();
+		$newGridField3 = new GridField('Issues', 'Issues', $this->Issues(), $gridFieldConfig3);
+		$fields->addFieldToTab('Root.AssociatedIssues', $newGridField3);		
 		
-		$gridFieldConfigTrans = GridFieldConfig_RelationEditor::create();
-		
-		$gridFieldTrans = new GridField('TranslatorNote', 'Translator Note', $this->TranslatorNote(), $gridFieldConfigTrans);
-		$fields->addFieldToTab('Root.Main', $gridFieldTrans);
 		
 		$fields->removeByName('Content3');
 
@@ -130,15 +140,23 @@ class Article extends DataObjectAsPage {
 		return "HIIII";
 	}
 	
-	public function getTranslatorNote(){
-		return $this->TranslatorNote()->First();
-	}
-	
 	function getParent(){
 		//print_r($this->Issue()->First());
-		return $this->Issue()->First();
+		return $this->Issues()->First();
 	}
 	
 }
+
+
+class Article_Controller extends  Page_Controller {
+	
+    
+    	
+	public function init() {
+		parent::init();
+	}
+
+}
+
 
 

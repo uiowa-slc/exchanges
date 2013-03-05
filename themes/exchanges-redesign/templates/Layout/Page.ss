@@ -1,8 +1,8 @@
-$Form
-$PageComments
+
 
 <div class="container" id="content">
-		
+		$Form
+		$PageComments
 		<div class="row" id="backto">
 			<a href="toc.html">
 			<div>

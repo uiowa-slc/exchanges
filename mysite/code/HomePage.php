@@ -22,7 +22,7 @@ class HomePage extends ExpressHomePage {
 		$fields->removeByName('Quicklinks');
 		$fields->removeByName('Features');
 		
-		$treedropdownfield = new TreeDropdownField("FeaturedIssueID", "Choose an issue to feature on the right:", "SiteTree");
+		$treedropdownfield = new TreeDropdownField("FeaturedIssueID", "Newest/Featured Issue", "SiteTree");
 		$fields->addFieldToTab('Root.Main', $treedropdownfield);
 		
 		return $fields;
