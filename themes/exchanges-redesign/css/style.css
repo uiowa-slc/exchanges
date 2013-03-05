@@ -106,7 +106,7 @@
 	     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	     box-sizing: border-box;         /* Opera/IE 8+ */
-	      width: 20%;
+	      width: 15%;
 	      float: left;
 	      border-left: 1px solid rgba(255,255,255,.1);
 	      border-right: 1px solid rgba(0,0,0,.3);
@@ -253,7 +253,7 @@
 	      background-color: none;
 	      height: 100%;
 	      padding: 10px;
-	      padding-top: 16px;
+	     /* padding-top: 16px; why????*/
 	      float: left;
 	      cursor: pointer;
 	      border-left: 1px solid rgba(255,255,255,.1);

@@ -45,14 +45,10 @@
 	
 	<% include Header %>
 	
-
-	
 	  $Layout
+	  
+	<% include Footer %>
 	  	
-	
- 
-	
-
 	<% if SiteConfig.GACode %>
 		<script type="text/javascript">
 

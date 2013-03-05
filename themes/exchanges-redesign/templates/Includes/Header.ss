@@ -16,35 +16,9 @@
 <div class="container-fluid" id="nav">
 	<div class="container">
 		<div class="row">
-			<a href="{$BaseHref}">
-				<div class="nav-link">
-					<span>News</span>
-				</div>
-			</a>
-			<% with getCurrentIssue %>
-			
-				<a href="{$Link}">
-				<div class="nav-link">
-					<span>Current Issue</span>
-				</div>
-				</a>
-				
-			<% end_with %>
-			<a href="about.html">
-			<div class="nav-link">
-				<span>About</span>
-			</div>
-			</a>
-			<a href="submissions.html">
-			<div class="nav-link">
-				<span>Submissions</span>
-			</div>
-			</a>
-			<a href="archives.html">
-			<div class="nav-link">
-				<span>Archives</span>
-			</div>
-			</a>
+		
+			<% include Menu %>
+		
 		</div>
 	</div>
 </div>

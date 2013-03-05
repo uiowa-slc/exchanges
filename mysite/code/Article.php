@@ -150,7 +150,33 @@ class Article extends Page {
 
 class Article_Controller extends  Page_Controller {
 	
+	public static $allowed_actions = array ("notes");
+	
+	public static $url_handlers = array(
+        'notes' => 'notes'
+    );
     
+    
+    public function notes(){
+	    //print_r("test");
+	    $translatorNote = $this->TranslatorNote;
+	    
+	    $translators = $this->Translators();
+	    //$letterText = "test";
+	    
+	     $Data = array(
+                'TranslatorNote' => $translatorNote,
+                'Translators' => $translators
+            );
+            
+	    if(isset($translatorNote)){
+		   // $this->Customise($Data)->renderWith(array('Page')); 
+		   return $this->Customise($Data)->renderWith(array('Article_notes','Page'));
+	    }else{
+		    
+	    }
+ 
+    }    
     	
 	public function init() {
 		parent::init();

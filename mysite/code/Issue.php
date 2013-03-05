@@ -3,7 +3,7 @@ class Issue extends Page {
 	
 	public static $db = array(
 	
-		"IssueDate" => "Date",
+		"IssueDate" => "Text",
 		"IssueNumber" => "Text",
 		"LetterFromEditorCustomTitle" => "Text",
 		"LetterFromEditor" => "HTMLText"
@@ -35,9 +35,7 @@ class Issue extends Page {
 		
 		$fields->addFieldToTab("Root.Main", new UploadField("Emblem", "Unique image for issue"));
 		
-		$fields->addFieldToTab("Root.Main", $dateField = new DateField("IssueDate", "Issue date"));
-		$dateField->setConfig('dateformat', 'MM/dd/YYYY');
-        $dateField->setConfig('showcalendar', true);
+		$fields->addFieldToTab("Root.Main", $dateField = new TextField("IssueDate", "Issue date"));
     
 		$fields->addFieldToTab("Root.Main", new TextField("IssueNumber", "Issue number"));
 		

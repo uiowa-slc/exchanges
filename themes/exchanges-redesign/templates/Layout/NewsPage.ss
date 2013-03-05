@@ -2,13 +2,7 @@
 	
 	
 		
-			<div class="row" id="backto">
-			
-				<div>
-					<span>$Title</span>
-				</div>
-			
-			</div>
+		<% include PageNav %>
 		
 			<div class="row">
 			
