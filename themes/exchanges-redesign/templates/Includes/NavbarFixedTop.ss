@@ -1,8 +1,5 @@
 <div class="navbar navbar-fixed-top">
 
-	<% include StudentLifeBar %>
-
-
 	<div class="navbar-inner">
 		<div class="container">
 			<% include MobileNav %>
