@@ -49,7 +49,7 @@
 	      		</div>
 	      		
 	      		<% end_loop %>
-
+	      		<h1 class="band"><a href="{$BaseHref}news">See All News </a></h1>
 	      	</div>
 
 

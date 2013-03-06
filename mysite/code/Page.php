@@ -85,6 +85,13 @@ class Page_Controller extends ContentController {
 	
 	}
 	
+	public function paginatedNewsItems(){
+	
+		$newsList = new PaginatedList(NewsPage::get(), $this->request);
+		$newsList->setPageLength(1);
+		return $newsList;
+	}
+	
 	public function getCurrentIssue(){
 		$currentIssue = HomePage::get()->First();
 		return $currentIssue->FeaturedIssue();

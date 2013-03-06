@@ -1,3 +1,7 @@
+<!--<% with $Articles %>
+	$Debug
+<% end_with %>-->
+
 <% loop $Articles %>
 	<ul>    	
   	<li class="toc">

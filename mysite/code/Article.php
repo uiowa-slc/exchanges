@@ -2,7 +2,6 @@
 class Article extends Page {
  
  static $db = array(
-        'Date' => 'Date',
         'OriginalLanguage' => 'Text',
         'UntranslatedTitle' => 'Text',
         'TranslatedTitle' => 'Text',
@@ -55,11 +54,11 @@ class Article extends Page {
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Content');
 		
-        
+        /*
         $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date','Article Date (for example: 1/20/2013)'));
         $dateField->setConfig('dateformat', 'MM/dd/YYYY');
         $dateField->setConfig('showcalendar', true);
- 
+        */
        
         /*$fields->addFieldToTab('Root.Main', new HTMLEditorField('Author',' Author of original work'));*/
         $fields->addFieldToTab('Root.Main', new TextField('UntranslatedTitle',' Title of original work'));
@@ -68,7 +67,7 @@ class Article extends Page {
         $fields->addFieldToTab('Root.Main', new TextField('TranslatedTitle',' Translated Title (if applicable)'));
         
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Original Work'));
-        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Translated Work (if necessary)'));
+        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Translated Work'));
         //$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content3', 'Third Column (if necessary)'));
         $fields->addFieldToTab('Root.TranslatorNote', new HTMLEditorField('TranslatorNote', 'Translator Note'));
         
@@ -136,9 +135,7 @@ class Article extends Page {
 		return $return;
 	}
 	
-	public function getContributor(){
-		return "HIIII";
-	}
+
 	
 	function getParent(){
 		//print_r($this->Issue()->First());
