@@ -4,7 +4,7 @@
 		<div class="row">
 		<a href="{$BaseHref}">
 			<div id="logo">
-			<span id="exchanges">eXchanges</span>
+			<span id="exchanges">exchanges</span>
 			<span id="subtitle">a journal of literary translation</span>
 			</div>
 		</a>
