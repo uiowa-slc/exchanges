@@ -5,7 +5,7 @@
 			<div class="row" id="backto">
 			
 				<div>
-					<span>$Title</span>
+					<span>$ContributorName</span>
 				</div>
 			
 			</div>
@@ -19,8 +19,9 @@
 	      		
 	      		<div class="span4 column">
 	      			<h1 class="band">Table Of Contents</h1>
-	      			<% include TableOfContents %> 
-	
+	      			<% with getTableOfContents %>
+	      				<% include TableOfContents %> 
+	      			<% end_with %>		
 	      		</div>
 	      		
 			</div>

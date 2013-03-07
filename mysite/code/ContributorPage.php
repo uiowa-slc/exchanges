@@ -25,15 +25,20 @@ class ContributorPage_Controller extends Page_Controller {
 		
 		$contributorID = $this->request->param('ID');
 		if ($contributorID){
-			$contributor = DataObject::get_by_id("Contributor", $contributorID);
-			$bio = $contributor->Content;	
-	
+		
+		    $contributor = Contributor::get_by_id("Contributor", $contributorID);
+			
+			$contributor = Article::get()->last();
+			print_r($contributor);
+				
+			$bio = $contributor->BiographicalDetails;	
+			$contribName = $contributor->Name;
 	    	    
 			$Data = array(
-                'Biography' => $bio
+                'Biography' => $bio,
+                'ContributorName' => $contribName
             );
             
-            print_r('Content ' . $contributor->Content); 
             
 		    if(isset($contributor)){
 
@@ -44,5 +49,12 @@ class ContributorPage_Controller extends Page_Controller {
 		else {
 			return $this->renderWith('Page');
 		}
+	}
+	
+	public function getTableOfContents(){
+	
+			 $homePage = HomePage::get()->First();
+			 $featuredIssue = $homePage->FeaturedIssue();
+			 return $featuredIssue;
 	}
 }

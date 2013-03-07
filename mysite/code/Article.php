@@ -2,6 +2,7 @@
 class Article extends Page {
  
  static $db = array(
+ 		'IsPublished' => 'Boolean',
         'OriginalLanguage' => 'Text',
         'UntranslatedTitle' => 'Text',
         'TranslatedTitle' => 'Text',
@@ -59,7 +60,9 @@ class Article extends Page {
         $dateField->setConfig('dateformat', 'MM/dd/YYYY');
         $dateField->setConfig('showcalendar', true);
         */
-       
+            	       
+        $fields->addFieldToTab('Root.Main', $publishCheckbox = new CheckboxField('isPublished', "Publish Page"));
+          
         /*$fields->addFieldToTab('Root.Main', new HTMLEditorField('Author',' Author of original work'));*/
         $fields->addFieldToTab('Root.Main', new TextField('UntranslatedTitle',' Title of original work'));
         /*$fields->addFieldToTab('Root.Main', new HTMLEditorField('Translator',' Translator (if applicable)'));*/
@@ -91,10 +94,12 @@ class Article extends Page {
 		$newGridField3 = new GridField('Issues', 'Issues', $this->Issues(), $gridFieldConfig3);
 		$fields->addFieldToTab('Root.AssociatedIssues', $newGridField3);		
 		
-		
 		$fields->removeByName('Content3');
+		
+		//$publishPage = $publishCheckbox->Value();
+		
+		
 
-     
         return $fields;
     }
     
@@ -141,6 +146,20 @@ class Article extends Page {
 		//print_r($this->Issue()->First());
 		return $this->Issues()->First();
 	}
+	/*
+	function onAfterWrite(){
+		
+		
+		$publishPage = $this->IsPublished();
+		
+		if (isset($publishPage)){
+			if ($publishPage){
+				$this->IsPublished = 0;
+				$this->doPublish();
+			}
+		}
+	}
+	*/
 	
 }
 
