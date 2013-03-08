@@ -4,6 +4,14 @@
 		
 		<% include PageNav %>
 		
+		<div class="row" id="backto" style="display: block;">			
+			<div>
+				<span>$Title</span>
+			</div>
+		</div>
+		
+		
+		
 			<div class="row">
 			
 	      		<div class="span8 column">
@@ -18,9 +26,9 @@
 	      			<% with getParent %>
 	      				$TableOfContents
 	      			<% end_with %>
-	
-	      		</div>
 	      		-->
+	      		</div>
+	      		
 			</div>
 			
 

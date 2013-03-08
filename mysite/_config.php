@@ -50,6 +50,7 @@ i18n::set_locale('en_US');
 
 error_reporting(E_ALL);
 
+Object::add_extension("GridFieldDetailForm_ItemRequest","GridFieldPublish");
 
 // Enable nested URLs for this site (e.g. page/sub-page/)
 if (class_exists('SiteTree')) SiteTree::enable_nested_urls();

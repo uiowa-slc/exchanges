@@ -68,8 +68,8 @@ class HomePage_Controller extends ExpressHomePage_Controller {
 		return $set;
 	}
 	
-	public function getNewsItems() {
-		$holder = NewsPage::get()->limit(5);
+	public function getNewsItems($limit = 3) {
+		$holder = NewsPage::get()->limit($limit);
 		return $holder;
 	}
 

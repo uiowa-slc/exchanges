@@ -45,7 +45,7 @@ class Issue extends Page {
 
 		
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
-		
+		$gridFieldConfig->addComponent(new GridFieldViewButton());
 		$gridField = new GridField('Article', 'Articles', $this->Articles(), $gridFieldConfig);
 		$fields->addFieldToTab("Root.Articles", $gridField);
 				
@@ -62,6 +62,8 @@ class Issue extends Page {
 			return $year;
 		}
 */
+
+			
 	
 }
 

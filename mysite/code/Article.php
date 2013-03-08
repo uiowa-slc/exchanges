@@ -61,7 +61,7 @@ class Article extends Page {
         $dateField->setConfig('showcalendar', true);
         */
             	       
-        $fields->addFieldToTab('Root.Main', $publishCheckbox = new CheckboxField('isPublished', "Publish Page"));
+        //$fields->addFieldToTab('Root.Main', $publishCheckbox = new CheckboxField('isPublished', "Publish Page"));
           
         /*$fields->addFieldToTab('Root.Main', new HTMLEditorField('Author',' Author of original work'));*/
         $fields->addFieldToTab('Root.Main', new TextField('UntranslatedTitle',' Title of original work'));
@@ -73,6 +73,8 @@ class Article extends Page {
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Translated Work'));
         //$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content3', 'Third Column (if necessary)'));
         $fields->addFieldToTab('Root.TranslatorNote', new HTMLEditorField('TranslatorNote', 'Translator Note'));
+        
+        //$fields->addFieldToTab('Root.Main', new LiteralField('Test', '<a href="www.google.com">Publish link</a>'));
         
         //$fields->removeFieldFromTab('Root.Main', array('Issues'));
         //$fields->removeFieldFromTab('Root.Content.Metadata', array('Content2'));
@@ -161,6 +163,8 @@ class Article extends Page {
 	}
 	*/
 	
+
+	
 }
 
 
@@ -192,7 +196,11 @@ class Article_Controller extends  Page_Controller {
 		    
 	    }
  
-    }    
+    } 
+    
+    public function doPublish(){
+	    $this->publish();
+    }   
     	
 	public function init() {
 		parent::init();
