@@ -31,13 +31,18 @@ class Article extends Page {
   public static $default_parent = "articles";
     
   public static $can_be_root = false;
-  
-  /* TODO: Make this dynamically grab the article holder somehow */
-  static $defaults = array ('ProvideComments' => '1', "ParentID" => 39);
     
+public function populateDefaults() {
+	$holder = $this->getArticleHolder();
+	
+	if($holder){
+	    $this->ParentID = $holder->ID;
+	    parent::populateDefaults();
+    }
+}
 
    public function getArticleHolder(){
-	   $holder = ArticleHolder::get_one();
+	   $holder = ArticleHolder::get()->First();
 	   
 	   if($holder){
 		   return $holder;
