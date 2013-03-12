@@ -85,6 +85,15 @@ class Page_Controller extends ContentController {
 	
 	}
 	
+	
+	public function newsItems($num){
+		$newsItems = NewsPage::get()->limit($num);
+		
+		if($newsItems){
+			return $newsItems;
+		}
+	}
+	
 	public function paginatedNewsItems(){
 	
 		$newsList = new PaginatedList(NewsPage::get(), $this->request);
