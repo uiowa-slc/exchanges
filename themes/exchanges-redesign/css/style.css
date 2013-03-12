@@ -276,7 +276,7 @@
 	      margin: 0 -22px 1.5em 0;
       }
       .blog_post{
-      	  height:250px;
+      	  /*height:250px;*/
 	      margin-bottom: 2em;
       }
       .blog_post h1{
@@ -329,7 +329,7 @@
 	  }
 	  ul li{
 		  text-align: center;
-		  margin-bottom: 1.5em;
+		  /*margin-bottom: 1.5em;*/
 	  }
 	  ul h2{
 		  font-size: 1.25em;
@@ -394,6 +394,74 @@ font-size: .9em;
 	      margin: 1.5em 2em 0 0;
       }
       
+      
+      /* new nav bar */
+.nav-background { 
+  background: #372B21;
+  box-shadow: rgba(0, 0, 0, 0.658824) 0px 0px 5px 0px inset;
+
+  
+}
+
+.navbar.exchanges {
+	margin-bottom: 0;
+	font-size: 17px;
+	background-color: #372B21;
+}
+.navbar.exchanges .navbar-inner{
+	background: none;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	padding-left: 0;
+}
+
+.navbar.exchanges .nav > li > a {
+	text-shadow: rgba(0, 0, 0, 0.498039) -1px -1px 0px;
+	color: #C0B29F;
+	padding: 10px 30px;
+	
+}
+
+.navbar.exchanges .nav > li {
+	border-right: 1px solid rgba(0, 0, 0, .3);
+	border-left: 1px solid rgba(255, 255, 255, .1);
+}
+
+.navbar.exchanges .nav > li:hover {
+	box-shadow: inset 0px 0px 20px rgba(22,22,22, 0.6);
+}
+
+.navbar.exchanges .nav > li:active {
+	box-shadow:  inset 0px 0px 25px rgba(15,15,15, 0.8);
+
+}
+
+
+.navbar.exchanges .nav > .active > a, .navbar.exchanges .nav > .active > a:hover, .navbar.exchanges .nav > .active > a:focus {
+	background-color: #18130e;
+}
+
+
+.navbar.exchanges .btn-navbar {
+	background: #997356;
+}
+
+.navbar.exchanges .nav-collapse .nav > li > a:hover, .navbar.exchanges .nav-collapse .dropdown-menu a:hover{
+	background-color: #18130e;
+	color: #555;
+
+}
+
+.navbar.exchanges .nav-collapse li {
+
+}
+
+.mobile-article-nav {
+	display: none;
+
+}
+
 
 
 @media (max-width: 980px) { 
@@ -414,6 +482,15 @@ font-size: .9em;
   .nav-link {
 	  font-size: .9em;
   }
+  
+ .mobile-article-nav {
+	display: block;
+	font-size: 13px;
+	color: #443628;
+	font-weight: bold;
+	margin: 5px 0;
+
+}
 }
 
 @media (max-width: 635px) {
@@ -426,6 +503,8 @@ font-size: .9em;
   #gotoissue div{
 	  padding: 18px;
   }
+  
+
 }
 
 @media (max-width: 585px) {
@@ -433,6 +512,7 @@ font-size: .9em;
   #featured h1{
 	  margin-bottom: .8em;
   }
+
 }
 
 
@@ -448,10 +528,20 @@ font-size: .9em;
       h1.toc{
 	      font-size: 2.25em;
       }
+      
+
 }
 
 
 @media (max-width: 505px) {
+
+	body{ 
+		padding: 0;
+	}
+	
+	.container{
+		padding:0;
+	}
   .nav-link {
 	  font-size: .7em;
 	  line-height: 3em;
@@ -506,4 +596,20 @@ font-size: .9em;
   .blog_post h1{
 	  font-size: 2em;
   }
+  
+
+  .titleLink{
+	  font-size: 0.6em;
+  }
+  
+
+
+  
+   
+
 }
+
+@media (max-width: 480px) {}
+
+  
+  }

@@ -1,4 +1,6 @@
 <div class="container" id="content">
+
+
 		
 		<div class="row" id="backto">
 			<% loop Issues %>
@@ -27,18 +29,29 @@
       		  <span class="author">
       		<% loop $Authors %>
       			<a href="#">$Name</a><% if not $Last %>, <% end_if %>
-  			<% end_loop %>     		
+  			<% end_loop %> 
+  			
+				<div class="mobile-article-nav">
+					<a href="#">View Translated Work &raquo;</a>
+				</div>  
+				  		
   				</span>
       			
       			$Content
 	      	</div>
 
       		<div class="span6 column">
-      			      		  <span class="author">
+      		<span class="author">
       		<% loop $Translators %>
       			<a href="#">$Name</a><% if not $Last %>, <% end_if %>
-  			<% end_loop %>     		
+  			<% end_loop %> 
+  			
+   		
   				</span>
+  				
+  			<div class="mobile-article-nav">
+				<a href="#">View Original Work &raquo;</a>
+			</div>   
       			$Content2
       		</div>
       		<a href="#header">

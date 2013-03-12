@@ -43,7 +43,6 @@
 	      				<h1><a href="$Link">$Title</a></h1>
 	      				<span class="postdate">$Date.NiceUs</span>
 	      			</div>
-	      			<div class="img"></div>
 	      				<p>$Content.Summary(100)</p>
 	      				<a href="{$Link}">Read More</a>
 	      		</div>

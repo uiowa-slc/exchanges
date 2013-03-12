@@ -1,9 +1,4 @@
 <div id="footer">
-	<div class="container-fluid" id="nav">
-		<div class="container">
-			<% include Menu %>
-		</div>
-	</div>
 	<div class="row">
 		<div class="container-fluid">
 			<div class="container">
