@@ -5,10 +5,14 @@
 		$PageComments
 		
 		<% include PageNav %>
+		
 	
-		<div class="row">
+		<div class="row no-center">
+		
+
 		
       		<div class="span12 column">
+      			<h1>$Title</h1>
       			<p>
       				$Content
       			</p>

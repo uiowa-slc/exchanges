@@ -20,7 +20,7 @@
 
       		</div>
       
-      		<div class="span4 column">
+      		<div class="span4 column no-center">
       			<% include Submissions %>
       		</div>
       	

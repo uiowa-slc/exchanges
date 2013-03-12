@@ -28,6 +28,7 @@
 		  clear: both;
 	  }
 	  
+	  
 	  .titleLink {
 		  color: white;
 	  }
@@ -460,6 +461,10 @@ font-size: .9em;
 .mobile-article-nav {
 	display: none;
 
+}
+
+.no-center li {
+  text-align: left;
 }
 
 

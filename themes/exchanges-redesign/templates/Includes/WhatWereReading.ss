@@ -3,6 +3,7 @@
 	<% with Page("what-were-reading") %>
 	 
 		$Content
+		<a href="$Link"> Read More </a>
 	
 	<% end_with %>
 	
