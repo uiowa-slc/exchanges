@@ -30,13 +30,13 @@
       		<% loop $Authors %>
       			<a href="#">$Name</a><% if not $Last %>, <% end_if %>
   			<% end_loop %> 
-  			
-				<div class="mobile-article-nav">
-					<a href="#">View Translated Work &raquo;</a>
-				</div>  
+
 				  		
   				</span>
-      			
+   			
+				<div class="mobile-article-nav">
+					<a href="#">View Translated Work &raquo;</a>
+				</div>       			
       			$Content
 	      	</div>
 
