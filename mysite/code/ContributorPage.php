@@ -27,10 +27,8 @@ class ContributorPage_Controller extends Page_Controller {
 		if ($contributorID){
 		
 		    $contributor = Contributor::get_by_id("Contributor", $contributorID);
-			
-			$contributor = Article::get()->last();
-			print_r($contributor);
-				
+		    
+		   		  
 			$bio = $contributor->BiographicalDetails;	
 			$contribName = $contributor->Name;
 	    	    
@@ -48,6 +46,29 @@ class ContributorPage_Controller extends Page_Controller {
 		}
 		else {
 			return $this->renderWith('Page');
+		}
+	}
+	
+	public function getContributorArticles(){
+		$contributorID = $this->request->param('ID');
+		
+		if ($contributorID){
+		
+			$contributor = Contributor::get_by_id("Contributor", $contributorID);
+			
+			$articles = $contributor->Articles();
+			
+			print_r($articles);
+			
+			return $articles;
+			/*
+			if ($contributor->ClassName == "Author"){
+				
+			}
+			elseif ($contributor->ClassName == "Translator"){
+				
+			}
+			*/
 		}
 	}
 	

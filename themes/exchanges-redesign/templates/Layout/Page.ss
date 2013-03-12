@@ -8,7 +8,7 @@
 	
 		<div class="row">
 		
-      		<div class="span8 column">
+      		<div class="span12 column">
       			<p>
       				$Content
       			</p>

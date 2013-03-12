@@ -46,8 +46,10 @@
       		
       		
   		</div>
-  			
+  	 <div class="span4 column">
   		<% include PastIssues %>
+  		<% include Submissions %>
+  	</div>
   		
 	</div>
 	

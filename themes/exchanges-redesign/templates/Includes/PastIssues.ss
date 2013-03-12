@@ -1,4 +1,4 @@
-<div class="span4 column">
+
 	<h1 class="band">Past Issues</h1>
 	
 	<% with Page("issues") %>
@@ -11,5 +11,5 @@
 	
 	<% end_with %>
 	
-</div>
+
 

@@ -6,7 +6,7 @@
       		<div class="span8 column">
       			<div id="emblem" style="background-image: {$Emblem.URL}">
       			
-	      			<span id="issue_num">Issue #{$IssueNumber} for <span id="year">$IssueDate.Format("G")</span></span>
+	      			<span id="issue_num">Issue #{$IssueNumber}</span>
 	      			<span id="issue_name">{$Title}</span>
 	      			
 	      			
@@ -28,9 +28,10 @@
 				
       		</div>
       		</div>
-		
-      		<% include PastIssues %>
       		
+      		<div class="span4 column">
+      			<% include PastIssues %>
+      		</div>
 		</div>
 		
 		

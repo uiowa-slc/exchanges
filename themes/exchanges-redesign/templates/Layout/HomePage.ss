@@ -35,6 +35,8 @@
 	      		<% end_with %>
 	      		
 	      		<h1 class="band">News</h1>
+	      		
+	      		
 
 	      		<% loop getNewsItems %>
 
@@ -50,9 +52,10 @@
 	      		<% end_loop %>
 	      		<h1 class="band"><a href="{$BaseHref}news">See All News </a></h1>
 	      	</div>
-
-
-	      	<% include PastIssues %>
+	      	<div class="span4 column">
+		      		<% include PastIssues %>
+		      		<% include WhatWereReading %>
+		    </div>
 	      	
 		</div>
 		

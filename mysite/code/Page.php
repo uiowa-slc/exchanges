@@ -88,7 +88,7 @@ class Page_Controller extends ContentController {
 	public function paginatedNewsItems(){
 	
 		$newsList = new PaginatedList(NewsPage::get(), $this->request);
-		$newsList->setPageLength(2);
+		$newsList->setPageLength(4);
 		return $newsList;
 	}
 	

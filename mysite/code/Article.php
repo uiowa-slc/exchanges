@@ -168,6 +168,11 @@ public function populateDefaults() {
 	}
 	*/
 	
+	public function getIssue(){
+		return $this->Issues();
+	}
+
+	
 
 	
 }
@@ -210,6 +215,8 @@ class Article_Controller extends  Page_Controller {
 	public function init() {
 		parent::init();
 	}
+	
+	
 
 }
 
