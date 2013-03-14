@@ -58,7 +58,7 @@ class ContributorPage_Controller extends Page_Controller {
 			
 			$articles = $contributor->Articles();
 			
-			print_r($articles);
+
 			
 			return $articles;
 			/*

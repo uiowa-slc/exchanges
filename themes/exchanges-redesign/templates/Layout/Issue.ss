@@ -4,7 +4,7 @@
 		<div class="row">
 		
       		<div class="span8 column">
-      			<div id="emblem" style="background-image: {$Emblem.URL}">
+      			<div id="emblem" style="background-image: url({$Emblem.URL})">
       			
 	      			<span id="issue_num">Issue #{$IssueNumber}</span>
 	      			<span id="issue_name">{$Title}</span>

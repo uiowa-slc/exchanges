@@ -28,7 +28,7 @@
       		<div class="span6 column" id="original-work">
       		  <span class="author">
       		<% loop $Authors %>
-      			<a href="#">$Name</a><% if not $Last %>, <% end_if %>
+      			<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
   			<% end_loop %> 
 
 				  		
@@ -46,7 +46,7 @@
       		<div class="span6 column" id="translated-work">
       		<span class="author">
       		<% loop $Translators %>
-      			<a href="#">$Name</a><% if not $Last %>, <% end_if %>
+      			<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
   			<% end_loop %> 
   			
    		
