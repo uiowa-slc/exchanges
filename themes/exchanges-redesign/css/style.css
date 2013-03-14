@@ -153,6 +153,7 @@
 	      font-size: .9em;
       }
       #emblem{
+      	  background-color: #372B21;
 	      background-image: url(../images/emblem.png);
 	      background-repeat: no-repeat;
 	      padding: 20px 20px 0 20px;
@@ -243,7 +244,7 @@
 	      height: 33px;
 	      border: 1px solid rgba(0,0,0,.2);
 	      border-top: none;
-	      margin: 0 0 1.5em -5px;
+	      /*margin: 0 0 1.5em -5px;*/
 	      text-align: center;
 	      float: left;
 	      clear: none;
@@ -290,7 +291,7 @@
       .postheader{
 	      border-bottom: 1px solid rgba(0,0,0,.2);
 	      width: 100%;
-	      height: 51px;
+	      min-height: 51px;
 	      padding-bottom: .7em;
 	      margin-bottom: 1em;
       }
@@ -482,7 +483,7 @@ font-size: .9em;
   
 
 .letterPreview {
-	padding: 0.2em;
+	padding-top:20px;
 	
 }
 
@@ -506,6 +507,11 @@ font-size: .9em;
       
       #emblem {
       	background-size: cover;
+      	
+      }
+      
+      #featured {
+      	border: none;
       
       }
       
@@ -528,6 +534,15 @@ font-size: .9em;
 	
 		display: block;
 	}
+	
+ #content .column{
+ 	padding: 10px;
+ 	border: none;
+ 	margin: 10px 0;
+ }
+
+
+
 
 }
 
@@ -643,9 +658,9 @@ body{
 	  width: 80px;
   }
   span#exchanges{
-	  margin-right: 1em;
+	 /* margin-right: 1em;*/
 	  margin-bottom: .6em;
-	  float: right;
+	  /*float: right;*/
 	  clear: none;
   }
   #gotoissue span{
@@ -666,14 +681,31 @@ body{
 	  font-size: 0.6em;
   }
   
+   .container-fluid#header{
 
-
+	background: url('../images/tile.jpeg');
+}
+  #content {
+	  border-radius: 0;
+	  box-shadow: none;
+  }
   
+  #backto, #to {
+	  padding: 1px;
+	  font-size: 8px;
+	  height: auto;
+	  margin: 0;
+  }
    
+  #backto div, #to div {
+	  padding: 2px;
+	  height: auto;
+	  border: none;
+  }
 
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
 
-  
+
   }

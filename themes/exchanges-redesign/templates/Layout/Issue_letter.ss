@@ -3,16 +3,18 @@
 	
 		
 			<div class="row" id="backto">
-			
-				<div>
-					<span><a href="$Link">$Title</a></span>
-				</div>
-			
+				<a href="$Link">
+					<div>
+						<span>$Title</span>
+					</div>
+				</a>
 			</div>
 		
 			<div class="row">
 			
 	      		<div class="span8 column">
+	      		
+	      		<h2><% if LetterFromEditorCustomTitle %>$LetterFromEditorCustomTitle <% else %>Letter from the Editors<% end_if %></h2>
 	      			$LetterText
 	
 	      		</div>
