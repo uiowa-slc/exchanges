@@ -20,6 +20,8 @@
 		 
 		      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 		      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		      
+		    
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
@@ -27,6 +29,7 @@
 		 
 		      <!-- Everything you want hidden at 940px or less, place within here -->
 		      <div class="nav-collapse collapse">
+			     
 				<ul class="nav">
 				
 					<% control Menu(1) %>

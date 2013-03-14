@@ -6,12 +6,11 @@
       		<div class="span8 column">
       			<div id="emblem" style="background-image: url({$Emblem.URL})">
       			
-	      			<span id="issue_num">Issue #{$IssueNumber}</span>
+	      			<span id="issue_num">{$IssueDate}</span>
 	      			<span id="issue_name">{$Title}</span>
-	      			
-	      			
+
+      			</div>
       			<h1 class="toc">Table of Contents</h1>
-      			
       			<% if LetterFromEditor %>
 	      			<ul>
 		      			<li class="toc">
@@ -22,11 +21,12 @@
 				      	</li>
 			      	</ul>
 		      	<% end_if %>
+		      
 		      	
 		      	<% include TableOfContents %>
       			
 				
-      		</div>
+		  
       		</div>
       		
       		<div class="span4 column">

@@ -15,9 +15,10 @@
 
 	      		</div>
 	      			
-		      		<p>$LetterFromEditor.Summary(300)</p>
-		      			
-		      		<a href="{$Link}letter">Read the letter from the editor</a>
+	      			<div class="letterPreview">
+			      		<p>$LetterFromEditor.Summary(300)</p>
+			      		<a href="{$Link}letter">Read the letter from the editor</a>
+	      			</div>
 		      		
 	      		</div>
 	      		<% end_with %>

@@ -5,7 +5,7 @@
 			<div class="row" id="backto">
 			
 				<div>
-					<span>$Title</span>
+					<span><a href="$Link">$Title</a></span>
 				</div>
 			
 			</div>

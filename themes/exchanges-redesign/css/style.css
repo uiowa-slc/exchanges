@@ -160,6 +160,7 @@
 	      margin-top: -20px;
 	      width: 100%;
 	      box-shadow: inset 0px 0px 20px 6px rgba(20,20,20,0.4);
+	      border-bottom: 1px solid rgba(0, 0, 0, .2);
       }
       #featured {
 	      background-color: #d9c5a6;
@@ -188,10 +189,11 @@
 	      font-weight: bold;
 	      clear: both;
 	      display: block;
-	      margin: .5em 0 .2em 0;
+	      /*margin: .5em 0 .2em 0;*/
 	      line-height: 1em;
 	      text-align: center;
 	      color: #fff;
+	      padding: 0.5em 0;
 	      text-shadow: 0 3px 3px rgba(0,0,0,.5), 0 1px 0 rgba(0,0,0,1);
       }
       #featured span#issue_name{
@@ -473,28 +475,61 @@ font-size: .9em;
   	text-align:center;
   	color: white;
   	display: block;
-  	padding: 1em 0;
+  	padding: 0.5em 0;
   	text-shadow: 0 3px 3px rgba(0, 0, 0, .5), 0 1px 0 rgba(0, 0, 0, 1);
   	line-height: normal;
   }
   
 
+.letterPreview {
+	padding: 0.2em;
+	
+}
 
+.mobile-subnav{
+
+	display: none;
+}
 
 
 @media (max-width: 980px) { 
       span#issue_name{
 	      font-size: 4.25em;
-	      margin-top: 1em;
+	      padding:0.3em 0;
       }
       h1.toc{
 	      font-size: 2.25em;
       }
       #featured span#issue_name{
-	      margin-top: .5em;
+	      /*margin-top: .5em;*/
       }
-}
+      
+      #emblem {
+      	background-size: cover;
+      
+      }
+      
+	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+		padding: 0;
+		margin: 0;
+	}
+	
+	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner{
+	
+		padding: 0;
+	}
+	
+	
+	.navbar.exchanges .nav > li {
+		border: none;
+	}
+	
+	.mobile-subnav{
+	
+		display: block;
+	}
 
+}
 
 @media (max-width: 767px) {    
   .nav-link {
@@ -508,12 +543,23 @@ font-size: .9em;
 	font-weight: bold;
 	margin: 5px 0;
 
+
+}
+
+#content {
+	padding: 0;
+}
+
+body{
+	padding: 0;
+	
 }
 }
 
 @media (max-width: 635px) {
   .nav-link {
 	  font-size: .75em;
+	
   }
   #gotoissue span{
 	  font-size: 1.5em;
@@ -536,13 +582,13 @@ font-size: .9em;
 
 @media (max-width: 545px) { 
       span#issue_name{
-	      font-size: 4.25em;
-	      margin-top: .5em;
-	      margin-bottom: .5em;
+	      font-size: 3.8em;
+	      /*margin-top: .5em;
+	      margin-bottom: .5em;*/
       }
-      #featured span#issue_name{
+      /*#featured span#issue_name{
 	      margin-bottom: .8em;
-      }
+      }*/
       h1.toc{
 	      font-size: 2.25em;
       }
