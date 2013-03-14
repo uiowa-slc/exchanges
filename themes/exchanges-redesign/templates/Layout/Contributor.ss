@@ -21,7 +21,7 @@
 	      		</div>
 	      		
 	      		<div class="span4 column">
-	      			<h1 class="band">Table of Contents</h1>
+	      			<h1 class="band">Table Of Contents</h1>
 	      			<% with getTOC %>
 	      				$TableOfContents
 	      			<% end_with %>
