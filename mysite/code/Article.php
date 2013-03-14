@@ -105,6 +105,16 @@ public function populateDefaults() {
 		
 		//$publishPage = $publishCheckbox->Value();
 		
+		$linky = $this->Link();
+		print_r($linky);
+		
+		
+		
+		$fields->addFieldToTab('Root.Main', new LabelField('LabelTest', '<a class="ui-button-text" href="'.$this->Link(). 'publishPage/' .'" style="background: -webkit-linear-gradient(#93be42, #1f9433); padding-top:5px; padding-bottom:5px; display: block; background-color: #1f9433; border-radius: 3px; text-shadow: #1c872f 0 -1px -1px; font-weight: bold; color: white; padding-left: 7px; width: 50px;">Publish</a>'));
+		
+		
+		
+		
 		
 
         return $fields;
@@ -180,10 +190,11 @@ public function populateDefaults() {
 
 class Article_Controller extends  Page_Controller {
 	
-	public static $allowed_actions = array ("notes");
+	public static $allowed_actions = array ("notes", "publishpage");
 	
 	public static $url_handlers = array(
-        'notes' => 'notes'
+        'notes' => 'notes',
+        'publishpage' => 'publishpage' 
     );
     
     
@@ -208,13 +219,21 @@ class Article_Controller extends  Page_Controller {
  
     } 
     
-    public function doPublish(){
-	    $this->publish();
-    }   
+    
     	
 	public function init() {
 		parent::init();
 	}
+	
+	public function publishPage(){
+		$this->doPublish();
+		print_r("Page published!");
+	
+		//Temporary
+		return $this->renderWith(array('Article_notes','Page'));	
+	}
+	
+	
 	
 	
 

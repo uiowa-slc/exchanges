@@ -26,6 +26,11 @@
 		<div class="row">
 		
       		<div class="span6 column" id="original-work">
+      		
+      			
+      		 
+      			<h1>$TranslatedTitle</h1>
+      	
       		  <span class="author">
       		<% loop $Authors %>
       			<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
@@ -36,14 +41,20 @@
    			
 				<div class="mobile-article-nav">
 					<a href="#translated-work">View Translated Work &raquo;</a>
-				</div>       			
+				</div> 
+   			
       			$Content
+      			
 				<div class="mobile-article-nav">
 					<a href="#translated-work">View Translated Work &raquo;</a>
 				</div>   
 	      	</div>
 
       		<div class="span6 column" id="translated-work">
+      		
+      		
+      			<h1>$UntranslatedTitle</h1>
+      		
       		<span class="author">
       		<% loop $Translators %>
       			<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
@@ -55,6 +66,7 @@
   			<div class="mobile-article-nav">
 				<a href="#original-work">View Original Work &raquo;</a>
 			</div>   
+				
       			$Content2
       			
       			

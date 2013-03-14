@@ -29,7 +29,7 @@
 	      				<li><a href="$Link">$Title</a></li>
 	      				
 	      				<% loop getIssue %>
-	      					<li>In Issue <a href="$Link">$Title</a></li>
+	      					<li style="margin-bottom: 15px;">In Issue <a href="$Link">$Title</a></li>
 	      				<% end_loop %>
 	      			<% end_loop %>	
 	      			</ul>	
