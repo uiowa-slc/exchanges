@@ -4,23 +4,23 @@
 		<div class="row">
 		
       		<div class="span8 column">
+      		
+      		<% with FeaturedIssue %>
 	      		<div id="featured">
-	      		<div id="emblem">
-	      		
-	      			<% with FeaturedIssue %>
-	      			
-		      			<span id="issue_num">$IssueDate</span></span>
-		      			<span id="issue_name"><a class="titleLink" href="{$Link}">$Title</a></span>
-		      			
-		      			<h1><a class="titleLink" href="{$Link}letter">Letter From the Editor</a></h1>
-		      			<p>$LetterFromEditor.Summary(300)</p>
-		      			
-		      			<a href="{$Link}letter">Read the letter from the editor</a>
-		      			
-	      			<% end_with %>
-	      			
+	      		<div id="emblem" style="background-image: url({$Emblem.URL})">
+
+	      			<span id="issue_num">$IssueDate</span></span>
+	      			<span id="issue_name"><a class="titleLink" href="{$Link}">$Title</a></span>
+	      			<a class="letterLink" href="{$Link}letter">Letter From the Editor</a>
+
 	      		</div>
+	      			
+		      		<p>$LetterFromEditor.Summary(300)</p>
+		      			
+		      		<a href="{$Link}letter">Read the letter from the editor</a>
+		      		
 	      		</div>
+	      		<% end_with %>
 	      		
 	      		<% with getFeaturedIssue %>
 	      	

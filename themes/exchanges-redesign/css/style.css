@@ -159,6 +159,7 @@
 	      margin-left: -20px;
 	      margin-top: -20px;
 	      width: 100%;
+	      box-shadow: inset 0px 0px 20px 6px rgba(20,20,20,0.4);
       }
       #featured {
 	      background-color: #d9c5a6;
@@ -187,7 +188,7 @@
 	      font-weight: bold;
 	      clear: both;
 	      display: block;
-	      margin: .66em 0 .8em 0;
+	      margin: .5em 0 .2em 0;
 	      line-height: 1em;
 	      text-align: center;
 	      color: #fff;
@@ -466,6 +467,18 @@ font-size: .9em;
 .no-center li {
   text-align: left;
 }
+
+  .letterLink {
+  	font-size: 2em;
+  	text-align:center;
+  	color: white;
+  	display: block;
+  	padding: 1em 0;
+  	text-shadow: 0 3px 3px rgba(0, 0, 0, .5), 0 1px 0 rgba(0, 0, 0, 1);
+  	line-height: normal;
+  }
+  
+
 
 
 
