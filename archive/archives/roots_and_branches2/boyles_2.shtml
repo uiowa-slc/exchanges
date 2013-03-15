@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/roots_branches.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roots &amp; Branches - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="./includes/topnav_new.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<div id="content_left">
+<h2>Read</h2>
+<h3><a href="bio_boyles.shtml">Kelli Boyles</a></h3>
+<p>Not a sound,  don’t speak:<br />
+  <blockquote style="margin-top:-10px;">going to explore a forest--eyes, courage,<br />
+  wit, dreams…</blockquote></p>
+      <p>Secret forest but touchable:<br />
+      <blockquote style="margin-top:-10px;">forest.</blockquote></p>
+           <p>Forest rustling with silence,<br />
+      <blockquote style="margin-top:-10px;">Forest where the bird to trap got away,<br />
+             the bird to catch in a trap and force to sing<br />
+             or cry.</blockquote></p>
+      <p>Who to make it sing to, who to make it cry to<br />
+      <blockquote style="margin-top:-10px;">for the place where it hatched.</blockquote></p>
+           <p>Forest.  Bird.<br />
+      <blockquote style="margin-top:-10px;">Secret forest, bird hidden<br />
+             in your hands.</blockquote>
+      <p><a href="./boyles_1.shtml"><strong>&lt;&lt;&lt; back |</strong></a> <a href="boyles_3.shtml"><strong>continue &gt;&gt;&gt;</strong></a></p>
+      <p><a href="boyles_note.shtml"><strong>translator’s note &gt;&gt;&gt;</strong></a></p>
+    </div>
+
+<div id="content_right">
+<h2>Lire</h2>
+<h3><a href="bio_boyles.shtml">Jean-Joseph Rabearivelo</a></h3>
+<p>Ne faites pas de bruit, ne parlez pas :
+  <blockquote style="margin-top:-10px;">vont explorer une forêt les yeux, le cœur, <br />
+  l’esprit, les songes…</blockquote></p>
+<p>Forêt secrète bien que palpable :
+  <blockquote style="margin-top:-10px;">forêt.</blockquote></p>
+<p>Forêt bruissant de silence,
+  <blockquote style="margin-top:-10px;">Forêt où s’est évadé l’oiseau à prendre au piège,<br />
+  l’oiseau à prendre au piège qu’on fera chanter<br />
+  ou qu’on fera pleurer.</blockquote></p>
+<p>À qui l’on fera chanter, à qui l’on fera pleurer<br />
+  <blockquote style="margin-top:-10px;">le lieu de son éclosion.</blockquote></p>
+<p>Forêt. Oiseau.
+  <blockquote style="margin-top:-10px;">Forêt secrète, oiseau caché<br />
+  dans vos mains.</blockquote></p>
+</p>
+</div>
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="./includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

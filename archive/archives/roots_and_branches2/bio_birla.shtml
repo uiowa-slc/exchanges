@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/roots_branches.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roots &amp; Branches - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="./includes/topnav_new.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<p>&nbsp;</p>
+
+<h2><img src="images/birla.jpg" alt="" width="112" height="138" align="right" style="padding-left:4px;" />Puja Birla</h2>
+<p>
+Puja Birla graduated from the University of Iowa’s Nonfiction Writing Program in 2007 and is currently working on her second M.F.A. in Literary Translation. She has some intention of becoming a writer. She loves to gossip, do the <em>NYT</em> crossword, and drink chai. She misses the monsoon rains of Bombay but has developed a deep appreciation of Iowa’s clear blue skies.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><img src="images/suryabala.jpg" alt="" width="116" height="122" align="right" style="padding-left:4px;" />Suryabala
+</h2>
+<p>
+  Based in Bombay, Suryabala is originally from Varanasi in the northern part of India. She completed her Ph.D. in Hindi Literature at Benares Hindu University. She has been a prolific writer for more than three decades, publishing in all the major Hindi-language magazines and newspapers in the country. Besides satire, she has written novels and short stories, some of which have been adapted for TV.</p>
+<p>&nbsp;</p>
+<p><a href="./birla_1.shtml"><strong>The Range of Inspiration and Inquietude in Hindi &gt;&gt;&gt;</strong></a></p>
+<p>&nbsp;</p>
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="./includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,196 @@
+	@charset "UTF-8";
+/* CSS Document */
+
+	body * { 
+	margin:0; padding:0; }
+	
+	div#header h2 {	
+	font-size:40px;
+	font-family: Baskerville;
+	margin:40px 0px 0px 0px;
+	padding:0px;
+	}
+		
+	div#header img {
+	margin:20px 0px 10px 45px;
+	
+		}
+	
+	
+	div#container {
+	float:left;
+	width:800px;
+	margin:0px 0px 0px 125px;
+	padding:0px;
+	/*border:1px solid red;
+	*/
+	}
+	
+	
+	
+	/* Left Bar Navigation */
+	
+	#navigation {
+	background-color:#000000;
+	float:left;
+	height:100%;
+	width:225px;
+	position:absolute;
+	top:0;
+	left:0;
+	}
+	
+	
+	div#navigation ul {
+	list-style-type:none;
+	list-style:none;
+	margin:101px 0px 0px 5px;
+	padding:0px;
+	background-color:#000000;
+	
+	}
+	
+	div#navigation li {
+	padding-bottom:5px;
+	width:215px;
+	text-align:right;
+	}
+	
+	
+	div#navigation li a{
+	font-family: Baskerville, Times New Roman, serif;
+	letter-spacing: .2em;
+	font-size:11px;
+	color:white;
+	text-decoration: none;
+	}
+	
+	div#navigation li a:hover{
+	font-family: Baskerville, Times New Roman, serif;
+	font-size:11px;
+	color:#8aa6b4;
+	text-decoration: none;
+	}
+	
+	
+	/* End of Left Bar Nav */
+
+	
+	div#content {
+	float:left;
+	width:350px;
+	background-color:white;
+	/*border:1px solid #00F;*/
+	/*margin:0px 5px 0px 45px;
+		*/
+	}
+		
+	div#content div#about_container {
+	width:auto;
+	height:auto;
+	margin:6px 0px 0px 0px;
+	}	
+	
+	div#content div#about_container ul{
+	font-family: Times New Roman, Serif;
+	font-size:12px;
+	padding:0px;
+	margin:0px 0px 10px 0px;
+	}
+	
+	div#content div#about_container li{
+	list-style-type:none;
+	font-family: Times New Roman, Serif;
+	font-size:12px;
+	}
+	
+	div#content div#about_container li strong{
+	font-family: Times New Roman, Serif;
+	list-style-type:none;
+	font-size:13px;
+	padding:0px;
+	margin:0px;
+	}*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.table_of_contents ul{
+	font-family: Times New Roman;
+	font-size:12px;
+	list-style-type:none;
+	color:#000;
+	margin:0px;
+	padding:0px;
+	
+	}
+	
+	.table_of_contents li, a {
+	font-family: Times New Roman, Serif;
+	list-style-type:none;
+	font-size:12px;
+	text-align:left;
+	padding:0px 0px 25px 0px;
+	margin:0px;
+	color:#000;
+	
+	}
+	
+	.table_of_contents li a:hover{
+	font-family: Times New Roman, serif;
+	font-size:12px;
+	color:#8aa6b4;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	/*div#content p{
+	font-family: Times New Roman;
+	font-size:12px;
+	color:#000;
+	/*padding:3px 2px 3px 6px;
+	*/
+	/*margin:0px;
+	line-height:1.4em;
+	}*/
+
+	
+	div#content_right {
+	float:right;
+	width:350px;
+	background-color:white;
+	/*border:1px solid green;*/
+	margin-right:30px;
+	margin-left:10px;
+	
+	
+	}
+	div#content_right p {
+	font-family: Times New Roman;
+	font-size:12px;
+	color:#000;
+	padding:3px 2px 3px 3px;
+	margin:0px 0px 0px 10px;
+	line-height:1.4em;
+
+	
+	}
+	
+	
+	
+	

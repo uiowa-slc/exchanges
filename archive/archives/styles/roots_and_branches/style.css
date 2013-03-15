@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+margin:0px;
+padding:0px;
+background: url(images/top_back.gif);
+background-repeat: repeat-x;
+background-color:#FFFFCC;
+font-family:Georgia, "Times New Roman", Times, serif;
+background-image:url(../../images/treeup.jpg);
+background-position:center;
+background-repeat:no-repeat;
+
+}
+
+.topContainer{
+	height:100px;
+	background-color:3E1F0F;
+	border-bottom-width: 7px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFE1A8;
+		background-color:#513D17;
+	}
+
+.headerContainer{
+	height:120px;
+	margin:auto;
+	width:800px;
+
+}
+
+.headerNav{
+	float:right;
+	height:30px;
+	margin-bottom:30px;
+	margin-top: 40px;
+	margin-right: 30px;
+	margin-left: auto;
+}
+
+.headerNav li{
+	line-height:30px;
+	display: inline;
+	padding-left: 20px;
+}
+
+.headerNav ul{
+	list-style-type: none;
+	display: inline;	
+}
+
+.headerNav a{
+	text-decoration:none;
+	color:#FFE1A8;
+	font-size:17px;
+	font-weight:100;
+	font-weight:lighter;
+}
+
+.toplogo{
+	float:left;
+	font-size:36px;
+	color:#FFFFFF;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+.bottomContainer{
+	padding:10px;
+
+}
+
+.contentContainer{
+	width:800px;
+	margin:auto;
+
+
+}

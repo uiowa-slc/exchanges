@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/roots_branches.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roots &amp; Branches - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="./includes/topnav_new.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<div id="content_left">
+  <h1>Archives</h1>
+  <br />
+ 
+ <p><a href="../silence_and_song/" target="old_issue">Silence & Song - Winter 2008</a><br />
+    <p><a href="../archives/winter2008/" target="old_issue">Black & White - Winter 2008</a><br />
+  <br />
+    <a href="../archives/spring2007/"target="old_issue">Sweet & Sour - Spring 2007</a> <br />
+
+    <br />
+    <a href="../archives/winter06/"target="old_issue">Saints & Sinners - Winter 2006</a><br />
+    <br />
+    <a href="../archives/fall2006/"target="old_issue">Bread & Circuses - Fall 2006</a><br />
+    <br />
+    <a href="../archives/spring05/"target="old_issue">Beasts & Machines -  Spring 2005</a><br />
+
+    <br />
+    <a href="../archives/summer04/"target="old_issue">Madness & Civilization - Summer 2004</a><br />
+    <br />
+    <a href="../archives/spring04/"target="old_issue">Sex & Death - Spring 2004</a><br />
+    <br />
+    <a href="../archives/fall03/"target="old_issue">City & Country - Fall 2003</a>
+
+  </p>
+</div>
+
+<div id="content_right"></div>
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="./includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Roots &amp; Branches - eXchanges</title>
+
+<link href="template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation">
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+<!--#include virtual="./includes/topnav_new.html" -->
+</div>
+
+<div id="content">
+
+<p><img src="./images/thow.jpg" align="right" style="padding-left:4px;" /></p>
+<h2>Diana Thow</h2>
+<p>
+  Diana Thow recently completed her MFA in literary translation at the University of Iowa with a thesis on Amelia Rosselli. She has published her work in Carte Italiane, Mare Nostrum, 91st Meridian, Words Without Borders, House Organ and The Columbia Review. She is a postgraduate writing fellow at the University of Iowa, whereshe teaches a course on literary translation.</p>
+<p>&nbsp;</p>
+<p><a href="./thow_1.shtml"><strong>Three Poems &gt;&gt;&gt;</strong></a></p>
+</div>
+</div>
+<!--#include virtual="./includes/footer.html" -->
+</body>
+</html>

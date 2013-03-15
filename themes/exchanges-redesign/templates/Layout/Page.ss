@@ -1,8 +1,7 @@
 
 
 <div class="container" id="content">
-		$Form
-		$PageComments
+
 		
 		<% include PageNav %>
 		
@@ -13,9 +12,10 @@
 		
       		<div class="span12 column">
       			<h1>$Title</h1>
-      			<p>
+      					$Form
+      					$PageComments
       				$Content
-      			</p>
+      		
 
       		</div>
       		<!--

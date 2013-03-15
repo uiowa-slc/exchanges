@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/roots_branches.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roots &amp; Branches - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {font-weight: bold}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="includes/topnav_new.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<p><img src="images/thow.jpg" align="right" style="padding-left:4px;" /></p>
+
+<h2>Diana Thow</h2>
+<p>
+Diana Thow recently completed her M.F.A. in Literary Translation at the University of Iowa with a thesis on Amelia Rosselli. She has published her work in <em>Carte Italiane</em>, <em>Mare Nostrum</em>, <em>91st Meridian</em>, <em>Words Without Borders</em>, and others. She is a postgraduate writing fellow at the University of Iowa, where she teaches a course on literary translation.</p>
+<p>&nbsp;</p>
+<h2>Amelia Rosselli<img src="images/rosselli.jpg" alt="" width="120" height="100" align="right" style="padding-left:4px;" /></h2>
+<p>Amelia Rosselli (1930-1996) was one of the most important experimental Italian poets of the twentieth century. First trained as a composer and musicologist, she turned to writing in her early twenties. Her books include <em>Variazione Belliche</em> (1964), which has been translated by Lucia Re and Paul Vangelisti as War Variations (Green Integer, 2005), <em>Serie Ospedaliera</em> (1969), <em>Documento</em> (1976), <em>Impromptu</em> (1981), and <em>Frammenti sparsi e persi </em>(1983). In addition to her Italian verse, she published a collection of her English poetry, <em>Sleep-Sonno</em> (trans. Antonio Porta, 1989; trans. Emmanuela Tandello, 1992). She also worked as a literary translator, translating the poetry of Sylvia Plath and Emily Dickinson, among others. Her essays were collected posthumously in <em>Una Scrittura Plurale</em> (2004). Her collected poems, edited by Emmanuela Tandello, were published by Garzanti in 1997, and another edition of her collected works is forthcoming with Mondadori in 2010.</p>
+<p>&nbsp;</p>
+<p><span class="style1"><a href="./thow_1.shtml">Three Poems</a> &gt;&gt;&gt;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- InstanceEndEditable --></div>
+</div>
+<!--#include virtual="includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

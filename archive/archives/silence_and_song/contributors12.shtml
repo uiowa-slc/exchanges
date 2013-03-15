@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/xchanges.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silence &amp; Song - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../syle.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="silence_and_song.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="http://static.imu.uiowa.edu/exchanges/index.shtml"><img src="../images/logo_orange.gif" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="../includes/topnav.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+
+<div id="full_page_content">
+<h2>Katerina Stoykova-Klemer</h2>
+
+<p>
+<img src="../images/piecefivetranslatorphoto.jpg" align="right" style="padding-left:4px;" />
+Katerina Stoykova-Klemer was born and raised in Bulgaria. She immigrated to the United States in 1995, and since then, she has worked as a software engineer in high-tech companies. Presently she is an MFA student at Spalding University in Louisville, Kentucky. Her poems and stories have appeared or are scheduled to appear in a number of magazines, including Родна Реч (Native Speech), Пулс (Pulse), Черноморски фар (Black Sea Lighthouse), Литературен Вестник (Literary Gazette), Бургас Днес (Bourgas Today), Orpheus, Факел (Torch), Third Wednesday, and Anderbo.
+</p>
+
+<br />
+
+<p><a href="jonah.shtml">&lt;&lt;&lt;back to "Jonah"</a>
+</p>
+
+<p>
+<a href="contributors.shtml">&lt;&lt;&lt;back to contributors</a> </p>
+</div>
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="../includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

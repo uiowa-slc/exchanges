@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/xchanges.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silence &amp; Song - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../syle.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="silence_and_song.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+<a href="http://static.imu.uiowa.edu/exchanges/index.shtml"><img src="../images/logo_orange.gif" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+ <!-- InstanceEndEditable -->
+<!--#include virtual="../includes/topnav.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<div id="full_page_content">
+<h2>Doris Kareva</h2>
+<p>
+<img src="../images/piecethreeauthorphoto.jpg" align="right" style="padding-left:4px;" />Doris Kareva (Estonian poet, editor, translator) has published thirteen poetry collections, most recently Shape of Time (2005).  Her poems have been translated into fifteen languages; in 2003 her collection Mandragora was staged by Tallin City Theatre.  Kareva has edited anthologies of Estonian poetry, and translated the work of Auden, Beckett, Dickinson, and Shakespeare.  After winning the State Cultural Prize in 1993, she launched 'Straw Stipend,' which provides publication funding for ten young Estonian poets.  She currently serves as Secretary General of the Estonian National Commission for UNESCO.  She participates courtesy of the Bureau of Educational and Cultural Affairs of the U.S. Department of State.
+</p>
+
+<br />
+
+
+<p><a href="fern_flower.shtml">&lt;&lt;&lt;back to "Metsasügavas"</a></p>
+<p><a href="fern_flower2.shtml">&lt;&lt;&lt;back to "Jaaniöö"</a>
+</p>
+<p><a href="contributors.shtml">&lt;&lt;&lt;back to contributors</a></p>
+</div>
+
+
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="../includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

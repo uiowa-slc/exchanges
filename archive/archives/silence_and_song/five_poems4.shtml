@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/xchanges.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silence &amp; Song - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../syle.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="silence_and_song.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+<a href="http://static.imu.uiowa.edu/exchanges/index.shtml"><img src="../images/logo_orange.gif" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+ <!-- InstanceEndEditable -->
+<!--#include virtual="../includes/topnav.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+
+<div id="content_left">
+<h2>Denotation</h2>
+<h3><a href="contributors8.shtml">Lisa Rose Bradford</a></h3>
+
+<p>I exposed my voice to words<br />
+
+and I called you coral apple skin of March</p>
+
+
+<p>I named you with names of other things<br />
+
+to name the world with your name</p>
+<p>
+<a href="five_poems3.shtml">&lt;&lt;&lt;back</a> &nbsp; &nbsp; &nbsp;<a href="five_poems5.shtml">continue>>></a>
+</p>
+
+
+</div>
+
+
+
+ 
+<div id="content_right">
+
+<h2>Denotación</h2>
+<h3><a href="contributors1.shtml">Guillermo Boido</a></h3> 
+
+<p>yo expuse mi voz a las palabras<br />
+
+y te llamé coral manzana piel de marzo</p>
+
+
+<p>yo te nombré con el nombre de otra cosa<br />
+
+para nombrar al mundo con tu nombre</p> 
+
+
+</div>
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="../includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

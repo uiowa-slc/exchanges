@@ -17,7 +17,12 @@
 		<div class="navbar exchanges">
 		  <div class="navbar-inner">
 		    <div class="container">
-		 
+		    
+		    
+		    	<div class="mobile-subnav">
+			    	<a href="{$BaseHref}">Home</a>
+		    	</div>
+		   
 		      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
 		      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 		      

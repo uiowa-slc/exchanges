@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/roots_branches.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roots &amp; Branches - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="includes/topnav_new.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<div id="content_left">
+<h3><a href="bio_thow.shtml">Diana Thow</a></h3>
+<p>Stones outstretched in the woods; they <br />
+  have tiny friends, ants and other animals <br />
+  that I don’t know how to identify. The wind <br />
+  doesn’t sweep away the stone, those trenches, <br />
+  those remains of shadow, that life of heavy <br />
+  dream.</p>
+           <p>Remains in shadow:  I have a heart that flames<br />
+             then flakes away to naively remind itself<br />
+             not to die.</p>
+           <p>I have a heart like that forest: sometimes all<br />
+             sarcasm, its filthy branches lower to your head <br />
+             to weigh you down.</p>
+      <p><a href="thow_1.shtml"><strong>&lt;&lt;&lt; back</strong></a> | <a href="thow_3.shtml"><strong>continue &gt;&gt;&gt;</strong></a></p>
+      <p><a href="thow_note.shtml"><strong>translator’s note &gt;&gt;&gt;</strong></a></p>
+    </div>
+
+<div id="content_right">
+<h3><a href="bio_thow.shtml">Amelia Rosselli</a></h3>
+<p>Pietre tese nel bosco; hanno piccoli<br />
+  amici, le formiche ed altri animali<br />
+  che non so riconoscere.  Il vento non<br />
+  spazza via il sasso, quelle fosse, quei<br />
+  resti d’ombra, quel vivere di sogni<br />
+  pesanti.</p>
+    <p>Resti nell’ombra: ho un cuore che scotta<br />
+      e poi si sfalda per ingenuamente ricordarsi<br />
+      di non morire.</p>
+    <p>Ho un cuore come quella foresta: tutta<br />
+      sarcastica a volte, i suoi rami lordi<br />
+      discendono sulla testa a pesarti.</p>
+</div>
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

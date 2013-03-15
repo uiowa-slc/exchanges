@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/roots_branches.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roots &amp; Branches - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="includes/topnav_new.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<div id="content_left">
+<h3><a href="bio_thow.shtml">Diana Thow</a></h3>
+<p>Face in the grass you smell what little<br />
+  there is to smell.  You are tired<br />
+  you want to sleep, but you can’t.  The<br />
+  jagged rocks take sardonic <br />
+  poses.</p>
+           <p>Death is in the air, it escapes you<br />
+             only for a short while.  When you turn<br />
+             to retire you kneel.</p>
+           <p>Or you would.  But you can’t.</p>
+           <p><a href="thow_2.shtml"><strong>&lt;&lt;&lt;  back</strong></a> | <a href="contents.shtml"><strong>table of contents &gt;&gt;&gt;</strong></a></p>
+      <p><a href="thow_note.shtml"><strong>translator’s note &gt;&gt;&gt;</strong></a></p>
+</div>
+
+<div id="content_right">
+<h3><a href="bio_thow.shtml">Amelia Rosselli</a></h3>
+<p>Faccia nell’erba odori quel poco<br />
+  che c’è da odorare.  Sei stanco<br />
+  vuoi dormire, ma non puoi.  Le<br />
+  rocce frastagliate prendono pose<br />
+  sardoniche.</p>
+    <p>La morte è nell’aria, ti sfugge<br />
+      solo per un poco.  Quando torni<br />
+      in pensione ti metti in ginocchio.</p>
+    <p>O vorresti.  Ma non puoi.</p>
+</div>
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

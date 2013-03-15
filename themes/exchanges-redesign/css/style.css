@@ -134,7 +134,7 @@
 	      background: url(../images/paper.png);
 	      color: #fff;
 	      text-shadow: -1px -1px 0px rgba(0,0,0,.5);
-	      margin-bottom: 4em;
+	      margin-bottom: 1em;
       }
       #content .column{
 	     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -492,6 +492,13 @@ font-size: .9em;
 	display: none;
 }
 
+.pastIssues ul li {
+	display: block;
+	font-size: 1.3em;
+	margin: 1em 0;
+	
+}
+
 
 @media (max-width: 980px) { 
       span#issue_name{
@@ -533,12 +540,18 @@ font-size: .9em;
 	.mobile-subnav{
 	
 		display: block;
+		float: left;
+		padding: 10px;
+	}
+	
+	.mobile-subnav a {
+		color: #C0B29F;
 	}
 	
  #content .column{
  	padding: 10px;
  	border: none;
- 	margin: 10px 0;
+ 	/*margin: 10px 0;*/
  }
 
 
@@ -563,6 +576,7 @@ font-size: .9em;
 
 #content {
 	padding: 0;
+	margin-bottom: 0;
 }
 
 body{

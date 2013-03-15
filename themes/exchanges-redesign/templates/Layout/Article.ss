@@ -6,7 +6,7 @@
 			<% loop Issues %>
 			<a href="{$Link}">
 			<div>
-				<span>Back to $Title</span>
+				<span>$Title</span>
 			</div>
 			</a>
 			<% end_loop %>

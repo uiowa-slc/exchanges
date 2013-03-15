@@ -1,0 +1,31 @@
+div#about_list{padding:0px; margin:59px 0px 0px 20px; float:left; display:inline; text-align:left;}
+	
+div#about_list h2{ margin:0px 0px 0px 0px; padding:0px; font-family: Baskerville, "Times New Roman", serif; font-size:38px; display:block;}
+	
+div#about_list ul{font-family:Baskerville, "Times New Roman", serif; list-style-image:none; margin:0px 0px 5px 0px; padding:0px;}
+	
+div#about_list ul li{ list-style-type:none; font-size:11px; margin:-5px 0px 0px 0px; padding:0px; }
+	
+div#about_list p{ margin:0px 0px 7px 0px; padding:0px; width:300px; font-family:Baskerville, "Times New Roman", serif; font-size:10px;}
+
+
+div#letter_right_words{font-family:Baskerville, "Times New Roman", serif;font-size:10px;float:left;padding:0px;width:250px; }
+div#letter_right_words p{font-family:Baskerville, "Times New Roman", serif; font-size:11px; padding:0px; width:300px; margin:4px 0px 0px 0px; }
+
+
+div#story{ padding:0px; font-family:Baskerville, "Times New Roman", serif; font-size:11px; width:350px; margin:8px 0px 0px 20px; float:left; text-align:left; }
+div#story h6{  font-family:Bakersville, "Times New Roman", serif; font-size:13px; padding:0px; margin:8px 0px 0px 0px; }
+div#story a{  font-family:Bakersville, "Times New Roman", serif; font-size:11px; color:#333333; padding:0px; margin:8px 0px 0px 0px;}
+
+
+div#story_right{ padding:0px; font-family:Baskerville, "Times New Roman", serif; font-size:11px; width:350px; margin:82px 0px 0px 20px; float:left; text-align:left; }
+div#story_right h6{ font-family:Bakersville, "Times New Roman", serif; font-size:13px; padding:0px; margin:13px 0px 0px 0px; font-weight:normal; }
+
+
+
+div#story_right_logogrammes {
+
+float:right;
+margin-top:-200px;
+}
+	

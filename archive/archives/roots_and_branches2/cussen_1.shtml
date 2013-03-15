@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/roots_branches.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roots &amp; Branches - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="./includes/topnav_new.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<div id="content_left">
+<h3><a href="bio_cussen.shtml">Alex Cussen</a></h3>
+<p><em>Maecenas remains in charge of Rome while Caesar’s ships<br />
+  glide past Italy’s eastern shores.<br />
+  The whole Mediterranean is ready for the final battle.<br />
+  With the first signs of victory, the villa fills with his friends.<br />
+  Yet he can’t tolerate the world's fiery voice and climbs<br />
+  the tower to dictate a letter to Virgil, his friend the poet.</em><br />
+</p>
+<p><a href="cussen_2.shtml"><strong>continue &gt;&gt;&gt;</strong></a></p>
+<p><a href="cussen_note.shtml"><strong>translator’s note &gt;&gt;&gt;</strong></a></p>
+</div>
+
+<div id="content_right">
+<h3><a href="bio_cussen.shtml">Antonio Cussen</a></h3>
+<p><em>Mecenas ha quedado a cargo de Roma mientras las naves del<br />
+  César se deslizan por las costas orientales de Italia.<br />
+  Todo el Mediterráneo se prepara para la batalla final.<br />
+  Con las primeras señales del triunfo se llena de amigos la villa<br />
+  de Mecenas. Pero él no resiste la llamarada del mundo y sube<br />
+  a la torre para dirigir una carta a Virgilio, su poeta amigo.</em></p>
+    </div>
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="./includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

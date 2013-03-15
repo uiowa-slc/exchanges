@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/xchanges.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silence &amp; Song - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../syle.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="../silence_and_song/silence_and_song.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+<a href="http://static.imu.uiowa.edu/exchanges/index.shtml"><img src="../images/logo_orange.gif" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+ <!-- InstanceEndEditable -->
+<!--#include virtual="../roots_and_branches2/includes/topnav.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+
+<div id="content_left">
+<h2>ARCHIVES</h2><br />
+
+    <p><a href="winter2008/" target="old_issue">Black & White - Winter 2008</a><br />
+  <br />
+    <a href="spring2007/"target="old_issue">Sweet & Sour - Spring 2007</a> <br />
+    <br />
+    <a href="winter06/"target="old_issue">Saints & Sinners - Winter 2006</a><br />
+    <br />
+    <a href="fall2006/"target="old_issue">Bread & Circuses - Fall 2006</a><br />
+    <br />
+    <a href="spring05/"target="old_issue">Beasts & Machines -  Spring 2005</a><br />
+    <br />
+    <a href="summer04/"target="old_issue">Madness & Civilization - Summer 2004</a><br />
+    <br />
+    <a href="spring04/"target="old_issue">Sex & Death - Spring 2004</a><br />
+    <br />
+    <a href="fall03/"target="old_issue">City & Country - Fall 2003</a>
+  </p>
+
+</div>
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="../roots_and_branches2/includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

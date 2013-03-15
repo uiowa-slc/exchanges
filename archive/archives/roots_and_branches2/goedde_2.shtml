@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/roots_branches.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roots &amp; Branches - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="./includes/topnav_new.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<div id="content_left">
+<h2>Imminent snow</h2>
+<h3><a href="bio_goedde.shtml">Emily Goedde</a></h3>
+<p>Silent winter sparrows <br />
+  fill bamboo thickets<br />
+  Frozen clouds curtain the sky <br />
+  snow about to fall<br />
+  The north wind gives<br />
+  no one special favors <br />
+  Plum branches hold <br />
+  their blossoms tight</p>
+<p><a href="./goedde_1.shtml"><strong>&lt;&lt;&lt; back | </strong></a><a href="contents.shtml"><strong>table of contents &gt;&gt;&gt;</strong></a></p>
+<p><a href="goedde_note.shtml"><strong>translator’s note &gt;&gt;&gt;</strong></a></p>
+    </div>
+
+<div id="content_right">
+<h2>欲雪</h2>
+<h3><a href="bio_goedde.shtml">朱淑真</a></h3>
+<p>寒雀無聲滿竹裡<br />
+  凍雲四幕雪將垂<br />
+  北風不看人情面<br />
+  控勒梅花不放枝</p>
+    </div>
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="./includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

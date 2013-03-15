@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/xchanges.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silence &amp; Song - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../syle.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="silence_and_song.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="http://static.imu.uiowa.edu/exchanges/index.shtml"><img src="../images/logo_orange.gif" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="../includes/topnav.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<div id="full_page_content">
+<h2>Katerine Factor</h2>
+<p><img src="../images/katfactor.jpg" align="right" style="padding-left:4px;" />
+Katherine Factor was raised across the river in Galesburg, Illinois, educated at Interlochen Arts Academy and Grinnell College.  A recent graduate of the Iowa Writers' Workshop, she is interested in eco-poetics and new natural histories.  Recent work appears in Diagram 8.1, Iowa Writes, and the Colorado Review.
+ 
+</p>
+<br />
+
+<p><a href="fern_flower.shtml">&lt;&lt;&lt;back to "In the Great Woods"</a></p>
+<p><a href="fern_flwoer2.shtml">&lt;&lt;&lt;back to "Midsummer Night"</a></p>
+<p>
+<a href="contributors.shtml">&lt;&lt;&lt;back to contributors</a></p>
+</div>
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="../includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

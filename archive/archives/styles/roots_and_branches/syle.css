@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+margin:0px;
+padding:0px;
+background: url(images/top_back.gif);
+background-repeat: repeat-x;
+background-color:#fffeef;
+
+}
+
+.topContainer{
+
+	height:100px;
+	background-color:#666666;
+
+}

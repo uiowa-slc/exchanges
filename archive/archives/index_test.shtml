@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/xchanges.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silence &amp; Song - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="syle.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="silence_and_song/silence_and_song.css" rel="stylesheet" type="text/css" />
+<style>
+body {
+background-image: url(images/green_gradient_bg.gif);
+background-repeat:repeat-x;
+background-color:#d6e1c0;
+}
+
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+<img src="images/logo_brown.jpg" style="float:left; margin:18px 0px 0px 15px;"/>
+ <!-- InstanceEndEditable -->
+<!--#include virtual="roots_and_branches2/includes/topnav.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" --><a href="silence_and_song/"><img src="images/silence_song_img.gif" border="0" style="margin-top:120px; margin-left:30px;"/></a><!-- InstanceEndEditable --></div>
+</div>
+<!--#include virtual="roots_and_branches2/includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

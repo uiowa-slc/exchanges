@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/xchanges.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silence &amp; Song - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../syle.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="silence_and_song.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="http://static.imu.uiowa.edu/exchanges/index.shtml"><img src="../images/logo_orange.gif" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="../includes/topnav.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<div id="full_page_content">
+<h2>Lisa Rose Bradford</h2>
+<p><img src="../images/pieceonetranslatorphoto.jpg" align="right" style="padding-left:4px;" />Lisa Rose Bradford teaches Comparative Literature at the Universidad Nacional de Mar del Plata and Translation Studies at the Universidad Nacional de Córdoba, Argentina. Her poems and translations have appeared in <em>Poetry Now</em>, <em>Thorny Locust</em>, <em>Faultline</em> and <em>Calque</em>. She has also published two books in Spanish on literary translation in Argentina, <em>Traducción como cultura</em> and <em>La cultura de los géneros</em>, and is currently working on an anthology of U.S. women’s poetry in Spanish, entitled <em>Los pájaros, por la nieve for RIL (Chile)</em>, parts of which have appeared in <em>Hablar de poesía</em>. </p> 
+
+<br />
+
+
+<p><a href="five_poems.shtml">&lt;&lt;&lt;back to "Craft"</a></p>
+<p><a href="five_poems2.shtml">&lt;&lt;&lt;back to "Habits"</a></p>
+<p><a href="five_poems3.shtml">&lt;&lt;&lt;back to "The Word’s Compulsion"</a></p>
+<p><a href="five_poems4.shtml">&lt;&lt;&lt;back to "Denotation"</a></p>
+<p><a href="five_poems5.shtml">&lt;&lt;&lt;back to "4"</a>
+</p>
+<p>
+<a href="contributors.shtml">&lt;&lt;&lt;back to contributors</a> </p>
+
+</div>
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="../includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

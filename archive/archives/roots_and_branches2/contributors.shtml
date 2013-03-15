@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/roots_branches.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roots &amp; Branches - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="includes/topnav_new.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<h1>Contributors</h1>
+<h2>Roots & Branches, Fall 2008</h2>
+<div id="content_left">
+  <h2>Authors</h2><p>
+  <a href="bio_cussen.shtml">Antonio Cussen</a><br />
+  <br />
+    <a href="bio_bickham.shtml">Julia Franck</a><br />
+    <br />
+    <a href="bio_donnely_miller.shtml">Former Grand Archbishop Kakuchū</a><br />
+    <br />
+    <a href="bio_montero.shtml">María Negroni </a><br />
+    <br />
+    <a href="bio_boyles.shtml">Jean-Joseph Rabearivelo</a><br />
+    <br />
+    <a href="bio_thow.shtml">Amelia Rosselli</a><br />
+    <br />
+    <a href="bio_birla.shtml">Suryabala</a><br />
+    <br />
+    <a href="bio_scudder.shtml">Sigurbjörg Þrastardóttir</a><br />
+    <br />
+    <a href="bio_goedde.shtml">Zhu Shuzhen</a></p>
+    
+</div>
+
+<div id="content_right">
+  <h2>Translators</h2>
+  <p> <a href="bio_bickham.shtml">Nedra Bickham</a> <br />
+    <br />
+    <a href="bio_birla.shtml">Puja Birla</a> <br />
+    <br />
+    <a href="bio_boyles.shtml">Kelli Boyles</a>    <br />
+    <a href="bio_cussen.shtml"><br />
+    Alex Cussen</a>    <br />
+    <a href="bio_donnely_miller.shtml"><br />
+    Patrick Donnelly</a>    <br />
+    <a href="bio_montero.shtml"><br />
+    Michelle Gil-Montero</a>    <br /> 
+    <a href="bio_goedde.shtml"><br />
+    Emily Goedde</a><br />
+    <a href="bio_scudder.shtml"><br />
+    Kristof Magnusson</a> <br />
+    <a href="bio_donnely_miller.shtml"><br />
+    Stephen D. Miller</a> <br />
+    <a href="bio_scudder.shtml"><br />
+    Bernard Scudder</a> <br />
+    <a href="bio_thow.shtml"><br />
+    Diana Thow</a> <br />
+  </p>
+</div>
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="includes/footer.html" -->
+</body><!-- InstanceEnd -->
+</html>

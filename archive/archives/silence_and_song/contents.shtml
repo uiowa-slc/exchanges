@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/xchanges.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silence &amp; Song - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../syle.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="silence_and_song.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+<a href="http://static.imu.uiowa.edu/exchanges/index.shtml"><img src="../images/logo_orange.gif" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+ <!-- InstanceEndEditable -->
+<!--#include virtual="../includes/topnav.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+
+<div id="full_page_content">
+  <h2>SILENCE & SONG</h2>
+
+<h3 style="margin-bottom:0px;"><a href="five_poems.shtml">Five Poems</a></h3>
+<p style="margin:0px; padding:0px;"/>Lisa Rose Bradford translates from the Spanish of Guillermo Boido</p>
+
+<h3 style="margin-bottom:0px;"><a href="slow_waltz.shtml">Slow Waltz</a></h3>
+<p style="margin:0px; padding:0px;"/>Katherine Perry translates from the German of Günter Grass</p>
+
+<h3 style="margin-bottom:0px;"><a href="fern_flower.shtml">Fern Flower</a></h3>
+<p style="margin:0px; padding:0px;"/>Katherine Factor translates from the Estonian of Doris Kareva, and
+Doris Kareva translates from the English of Katherine Factor</p>
+
+<h3 style="margin-bottom:0px;"><a href="motionless_grove.shtml">The Motionless Grove</a></h3>
+<p style="margin:0px; padding:0px;"/>Liz Henry translates from the Spanish of Juana de Ibarbourou</p>
+
+<h3 style="margin-bottom:0px;"><a href="jonah.shtml">Jonah</a></h3>
+<p style="margin:0px; padding:0px;"/>Katerina Stoykova-Klemer translates from the Bulgarian of Georgi Borissov</p>
+
+<h3 style="margin-bottom:0px;"><a href="survivors.shtml">“Survivors,” an excerpt from Ears of the Wolf</a></h3>
+<p style="margin:0px; padding:0px;"/>Anna Guercio translates from the Spanish of Antonio Ungar</p>
+
+<h3 style="margin-bottom:0px;"><a href="four_poems.shtml">Four Poems</a></h3>
+<p style="margin:0px; padding:0px;"/>Steven and Maja Teref translate from the Serbian of Novica Tadić</p>
+
+
+</div>
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="../includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

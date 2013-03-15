@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/roots_branches.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roots &amp; Branches - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="./includes/topnav_new.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<div id="content_left">
+<h2>The Three Birds</h2>
+<h3><a href="bio_boyles.shtml">Kelli Boyles</a></h3>
+<p>The bird of iron, the bird of steel <br />
+</p>
+           <blockquote style="margin-top:-10px;">who slashed the morning clouds <br />
+             and tried to gouge the stars<br />
+             out beyond the day<br />
+             is hiding as if ashamed<br />
+           in an unreal cave.</blockquote>
+           <p>The bird of flesh, the bird of feathers<br />
+</p>
+           <blockquote style="margin-top:-10px;">who tunnels through the wind<br />
+             to reach a moon he saw in a dream<br />
+             hanging in the branches<br />
+             falls in tandem with the night<br />
+      into a maze of brambles.</blockquote>
+           <p>But the bird that has no body<br />
+</p>
+           <blockquote style="margin-top:-10px;">enchants the warden of the mind<br />
+with his stammering aria,<br />
+then opens his echoing wings<br />
+and rushes away to pacify all space<br />
+and only returns immortal.</blockquote>
+           <p><a href="boyles_2.shtml"><strong>&lt;&lt;&lt; back</strong></a> | <a href="contents.shtml"><strong>table of contents &gt;&gt;&gt;</strong></a></p>
+      <p><a href="boyles_note.shtml"><strong>translator’s note &gt;&gt;&gt;</strong></a></p>
+    </div>
+
+<div id="content_right">
+<h2>Les Trois Oiseaux</h2>
+<h3><a href="bio_boyles.shtml">Jean-Joseph Rabearivelo</a></h3>
+<p>L’oiseau de fer, l’oiseau d’acier, <br />
+  <blockquote style="margin-top:-10px;">après avoir lacéré les nuages du matin<br />
+  et voulu picorer des étoiles<br />
+  au-delà du jour,<br />
+  descend comme à regret<br />
+  dans une grotte artificielle.</blockquote>
+  <p>L’oiseau de chair, l’oiseau de plumes<br />
+      <blockquote style="margin-top:-10px;">qui creuse un tunnel dans le vent<br />
+      pour parvenir jusqu’à la lune qu’il a vue en rêve<br />
+      dans les branches,<br />
+      tombe en même temps que le soir<br />
+      dans un dédale de feuillage.</blockquote>
+      <p>Celui qui est immatériel, lui, <br />
+      <blockquote style="margin-top:-10px;">charme le gardien du crâne<br />
+      avec son chant balbutiant,<br />
+      puis ouvre des ailes résonnantes<br />
+      et va pacifier l’espace<br />
+      pour n’en revenir qu’une fois éternel.</blockquote></p>
+</div>
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="./includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

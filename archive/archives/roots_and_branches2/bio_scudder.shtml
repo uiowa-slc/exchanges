@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/roots_branches.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Roots &amp; Branches - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="template.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="roots_and_branches.css" rel="stylesheet" type="text/css" /><!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+
+<a href="./"><img src="../images/exlogo.png" width="225" height="63" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+
+ <!-- InstanceEndEditable -->
+<!--#include virtual="./includes/topnav_new.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+<p><img src="images/scudder.jpg" align="right" style="padding-left:4px;" /></p>
+
+<h2>Bernard Scudder</h2>
+<p>Bernard Scudder, who died in October 2007 at the age of 53, was a poet and translator of Icelandic literature. His interests as a translator ranged from the medieval sagas to contemporary poetry and fiction. A collection of his own poetry, entitled <em>Composures</em>, appeared in 1996, and a second, posthumous volume, is due for publication in 2008.</p>
+<p>&nbsp;</p>
+<h2><img src="images/magnusson.jpg" alt="" align="right" style="padding-left:4px;" />Kristof Magnusson</h2>
+<p>Kristof Magnusson (1976) writes for theatre, including the comedy <em>Männerhort</em> [<em>Men’s Daycare</em>] (2001), which has been widely staged in Germany and translated into Swedish, Turkish, French, Bulgarian and Estonian. He has also coordinated theatre projects with homeless people in Berlin. Magnusson’s novel, <em>Zuhause</em> [<em>At Home</em>] (2005), won the 2006  Rauriser Prize for Literature in Austria, and is available in French and Marati translations. He also translated <em>Stormur</em> [<em>Stor</em><em>m</em>], a novel by Icelandic author Einar Kárason, into German. Additionally, he has translated the poetry and theatrical works of numerous Icelandic writers and is currently a member of a group of translators preparing a new translation of the Icelandic sagas from Old Norse.</p>
+<p>&nbsp;</p>
+<h2><img src="images/rastardottir.jpg" alt="" align="right" style="padding-left:4px;" />Sigurbjörg Þrastardóttir</h2>
+<p>Sigurbjörg Þrastardóttir (1973) is the author of four poetry collections, plays, and a prize winning novel. She officially lives in Reykjavik, Iceland, but is currently traveling. Selected poems have been printed in twelve languages and she has participated in literary events from Belgrad to Barcelona. She is a columnist for the newspaper <em>Morgunbladid</em> in Reykjavik. A collection of her poems in English translation, <em>To bleed straight</em>, is forthcoming at JPV Publishers, Reykjavik.</p>
+<p>&nbsp;</p>
+<p><a href="./scudder_1.shtml"><strong>Three Poems &gt;&gt;&gt;</strong></a></p>
+<p>&nbsp;</p>
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="./includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>

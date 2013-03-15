@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/xchanges.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Silence &amp; Song - eXchanges</title>
+<!-- InstanceEndEditable -->
+<link href="../syle.css" rel="stylesheet" type="text/css" />
+
+<!-- insert issue-specific styles here --> 
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="silence_and_song.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<div id="container">
+
+<div id="navigation"><!-- InstanceBeginEditable name="EditRegion4" -->
+<a href="http://static.imu.uiowa.edu/exchanges/index.shtml"><img src="../images/logo_orange.gif" style="float:left; margin:18px 0px 0px 15px; border:none;"/></a>
+ <!-- InstanceEndEditable -->
+<!--#include virtual="../includes/topnav.html" -->
+ 
+</div>
+
+<div id="content">
+<!-- InstanceBeginEditable name="content" -->
+
+<div id="content_left">
+<h2>Incantation (Against Phantoms)</h2>
+<h3 class="no_link"><a href="contributors14.shtml">Steven Teref</a> and <a href="contributors15.shtml">Maja Teref</a></h3>
+
+
+<p>They’re not human.<br />
+They’re only pretending to be human.</p>
+
+<p>They’re not cacti.<br />
+They’re only pretending to be cacti.</p>
+
+<p>They’re not cats.<br />
+They’re only pretending to be cats.</p>
+
+<p>They’re not birds.<br />
+They’re only pretending to be birds.</p>
+
+<p>They’re not shadows.<br />
+They’re only pretending to be shadows.</p>
+
+<p>They’re carried by the wind.<br />
+They leap over rooftops.<br />
+They’re night phantoms.</p>
+<br />
+<p><a href="four_poems.shtml">&lt;&lt;&lt;back</a> &nbsp; &nbsp; &nbsp;<a href="four_poems3.shtml">continue>>></a></p>
+</div>
+
+
+<div id="content_right">
+
+<h2>БРОЈАНИЦА (ПРОТИВ УТВАРА)</h2>
+  <h3><a href="contributors7.shtml">Новица Тадић</a></h3>
+
+
+<p>Они нису људи.<br />
+Само се праве да су људи.</p>
+
+<p>Они нису кактуси.<br />
+Само се праве да су кактуси.</p>
+
+<p>Они нису мачке.<br />
+Само се праве да су мачке.</p>
+
+<p>Они нису птице.<br />
+Само се праве да су птице.</p>
+
+<p>Они нису сенке.<br />
+Само се праве да су сенке.</p>
+
+<p>Они лете на ветру.<br />
+Они скачу по крововима.<br />
+Они су утваре у ноћи.</p>
+</p>
+
+
+</div>
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<!--#include virtual="../includes/footer.html" -->
+</body>
+<!-- InstanceEnd --></html>
