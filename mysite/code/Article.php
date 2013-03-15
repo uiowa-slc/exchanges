@@ -31,15 +31,23 @@ class Article extends Page {
   public static $default_parent = "articles";
     
   public static $can_be_root = false;
-    
-public function populateDefaults() {
+  
+  public static $defaults = array ( 
+  
+  	"ParentID" => 39
+  	
+  	/*"ParentID" => 7 */
+  );
+  
+
+/*public function populateDefaults() {
 	$holder = $this->getArticleHolder();
 	
 	if($holder){
 	    $this->ParentID = $holder->ID;
 	    parent::populateDefaults();
     }
-}
+}*/
 
    public function getArticleHolder(){
 	   $holder = ArticleHolder::get()->First();
@@ -106,15 +114,15 @@ public function populateDefaults() {
 		//$publishPage = $publishCheckbox->Value();
 		
 		$linky = $this->Link();
-		print_r($linky);
+		//print_r($linky);
 		
 		
 		
-		$fields->addFieldToTab('Root.Main', new LabelField('LabelTest', '<a class="ui-button-text" href="'.$this->Link(). 'publishPage/' .'" style="background: -webkit-linear-gradient(#93be42, #1f9433); padding-top:5px; padding-bottom:5px; display: block; background-color: #1f9433; border-radius: 3px; text-shadow: #1c872f 0 -1px -1px; font-weight: bold; color: white; padding-left: 7px; width: 50px;">Publish</a>'));
+		//$fields->addFieldToTab('Root.Main', new LabelField('LabelTest', '<a class="ui-button-text" href="'.$this->Link(). 'publishPage/' .'" style="background: -webkit-linear-gradient(#93be42, #1f9433); padding-top:5px; padding-bottom:5px; display: block; background-color: #1f9433; border-radius: 3px; text-shadow: #1c872f 0 -1px -1px; font-weight: bold; color: white; padding-left: 7px; width: 50px;">Publish</a>'));
 		
 		
 		
-		
+
 		
 
         return $fields;

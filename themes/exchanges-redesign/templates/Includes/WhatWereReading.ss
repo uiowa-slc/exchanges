@@ -2,7 +2,7 @@
 
 	<% with Page("what-were-reading") %>
 	 
-		$Content
+		<div class="readingSidebar no-center">$Content</div>
 		<a href="$Link"> Read More </a>
 	
 	<% end_with %>
