@@ -492,17 +492,15 @@ font-size: .9em;
 	display: none;
 }
 
-<<<<<<< HEAD
+
 .pastIssues ul li {
 	display: block;
 	font-size: 1.3em;
 	margin: 1em 0;
-	
-=======
+
 .readingSidebar {
 	max-height: 200px;
 	overflow: hidden;
->>>>>>> Small addition to style.css
 }
 
 
