@@ -1,4 +1,4 @@
-<div class="container" id="content">
+<div class="container article" id="content">
 
 
 		
@@ -27,9 +27,10 @@
 		
       		<div class="span6 column" id="original-work">
       		
-      			
+      			<h1>$UntranslatedTitle</h1>
+
       		 
-      			<h1>$TranslatedTitle</h1>
+      			
       	
       		  <span class="author">
       		<% loop $Authors %>
@@ -52,8 +53,7 @@
 
       		<div class="span6 column" id="translated-work">
       		
-      		
-      			<h1>$UntranslatedTitle</h1>
+      			<h1>$TranslatedTitle</h1>
       		
       		<span class="author">
       		<% loop $Translators %>

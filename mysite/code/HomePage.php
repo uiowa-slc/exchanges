@@ -1,5 +1,5 @@
 <?php
-class HomePage extends ExpressHomePage {
+class HomePage extends Page {
 
 	public static $db = array(
 
@@ -31,7 +31,7 @@ class HomePage extends ExpressHomePage {
 }
 
 
-class HomePage_Controller extends ExpressHomePage_Controller {
+class HomePage_Controller extends Page_Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the

@@ -4,7 +4,6 @@ class Contributor extends DataObject {
  static $db = array(
         'Name' => 'Text',
         'BiographicalDetails' => 'HTMLText',
-        'TestField' => 'Text'
         
     );
     
@@ -28,7 +27,6 @@ class Contributor extends DataObject {
         $fields->removeByName('Articles');
      
         $fields->addFieldToTab('Root.Main', new TextField('Name'));
-        $fields->addFieldToTab("Root.Main", new TextField('ID'));
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('BiographicalDetails', 'Biographical Details'));
      
         return $fields;

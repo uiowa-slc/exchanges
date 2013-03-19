@@ -16,8 +16,6 @@ class Translator extends Contributor {
     
    public function getCMSFields() {
         $fields = parent::getCMSFields();
-
-        $fields->addFieldToTab("Root.Main", new TextField('ID', 'Translator ID'));
      
         return $fields;
     }

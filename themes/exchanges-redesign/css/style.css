@@ -280,6 +280,12 @@
 	      float: right;
 	      margin: 0 -22px 1.5em 0;
       }
+      
+      .article p{
+	      margin: 0;
+	      padding: 0;
+	      
+      }
       .blog_post{
       	  /*height:250px;*/
 	      margin-bottom: 2em;
@@ -497,6 +503,7 @@ font-size: .9em;
 	display: block;
 	font-size: 1.3em;
 	margin: 1em 0;
+}
 
 .readingSidebar {
 	max-height: 200px;
@@ -722,8 +729,3 @@ body{
   }
 
 }
-
-@media (max-width: 480px) {
-
-
-  }
