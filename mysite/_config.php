@@ -58,3 +58,4 @@ Object::add_extension('SiteConfig', 'CustomSiteConfig');
 Security::setDefaultAdmin('admin','password');
 
 Director::set_environment_type('dev'); //Get TOCLink.ss error in dev mode
+
