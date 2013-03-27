@@ -11,7 +11,7 @@
 
 	      			<span id="issue_num">$IssueDate</span></span>
 	      			<span id="issue_name"><a class="titleLink" href="{$Link}">$Title</a></span>
-	      			<a class="letterLink" href="{$Link}letter">Letter From the Editor</a>
+	      			<a class="letterLink" href="{$Link}letter"><% if LetterFromEditorCustomTitle %>$LetterFromEditorCustomTitle <% else %>Letter from the editors<% end_if %></a>
 
 	      		</div>
 	      			

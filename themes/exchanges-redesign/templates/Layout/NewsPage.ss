@@ -4,12 +4,6 @@
 		
 		<% include PageNav %>
 		
-		<div class="row" id="backto" style="display: block;">			
-			<div>
-				<span>$Title</span>
-			</div>
-		</div>
-		
 		
 		
 			<div class="row">

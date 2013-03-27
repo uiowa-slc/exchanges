@@ -68,9 +68,30 @@ class Page_Controller extends ContentController {
 		Requirements::themedCSS('layout'); 
 		Requirements::themedCSS('typography'); 
 		Requirements::themedCSS('form'); 
-	}
-	
+		
+		$jsFiles = array(
 
+						'themes/exchanges-redesign/js/lib/jquery.js',
+						'themes/exchanges-redesign/js/lib/jquery-ui-1.8.21.custom.js',
+					    'themes/exchanges-redesign/js/lib/modernizr.js',
+						'themes/exchanges-redesign/js/bootstrap.js',
+					    'themes/exchanges-redesign/js/express.js',
+					    'themes/exchanges-redesign/js/general.js',	    
+					);
+
+		
+		if(Director::isDev()) {
+		
+			foreach($jsFiles as $jsFile){
+				Requirements::javascript($jsFile);	
+			}
+
+		}else{
+			
+			Requirements::combine_files(
+				'allcombined.js',$jsFiles);
+			}
+		}
 	
 	public function Pages(){
 		$pages = DataObject::get("Page");
@@ -78,9 +99,7 @@ class Page_Controller extends ContentController {
 		if($pages){
 			return $pages;
 		}else{
-		
 			return false;
-			
 		}
 	
 	}

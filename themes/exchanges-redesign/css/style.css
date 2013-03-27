@@ -293,6 +293,7 @@
       .blog_post h1{
 	      text-align: left;
 	      float: left;
+	      font-size: 26px;
       }
       .postheader{
 	      border-bottom: 1px solid rgba(0,0,0,.2);

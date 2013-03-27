@@ -37,7 +37,7 @@
 	    }
 	    /*************************/
 
-	    $('.carousel').carousel({
+	 /*   $('.carousel').carousel({
 			interval: 8000,
 			pause: ""
 	    });  
@@ -52,7 +52,7 @@
 	    		$(this).closest('.carousel').carousel('pause').addClass('play');
 	    		$(this).find('.icon').addClass('icon-play-js').html('&#xf04b;');
 	    	}	    	
-	    });
+	    });*/
 
 
 
