@@ -75,22 +75,22 @@ class Page_Controller extends ContentController {
 						'themes/exchanges-redesign/js/lib/jquery-ui-1.8.21.custom.js',
 					    'themes/exchanges-redesign/js/lib/modernizr.js',
 						'themes/exchanges-redesign/js/bootstrap.js',
-					    'themes/exchanges-redesign/js/express.js',
-					    'themes/exchanges-redesign/js/general.js',	    
 					);
 
 		
-		if(Director::isDev()) {
-		
+	/*	if(Director::isDev()) {
+		*/
 			foreach($jsFiles as $jsFile){
 				Requirements::javascript($jsFile);	
 			}
+			
+			/*
 
 		}else{
 			
 			Requirements::combine_files(
 				'allcombined.js',$jsFiles);
-			}
+			/*}*/
 		}
 	
 	public function Pages(){
