@@ -10,7 +10,7 @@
 	      		
 	      			<% if $Translators %>
 		      		<% loop $Translators %>
-		      		<a href="#">$Name</a><% if not Last %>, <% end_if %>
+		      		<a href="contributors/show/{$ID}">$Name</a><% if not Last %>, <% end_if %>
 		      		<% end_loop %>
 		      		
 		      		translates from the $OriginalLanguage</li>
@@ -20,7 +20,7 @@
 	      		<% if $Authors %>
 	      		<li><em>Original by 
 		      		<% loop $Authors %>
-		      			<a href="#">$Name</a><% if not $Last %>, <% end_if %>
+		      			<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
 		      		<% end_loop %>
 	      		</em></li>
 	      		<% end_if %><%-- end if Authors --%>
