@@ -56,6 +56,19 @@ class Article extends Page {
 		   return $holder;
 	   }
    }
+   
+   public function MoreThanOneTranslator() {
+	   $translators = $this->Translators()->toArray();
+	   $translatorSize = count($translators);
+
+	   if($translatorSize > 1) {
+		   return true;
+	   }else{
+		   
+		   return false;
+	   }
+	   
+   }
       
    public function getCMSFields() {
    

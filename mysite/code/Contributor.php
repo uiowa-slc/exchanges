@@ -17,7 +17,7 @@ class Contributor extends DataObject {
  
  );   
  
-    
+ 
    public function getCMSFields() {
         $fields = parent::getCMSFields();
 
