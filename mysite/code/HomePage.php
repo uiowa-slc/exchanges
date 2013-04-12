@@ -69,7 +69,7 @@ class HomePage_Controller extends Page_Controller {
 	}
 	
 	public function getNewsItems($limit = 3) {
-		$holder = NewsPage::get()->limit($limit);
+		$holder = NewsPage::get()->limit($limit)->sort("Date DESC");
 		return $holder;
 	}
 

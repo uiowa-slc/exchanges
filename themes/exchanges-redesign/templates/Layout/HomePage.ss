@@ -1,6 +1,4 @@
 <div class="container" id="content">
-	
-
 		<div class="row">
 		
       		<div class="span8 column">
@@ -16,8 +14,8 @@
 	      		</div>
 	      			
 	      			<div class="letterPreview">
-			      		<p>$LetterFromEditor.Summary(300)</p>
-			      		<a href="{$Link}letter">Read the letter from the editor</a>
+			      		<p><a href="{$Link}letter">$LetterFromEditor.Summary(300)</a></p>
+			      		
 	      			</div>
 		      		
 	      		</div>
