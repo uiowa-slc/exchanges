@@ -13,7 +13,7 @@
 		<div class="row">
 		
       		<div class="span12 column">
-      			<h1>Translator's Notes</h1>
+      			<h1>Notes on Translation</h1>
       				$TranslatorNote
       				<br />
       				-<% loop Translators %><% if Last %> & <% else %><% if not First %>, <% end_if %><% end_if %>$Name<% end_loop %>
