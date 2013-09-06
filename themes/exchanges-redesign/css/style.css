@@ -302,9 +302,14 @@
 	      padding-bottom: .7em;
 	      margin-bottom: 1em;
       }
+      
+      .postheader h1{
+	      float: left; 
+      }
+      
       span.postdate{
 	      font-size: .9em;
-	      float: right;
+	      /*float: right;*/
 	      margin-top: 30px;
 	      color: #735a3a;
       }

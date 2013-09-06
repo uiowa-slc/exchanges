@@ -33,7 +33,7 @@
 	      		
 	      		<% end_with %>
 	      		
-	      		<h1 class="band">News</h1>
+	      		<h1 class="band">Blog</h1>
 	      		
 	      		
 
@@ -41,15 +41,15 @@
 
 	      		<div class="blog_post">
 	      			<div class="postheader">
-	      				<h1><a href="$Link">$Title</a></h1>
-	      				<span class="postdate">$Date.NiceUs</span>
+	      				<h2><a href="$Link">$Title</a></h2>
+	      				<h5 class="postdate">$Date.NiceUs</h5>
 	      			</div>
 	      				<p>$Content.Summary(100)</p>
 	      				<a href="{$Link}">Read More</a>
 	      		</div>
 	      		
 	      		<% end_loop %>
-	      		<h1 class="band"><a href="{$BaseHref}news">See All News </a></h1>
+	      		<h1 class="band"><a href="{$BaseHref}news">See All Posts </a></h1>
 	      	</div>
 	      	<div class="span4 column">
 		      		<% include PastIssues %>
