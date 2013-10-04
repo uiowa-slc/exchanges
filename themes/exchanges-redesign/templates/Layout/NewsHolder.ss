@@ -12,7 +12,7 @@
 	
   		<div class="span8 column">
   		
-  			<% loop paginatedNewsItems %>
+  			<% loop getNewsItems %>
   				<div class="blog_post">
 	      			<div class="postheader">
 	      				<h1><a href="$Link">$Title</a></h1>
@@ -23,11 +23,11 @@
 	      		</div>
 	      	<% end_loop %>
   			
-      		<% if paginatedNewsItems.MoreThanOnePage %>
-			    <% if paginatedNewsItems.NotFirstPage %>
-			        <a class="prev" href="$paginatedNewsItems.PrevLink">Prev</a>
+      		<% if getNewsItems.MoreThanOnePage %>
+			    <% if getNewsItems.NotFirstPage %>
+			        <a class="prev" href="$getNewsItems.PrevLink">Prev</a>
 			    <% end_if %>
-			    <% loop paginatedNewsItems.Pages %>
+			    <% loop getNewsItems.Pages %>
 			        <% if CurrentBool %>
 			            $PageNum
 			        <% else %>
@@ -38,8 +38,8 @@
 			            <% end_if %>
 			        <% end_if %>
 			        <% end_loop %>
-			    <% if paginatedNewsItems.NotLastPage %>
-			        <a class="next" href="$paginatedNewsItems.NextLink">Next</a>
+			    <% if getNewsItems.NotLastPage %>
+			        <a class="next" href="$getNewsItems.NextLink">Next</a>
 			    <% end_if %>
 			 <% end_if %>
       		
