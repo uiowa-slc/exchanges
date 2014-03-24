@@ -16,7 +16,7 @@
 		      			<li class="toc">
 			      			<h2><a href="{$Link}letter"><% if LetterFromEditorCustomTitle %>$LetterFromEditorCustomTitle <% else %>Letter from the editors<% end_if %></a></h2>
 			      			<ul>
-			      				<li>by the Editors</li>
+			      				<li>by the editors</li>
 				      		</ul>
 				      	</li>
 			      	</ul>

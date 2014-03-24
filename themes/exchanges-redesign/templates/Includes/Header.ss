@@ -39,7 +39,7 @@
 				
 					<% control Menu(1) %>
 					  <li <% if $LinkingMode = "current" %>class="active"<% end_if %>>
-					    <a href="$Link">$MenuTitle</a>
+					    <a href="$Link" <% if First %>class="hidden-phone hidden-tablet"<% end_if %>>$MenuTitle</a>
 					  </li>
 					<% end_control %>
 

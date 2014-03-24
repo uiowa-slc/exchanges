@@ -29,9 +29,6 @@
     <link href="{$ThemeDir}/css/style.css" rel="stylesheet">
     
      <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic|Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
-
-<script type="text/javascript" src="//use.typekit.net/duu4crz.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body data-spy="scroll">
 <!--[if lte IE 6]><div id="IE6"> <![endif]-->
