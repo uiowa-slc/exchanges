@@ -1,17 +1,9 @@
 <div class="container" id="content">
-			
-	<div class="row" id="backto">
-	
-		<div>
-			<span>$Title</span>
-		</div>
-	
-	</div>
 
 	<div class="row">
 	
   		<div class="span8 column">
-  		
+  			$Breadcrumbs
   			<% loop getNewsItems %>
   				<div class="blog_post">
 	      			<div class="postheader">

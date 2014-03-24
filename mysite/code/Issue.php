@@ -82,20 +82,21 @@ class Issue_Controller extends  Page_Controller {
     );
     
     public function letter(){
-	    //print_r("test");
+
 	    $letterText = $this->LetterFromEditor;
-	    //$letterText = "test";
+	    
+	    if($letterText){
 	    
 	     $Data = array(
                 'LetterText' => $letterText
             );
+
+	 	}else{
+	 		$Data = array ('LetterText' => "");
+	 	}
             
-	    if(isset($letterText)){
-		   // $this->Customise($Data)->renderWith(array('Page')); 
-		   return $this->Customise($Data)->renderWith(array('Issue_letter','Page'));
-	    }else{
-		    
-	    }
+		return $this->Customise($Data)->renderWith(array('Issue_letter','Page'));
+
  
     }
 

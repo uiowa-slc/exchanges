@@ -150,15 +150,11 @@
 	      background-image: url(../images/emblem.png);
 	      background-repeat: no-repeat;
 	      padding: 20px 20px 0 20px;
-	      margin-left: -20px;
-	      margin-top: -20px;
-	      width: 100%;
 	      box-shadow: inset 0px 0px 20px 6px rgba(20,20,20,0.4);
 	      border-bottom: 1px solid rgba(0, 0, 0, .2);
       }
       #featured {
 	      background-color: #d9c5a6;
-	      padding: 20px;
 	      border: 1px solid rgba(0,0,0,.2);
       }
       #featured p{
@@ -423,6 +419,7 @@ font-size: .9em;
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	padding-left: 0;
+	padding-right: 0;
 }
 
 .navbar.exchanges .nav > li > a {
@@ -487,7 +484,8 @@ font-size: .9em;
   
 
 .letterPreview {
-	padding-top:20px;
+	padding: 10px;
+	font-size: 1.5em;
 	
 }
 

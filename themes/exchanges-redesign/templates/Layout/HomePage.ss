@@ -33,10 +33,6 @@
 	      		
 	      		<% end_with %>
 	      		<% end_if %>
-	      		
-	      		<h1 class="band">Blog</h1>
-	      		
-	      		
 
 	      		<% loop getNewsItems %>
 

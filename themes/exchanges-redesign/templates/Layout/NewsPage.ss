@@ -1,14 +1,11 @@
 	<div class="container" id="content">
 	
-	
-		
-		<% include PageNav %>
-		
-		
+
 		
 			<div class="row">
 			
 	      		<div class="span8 column">
+	      		$Breadcrumbs
 	      		<div class="blog_post">
 	      			<div class="postheader">
 	      				<h2><a href="$Link">$Title</a></h2>

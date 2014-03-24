@@ -1,10 +1,8 @@
-	<h1 class="band">Submissions</h1>
+<% with Page("submissions") %>
+ 
+	$Content
 
-	<% with Page("submissions") %>
-	 
-		$Content
-	
-	<% end_with %>
-	
+<% end_with %>
+
 
 
