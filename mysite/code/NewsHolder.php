@@ -17,6 +17,11 @@ class NewsHolder extends Page {
 	public function getDefaultRSSLink() {
 		return $this->Link('rss');
 	}
+
+	public function Entries(){
+		$entries = NewsPage::get()->sort('Date DESC');
+		return $entries;
+	}
 }
 
 class NewsHolder_Controller extends Page_Controller {

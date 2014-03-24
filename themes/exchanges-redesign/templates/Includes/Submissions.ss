@@ -1,6 +1,6 @@
-	<h1 class="band">Submisssions</h1>
+	<h1 class="band">Submissions</h1>
 
-	<% with Page("articles") %>
+	<% with Page("submissions") %>
 	 
 		$Content
 	

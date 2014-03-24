@@ -129,23 +129,16 @@
       }
       #content{
 	      padding: 1.5em;
-	      box-shadow: 0px 1px 5px rgba(0,0,0,.66);
 	      border-radius: 0 0 7px 7px;
-	      background: url(../images/paper.png);
 	      color: #fff;
-	      text-shadow: -1px -1px 0px rgba(0,0,0,.5);
 	      margin-bottom: 1em;
       }
       #content .column{
 	     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	     box-sizing: border-box;         /* Opera/IE 8+ */
-      	/*background: url(../images/tile.jpeg);*/
-      	background-color: #f0e6d2;
-	      padding: 20px;
 	      color: #000;
 	      text-shadow: none;
-	      box-shadow: 0px 1px 5px rgba(0,0,0,.66);
       }
      .span8 p{
 	      text-align: left;
@@ -292,19 +285,16 @@
       }
       .blog_post h1{
 	      text-align: left;
-	      float: left;
 	      font-size: 26px;
       }
       .postheader{
-	      border-bottom: 1px solid rgba(0,0,0,.2);
+
 	      width: 100%;
 	      min-height: 51px;
-	      padding-bottom: .7em;
 	      margin-bottom: 1em;
       }
       
       .postheader h1{
-	      float: left; 
       }
       
       span.postdate{
@@ -345,8 +335,7 @@
 		  margin: 0;
 	  }
 	  ul li{
-		  text-align: center;
-		  /*margin-bottom: 1.5em;*/
+
 	  }
 	  ul h2{
 		  font-size: 1.25em;
@@ -517,6 +506,7 @@ font-size: .9em;
 .readingSidebar {
 	max-height: 200px;
 	overflow: hidden;
+	font-size: 1.5em;
 }
 
 

@@ -2,7 +2,7 @@
 		<div class="row">
 		
       		<div class="span8 column">
-      		
+      		<% if FeaturedIssue %>
       		<% with FeaturedIssue %>
 	      		<div id="featured">
 	      		<div id="emblem" style="background-image: url({$Emblem.URL})">
@@ -32,6 +32,7 @@
 	      		</a>
 	      		
 	      		<% end_with %>
+	      		<% end_if %>
 	      		
 	      		<h1 class="band">Blog</h1>
 	      		
@@ -44,8 +45,8 @@
 	      				<h2><a href="$Link">$Title</a></h2>
 	      				<h5 class="postdate">$Date.NiceUs</h5>
 	      			</div>
-	      				<p>$Content.Summary(100)</p>
-	      				<a href="{$Link}">Read More</a>
+	      				<p>$Content.Summary(100) <a href="{$Link}">Continue Reading</a></p>
+	      				
 	      		</div>
 	      		
 	      		<% end_loop %>

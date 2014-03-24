@@ -23,17 +23,16 @@
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="$Themedir/ico/apple-touch-icon-114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="$Themedir/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="$Themedir/ico/apple-touch-icon-57-precomposed.png">
-	
-	
-	<!--<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/styles.css" />
-</head>
-	<link rel="stylesheet" type="text/css" href="{$ThemeDir}/css/custom.css" />-->
-		 <link href="{$ThemeDir}/css/bootstrap.css" rel="stylesheet">
+
+	<link href="{$ThemeDir}/css/bootstrap.css" rel="stylesheet">
     <link href="{$ThemeDir}/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="{$ThemeDir}/css/style.css" rel="stylesheet">
     
      <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic|Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
 
+<script type="text/javascript" src="//use.typekit.net/duu4crz.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
 <body data-spy="scroll">
 <!--[if lte IE 6]><div id="IE6"> <![endif]-->
 <!--[if lte IE 7]><div id="IE7"> <![endif]-->
@@ -48,7 +47,7 @@
 	  $Layout
 	  
 	<% include Footer %>
-	  	
+	
 	<% if SiteConfig.GACode %>
 		<script type="text/javascript">
 

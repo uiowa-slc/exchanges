@@ -10,7 +10,7 @@
 		
 
 		
-      		<div class="span12 column">
+      		<div class="span8 column">
       			<h1>$Title</h1>
       					$Form
       					$PageComments
@@ -18,15 +18,12 @@
       		
 
       		</div>
-      		<!--
+      		
       		<div class="span4 column">
-      			<h1 class="band">Table of Contents</h1>
-      			<% with getParent %>
-      				$TableOfContents
-      			<% end_with %>
+                        <% include NewsSidebar %>
 
       		</div>
-      		-->
+      	
 		</div>
 
     </div> <!-- /container -->

@@ -23,13 +23,7 @@
 	      		</div>
 	      	
 	      		<div class="span4 column">
-	      			<h1 class="band"><a href="news/">News</a></h1>
-	      				<% loop newsItems(3) %>
-	      					<h2><a href="$Link">$Title</a></h2>
-	      					$Content.Summary(20)
-	      					<p><a href="$Link">Read More</a></p>
-	      				<% end_loop %>
-	     
+	    			<% include NewsSideBar %>
 	      		</div>
 	      		
 			</div>
