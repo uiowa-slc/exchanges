@@ -33,10 +33,7 @@ class Article extends Page {
   public static $can_be_root = false;
   
   public static $defaults = array ( 
-  
-  	"ParentID" => 39
-  	
-  	/*"ParentID" => 7 */
+  	"ParentID" => 7 */
   );
   
 
@@ -80,35 +77,15 @@ class Article extends Page {
 		$fields->removeByName('Image');
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Content');
-		
-        /*
-        $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date','Article Date (for example: 1/20/2013)'));
-        $dateField->setConfig('dateformat', 'MM/dd/YYYY');
-        $dateField->setConfig('showcalendar', true);
-        */
-            	       
-        //$fields->addFieldToTab('Root.Main', $publishCheckbox = new CheckboxField('isPublished', "Publish Page"));
-          
-        /*$fields->addFieldToTab('Root.Main', new HTMLEditorField('Author',' Author of original work'));*/
+
         $fields->addFieldToTab('Root.Main', new TextField('UntranslatedTitle',' Title of original work'));
-        /*$fields->addFieldToTab('Root.Main', new HTMLEditorField('Translator',' Translator (if applicable)'));*/
         $fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage','Original Language'));
         $fields->addFieldToTab('Root.Main', new TextField('TranslatedTitle',' Translated Title (if applicable)'));
         
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Original Work'));
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Translated Work'));
-        //$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content3', 'Third Column (if necessary)'));
         $fields->addFieldToTab('Root.TranslatorNote', new HTMLEditorField('TranslatorNote', 'Translator Note'));
         
-        //$fields->addFieldToTab('Root.Main', new LiteralField('Test', '<a href="www.google.com">Publish link</a>'));
-        
-        //$fields->removeFieldFromTab('Root.Main', array('Issues'));
-        //$fields->removeFieldFromTab('Root.Content.Metadata', array('Content2'));
-        //$fields->removeFieldFromTab('Root.Main', 'Issues');
-        
-        //$parent = $this->Issue();
-		//print_r($parent);
-		//print("PARENT");
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
 		$newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
