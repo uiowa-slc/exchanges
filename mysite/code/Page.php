@@ -35,9 +35,7 @@ class Page_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
-	);
-	
+
 	function StatusMessage() { 
 	   if(Session::get('ActionMessage')) { 
 		  $message = Session::get('ActionMessage'); 
@@ -54,13 +52,7 @@ class Page_Controller extends ContentController {
 
 	public function init() {
 		parent::init();
-		$jsFiles = array(
-			'themes/exchanges-redesign/js/lib/jquery.js',
-			'themes/exchanges-redesign/js/lib/jquery-ui-1.8.21.custom.js',
-		    'themes/exchanges-redesign/js/lib/modernizr.js',
-			'themes/exchanges-redesign/js/bootstrap.js',
-		);
-		Requirements::combine_files('allcombined.js',$jsFiles);
+	
 	}
 	
 	public function Pages(){
@@ -74,23 +66,6 @@ class Page_Controller extends ContentController {
 	
 	}
 	
-	public function newsItems($num){
-		$newsItems = NewsPage::get()/*
-### @@@@ UPGRADE REQUIRED @@@@ ###
-FIND: ->limit(
-NOTE: DataList limit method no longer modifies current list; only returns a new version. 
-### @@@@ ########### @@@@ ###
-*/->limit($num);
-		if($newsItems){
-			return $newsItems;
-		}
-	}
-	
-	public function paginatedNewsItems(){
-		$newsList = new PaginatedList(NewsPage::get(), $this->request);
-		$newsList->setPageLength(2);
-		return $newsList;
-	}
 	
 	public function getCurrentIssue(){
 		$currentIssue = HomePage::get()->First();

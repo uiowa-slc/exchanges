@@ -63,6 +63,11 @@
 	<% if SiteConfig.AddThisProfileID %>
 		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=$SiteConfig.AddThisProfileID"></script>
 	<% end_if %>
+		<script type="text/javascript" src="{$ThemeDir}/js/lib/jquery.js"></script>
+		<script type="text/javascript" src="{$ThemeDir}/js/lib/jquery-ui-1.8.21.custom.js"></script>
+		<script type="text/javascript" src="{$ThemeDir}/js/bootstrap.js"></script>
+		
+		
 <!--[if lt IE 7]></div> <![endif]-->
 <!--[if IE 7]></div><![endif]-->
 <!--[if IE 8]></div><![endif]-->
