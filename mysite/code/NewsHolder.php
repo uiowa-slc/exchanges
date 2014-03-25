@@ -1,17 +1,27 @@
 <?php
 
 class NewsHolder extends Page {
-	static $allowed_children = array('NewsPage');
-	static $default_child = 'NewsPage';
-	static $icon = "themes/express/images/icons/sitetree_images/news_listing.png";
+	private static $allowed_children = array('NewsPage');
+	private static $default_child = 'NewsPage';
+	private static $icon = "themes/express/images/icons/sitetree_images/news_listing.png";
 	public $pageIcon =  "images/icons/sitetree_images/news_listing.png";
 
 	public function MenuChildren() {
-		return parent::MenuChildren()->exclude('ClassName', 'NewsPage');
+		return parent::MenuChildren()/*
+### @@@@ UPGRADE REQUIRED @@@@ ###
+FIND: ->exclude(
+NOTE: ArrayList exclude method no longer modifies current list; only returns a new version. 
+### @@@@ ########### @@@@ ###
+*/->exclude('ClassName', 'NewsPage');
 	}
 
 	public function getCategories() {
-		return NewsCategory::get()->sort('Title', 'DESC');
+		return NewsCategory::get()/*
+### @@@@ UPGRADE REQUIRED @@@@ ###
+FIND: ->sort(
+NOTE: ArrayList and DataList sort method no longer modifies current list; only returns a new version. 
+### @@@@ ########### @@@@ ###
+*/->sort('Title', 'DESC');
 	}
 
 	public function getDefaultRSSLink() {
@@ -19,7 +29,12 @@ class NewsHolder extends Page {
 	}
 
 	public function Entries(){
-		$entries = NewsPage::get()->sort('Date DESC');
+		$entries = NewsPage::get()/*
+### @@@@ UPGRADE REQUIRED @@@@ ###
+FIND: ->sort(
+NOTE: ArrayList and DataList sort method no longer modifies current list; only returns a new version. 
+### @@@@ ########### @@@@ ###
+*/->sort('Date DESC');
 		return $entries;
 	}
 }
@@ -33,9 +48,24 @@ class NewsHolder_Controller extends Page_Controller {
 	}
 
 	public function getNewsItems($pageSize = 10) {
-		$items = DataObject::get('NewsPage', "ParentID = $this->ID")->sort('Date', 'DESC');
+		$items = NewsPage::get()/*
+### @@@@ UPGRADE REQUIRED @@@@ ###
+FIND: ->filter(
+NOTE: ArrayList filter method no longer modifies current list; only returns a new version. 
+### @@@@ ########### @@@@ ###
+*/->filter(array("ParentID" => $this->ID))/*
+### @@@@ UPGRADE REQUIRED @@@@ ###
+FIND: ->sort(
+NOTE: ArrayList and DataList sort method no longer modifies current list; only returns a new version. 
+### @@@@ ########### @@@@ ###
+*/->sort('Date', 'DESC');
 		$category = $this->getCategory();
-		if ($category) $items = $items->filter('CategoryID', $category->ID);
+		if ($category) $items = $items/*
+### @@@@ UPGRADE REQUIRED @@@@ ###
+FIND: ->filter(
+NOTE: ArrayList filter method no longer modifies current list; only returns a new version. 
+### @@@@ ########### @@@@ ###
+*/->filter('CategoryID', $category->ID);
 		$list = new PaginatedList($items, $this->request);
 		$list->setPageLength($pageSize);
 		return $list;

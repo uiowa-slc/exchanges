@@ -1,18 +1,18 @@
 <?php
 
 class NewsPage extends Page {
-	static $default_parent = 'NewsHolderPage';
-	static $can_be_root = false;
-	static $icon = "themes/express/images/icons/sitetree_images/news.png";
+	private static $default_parent = 'NewsHolderPage';
+	private static $can_be_root = false;
+	private static $icon = "themes/express/images/icons/sitetree_images/news.png";
 	public $pageIcon =  "images/icons/sitetree_images/news.png";
 
-	static $db = array(
+	private static $db = array(
 		'Date' => 'SS_Datetime',
 		'Abstract' => 'Text',
 		'Author' => 'Varchar(255)'
 	);
 
-	static $has_one = array(
+	private static $has_one = array(
 		'Category' => 'NewsCategory'
 	);
 
@@ -30,10 +30,23 @@ class NewsPage extends Page {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$fields->addFieldToTab('Root.Main', $dateTimeField = new DatetimeField('Date'), 'Content');
+		$fields->addFieldToTab('Root.Main', $dateTimeField = /*
+### @@@@ UPGRADE REQUIRED @@@@ ###
+FIND: new DatetimeField
+NOTE: instances automatically include
+			       formatting hints as placeholders and description text below the field itself.
+			       If you change the date/time format of those fields, you need to adjust the hints.
+			       To remove the hints, use setDescription(null) and setAttribute('placeholder', null). 
+### @@@@ ########### @@@@ ###
+*/new DatetimeField('Date'), 'Content');
 		$dateTimeField->getDateField()->setConfig('showcalendar', true);
 
-		$categories = NewsCategory::get()->sort('Title ASC');
+		$categories = NewsCategory::get()/*
+### @@@@ UPGRADE REQUIRED @@@@ ###
+FIND: ->sort(
+NOTE: ArrayList and DataList sort method no longer modifies current list; only returns a new version. 
+### @@@@ ########### @@@@ ###
+*/->sort('Title ASC');
 		if ($categories && $categories->exists()) {
 			$fields->addFieldToTab('Root.Main', new DropdownField('CategoryID', 'Category', $categories->map()), 'Content');
 		}

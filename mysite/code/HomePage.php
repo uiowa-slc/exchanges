@@ -1,12 +1,12 @@
 <?php
 class HomePage extends Page {
 
-	public static $db = array(
+	private static $db = array(
 
 	
 	);
 
-	public static $has_one = array(
+	private static $has_one = array(
 		'FeaturedIssue' => 'SiteTree'
 	);
 	
@@ -48,7 +48,7 @@ class HomePage_Controller extends Page_Controller {
 	 *
 	 * @var array
 	 */
-	public static $allowed_actions = array (
+	private static $allowed_actions = array (
 	);
 
 	public function init() {
@@ -65,11 +65,9 @@ class HomePage_Controller extends Page_Controller {
 	}
 	
 	public function getNewsItems($limit = 3) {
-		$holder = NewsPage::get()->limit($limit)->sort("Date DESC");
+		$holder = NewsPage::get()>limit($limit)->sort("Date DESC");
 		return $holder;
 	}
-
-	
 	
 	public function getLetterEditor(){
 	

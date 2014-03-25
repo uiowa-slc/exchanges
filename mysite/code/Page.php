@@ -1,13 +1,13 @@
 <?php
 class Page extends SiteTree {
 
-	public static $db = array(
+	private static $db = array(
 	);
 
-	public static $has_one = array(
+	private static $has_one = array(
 	);
 	
-	public static $has_many = array(
+	private static $has_many = array(
 	
 	);
 
@@ -35,7 +35,7 @@ class Page_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	public static $allowed_actions = array (
+	private static $allowed_actions = array (
 	);
 	
 	function StatusMessage() { 
@@ -54,34 +54,17 @@ class Page_Controller extends ContentController {
 
 	public function init() {
 		parent::init();
-
-		
 		$jsFiles = array(
-
-						'themes/exchanges-redesign/js/lib/jquery.js',
-						'themes/exchanges-redesign/js/lib/jquery-ui-1.8.21.custom.js',
-					    'themes/exchanges-redesign/js/lib/modernizr.js',
-						'themes/exchanges-redesign/js/bootstrap.js',
-					);
-
-		
-	/*	if(Director::isDev()) {
-		*/
-			foreach($jsFiles as $jsFile){
-				Requirements::javascript($jsFile);	
-			}
-			
-			/*
-
-		}else{
-			
-			Requirements::combine_files(
-				'allcombined.js',$jsFiles);
-			/*}*/
-		}
+			'themes/exchanges-redesign/js/lib/jquery.js',
+			'themes/exchanges-redesign/js/lib/jquery-ui-1.8.21.custom.js',
+		    'themes/exchanges-redesign/js/lib/modernizr.js',
+			'themes/exchanges-redesign/js/bootstrap.js',
+		);
+		Requirements::combine_files('allcombined.js',$jsFiles);
+	}
 	
 	public function Pages(){
-		$pages = DataObject::get("Page");
+		$pages = Page::get();
 		
 		if($pages){
 			return $pages;
@@ -91,17 +74,19 @@ class Page_Controller extends ContentController {
 	
 	}
 	
-	
 	public function newsItems($num){
-		$newsItems = NewsPage::get()->limit($num);
-		
+		$newsItems = NewsPage::get()/*
+### @@@@ UPGRADE REQUIRED @@@@ ###
+FIND: ->limit(
+NOTE: DataList limit method no longer modifies current list; only returns a new version. 
+### @@@@ ########### @@@@ ###
+*/->limit($num);
 		if($newsItems){
 			return $newsItems;
 		}
 	}
 	
 	public function paginatedNewsItems(){
-	
 		$newsList = new PaginatedList(NewsPage::get(), $this->request);
 		$newsList->setPageLength(2);
 		return $newsList;

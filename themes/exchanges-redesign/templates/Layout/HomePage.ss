@@ -34,21 +34,21 @@
 	      		<% end_with %>
 	      		<% end_if %>
 
-	      		<% loop getNewsItems %>
-
-	      		<div class="blog_post">
-	      			<div class="postheader">
-	      				<h2><a href="$Link">$Title</a></h2>
-	      				<h5 class="postdate">$Date.NiceUs</h5>
-	      			</div>
-	      				<p>$Content.Summary(100) <a href="{$Link}">Continue Reading</a></p>
-	      				
-	      		</div>
-	      		
-	      		<% end_loop %>
+	      		<% with Page("news") %>
+		      		<% loop $Entries %>
+		      		<div class="blog_post">
+		      			<div class="postheader">
+		      				<h2><a href="$Link">$Title</a></h2>
+		      				<h5 class="postdate">$Date.NiceUs</h5>
+		      			</div>
+		      				<p>$Content.Summary(100) <a href="{$Link}">Continue Reading</a></p>
+		      				
+		      		</div>
+		      		<% end_loop %>
+	      		<% end_with %>
 	      		<h1 class="band"><a href="{$BaseHref}news">See All Posts </a></h1>
 	      	</div>
-	      	<div class="span4 column">
+	      	<div class="span4 column sidebar">
 		      		<% include PastIssues %>
 		      		<% include WhatWereReading %>
 		    </div>

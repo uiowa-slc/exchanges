@@ -14,8 +14,13 @@
 	      color: #3a2d21;
       }
       h1 {
-	      margin: .25em 0 .5em 0;
-	      text-align: center;
+	      margin-bottom: 20px;
+      }
+      h2{
+      	font-size: 26px;
+      }
+      h1,h2,h3 {
+      	line-height: 30px;
       }
       p{
 	      /*text-indent: 30px;*/
@@ -317,7 +322,6 @@
 	  }
 	  .span6 h1{
 		  clear: both;
-		  text-align: left;
 	      border-bottom: 1px solid rgba(0,0,0,.2);
 		  padding-bottom: .25em;
 		  width: 100%;
@@ -343,21 +347,25 @@
 	      margin-bottom: .66em;
 	      font-size: 3em;
 	      border-bottom: 1px solid #784800;
+	      text-align: center;
 	  }
-	  h1.band{
-	      padding: .3em 20px .3em 20px;
-	      margin: .33em 0 .75em -20px;
-	      width: 100%;
-	      background-color: #d9c5a6;
-	      font-size: 2.6em;
-	  }
+
 	  .span4 h1.toc{
 		  font-size: 2em;
 		  margin: .3em 0 1.2em -20px;
 	  }
+
+	  .submissions-toc .submission {
+	  	margin: 20px 0;
+	  }
+	  .submission h2 {
+	  	margin: 0;
+	  }
+
+	  .submission p {
+	  	margin: 5px 0;
+	  }
 	  .span4 p{
-		  font-size: .85em;
-		  text-indent: 0;
 	  }
 	  .column {
 		  overflow: hidden;
@@ -497,13 +505,17 @@ font-size: .9em;
 .pastIssues ul li {
 	display: block;
 	font-size: 1.3em;
-	margin: 1em 0;
+	margin: 10px 0;
 }
 
 .readingSidebar {
 	max-height: 200px;
 	overflow: hidden;
 	font-size: 1.5em;
+}
+
+.sidebar section {
+	margin-bottom: 20px;
 }
 
 

@@ -4,7 +4,7 @@
 	
   		<div class="span8 column">
   			$Breadcrumbs
-  			<% loop getNewsItems %>
+  			<% loop Entries %>
   				<div class="blog_post">
 	      			<div class="postheader">
 	      				<h1><a href="$Link">$Title</a></h1>
@@ -15,11 +15,11 @@
 	      		</div>
 	      	<% end_loop %>
   			
-      		<% if getNewsItems.MoreThanOnePage %>
-			    <% if getNewsItems.NotFirstPage %>
-			        <a class="prev" href="$getNewsItems.PrevLink">Prev</a>
+      		<% if Entries.MoreThanOnePage %>
+			    <% if Entries.NotFirstPage %>
+			        <a class="prev" href="$Entries.PrevLink">Prev</a>
 			    <% end_if %>
-			    <% loop getNewsItems.Pages %>
+			    <% loop Entries.Pages %>
 			        <% if CurrentBool %>
 			            $PageNum
 			        <% else %>
@@ -30,15 +30,15 @@
 			            <% end_if %>
 			        <% end_if %>
 			        <% end_loop %>
-			    <% if getNewsItems.NotLastPage %>
-			        <a class="next" href="$getNewsItems.NextLink">Next</a>
+			    <% if Entries.NotLastPage %>
+			        <a class="next" href="$Entries.NextLink">Next</a>
 			    <% end_if %>
 			 <% end_if %>
       		
       		
       		
   		</div>
-  	 <div class="span4 column">
+  	 <div class="span4 column sidebar">
   		<% include PastIssues %>
   		<% include Submissions %>
   	</div>

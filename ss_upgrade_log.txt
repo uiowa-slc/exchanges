@@ -1,0 +1,264 @@
+
+------------------------------------
+Files Searched
+------------------------------------
+/themes/exchanges-redesign/templates/BreadcrumbsTemplate.ss
+/themes/exchanges-redesign/templates/Page.ss
+/themes/exchanges-redesign/templates/Page_allchanges_rss.ss
+/themes/exchanges-redesign/templates/Page_changes_rss.ss
+/themes/exchanges-redesign/templates/Page_results_rss.ss
+/themes/exchanges-redesign/templates/SearchForm.ss
+/themes/exchanges-redesign/templates/forms/CheckboxField.ss
+/themes/exchanges-redesign/templates/forms/CheckboxField_holder.ss
+/themes/exchanges-redesign/templates/forms/CheckboxField_holder_small.ss
+/themes/exchanges-redesign/templates/forms/CheckboxSetField.ss
+/themes/exchanges-redesign/templates/forms/CompositeField.ss
+/themes/exchanges-redesign/templates/forms/CompositeField_holder.ss
+/themes/exchanges-redesign/templates/forms/CompositeField_holder_small.ss
+/themes/exchanges-redesign/templates/forms/DropdownField.ss
+/themes/exchanges-redesign/templates/forms/FieldGroup.ss
+/themes/exchanges-redesign/templates/forms/FieldGroup_holder.ss
+/themes/exchanges-redesign/templates/forms/FileField.ss
+/themes/exchanges-redesign/templates/forms/FormAction.ss
+/themes/exchanges-redesign/templates/forms/FormField.ss
+/themes/exchanges-redesign/templates/forms/FormField_holder.ss
+/themes/exchanges-redesign/templates/forms/FormField_holder_small.ss
+/themes/exchanges-redesign/templates/forms/HeaderField.ss
+/themes/exchanges-redesign/templates/forms/HiddenField.ss
+/themes/exchanges-redesign/templates/forms/LabelField.ss
+/themes/exchanges-redesign/templates/forms/OptionsetField.ss
+/themes/exchanges-redesign/templates/forms/SelectionGroup.ss
+/themes/exchanges-redesign/templates/forms/TabSet.ss
+/themes/exchanges-redesign/templates/forms/TextareaField.ss
+/themes/exchanges-redesign/templates/forms/TextField.ss
+/themes/exchanges-redesign/templates/forms/ToggleCompositeField.ss
+/themes/exchanges-redesign/templates/forms/TreeDropdownField.ss
+/themes/exchanges-redesign/templates/Includes/Carousel.ss
+/themes/exchanges-redesign/templates/Includes/Footer.ss
+/themes/exchanges-redesign/templates/Includes/Form.ss
+/themes/exchanges-redesign/templates/Includes/Header.ss
+/themes/exchanges-redesign/templates/Includes/HeroUnit.ss
+/themes/exchanges-redesign/templates/Includes/Menu.ss
+/themes/exchanges-redesign/templates/Includes/MobileNav.ss
+/themes/exchanges-redesign/templates/Includes/NavbarFixedTop.ss
+/themes/exchanges-redesign/templates/Includes/NavChildren.ss
+/themes/exchanges-redesign/templates/Includes/NewsCategories.ss
+/themes/exchanges-redesign/templates/Includes/NewsItem.ss
+/themes/exchanges-redesign/templates/Includes/NewsSidebar.ss
+/themes/exchanges-redesign/templates/Includes/PageNav.ss
+/themes/exchanges-redesign/templates/Includes/Pagination.ss
+/themes/exchanges-redesign/templates/Includes/PastIssues.ss
+/themes/exchanges-redesign/templates/Includes/PrintShare.ss
+/themes/exchanges-redesign/templates/Includes/SitemapNode.ss
+/themes/exchanges-redesign/templates/Includes/Submissions.ss
+/themes/exchanges-redesign/templates/Includes/TableOfContents.ss
+/themes/exchanges-redesign/templates/Includes/WhatWereReading.ss
+/themes/exchanges-redesign/templates/Layout/AboutPage.ss
+/themes/exchanges-redesign/templates/Layout/Article.ss
+/themes/exchanges-redesign/templates/Layout/Article_notes.ss
+/themes/exchanges-redesign/templates/Layout/Contributor.ss
+/themes/exchanges-redesign/templates/Layout/Contributor_show.ss
+/themes/exchanges-redesign/templates/Layout/ContributorPage.ss
+/themes/exchanges-redesign/templates/Layout/ContributorPage_show.ss
+/themes/exchanges-redesign/templates/Layout/HomePage.ss
+/themes/exchanges-redesign/templates/Layout/Issue.ss
+/themes/exchanges-redesign/templates/Layout/Issue_letter.ss
+/themes/exchanges-redesign/templates/Layout/IssueHolder.ss
+/themes/exchanges-redesign/templates/Layout/NewsHolder.ss
+/themes/exchanges-redesign/templates/Layout/NewsPage.ss
+/themes/exchanges-redesign/templates/Layout/Page.ss
+/themes/exchanges-redesign/templates/Layout/Page_results.ss
+
+------------------------------------
+Summary: by search key
+------------------------------------
+
+------------------------------------
+Summary: by directory
+------------------------------------
+
+------------------------------------
+Summary: by root directory (/)
+------------------------------------
+
+------------------------------------
+Total replacements: 0
+------------------------------------
+31 matches (BASIC) for: 'public static $'
+   -- Replaced in 2 places IN AboutPage.php
+   -- Replaced in 3 places IN ArchivePage.php
+   -- Replaced in 6 places IN Article.php
+   -- Replaced in 1 places IN ArticlesAdmin.php
+   -- Replaced in 1 places IN Author.php
+   -- Replaced in 1 places IN Contributor.php
+   -- Replaced in 3 places IN HomePage.php
+   -- Replaced in 8 places IN Issue.php
+   -- Replaced in 1 places IN IssuesAdmin.php
+   -- Replaced in 4 places IN Page.php
+   -- Replaced in 1 places IN Translator.php
+33 matches (BASIC) for: 'private static $'
+   -- Replaced in 2 places IN AboutPage.php
+   -- Replaced in 3 places IN ArchivePage.php
+   -- Replaced in 6 places IN Article.php
+   -- Replaced in 1 places IN ArticlesAdmin.php
+   -- Replaced in 1 places IN Author.php
+   -- Replaced in 1 places IN Contributor.php
+   -- Replaced in 3 places IN HomePage.php
+   -- Replaced in 8 places IN Issue.php
+   -- Replaced in 1 places IN IssuesAdmin.php
+   -- Replaced in 4 places IN Page.php
+   -- Replaced in 1 places IN Translator.php
+   -- Replaced in 1 places IN autoload_real.php
+   -- Replaced in 1 places IN TestCase.php
+33 matches (BASIC) for: 'static $'
+   -- Replaced in 4 places IN Article.php
+   -- Replaced in 3 places IN ArticleHolder.php
+   -- Replaced in 2 places IN ArticlesAdmin.php
+   -- Replaced in 2 places IN Author.php
+   -- Replaced in 2 places IN Contributor.php
+   -- Replaced in 2 places IN ContributorPage.php
+   -- Replaced in 1 places IN Issue.php
+   -- Replaced in 3 places IN IssueHolder.php
+   -- Replaced in 2 places IN IssuesAdmin.php
+   -- Replaced in 2 places IN NewsCategory.php
+   -- Replaced in 3 places IN NewsHolder.php
+   -- Replaced in 5 places IN NewsPage.php
+   -- Replaced in 2 places IN Translator.php
+33 matches (BASIC) for: 'private stat@@ic $'
+   -- Replaced in 2 places IN AboutPage.php
+   -- Replaced in 3 places IN ArchivePage.php
+   -- Replaced in 6 places IN Article.php
+   -- Replaced in 1 places IN ArticlesAdmin.php
+   -- Replaced in 1 places IN Author.php
+   -- Replaced in 1 places IN Contributor.php
+   -- Replaced in 3 places IN HomePage.php
+   -- Replaced in 8 places IN Issue.php
+   -- Replaced in 1 places IN IssuesAdmin.php
+   -- Replaced in 4 places IN Page.php
+   -- Replaced in 1 places IN Translator.php
+   -- Replaced in 1 places IN autoload_real.php
+   -- Replaced in 1 places IN TestCase.php
+5 matches (COMPLEX) for: '->sort('
+   -- Replaced in 1 places IN HomePage.php
+   -- Replaced in 3 places IN NewsHolder.php
+   -- Replaced in 1 places IN NewsPage.php
+2 matches (COMPLEX) for: '->filter('
+   -- Replaced in 2 places IN NewsHolder.php
+1 matches (COMPLEX) for: '->exclude('
+   -- Replaced in 1 places IN NewsHolder.php
+3 matches (COMPLEX) for: '->limit('
+   -- Replaced in 1 places IN HomePage.php
+   -- Replaced in 1 places IN Issue.php
+   -- Replaced in 1 places IN Page.php
+1 matches (COMPLEX) for: 'SSViewer::set_theme('
+   -- Replaced in 1 places IN _config.php
+1 matches (COMPLEX) for: 'new DatetimeField'
+   -- Replaced in 1 places IN NewsPage.php
+1 matches (COMPLEX) for: 'MySQLDatabase::set_connection_charset('
+   -- Replaced in 1 places IN _config.php
+
+------------------------------------
+Files Searched
+------------------------------------
+/mysite/_config.php
+/mysite/code/AboutPage.php
+/mysite/code/ArchivePage.php
+/mysite/code/Article.php
+/mysite/code/ArticleHolder.php
+/mysite/code/ArticlesAdmin.php
+/mysite/code/Author.php
+/mysite/code/Contributor.php
+/mysite/code/ContributorPage.php
+/mysite/code/GridFieldPublish.php
+/mysite/code/HomePage.php
+/mysite/code/Issue.php
+/mysite/code/IssueHolder.php
+/mysite/code/IssuesAdmin.php
+/mysite/code/NewsCategory.php
+/mysite/code/NewsHolder.php
+/mysite/code/NewsPage.php
+/mysite/code/Page.php
+/mysite/code/Translator.php
+/vendor/autoload.php
+/vendor/composer/autoload_classmap.php
+/vendor/composer/autoload_namespaces.php
+/vendor/composer/autoload_psr4.php
+/vendor/composer/autoload_real.php
+/vendor/composer/ClassLoader.php
+/vendor/composer/installers/src/bootstrap.php
+/vendor/composer/installers/src/Composer/Installers/AglInstaller.php
+/vendor/composer/installers/src/Composer/Installers/AnnotateCmsInstaller.php
+/vendor/composer/installers/src/Composer/Installers/BaseInstaller.php
+/vendor/composer/installers/src/Composer/Installers/CakePHPInstaller.php
+/vendor/composer/installers/src/Composer/Installers/CodeIgniterInstaller.php
+/vendor/composer/installers/src/Composer/Installers/Concrete5Installer.php
+/vendor/composer/installers/src/Composer/Installers/CraftInstaller.php
+/vendor/composer/installers/src/Composer/Installers/CroogoInstaller.php
+/vendor/composer/installers/src/Composer/Installers/DrupalInstaller.php
+/vendor/composer/installers/src/Composer/Installers/ElggInstaller.php
+/vendor/composer/installers/src/Composer/Installers/FuelInstaller.php
+/vendor/composer/installers/src/Composer/Installers/HuradInstaller.php
+/vendor/composer/installers/src/Composer/Installers/Installer.php
+/vendor/composer/installers/src/Composer/Installers/JoomlaInstaller.php
+/vendor/composer/installers/src/Composer/Installers/KirbyInstaller.php
+/vendor/composer/installers/src/Composer/Installers/KohanaInstaller.php
+/vendor/composer/installers/src/Composer/Installers/LaravelInstaller.php
+/vendor/composer/installers/src/Composer/Installers/LithiumInstaller.php
+/vendor/composer/installers/src/Composer/Installers/MagentoInstaller.php
+/vendor/composer/installers/src/Composer/Installers/MakoInstaller.php
+/vendor/composer/installers/src/Composer/Installers/MediaWikiInstaller.php
+/vendor/composer/installers/src/Composer/Installers/MODULEWorkInstaller.php
+/vendor/composer/installers/src/Composer/Installers/MODXEvoInstaller.php
+/vendor/composer/installers/src/Composer/Installers/OctoberInstaller.php
+/vendor/composer/installers/src/Composer/Installers/OxidInstaller.php
+/vendor/composer/installers/src/Composer/Installers/PhpBBInstaller.php
+/vendor/composer/installers/src/Composer/Installers/PiwikInstaller.php
+/vendor/composer/installers/src/Composer/Installers/PPIInstaller.php
+/vendor/composer/installers/src/Composer/Installers/ShopwareInstaller.php
+/vendor/composer/installers/src/Composer/Installers/SilverStripeInstaller.php
+/vendor/composer/installers/src/Composer/Installers/Symfony1Installer.php
+/vendor/composer/installers/src/Composer/Installers/TYPO3CmsInstaller.php
+/vendor/composer/installers/src/Composer/Installers/TYPO3FlowInstaller.php
+/vendor/composer/installers/src/Composer/Installers/WolfCMSInstaller.php
+/vendor/composer/installers/src/Composer/Installers/WordPressInstaller.php
+/vendor/composer/installers/src/Composer/Installers/ZendInstaller.php
+/vendor/composer/installers/src/Composer/Installers/ZikulaInstaller.php
+/vendor/composer/installers/tests/bootstrap.php
+/vendor/composer/installers/tests/Composer/Installers/Test/CakePHPInstallerTest.php
+/vendor/composer/installers/tests/Composer/Installers/Test/InstallerTest.php
+/vendor/composer/installers/tests/Composer/Installers/Test/MediaWikiInstallerTest.php
+/vendor/composer/installers/tests/Composer/Installers/Test/PiwikInstallerTest.php
+/vendor/composer/installers/tests/Composer/Installers/Test/TestCase.php
+
+------------------------------------
+Summary: by search key
+------------------------------------
+33:	 private stat@@ic $
+33:	 static $
+33:	 private static $
+31:	 public static $
+5:	 ->sort(
+3:	 ->limit(
+2:	 ->filter(
+1:	 MySQLDatabase::set_connection_charset(
+1:	 new DatetimeField
+1:	 SSViewer::set_theme(
+1:	 ->exclude(
+
+------------------------------------
+Summary: by directory
+------------------------------------
+138:	 /mysite/code
+2:	 /mysite
+2:	 /vendor/composer
+2:	 /vendor/composer/installers/tests/Composer/Installers/Test
+
+------------------------------------
+Summary: by root directory (/)
+------------------------------------
+140:	 mysite/
+4:	 vendor/
+
+------------------------------------
+Total replacements: 144
+------------------------------------

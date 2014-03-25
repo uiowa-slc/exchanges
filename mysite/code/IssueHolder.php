@@ -1,16 +1,16 @@
 <?php
 class IssueHolder extends Page {
  
-	static $db = array(
+	private static $db = array(
 	
 	);
 	
 	
-	static $has_one = array( 
+	private static $has_one = array( 
 		'Issue' => 'Issue'
 	);
 	
-	static $allowed_children = array ("Issue");
+	private static $allowed_children = array ("Issue");
 	
 	
 	public function getCMSFields() {

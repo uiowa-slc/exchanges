@@ -1,6 +1,5 @@
 <section class="pastIssues">
-	<h1 class="band">Past Issues</h1>
-	
+	<h2>Past Issues</h2>
 	<% with Page("issues-archive") %>
 		<ul>
 		<% loop Children %>
@@ -8,7 +7,6 @@
 		<% end_loop %>
 		</ul>
 		$Content
-	
 	<% end_with %>
 </section>
 

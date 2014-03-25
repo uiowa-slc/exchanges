@@ -1,19 +1,19 @@
 <?php
 class Contributor extends DataObject {
 
- static $db = array(
+ private static $db = array(
         'Name' => 'Text',
         'BiographicalDetails' => 'HTMLText',
         
     );
     
- static $has_one = array( 
+ private static $has_one = array( 
  	'Image'=> 'Image'
 
 
  );
  
- public static $many_many = array(
+ private static $many_many = array(
  
  );   
  

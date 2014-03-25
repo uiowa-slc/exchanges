@@ -1,7 +1,7 @@
 <% with Page("submissions") %>
- 
-	$Content
-
+	<section class="submissions-sidebar">
+		$Content
+	</section>
 <% end_with %>
 
 
