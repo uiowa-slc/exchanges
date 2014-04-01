@@ -1,22 +1,16 @@
 <div class="container article" id="content">
-	<div class="row" id="backto">
-		<% loop Issues %>
-		<a href="{$Link}">
-			<div>
-				<span>$Title</span>
-			</div>
-		</a>
-		<% end_loop %>
-	</div>
-	<% if TranslatorNote %>
-		<div class="row" id="to">
-			<a href="{$Link}notes">
-				<div>
-					<span>Notes on Translation</span>
-				</div>
-			</a>
+	<div class="row">
+		<div class="span6 column">
+			<% loop Issues %>
+				<a href="{$Link}">Return to $Title</a>
+			<% end_loop %>
 		</div>
-	<% end_if %>
+		<div class="span6 column view-notes-nav">
+			<% if TranslatorNote %>
+				<a href="{$Link}notes">View Notes on Translation &raquo;</a> 
+			<% end_if %>
+		</div>
+	</div>
 	<div class="row">
 		<div class="span6 column" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<h1>$UntranslatedTitle</h1>

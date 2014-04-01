@@ -1,48 +1,38 @@
 <?php
 class ContributorPage extends Page {
 
- private static $db = array(
-  
-    );
-    
- private static $has_one = array( 
+	private static $db = array(
 
- );
- 
-   
-   public function getCMSFields() {
-        $fields = parent::getCMSFields();
+		);
 
-     
-        return $fields;
-    }
-    
+	private static $has_one = array( 
+
+		);
+
+
+	public function getCMSFields() {
+		$fields = parent::getCMSFields();
+
+		return $fields;
+	}
+
 }
 
 class ContributorPage_Controller extends Page_Controller {
+	private static $allowed_actions = array ("show");
 	public function show(){
-	
-		
 		$contributorID = $this->request->param('ID');
 		if ($contributorID){
-		
-		    $contributor = Contributor::get_by_id("Contributor", $contributorID);
-		    
-		   		  
-			$bio = $contributor->BiographicalDetails;	
-			$contribName = $contributor->Name;
-	    	    
+			$contributor = Contributor::get_by_id("Contributor", $contributorID); 
 			$Data = array(
-                'Biography' => $bio,
-                'ContributorName' => $contribName
-            );
-            
-            
-		    if(isset($contributor)){
+				'Contributor' => $contributor,
+				);
 
-			   return $this->Customise($Data)->renderWith(array('ContributorPage_show','Page'));
-		    }else{
-		    }		   
+			if(isset($contributor)){
+				return $this->Customise($Data)->renderWith(array('ContributorPage_show','Page'));
+			}else{
+
+			}		   
 		}
 		else {
 			return $this->renderWith('Page');
@@ -51,31 +41,15 @@ class ContributorPage_Controller extends Page_Controller {
 	
 	public function getContributorArticles(){
 		$contributorID = $this->request->param('ID');
-		
 		if ($contributorID){
-		
 			$contributor = Contributor::get_by_id("Contributor", $contributorID);
-			
 			$articles = $contributor->Articles();
-			
-
-			
 			return $articles;
-			/*
-			if ($contributor->ClassName == "Author"){
-				
-			}
-			elseif ($contributor->ClassName == "Translator"){
-				
-			}
-			*/
 		}
 	}
-	
 	public function getTableOfContents(){
-	
-			 $homePage = HomePage::get()->First();
-			 $featuredIssue = $homePage->FeaturedIssue();
-			 return $featuredIssue;
+		$homePage = HomePage::get()->First();
+		$featuredIssue = $homePage->FeaturedIssue();
+		return $featuredIssue;
 	}
 }
