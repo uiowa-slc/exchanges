@@ -3,35 +3,18 @@
 		
       		<div class="span8 column">
       		<% if FeaturedIssue %>
-      		<% with FeaturedIssue %>
-	      		<div id="featured">
-	      		<div id="emblem" style="background-image: url({$Emblem.URL})">
+	      		<% with FeaturedIssue %>
+		      		<div id="featured">
+		      		<div id="emblem" style="background-image: url({$Emblem.URL})">
 
-	      			<span id="issue_num">$IssueDate</span></span>
-	      			<span id="issue_name"><a class="titleLink" href="{$Link}">$Title</a></span>
-	      			<a class="letterLink" href="{$Link}letter"><% if LetterFromEditorCustomTitle %>$LetterFromEditorCustomTitle <% else %>Letter from the editors<% end_if %></a>
-
-	      		</div>
-	      			
-	      			<div class="letterPreview">
-			      		<p><a href="{$Link}letter">$LetterFromEditor.Summary(300)</a></p>
+		      			<span id="issue_num">$IssueDate</span></span>
+		      			<span id="issue_name"><a class="titleLink" href="{$Link}">$Title</a></span>
+		      			<a class="letterLink" href="{$Link}letter"><% if LetterFromEditorCustomTitle %>$LetterFromEditorCustomTitle <% else %>Letter from the editors<% end_if %></a><br />
+		      			<a class="tocLink" href="{$Link}letter">Table of Contents</a>
+		      		</div>
 			      		
-	      			</div>
-		      		
-	      		</div>
-	      		<% end_with %>
-	      		
-	      		<% with getFeaturedIssue %>
-	      	
-	      		<a href="$Link">
-	      		<div id="gotoissue">
-	      			<div>
-	      				<span>go to the <strong>Table of Contents</strong></span>
-	      			</div>
-	      		</div>
-	      		</a>
-	      		
-	      		<% end_with %>
+		      		</div>
+		      		<% end_with %>
 	      		<% end_if %>
 
 	      		<% with Page("news") %>

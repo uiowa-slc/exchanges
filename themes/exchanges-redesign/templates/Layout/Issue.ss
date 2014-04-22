@@ -1,10 +1,13 @@
 <div class="container" id="content">
 		<div class="row">
-      		<div class="span8 column">
-      			<div id="emblem" style="background-image: url({$Emblem.URL})">
+			<div class="span12 column">
+				<div id="emblem" style="background-image: url({$Emblem.URL})">
 	      			<span id="issue_num">{$IssueDate}</span>
 	      			<span id="issue_name">{$Title}</span>
       			</div>
+
+			</div>
+      		<div class="span8 column">
 
       			<h1 class="toc">Table of Contents</h1>
 	      			<% if LetterFromEditor %>

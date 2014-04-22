@@ -153,7 +153,8 @@
       	  background-color: #372B21;
 	      background-image: url(../images/emblem.png);
 	      background-repeat: no-repeat;
-	      padding: 20px 20px 0 20px;
+	      background-size: cover;
+	      padding: 20px;
 	      box-shadow: inset 0px 0px 20px 6px rgba(20,20,20,0.4);
 	      border-bottom: 1px solid rgba(0, 0, 0, .2);
       }
@@ -191,7 +192,14 @@
 	      text-shadow: 0 3px 3px rgba(0,0,0,.5), 0 1px 0 rgba(0,0,0,1);
       }
       #featured span#issue_name{
-	      font-size: 4.25em;
+	      font-size: 3.25em;
+      }
+
+      @media (min-width: 1024px) {
+      	#featured span#issue_name{
+      	 font-size: 4.25em;
+      	}
+
       }
       #featured h1{
 	      font-size: 1.5em;
@@ -341,13 +349,11 @@
 		  line-height: 1.25em;
 	  }
 	  h1.toc{
-	      padding: .66em 0 .55em 0;
+	      padding: 0.2em 0;
 	      width: 70%;
-	      margin: 0 auto;
 	      margin-bottom: .66em;
 	      font-size: 3em;
 	      border-bottom: 1px solid #784800;
-	      text-align: center;
 	  }
 
 	  .span4 h1.toc{
@@ -480,6 +486,7 @@ font-size: .9em;
 }
 
   .letterLink {
+  	text-decoration: underline;
   	font-size: 2em;
   	text-align:center;
   	color: white;
@@ -489,6 +496,11 @@ font-size: .9em;
   	line-height: normal;
   }
   
+  .tocLink {
+  	text-align: center;
+  	display: block;
+  	color: white;
+  }
 
 .letterPreview {
 	padding: 10px;
