@@ -1,7 +1,7 @@
 
 <footer class="footer clearfix" role="contentinfo">
     <div class="row">
-        <div class="large-4 columns">
+        <div class="small-6 medium-4 columns">
 				<a href="http://studentlife.uiowa.edu" class="hide-print logo"><img src="$ThemeDir/images/UILib-stackedBlack-01.png" alt="Division Of Student Life" style="margin-top: -20px;"></a><br>
 
 				<p>The University of Iowa Libraries<br />
@@ -9,7 +9,7 @@
 					Iowa City, IA 52242-1420</p>
 		</div>
 				
-		<div class="large-4 columns">
+		<div class="small-6 medium-3 columns">
 			<div class="colgroup">
 				<ul class="footer-nav">
 					<li><a href="https://www.facebook.com/uiowacab" target="_blank"><i class="icon-facebook"></i> Facebook</a></li>
@@ -25,7 +25,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="large-4 columns hide-print">
+		<div class="small-12 medium-5 columns hide-print">
 			<p>The University of Iowa Libraries is the largest library system in Iowa and 9th in materials expenditures among U.S. public research libraries (ARL FY10 data). The University’s Main Library, Hardin Library for the Health Sciences, 5 branch libraries, and the Law Library contain more than 5 million volumes.</p> 
 		</div>
 	</div>
