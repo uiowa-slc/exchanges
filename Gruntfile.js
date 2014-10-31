@@ -29,7 +29,7 @@ module.exports = function(grunt) {
           'themes/exchanges/bower_components/foundation/js/foundation.min.js',
           'themes/exchanges/javascript/*.js'
         ],
-        dest: 'themes/exchanges/build/src/main_concat.js'
+        dest: 'themes/exchanges/build/build.src.js'
       }
     },
 
@@ -39,7 +39,7 @@ module.exports = function(grunt) {
     uglify: {
       my_target:{
         files:{
-        'themes/exchanges/build/build.js': ['themes/exchanges/build/src/main_concat.js'],
+        'themes/exchanges/build/build.js': ['themes/exchanges/build/build.src.js'],
         }
       }
     },
