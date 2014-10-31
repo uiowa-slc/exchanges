@@ -1,0 +1,109 @@
+@import "imports/settings";
+@import "foundation";
+@import "imports/footer/config";
+@import "imports/footer/mixins";
+
+@import "imports/header";
+@import "imports/side-nav";
+@import "imports/footer/footer";
+
+@import "imports/footer/grid-simple";
+
+.full-width {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+}
+
+h1{
+	font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+}
+
+.clearfix {
+    clear: both;
+}
+
+.main {
+    min-height: 320px;
+}
+
+.name {
+    position: relative;
+    z-index: 1000;
+}
+
+.name .category {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.main-column {
+    @media #{$large-up} {
+        @include grid-column($collapse: true);
+    }
+}
+/* Content padding so it doesn't run up against the sidenav  */
+article header, article .article-text, article .content-text, .footer {
+    @media #{$medium-up} {
+        
+    }
+    @media #{$large-up} {
+        padding-left: 40px;
+    }
+    @media #{$xlarge-up} {
+        padding-left: 60px;
+    }
+}
+
+article {
+	padding-top: 10px;
+	@media #{$medium-up}{
+		padding-top: 20px;
+	}
+    @media #{$large-up}{
+    	padding-top: 45px;
+    }
+    
+    header {
+        font-family: $header-font-family;
+        h1{
+        	text-transform: uppercase;
+        }
+        small {
+        	font-weight: normal;
+        	text-transform: none;
+            display: block;
+            padding: 0.1em 0;
+            line-height: 1;
+        }
+    }
+    .article-text, .content-text {
+        max-width: 720px;
+        min-height: 300px;
+    }
+    .content-text * {
+        font-size: rem-calc(18);
+    }
+    img.cover {
+        margin-bottom: 20px;
+    }
+}
+
+.byline {
+    font-size: rem-calc(14);
+    line-height: 1;
+    color: #666;
+    font-style: italic;
+}
+
+.category {
+    text-transform: uppercase;
+    display: block;
+    color: $primary-color;
+    font-size: rem-calc(10);
+}
