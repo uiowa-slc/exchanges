@@ -1,4 +1,3 @@
-<%-- old-redesign --%>
 <div class="container" id="content">
 		<div class="row">
 			<div class="span12 column">
