@@ -12,13 +12,10 @@
 		<div class="small-6 medium-3 large-2 columns">
 			<div class="colgroup">
 				<ul class="footer-nav">
-					<li><a href="https://www.facebook.com/uiowacab" target="_blank"><i class="icon-facebook"></i> Facebook</a></li>
-					
+					<li><a href="https://www.facebook.com/uiowacab" target="_blank"><i class="icon-facebook"></i> Facebook</a></li>	
 					<% if $SiteConfig.TwitterLink %>
 					<li><a href="https://twitter.com/uiowaCAB" target="_blank"><i class="icon-twitter"></i> Twitter</a></li>
 					<% end_if %>
-				</ul>
-				<ul class="footer-nav">
 					<% loop Menu(1) %>
 						<li><a href="$Link">$MenuTitle</a></li>
 					<% end_loop %>

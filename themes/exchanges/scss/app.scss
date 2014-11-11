@@ -129,6 +129,11 @@ article {
 	
 }
 
+#main-background {
+	background: url(../images/tile.jpeg);
+	
+}
+
 	
 .exchanges-logo {	
 	//clear: both;
@@ -138,6 +143,42 @@ article {
 	font-family: 'Libre Baskerville', serif, times;
 	font-weight: bold;
 	margin: 0;
-	padding: .66em .22em 0 0;
+	padding: .66rem .22rem 0 0;
 	/* text-shadow: 1px 1px 0px #c0b29f, -1px -1px 0px rgba(0,0,0,.6); */
+}
+
+
+
+
+.poetry {
+		
+	hr {
+		margin: .25rem;
+	}
+	
+	.author{
+		color: $gray;
+		margin-top: .25em;
+		text-transform: lowercase;
+		font-variant: small-caps;
+	}
+	
+	#translated-work{
+		padding: .25in .25in 1in .25in;
+		
+		@media #{$medium-up} {
+			padding: .5in 1in 1in .5in;
+
+    	}
+	}
+	
+	#original-work {
+		padding: .25in .25in 1in .25in;
+		
+		@media #{$medium-up} {
+			padding: .5in .5in .5in 1in;
+
+    	}
+	}
+
 }
