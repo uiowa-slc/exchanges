@@ -28,7 +28,7 @@
 	<div class="inner-wrap">
 	<%--<% include TopBar %>--%>
 	<%-- include UiowaBar --%>
-	<% include SmallTabBar %>
+	<%--<% include SmallTabBar %>--%>
 	<% include OffCanvasSideNav %>	
 	<div class="main typography" role="main">
 		<div class="content row full-width">
