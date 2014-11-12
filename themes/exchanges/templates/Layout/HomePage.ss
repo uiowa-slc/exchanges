@@ -1,5 +1,5 @@
 <div class="row" id="homepage">
-	<div class="small-8 small-centered columns">
+	<div class="small-10 small-centered columns" id="news">
 		<% with FeaturedIssue %>
 		<img src="$Emblem.URL" alt="Emblem" />
 		<h1 class="text-center cur-issue-link"><a href="$Link">Read $Title </a></h1>

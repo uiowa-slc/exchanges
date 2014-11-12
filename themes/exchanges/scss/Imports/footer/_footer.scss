@@ -10,6 +10,7 @@ $break-xlarge: 1140px; /* 1140px / 16px; */
 	color: #222;
 	padding: 3em 0 1em;
 	position: relative;
+	max-width: 1200px;
 }
 .footer p {
 	@media screen and (min-width: $break-small) {

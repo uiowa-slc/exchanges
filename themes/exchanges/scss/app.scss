@@ -105,19 +105,24 @@ article {
     text-transform: uppercase;
     display: block;
     color: $primary-color;
-    font-size: rem-calc(10);
+    font-size: rem-calc(13);
 }
 
-/* I was misguided...jonathan
-.main footer {
-	position: fixed;  //lets stick our footer to the bottom for a nice, full page app feel
-	bottom: 0;	// feeling iffy, but it seems to be working
-	//right: 0;
-	//left: 0;
+#main-background {
+	
+	> .row {
+		max-width: 1200px;
+	}
+	img {
+		width: 100%;
+	}
+	background: url(../images/tile.jpeg);
+	
 }
-*/
 
 #homepage {
+	
+
 	.cur-issue-link {
 		padding: .25rem 0;
 	}
@@ -129,34 +134,21 @@ article {
 	
 }
 
-#main-background {
-	background: url(../images/tile.jpeg);
+
+
+#news {
 	
 }
 
+#poetry {
 	
-.exchanges-logo {	
-	//clear: both;
-	//display: block;
-	color: #353535;
-	font-size: .55em;
-	font-family: 'Libre Baskerville', serif, times;
-	font-weight: bold;
-	margin: 0;
-	padding: .66rem .22rem 0 0;
-	/* text-shadow: 1px 1px 0px #c0b29f, -1px -1px 0px rgba(0,0,0,.6); */
-}
-
-
-
-
-.poetry {
 		
 	hr {
 		margin: .25rem;
+		margin-bottom: 1rem;
 	}
 	
-	.author{
+	.author {
 		color: $gray;
 		margin-top: .25em;
 		text-transform: lowercase;

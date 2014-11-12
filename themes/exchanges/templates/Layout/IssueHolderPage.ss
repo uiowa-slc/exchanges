@@ -3,7 +3,7 @@
 		<h1>$Title</h1>
 	</header>
 	<div class="row">
-		<div class="large-9 columns">
+		<div class="large-10 columns">
 			<div class="content-text">
 				<ul>
 					<% loop Children %>

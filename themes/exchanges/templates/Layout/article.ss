@@ -1,4 +1,4 @@
-<div class="poetry row" id="top-of-poem">
+<div class="row" id="poetry">
 	<div class="small-12 medium-6 columns" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 		<h1>$UntranslatedTitle</h1>
 		<span class="author">
@@ -8,13 +8,13 @@
 		</span>
 		<hr>
 
-		<div class="show-for-small-only">
+		<p class="show-for-small-only">
 			<a href="#translated-work">View Translated Work &raquo;</a>
-		</div> 
+		</p> 
 		$Content
-		<div class="show-for-small-only">
+		<p class="show-for-small-only">
 			<a href="#translated-work">View Translated Work &raquo;</a>
-		</div> 
+		</p> 
 	</div>
 	<div class="small-12 medium-6 columns" id="translated-work">
 		<h1>$TranslatedTitle</h1>
@@ -24,19 +24,19 @@
 			<% end_loop %> 
 		</span>
 		<hr>
-		<div class="show-for-small-only">
+		<p class="show-for-small-only">
 			<a href="#original-work">View Original Work &raquo;</a>
-		</div>   
+		</p>   
 		$Content2
-		<div class="show-for-small-only">
+		<p class="show-for-small-only">
 			<a href="#original-work">View Original Work &raquo;</a>
-		</div>
+		</p>
 		<hr />
 	</div>
 </div>
 <div class="row">
 	<div class="small-6 small-centered columns">
-		<a role="button" class="button radius" href="#top-of-poem">Back to Top &raquo;</a>
-		<a role="button" class="button radius" href="{$Link}notes">Translation Notes &raquo;</a>
+		<a role="button" class="button small radius" href="#poetry">Back to Top &raquo;</a>
+		<a role="button" class="button small radius" href="{$Link}notes">Translation Notes &raquo;</a>
 	</div>
 </div>

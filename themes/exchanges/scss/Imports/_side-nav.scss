@@ -11,8 +11,10 @@
 } 
 
 .side-nav, ul.off-canvas-list {
-	padding: 10px;
-
+	
+	//padding: 10px;
+	
+	
 	h3 small{
 		display: block;
 		line-height: 1.1;
@@ -23,6 +25,9 @@
 	}
 
 	li{
+		background-color: #372B21;
+		color: white;
+
 		border-bottom: 1px solid #eee;
 		a{
 			transition: none;
@@ -33,6 +38,7 @@
 	}
 	h1, h2, h3, h4, h5, h6{
 		text-transform: none;
+		color: #fff;
 	}
 	a {
 		color: #646464;
@@ -72,6 +78,8 @@
 		}
 		a{
 			padding: 10px;
+			padding-bottom: .33rem;
+
 
 		}
 		.category{
@@ -124,3 +132,16 @@ ul.off-canvas-list
 .move-right .exit-off-canvas{
 	box-shadow: none;
 } 
+
+
+.exchanges-logo {	
+	//clear: both;
+	//display: block;
+	color: #353535;
+	font-size: .55em;
+	font-family: 'Libre Baskerville', serif, times;
+	font-weight: bold;
+	margin: 0;
+	padding: .66rem .22rem 0 0;
+	/* text-shadow: 1px 1px 0px #c0b29f, -1px -1px 0px rgba(0,0,0,.6); */
+}

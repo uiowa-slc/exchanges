@@ -1,8 +1,6 @@
 <ul class="side-nav nav-grid">
 	<li class="title-nav">
-		<a href="{$BaseHref}">
-			<h1><span class="exchanges-logo">exchanges</span><span class="category">$CurrentIssue.Title</span></h1>
-		</a>
+		<h1><a href="{$BaseHref}"><span class="exchanges-logo">exchanges</span><span class="category">$CurrentIssue.Title</span></a></h1>
 	</li>
 	<% with $getCurrentIssue %>
 		<% loop Articles() %>
