@@ -14,7 +14,6 @@
 	
 	//padding: 10px;
 	
-	
 	h3 small{
 		display: block;
 		line-height: 1.1;
@@ -26,11 +25,17 @@
 
 	li{
 		background-color: #372B21;
-		color: white;
-
 		border-bottom: 1px solid #eee;
-		a{
+		
+		
+		.nav-li-content {
+			padding: 1rem;
+		}
+		
+		
+		a {
 			transition: none;
+			color: #fff;
 		}
 	}
 	:last-child{
@@ -42,7 +47,7 @@
 	}
 	a {
 		color: #646464;
-		padding: 20px 15px;
+		//padding: 20px 15px;
 	}
 
 	p{
@@ -64,28 +69,32 @@
 		font-size: rem-calc(12);
 		margin-bottom: 0;
 	}
+	
+	
 	li a:hover, li.active a{
-		background-color: #fff;
+		background-color: lighten($primary-color, 25%);
+		color: $lightGray;
 		background-image: url('../images/sidenav-active.png');
 		background-position: 100% 0;
 		background-repeat: repeat-y;
 	}
 
 	li.title-nav {
-		background-color: #8C8C8C;
+		background-color: rgba(141, 140, 140, 0.68);
+		
 		:hover{
 			background-color: #9B9B9B;
 		}
 		a{
 			padding: 10px;
-			padding-bottom: .33rem;
+			//padding-bottom: .33rem;
 
 
 		}
 		.category{
 			display: inline;
 			margin-right: 0;
-			color: #D0D0D0;
+			color: #f4f4f4;
 
 		}
 		h1{
@@ -109,6 +118,8 @@
 
 ul.off-canvas-list 
 {
+	
+	background-color: $primary-color;
 	.childList {
 		height: 100%; 
 		padding: 17px 0px 6px 0px; 
@@ -118,15 +129,23 @@ ul.off-canvas-list
 	li a {
 		padding: 10px;
 		&:hover {
+			h1,h2,h3 {
+				color: $primary-color;
+				}
 			background-color: white;
 		}
 	}
 
 	li p {
-		font-size: 10px;
+		font-size: $base-font-size;
 		color: #888888; 
 		margin-top: -5px;
 	}
+}
+
+.left-off-canvas-menu {
+	background-color: #372B21;
+
 }
 
 .move-right .exit-off-canvas{
@@ -134,14 +153,3 @@ ul.off-canvas-list
 } 
 
 
-.exchanges-logo {	
-	//clear: both;
-	//display: block;
-	color: #353535;
-	font-size: .55em;
-	font-family: 'Libre Baskerville', serif, times;
-	font-weight: bold;
-	margin: 0;
-	padding: .66rem .22rem 0 0;
-	/* text-shadow: 1px 1px 0px #c0b29f, -1px -1px 0px rgba(0,0,0,.6); */
-}

@@ -6,11 +6,15 @@
 		<hr class="marg-fix">
 		<% end_with %>
 		<% loop $getNewsItems(6) %>
-		<article>
-			<h2><a href="$Link">$Title </a></h2>
-			<time>$Date.NiceUS()</time>
-			<blockquote> $Content.BigSummary </blockquote>
-			<%--<p> $Content.BigSummary </p>--%>
+		<article class="row">
+			<div class="small-12 medium-5 large-4 columns">
+				<h3><a href="$Link">$Title </a></h3>
+				<time>$Date.NiceUS()</time>
+			</div>
+			<div class="small-12 medium-7 large-8 columns">
+				<blockquote> $Content.BigSummary </blockquote>
+				<%--<p> $Content.BigSummary </p>--%>
+			</div>
 		</article>
 
 		<% end_loop %>

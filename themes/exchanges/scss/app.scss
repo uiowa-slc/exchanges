@@ -21,7 +21,6 @@ h1{
 }
 
 h1, h2, h3, h4, h5, h6 {
-
 }
 
 .clearfix {
@@ -108,11 +107,26 @@ article {
     font-size: rem-calc(13);
 }
 
+#nav-background {
+	background: url(../images/paper.png);
+
+}
+
 #main-background {
 	
-	> .row {
-		max-width: 1200px;
+	
+	.row {
+		//padding: 2rem;
 	}
+	
+	
+	> .row:not(.footer) {
+		max-width: 1200px;
+		padding: 0 2.75rem;
+		margin-top: 2rem;
+		
+	}
+	
 	img {
 		width: 100%;
 	}
@@ -122,7 +136,6 @@ article {
 
 #homepage {
 	
-
 	.cur-issue-link {
 		padding: .25rem 0;
 	}
@@ -135,14 +148,29 @@ article {
 }
 
 
-
 #news {
+	blockquote {
+		color: $primary-color;
+		font-size: 90%;
+	}
 	
+}
+
+.author {
+	//color: $gray;
+	margin-top: .25em;
+	text-transform: lowercase;
+	font-variant: small-caps;
+	font-size: 90%;
+	line-height: normal;
+	margin-bottom: 0px;
 }
 
 #poetry {
 	
-		
+	padding: 0 !important;
+	margin: 0 !important;
+	
 	hr {
 		margin: .25rem;
 		margin-bottom: 1rem;
@@ -173,4 +201,17 @@ article {
     	}
 	}
 
+}
+
+
+.exchanges-logo {	
+	//clear: both;
+	//display: block;
+	color: rgba(45, 45, 45, 0.99);
+	font-size: 25px;
+	font-family: 'Libre Baskerville', serif, times;
+	font-weight: bold;
+	margin: 0;
+	padding: .66rem .22rem 0 0;
+	/* text-shadow: 1px 1px 0px #c0b29f, -1px -1px 0px rgba(0,0,0,.6); */
 }

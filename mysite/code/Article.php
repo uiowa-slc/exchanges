@@ -114,6 +114,7 @@ class Article_Controller extends  Page_Controller {
 		'notes' => 'notes',
 		'publishpage' => 'publishpage' 
 		);
+		
 	public function notes(){
 		$translatorNote = $this->TranslatorNote;
 		$translators = $this->Translators();
@@ -124,10 +125,11 @@ class Article_Controller extends  Page_Controller {
 			);
 
 		if(isset($translatorNote)){
-			return $this->Customise($Data)->renderWith(array('Article_notes','Page'));
 		}else{
-
 		}
+		
+		return $this->Customise($Data)->renderWith(array('Article_notes','Page'));
+
 	} 
 	public function init() {
 		parent::init();

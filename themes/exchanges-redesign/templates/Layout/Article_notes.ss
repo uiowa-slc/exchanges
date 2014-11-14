@@ -3,7 +3,7 @@
 		<div class="span8 column">
 	  		<h1><a href="{$Link}">$Title</a></h1>
 	  		
-	  		<h2>Notes on Translation</h2>
+	  		<h4>Notes on Translation</h4>
 			$TranslatorNote
 			<br />
 			<% loop Translators %><% if not First %>, <% end_if %><a href="$Link">$Name</a><% end_loop %>

@@ -19,20 +19,24 @@
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
+	<script src="//use.typekit.net/gor3pds.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	<%--
 	<script type="text/javascript" src="//use.typekit.net/yxj2cnc.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	--%>
 	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
 </head>
 <body class="$ClassName.ATT">
 <div class="off-canvas-wrap">
 	<div class="inner-wrap">
-	<% include TopBar %>
+	<%--<% include TopBar %>--%>
 	<%-- include UiowaBar --%>
 	<% include SmallTabBar %>
 	<% include OffCanvasSideNav %>	
 	<div class="main typography" role="main">
 		<div class="content row full-width">
-				<div class="xxlarge-2 xlarge-2 large-3 side-nav-column large-uncentered columns show-for-large-up">
+				<div class="xxlarge-2 xlarge-2 large-3 side-nav-column large-uncentered columns show-for-large-up" id="nav-background">
 					<% include SideNav %>
 				</div>
 				<div class="xxlarge-10 xlarge-10 large-9 main-column columns" id="main-background">

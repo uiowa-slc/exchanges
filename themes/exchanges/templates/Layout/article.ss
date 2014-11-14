@@ -35,7 +35,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="small-6 small-centered columns">
+	<div class="small-10 medium-8 small-centered columns">
 		<a role="button" class="button small radius" href="#poetry">Back to Top &raquo;</a>
 		<a role="button" class="button small radius" href="{$Link}notes">Translation Notes &raquo;</a>
 	</div>
