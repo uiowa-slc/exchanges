@@ -30,6 +30,7 @@
 		
 		.nav-li-content {
 			padding: 1rem;
+			color: $gray;
 		}
 		
 		
@@ -57,7 +58,7 @@
 	h3{
 		margin-top: 0;
 		font-size: rem-calc(18);
-		line-height: 1;
+		line-height: 1.1;
 	}
 	p, span, h3{
 		@media #{$large-up} {
@@ -80,13 +81,17 @@
 	}
 
 	li.title-nav {
-		background-color: rgba(141, 140, 140, 0.68);
+		background-color: #28201A;
+		text-align: center;
+		//background-image: url(../images/paperback.png);
+		//background-repeat: no-repeat;
+		//background-size: contain; 
 		
 		:hover{
 			background-color: #9B9B9B;
 		}
 		a{
-			padding: 10px;
+			//padding: 10px;
 			//padding-bottom: .33rem;
 
 
@@ -99,8 +104,8 @@
 		}
 		h1{
 			margin: 0;
-			margin-top: -20px;
-			text-align:center;
+			//margin-top: -20px;
+			//text-align:center;
 		}
 		h1 img {
 			height: 30px;
@@ -109,6 +114,23 @@
 				margin-top: 20px;
 				margin-right: 5px;
 			}			
+		}
+		
+		.exchanges-logo {	
+			//clear: both;
+			//display: block;
+			color: white !important;
+			font-size: 2.75em;
+			font-family: 'Libre Baskerville', serif, times;
+			font-weight: bold;
+			//margin: 0;
+			//padding: .66rem .22rem 0 0;
+			margin-bottom: 5px;
+			/* text-shadow: 1px 1px 0px #c0b29f, -1px -1px 0px rgba(0,0,0,.6); */
+		}
+		.issue-logo {
+			font-size: 1.5em;
+			color: $lightGray;
 		}
 	}
 }
@@ -129,7 +151,7 @@ ul.off-canvas-list
 	li a {
 		padding: 10px;
 		&:hover {
-			h1,h2,h3 {
+			h1,h2,h3,h4 {
 				color: $primary-color;
 				}
 			background-color: white;
@@ -151,5 +173,6 @@ ul.off-canvas-list
 .move-right .exit-off-canvas{
 	box-shadow: none;
 } 
+
 
 

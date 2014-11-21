@@ -1,5 +1,5 @@
 <div class="row" >
-	<section class="small-8 columns">
+	<section class="small-12 medium-8 large-7 end columns">
   		<h1><a href="{$Link}">$Title</a></h1>
   		<h4>Notes on Translation</h4>
 		$TranslatorNote
