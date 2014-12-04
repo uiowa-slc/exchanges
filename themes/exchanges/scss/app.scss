@@ -9,6 +9,11 @@
 
 @import "imports/footer/grid-simple";
 
+body {
+	background: url(../images/tile.jpeg);
+
+}
+
 .full-width {
     width: 100%;
     margin-left: auto;
@@ -21,6 +26,12 @@ h1{
 }
 
 h1, h2, h3, h4, h5, h6 {
+}
+
+hr {
+	border-color: $darkGray;
+	//margin: .25rem;
+	margin-bottom: 1rem;
 }
 
 .clearfix {
@@ -114,7 +125,9 @@ article {
 
 #main-background {
 	
-	
+	min-height: 777px;
+	background: url(../images/tile.jpeg);
+
 	.row {
 		//padding: 2rem;
 	}
@@ -134,7 +147,6 @@ article {
 	img {
 		width: 100%;
 	}
-	background: url(../images/tile.jpeg);
 	
 }
 
@@ -167,7 +179,7 @@ article {
 	margin-top: .25em;
 	text-transform: lowercase;
 	font-variant: small-caps;
-	font-size: 90%;
+	font-size: 100%;
 	line-height: normal;
 	margin-bottom: 0px;
 }

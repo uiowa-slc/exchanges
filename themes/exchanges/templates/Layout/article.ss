@@ -21,6 +21,7 @@
 			<% loop $Translators %>
 			Translated by <a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
 			<% end_loop %> 
+			<a role="button" href="{$Link}notes">Translation Notes &raquo;</a>
 		</span>
 
 		<p class="show-for-small-only author">
@@ -35,8 +36,9 @@
 	</div>
 </div>
 <div class="row">
-	<div class="small-10 medium-8 small-centered columns">
-		<a role="button" class="button small radius" href="#poetry">Back to Top &raquo;</a>
-		<a role="button" class="button small radius" href="{$Link}notes">Translation Notes &raquo;</a>
+	<div class="small-12 columns">
+		<div class="right">
+			<a role="button" href="#poetry">Back to Top &raquo;</a>
+		</div>
 	</div>
 </div>

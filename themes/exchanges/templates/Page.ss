@@ -36,10 +36,10 @@
 	<% include OffCanvasSideNav %>	
 	<div class="main typography" role="main">
 		<div class="content row full-width">
-				<div class="xxlarge-2 xlarge-2 large-3 side-nav-column large-uncentered columns show-for-large-up" id="nav-background">
+				<div class="xxlarge-2 large-3 side-nav-column large-uncentered columns show-for-large-up" id="nav-background">
 					<% include SideNav %>
 				</div>
-				<div class="xxlarge-10 xlarge-10 large-9 main-column columns" id="main-background">
+				<div class="xxlarge-10 large-9 main-column columns" id="main-background">
 					$Layout
 				<% include Footer %>
 				</div>

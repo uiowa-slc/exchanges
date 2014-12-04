@@ -13,7 +13,7 @@
 .side-nav, ul.off-canvas-list {
 	
 	//padding: 10px;
-	
+
 	h3 small{
 		display: block;
 		line-height: 1.1;
@@ -30,6 +30,7 @@
 		
 		.nav-li-content {
 			padding: 1rem;
+			padding-bottom: .44rem;
 			color: $gray;
 		}
 		
@@ -88,7 +89,9 @@
 		//background-size: contain; 
 		
 		:hover{
+			//background-color: $lightGray;
 			background-color: #9B9B9B;
+			color: white;
 		}
 		a{
 			//padding: 10px;
@@ -132,6 +135,22 @@
 			font-size: 1.5em;
 			color: $lightGray;
 		}
+		.more-arrow {
+			font-size: 66%;
+			:hover {
+				font-size: 1rem;
+			}
+			img {
+				max-width:25px;
+				height: auto;
+			}
+		}
+	}
+	li.issues-nav {
+		max-height: 0px;
+		overflow: hidden;
+		background-color: #9B9B9B;
+
 	}
 }
 .side-nav>li.issue-title {
