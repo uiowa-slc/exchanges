@@ -68,8 +68,19 @@ class Page_Controller extends ContentController {
 	
 	
 	public function getCurrentIssue(){
-		$currentIssue = HomePage::get()->First();
-		return $currentIssue->FeaturedIssue();
+		$sessionIssue = Session::get('issue');
+		//print_r($sessionIssue);
+		if (empty($sessionIssue)) {
+			$currentIssue = HomePage::get()->First();
+			$sessionIssue = $currentIssue->FeaturedIssue();
+		} 
+		//print_r($sessionIssue->Title);
+		return $sessionIssue;
+	}
+	
+	public function getAllIssues() {
+		$issueArray = Issue::get();
+		return $issueArray;
 	}
 	
 	public function getEmblem(){

@@ -2,8 +2,9 @@
 	<div class="small-12 medium-6 columns poem" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 		<h1>$UntranslatedTitle</h1>
 		<span class="author">
+			Written By
 			<% loop $Authors %>
-			Written By <a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
+			<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
 			<% end_loop %> 
 		</span>
 		<p class="show-for-small-only author">
@@ -18,8 +19,9 @@
 	<div class="small-12 medium-6 columns poem" id="translated-work">
 		<h1>$TranslatedTitle</h1>
 		<span class="author">
+			Translated by 
 			<% loop $Translators %>
-			Translated by <a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
+			<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
 			<% end_loop %> 
 			<a role="button" href="{$Link}notes">Translation Notes &raquo;</a>
 		</span>
@@ -38,7 +40,7 @@
 <div class="row">
 	<div class="small-12 columns">
 		<div class="right">
-			<a role="button" href="#poetry">Back to Top &raquo;</a>
+			<a role="button" href="#">Back to Top &raquo;</a>
 		</div>
 	</div>
 </div>

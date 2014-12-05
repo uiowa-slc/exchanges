@@ -49,17 +49,17 @@ class Issue extends Page {
 
 class Issue_Controller extends  Page_Controller {
 
-
-
-	public function init() {
-		parent::init();
-	}
-
 	private static $allowed_actions = array ( "letter" );
 
 	private static $url_handlers = array(
 		'letter' => 'letter'
 	);
+
+	public function init() {
+		parent::init();
+		//print_r($this->getClassName());
+		Session::set('issue', Issue::get_by_id('Issue', $this->ID));
+	}
 
 	public function letter() {
 		$letterText = $this->LetterFromEditor;

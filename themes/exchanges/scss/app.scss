@@ -174,16 +174,6 @@ article {
 	
 }
 
-.author {
-	//color: $gray;
-	margin-top: .25em;
-	text-transform: lowercase;
-	font-variant: small-caps;
-	font-size: 100%;
-	line-height: normal;
-	margin-bottom: 0px;
-}
-
 #poetry {
 	
 	padding: 0 !important;
@@ -197,6 +187,7 @@ article {
 	hr {
 		border-color: $darkGray;
 		//margin: .25rem;
+		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
 	
@@ -205,31 +196,37 @@ article {
 		margin-top: .25em;
 		text-transform: lowercase;
 		font-variant: small-caps;
-	}
-	
-	#translated-work{
-		padding: .25in .25in 1in .25in;
-		
-		@media #{$medium-up} {
-			padding: .5in 1in 1in .75in;
-
-    	}
+		font-size: 88%;
+		line-height: normal;
+		margin-bottom: 0px;
 	}
 	
 	#original-work {
-		padding: .25in .25in 1in .25in;
+		padding: .22in .22in 1in .22in;
 		
-		@media #{$medium-up} {
-			padding: .5in .5in .5in .75in;
+		@media #{$medium-only} {
+			padding: .5in .5in .5in .25in;
 
     	}
     	
-    	@media #{$medium-up} {
-			padding: .5in .5in .5in .75in;
+    	@media #{$large-up} {
+			padding: .5in .5in 1in 1in;
+
+    	}
+	}
+	
+	#translated-work{
+		padding: .22in .22in 1in .22in;
+		
+		@media #{$medium-only} {
+			padding: .5in .25in 1in .5in;
+
+    	}
+    	@media #{$large-up} {
+			padding: .5in 1in 1in .5in;
 
     	}
 	}
 
 }
-
 

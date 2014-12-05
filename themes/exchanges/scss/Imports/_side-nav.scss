@@ -23,14 +23,13 @@
 		padding: 0;
 	}
 
-	li{
+	li {
 		background-color: #372B21;
 		border-bottom: 1px solid #524444;
 		
 		
 		.nav-li-content {
 			padding: 1rem;
-			padding-bottom: .44rem;
 			color: $gray;
 		}
 		
@@ -47,7 +46,7 @@
 		text-transform: none;
 		color: #fff;
 	}
-	a {
+	a.article-nav {
 		color: #646464;
 		//padding: 20px 15px;
 	}
@@ -73,7 +72,7 @@
 	}
 	
 	
-	li a:hover, li.active a{
+	li.article-nav a:hover, li.active a{
 		background-color: lighten($primary-color, 25%);
 		color: $lightGray;
 		background-image: url('../images/sidenav-active.png');
@@ -84,13 +83,14 @@
 	li.title-nav {
 		background-color: #28201A;
 		text-align: center;
+		//padding-top: 1px;
 		//background-image: url(../images/paperback.png);
 		//background-repeat: no-repeat;
 		//background-size: contain; 
 		
 		:hover{
 			//background-color: $lightGray;
-			background-color: #9B9B9B;
+			background-color: darken($primary-color, 3%);
 			color: white;
 		}
 		a{
@@ -130,7 +130,10 @@
 			//padding: .66rem .22rem 0 0;
 			margin-bottom: 5px;
 			/* text-shadow: 1px 1px 0px #c0b29f, -1px -1px 0px rgba(0,0,0,.6); */
+			
 		}
+		
+		
 		.issue-logo {
 			font-size: 1.5em;
 			color: $lightGray;
@@ -145,14 +148,64 @@
 				height: auto;
 			}
 		}
-	}
-	li.issues-nav {
-		max-height: 0px;
-		overflow: hidden;
-		background-color: #9B9B9B;
+		
+		
+		a {
+			letter-spacing: normal;
+			-webkit-transition: letter-spacing, 2s ease-out 0.1s;
+			-moz-transition: letter-spacing, 2s ease-out 0.1s;
+			-o-transition: letter-spacing, 2s ease-out 0.1s;
+			transition: letter-spacing, 2s ease-out 0.1s;
+		}
 
+		a:hover {
+			letter-spacing: 2px;
+			-webkit-transition: letter-spacing, 2s ease-out 0.1s;
+			-moz-transition: letter-spacing, 2s ease-out 0.1s;
+			-o-transition: letter-spacing, 2s ease-out 0.1s;
+			transition: letter-spacing, 2s ease-out 0.1s;
+		}
+		
+	}
+	li#issues-nav {
+		height: 0px;
+		overflow: hidden;
+		background-color: darken($primary-color, 3%);
+		
+		.issue-date {
+			color: $darkGray;
+			margin-top: .25em;
+			text-transform: lowercase;
+			font-variant: small-caps;
+		}
+		
+		ul {
+			list-style: none;
+			margin-left: 0;
+			
+			li:hover {
+				background-color: darken($primary-color, 3%);
+				padding-left:3px;
+
+			}
+		}
+		
+		a {
+			background-color: darken($primary-color, 3%);
+		}
 	}
 }
+
+.nav-deets {
+	//color: $gray;
+	margin-top: .25em;
+	text-transform: lowercase;
+	font-variant: small-caps;
+	font-size: 88%;
+	line-height: normal;
+	margin-bottom: 0px;
+}
+
 .side-nav>li.issue-title {
 	text-transform: uppercase;
 }

@@ -1,6 +1,6 @@
-
 <footer class="footer clearfix" role="contentinfo">
     <div class="row">
+    	<hr>
         <div class="small-6 medium-4 large-3 columns" style="padding-top: 1.5rem">
 				<a href="http://studentlife.uiowa.edu" class="hide-print logo"><img src="$ThemeDir/images/UILib-stackedBlack-01.png" alt="Division Of Student Life" style="margin-top: -20px;"></a><br>
 

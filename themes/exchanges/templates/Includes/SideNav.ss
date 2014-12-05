@@ -1,23 +1,22 @@
 <ul class="side-nav nav-grid">
 	<li class="title-nav">
-		<a href="{$BaseHref}">
-		<section class="nav-li-content" id="issue-menu">
-			<h1 class="exchanges-logo">exchanges</h1>
-			<h3 class="issue-logo">$CurrentIssue.Title</h3>
+		<section class="nav-li-content" id="current-issue">
+			<h1 class="exchanges-logo pulse"><a href="{$BaseHref}">exchanges</a></h1>
+			<h3 class="issue-logo"><a href="$CurrentIssue.Link">$CurrentIssue.Title</a></h3>
 			<span class="more-arrow">Past Issues &#x25BC;</span>
-		</section>
-		</a>
-	
+		</section>	
 	</li>
-	<li class="issues-nav">
+	<li id="issues-nav">
 		<section class="nav-li-content">
-			<p>test</p>
+			<ul>
+				<% loop $AllIssues %>
+					<li><a href="$Link">$IssueNumber $Title <span class="nav-deets">$IssueDate</span></a></li>
+				<% end_loop %>
+					<li><a href="{$BaseHref}/issues-archive/">All Issues</a><li>
+			</ul>
 		</section>
 	</li>
-	<% with $getCurrentIssue %>
-		<% loop Articles() %>
-			$IssueNumber
-			<% include SideNavMenuItem %>
-		<% end_loop %>
-	<% end_with %>
+	<% loop $CurrentIssue.Articles() %>
+		<% include SideNavMenuItem %>
+	<% end_loop %>
 </ul>

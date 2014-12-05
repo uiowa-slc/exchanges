@@ -1415,72 +1415,32 @@ $(window).resize(function() {
     if(window.innerWidth > 585) { $(".off-canvas-wrap").removeClass("move-right"); }
 });
 
-
-$('#issue-menu').hover(
+var state = 0;
+$('.more-arrow').click(
 	function() {
-		$('.more-arrow').animate(
-			{
-				fontSize: 13
-			},
-			500,
-			function() {
-				
-			}	
-		);
-		
-	}, function() {
-		$('.more-arrow').animate(
-			{
-				fontSize: 12
-			},
-			500,
-			function() {
-					
-			}	
-		);	
-	}
-);
-
-$('.more-arrow').hover(
-	function() {
-		$('.issues-nav').animate(
-			{
-				maxHeight: 150,
-				height: 150
-			},
-			350,
-			function() {
-				$('.issues-nav').hover(
-					function() {
-						
-					},
-					function() {
-						$('.issues-nav').animate(
-							{
-								maxHeight: 0,
-								height: 0
-							},
-							200
-						);
-					}			
-				);
-			}
-		);
-	},
-	function() {
-		/*
-		$('.issues-nav').animate(
-			{
-				maxHeight: 0,
-				height: 0
-			},
-			200,
-			function() {
-				
-			}
-		);
-		*/
-	}
+		if (state == 0) {
+			$('#issues-nav').animate(
+				{
+					maxHeight: 333,
+					height: '100%'
+				},
+				550
+			);
+		} else {
+			$('#issues-nav').animate(
+				{
+					height: 0,
+					maxHeight: 0
+				},
+				350
+			);
+		}
+		if (state == 0) {
+			state = 1;
+		} else {
+			state = 0;
+		}
+	}		
 );
 
 
