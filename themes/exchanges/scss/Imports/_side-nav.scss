@@ -73,7 +73,7 @@
 	
 	
 	li.article-nav a:hover, li.active a{
-		background-color: $secondary-color;
+		background-color: darken($secondary-color, 10);
 		color: $lightGray;
 		background-image: url('../images/sidenav-active.png');
 		background-position: 100% 0;
