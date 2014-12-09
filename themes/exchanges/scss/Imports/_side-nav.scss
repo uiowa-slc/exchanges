@@ -32,6 +32,7 @@
 			padding: 1rem;
 			color: $gray;
 		}
+
 		
 		
 		a {
@@ -172,6 +173,10 @@
 		height: 0px;
 		overflow: hidden;
 		background-color: darken($secondary-color, 3%);
+
+		.nav-li-content{
+			padding: 0 1rem;
+		}
 		
 		.issue-date {
 			color: $darkGray;
