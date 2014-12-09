@@ -29,8 +29,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 hr {
-	border-color: $darkGray;
-	//margin: .25rem;
 	margin-bottom: 1rem;
 }
 
@@ -76,9 +74,15 @@ article {
 		padding-top: 20px;
 	}
     @media #{$large-up}{
+
     	padding-top: 45px;
+    	&.first{
+    		padding-top: 20px;
+    	}
     }
-    
+    time{
+    	font-size: 18px;
+    }
     header {
         font-family: $header-font-family;
         h1{
@@ -138,7 +142,7 @@ article {
 		
 		@media #{$medium-up}{
 		max-width: 1200px;
-		padding: 0 2.75rem;
+		padding: 0 2rem;
 		margin-top: 2rem;
 	}
 		

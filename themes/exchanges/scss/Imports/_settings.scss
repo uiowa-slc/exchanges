@@ -2,8 +2,8 @@
 // https://github.com/zurb/bower-foundation/blob/master/scss/foundation/_settings.scss
 
 // Default Colors
-$primary-color: #372B21;
-$secondary-color: #e7e7e7;
+$primary-color: #1A79AB;
+$secondary-color: #79563C;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
@@ -175,7 +175,7 @@ $darkGray: #666666;
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
-// $hr-border-color: #ddd;
+ $hr-border-color: lighten($secondary-color, 30%);
 // $hr-margin: rem-calc(20);
 
 // We use these to style lists
