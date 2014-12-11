@@ -23,7 +23,7 @@
 			<% loop $Translators %>
 			<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
 			<% end_loop %> 
-			<a role="button" href="{$Link}notes">Translation Notes &raquo;</a>
+			| <a role="button" href="{$Link}notes">View Translation Notes</a>
 		</span>
 
 		<p class="show-for-small-only author">
@@ -34,13 +34,14 @@
 		<p class="show-for-small-only">
 			<a href="#original-work">View Original Work &raquo;</a>
 		</p>
-		<hr />
+		
 	</div>
 </div>
+<hr />
 <div class="row">
 	<div class="small-12 columns">
 		<div class="right">
-			<a role="button" href="#">Back to Top &raquo;</a>
+			<a role="button" href="#">Back to Top &uarr;</a>
 		</div>
 	</div>
 </div>

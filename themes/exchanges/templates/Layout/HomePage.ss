@@ -1,18 +1,21 @@
+<% with FeaturedIssue %>
+	<a href="$Link"><img src="$Emblem.URL" alt="Emblem" /></a>
+<% end_with %>
 <div class="row" id="homepage">
 	<div class="small-11 small-centered columns" id="news">
 		<% with FeaturedIssue %>
-		<img src="$Emblem.URL" alt="Emblem" />
-		<h1 class="text-center cur-issue-link"><a href="$Link">Read $Title</a></h1>
+		<span class="cur-issue-link">Read our latest issue: <a href="$Link">$Title</a></span>
 		<hr class="marg-fix">
 		<% end_with %>
+		<h2>Latest News</h2>
 		<% loop $getNewsItems(6) %>
-		<article class="row">
+		<article class="row $FirstLast">
 			<div class="small-12 medium-5 large-4 columns">
 				<h3><a href="$Link">$Title </a></h3>
-				<time class="left">$Date.NiceUS()</time>
+				<time class="left">$Date.Format("F j, Y")</time>
 			</div>
-			<div class="small-12 medium-7 large-7 end columns">
-				<p> $Content.BigSummary </p>
+			<div class="small-12 medium-7 large-8 end columns">
+				<p> $Content.BigSummary <a href="$Link">Continue Reading</a></p>
 				<%--<p> $Content.BigSummary </p>--%>
 			</div>
 		</article>

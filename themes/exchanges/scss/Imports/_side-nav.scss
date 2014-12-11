@@ -25,13 +25,14 @@
 
 	li {
 		background-color: #372B21;
-		border-bottom: 1px solid #524444;
+		border-bottom: 1px solid darken($secondary-color, 10%);
 		
 		
 		.nav-li-content {
 			padding: 1rem;
 			color: $gray;
 		}
+
 		
 		
 		a {
@@ -73,7 +74,7 @@
 	
 	
 	li.article-nav a:hover, li.active a{
-		background-color: lighten($primary-color, 25%);
+		background-color: darken($secondary-color, 10);
 		color: $lightGray;
 		background-image: url('../images/sidenav-active.png');
 		background-position: 100% 0;
@@ -87,10 +88,11 @@
 		//background-image: url(../images/paperback.png);
 		//background-repeat: no-repeat;
 		//background-size: contain; 
+		border: none;
 		
-		:hover{
+		&:hover{
 			//background-color: $lightGray;
-			background-color: darken($primary-color, 3%);
+			//background-color: darken($primary-color, 3%);
 			color: white;
 		}
 		a{
@@ -140,8 +142,8 @@
 		}
 		.more-arrow {
 			font-size: 66%;
-			:hover {
-				font-size: 1rem;
+			&:hover {
+				cursor: pointer;
 			}
 			img {
 				max-width:25px;
@@ -170,7 +172,11 @@
 	li#issues-nav {
 		height: 0px;
 		overflow: hidden;
-		background-color: darken($primary-color, 3%);
+		background-color: darken($secondary-color, 3%);
+
+		.nav-li-content{
+			padding: 0 1rem;
+		}
 		
 		.issue-date {
 			color: $darkGray;
@@ -182,16 +188,22 @@
 		ul {
 			list-style: none;
 			margin-left: 0;
+
+			li{
+				background: none;
+				padding: 10px 0;
+				border-color: lighten($secondary-color,10%);
+			}
 			
 			li:hover {
-				background-color: darken($primary-color, 3%);
+				background-color: darken($secondary-color, 3%);
 				padding-left:3px;
 
 			}
 		}
 		
 		a {
-			background-color: darken($primary-color, 3%);
+			background: none;
 		}
 	}
 }

@@ -2,9 +2,14 @@
 	<div class="small-12 columns">
 		<h1 class="headline">$Contributor.Name</h1>
 		<hr>
-		<% loop $Contributor.Articles() %>
-			<a href="$Link" alt="$Name"> $title </a>
+		<% if $Contributor.Articles %>
+		<h2>Works contributed by $Contributor.Name :</h2>
+		<ul>
+		<% loop $Contributor.Articles %>
+			<li><a href="$Link" alt="$Name"> $title </a></li>
 		<% end_loop %>
+		</ul>
+		<% end_if %>
 	</div> 
 </div>
 <div class="row">

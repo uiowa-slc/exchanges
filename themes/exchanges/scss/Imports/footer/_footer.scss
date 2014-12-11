@@ -19,9 +19,9 @@ $break-xlarge: 1140px; /* 1140px / 16px; */
 	
 }
 .footer a {
-	color: #222;
+
 	&:hover {
-		color: #8e8d8d;
+	
 	}
 }
 .footer h4 {
@@ -39,7 +39,7 @@ $break-xlarge: 1140px; /* 1140px / 16px; */
 	margin: 0;
 	padding: 1em 0 0;
 	@media screen and (min-width: $break-small) {
-		border-left: 1px solid rgba(190, 190, 190, 0.26);
+		
 	}
 }
 .footer-nav:first-child {
@@ -52,10 +52,9 @@ $break-xlarge: 1140px; /* 1140px / 16px; */
 	-moz-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 	&:hover {
-		border-left-color: #28acb6;
+		border-left: 1px solid #28acb6;
 	}
 	@media screen and (min-width: $break-small) {
-		border-left: 1px solid white;
 		font-size: rem-calc(13);
 		padding: 5px 0 5px 10px;
 	}
@@ -67,11 +66,7 @@ $break-xlarge: 1140px; /* 1140px / 16px; */
 	}
 }
 .footer .btn {color: #333;}
-.footer hr {
-	border-top-color: rgba(204, 204, 204, 0.26);
-	border-bottom-color: #2e2e2e;
-    margin: .5em 0;
-}
+
 .appt-btn {
 	border: 3px solid #eee;
 	color: #fff;

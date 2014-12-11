@@ -1,21 +1,12 @@
 <footer class="footer clearfix" role="contentinfo">
     <div class="row">
-    	<hr>
         <div class="small-6 medium-4 large-3 columns" style="padding-top: 1.5rem">
-				<a href="http://studentlife.uiowa.edu" class="hide-print logo"><img src="$ThemeDir/images/UILib-stackedBlack-01.png" alt="Division Of Student Life" style="margin-top: -20px;"></a><br>
-
-				<p>The University of Iowa Libraries<br />
-					100 Main Library (LIB)<br />
-					Iowa City, IA 52242-1420</p>
+				<a href="http://www.uiowa.edu" class="hide-print logo"><img src="$ThemeDir/images/uiowa.png" alt="Division Of Student Life" style="margin-top: -20px;"></a><br>
 		</div>
 				
 		<div class="small-6 medium-3 large-2 columns">
 			<div class="colgroup">
 				<ul class="footer-nav">
-					<li><a href="https://www.facebook.com/uiowacab" target="_blank"><i class="icon-facebook"></i> Facebook</a></li>	
-					<% if $SiteConfig.TwitterLink %>
-					<li><a href="https://twitter.com/uiowaCAB" target="_blank"><i class="icon-twitter"></i> Twitter</a></li>
-					<% end_if %>
 					<% loop Menu(1) %>
 						<li><a href="$Link">$MenuTitle</a></li>
 					<% end_loop %>
@@ -23,7 +14,7 @@
 			</div>
 		</div>
 		<div class="small-12 medium-5 large-6 end columns hide-print">
-			<p>The University of Iowa Libraries is the largest library system in Iowa and 9th in materials expenditures among U.S. public research libraries (ARL FY10 data). The University’s Main Library, Hardin Library for the Health Sciences, 5 branch libraries, and the Law Library contain more than 5 million volumes.</p> 
+			<p>Exchanges began in 1989-90, as a project of the Iowa Translation Workshop when I was director. The first issue was cyclostyled, the title being copied from Ulalume González de León’s short story “Intercambios,” translated by Stephanie Lovelady, a student in the Workshop. All texts were presented bilingually. <a href="about/">Continue reading...</a></p>
 		</div>
 	</div>
 	<div class="row">
