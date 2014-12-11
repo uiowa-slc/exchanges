@@ -16,6 +16,7 @@
 			<a href="#translated-work">View Translated Work &raquo;</a>
 		</p> 
 	</div>
+
 	<div class="small-12 medium-6 columns poem" id="translated-work">
 		<h1>$TranslatedTitle</h1>
 		<span class="author">
@@ -34,10 +35,10 @@
 		<p class="show-for-small-only">
 			<a href="#original-work">View Original Work &raquo;</a>
 		</p>
-		
 	</div>
+
 </div>
-<hr />
+
 <div class="row">
 	<div class="small-12 columns">
 		<div class="right">

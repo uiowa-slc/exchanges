@@ -42,7 +42,7 @@
 				</div>
 				<div class="xxlarge-10 large-9 main-column columns" id="main-background">
 					$Layout
-				<% include Footer %>
+					<% include Footer %>
 				</div>
 		</div>
 	</div>

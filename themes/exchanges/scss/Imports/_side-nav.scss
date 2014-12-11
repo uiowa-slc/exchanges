@@ -121,6 +121,24 @@
 			}			
 		}
 		
+		#current-issue {
+			a {
+				letter-spacing: normal;
+				-webkit-transition: letter-spacing, 1s ease-in-out 0s;
+				-moz-transition: letter-spacing, 1s ease-in-out 0s;
+				-o-transition: letter-spacing, 1s ease-in-out 0s;
+				transition: letter-spacing, 1s ease-in-out 0s;
+			}
+
+			a:hover {
+				letter-spacing: 2px;
+				-webkit-transition: letter-spacing, .5s linear 0;
+				-moz-transition: letter-spacing, .5s linear 0;
+				-o-transition: letter-spacing, .5s linear 0;
+				transition: letter-spacing, .5s linear 0;
+			}
+		}
+		
 		.exchanges-logo {	
 			//clear: both;
 			//display: block;
@@ -151,24 +169,49 @@
 			}
 		}
 		
-		
-		a {
-			letter-spacing: normal;
-			-webkit-transition: letter-spacing, 2s ease-out 0.1s;
-			-moz-transition: letter-spacing, 2s ease-out 0.1s;
-			-o-transition: letter-spacing, 2s ease-out 0.1s;
-			transition: letter-spacing, 2s ease-out 0.1s;
-		}
+		#title-nav-menu {
+			margin-bottom:0;
+			margin-left: 0;
+			border-top: solid $gray 1px;
+			//text-align: justify;
+			padding-bottom: 3px;
+			
+			li {
+				background-color: $primary-brown;
+				//border-right: 1px solid white;
+				display: inline-block;
+				color: $gray;
+				//padding: 0 8px;
+				border-bottom: 0;
+				//font-size: .75rem;
+				width: auto;
+					
+				a {
+					//background-color: $primary-color;
+					color: $gray;
+					padding: 0 8px;
+					margin-top: 0;
 
-		a:hover {
-			letter-spacing: 2px;
-			-webkit-transition: letter-spacing, 2s ease-out 0.1s;
-			-moz-transition: letter-spacing, 2s ease-out 0.1s;
-			-o-transition: letter-spacing, 2s ease-out 0.1s;
-			transition: letter-spacing, 2s ease-out 0.1s;
+				}
+				
+				:hover {
+					color: white;
+				}
+				
+			}
 		}
+			
+		#title-nav-menu {
+			margin-left: 0;
+			margin-right: 0;
+			
+			.columns {
+				padding: 0;
+			}
+		}	
 		
 	}
+	
 	li#issues-nav {
 		height: 0px;
 		overflow: hidden;

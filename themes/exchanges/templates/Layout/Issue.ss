@@ -1,6 +1,6 @@
 <img src="$Emblem.URL" alt="Emblem" />
 <div class="row">
-	<div class="small-10 small-centered columns">
+	<div class="medium-10 small-12 small-centered columns">
 	<h1>$Title</h1>
 	<hr />
 		<h2> $LetterFromEditorCustomTitle </h2>

@@ -68,12 +68,6 @@ article header, article .article-text, article .content-text, .footer {
     }
 }
 
-.tab-bar h1 {
-	
-	@media #{$small-only} {
-		text-align: left;
-    }
-}
 
 article {
 	padding-top: 10px;
@@ -138,29 +132,40 @@ article {
 	
 	min-height: 777px;
 	background: url(../images/tile.jpeg);
+	//padding-top: 2.5rem;
 
-	.row {
-		//padding: 2rem;
-	}
+	
+	@media #{$large-up}{
 		.columns, .column {
 			padding-left: 2.5rem;
 			padding-right: 2.5rem;
 		}
 	
+	}
+		
+	> .row:first-child {
+			margin-top: 0;
+			@media #{$medium-up}{
+				margin-top: 2.5rem;
+			}
+	}
+
+	
 	> .row:not(.footer) {
 
 		
 		@media #{$medium-up}{
-		max-width: 1200px;
-		padding: 0 1rem;
-		margin-top: 2rem;
-		
+			max-width: 1200px;
+			padding: 0 1rem;
+			//margin-top: 2rem;
+			
 		}
 		
 	}
 	
 	img {
 		width: 100%;
+		max-width: 1600px;
 	}
 	
 }
@@ -187,14 +192,20 @@ article {
 		font-size: 90%;
 	}
 	
+	.columns, .column {
+		//padding-left: 1.25rem;
+		//padding-right: 1.25rem;
+	}
+	
 }
 
 #poetry {
 	
-	padding: 0 !important;
-	margin: 0 !important;
+	//padding: 0 !important;
+	//margin: 0 !important;
+	//white-space: nowrap;
 
-	p{
+	p {
 		line-height: 1.2em;
 		margin-bottom: 0;
 	}
@@ -211,37 +222,37 @@ article {
 		margin-top: .25em;
 		text-transform: lowercase;
 		font-variant: small-caps;
-		font-size: 88%;
+		font-size: 99%;
 		line-height: normal;
 		margin-bottom: 0px;
 	}
 	
 	#original-work {
-		padding: .22in .22in 1in .22in;
+		padding: .25in .1in;
 		
 		@media #{$medium-only} {
-			padding: .5in .5in .5in .25in;
+			padding: 0 .5in .5in .5in;
 
     	}
     	
     	@media #{$large-up} {
-			padding: .5in .5in 1in 1in;
+			padding: 0 .25in 1in .5in;
+
+    	}
+	}
+	// There are slightly different paddings between these two
+	#translated-work{
+		padding: .25in .1in;
+		
+		@media #{$medium-only} {
+			padding: 0 .5in .5in .5in;
+
+    	}
+    	@media #{$large-up} {
+			padding: 0 .5in 1in .25in;
 
     	}
 	}
 	
-	#translated-work{
-		padding: .22in .22in 1in .22in;
-		
-		@media #{$medium-only} {
-			padding: .5in .25in 1in .5in;
-
-    	}
-    	@media #{$large-up} {
-			padding: .5in 1in 1in .5in;
-
-    	}
-	}
-
 }
 

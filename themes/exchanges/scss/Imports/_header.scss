@@ -25,7 +25,12 @@
 
 
 .tab-bar {
+	background-color: $primary-brown;
 	border-bottom: 1px solid $lightGray;
+	
+	a {
+		color: $lightGray;
+	}
 	h1{
 		text-align: center;
 	}

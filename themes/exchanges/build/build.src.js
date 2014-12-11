@@ -1416,7 +1416,7 @@ $(window).resize(function() {
 });
 
 var state = 0;
-$('.more-arrow').click(
+$('#more-arrow').click(
 	function() {
 		if (state == 0) {
 			$('#issues-nav').animate(

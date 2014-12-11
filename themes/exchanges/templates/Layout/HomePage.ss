@@ -2,7 +2,7 @@
 	<a href="$Link"><img src="$Emblem.URL" alt="Emblem" /></a>
 <% end_with %>
 <div class="row" id="homepage">
-	<div class="small-11 small-centered columns" id="news">
+	<div class="medium-12 small-centered columns" id="news">
 		<% with FeaturedIssue %>
 		<span class="cur-issue-link">Read our latest issue: <a href="$Link">$Title</a></span>
 		<hr class="marg-fix">
