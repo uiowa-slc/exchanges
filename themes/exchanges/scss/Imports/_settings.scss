@@ -436,13 +436,13 @@ $darkGray: #666666;
  $dropdown-button-pip-color: #333;
 // $dropdown-button-pip-color-alt: #333;
 
-// $button-pip-tny: rem-calc(6);
-// $button-pip-sml: rem-calc(7);
-// $button-pip-med: rem-calc(9);
-// $button-pip-lrg: rem-calc(11);
+ $button-pip-tny: rem-calc(4);
+ $button-pip-sml: rem-calc(7);
+ $button-pip-med: rem-calc(9);
+ $button-pip-lrg: rem-calc(11);
 
 // We use these to style tiny dropdown buttons
-// $dropdown-button-padding-tny: $button-pip-tny * 7;
+// $dropdown-button-padding-tny: $button-pip-tny * 4;
 // $dropdown-button-pip-size-tny: $button-pip-tny;
 // $dropdown-button-pip-opposite-tny: $button-pip-tny * 3;
 // $dropdown-button-pip-top-tny: -$button-pip-tny / 2 + rem-calc(1);
@@ -939,7 +939,7 @@ $off-canvas-overlay-box-shadow: none;
 // $split-button-active-bg-tint: rgba(0,0,0,0.1);
 
 // We use these to control tiny split buttons
-// $split-button-padding-tny: $button-pip-tny * 10;
+// $split-button-padding-tny: $button-pip-tny * 8;
 // $split-button-span-width-tny: $button-pip-tny * 6;
 // $split-button-pip-size-tny: $button-pip-tny;
 // $split-button-pip-top-tny: $button-pip-tny * 2;

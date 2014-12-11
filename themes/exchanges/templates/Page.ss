@@ -28,6 +28,7 @@
 	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
 </head>
 <body class="$ClassName.ATT">
+	
 <div class="off-canvas-wrap">
 	<div class="inner-wrap">
 	<%--<% include TopBar %>--%>

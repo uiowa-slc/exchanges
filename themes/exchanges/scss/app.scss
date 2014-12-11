@@ -70,6 +70,13 @@ article header, article .article-text, article .content-text, .footer {
     }
 }
 
+.tab-bar h1 {
+	
+	@media #{$small-only} {
+		text-align: left;
+    }
+}
+
 article {
 	padding-top: 10px;
 	@media #{$medium-up}{
@@ -131,7 +138,10 @@ article {
 	.row {
 		//padding: 2rem;
 	}
-	
+		.columns, .column {
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+		}
 	
 	> .row:not(.footer) {
 
@@ -140,7 +150,8 @@ article {
 		max-width: 1200px;
 		padding: 0 2.75rem;
 		margin-top: 2rem;
-	}
+		
+		}
 		
 	}
 	
