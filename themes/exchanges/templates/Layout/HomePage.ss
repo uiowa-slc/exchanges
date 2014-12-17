@@ -14,7 +14,7 @@
 				<h3><a href="$Link">$Title </a></h3>
 				<time class="left">$Date.Format("F j, Y")</time>
 			</div>
-			<div class="small-12 medium-7 large-8 end columns">
+			<div class="small-12 medium-7 large-8 columns">
 				<p> $Content.BigSummary <a href="$Link">Continue Reading</a></p>
 				<%--<p> $Content.BigSummary </p>--%>
 			</div>
