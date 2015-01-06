@@ -141,7 +141,7 @@ article {
 	
 	@media #{$large-up}{
 		.columns, .column {
-			padding-left: 2rem;
+			//padding-left: 2rem;
 			padding-right: 2rem;
 		}
 	
@@ -235,7 +235,7 @@ article {
 	}
 	
 	#original-work {
-		padding: .25in .25in;
+		//padding: 2.5%;
 		
 		@media #{$medium-only} {
 			padding: 0 .5in .5in .5in;
@@ -249,7 +249,7 @@ article {
 	}
 	// There are slightly different paddings between these two
 	#translated-work{
-		padding: .25in .25in;
+		//padding: 10%;
 		
 		@media #{$medium-only} {
 			padding: 0 .5in .5in .5in;
