@@ -47,13 +47,11 @@
 		</div>
 	</div>
 
-	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-	<script src="$ThemeDir/build/build.js"></script>
-
 	<a class="exit-off-canvas"></a>
+	
 	</div>
-	<!--<a class="exit-off-canvas"></a>-->
 </div><!-- end off-canvas-wrap -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="$ThemeDir/build/build.js"></script>
 </body>
 </html>

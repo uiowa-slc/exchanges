@@ -1,6 +1,6 @@
 <div class="row" >
 	<section class="small-12 medium-8 large-7 end columns">
-  		<h1><a href="{$Link}">$Title</a></h1>
+  		<h2><a href="{$Link}">$Title</a></h2>
   		<hr />
   		<h2>Notes on Translation</h2>
 		$TranslatorNote

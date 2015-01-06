@@ -5,33 +5,15 @@
 			<h3 class="issue-logo"><a href="$CurrentIssue.Link">$CurrentIssue.Title</a></h3>
 			<%-- <div class="more-arrow">Past Issues &#x25BC;</div> --%>
 		</section>	
-
-	<ul id="title-nav-menu">
-		<li class="">
-		<a href="#" class="nav-deets">Home</a></li><li>
-		<a href="#" class="nav-deets">About</a></li><li>
-		<a href="#" class="nav-deets">Submit</a></li><li>
-		<a href="#" class="nav-deets" id="more-arrow">Past Issues &#x25BC;</a></li>
-	</ul>
-
-	<%--
-	<div class="row" id="title-nav-menu">
-		<div class="small-1 columns">
-			<a href="#">Home</a>
-		</div>
-		<div class="small-3 columns">
-			<a href="#">About</a>
-		</div>
-		<div class="small-3 columns">
-			<a href="#">Submit</a>
-		</div>
-		<div class="small-5 columns">
-			<a href="#">Past Issues</a>
-		</div>
-	</div>
-	--%>
+		<ul id="title-nav-menu">
+			<li class="">
+			<a href="{$BaseHref}" class="nav-deets" id="home" >Home</a></li><li>
+			<a href="about" class="nav-deets" >About</a></li><li>
+			<a href="submissions" class="nav-deets" >Submit</a></li><li>
+			<a href="#!" class="nav-deets moreissues" >Past Issues &#x25BC;</a></li>
+		</ul>
 	</li>
-	<li id="issues-nav">
+	<li class="pastissues">
 		<section class="nav-li-content">
 			<ul>
 				<% loop $AllIssues.Sort(Sort DESC) %>

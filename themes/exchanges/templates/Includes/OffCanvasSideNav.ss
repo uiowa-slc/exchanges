@@ -1,16 +1,15 @@
 <aside class="left-off-canvas-menu show-for-small-up hide-for-large-up">
 		<ul class="off-canvas-list side-nav">
-		<li class="title-nav">
-
-			<ul id="title-nav-menu">
-				<li class="">
-				<a href="#" class="nav-deets">Home</a></li><li>
-				<a href="#" class="nav-deets">About</a></li><li>
-				<a href="#" class="nav-deets">Submit</a></li><li>
-				<a href="#" class="nav-deets" id="more-arrow">Past Issues &#x25BC;</a></li>
-			</ul>
-		</li>
-			<li id="issues-nav">
+			<li class="title-nav">
+				<ul id="title-nav-menu">
+					<li class="">
+					<a href="{$BaseHref}" class="nav-deets" id="home" >Home</a></li><li>
+					<a href="about" class="nav-deets" >About</a></li><li>
+					<a href="submissions" class="nav-deets" >Submit</a></li><li>
+					<span href="#!" class="nav-deets moreissues" >Past Issues &#x25BC;</span></li>
+				</ul>
+			</li>
+			<li class="pastissues">
 				<section class="nav-li-content">
 					<ul>
 						<% loop $AllIssues.Sort(Sort DESC) %>

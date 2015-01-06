@@ -1,12 +1,12 @@
 <div class="row">
 	<div class="small-12 columns">
-		<h1 class="headline">$Contributor.Name</h1>
+		<h2>Works contributed by $Contributor.Name :</h2>
 		<hr>
 		<% if $Contributor.Articles %>
-		<h2>Works contributed by $Contributor.Name :</h2>
+		
 		<ul>
 		<% loop $Contributor.Articles %>
-			<li><a href="$Link" alt="$Name"> $title </a></li>
+			<li><a href="$Link" alt="$Name"> $title</a> in <% loop $Issues %> <a href="$Link" alt="$Title"> $Title, $IssueDate </a><% end_loop %></li>
 		<% end_loop %>
 		</ul>
 		<% end_if %>

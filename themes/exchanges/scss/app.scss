@@ -130,6 +130,10 @@ article {
 
 #main-background {
 	
+	.emblem {
+		margin-bottom: 1rem;
+	}
+	
 	min-height: 777px;
 	background: url(../images/tile.jpeg);
 	//padding-top: 2.5rem;
@@ -152,11 +156,14 @@ article {
 
 	
 	> .row:not(.footer) {
-
+		
+		padding: 1.5rem;
+		//margin-top: 2rem;
 		
 		@media #{$medium-up}{
 			max-width: 1200px;
 			padding: 0 1rem;
+			padding-left: 40px;
 			//margin-top: 2rem;
 			
 		}
@@ -228,7 +235,7 @@ article {
 	}
 	
 	#original-work {
-		padding: .25in .1in;
+		padding: .25in .25in;
 		
 		@media #{$medium-only} {
 			padding: 0 .5in .5in .5in;
@@ -242,7 +249,7 @@ article {
 	}
 	// There are slightly different paddings between these two
 	#translated-work{
-		padding: .25in .1in;
+		padding: .25in .25in;
 		
 		@media #{$medium-only} {
 			padding: 0 .5in .5in .5in;

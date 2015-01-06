@@ -131,7 +131,7 @@
 			}
 
 			a:hover {
-				letter-spacing: 2px;
+				letter-spacing: 1px;
 				-webkit-transition: letter-spacing, .5s linear 0;
 				-moz-transition: letter-spacing, .5s linear 0;
 				-o-transition: letter-spacing, .5s linear 0;
@@ -158,17 +158,6 @@
 			font-size: 1.5em;
 			color: $lightGray;
 		}
-		.more-arrow {
-			font-size: 66%;
-			&:hover {
-				cursor: pointer;
-			}
-			img {
-				max-width:25px;
-				height: auto;
-			}
-		}
-		
 		#title-nav-menu {
 			margin-bottom:0;
 			margin-left: 0;
@@ -212,9 +201,8 @@
 		
 	}
 	
-	li#issues-nav {
-		height: 0px;
-		overflow: hidden;
+	li.pastissues {
+		display: none;
 		background-color: darken($secondary-color, 3%);
 
 		.nav-li-content{
@@ -276,12 +264,12 @@ ul.off-canvas-list
 		overflow: auto;
 	}
 	li a {
-		padding: 10px;
+		//padding: 10px;
 		&:hover {
 			h1,h2,h3,h4 {
 				//color: $primary-color;
 				}
-			background-color: white;
+			//background-color: white;
 		}
 	}
 

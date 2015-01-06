@@ -1,5 +1,5 @@
 <% with FeaturedIssue %>
-	<a href="$Link"><img src="$Emblem.URL" alt="Emblem" /></a>
+	<a href="$Link"><img src="$Emblem.URL" alt="Emblem" class="emblem" /></a>
 <% end_with %>
 <div class="row" id="homepage">
 	<div class="medium-12 small-centered columns" id="news">
