@@ -1,6 +1,11 @@
+<div class="row">
+	<div class="medium-12 columns">
+		<% if $UntranslatedTitle && $TranslatedTitle %> <% else %><h1 class="text-center">$Title</h1><% end_if %>
+	</div>
+</div>
 <div class="row" id="poetry">
 	<div class="small-12 medium-6 columns poem" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
-		<h1><% if $UntranslatedTitle %> $UntranslatedTitle <% else %> $Title <% end_if %></h1>
+		<h1><% if $UntranslatedTitle %> $UntranslatedTitle <% end_if %></h1>
 		<span class="author">
 			Written By
 			<% loop $Authors %>
@@ -18,7 +23,7 @@
 	</div>
 
 	<div class="small-12 medium-6 columns poem" id="translated-work">
-		<h1><% if $TranslatedTitle %> $TranslatedTitle <% else %> $Title <% end_if %></h1>
+		<h1><% if $TranslatedTitle %> $Title <% end_if %></h1>
 		<span class="author">
 			Translated by 
 			<% loop $Translators %>
