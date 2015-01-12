@@ -1,11 +1,8 @@
-<% if $UntranslatedTitle && $TranslatedTitle %>
 <div class="row">
 	<div class="medium-12 columns">
-		 <h1 class="text-center">$Title</h1>
+		<% if $UntranslatedTitle && $TranslatedTitle %> <% else %><h1 class="text-center">$Title</h1><% end_if %>
 	</div>
 </div>
-<% else %>
-<% end_if %>
 <div class="row" id="poetry">
 	<div class="small-12 medium-6 columns poem" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 		<h1><% if $UntranslatedTitle %> $UntranslatedTitle <% end_if %></h1>
