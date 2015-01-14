@@ -10,7 +10,7 @@
 			<a href="{$BaseHref}" class="nav-deets" id="home" >Home</a></li><li>
 			<a href="about" class="nav-deets" >About</a></li><li>
 			<a href="submissions" class="nav-deets" >Submit</a></li><li>
-			<a href="#!" class="nav-deets moreissues" >Past Issues &#x25BC;</a></li>
+			<a href="#!" class="nav-deets moreissues" >Issues &#x25BC;</a></li>
 		</ul>
 	</li>
 	<li class="pastissues">

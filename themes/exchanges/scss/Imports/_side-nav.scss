@@ -84,6 +84,7 @@
 	li.title-nav {
 		background-color: #28201A;
 		text-align: center;
+
 		//padding-top: 1px;
 		//background-image: url(../images/paperback.png);
 		//background-repeat: no-repeat;
@@ -96,6 +97,7 @@
 			color: white;
 		}
 		a{
+
 			//padding: 10px;
 			//padding-bottom: .33rem;
 
@@ -156,7 +158,10 @@
 		
 		.issue-logo {
 			font-size: 1.5em;
-			color: $lightGray;
+			a{
+				color: #ddd;
+			}
+
 		}
 		#title-nav-menu {
 			margin-bottom:0;
@@ -246,7 +251,7 @@
 	font-size: 12px;
 	line-height: normal;
 	margin-bottom: 0px;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 
 .side-nav>li.issue-title {
@@ -274,7 +279,6 @@ ul.off-canvas-list
 	}
 
 	li p {
-		font-size: $base-font-size;
 		color: #888888; 
 		margin-top: -5px;
 	}

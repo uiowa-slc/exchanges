@@ -6,17 +6,16 @@ class Page extends SiteTree {
 
 	private static $has_one = array(
 	);
-	
+
 	private static $has_many = array(
-	
+
 	);
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 		return $fields;
 	}
-	
-	
+
 }
 class Page_Controller extends ContentController {
 
@@ -36,63 +35,79 @@ class Page_Controller extends ContentController {
 	 * @var array
 	 */
 
-	function StatusMessage() { 
-	   if(Session::get('ActionMessage')) { 
-		  $message = Session::get('ActionMessage'); 
-		  $status = Session::get('ActionStatus');
+	function StatusMessage() {
+		if (Session::get('ActionMessage')) {
+			$message = Session::get('ActionMessage');
+			$status = Session::get('ActionStatus');
 
-		  Session::clear('ActionStatus'); 
-		  Session::clear('ActionMessage');
+			Session::clear('ActionStatus');
+			Session::clear('ActionMessage');
 
-		  return new ArrayData(array('Message' => $message, 'Status' => $status)); 
-	   }
+			return new ArrayData(array('Message' => $message, 'Status' => $status));
+		}
 
-	   return false; 
+		return false;
 	}
 
 	public function init() {
 		parent::init();
-	
+
 	}
-	
-	public function Pages(){
+
+	public function Pages() {
 		$pages = Page::get();
-		
-		if($pages){
+
+		if ($pages) {
 			return $pages;
-		}else{
+		} else {
 			return false;
 		}
-	
+
 	}
-	
-	
-	public function getCurrentIssue(){
+
+	public function NextPage() {
+		$page = Page::get()->filter(array(
+			'ParentID' => $this->ParentID,
+			'Sort:GreaterThan' => $this->Sort,
+		))->First();
+
+		return $page;
+	}
+	public function PreviousPage() {
+		$page = Page::get()->filter(array(
+			'ParentID' => $this->ParentID,
+			'Sort:LessThan' => $this->Sort,
+		))->Last();
+
+		return $page;
+	}
+
+	public function getCurrentIssue() {
 		$sessionIssue = Session::get('issue');
 		//print_r($sessionIssue);
 		if (empty($sessionIssue)) {
 			$currentIssue = HomePage::get()->First();
 			$sessionIssue = $currentIssue->FeaturedIssue();
-		} 
+		}
 		//print_r($sessionIssue->Title);
 		return $sessionIssue;
 	}
-	
+
 	public function getAllIssues() {
 		$issueArray = Issue::get();
 		return $issueArray;
 	}
-	
-	public function getEmblem(){
+
+	public function getEmblem() {
 		$two = 'one';
 		$page = Director::get_current_page();
-	
-	while(($page)&&($page->ClassName!="Issue")){
-				$page = $page->Parent;
+
+		while (($page) && ($page->ClassName != "Issue")) {
+			$page = $page->Parent;
 		}
-			if($page){
-				return $page;
-			}
+		if ($page) {
+			return $page;
+		}
 
 	}
 }

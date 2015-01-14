@@ -29,7 +29,7 @@
 </head>
 <body class="$ClassName.ATT">
 	
-<div class="off-canvas-wrap">
+<div class="off-canvas-wrap" data-offcanvas>
 	<div class="inner-wrap">
 	<%--<% include TopBar %>--%>
 	<%-- include UiowaBar --%>
@@ -41,8 +41,10 @@
 					<% include SideNav %>
 				</div>
 				<div class="xxlarge-10 large-9 main-column columns" id="main-background">
+					<div class="padded-content">
 					$Layout
 					<% include Footer %>
+					</div>
 				</div>
 		</div>
 	</div>
@@ -51,7 +53,7 @@
 	
 	</div>
 </div><!-- end off-canvas-wrap -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script src="$ThemeDir/build/build.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="$ThemeDir/build/build.src.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <% with Contributor %>
-<article>
+<article class="content-page">
 	<header>
 		<h3>Works Contributed by $FirstName $LastName:</h3>
 		<p>$Position</p>

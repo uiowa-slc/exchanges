@@ -56,31 +56,25 @@ hr {
     }
 }
 /* Content padding so it doesn't run up against the sidenav  */
-article header, article .article-text, article .content-text, .footer {
+
+.padded-content{
+	padding-top: 20px;
     @media #{$medium-up} {
         
     }
     @media #{$large-up} {
         padding-left: 40px;
+        padding-right: 20px;
+        padding-top: 30px;
     }
     @media #{$xlarge-up} {
         padding-left: 60px;
-    }
+        padding-right: 20%;
+    }	
 }
 
-
 article {
-	padding-top: 10px;
-	@media #{$medium-up}{
-		padding-top: 20px;
-	}
-    @media #{$large-up}{
 
-    	padding-top: 45px;
-    	&.first{
-    		padding-top: 20px;
-    	}
-    }
     time{
     	font-size: 18px;
     }
@@ -109,6 +103,14 @@ article {
     }
 }
 
+.article-nav{
+	margin-top: 80px;
+}
+
+.compilation-title h1{
+	margin-bottom: 25px;
+}
+
 .byline {
     font-size: rem-calc(14);
     line-height: 1;
@@ -121,6 +123,11 @@ article {
     display: block;
     color: $primary-color;
     font-size: rem-calc(13);
+}
+
+
+.reveal-modal-bg{
+	position: fixed;
 }
 
 #nav-background {
@@ -136,40 +143,14 @@ article {
 	
 	min-height: 777px;
 	background: url(../images/tile.jpeg);
-	//padding-top: 2.5rem;
 
-	
 	@media #{$large-up}{
 		.columns, .column {
-			//padding-left: 2rem;
 			padding-right: 2rem;
 		}
 	
 	}
 		
-	> .row:first-child {
-			margin-top: 0;
-			@media #{$medium-up}{
-				margin-top: 2.5rem;
-			}
-	}
-
-	
-	> .row:not(.footer) {
-		
-		padding: 1.5rem;
-		//margin-top: 2rem;
-		
-		@media #{$medium-up}{
-			max-width: 1200px;
-			padding: 0 1rem;
-			padding-left: 40px;
-			//margin-top: 2rem;
-			
-		}
-		
-	}
-	
 	img {
 		width: 100%;
 		max-width: 1600px;
@@ -200,17 +181,13 @@ article {
 	}
 	
 	.columns, .column {
-		//padding-left: 1.25rem;
-		//padding-right: 1.25rem;
+
 	}
 	
 }
 
+
 #poetry {
-	
-	//padding: 0 !important;
-	//margin: 0 !important;
-	//white-space: nowrap;
 
 	p {
 		line-height: 1.2em;
@@ -218,8 +195,7 @@ article {
 	}
 	
 	hr {
-		border-color: $darkGray;
-		//margin: .25rem;
+		border-color: rgba(152, 143, 120, 0.59);
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
@@ -227,39 +203,12 @@ article {
 	.author {
 		color: $darkGray;
 		margin-top: .25em;
-		text-transform: lowercase;
-		font-variant: small-caps;
-		font-size: 99%;
-		line-height: normal;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		line-height: 0.2;
 		margin-bottom: 0px;
 	}
 	
-	#original-work {
-		//padding: 2.5%;
-		
-		@media #{$medium-only} {
-			padding: 0 .5in .5in .5in;
-
-    	}
-    	
-    	@media #{$large-up} {
-			padding: 0 .25in 1in .5in;
-
-    	}
-	}
-	// There are slightly different paddings between these two
-	#translated-work{
-		//padding: 10%;
-		
-		@media #{$medium-only} {
-			padding: 0 .5in .5in .5in;
-
-    	}
-    	@media #{$large-up} {
-			padding: 0 .5in 1in .25in;
-
-    	}
-	}
 	
 }
 

@@ -881,7 +881,7 @@ $off-canvas-overlay-box-shadow: none;
 // $reveal-overlay-bg-old: #000;
 
 // We use these to control the style of the modal itself.
-// $reveal-modal-bg: #fff;
+ $reveal-modal-bg: #f3ece3;
 // $reveal-position-top: 50px;
 // $reveal-default-width: 80%;
 // $reveal-modal-padding: rem-calc(20);
@@ -1142,7 +1142,7 @@ $off-canvas-overlay-box-shadow: none;
  $topbar-bg: #222;
 
 // Height and margin
- $topbar-height: 40px;
+ $topbar-height: rem-calc(40);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar

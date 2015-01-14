@@ -1,5 +1,5 @@
-<div class="row">
-	<div class="medium-8 columns">
+<div class="row content-page">
+	<div class="large-7 columns end">
 		<header>
 			<h1>$Title</h1>
 		</header>
@@ -7,9 +7,6 @@
 			$Content
 			$Form
 		</div>
-	</div>
-	<div class="medium-4 columns">
-		$SecondaryContent
 	</div>
 </div>
 

@@ -25,8 +25,7 @@ module.exports = function(grunt) {
     concat: {
       js:{
         src: [
-          'themes/exchanges/bower_components/modernizr/modernizr.js',
-          'themes/exchanges/bower_components/foundation/js/foundation.min.js',
+          'themes/exchanges/bower_components/foundation/js/foundation.js',
           'themes/exchanges/javascript/*.js'
         ],
         dest: 'themes/exchanges/build/build.src.js'

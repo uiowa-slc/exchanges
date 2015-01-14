@@ -2,7 +2,7 @@
 	<header>
 		<h1>$Title</h1>
 	</header>
-	<div class="row">
+	<div class="row content-page">
 		<div class="large-10 columns">
 			<div class="content-text">
 				<ul>

@@ -1,5 +1,5 @@
 <img src="$Emblem.URL" alt="Emblem" class="emblem"/>
-<div class="row">
+<div class="row content-page">
 	<div class="medium-10 small-12 end columns">
 	<h1>$Title</h1>
 	<hr />

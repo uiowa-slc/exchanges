@@ -7,7 +7,7 @@ $(window).resize(function() {
 
 $(".moreissues").click(
 	function() {
-		$(".pastissues").toggle("slow");
+		$(".pastissues").slideToggle("slow");
 	}		
 );
 
