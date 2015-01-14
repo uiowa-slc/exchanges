@@ -1,7 +1,7 @@
 <% if $UntranslatedTitle && $TranslatedTitle %>
 <% else %>
 <div class="row compilation-title">
-	<div class="large-8 columns end">
+	<div class="large-10 x-large-6 columns end">
 		 <h1 class="text-center">$Title</h1>
 	</div>
 </div>

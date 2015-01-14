@@ -65,14 +65,16 @@ class Page_Controller extends ContentController {
 
 	}
 
+	public function FeaturedIssue() {
+		$homePage = HomePage::get()->First();
+		return $homePage->FeaturedIssue();
+	}
 	public function getCurrentIssue() {
 		$sessionIssue = Session::get('issue');
-		//print_r($sessionIssue);
 		if (empty($sessionIssue)) {
 			$currentIssue = HomePage::get()->First();
 			$sessionIssue = $currentIssue->FeaturedIssue();
 		}
-		//print_r($sessionIssue->Title);
 		return $sessionIssue;
 	}
 

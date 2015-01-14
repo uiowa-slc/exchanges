@@ -31,9 +31,17 @@
 		}
 		.issue-nav-overlay{
 			background-color: rgba(#372B21, 0.7);
-			a:hover{
+			&:hover{
 				background-color: rgba(#372B21, 0.5);
 			}
+		}
+
+		&.article-nav.issue.active .issue-nav-overlay{
+			background-color: rgba(#372B21, 0.5);
+		}
+
+		&.article-nav.issue a:hover, &.article-nav.issue.active a {
+			background:none;
 		}
 
 		.nav-li-content {
@@ -88,6 +96,9 @@
 		background-position: 100% 0;
 		background-repeat: repeat-y;
 	}
+
+
+
 
 	li.title-nav {
 		background-color: #28201A;
@@ -204,6 +215,10 @@
 			margin-top: .25em;
 			text-transform: lowercase;
 			font-variant: small-caps;
+		}
+
+		.nav-deets{
+			color: #bababa;
 		}
 		
 		ul {

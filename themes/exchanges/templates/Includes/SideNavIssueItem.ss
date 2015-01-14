@@ -1,8 +1,8 @@
-	<li class="article-nav issue" style="background-image: url('$getCurrentIssue.Emblem.URL')">
+	<li class="article-nav issue" style="background-image: url('$Emblem.URL')">
 		<div class="issue-nav-overlay">
-			<a href="$getCurrentIssue.Link">
+			<a href="$Link">
 			<section class="nav-li-content">
-				<h2> $getCurrentIssue.MenuTitle </h2>
+				<h2>$MenuTitle</h2>
 				<p class="nav-deets">
 					<% if $LetterFromEditorCustomTitle %>
 						$LetterFromEditorCustomTitle

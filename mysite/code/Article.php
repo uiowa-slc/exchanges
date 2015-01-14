@@ -95,21 +95,6 @@ class Article extends Page {
 		return $fields;
 	}
 	private static $listing_page_class = 'Issue';
-	public function articleFormat() {
-		$Content = $this->Content;
-		$Content2 = $this->Content2;
-		$Content3 = $this->Content3;
-		$return = '';
-		if ($Content) {
-			if ($Content2) {
-				$return = 'twoColumnPage';
-			} else {
-				$return = 'oneColumnPage';
-			}
-		}
-
-		return $return;
-	}
 
 }
 
@@ -118,7 +103,6 @@ class Article_Controller extends Page_Controller {
 	private static $allowed_actions = array("notes", "publishpage");
 	private static $url_handlers = array(
 		'notes' => 'notes',
-		'publishpage' => 'publishpage',
 	);
 
 	public function notes() {
@@ -140,9 +124,5 @@ class Article_Controller extends Page_Controller {
 	public function init() {
 		parent::init();
 	}
-	public function publishPage() {
-		$this->doPublish();
-		print_r("Page published!");
-		return $this->renderWith(array('Article_notes', 'Page'));
-	}
+
 }

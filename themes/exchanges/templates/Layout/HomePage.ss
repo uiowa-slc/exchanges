@@ -1,7 +1,7 @@
 <div class="row" id="homepage">
 	<div class="medium-12 small-centered columns" id="news">
 		<% with FeaturedIssue %>
-		<span class="cur-issue-link">Read our latest issue: <a href="$Link">$Title</a></span>
+		<h1><span class="cur-issue-link">Read our latest issue: <a href="$Link">$Title</a></span></h1>
 		<hr class="marg-fix">
 		<% end_with %>
 		<h2>Latest News</h2>
