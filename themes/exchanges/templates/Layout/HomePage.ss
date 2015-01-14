@@ -1,6 +1,3 @@
-<% with FeaturedIssue %>
-	<a href="$Link"><img src="$Emblem.URL" alt="Emblem" class="emblem" /></a>
-<% end_with %>
 <div class="row" id="homepage">
 	<div class="medium-12 small-centered columns" id="news">
 		<% with FeaturedIssue %>
@@ -9,7 +6,7 @@
 		<% end_with %>
 		<h2>Latest News</h2>
 		<% loop $getNewsItems(6) %>
-		<article class="row $FirstLast">
+		<article class="row $FirstLast news-item">
 			<div class="small-12 medium-5 large-4 columns">
 				<h3><a href="$Link">$Title </a></h3>
 				<time class="left">$Date.Format("F j, Y")</time>
@@ -19,7 +16,6 @@
 				<%--<p> $Content.BigSummary </p>--%>
 			</div>
 		</article>
-
 		<% end_loop %>
 	</div>
 </div> 

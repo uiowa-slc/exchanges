@@ -2,7 +2,6 @@
 	<li class="title-nav">
 		<section class="nav-li-content" id="current-issue">
 			<h1 class="exchanges-logo pulse"><a href="{$BaseHref}">exchanges</a></h1>
-			<h3 class="issue-logo"><a href="$CurrentIssue.Link">$CurrentIssue.Title</a></h3>
 			<%-- <div class="more-arrow">Past Issues &#x25BC;</div> --%>
 		</section>	
 		<ul id="title-nav-menu">
@@ -23,7 +22,15 @@
 			</ul>
 		</section>
 	</li>
-	<% loop $CurrentIssue.Articles() %>
+	<% include SideNavIssue %>
+
+	<% if not InSection("issues-archive") %>
+		<% loop $CurrentIssue.Articles %>
+			<% include SideNavMenuItem %>
+		<% end_loop %>
+	<% end_if %>
+
+	<% loop $Menu(3) %>
 		<% include SideNavMenuItem %>
 	<% end_loop %>
 </ul>

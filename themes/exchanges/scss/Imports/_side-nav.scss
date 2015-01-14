@@ -12,8 +12,6 @@
 
 .side-nav, ul.off-canvas-list {
 	
-	//padding: 10px;
-
 	h3 small{
 		display: block;
 		line-height: 1.1;
@@ -26,30 +24,40 @@
 	li {
 		background-color: #372B21;
 		border-bottom: 1px solid darken($secondary-color, 10%);
-		
-		
+
+		&.article-nav.issue{
+			background-size: cover;
+			text-align: center;
+		}
+		.issue-nav-overlay{
+			background-color: rgba(#372B21, 0.7);
+			a:hover{
+				background-color: rgba(#372B21, 0.5);
+			}
+		}
+
 		.nav-li-content {
-			padding: 1rem;
 			color: $gray;
 		}
 
 		
 		
-		a {
+		a:not(.button) {
 			transition: none;
 			color: #fff;
+			padding: rem-calc(20);
 		}
 	}
 	:last-child{
 		border-bottom: 0;
 	}
+
 	h1, h2, h3, h4, h5, h6{
 		text-transform: none;
 		color: #fff;
 	}
 	a.article-nav {
 		color: #646464;
-		//padding: 20px 15px;
 	}
 
 	p{
@@ -84,22 +92,12 @@
 	li.title-nav {
 		background-color: #28201A;
 		text-align: center;
-
-		//padding-top: 1px;
-		//background-image: url(../images/paperback.png);
-		//background-repeat: no-repeat;
-		//background-size: contain; 
 		border: none;
 		
 		&:hover{
-			//background-color: $lightGray;
-			//background-color: darken($primary-color, 3%);
 			color: white;
 		}
 		a{
-
-			//padding: 10px;
-			//padding-bottom: .33rem;
 
 
 		}
@@ -111,8 +109,6 @@
 		}
 		h1{
 			margin: 0;
-			//margin-top: -20px;
-			//text-align:center;
 		}
 		h1 img {
 			height: 30px;
@@ -142,17 +138,11 @@
 		}
 		
 		.exchanges-logo {	
-			//clear: both;
-			//display: block;
 			color: white !important;
 			font-size: 2.75em;
 			font-family: 'Libre Baskerville', serif, times;
 			font-weight: bold;
-			//margin: 0;
-			//padding: .66rem .22rem 0 0;
 			margin-bottom: 5px;
-			/* text-shadow: 1px 1px 0px #c0b29f, -1px -1px 0px rgba(0,0,0,.6); */
-			
 		}
 		
 		
@@ -167,21 +157,16 @@
 			margin-bottom:0;
 			margin-left: 0;
 			border-top: solid $secondary-color 1px;
-			//text-align: justify;
 			padding-bottom: 3px;
 			
 			li {
 				background-color: $primary-brown;
-				//border-right: 1px solid white;
 				display: inline-block;
 				color: $gray;
-				//padding: 0 8px;
 				border-bottom: 0;
-				//font-size: .75rem;
 				width: auto;
 					
 				a {
-					//background-color: $primary-color;
 					color: $gray;
 					padding: 0 8px;
 					margin-top: 0;
@@ -211,7 +196,7 @@
 		background-color: darken($secondary-color, 3%);
 
 		.nav-li-content{
-			padding: 0 1rem;
+			padding: 0;
 		}
 		
 		.issue-date {
@@ -227,14 +212,11 @@
 
 			li{
 				background: none;
-				padding: 10px 0;
 				border-color: lighten($secondary-color,10%);
 			}
 			
 			li:hover {
-				background-color: darken($secondary-color, 3%);
-				padding-left:3px;
-
+				background-color: darken($secondary-color, 13%);
 			}
 		}
 		
@@ -245,7 +227,6 @@
 }
 
 .nav-deets {
-	//color: $gray;
 	margin-top: .25em;
 	text-transform: uppercase;
 	font-size: 12px;
@@ -267,15 +248,6 @@ ul.off-canvas-list
 		padding: 17px 0px 6px 0px; 
 		&:hover, .active { border-right: 2px solid #30ceda; }
 		overflow: auto;
-	}
-	li a {
-		//padding: 10px;
-		&:hover {
-			h1,h2,h3,h4 {
-				//color: $primary-color;
-				}
-			//background-color: white;
-		}
 	}
 
 	li p {

@@ -65,23 +65,6 @@ class Page_Controller extends ContentController {
 
 	}
 
-	public function NextPage() {
-		$page = Page::get()->filter(array(
-			'ParentID' => $this->ParentID,
-			'Sort:GreaterThan' => $this->Sort,
-		))->First();
-
-		return $page;
-	}
-	public function PreviousPage() {
-		$page = Page::get()->filter(array(
-			'ParentID' => $this->ParentID,
-			'Sort:LessThan' => $this->Sort,
-		))->Last();
-
-		return $page;
-	}
-
 	public function getCurrentIssue() {
 		$sessionIssue = Session::get('issue');
 		//print_r($sessionIssue);

@@ -73,6 +73,10 @@ hr {
     }	
 }
 
+.emblem{
+	width: 100%;
+}
+
 article {
 
     time{
@@ -137,10 +141,6 @@ article {
 
 #main-background {
 	
-	.emblem {
-		margin-bottom: 1rem;
-	}
-	
 	min-height: 777px;
 	background: url(../images/tile.jpeg);
 
@@ -169,6 +169,10 @@ article {
 	@media #{$medium-up}{
 		margin: 0 0 1rem 0;
 		padding: 0;
+	}
+
+	.news-item{
+		padding: 1.5em 0;
 	}
 	
 }

@@ -6,7 +6,7 @@
 					<a href="{$BaseHref}" class="nav-deets" id="home" >Home</a></li><li>
 					<a href="about" class="nav-deets" >About</a></li><li>
 					<a href="submissions" class="nav-deets" >Submit</a></li><li>
-					<span href="#!" class="nav-deets moreissues" >Past Issues &#x25BC;</span></li>
+					<span href="#!" class="nav-deets moreissues" >Issues &#x25BC;</span></li>
 				</ul>
 			</li>
 			<li class="pastissues">
@@ -19,19 +19,9 @@
 					</ul>
 				</section>
 			</li>
-			<%--
-			<section class="">
-				<a href="$CurrentIssue.Link" class="tiny button radius split">$CurrentIssue.Title.LimitCharacters(15)<span data-dropdown="drop"></span></a>
-				<br> 
-				<ul id="drop" class="f-dropdown" data-dropdown-content> 
-					<% loop $AllIssues %>
-					<li><a href="$Link">$IssueNumber $Title <span class="nav-deets">$IssueDate</span></a></li> 
-					<% end_loop %>
-				</ul>
-			</section>
-			--%>
+		<% include SideNavIssue %>
 		<% with $getCurrentIssue %>
-			<% loop Articles() %>
+			<% loop $Articles %>
 				$IssueNumber
 				<% include SideNavMenuItem %>
 			<% end_loop %>
