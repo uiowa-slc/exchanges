@@ -25,7 +25,7 @@
 	<% include SideNavIssue %>
 
 	<% if not InSection("issues-archive") %>
-		<% loop $CurrentIssue.Articles %>
+		<% loop $CurrentIssue.Children %>
 			<% include SideNavMenuItem %>
 		<% end_loop %>
 	<% end_if %>

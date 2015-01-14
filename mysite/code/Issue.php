@@ -16,6 +16,11 @@ class Issue extends Page {
 
 	private static $plural_name = 'Issues';
 
+	/* Deprecated but still needed for older issues until they're migrated */
+	private static $many_many = array(
+		"Articles" => "Article",
+	);
+
 	private static $default_parent = "IssueHolder";
 
 	private static $can_be_root = false;

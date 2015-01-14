@@ -16,6 +16,7 @@ class Article extends Page {
 	private static $has_one = array('Image' => 'Image');
 	private static $plural_name = 'Articles';
 	private static $belongs_many_many = array(
+		'Issues' => 'Issue',
 		'Authors' => 'Author',
 		'Translators' => 'Translator',
 	);
@@ -87,10 +88,6 @@ class Article extends Page {
 		$newGridField2 = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);
 		$fields->addFieldToTab('Root.Translators', $newGridField2);
 
-		$gridFieldConfig3 = GridFieldConfig_RelationEditor::create();
-		$newGridField3 = new GridField('Issues', 'Issues', $this->Issues(), $gridFieldConfig3);
-		$fields->addFieldToTab('Root.AssociatedIssues', $newGridField3);
-
 		$fields->removeByName('Content3');
 
 		$linky = $this->Link();
@@ -113,9 +110,7 @@ class Article extends Page {
 
 		return $return;
 	}
-	public function getIssue() {
-		return $this->getParent();
-	}
+
 }
 
 class Article_Controller extends Page_Controller {

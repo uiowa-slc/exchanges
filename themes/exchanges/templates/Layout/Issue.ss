@@ -9,7 +9,7 @@
 		<% end_if %>
 		$LetterFromEditor
 		<hr />
-		<% with $Articles.First %><p><a href="$Link">Start with: $Title</a></p><% end_with %>
+		<% with $Children.First %><p><a href="$Link">Start with: $Title</a></p><% end_with %>
 	</div>
 </div> 
 

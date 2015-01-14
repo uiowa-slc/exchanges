@@ -20,11 +20,8 @@
 				</section>
 			</li>
 		<% include SideNavIssue %>
-		<% with $getCurrentIssue %>
-			<% loop $Articles %>
-				$IssueNumber
-				<% include SideNavMenuItem %>
-			<% end_loop %>
-		<% end_with %>
+		<% loop $CurrentIssue.Children %>
+			<% include SideNavMenuItem %>
+		<% end_loop %>
 		</ul>
 </aside> 
