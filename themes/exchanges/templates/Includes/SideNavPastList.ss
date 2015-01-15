@@ -1,10 +1,16 @@
-	<li class="pastissues">
+<li class="article-nav pastissues">
+	<% loop $AllIssues.Sort(Sort DESC) %>
+		<a href="$Link">
+			<section class="nav-li-content">
+				<h4>$IssueNumber $Title</h4>
+				<p class="nav-deets">$IssueDate</p>
+			</section>
+		</a>
+	<% end_loop %>
+	<a href="issues-archive/">
 		<section class="nav-li-content">
-			<ul>
-				<% loop $AllIssues.Sort(Sort DESC) %>
-					<li><a href="$Link">$IssueNumber $Title <span class="nav-deets">$IssueDate</span></a></li>
-				<% end_loop %>
-					<li><a href="{$BaseHref}/issues-archive/">Older Issues</a></li>
-			</ul>
+			<h4>Older Issues</h4>
+			<p class="nav-deets">2003-2012</p>
 		</section>
-	</li>
+	</a>
+</li>

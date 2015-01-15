@@ -1,9 +1,8 @@
 <footer class="footer clearfix" role="contentinfo">
 	<div class="row">
     	<div class="small-12 columns">
-
     		<div class="row">
-		        <div class="medium-4 large-3 columns" style="padding-top: 1.5rem">
+		        <div class="small-8 medium-4 large-3 columns" style="padding-top: 1.5rem">
 						<a href="http://www.uiowa.edu" class="hide-print logo"><img src="$ThemeDir/images/uiowa.png" alt="Division Of Student Life" style="margin-top: -20px;"></a><br>
 						<p><a href="http://clas.uiowa.edu/dwllc" target="_blank">Division of World Languages, Literatures & Cultures</a><br />
 111 Phillips Hall<br />
@@ -20,7 +19,7 @@ Iowa City, IA 52242-1323
 						</ul>
 					</div>
 				</div>
-				<div class="small-12 medium-5 large-6 end columns hide-print">
+				<div class="medium-5 large-7 end columns hide-print">
 					<p>Exchanges began in 1989-90, as a project of the Iowa Translation Workshop when I was director. The first issue was cyclostyled, the title being copied from Ulalume González de León’s short story “Intercambios,” translated by Stephanie Lovelady, a student in the Workshop. All texts were presented bilingually. <a href="about/">Continue reading...</a></p>
 				</div>
 			</div>

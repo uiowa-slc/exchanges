@@ -28,6 +28,13 @@
 		&.article-nav.issue{
 			background-size: cover;
 			text-align: center;
+
+			h2{
+				font-size: rem-calc(28);
+				@media #{$large-up}{
+					font-size: rem-calc(34);
+				}
+			}
 		}
 		.issue-nav-overlay{
 			background-color: rgba(#372B21, 0.7);
@@ -154,6 +161,10 @@
 			font-family: 'Libre Baskerville', serif, times;
 			font-weight: bold;
 			margin-bottom: 5px;
+			a{
+				padding-top: 15px;
+				padding-bottom: 10px;
+			}
 		}
 		
 		
@@ -177,12 +188,14 @@
 				border-bottom: 0;
 				width: auto;
 					
-				a {
+				a, span {
 					color: $gray;
 					padding: 0 8px;
 					margin-top: 0;
+					cursor: pointer;
 
 				}
+
 				
 				:hover {
 					color: white;

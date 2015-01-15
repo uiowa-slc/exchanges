@@ -107,8 +107,10 @@ article {
     }
 }
 
-.article-nav{
+.article-subnav{
 	margin-top: 80px;
+	font-size: rem-calc(36);
+	text-align: center;
 }
 
 .compilation-title h1{
@@ -211,6 +213,14 @@ article {
 		font-size: 0.8em;
 		line-height: 0.2;
 		margin-bottom: 0px;
+	}
+
+	#translated-work {
+		padding-top: 30px;
+		@media #{$medium-up}{
+			padding-top: 0;
+		}
+
 	}
 	
 	

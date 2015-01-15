@@ -5,9 +5,9 @@
 		</section>	
 		<ul id="title-nav-menu">
 			<li class="">
-			<a href="{$BaseHref}" class="nav-deets" id="home" >Home</a></li><li>
+			<a href="{$BaseHref}" class="nav-deets show-for-large-up" id="home" >Home</a></li><li>
 			<a href="about" class="nav-deets" >About</a></li><li>
 			<a href="submissions" class="nav-deets" >Submit</a></li><li>
-			<a href="#!" class="nav-deets moreissues" >Issues &#x25BC;</a></li>
+			<span href="#" class="nav-deets moreissues" >Issues &#x25BC;</span></li>
 		</ul>
 	</li>			

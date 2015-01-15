@@ -8,8 +8,9 @@
 			<h2>Letter from the editor</h2>
 		<% end_if %>
 		$LetterFromEditor
-		<hr />
-		<% with $Children.First %><h2><a href="$Link">Start with: $Title</a></h2><% end_with %>
+		<div class="article-subnav">
+		<% with $Children.First %><a href="$Link">Start with: $Title</a><% end_with %>
+		</div>
 	</div>
 </div> 
 

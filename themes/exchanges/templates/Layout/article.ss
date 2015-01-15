@@ -51,10 +51,9 @@
 	<div class="large-12 column">
 		
 		<% if $NextPage %>
-			<div class="article-nav">
-				<hr />
+			<div class="article-subnav">
 				<% with $NextPage %>
-					<p><a href="$Link">Next: $Title</a></p>
+					<a href="$Link">Next: $Title</a>
 				<% end_with %>
 			</div>
 		<% end_if %>
@@ -62,7 +61,7 @@
 </div>
 
 <div id="translator-notes-modal" class="reveal-modal small" data-reveal>
-<h2>$Title</h2>
+	<h2>$Title</h2>
 	<p><% include TranslatorByline %></p>
 	<h3>Translator Notes</h3>
 	$TranslatorNote
