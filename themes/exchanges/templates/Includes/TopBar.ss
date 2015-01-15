@@ -1,4 +1,4 @@
-<div class="sticky show-for-large-up nav-container">
+<div class="sticky nav-container">
 	<nav class="top-bar" role="navigation" data-topbar data-options="sticky_on: medium">
 		
 		<section class="top-bar-section">
