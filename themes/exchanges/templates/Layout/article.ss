@@ -32,7 +32,7 @@
 				<% loop $Translators %>
 				<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
 				<% end_loop %> 
-				<% if $TranslatorNote %><br /><a role="button" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
+				<% if $TranslatorNote %>, <a role="button" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
 			</span>
 
 			<p class="show-for-small-only author">

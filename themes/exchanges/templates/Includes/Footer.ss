@@ -1,13 +1,17 @@
 <footer class="footer clearfix" role="contentinfo">
 	<div class="row">
     	<div class="small-12 columns">
-    		<hr>
+
     		<div class="row">
-		        <div class="small-6 medium-4 large-3 columns" style="padding-top: 1.5rem">
+		        <div class="medium-4 large-3 columns" style="padding-top: 1.5rem">
 						<a href="http://www.uiowa.edu" class="hide-print logo"><img src="$ThemeDir/images/uiowa.png" alt="Division Of Student Life" style="margin-top: -20px;"></a><br>
+						<p><a href="http://clas.uiowa.edu/dwllc" target="_blank">Division of World Languages, Literatures & Cultures</a><br />
+111 Phillips Hall<br />
+Iowa City, IA 52242-1323
+</p>
 				</div>
 						
-				<div class="small-6 medium-3 large-2 columns">
+				<div class="medium-3 large-2 columns">
 					<div class="colgroup">
 						<ul class="footer-nav">
 							<% loop Menu(1) %>
