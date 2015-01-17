@@ -31,8 +31,8 @@
 				Translated by 
 				<% loop $Translators %>
 				<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
-				<% end_loop %> 
-				<% if $TranslatorNote %><a role="button" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
+				<% end_loop %>
+				<% if $TranslatorNote %><br /><a role="button" class="button tiny view-translator-notes" href="#" data-reveal-id="translator-notes-modal">View Notes</a><% end_if %>
 			</span>
 
 			<p class="show-for-small-only author">
@@ -60,11 +60,12 @@
 	</div>
 </div>
 
-<div id="translator-notes-modal" class="reveal-modal small" data-reveal>
+<div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
 	<h2>$Title</h2>
 	<p><% include TranslatorByline %></p>
 	<h3>Translator Notes</h3>
 	$TranslatorNote
-	
+	<hr />
+	<p><% loop $Translators %><a href="$Link">$Name</a><br /><% end_loop %></p>
 	<a class="close-reveal-modal">&#215;</a>
 </div>
