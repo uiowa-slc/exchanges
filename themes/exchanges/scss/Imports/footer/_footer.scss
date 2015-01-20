@@ -83,4 +83,8 @@ $break-xlarge: 1140px; /* 1140px / 16px; */
 
 .footer .logo{
 	display: block;
+
+	&.uiowa{
+		max-width: 200px;
+	}
 }

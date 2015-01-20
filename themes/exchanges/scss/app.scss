@@ -115,6 +115,11 @@ article {
 	margin-top: 80px;
 	font-size: rem-calc(36);
 	text-align: center;
+	line-height: 1.2;
+
+	@media #{$large-up}{
+		text-align: left;
+	}
 }
 
 .button.view-translator-notes{

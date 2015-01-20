@@ -11,16 +11,27 @@
 	<meta property="og:site_name" content="$SiteConfig.Title.ATT" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="$Title.ATT" />
-	<meta property="og:description" content="$MetaDescription.ATT" />
+	<% if $ClassName == "Article" %>
+		<meta property="og:description" content="<% include TranslatorByline %>" />
+	<% else %>
+		<meta property="og:description" content="Exchanges began in 1989-90, as a project of the Iowa Translation Workshop when I was director. The first issue was cyclostyled, the title being copied from Ulalume González de León’s short story “Intercambios,” translated by Stephanie Lovelady, a student in the Workshop. All texts were presented bilingually." />
+	<% end_if %>
+	
 	<meta property="og:url" content="$AbsoluteLink.ATT" />
 
 	<% if $Emblem %>
-	<meta property="og:image" content="<% with $Emblem %>$AbsoluteURL.ATT<% end_with %>" />
+		<meta property="og:image" content="<% with $Emblem %>$AbsoluteURL.ATT<% end_with %>" />
+	<% else_if $ClassName == "Article" %>
+		<% with $Parent %>
+			<meta property="og:image" content="$AbsoluteURL.ATT" class="$Title" />
+		<% end_with %>
 	<% else %>
 		<% with $FeaturedIssue %>
 			<meta property="og:image" content="<% with $Emblem %>$AbsoluteURL.ATT<% end_with %>" />
 		<% end_with %>
 	<% end_if %>
+
+
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
