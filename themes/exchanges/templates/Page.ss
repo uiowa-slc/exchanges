@@ -55,10 +55,10 @@
 		<div class="content row full-width">
 
 			<% if $ClassName == "Issue" %>
-				<img src="$Emblem.URL" alt="Emblem" class="emblem hide-for-large-up"/>
+				<a href="$Link"><img src="$Emblem.URL" alt="Emblem" class="emblem hide-for-large-up"/></a>
 			<% end_if %>
 			<% if $ClassName == "HomePage" %>
-				<img src="$FeaturedIssue.Emblem.URL" alt="Emblem" class="emblem hide-for-large-up"/>
+				<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.Emblem.URL" alt="Emblem" class="emblem hide-for-large-up"/></a>
 			<% end_if %>
 
 			<div class="xxlarge-2 large-3 side-nav-column large-uncentered columns show-for-large-up" id="nav-background">
@@ -69,7 +69,7 @@
 					<img src="$Emblem.URL" alt="Emblem" class="emblem show-for-large-up"/>
 				<% end_if %>
 				<% if $ClassName == "HomePage" %>
-					<img src="$FeaturedIssue.Emblem.URL" alt="Emblem" class="emblem show-for-large-up"/>
+					<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.Emblem.URL" alt="Emblem" class="emblem show-for-large-up"/></a>
 				<% end_if %>
 				<div class="padded-content">
 				$Layout

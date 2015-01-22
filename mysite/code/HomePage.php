@@ -15,7 +15,7 @@ class HomePage extends Page {
 		
 		$fields = parent::getCMSFields();
 		
-		$fields->removeByName('Content');
+		$fields->renameField('Content', 'Right side content (e.g., "What we\'re reading)');
 		$fields->removeByName('LearnMorePageID'); //inherited from ExpressHomePage, I guess
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Carousel');

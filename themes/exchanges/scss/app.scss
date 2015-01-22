@@ -82,9 +82,13 @@ hr {
 }
 
 article {
-
+	padding: 20px 0;
     time{
-    	font-size: 18px;
+    	font-size: 12px;
+    	display: block;
+    	text-transform: uppercase;
+    	color: $darkGray;
+    	margin: 0.4em 0;
     }
     header {
         font-family: $header-font-family;
@@ -173,10 +177,11 @@ article {
 	
 }
 
-#homepage {
+.HomePage {
 	
 	.cur-issue-link {
-		padding: .25rem 0;
+		padding: rem-calc(29) 0;
+		display: block;
 	}
 	
 

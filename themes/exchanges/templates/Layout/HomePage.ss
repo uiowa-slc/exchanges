@@ -1,20 +1,22 @@
-<div class="row" id="homepage">
-	<div class="medium-12 small-centered columns" id="news">
+<div class="row">
+	<div class="large-12 columns">
 		<% with FeaturedIssue %>
-		<h1><span class="cur-issue-link">Read our latest issue: <a href="$Link">$Title</a></span></h1>
+			<h1><span class="cur-issue-link">Read our latest issue: <a href="$Link">$Title</a></span></h1>
 		<% end_with %>
+	</div>
+</div>
+<div class="row">
+	<div class="large-8 columns" id="news">
 		<% loop $getNewsItems(6) %>
-		<article class="row $FirstLast news-item">
-			<div class="small-12 medium-5 large-4 columns">
-				<h3><a href="$Link">$Title </a></h3>
-				<time class="left">$Date.Format("F j, Y")</time>
-			</div>
-			<div class="small-12 medium-7 large-8 columns">
-				<p> $Content.BigSummary <a href="$Link">Continue Reading</a></p>
-				<%--<p> $Content.BigSummary </p>--%>
-			</div>
+		<article>
+			<h3><a href="$Link">$Title </a></h3>
+			<time>$Date.Format("F j, Y")</time>
+			<p> $Content.BigSummary <a href="$Link">Continue Reading</a></p>
 		</article>
 		<% end_loop %>
+	</div>
+	<div class="large-4 columns" id="home-widgets">
+		$Content
 	</div>
 </div> 
 
