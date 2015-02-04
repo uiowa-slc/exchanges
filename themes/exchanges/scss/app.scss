@@ -83,6 +83,9 @@ hr {
 
 article {
 	padding: 20px 0;
+	&.first{
+		padding-top: 0;
+	}
     time{
     	font-size: 12px;
     	display: block;
