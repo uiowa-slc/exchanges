@@ -69,7 +69,7 @@
 					<img src="$Emblem.SetWidth(800).URL" alt="Emblem" class="emblem show-for-large-up"/>
 				<% end_if %>
 				<% if $ClassName == "HomePage" %>
-					<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.SetWidth(800).Emblem.URL" alt="Emblem" class="emblem show-for-large-up"/></a>
+					<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.Emblem.SetWidth(800).URL" alt="Emblem" class="emblem show-for-large-up"/></a>
 				<% end_if %>
 				<div class="padded-content">
 				$Layout
