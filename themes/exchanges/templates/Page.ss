@@ -5,6 +5,7 @@
 	<% base_tag %>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="google" value="notranslate" />
 	<title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> - $SiteConfig.Title</title>
 	<meta name="description" content="$MetaDescription.ATT" />
 	<%--http://ogp.me/--%>
@@ -57,7 +58,7 @@
 	<script type="text/javascript" src="//use.typekit.net/yxj2cnc.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	--%>
-	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
+	<script src="$ThemeDir/lib/modernizr.js"></script>
 </head>
 <body class="$ClassName.ATT">
 	
