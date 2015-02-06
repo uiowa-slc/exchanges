@@ -11,6 +11,7 @@
     "jpegtran-bin":"~0.2.6",
     "grunt-contrib-imagemin": "~0.6.1",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-simple-watch": "~0.1.2"
+    "grunt-simple-watch": "~0.1.2",
+    "grunt-criticalcss": "*"
   }
 }

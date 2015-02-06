@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    
+
     //compile the sass
 
     sass: {
@@ -62,6 +62,20 @@ module.exports = function(grunt) {
       }
     },
 
+    criticalcss: {
+            custom: {
+                options: {
+                    url: "http://localhost:8888/exchanges",
+                    width: 1200,
+                    height: 900,
+                    outputfile: "themes/exchanges/css/critical.css",
+                    filename: "themes/exchanges/css/app.css", // Using path.resolve( path.join( ... ) ) is a good idea here
+                    buffer: 800*1024,
+                    ignoreConsole: false
+                }
+            }
+        }
+
   });
 
   // Load the plugin that provides the "uglify" task.
@@ -70,10 +84,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-criticalcss');
   //grunt.loadNpmTasks('grunt-simple-watch');
 
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['sass', 'concat', 'uglify','criticalcss', 'watch']);
 
 };
