@@ -31,12 +31,28 @@
 		<% end_with %>
 	<% end_if %>
 
+	<style>
+	  .wf-loading *{
+	    visibility: hidden;
+	  }
+	  .wf-active *{
+	    visibility: visible;
+	  }
+	</style>
 
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
+
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
-	<script src="//use.typekit.net/gor3pds.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
+	<script>
+	  (function(d) {
+	    var config = {
+	      kitId: 'gor3pds',
+	      scriptTimeout: 3000
+	    },
+	    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
 	<%--
 	<script type="text/javascript" src="//use.typekit.net/yxj2cnc.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
