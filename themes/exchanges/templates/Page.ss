@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html class="no-js" lang="$ContentLocale.ATT" dir="$i18nScriptDirection.ATT">
 <head>
 	<% base_tag %>
@@ -33,10 +32,18 @@
 	<% end_if %>
 
 	<style>
-	  .wf-loading *{
+	  .wf-loading h1, 
+	  .wf-loading h2, 
+	  .wf-loading h3, 
+	  .wf-loading h4, 
+	  .wf-loading p {
 	    visibility: hidden;
 	  }
-	  .wf-active *{
+	  .wf-active h1, 
+	  .wf-active h2, 
+	  .wf-active h3, 
+	  .wf-active h4, 
+	  .wf-active p {
 	    visibility: visible;
 	  }
 	</style>
