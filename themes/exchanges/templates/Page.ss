@@ -55,10 +55,10 @@
 		<div class="content row full-width">
 
 			<% if $ClassName == "Issue" %>
-				<a href="$Link"><img src="$Emblem.URL" alt="Emblem" class="emblem hide-for-large-up"/></a>
+				<a href="$Link"><img src="$Emblem.SetWidth(800).URL" alt="Emblem" class="emblem hide-for-large-up"/></a>
 			<% end_if %>
 			<% if $ClassName == "HomePage" %>
-				<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.Emblem.URL" alt="Emblem" class="emblem hide-for-large-up"/></a>
+				<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.Emblem.SetWidth(800).URL" alt="Emblem" class="emblem hide-for-large-up"/></a>
 			<% end_if %>
 
 			<div class="xxlarge-2 large-3 side-nav-column large-uncentered columns show-for-large-up" id="nav-background">
@@ -66,10 +66,10 @@
 			</div>
 			<div class="xxlarge-10 large-9 main-column columns" id="main-background">
 				<% if $ClassName == "Issue" %>
-					<img src="$Emblem.URL" alt="Emblem" class="emblem show-for-large-up"/>
+					<img src="$Emblem.SetWidth(800).URL" alt="Emblem" class="emblem show-for-large-up"/>
 				<% end_if %>
 				<% if $ClassName == "HomePage" %>
-					<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.Emblem.URL" alt="Emblem" class="emblem show-for-large-up"/></a>
+					<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.SetWidth(800).Emblem.URL" alt="Emblem" class="emblem show-for-large-up"/></a>
 				<% end_if %>
 				<div class="padded-content">
 				$Layout
