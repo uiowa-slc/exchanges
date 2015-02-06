@@ -35,11 +35,8 @@
 
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
-
-	<%--
-	<script type="text/javascript" src="//use.typekit.net/yxj2cnc.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	--%>
+	<script src="//use.typekit.net/gor3pds.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
 	<%--<script src="$ThemeDir/lib/modernizr.js"></script>--%>
 </head>
 <body class="$ClassName.ATT">
@@ -84,15 +81,6 @@
 </div><!-- end off-canvas-wrap -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script>
-	  (function(d) {
-	    var config = {
-	      kitId: 'gor3pds',
-	      scriptTimeout: 3000
-	    },
-	    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
 <script>
   var cb = function() {
     var l = document.createElement('link'); l.rel = 'stylesheet';
