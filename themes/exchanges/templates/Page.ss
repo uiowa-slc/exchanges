@@ -83,7 +83,20 @@
 	
 	</div>
 </div><!-- end off-canvas-wrap -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="$ThemeDir/build/build.src.js"></script>
+<script type="text/javascript">
+function downloadJSAtOnload() {
+var element = document.createElement("script");
+element.src = "themes/exchanges/build/build.js";
+document.body.appendChild(element);
+}
+if (window.addEventListener)
+window.addEventListener("load", downloadJSAtOnload, false);
+else if (window.attachEvent)
+window.attachEvent("onload", downloadJSAtOnload);
+else window.onload = downloadJSAtOnload;
+</script>
+<!--<script src="$ThemeDir/build/build.src.js"></script>-->
 </body>
 </html>
