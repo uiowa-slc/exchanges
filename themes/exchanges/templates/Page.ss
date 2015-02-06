@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="$ContentLocale.ATT" dir="$i18nScriptDirection.ATT">
+<html class="no-js wf-loading" lang="$ContentLocale.ATT" dir="$i18nScriptDirection.ATT">
 <head>
 	<% base_tag %>
 	<meta charset="utf-8" />
@@ -31,41 +31,16 @@
 		<% end_with %>
 	<% end_if %>
 
-	<style>
-	  .wf-loading h1, 
-	  .wf-loading h2, 
-	  .wf-loading h3, 
-	  .wf-loading h4, 
-	  .wf-loading p {
-	    visibility: hidden;
-	  }
-	  .wf-active h1, 
-	  .wf-active h2, 
-	  .wf-active h3, 
-	  .wf-active h4, 
-	  .wf-active p {
-	    visibility: visible;
-	  }
-	</style>
-
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
-	<script>
-	  (function(d) {
-	    var config = {
-	      kitId: 'gor3pds',
-	      scriptTimeout: 3000
-	    },
-	    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
+
 	<%--
 	<script type="text/javascript" src="//use.typekit.net/yxj2cnc.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	--%>
-	<script src="$ThemeDir/lib/modernizr.js"></script>
+	<%--<script src="$ThemeDir/lib/modernizr.js"></script>--%>
 </head>
 <body class="$ClassName.ATT">
 	
@@ -109,6 +84,15 @@
 </div><!-- end off-canvas-wrap -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script>
+	  (function(d) {
+	    var config = {
+	      kitId: 'gor3pds',
+	      scriptTimeout: 3000
+	    },
+	    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
 <script>
   var cb = function() {
     var l = document.createElement('link'); l.rel = 'stylesheet';
@@ -120,6 +104,7 @@
   if (raf) raf(cb);
   else window.addEventListener('load', cb);
 </script>
+
 <script type="text/javascript">
 function downloadJSAtOnload() {
 var element = document.createElement("script");
