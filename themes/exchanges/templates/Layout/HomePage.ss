@@ -1,11 +1,4 @@
 <div class="row">
-	<div class="large-12 columns">
-		<% with FeaturedIssue %>
-			<h1><span class="cur-issue-link">Read our latest issue: <a href="$Link">$Title</a></span></h1>
-		<% end_with %>
-	</div>
-</div>
-<div class="row">
 	<div class="large-8 columns" id="news">
 		<% loop $getNewsItems(6) %>
 		<article class="$FirstLast">

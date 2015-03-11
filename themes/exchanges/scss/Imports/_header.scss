@@ -6,10 +6,17 @@
 			opacity: 1;
 		}
 	}
+	.top-bar-section .dropdown li{
+		background: $topbar-base-color;
+	}
 }
 
-.top-bar .name h1 a {
-	padding: 0;
+.top-bar {
+  background-color: $topbar-base-color;
+}
+
+.contain-to-grid{
+	background-color: $topbar-base-color;
 }
 
 .top-bar input{

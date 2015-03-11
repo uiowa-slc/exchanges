@@ -4,6 +4,7 @@
 @import "imports/footer/mixins";
 
 @import "imports/header";
+@import "imports/cover";
 @import "imports/side-nav";
 @import "imports/footer/footer";
 
@@ -18,12 +19,6 @@ body {
 	font-family: 'Libre Baskerville', serif, times;
 }
 
-.full-width {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: initial;
-}
 
 h1{
 	font-weight: bold;
@@ -87,7 +82,8 @@ article {
 		padding-top: 0;
 	}
     time{
-    	font-size: 12px;
+    	font-size: rem-calc(14);
+    	line-height: 1em;
     	display: block;
     	text-transform: uppercase;
     	color: $darkGray;

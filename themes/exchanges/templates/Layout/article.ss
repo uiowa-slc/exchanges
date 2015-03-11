@@ -1,13 +1,10 @@
 <% if $UntranslatedTitle && $TranslatedTitle %>
 <% else %>
-<div class="row compilation-title">
-	<div class="large-10 x-large-6 columns end">
-		 <h1 class="text-center">$Title</h1>
-	</div>
-</div>
+	<h1 class="text-center">$Title</h1>
 <% end_if %>
-<div class="row" id="poetry" data-equalizer>
-	<div class="small-12 medium-6 large-5 x-large-3 columns poem" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
+
+<div data-equalizer>
+	<div class="small-12 medium-6 x-large-3 columns poem" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 		<div class="poem-unstranslated-title" data-equalizer-watch>
 			<% if $UntranslatedTitle %><h1> $UntranslatedTitle</h1><% end_if %>
 			<span class="author">
@@ -24,7 +21,7 @@
 		<hr>
 		$Content
 	</div>
-	<div class="small-12 medium-6 large-5 x-large-3 columns poem end" id="translated-work">
+	<div class="small-12 large-6 x-large-3 columns poem end" id="translated-work">
 		<div class="poem-translated-title" data-equalizer-watch>
 			<% if $TranslatedTitle %><h1>$Title</h1><% end_if %>
 			<span class="author">

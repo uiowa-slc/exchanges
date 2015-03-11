@@ -1,5 +1,4 @@
-<div class="row content-page">
-	<div class="medium-10 small-12 end columns">
+<div class="medium-10 small-12 end columns">
 	<h1>$Title</h1>
 	<hr />
 		<% if $LetterFromEditorCustomTitle %>
@@ -11,6 +10,5 @@
 		<div class="article-subnav">
 		<% with $Children.First %><a href="$Link">Start with: $Title</a><% end_with %>
 		</div>
-	</div>
-</div> 
+</div>
 

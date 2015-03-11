@@ -41,44 +41,21 @@
 </head>
 <body class="$ClassName.ATT">
 	
-<div class="off-canvas-wrap" data-offcanvas>
-	<div class="inner-wrap">
-	<%--<% include TopBar %>--%>
+
+	
 	<%-- include UiowaBar --%>
-	<% include SmallTabBar %>
-	<% include OffCanvasSideNav %>	
+
+	<% if $ClassName == "HomePage" %>
+		<% include HomePageCover %>
+	<% else %>
+		<% include TopBar %>
+	<% end_if %>
+
 	<div class="main typography" role="main">
-		<div class="content row full-width">
-
-			<% if $ClassName == "Issue" %>
-				<a href="$Link"><img src="$Emblem.SetWidth(800).URL" alt="Emblem" class="emblem hide-for-large-up"/></a>
-			<% end_if %>
-			<% if $ClassName == "HomePage" %>
-				<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.Emblem.SetWidth(800).URL" alt="Emblem" class="emblem hide-for-large-up"/></a>
-			<% end_if %>
-
-			<div class="xxlarge-2 large-3 side-nav-column large-uncentered columns show-for-large-up" id="nav-background">
-				<% include SideNav %>
-			</div>
-			<div class="xxlarge-10 large-9 main-column columns" id="main-background">
-				<% if $ClassName == "Issue" %>
-					<img src="$Emblem.SetWidth(800).URL" alt="Emblem" class="emblem show-for-large-up"/>
-				<% end_if %>
-				<% if $ClassName == "HomePage" %>
-					<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.Emblem.SetWidth(800).URL" alt="Emblem" class="emblem show-for-large-up"/></a>
-				<% end_if %>
-				<div class="padded-content">
-				$Layout
-				<% include Footer %>
-				</div>
-			</div>
+		<div class="content row">
+			$Layout
 		</div>
 	</div>
-
-	<a class="exit-off-canvas"></a>
-	
-	</div>
-</div><!-- end off-canvas-wrap -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
