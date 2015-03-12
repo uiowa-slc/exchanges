@@ -3,7 +3,7 @@
 		<div class="large-12 issue-preview columns">
 			<h2 class="banner">In this Issue:</h2>
 			<ul class="large-block-grid-3">
-				<% loop $RandomArticles.Limit(3) %>
+				<% loop $RandomArticles.Limit(2) %>
 					<% include PoemCard %>
 				<% end_loop %>
 					<li class="start-reading"><a href="$Link">Start reading &rarr;</a></li>
@@ -17,7 +17,7 @@
 	<div class="large-12 columns" id="news">
 		<h2 class="banner">From the Blog:</h2>
 		<ul class="large-block-grid-2 news-list">
-			<% loop $getNewsItems(2) %>
+			<% loop $getNewsItems(4) %>
 				<li>
 					<article class="$FirstLast">
 						<h3><a href="$Link">$Title </a></h3>
