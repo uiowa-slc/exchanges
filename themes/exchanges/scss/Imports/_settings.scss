@@ -1,3 +1,12 @@
+/* Site Specific Settings: */
+$footer-padding: 160px;
+$topbar-base-color: #444;
+$article-row-width: 1600px;
+$article-poetry-padding: 50px;
+
+ /* Foundation Settings: */
+
+
 // The latest settings can be found here:
 // https://github.com/zurb/bower-foundation/blob/master/scss/foundation/_settings.scss
 
@@ -59,6 +68,8 @@ $darkGray: #666666;
  $body-bg: url('../images/tile.jpeg');
 // $body-font-color: #222;
  $body-font-family: "kepler-std", san-serif;
+
+
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -282,7 +293,7 @@ $darkGray: #666666;
 
 // We use this to control the maximum number of block grid elements per row
 // $block-grid-elements: 12;
- $block-grid-default-spacing: rem-calc(60);
+ $block-grid-default-spacing: $column-gutter;
 $align-block-grid-to-grid: false;
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 // $block-grid-media-queries: true;
@@ -1140,7 +1151,6 @@ $off-canvas-overlay-box-shadow: none;
 // Background color for the top bar
 // $topbar-bg-color: #fff;
 
-$topbar-base-color: #222;
 
 $topbar-bg-color: rgba(0,0,0,0);
 $topbar-bg: $topbar-bg-color;

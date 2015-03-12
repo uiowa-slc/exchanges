@@ -1,6 +1,6 @@
-<!--<div class="cover-container" style="background-image: url('$FeaturedIssue.Emblem.SetWidth(980).URL');">-->
-<div class="cover-container" style="background-image: url('http://lorempixel.com/1240/300/');">
-
+<div class="cover-container" style="background-image: url('$FeaturedIssue.Emblem.SetWidth(980).URL');">
+<%-- <div class="cover-container" style="background-image: url('http://lorempixel.com/1240/300/');">
+ --%>
 	<div class="cover-screen">
 		<% include TopBar %>
 		<div class="row cover-content">

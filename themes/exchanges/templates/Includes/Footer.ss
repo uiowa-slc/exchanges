@@ -3,9 +3,9 @@
     	<div class="small-12 columns">
     		<div class="row">
 		        <div class="small-8 medium-4 large-3 columns" style="padding-top: 1.5rem">
-						<a href="http://www.uiowa.edu" class="hide-print uiowa logo"><img src="$ThemeDir/images/uiowa.png" alt="Division Of Student Life" style="margin-top: -20px;"></a><br>
-						<p><a href="http://clas.uiowa.edu" target="_blank">College of Liberal Arts & Sciences</a></p>
-						<p><a href="http://clas.uiowa.edu/dwllc" target="_blank">Division of World Languages, Literatures & Cultures</a><br />
+						<a href="http://www.uiowa.edu" class="hide-print uiowa logo"><img src="$ThemeDir/images/uiowa.png" alt="Division Of Student Life" style="margin-top: -20px;"></a><br />
+						<p><a href="http://clas.uiowa.edu" target="_blank">College of Liberal Arts & Sciences</a><br />
+						<a href="http://clas.uiowa.edu/dwllc" target="_blank">Division of World Languages, Literatures & Cultures</a><br />
 111 Phillips Hall<br />
 Iowa City, IA 52242-1323
 </p>

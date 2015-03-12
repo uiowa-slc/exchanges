@@ -46,6 +46,10 @@ class Issue extends Page {
 		return $this->Children();
 	}
 
+	public function RandomArticles() {
+		return SiteTree::get()->filter('ParentID', $this->ID)->sort('RAND()');
+	}
+
 }
 
 class Issue_Controller extends Page_Controller {
@@ -59,7 +63,7 @@ class Issue_Controller extends Page_Controller {
 	public function init() {
 		parent::init();
 		//print_r($this->getClassName());
-		Session::set('issue', Issue::get_by_id('Issue', $this->ID));
+		//Session::set('issue', Issue::get_by_id('Issue', $this->ID));
 	}
 
 	public function letter() {
@@ -67,7 +71,9 @@ class Issue_Controller extends Page_Controller {
 		if ($letterText) {
 
 			$Data = array(
-				'LetterText' => $letterText,
+				'Content' => $letterText,
+				'Parent' => $this,
+				'ClassName' => 'Article',
 			);
 
 		} else {

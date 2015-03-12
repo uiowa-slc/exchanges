@@ -22,6 +22,10 @@
 	background-color: $topbar-base-color;
 }
 
+.nav-screen{
+	background: rgba($topbar-base-color, 0.1);
+}
+
 .top-bar input{
 	font-family: $header-font-family;
 	font-size: 0.6em;

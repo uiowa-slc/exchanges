@@ -1,0 +1,112 @@
+
+
+.Article {
+    .nav-container {
+        background-size: cover;
+        background-repeat: no-repeat;
+        //background-attachment: fixed;
+   
+    }
+    .top-bar {
+        background: none;
+    }
+    .nav-screen {
+        background-color: rgba($topbar-base-color, 0.67);
+    }
+    h1.compilation-title {
+        margin-bottom: $column-gutter;
+    }
+    .row {
+        max-width: 1600px;
+    }
+    .contain-to-grid .top-bar {
+        max-width: $article-row-width - $article-poetry-padding;
+    }
+    #poetry {
+        p {
+            line-height: 1.2em;
+            margin-bottom: 0;
+        }
+        hr {
+            border-color: rgba(152, 143, 120, 0.59);
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .author {
+            color: $darkGray;
+            margin-top: .25em;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            line-height: 1;
+            margin-bottom: 0px;
+            font-family: $header-font-family;
+        }
+        .poem-info {
+            line-height: 1;
+            margin-bottom: $column-gutter;
+        }
+        .poem {
+        	@media #{$large-up} {
+            	padding: 0 $article-poetry-padding / 2;
+            	//padding-right: $column-gutter;
+            }
+       
+        }
+        #translated-work {
+            padding-top: 30px;
+            @media #{$medium-up} {
+                padding-top: 0;
+            }
+        }
+    }
+	.article-subnav {
+	    margin-top: $footer-padding;
+	    font-size: rem-calc(36);
+	    font-family: $header-font-family;
+	    
+	    line-height: 1.2;
+
+
+
+	    .toc-container{
+	    	text-align: center;
+	    	padding-bottom: $column-gutter;
+
+		    @media #{$large-up} {
+		        margin-top: -30px;
+		        padding-bottom: 0;
+		    }
+
+
+	   	    .toc-link{
+		    	font-size: rem-calc(24);
+		    	text-transform: uppercase;
+		    	margin-top: $column-gutter;
+		    	border-bottom: 2px solid $primary-color;
+		    	padding-bottom: rem-calc(10);
+		    	&:hover{
+		    		border-radius: 3px;
+		    	}
+		    } 	
+	    }
+
+	    .prev-container{
+	    	text-align: center;
+		    @media #{$large-up} {
+		        text-align: left;
+		    }
+	    }
+	    .next-container{
+	    	text-align: center;
+		    @media #{$large-up} {
+		        text-align: right;
+		    }
+	    }
+
+
+	    @media #{$large-up} {
+	        //text-align: right;
+	    }
+	}
+}
+

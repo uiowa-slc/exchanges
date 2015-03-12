@@ -1,4 +1,5 @@
-<div class="nav-container contain-to-grid">
+<div class="nav-container contain-to-grid" <% if $Parent.ClassName == "Issue" %>style="background-image:url('$Parent.Emblem.URL');"<% end_if %>">
+	<div class="nav-screen">
 		<nav class="top-bar" role="navigation" data-topbar>
 			<ul class="title-area">
 				<li class="name">
@@ -28,4 +29,5 @@
 				</ul>
 			</section>
 		</nav>
-	</div>
+	</div><!-- end nav-screen -->
+</div><!-- end nav-container -->

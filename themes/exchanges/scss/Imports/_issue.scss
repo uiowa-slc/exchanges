@@ -4,6 +4,11 @@
 		margin-top: -200px;
 		background: $body-bg;
 		padding: $column-gutter;
+
+		article{
+			padding: $column-gutter/2 0;
+
+		}
 	}
 
 }
