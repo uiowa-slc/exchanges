@@ -47,6 +47,8 @@
 
 	<% if $ClassName == "HomePage" %>
 		<% include HomePageCover %>
+	<% else_if $ClassName == "Issue" %>
+		<% include IssueCover %>
 	<% else %>
 		<% include TopBar %>
 	<% end_if %>

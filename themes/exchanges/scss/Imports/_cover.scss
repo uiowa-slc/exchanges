@@ -29,14 +29,23 @@
 		text-transform: uppercase;
 		font-family: $header-font-family;
 		font-size: rem-calc(15);
+		display: block;
+		a{
+			color: white;
+		}
 	}
 
-	a{
+	h1{
+		color: white;
+		font-weight: normal;
+	}
+
+	.issue-title{
 		color: lighten($primary-color, 50);
 		display: inline-block;
 		border-bottom: 3px white solid;
 
-		padding: rem-calc(16);
+		padding: rem-calc(13);
 		font-family: $header-font-family;
 		font-size: rem-calc(32);
 		color: white;

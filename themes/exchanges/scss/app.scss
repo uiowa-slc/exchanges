@@ -6,6 +6,7 @@
 @import "imports/header";
 @import "imports/homepage";
 @import "imports/cover";
+@import "imports/issue";
 @import "imports/side-nav";
 @import "imports/footer/footer";
 
@@ -26,6 +27,7 @@ h1{
 }
 
 h1, h2, h3, h4, h5, h6 {
+	letter-spacing: 0.7;
 	&.banner{
 		text-transform: uppercase;
 		font-size: 0.75em;
