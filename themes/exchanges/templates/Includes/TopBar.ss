@@ -1,5 +1,5 @@
-<div class="sticky nav-container contain-to-grid">
-		<nav class="top-bar" role="navigation" data-topbar data-options="sticky_on: medium">
+<div class="nav-container contain-to-grid">
+		<nav class="top-bar" role="navigation" data-topbar>
 			<ul class="title-area">
 				<li class="name">
 					<h1><a href="{$baseUrl}">$SiteConfig.Title</a></h1>

@@ -4,6 +4,7 @@
 @import "imports/footer/mixins";
 
 @import "imports/header";
+@import "imports/homepage";
 @import "imports/cover";
 @import "imports/side-nav";
 @import "imports/footer/footer";
@@ -25,7 +26,14 @@ h1{
 }
 
 h1, h2, h3, h4, h5, h6 {
+	&.banner{
+		text-transform: uppercase;
+		font-size: 0.75em;
+		padding: 3px;
+	}
 }
+
+
 
 hr {
 	margin-bottom: 1rem;
@@ -37,6 +45,7 @@ hr {
 
 .main {
     min-height: 320px;
+    padding-top: $column-gutter;
 }
 
 .name {
@@ -78,9 +87,6 @@ hr {
 
 article {
 	padding: 20px 0;
-	&.first{
-		padding-top: 0;
-	}
     time{
     	font-size: rem-calc(14);
     	line-height: 1em;

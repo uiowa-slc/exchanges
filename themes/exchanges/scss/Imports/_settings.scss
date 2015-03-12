@@ -282,8 +282,8 @@ $darkGray: #666666;
 
 // We use this to control the maximum number of block grid elements per row
 // $block-grid-elements: 12;
-// $block-grid-default-spacing: rem-calc(20);
-
+ $block-grid-default-spacing: rem-calc(60);
+$align-block-grid-to-grid: false;
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 // $block-grid-media-queries: true;
 
@@ -1164,13 +1164,13 @@ $topbar-bg: $topbar-bg-color;
 
 // Set the link colors and styles for top-level nav
  $topbar-link-color: white;
- $topbar-link-color-hover: lighten($primary-color,10);
- $topbar-link-color-active: lighten($primary-color, 20);
+ $topbar-link-color-hover: lighten($primary-color,30);
+ $topbar-link-color-active: lighten($primary-color, 40);
  $topbar-link-color-active-hover: lighten($primary-color, 15);
 // $topbar-link-weight: normal;
  $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
- $topbar-link-bg-hover: $topbar-bg;
+ $topbar-link-bg-hover: $topbar-base-color;
  $topbar-link-bg-active: $topbar-bg;
  $topbar-link-bg-active-hover: $topbar-bg;
  $topbar-link-font-family: $header-font-family;

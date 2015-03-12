@@ -7,7 +7,10 @@
 		}
 	}
 	.top-bar-section .dropdown li{
-		background: rgba($topbar-base-color, 0.8);
+		background: rgba($topbar-base-color, 0.95);
+	}
+	.toggle-topbar{
+		font-family: $header-font-family;
 	}
 }
 

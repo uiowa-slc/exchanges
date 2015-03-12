@@ -43,7 +43,6 @@
  		-webkit-transition: all .8s;
     	transition: all .8s;
 		&:hover{
-			background: rgba(#333, 0.3);
 			border-bottom-color: lighten($primary-color, 50);
 			border-radius: 10px;
 		}

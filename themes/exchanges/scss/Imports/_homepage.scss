@@ -1,0 +1,17 @@
+.HomePage{
+	.issue-preview{
+		margin-top: -200px;
+		background: url(../images/tile.jpeg);
+		padding: $column-gutter;
+	}
+	.start-reading{
+		//text-transform: uppercase;
+		//text-align:center;
+		font-family: $header-font-family;
+		line-height: 98px;
+		font-size: rem-calc(36);
+		a{
+			//border-bottom: 2px solid $primary-color;
+		}
+	}
+}
