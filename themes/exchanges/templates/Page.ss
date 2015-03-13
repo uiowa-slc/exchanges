@@ -58,7 +58,7 @@
 	</div>
 	<% include Footer %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
+<%-- <script>
   var cb = function() {
     var l = document.createElement('link'); l.rel = 'stylesheet';
     l.href = 'themes/exchanges/css/critical.css';
@@ -68,9 +68,9 @@
       webkitRequestAnimationFrame || msRequestAnimationFrame;
   if (raf) raf(cb);
   else window.addEventListener('load', cb);
-</script>
+</script> --%>
 
-<script type="text/javascript">
+<%-- <script type="text/javascript">
 function downloadJSAtOnload() {
 var element = document.createElement("script");
 element.src = "themes/exchanges/build/build.js";
@@ -81,7 +81,7 @@ window.addEventListener("load", downloadJSAtOnload, false);
 else if (window.attachEvent)
 window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
-</script>
-<!--<script src="$ThemeDir/build/build.src.js"></script>-->
+</script> --%>
+<script src="$ThemeDir/build/build.src.js"></script>
 </body>
 </html>
