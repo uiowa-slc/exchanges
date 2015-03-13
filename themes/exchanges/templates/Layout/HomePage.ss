@@ -1,8 +1,8 @@
 <% with $FeaturedIssue %>
 	<div class="row">
 		<div class="large-12 issue-preview columns">
-			<h2 class="banner">In this Issue:</h2>
-			<ul class="large-block-grid-3">
+			<h2 class="banner text-center">In this Issue:</h2>
+			<ul class="large-block-grid-3 text-center">
 				<% loop $RandomArticles.Limit(2) %>
 					<% include PoemCard %>
 				<% end_loop %>
