@@ -46,6 +46,18 @@ class Issue extends Page {
 		return $this->Children();
 	}
 
+	public function getLetterTitle(){
+		if($this->LetterFromEditorCustomTitle){
+			return $this->LetterFromEditorCustomTitle;
+		}else{
+			return "Letter From The Editor";
+		}
+	}
+
+	public function getLetterLink(){
+		return $this->Link().'letter/';
+	}
+
 	public function RandomArticles() {
 		return SiteTree::get()->filter('ParentID', $this->ID)->sort('RAND()');
 	}
@@ -74,6 +86,8 @@ class Issue_Controller extends Page_Controller {
 				'Content' => $letterText,
 				'Parent' => $this,
 				'ClassName' => 'Article',
+				'NextPage' => $this->Children()->First,
+				'PreviousPage' => Page::get()->filter(array('URLSegment' => 'home'))->First
 			);
 
 		} else {

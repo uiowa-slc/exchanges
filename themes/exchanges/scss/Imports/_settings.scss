@@ -1,8 +1,8 @@
 /* Site Specific Settings: */
-$footer-padding: 160px;
+$footer-padding: 180px;
 $topbar-base-color: #444;
 $article-row-width: 1600px;
-$article-poetry-padding: 50px;
+$article-poetry-padding: 150px;
 
  /* Foundation Settings: */
 
@@ -61,7 +61,7 @@ $darkGray: #666666;
  $include-xl-html-grid-classes: true;
 
  $row-width: 1360px;
- $column-gutter: rem-calc(30);
+ $column-gutter: rem-calc(35);
 // $total-columns: 12;
 
 // We use these to control various global styles
@@ -345,7 +345,7 @@ $align-block-grid-to-grid: false;
 // $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
-// $button-font-family: $body-font-family;
+ $button-font-family: $header-font-family;
 // $button-font-color: #fff;
 // $button-font-color-alt: #333;
 // $button-font-tny: rem-calc(11);

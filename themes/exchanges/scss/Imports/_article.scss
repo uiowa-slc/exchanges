@@ -1,6 +1,22 @@
 
 
 .Article {
+
+    .breadcrumb{
+    margin-bottom: $column-gutter+rem-calc(10);
+      background: none;
+      border-bottom: #ADADAD 2px solid;
+      color: #797979;
+      padding: 5px 10px;
+      text-transform: uppercase;
+
+      @media #{$large-up}{
+        margin-left: 60px;
+      }
+    }
+    .main{
+        padding-top: $column-gutter/2;
+    }
     .nav-container {
         background-size: cover;
         background-repeat: no-repeat;
@@ -9,6 +25,13 @@
     }
     .top-bar {
         background: none;
+
+    }
+
+    .top-bar .name h1 a, .top-bar .name h2 a, .top-bar .name h3 a, .top-bar .name h4 a, .top-bar .name p a, .top-bar .name span a{
+        @media #{$large-up}{
+            padding: 0 $article-poetry-padding/2;
+        }
     }
     .nav-screen {
         background-color: rgba($topbar-base-color, 0.67);
@@ -17,10 +40,10 @@
         margin-bottom: $column-gutter;
     }
     .row {
-        max-width: 1600px;
+        max-width: $article-row-width;
     }
     .contain-to-grid .top-bar {
-        max-width: $article-row-width - $article-poetry-padding;
+        max-width: $article-row-width;
     }
     #poetry {
         p {
@@ -36,8 +59,8 @@
             color: $darkGray;
             margin-top: .25em;
             text-transform: uppercase;
-            font-size: 0.8em;
-            line-height: 1;
+            font-size: rem-calc(14);
+            line-height: auto;
             margin-bottom: 0px;
             font-family: $header-font-family;
         }
@@ -47,7 +70,7 @@
         }
         .poem {
         	@media #{$large-up} {
-            	padding: 0 $article-poetry-padding / 2;
+            	padding: 0 $article-poetry-padding/2;
             	//padding-right: $column-gutter;
             }
        
@@ -61,7 +84,7 @@
     }
 	.article-subnav {
 	    margin-top: $footer-padding;
-	    font-size: rem-calc(36);
+	    font-size: rem-calc(28);
 	    font-family: $header-font-family;
 	    
 	    line-height: 1.2;
@@ -73,7 +96,7 @@
 	    	padding-bottom: $column-gutter;
 
 		    @media #{$large-up} {
-		        margin-top: -30px;
+		        //margin-top: -30px;
 		        padding-bottom: 0;
 		    }
 

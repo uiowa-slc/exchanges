@@ -1,9 +1,10 @@
+<% include Breadcrumb %>
 <div class="row">
 
 
 	<div id="poetry">
-		<div class="large-6 columns" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
-			<article class="poem">
+		<div class="large-6 columns poem" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
+			<article class="">
 				<div class="poem-unstranslated-title poem-info">
 					<% if $UntranslatedTitle %><h1> $UntranslatedTitle</h1><% end_if %>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
@@ -24,16 +25,18 @@
 				$Content
 			</article>
 		</div>
-		<div class="large-6 columns" id="translated-work">
-			<article class="poem">
+		<div class="large-6 columns poem" id="translated-work">
+			<article class="">
 				<div class="poem-translated-title poem-info">
-					<% if $TranslatedTitle %><h1>$Title</h1><% end_if %>
+					<% if $TranslatedTitle %><h1>$TranslatedTitle</h1><% else %>
+					<h1>$Title</h1>
+					<% end_if %>
 					<span class="author">
 						Translated by 
 						<% loop $Translators %>
 						<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
 						<% end_loop %>
-						<% if $OriginalLanguage %>from $OriginalLanguage <% end_if %>
+						<% if $OriginalLanguage %>from {$OriginalLanguage}. <% end_if %>
 						<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
 					</span>
 
@@ -50,33 +53,7 @@
 		
 	</div>
 
-	<div class="row">
-		<div class="large-12 columns">
-			<div class="article-subnav">
-
-					<div class="large-4 columns prev-container show-for-large-up">
-					<% if $PreviousPage %>
-						<% with $PreviousPage %>
-							<a href="$Link" class="prev "> &larr; $Title</a>
-						<% end_with %>
-					<% end_if %>
-					</div>
-
-					<div class="large-4 columns toc-container">
-						<a href="$Parent.Link">$Parent.Title</a> <br />
-						<a href="$Parent.Link" class="toc-link">Table of Contents</a>
-					</div>
-
-					<div class="large-4 columns next-container end">
-					<% if $NextPage %>
-						<% with $NextPage %>
-							<a href="$Link" class="next">$Title &rarr;</a><br />
-						<% end_with %>
-					<% end_if %>
-					</div>
-			</div>
-		</div>
-	</div>
+	<% include ArticleSubNav %>
 
 	<div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
 		<h2>$Title</h2>
