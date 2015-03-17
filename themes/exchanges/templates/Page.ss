@@ -12,7 +12,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="$Title.ATT" />
 	<% if $ClassName == "Article" %>
-		<meta property="og:description" content="<% include TranslatorByline %>" />
+		<meta property="og:description" content="$TranslatorByline("false").ATT" />
 	<% else %>
 		<meta property="og:description" content="Exchanges began in 1989-90, as a project of the Iowa Translation Workshop when I was director. The first issue was cyclostyled, the title being copied from Ulalume González de León’s short story “Intercambios,” translated by Stephanie Lovelady, a student in the Workshop. All texts were presented bilingually." />
 	<% end_if %>

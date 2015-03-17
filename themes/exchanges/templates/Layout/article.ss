@@ -57,7 +57,7 @@
 
 	<div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
 		<h2>$Title</h2>
-		<p><% include TranslatorByline %></p>
+		<p>$TranslatorByline</p>
 		<h3>Translator Notes</h3>
 		$TranslatorNote
 		<hr />

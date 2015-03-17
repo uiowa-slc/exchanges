@@ -15,11 +15,9 @@
 		<% loop $Children %>
 			<article>
 				<h3><a href="$Link">$Title</a></h3>
-				<p><% include TranslatorByline %></p>
+				<p>$TranslatorByline</p>
 			</article>
 		<% end_loop %>
-
-
 	</div>
 </div>
 

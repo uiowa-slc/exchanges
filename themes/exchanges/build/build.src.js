@@ -6096,4 +6096,4 @@
   };
 }(jQuery, window, window.document));
 
-$(document).foundation();
+//$(document).foundation();

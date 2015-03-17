@@ -1,1 +1,0 @@
-		<% if $Translators %> <% loop $Translators %>$Name <% if not $Last %>, <% else %> translates <% end_if %><% end_loop %><% end_if %> <% if OriginalLanguage %> from $OriginalLanguage<% end_if %><% if $Authors %><% loop $Authors %>. Original by $Name <% end_loop %> <% end_if %>

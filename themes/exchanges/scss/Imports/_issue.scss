@@ -12,4 +12,22 @@
 		}
 	}
 
+	.issue-date{
+		color: #eee;
+		font-family: $header-font-family;
+		font-size: rem-calc(12);
+		text-align: right;
+		text-transform: uppercase;
+
+		span{
+			padding-right: 5px;
+			display: block;
+			padding-top: $column-gutter/2;
+
+			@media #{$xlarge-up}{
+				padding-top: $column-gutter;
+			}
+		}
+	}
+
 }

@@ -96,6 +96,70 @@ class Article extends Page {
 	}
 	private static $listing_page_class = 'Issue';
 
+	public function TranslatorBylineVerb(){
+		$translatorCount = $this->Translators()->Count();
+		if($translatorCount > 1){
+			return " translate";
+		}else{
+			return " translates";
+		}
+	}
+
+	public function TranslatorByline($links = "true"){
+		//$TranslatorListNice(0)<% if OriginalLanguage %> $TranslatorBylineVerb from $OriginalLanguage<% end_if %><% if $Authors %><% loop $Authors %>. Original by $Name <% end_loop %> <% end_if %>
+		$bylineText = new HTMLText();
+		$byline = '';
+
+		//Person A, Person B, Person C 
+		if($this->Translators()->First()){
+			$byline .= $this->getWriterListNice($links, $this->Translators());
+		}
+		//translate(s) from OriginalLanguage
+		if($this->OriginalLanguage){
+			$byline .= $this->TranslatorBylineVerb().' from '.$this->OriginalLanguage;
+		}
+
+		if($this->Authors()->First()){
+
+			//original by:
+			$byline .= ' original by ';
+
+			//Person A and Person B.
+			$byline .= $this->getWriterListNice("false", $this->Authors());
+			$byline .= '.';
+		}
+
+		$bylineText->setValue($byline);
+
+		return $bylineText;
+
+
+	}
+
+
+	public function getWriterListNice($links = "true", $writers){
+
+		$writerString = new HTMLText();
+
+		foreach($writers as $writer){
+
+			if($links == "true"){
+				$writerArray[] = '<a href=".'.$writer->Link().'">'.$writer->Name.'</a>';
+			}else{
+				$writerArray[] = $writer->Name;
+			}
+		}
+
+		if($writers->Count() == 2){
+			$writerString->setValue($writerArray[0].' and '.$writerArray[1]);
+		}else{
+			$writerString->setValue(implode( ', ', $writerArray));
+		}
+
+		return $writerString;
+
+	}
+
 }
 
 class Article_Controller extends Page_Controller {

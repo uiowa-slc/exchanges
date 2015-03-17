@@ -8,7 +8,7 @@
 
 			<% loop $Contributor.Articles %>
 				<h3><a href="$Link">$Title</a></h3>
-				<p><% include TranslatorByline %><br />
+				<p>$TranslatorByline<br />
 				<% loop $Issues %> <a href="$Link" alt="$Title">$Title, $IssueDate </a><% end_loop %>
 				</p>				
 			<% end_loop %>

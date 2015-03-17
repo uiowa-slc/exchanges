@@ -1,3 +1,20 @@
+	.issue-date{
+		color: #eee;
+		font-family: $header-font-family;
+		font-size: rem-calc(12);
+		text-align: right;
+		text-transform: uppercase;
+
+		span{
+			padding-right: 5px;
+			display: block;
+			padding-top: $column-gutter/2;
+
+			@media #{$xlarge-up}{
+				padding-top: $column-gutter;
+			}
+		}
+	}
 .cover-container{
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -47,7 +64,7 @@
 
 		padding: rem-calc(13);
 		font-family: $header-font-family;
-		font-size: rem-calc(48);
+		font-size: rem-calc(32);
 		color: white;
  		-webkit-transition: all .8s;
     	transition: all .8s;
