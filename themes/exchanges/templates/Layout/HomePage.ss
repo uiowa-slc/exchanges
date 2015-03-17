@@ -14,9 +14,15 @@
 <% end_with %>
 
 <div class="row">
-	<div class="large-12 columns" id="news">
+
+
+	<div class="large-7 columns">
+		<h2 class="banner">$FeaturedIssue.LetterTitle</h2>
+		$FeaturedIssue.LetterFromEditor
+	</div>
+	<div class="large-5 columns" id="news">
 		<h2 class="banner">From the Blog:</h2>
-		<ul class="large-block-grid-2 news-list">
+		<ul class="large-block-grid-1 news-list">
 			<% loop $getNewsItems(4) %>
 				<li>
 					<article class="$FirstLast">

@@ -56,9 +56,7 @@
 	<% include ArticleSubNav %>
 
 	<div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
-		<h2>$Title</h2>
-		<p>$TranslatorByline</p>
-		<h3>Translator Notes</h3>
+		<h1>Translator Notes</h1>
 		$TranslatorNote
 		<hr />
 		<p><% loop $Translators %><a href="$Link">$Name</a><br /><% end_loop %></p>

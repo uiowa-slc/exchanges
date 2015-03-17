@@ -2,7 +2,7 @@
 	<div class="small-12 columns">
 		<h1>$Contributor.Name</h1>
 		<% if $BiographicalDetails %><p>$BiographicalDetails</p><% end_if %>
-		<h2>Works contributed by $Contributor.Name :</h2>
+		<h2>Works contributed by {$Contributor.Name}:</h2>
 		<hr>
 		<% if $Contributor.Articles %>
 
