@@ -144,7 +144,7 @@ class Article extends Page {
 		foreach($writers as $writer){
 
 			if($links == "true"){
-				$writerArray[] = '<a href=".'.$writer->Link().'">'.$writer->Name.'</a>';
+				$writerArray[] = '<a href="'.$writer->Link().'">'.$writer->Name.'</a>';
 			}else{
 				$writerArray[] = $writer->Name;
 			}
