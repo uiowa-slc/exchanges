@@ -36,7 +36,7 @@
 						<% loop $Translators %>
 						<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
 						<% end_loop %>
-						<% if $OriginalLanguage %>from the {$OriginalLanguage} original. <% end_if %>
+						<% if $OriginalLanguage %>from the {$OriginalLanguage}. <% end_if %>
 						<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
 					</span>
 
