@@ -83,5 +83,8 @@ window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
 </script> --%>
 <script src="$ThemeDir/build/build.src.js"></script>
+<script>
+  $(document).foundation();
+</script>
 </body>
 </html>
