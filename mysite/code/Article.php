@@ -116,7 +116,7 @@ class Article extends Page {
 		}
 		//translate(s) from OriginalLanguage
 		if($this->OriginalLanguage){
-			$byline .= $this->TranslatorBylineVerb().' from '.$this->OriginalLanguage;
+			$byline .= $this->TranslatorBylineVerb().' from the '.$this->OriginalLanguage;
 		}
 
 		if($this->Authors()->First()){

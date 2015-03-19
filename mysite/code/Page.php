@@ -16,6 +16,8 @@ class Page extends SiteTree {
 		return $fields;
 	}
 
+
+
 }
 class Page_Controller extends ContentController {
 
