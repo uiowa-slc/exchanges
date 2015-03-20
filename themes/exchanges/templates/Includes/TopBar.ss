@@ -3,7 +3,8 @@
 		<nav class="top-bar" data-topbar role="navigation">
 			<ul class="title-area">
 				<li class="name">
-					<h1><a href="{$baseUrl}">$SiteConfig.Title</a></h1>
+					<h1 class="show-for-large-up"><a href="{$baseUrl}">$SiteConfig.Title</a></h1>
+					<h1 class="hide-for-large-up"><a href="{$BaseHref}">Exchanges</a></h1>
 				</li>
 				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 			</ul>

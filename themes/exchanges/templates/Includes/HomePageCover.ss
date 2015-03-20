@@ -1,5 +1,5 @@
 <%-- <div class="cover-container" style="background-image: url('$FeaturedIssue.Emblem.URL');"> --%>
-<div class="cover-container" style="background-image: url('http://lorempixel.com/1240/300/');">
+<div class="cover-container" class="b-lazy" data-src="http://lorempixel.com/1240/300/">
 
 	<div class="cover-screen">
 		<% include TopBar %>

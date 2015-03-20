@@ -32,12 +32,15 @@
 	<% end_if %>
 
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
-
+	<style>
+		<% include CriticalCss %>
+	</style>
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
-	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
-	<script src="//use.typekit.net/gor3pds.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
-	<%--<script src="$ThemeDir/lib/modernizr.js"></script>--%>
+	<script>
+	 <% include LoadCSS %>
+	  loadCSS( "{$ThemeDir}/css/app.css" );
+	</script>
+	<noscript><link href="{$ThemeDir}/css/app.css" rel="stylesheet"></noscript>
 </head>
 <body class="$ClassName.ATT">
 	
@@ -82,6 +85,8 @@ else if (window.attachEvent)
 window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
 </script> --%>
+<script src="//use.typekit.net/gor3pds.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 <script src="$ThemeDir/build/build.src.js"></script>
 <script>
   $(document).foundation();

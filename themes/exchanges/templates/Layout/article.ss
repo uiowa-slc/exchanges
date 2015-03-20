@@ -26,7 +26,7 @@
 			</article>
 		</div>
 		<div class="large-6 columns poem" id="translated-work">
-			<article class="">
+			<article class="translated">
 				<div class="poem-translated-title poem-info">
 					<% if $TranslatedTitle %><h1>$TranslatedTitle</h1><% else %>
 					<h1>$Title</h1>

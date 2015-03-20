@@ -1,14 +1,19 @@
 .Issue{
 	
 	.table-of-contents{
-		margin-top: -200px;
+		
 		background: $body-bg;
-		padding: $column-gutter;
-		padding-top: 70px;
+		
 
 		article{
 			padding: $column-gutter/2 0;
 
+		}
+
+		@media #{$large-up}{
+			padding: $column-gutter;
+			padding-top: 70px;
+			margin-top: -200px;
 		}
 	}
 
@@ -22,7 +27,6 @@
 		span{
 			padding-right: 5px;
 			display: block;
-			padding-top: $column-gutter/2;
 
 			@media #{$xlarge-up}{
 				padding-top: $column-gutter;

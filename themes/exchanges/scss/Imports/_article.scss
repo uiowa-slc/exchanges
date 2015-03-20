@@ -2,6 +2,13 @@
 
 .Article {
 
+    article.translated{
+        padding: $column-gutter/2 0;
+        @media #{$large-up}{
+            padding-top: 0;
+        }
+    }
+
     .breadcrumb{
     margin-bottom: $column-gutter/2;
       background: none;
@@ -36,9 +43,7 @@
     .nav-screen {
         background-color: rgba($topbar-base-color, 0.67);
     }
-    h1.compilation-title {
-        margin-bottom: $column-gutter;
-    }
+
     .row {
         max-width: $article-row-width;
     }
@@ -106,10 +111,14 @@
 		    	text-transform: uppercase;
 		    	margin-top: $column-gutter;
 		    	border-bottom: 2px solid $primary-color;
-		    	padding-bottom: rem-calc(10);
+		    	
 		    	&:hover{
 		    		border-radius: 3px;
 		    	}
+
+                @media #{$large-up}{
+                   // padding-bottom: rem-calc(10);
+                }
 		    } 	
 	    }
 

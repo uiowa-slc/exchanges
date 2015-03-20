@@ -10,22 +10,19 @@
 	}
 	.start-reading{
 		//text-transform: uppercase;
-		text-align: right;
+		text-align: center;
 		font-family: $header-font-family;
-		line-height: 98px;
+		
 		font-size: rem-calc(36);
 		a{
 			//border-bottom: 2px solid $primary-color;
 		}
-	}
 
-	.cover-content{
+		@media #{$large-up}{
+			line-height: 98px;
+			text-align: right;
 
-		.issue-title{
-			font-size: rem-calc(32);
 		}
-
-		
 	}
 
 }
