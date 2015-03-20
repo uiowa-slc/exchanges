@@ -73,7 +73,7 @@
   else window.addEventListener('load', cb);
 </script> --%>
 
-<%-- <script type="text/javascript">
+<script type="text/javascript">
 function downloadJSAtOnload() {
 var element = document.createElement("script");
 element.src = "themes/exchanges/build/build.js";
@@ -84,12 +84,9 @@ window.addEventListener("load", downloadJSAtOnload, false);
 else if (window.attachEvent)
 window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
-</script> --%>
+</script>
 <script src="//use.typekit.net/gor3pds.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
-<script src="$ThemeDir/build/build.src.js"></script>
-<script>
-  $(document).foundation();
-</script>
+<!--<script src="$ThemeDir/build/build.src.js"></script>-->
 </body>
 </html>
