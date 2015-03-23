@@ -87,6 +87,5 @@ else window.onload = downloadJSAtOnload;
 </script>
 <script src="//use.typekit.net/gor3pds.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
-<!--<script src="$ThemeDir/build/build.src.js"></script>-->
 </body>
 </html>

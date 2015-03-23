@@ -19,17 +19,26 @@
 	<div class="large-7 columns">
 		<h2 class="banner">$LetterTitle</h2>
 		$LetterFromEditor
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="article-subnav">
+						<div class="toc-container">
+							<a href="$Link" class="toc-link">Table of Contents</a>
+						</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
 <% end_with %>
 	<div class="large-5 columns" id="news">
 		<h2 class="banner">From the Blog:</h2>
 		<ul class="large-block-grid-1 news-list">
-			<% loop $getNewsItems(4) %>
+			<% loop $Blog.getBlogPosts %>
 				<li>
 					<article class="$FirstLast">
 						<h3><a href="$Link">$Title </a></h3>
-						<time>$Date.Format("F j, Y")</time>
-						<p> $Content.Summary(20) <a href="$Link">Continue Reading</a></p>
+						<time>$Created.Format("F j, Y")</time>
 					</article>
 				</li>
 			<% end_loop %>

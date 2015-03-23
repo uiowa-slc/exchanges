@@ -56,6 +56,10 @@ class Page_Controller extends ContentController {
 
 	}
 
+	public function getBlog(){
+		return NewsHolder::get()->First();
+	}
+
 	public function Pages() {
 		$pages = Page::get();
 
