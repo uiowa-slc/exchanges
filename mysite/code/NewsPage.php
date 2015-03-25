@@ -7,6 +7,10 @@ class NewsPage extends BlogPost {
 		'Abstract' => 'Text',
 		'Author' => 'Varchar(255)'
 	);
+
+	private static $defaults = array(
+		'InheritSideBar' => true
+	);
 }
 
 class NewsPage_Controller extends Page_Controller {

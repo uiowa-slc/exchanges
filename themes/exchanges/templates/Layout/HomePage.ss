@@ -34,15 +34,18 @@
 	<div class="large-5 columns" id="news">
 		<h2 class="banner">From the Blog:</h2>
 		<ul class="large-block-grid-1 news-list">
-			<% loop $Blog.getBlogPosts %>
+			<% loop $Blog.BlogPosts.Limit(4) %>
 				<li>
 					<article class="$FirstLast">
 						<h3><a href="$Link">$Title </a></h3>
 						<time>$Created.Format("F j, Y")</time>
 					</article>
 				</li>
+
 			<% end_loop %>
+			<li><h3 class="text-center"><a href="#">BLOG ARCHIVE</a></h3></li>
 		</ul>
+
 	</div>
 </div>
 

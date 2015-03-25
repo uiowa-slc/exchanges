@@ -1,13 +1,3 @@
-meta.foundation-mq-small{ font-family: '/only screen/'; width: 0px; }
-meta.foundation-mq-small-only{ font-family: '/only screen and (max-width: 40em)/'; width: 0px; }
-meta.foundation-mq-medium{ font-family: '/only screen and (min-width:40.063em)/'; width: 40.063em; }
-meta.foundation-mq-medium-only{ font-family: '/only screen and (min-width:40.063em) and (max-width:64em)/'; width: 40.063em; }
-meta.foundation-mq-large{ font-family: '/only screen and (min-width:64.063em)/'; width: 64.063em; }
-meta.foundation-mq-large-only{ font-family: '/only screen and (min-width:64.063em) and (max-width:90em)/'; width: 64.063em; }
-meta.foundation-mq-xlarge{ font-family: '/only screen and (min-width:90.063em)/'; width: 90.063em; }
-meta.foundation-mq-xlarge-only{ font-family: '/only screen and (min-width:90.063em) and (max-width:120em)/'; width: 90.063em; }
-meta.foundation-mq-xxlarge{ font-family: '/only screen and (min-width:120.063em)/'; width: 120.063em; }
-meta.foundation-data-attribute-namespace{ font-family: false; }
 html, body{ height: 100%; }
 *{ box-sizing: border-box; }
 html, body{ font-size: 130%; }
@@ -19,9 +9,6 @@ img{ display: inline-block; vertical-align: middle; }
 .row{ width: 100%; margin-left: auto; margin-right: auto; margin-top: 0px; margin-bottom: 0px; max-width: 1360px; }
 .row::before, .row::after{ content: ' '; display: table; }
 .row::after{ clear: both; }
-.row .row{ width: auto; margin-left: -1.09375rem; margin-right: -1.09375rem; margin-top: 0px; margin-bottom: 0px; max-width: none; }
-.row .row::before, .row .row::after{ content: ' '; display: table; }
-.row .row::after{ clear: both; }
  .columns{ padding-left: 1.09375rem; padding-right: 1.09375rem; width: 100%; float: left; }
 [class*="column"] + [class*="column"].end{ float: left; }
 @media only screen{
@@ -64,7 +51,6 @@ img{ display: inline-block; vertical-align: middle; }
 .large-block-grid-3 > li:nth-of-type(1n){ clear: none; }
 .large-block-grid-3 > li:nth-of-type(3n+1){ clear: both; }
 }
-meta.foundation-mq-topbar{ font-family: '/only screen and (min-width:40.063em)/'; width: 40.063em; }
 .contain-to-grid{ width: 100%; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; }
 .contain-to-grid .top-bar{ margin-bottom: 0px; }
 .top-bar{ overflow-x: hidden; overflow-y: hidden; height: 3.75rem; line-height: 3.75rem; position: relative; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; margin-bottom: 0px; background-position: initial initial; background-repeat: initial initial; }
@@ -88,10 +74,6 @@ meta.foundation-mq-topbar{ font-family: '/only screen and (min-width:40.063em)/'
 .top-bar-section .dropdown{ padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; left: 100%; top: 0px; z-index: 99; display: block; position: absolute !important; height: 1px; width: 1px; overflow-x: hidden; overflow-y: hidden; clip: rect(1px 1px 1px 1px); }
 .top-bar-section .dropdown li{ width: 100%; height: auto; }
 .top-bar-section .dropdown li a{ font-weight: normal; padding-top: 8px; padding-right: 1.25rem; padding-bottom: 8px; padding-left: 1.25rem; }
-.top-bar-section .dropdown li a.parent-link{ font-weight: normal; }
-.top-bar-section .dropdown li.title h5, .top-bar-section .dropdown li.parent-link{ margin-bottom: 0px; margin-top: 0px; font-size: 1.125rem; }
-.top-bar-section .dropdown li.title h5 a, .top-bar-section .dropdown li.parent-link a{ color: rgb(255, 255, 255); display: block; }
-.js-generated{ display: block; }
 @media only screen and (min-width: 40.063em){
 .top-bar{ background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; overflow-x: visible; overflow-y: visible; background-position: initial initial; background-repeat: initial initial; }
 .top-bar::before, .top-bar::after{ content: ' '; display: table; }
@@ -103,7 +85,6 @@ meta.foundation-mq-topbar{ font-family: '/only screen and (min-width:40.063em)/'
 .top-bar-section{ left: 0px !important; }
 .top-bar-section ul{ width: auto; height: auto !important; display: inline; }
 .top-bar-section ul li{ float: left; }
-.top-bar-section ul li .js-generated{ display: none; }
 .top-bar-section li:not(.has-form) a:not(.button){ padding-top: 0px; padding-right: 1.25rem; padding-bottom: 0px; padding-left: 1.25rem; line-height: 3.75rem; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; }
 .top-bar-section li.active:not(.has-form) a:not(.button){ padding-top: 0px; padding-right: 1.25rem; padding-bottom: 0px; padding-left: 1.25rem; line-height: 3.75rem; color: rgb(154, 209, 232); background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: transparent; background-position: initial initial; background-repeat: initial initial; }
 .top-bar-section .has-dropdown > a{ padding-right: 2.5rem !important; }
@@ -117,25 +98,24 @@ meta.foundation-mq-topbar{ font-family: '/only screen and (min-width:40.063em)/'
 .top-bar-section .right li .dropdown li .dropdown{ right: 100%; }
 }
 .text-center{ text-align: center !important; }
-div, ul, li, h1, h2, h3, h5, p{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
+div, ul, li, h1, h2, h3, p{ margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
 a{ color: rgb(34, 115, 148); text-decoration: none; line-height: inherit; }
 a img{ border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; }
 p{ font-family: inherit; font-weight: normal; font-size: 1rem; line-height: 1.6; margin-bottom: 1.25rem; text-rendering: optimizelegibility; }
-h1, h2, h3, h5{ font-family: futura-pt, Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; color: rgb(55, 43, 33); text-rendering: optimizelegibility; margin-top: 0.2rem; margin-bottom: 0.5rem; line-height: 0.95; }
+h1, h2, h3{ font-family: futura-pt, Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; color: rgb(55, 43, 33); text-rendering: optimizelegibility; margin-top: 0.2rem; margin-bottom: 0.5rem; line-height: 0.95; }
 h1{ font-size: 2.125rem; }
 h2{ font-size: 1.6875rem; }
 h3{ font-size: 1.375rem; }
-h5{ font-size: 1.125rem; }
 hr{ border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(189, 177, 167); border-right-color: rgb(189, 177, 167); border-bottom-color: rgb(189, 177, 167); border-left-color: rgb(189, 177, 167); border-width: initial; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; clear: both; margin-top: 1.25rem; margin-right: 0px; margin-bottom: 1.1875rem; margin-left: 0px; height: 0px; }
+em{ font-style: italic; line-height: inherit; }
 ul{ font-size: 1rem; line-height: 1.6; margin-bottom: 1.25rem; list-style-position: outside; font-family: inherit; }
 ul{ margin-left: 1.1rem; }
 ul li ul{ margin-left: 1.25rem; margin-bottom: 0px; }
 @media only screen and (min-width: 40.063em){
-h1, h2, h3, h5{ line-height: 0.95; }
+h1, h2, h3{ line-height: 0.95; }
 h1{ font-size: 2.75rem; }
 h2{ font-size: 2.3125rem; }
 h3{ font-size: 1.6875rem; }
-h5{ font-size: 1.125rem; }
 }
 @media only screen{
  .hide-for-large-up{ display: inherit !important; }
@@ -161,7 +141,6 @@ h5{ font-size: 1.125rem; }
 *{ background-image: initial !important; background-attachment: initial !important; background-origin: initial !important; background-clip: initial !important; background-color: transparent !important; color: rgb(0, 0, 0) !important; box-shadow: none !important; text-shadow: none !important; background-position: initial initial !important; background-repeat: initial initial !important; }
 a{ text-decoration: underline; }
 a[href]::after{ content: ' (', attr(href), ')'; }
- a[href^="javascript:"]::after{ content: ''; }
  img{ page-break-inside: avoid; }
 img{ max-width: 100% !important; }
 p, h2, h3{ orphans: 3; widows: 3; }
@@ -172,6 +151,12 @@ h2, h3{ page-break-after: avoid; }
 .top-bar{ background-color: rgb(68, 68, 68); }
 .contain-to-grid{ background-color: rgb(68, 68, 68); }
 .nav-screen{ background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgba(68, 68, 68, 0.0976562); background-position: initial initial; background-repeat: initial initial; }
+.article-subnav{ margin-top: 180px; font-size: 1.75rem; font-family: futura-pt, Helvetica, Arial, sans-serif; line-height: 1.2; }
+.article-subnav .toc-container{ text-align: center; padding-bottom: 2.1875rem; }
+@media only screen and (min-width: 64.063em){
+.article-subnav .toc-container{ padding-bottom: 0px; }
+}
+.article-subnav .toc-container .toc-link{ font-size: 1.5rem; text-transform: uppercase; margin-top: 2.1875rem; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: rgb(34, 115, 148); }
 .issue-date{ color: rgb(238, 238, 238); font-family: futura-pt, Helvetica, Arial, sans-serif; font-size: 0.75rem; text-align: right; text-transform: uppercase; }
 .issue-date span{ padding-right: 5px; display: block; padding-top: 10px; }
 @media only screen and (min-width: 64.063em){
@@ -215,7 +200,7 @@ h2, h3{ page-break-after: avoid; }
 .colgroup::before, .colgroup::after{ content: ''; display: table; clear: both; }
 body{ background-image: url(../images/tile.jpeg); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-position: initial initial; background-repeat: initial initial; }
 h1{ font-weight: bold; }
-h1, h2, h3, h5{ letter-spacing: 0.7px; }
+h1, h2, h3{ letter-spacing: 0.7px; }
  h2.banner{ text-transform: uppercase; font-size: 0.75em; margin-top: 2.1875rem; margin-right: 0px; margin-bottom: 2.1875rem; margin-left: 0px; }
 hr{ margin-bottom: 1rem; }
 .main{ min-height: 320px; padding-top: 2.1875rem; }
