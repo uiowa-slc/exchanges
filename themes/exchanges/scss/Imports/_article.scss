@@ -1,7 +1,10 @@
-
-
 .Article {
 
+    .breadcrumb{
+     @media #{$large-up}{
+        margin-left: 60px;
+      }
+    }
     article.translated{
         padding: $column-gutter/2 0;
         @media #{$large-up}{
@@ -9,18 +12,6 @@
         }
     }
 
-    .breadcrumb{
-    margin-bottom: $column-gutter/2;
-      background: none;
-      border-bottom: #ADADAD 2px solid;
-      color: #797979;
-      padding: 5px 10px;
-      text-transform: uppercase;
-
-      @media #{$large-up}{
-        margin-left: 60px;
-      }
-    }
     .main{
         padding-top: $column-gutter/2;
     }

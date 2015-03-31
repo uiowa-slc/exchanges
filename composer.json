@@ -9,6 +9,7 @@
 		"undefinedoffset/sortablegridfield" : "*",
 		"silverstripe/blog": "dev-master",
 		"silverstripe/widgets": "dev-master"
+
 	},
 
 	"minimum-stability": "dev"

@@ -14,7 +14,14 @@
 					<% loop Menu(1) %>
 					<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children || $LinkTo.Children %> has-dropdown<% end_if %>">
 						<a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a>
-						<% if $Children %>
+
+						<% if $ClassName == "NewsHolder" %>
+							<ul class="dropdown">
+								<% loop $BlogPosts %>
+									<% include TopBarLinkDropdownItem %>
+								<% end_loop %>
+							</ul>
+						<% else_if $Children %>
 							<% include TopBarLinkDropdown %>
 						<% else_if $ClassName == "RedirectorPage" %>
 							<% if $LinkTo %>
