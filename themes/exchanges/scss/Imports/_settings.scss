@@ -1,3 +1,12 @@
+/* Site Specific Settings: */
+$footer-padding: 180px;
+$topbar-base-color: #444;
+$article-row-width: 1600px;
+$article-poetry-padding: 150px;
+
+ /* Foundation Settings: */
+
+
 // The latest settings can be found here:
 // https://github.com/zurb/bower-foundation/blob/master/scss/foundation/_settings.scss
 
@@ -23,7 +32,7 @@ $darkGray: #666666;
 //
 
 // This is the default html and body font-size for the base rem value.
-// $rem-base: 16px;
+ $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
@@ -36,7 +45,7 @@ $darkGray: #666666;
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
- $base-font-size: 100%;
+ $base-font-size: 130%;
 
 // The $base-line-height is 100% while $base-font-size is 150%
  $base-line-height: 150%;
@@ -52,13 +61,15 @@ $darkGray: #666666;
  $include-xl-html-grid-classes: true;
 
  $row-width: 1360px;
-// $column-gutter: rem-calc(30);
+ $column-gutter: rem-calc(35);
 // $total-columns: 12;
 
 // We use these to control various global styles
-// $body-bg: #fff;
+ $body-bg: url('../images/tile.jpeg');
 // $body-font-color: #222;
- $body-font-family: "proxima-nova", san-serif;
+ $body-font-family: "kepler-std", san-serif;
+
+
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -125,7 +136,7 @@ $darkGray: #666666;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
- $header-font-family: "alverata-irregular-pe", "Helvetica", "Arial", sans-serif;
+ $header-font-family: "futura-pt", "Helvetica", "Arial", sans-serif;
 // $header-font-weight: normal;
 // $header-font-style: normal;
  $header-font-color: #372B21;
@@ -282,8 +293,8 @@ $darkGray: #666666;
 
 // We use this to control the maximum number of block grid elements per row
 // $block-grid-elements: 12;
-// $block-grid-default-spacing: rem-calc(20);
-
+ $block-grid-default-spacing: $column-gutter;
+$align-block-grid-to-grid: false;
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 // $block-grid-media-queries: true;
 
@@ -334,7 +345,7 @@ $darkGray: #666666;
 // $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
-// $button-font-family: $body-font-family;
+ $button-font-family: $header-font-family;
 // $button-font-color: #fff;
 // $button-font-color-alt: #333;
 // $button-font-tny: rem-calc(11);
@@ -1139,10 +1150,13 @@ $off-canvas-overlay-box-shadow: none;
 
 // Background color for the top bar
 // $topbar-bg-color: #fff;
- $topbar-bg: #222;
+
+
+$topbar-bg-color: rgba(0,0,0,0);
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
- $topbar-height: rem-calc(40);
+ $topbar-height: rem-calc(60);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1151,22 +1165,22 @@ $off-canvas-overlay-box-shadow: none;
 
 // Style the top bar dropdown elements
  $topbar-dropdown-bg: none;
- $topbar-dropdown-link-color: $primary-color;
+ $topbar-dropdown-link-color: lighten($primary-color, 30);
  $topbar-dropdown-link-bg: $topbar-bg;
 // $topbar-dropdown-link-weight: normal;
 // $topbar-dropdown-toggle-size: 5px;
- $topbar-dropdown-toggle-color: #666;
+ $topbar-dropdown-toggle-color: #eee;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
- $topbar-link-color: $primary-color;
- $topbar-link-color-hover: lighten($primary-color,10);
- $topbar-link-color-active: $primary-color;
- $topbar-link-color-active-hover: $primary-color;
+ $topbar-link-color: white;
+ $topbar-link-color-hover: lighten($primary-color,30);
+ $topbar-link-color-active: lighten($primary-color, 40);
+ $topbar-link-color-active-hover: lighten($primary-color, 15);
 // $topbar-link-weight: normal;
  $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
- $topbar-link-bg-hover: $topbar-bg;
+ $topbar-link-bg-hover: $topbar-base-color;
  $topbar-link-bg-active: $topbar-bg;
  $topbar-link-bg-active-hover: $topbar-bg;
  $topbar-link-font-family: $header-font-family;

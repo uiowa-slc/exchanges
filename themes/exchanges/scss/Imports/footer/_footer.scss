@@ -7,10 +7,13 @@ $break-large: 980px; /* 980px / 16px; */
 $break-xlarge: 1140px; /* 1140px / 16px; */
  
 .footer {
-	color: #222;
+	margin-top: $footer-padding;
+	background: $topbar-base-color;
+	color: white;
 	padding: 3em 0 1em .1em;
 	position: relative;
 	padding-top: 60px;
+	font-family: $header-font-family;
 }
 .footer p {
 	@media screen and (min-width: $break-small) {
@@ -19,7 +22,7 @@ $break-xlarge: 1140px; /* 1140px / 16px; */
 	
 }
 .footer a {
-
+	color: lighten($primary-color, 50);
 	&:hover {
 	
 	}

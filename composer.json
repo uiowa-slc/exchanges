@@ -6,7 +6,10 @@
 		"silverstripe/cms": "3.1.9",
 		"silverstripe/framework": "3.1.9",
 		"unclecheese/betterbuttons" : "dev-master",
-		"undefinedoffset/sortablegridfield" : "*"
+		"undefinedoffset/sortablegridfield" : "*",
+		"silverstripe/blog": "dev-master",
+		"silverstripe/widgets": "dev-master"
+
 	},
 
 	"minimum-stability": "dev"

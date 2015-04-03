@@ -3,7 +3,7 @@
 	<section class="nav-li-content">
 		<h4> $MenuTitle </h4>
 		<p class="nav-deets">
-			<% include TranslatorByline %>
+			$TranslatorByline
 		</p>
 	</section>
 	</a>

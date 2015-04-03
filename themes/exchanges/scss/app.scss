@@ -4,6 +4,10 @@
 @import "imports/footer/mixins";
 
 @import "imports/header";
+@import "imports/homepage";
+@import "imports/article";
+@import "imports/cover";
+@import "imports/issue";
 @import "imports/side-nav";
 @import "imports/footer/footer";
 
@@ -18,19 +22,21 @@ body {
 	font-family: 'Libre Baskerville', serif, times;
 }
 
-.full-width {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: initial;
-}
 
 h1{
 	font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
+	letter-spacing: 0.7;
+	&.banner{
+		text-transform: uppercase;
+		font-size: 0.75em;
+		margin: $column-gutter 0;
+	}
 }
+
+
 
 hr {
 	margin-bottom: 1rem;
@@ -42,6 +48,7 @@ hr {
 
 .main {
     min-height: 320px;
+    padding-top: $column-gutter;
 }
 
 .name {
@@ -81,61 +88,49 @@ hr {
 	width: 100%;
 }
 
-article {
-	padding: 20px 0;
-	&.first{
-		padding-top: 0;
-	}
-    time{
-    	font-size: 12px;
-    	display: block;
-    	text-transform: uppercase;
-    	color: $darkGray;
-    	margin: 0.4em 0;
-    }
-    header {
-        font-family: $header-font-family;
-        h1{
-        	text-transform: uppercase;
-        }
-        small {
-        	font-weight: normal;
-        	text-transform: none;
-            display: block;
-            padding: 0.1em 0;
-            line-height: 1;
-        }
-    }
-    .article-text, .content-text {
-        max-width: 720px;
-        min-height: 300px;
-    }
-    .content-text * {
-        font-size: rem-calc(18);
-    }
-    img.cover {
-        margin-bottom: 20px;
-    }
-}
+.news-list{
 
-.article-subnav{
-	margin-top: 80px;
-	font-size: rem-calc(36);
-	text-align: center;
-	line-height: 1.2;
+	article {
+		//padding: 20px 0;
+	    time{
+	    	font-size: rem-calc(14);
+	    	line-height: 1em;
+	    	display: block;
+	    	text-transform: uppercase;
+	    	color: $darkGray;
+	    	font-family: $header-font-family;
+	    	margin: 0.4em 0;
+	    }
+	    header {
+	        font-family: $header-font-family;
+	        h1{
+	        	text-transform: uppercase;
+	        }
+	        small {
+	        	font-weight: normal;
+	        	text-transform: none;
+	            display: block;
+	            padding: 0.1em 0;
+	            line-height: 1;
+	        }
+	    }
+	    .article-text, .content-text {
+	        max-width: 720px;
+	        min-height: 300px;
+	    }
+	    .content-text * {
+	        font-size: rem-calc(18);
+	    }
 
-	@media #{$large-up}{
-		text-align: left;
 	}
 }
+
 
 .button.view-translator-notes{
 	margin-bottom: 0;
 }
 
-.compilation-title h1{
-	margin-bottom: 25px;
-}
+
 
 .byline {
     font-size: rem-calc(14);
@@ -156,49 +151,6 @@ article {
 	position: fixed;
 }
 
-#nav-background {
-	background: #28201A;
-
-}
-
-#main-background {
-	
-	min-height: 777px;
-	background: url(../images/tile.jpeg);
-
-	@media #{$large-up}{
-		.columns, .column {
-			padding-right: 2rem;
-		}
-	
-	}
-		
-	img {
-		width: 100%;
-		max-width: 1600px;
-	}
-	
-}
-
-.HomePage {
-	
-	.cur-issue-link {
-		padding: rem-calc(29) 0;
-		display: block;
-	}
-	
-
-	
-	@media #{$medium-up}{
-		margin: 0 0 1rem 0;
-		padding: 0;
-	}
-
-	.news-item{
-		padding: 1.5em 0;
-	}
-	
-}
 
 
 #news {
@@ -213,37 +165,16 @@ article {
 	
 }
 
-
-#poetry {
-
-	p {
-		line-height: 1.2em;
-		margin-bottom: 0;
-	}
-	
-	hr {
-		border-color: rgba(152, 143, 120, 0.59);
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-	}
-	
-	.author {
-		color: $darkGray;
-		margin-top: .25em;
-		text-transform: uppercase;
-		font-size: 0.8em;
-		line-height: 0.2;
-		margin-bottom: 0px;
-	}
-
-	#translated-work {
-		padding-top: 30px;
-		@media #{$medium-up}{
-			padding-top: 0;
-		}
-
-	}
-	
-	
+.breadcrumb{
+    margin-bottom: $column-gutter/2;
+      background: none;
+      border-bottom: #ADADAD 2px solid;
+      color: #797979;
+      padding: 5px 10px;
+      text-transform: uppercase;
+    }
+.blog-post-meta{
+	font-size: rem-calc(11);
+	text-transform: uppercase;
+	font-family: $header-font-family;
 }
-

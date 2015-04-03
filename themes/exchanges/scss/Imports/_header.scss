@@ -6,10 +6,25 @@
 			opacity: 1;
 		}
 	}
+	.top-bar-section .dropdown li{
+		background: rgba($topbar-base-color, 0.95);
+	}
+	.toggle-topbar{
+		font-family: $header-font-family;
+		z-index: 1000;
+	}
 }
 
-.top-bar .name h1 a {
-	padding: 0;
+.top-bar {
+  background-color: $topbar-base-color;
+}
+
+.contain-to-grid{
+	background-color: $topbar-base-color;
+}
+
+.nav-screen{
+	background: rgba($topbar-base-color, 0.1);
 }
 
 .top-bar input{

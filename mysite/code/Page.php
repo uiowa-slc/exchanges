@@ -16,6 +16,8 @@ class Page extends SiteTree {
 		return $fields;
 	}
 
+
+
 }
 class Page_Controller extends ContentController {
 
@@ -52,6 +54,10 @@ class Page_Controller extends ContentController {
 	public function init() {
 		parent::init();
 
+	}
+
+	public function getBlog(){
+		return NewsHolder::get()->First();
 	}
 
 	public function Pages() {

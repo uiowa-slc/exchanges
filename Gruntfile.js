@@ -26,6 +26,7 @@ module.exports = function(grunt) {
       js:{
         src: [
           'themes/exchanges/bower_components/foundation/js/foundation.js',
+          'themes/exchanges/bower_components/blazy/blazy.js',
           'themes/exchanges/javascript/*.js'
         ],
         dest: 'themes/exchanges/build/build.src.js'
@@ -68,7 +69,7 @@ module.exports = function(grunt) {
                     url: "http://localhost:8888/exchanges",
                     width: 1200,
                     height: 900,
-                    outputfile: "themes/exchanges/css/critical.css",
+                    outputfile: "themes/exchanges/templates/Includes/CriticalCss.ss",
                     filename: "themes/exchanges/css/app.css", // Using path.resolve( path.join( ... ) ) is a good idea here
                     buffer: 800*1024,
                     ignoreConsole: false
@@ -90,5 +91,6 @@ module.exports = function(grunt) {
   // Default task(s).
   // Note: order of tasks is very important
   grunt.registerTask('default', ['sass', 'concat', 'uglify','criticalcss', 'watch']);
+ //grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
 
 };

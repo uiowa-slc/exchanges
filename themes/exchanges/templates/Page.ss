@@ -12,7 +12,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="$Title.ATT" />
 	<% if $ClassName == "Article" %>
-		<meta property="og:description" content="<% include TranslatorByline %>" />
+		<meta property="og:description" content="$TranslatorByline("false").ATT" />
 	<% else %>
 		<meta property="og:description" content="Exchanges began in 1989-90, as a project of the Iowa Translation Workshop when I was director. The first issue was cyclostyled, the title being copied from Ulalume González de León’s short story “Intercambios,” translated by Stephanie Lovelady, a student in the Workshop. All texts were presented bilingually." />
 	<% end_if %>
@@ -32,56 +32,36 @@
 	<% end_if %>
 
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
-
+	<style>
+		<% include CriticalCss %>
+	</style>
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
-	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
-	<script src="//use.typekit.net/gor3pds.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
-	<%--<script src="$ThemeDir/lib/modernizr.js"></script>--%>
+	<script>
+	 <% include LoadCSS %>
+	  loadCSS( "{$ThemeDir}/css/app.css" );
+	</script>
+	<noscript><link href="{$ThemeDir}/css/app.css" rel="stylesheet"></noscript>
 </head>
 <body class="$ClassName.ATT">
 	
-<div class="off-canvas-wrap" data-offcanvas>
-	<div class="inner-wrap">
-	<%--<% include TopBar %>--%>
-	<%-- include UiowaBar --%>
-	<% include SmallTabBar %>
-	<% include OffCanvasSideNav %>	
-	<div class="main typography" role="main">
-		<div class="content row full-width">
 
-			<% if $ClassName == "Issue" %>
-				<a href="$Link"><img src="$Emblem.SetWidth(800).URL" alt="Emblem" class="emblem hide-for-large-up"/></a>
-			<% end_if %>
-			<% if $ClassName == "HomePage" %>
-				<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.Emblem.SetWidth(800).URL" alt="Emblem" class="emblem hide-for-large-up"/></a>
-			<% end_if %>
-
-			<div class="xxlarge-2 large-3 side-nav-column large-uncentered columns show-for-large-up" id="nav-background">
-				<% include SideNav %>
-			</div>
-			<div class="xxlarge-10 large-9 main-column columns" id="main-background">
-				<% if $ClassName == "Issue" %>
-					<img src="$Emblem.SetWidth(800).URL" alt="Emblem" class="emblem show-for-large-up"/>
-				<% end_if %>
-				<% if $ClassName == "HomePage" %>
-					<a href="$FeaturedIssue.Link"><img src="$FeaturedIssue.Emblem.SetWidth(800).URL" alt="Emblem" class="emblem show-for-large-up"/></a>
-				<% end_if %>
-				<div class="padded-content">
-				$Layout
-				<% include Footer %>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<a class="exit-off-canvas"></a>
 	
-	</div>
-</div><!-- end off-canvas-wrap -->
+	<%-- include UiowaBar --%>
 
+	<% if $ClassName == "HomePage" %>
+		<% include HomePageCover %>
+	<% else_if $ClassName == "Issue" %>
+		<% include IssueCover %>
+	<% else %>
+		<% include TopBar %>
+	<% end_if %>
+
+	<div class="main typography" role="main">
+		$Layout
+	</div>
+	<% include Footer %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
+<%-- <script>
   var cb = function() {
     var l = document.createElement('link'); l.rel = 'stylesheet';
     l.href = 'themes/exchanges/css/critical.css';
@@ -91,7 +71,7 @@
       webkitRequestAnimationFrame || msRequestAnimationFrame;
   if (raf) raf(cb);
   else window.addEventListener('load', cb);
-</script>
+</script> --%>
 
 <script type="text/javascript">
 function downloadJSAtOnload() {
@@ -105,6 +85,7 @@ else if (window.attachEvent)
 window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
 </script>
-<!--<script src="$ThemeDir/build/build.src.js"></script>-->
+<script src="//use.typekit.net/gor3pds.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+.Issue{
+	
+	.table-of-contents{
+		
+		background: $body-bg;
+		
+
+		article{
+			padding: $column-gutter/2 0;
+
+		}
+
+		@media #{$large-up}{
+			padding: $column-gutter;
+			padding-top: 70px;
+			margin-top: -200px;
+		}
+	}
+
+	.issue-date{
+		color: #eee;
+		font-family: $header-font-family;
+		font-size: rem-calc(12);
+		text-align: right;
+		text-transform: uppercase;
+
+		span{
+			padding-right: 5px;
+			display: block;
+
+			@media #{$xlarge-up}{
+				padding-top: $column-gutter;
+			}
+		}
+	}
+
+}
