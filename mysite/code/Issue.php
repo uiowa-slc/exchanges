@@ -28,6 +28,22 @@ class Issue extends Page {
 	private static $allowed_children = array('Article');
 
 	//private static $icon = array("mysite/images/tree/toc","file");
+	public function NextPage() {
+		$page = Page::get()->filter(array(
+			'ParentID' => $this->ParentID,
+			'Sort:GreaterThan' => $this->Sort,
+		))->First();
+
+		return $page;
+	}
+	public function PreviousPage() {
+		$page = Page::get()->filter(array(
+			'ParentID' => $this->ParentID,
+			'Sort:LessThan' => $this->Sort,
+		))->Last();
+
+		return $page;
+	}
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
@@ -46,16 +62,16 @@ class Issue extends Page {
 		return $this->Children();
 	}
 
-	public function getLetterTitle(){
-		if($this->LetterFromEditorCustomTitle){
+	public function getLetterTitle() {
+		if ($this->LetterFromEditorCustomTitle) {
 			return $this->LetterFromEditorCustomTitle;
-		}else{
+		} else {
 			return "Letter From The Editor";
 		}
 	}
 
-	public function getLetterLink(){
-		return $this->Link().'letter/';
+	public function getLetterLink() {
+		return $this->Link() . 'letter/';
 	}
 
 	public function RandomArticles() {
@@ -87,7 +103,7 @@ class Issue_Controller extends Page_Controller {
 				'Parent' => $this,
 				'ClassName' => 'Article',
 				'NextPage' => $this->Children()->First,
-				'PreviousPage' => Page::get()->filter(array('URLSegment' => 'home'))->First
+				'PreviousPage' => Page::get()->filter(array('URLSegment' => 'home'))->First,
 			);
 
 		} else {

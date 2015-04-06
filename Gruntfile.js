@@ -72,7 +72,8 @@ module.exports = function(grunt) {
                     outputfile: "themes/exchanges/templates/Includes/CriticalCss.ss",
                     filename: "themes/exchanges/css/app.css", // Using path.resolve( path.join( ... ) ) is a good idea here
                     buffer: 800*1024,
-                    ignoreConsole: false
+                    ignoreConsole: false,
+                    forceInclude: ['.main', '.row', '.large-6', '.large-7', '.columns', '.breadcrumb', '.Article .row']
                 }
             }
         }

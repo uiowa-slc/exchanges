@@ -7,7 +7,6 @@
 
 <div class="row content-page">
     <div class="large-7 columns">
-        <header>
             <h1>
                 <% if $ArchiveYear %>
                     <%t Blog.Archive "Archive" %>:
@@ -26,28 +25,22 @@
                     
                 <% end_if %>
             </h1>
-
-
-        </header>
         <% if not $ArchiveYear %>
         <div class="content-text">
             $Content
             $Form
         </div>
-        <hr />
         <% end_if %>
+        <hr />
         <% if $PaginatedList.Exists %>
             
             <% if $ArchiveYear %>
 
             <% else %>
-                <h3 class="banner">Recent Posts</h3>
+                <h3 class="banner text-center">Recent Posts</h3>
             <% end_if %>
             <% loop $PaginatedList %>
                 <% include PostSummary %>
-                <% if not $Last %>
-                    <hr />
-                <% end_if %>
             <% end_loop %>
         <% else %>
             <p><%t Blog.NoPosts "There are no posts." %></p>

@@ -22,14 +22,19 @@
 								<% end_loop %>
 							</ul>
 						<% else_if $Children %>
-							<% include TopBarLinkDropdown %>
+							<ul class="dropdown">
+								<% loop $Children.Sort("Created DESC") %>
+									<% include TopBarLinkDropdownItem %>
+								<% end_loop %>
+							</ul>
 						<% else_if $ClassName == "RedirectorPage" %>
-							<% if $LinkTo %>
-								<% with $LinkTo %>
-									<% include TopBarLinkDropdown %>
-								<% end_with %>
-							<% end_if %>
-
+							<ul class="dropdown">
+								<% if $LinkTo %>
+									<% with $LinkTo %>
+										<% include TopBarLinkDropdownItem %>
+									<% end_with %>
+								<% end_if %>
+							</ul>
 						<% end_if %>
 					</li>
 					<%--<% if not $Last %><li class="divider"></li><% end_if %>--%>

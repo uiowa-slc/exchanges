@@ -7,7 +7,9 @@
 @import "imports/homepage";
 @import "imports/article";
 @import "imports/cover";
+@import "imports/blog";
 @import "imports/issue";
+@import "imports/issue-holder";
 @import "imports/side-nav";
 @import "imports/footer/footer";
 
@@ -32,10 +34,14 @@ h1, h2, h3, h4, h5, h6 {
 	&.banner{
 		text-transform: uppercase;
 		font-size: 0.75em;
-		margin: $column-gutter 0;
+		margin: $column-gutter/2 0;
 	}
 }
 
+
+.WidgetHolder h3{
+	@extend h3.banner;
+}
 
 
 hr {
@@ -48,7 +54,7 @@ hr {
 
 .main {
     min-height: 320px;
-    padding-top: $column-gutter;
+    padding-top: $column-gutter/2;
 }
 
 .name {
@@ -172,6 +178,13 @@ hr {
       color: #797979;
       padding: 5px 10px;
       text-transform: uppercase;
+ 	  -webkit-transition: all .8s;
+      transition: all .8s;
+      &.button:hover, &.button:active{
+      	background: none;
+      	color: #797979;
+      	border-radius: 10px;
+      }
     }
 .blog-post-meta{
 	font-size: rem-calc(11);

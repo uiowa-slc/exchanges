@@ -45,23 +45,6 @@ class Article extends Page {
 		}
 	}
 
-	public function NextPage() {
-		$page = Page::get()->filter(array(
-			'ParentID' => $this->ParentID,
-			'Sort:GreaterThan' => $this->Sort,
-		))->First();
-
-		return $page;
-	}
-	public function PreviousPage() {
-		$page = Page::get()->filter(array(
-			'ParentID' => $this->ParentID,
-			'Sort:LessThan' => $this->Sort,
-		))->Last();
-
-		return $page;
-	}
-
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->removeByName('Contributor');
@@ -98,28 +81,28 @@ class Article extends Page {
 
 	public function TranslatorBylineVerb(){
 		$translatorCount = $this->Translators()->Count();
-		if($translatorCount > 1){
+		if ($translatorCount > 1) {
 			return " translate";
-		}else{
+		} else {
 			return " translates";
 		}
 	}
 
-	public function TranslatorByline($links = "true"){
+	public function TranslatorByline($links = "true") {
 		//$TranslatorListNice(0)<% if OriginalLanguage %> $TranslatorBylineVerb from $OriginalLanguage<% end_if %><% if $Authors %><% loop $Authors %>. Original by $Name <% end_loop %> <% end_if %>
 		$bylineText = new HTMLText();
 		$byline = '';
 
-		//Person A, Person B, Person C 
-		if($this->Translators()->First()){
+		//Person A, Person B, Person C
+		if ($this->Translators()->First()) {
 			$byline .= $this->getWriterListNice($links, $this->Translators());
 		}
 		//translate(s) from OriginalLanguage
-		if($this->OriginalLanguage){
-			$byline .= $this->TranslatorBylineVerb().' from the '.$this->OriginalLanguage;
+		if ($this->OriginalLanguage) {
+			$byline .= $this->TranslatorBylineVerb() . ' from the ' . $this->OriginalLanguage;
 		}
 
-		if($this->Authors()->First()){
+		if ($this->Authors()->First()) {
 
 			//original by:
 			$byline .= ' original by ';
@@ -133,27 +116,25 @@ class Article extends Page {
 
 		return $bylineText;
 
-
 	}
 
-
-	public function getWriterListNice($links = "true", $writers){
+	public function getWriterListNice($links = "true", $writers) {
 
 		$writerString = new HTMLText();
 
-		foreach($writers as $writer){
+		foreach ($writers as $writer) {
 
-			if($links == "true"){
-				$writerArray[] = '<a href="'.$writer->Link().'">'.$writer->Name.'</a>';
-			}else{
+			if ($links == "true") {
+				$writerArray[] = '<a href="' . $writer->Link() . '">' . $writer->Name . '</a>';
+			} else {
 				$writerArray[] = $writer->Name;
 			}
 		}
 
-		if($writers->Count() == 2){
-			$writerString->setValue($writerArray[0].' and '.$writerArray[1]);
-		}else{
-			$writerString->setValue(implode( ', ', $writerArray));
+		if ($writers->Count() == 2) {
+			$writerString->setValue($writerArray[0] . ' and ' . $writerArray[1]);
+		} else {
+			$writerString->setValue(implode(', ', $writerArray));
 		}
 
 		return $writerString;
