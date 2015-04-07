@@ -16,7 +16,22 @@ class Page extends SiteTree {
 		return $fields;
 	}
 
+	public function NextPage() {
+		$page = Page::get()->filter(array(
+			'ParentID' => $this->ParentID,
+			'Sort:GreaterThan' => $this->Sort,
+		))->First();
 
+		return $page;
+	}
+	public function PreviousPage() {
+		$page = Page::get()->filter(array(
+			'ParentID' => $this->ParentID,
+			'Sort:LessThan' => $this->Sort,
+		))->Last();
+
+		return $page;
+	}
 
 }
 class Page_Controller extends ContentController {
@@ -56,7 +71,7 @@ class Page_Controller extends ContentController {
 
 	}
 
-	public function getBlog(){
+	public function getBlog() {
 		return NewsHolder::get()->First();
 	}
 

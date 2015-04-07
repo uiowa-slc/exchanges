@@ -28,22 +28,6 @@ class Issue extends Page {
 	private static $allowed_children = array('Article');
 
 	//private static $icon = array("mysite/images/tree/toc","file");
-	public function NextPage() {
-		$page = Page::get()->filter(array(
-			'ParentID' => $this->ParentID,
-			'Sort:GreaterThan' => $this->Sort,
-		))->First();
-
-		return $page;
-	}
-	public function PreviousPage() {
-		$page = Page::get()->filter(array(
-			'ParentID' => $this->ParentID,
-			'Sort:LessThan' => $this->Sort,
-		))->Last();
-
-		return $page;
-	}
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
