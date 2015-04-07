@@ -260,6 +260,10 @@ h2, h3{ page-break-after: avoid; }
 @media only screen and (min-width: 64.063em){
 .issue-date span{ padding-top: 1.09375rem; }
 }
+.issue-title{ display: inline-block; border-bottom-width: 3px; border-bottom-color: white; border-bottom-style: solid; padding-top: 0.625rem; padding-right: 0.625rem; padding-bottom: 0.625rem; padding-left: 0.625rem; font-family: futura-pt, Helvetica, Arial, sans-serif; font-size: 1.375rem; color: white; -webkit-transition-property: all; -webkit-transition-duration: 0.8s; -webkit-transition-timing-function: initial; -webkit-transition-delay: initial; text-transform: uppercase; }
+@media only screen and (min-width: 64.063em){
+.issue-title{ padding-top: 0.8125rem; padding-right: 0.8125rem; padding-bottom: 0.8125rem; padding-left: 0.8125rem; font-size: 2rem; }
+}
 .cover-container{ background-size: cover; background-repeat: no-repeat no-repeat; }
 .cover-container .top-bar{ background-color: rgba(68, 68, 68, 0); }
 .cover-container .contain-to-grid{ background-image: none; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-position: initial initial; background-repeat: initial initial; }
@@ -270,10 +274,6 @@ h2, h3{ page-break-after: avoid; }
 .cover-content{ color: white; text-align: center; background-attachment: fixed; padding-bottom: 20px; background-position: 50% 50%; }
 .cover-content span{ color: rgb(238, 238, 238); text-transform: uppercase; font-family: futura-pt, Helvetica, Arial, sans-serif; font-size: 0.9375rem; display: block; }
 .cover-content span a{ color: white; }
-.cover-content .issue-title{ display: inline-block; border-bottom-width: 3px; border-bottom-color: white; border-bottom-style: solid; padding-top: 0.625rem; padding-right: 0.625rem; padding-bottom: 0.625rem; padding-left: 0.625rem; font-family: futura-pt, Helvetica, Arial, sans-serif; font-size: 1.375rem; color: white; -webkit-transition-property: all; -webkit-transition-duration: 0.8s; -webkit-transition-timing-function: initial; -webkit-transition-delay: initial; }
-@media only screen and (min-width: 64.063em){
-.cover-content .issue-title{ padding-top: 0.8125rem; padding-right: 0.8125rem; padding-bottom: 0.8125rem; padding-left: 0.8125rem; font-size: 2rem; }
-}
 @media only screen and (min-width: 40.063em){
 .cover-content{ padding-top: 150px; min-height: 500px; }
 }
@@ -283,6 +283,9 @@ h2, h3{ page-break-after: avoid; }
 @media only screen and (min-width: 90.063em){
 .cover-content{ padding-top: 200px; min-height: 700px; }
 }
+.issue-card-list li.browse-container .browse { min-height: 420px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
+.issue-card-list li.browse-container .browse p { font-size: 1.4em; }
+.issue-card-list li.browse-container .browse p a { display: inline; }
 .side-nav li.title-nav #title-nav-menu .columns, ul.off-canvas-list li.title-nav #title-nav-menu .columns { padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }
 @media screen and (min-width: 480px){
 .footer p{ font-size: 0.8125rem; }

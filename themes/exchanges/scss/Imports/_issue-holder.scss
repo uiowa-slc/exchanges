@@ -56,7 +56,7 @@
             .issue-title {
 
                 font-size: rem-calc(23);
-
+                padding-top: 0;
                 @media #{$large-up} {
                     font-size: rem-calc(28);
                 }
