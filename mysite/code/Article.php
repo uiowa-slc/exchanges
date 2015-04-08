@@ -79,7 +79,7 @@ class Article extends Page {
 	}
 	private static $listing_page_class = 'Issue';
 
-	public function TranslatorBylineVerb(){
+	public function TranslatorBylineVerb() {
 		$translatorCount = $this->Translators()->Count();
 		if ($translatorCount > 1) {
 			return " translate";
@@ -97,15 +97,15 @@ class Article extends Page {
 		if ($this->Translators()->First()) {
 			$byline .= $this->getWriterListNice($links, $this->Translators());
 		}
-		//translate(s) from OriginalLanguage
+		//translate(s) from OriginalLanguage.
 		if ($this->OriginalLanguage) {
-			$byline .= $this->TranslatorBylineVerb() . ' from the ' . $this->OriginalLanguage;
+			$byline .= $this->TranslatorBylineVerb() . ' from the ' . $this->OriginalLanguage . '. ';
 		}
 
 		if ($this->Authors()->First()) {
 
-			//original by:
-			$byline .= ' original by ';
+			//Original by:
+			$byline .= 'Original by ';
 
 			//Person A and Person B.
 			$byline .= $this->getWriterListNice("false", $this->Authors());
