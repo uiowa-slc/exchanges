@@ -1,11 +1,12 @@
 <% include Breadcrumb %>
+<div class="article">
 <div class="row">
 
 
-	<div id="poetry">
+	<div id="poetry" data-equalizer>
 		<div class="large-6 columns poem" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article class="">
-				<div class="poem-unstranslated-title poem-info">
+				<div class="poem-unstranslated-title poem-info" data-equalizer-watch>
 					<% if $UntranslatedTitle %><h1> $UntranslatedTitle</h1><% end_if %>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
 						<% else %>
@@ -27,7 +28,7 @@
 		</div>
 		<div class="large-6 columns poem" id="translated-work">
 			<article class="translated">
-				<div class="poem-translated-title poem-info">
+				<div class="poem-translated-title poem-info" data-equalizer-watch>
 					<% if $TranslatedTitle %><h1>$TranslatedTitle</h1><% else %>
 					<h1>$Title</h1>
 					<% end_if %>
@@ -62,4 +63,5 @@
 		<p><% loop $Translators %><a href="$Link">$Name</a><br /><% end_loop %></p>
 		<a class="close-reveal-modal">&#215;</a>
 	</div>
+</div>
 </div>

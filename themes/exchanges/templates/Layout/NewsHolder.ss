@@ -25,20 +25,7 @@
                     
                 <% end_if %>
             </h1>
-        <% if not $ArchiveYear %>
-        <div class="content-text">
-            $Content
-            $Form
-        </div>
-        <% end_if %>
-        <hr />
         <% if $PaginatedList.Exists %>
-            
-            <% if $ArchiveYear %>
-
-            <% else %>
-                <h3 class="banner text-center">Recent Posts</h3>
-            <% end_if %>
             <% loop $PaginatedList %>
                 <% include PostSummary %>
             <% end_loop %>
