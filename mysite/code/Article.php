@@ -1,16 +1,18 @@
 <?php
 class Article extends Page {
 	private static $db = array(
+		'Title' => 'HTMLText',
 		'IsPublished' => 'Boolean',
 		'OriginalLanguage' => 'Text',
-		'UntranslatedTitle' => 'Text',
-		'TranslatedTitle' => 'Text',
+		'UntranslatedTitle' => 'HTMLText',
+		'TranslatedTitle' => 'HTMLText',
 		'Translator' => 'HTMLText',
 		"Content2" => "HTMLText",
 		"Content3" => "HTMLText",
 		"TranslatorNote" => "HTMLText",
 		"TranslationRTL" => "Boolean",
 		"OriginalRTL" => "Boolean",
+		'IsCompilation' => 'Boolean',
 	);
 
 	private static $has_one = array('Image' => 'Image');
@@ -47,18 +49,32 @@ class Article extends Page {
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
+		$fields->removeByName('Title');
+		$fields->removeByName('MenuTitle');
 		$fields->removeByName('Contributor');
 		$fields->removeByName('Issue');
 		$fields->removeByName('Image');
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Content');
 
-		$fields->addFieldToTab('Root.Main', new TextField('UntranslatedTitle', ' Original Title'));
+		$fields->addFieldToTab('Root.Main', new CheckboxField('IsCompilation', 'This is a compilation of more than one poem'));
+
+		$titleField = new HTMLEditorField('Title', 'Page Name (Compilation Name)');
+		$titleField->setRows(1);
+
+		$untranslatedTitleField = new HTMLEditorField('UntranslatedTitle', ' Original Title');
+		$untranslatedTitleField->setRows(1);
+
+		$fields->addFieldToTab('Root.Main', $titleField);
+		$fields->addFieldToTab('Root.Main', $untranslatedTitleField);
 		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalRTL', 'Original language is read/written from right to left'));
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Original Work'));
 
-		$fields->addFieldToTab('Root.Main', new TextField('TranslatedTitle', ' Translated Title (if applicable)'));
+		$translatedTitleField = new HTMLEditorField('TranslatedTitle', ' Translated Title');
+		$translatedTitleField->setRows(1);
+
+		$fields->addFieldToTab('Root.Main', $translatedTitleField);
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Translated Work'));
 
 		$fields->addFieldToTab('Root.TranslatorNote', new HTMLEditorField('TranslatorNote', 'Translator Note'));
@@ -88,6 +104,35 @@ class Article extends Page {
 		}
 	}
 
+	public function getMenuTitle() {
+		if ($value = parent::getMenuTitle()) {
+			return Convert::html2raw($value);
+		}
+	}
+
+	public function getTitle() {
+		if ($value = $this->getField("Title")) {
+			return $this->removePTags($value);
+		}
+	}
+	public function getUntranslatedTitle() {
+		if ($value = $this->getField("UntranslatedTitle")) {
+
+			return $this->removePTags($value);
+		}
+	}
+	public function getTranslatedTitle() {
+		if ($value = $this->getField("TranslatedTitle")) {
+			return $this->removePTags($value);
+		}
+	}
+	private function removePTags($value) {
+		$array = array(
+			'<p>' => '',
+			'</p>' => '',
+		);
+		return strtr($value, $array);
+	}
 	public function TranslatorByline($links = "true") {
 		//$TranslatorListNice(0)<% if OriginalLanguage %> $TranslatorBylineVerb from $OriginalLanguage<% end_if %><% if $Authors %><% loop $Authors %>. Original by $Name <% end_loop %> <% end_if %>
 		$bylineText = new HTMLText();

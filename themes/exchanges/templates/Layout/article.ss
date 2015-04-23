@@ -1,5 +1,14 @@
 <% include Breadcrumb %>
 <div class="article">
+
+<% if $isCompilation %>
+<div class="row">
+	<div class="medium-12 columns">
+		 <h1 class="text-center compilation-title">$Title</h1>
+	</div>
+</div>
+<% end_if %>
+
 <div class="row">
 
 
