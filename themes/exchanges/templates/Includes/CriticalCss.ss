@@ -301,7 +301,7 @@ h2, h3{ page-break-after: avoid; }
 .footer .logo.uiowa{ max-width: 200px; }
 .colgroup::before, .colgroup::after{ content: ''; display: table; clear: both; }
 body{ background-image: url(../images/tile.jpeg); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; background-position: initial initial; background-repeat: initial initial; }
-h1{ font-weight: bold; }
+h1{ font-weight: bold; margin-bottom: 1rem; }
 h1, h2, h3{ letter-spacing: 0.7px; }
  h2.banner{ text-transform: uppercase; font-size: 0.75em; margin-top: 1.09375rem; margin-right: 0px; margin-bottom: 1.09375rem; margin-left: 0px; }
 hr{ margin-bottom: 1rem; }
