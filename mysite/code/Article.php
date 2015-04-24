@@ -59,10 +59,10 @@ class Article extends Page {
 
 		$fields->addFieldToTab('Root.Main', new CheckboxField('IsCompilation', 'This is a compilation of more than one poem'));
 
-		$titleField = new HTMLEditorField('Title', 'Page Name (Compilation Name)');
+		$titleField = new HTMLEditorField('Title', 'Page Title');
 		$titleField->setRows(1);
 
-		$untranslatedTitleField = new HTMLEditorField('UntranslatedTitle', ' Original Title');
+		$untranslatedTitleField = new HTMLEditorField('UntranslatedTitle', 'Original Title');
 		$untranslatedTitleField->setRows(1);
 
 		$fields->addFieldToTab('Root.Main', $titleField);
