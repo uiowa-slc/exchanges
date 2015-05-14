@@ -6,7 +6,7 @@
 	</header>
 	<div class="row content-text">
 		<div class="large-9 columns">
-			$Content
+			$BiographicalDetails
 				<ul>
 					<% loop Articles %>
 					<li><a href="$Link">$Title</a></li>
