@@ -1,13 +1,23 @@
 <% include Breadcrumb %>
 <div class="article">
 
-<% if $isCompilation %>
-<div class="row">
-	<div class="medium-12 columns">
-		 <h1 class="text-center compilation-title">$Title</h1>
+<% if $IsCompilation %>
+	<div class="row">
+		<div class="medium-12 columns">
+			 <h1 class="text-center compilation-title">$Title</h1>
+		</div>
 	</div>
-</div>
+<% else_if $UntranslatedTitle && $TranslatedTitle %>
+
+<% else %>
+	<div class="row">
+		<div class="medium-12 columns">
+			 <h1 class="text-center compilation-title">$Title</h1>
+		</div>
+	</div>
 <% end_if %>
+
+
 
 <div class="row">
 
@@ -16,10 +26,8 @@
 		<div class="large-6 columns poem" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article class="">
 				<div class="poem-unstranslated-title poem-info" data-equalizer-watch>
-					<% if $UntranslatedTitle %><h1> $UntranslatedTitle</h1><% end_if %>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
-						<% else %>
-						<h1>$Title</h1>
+							<h1>$UntranslatedTitle</h1>
 						<% end_if %>
 					<span class="author">
 						<% if $Authors %>Written By
@@ -38,8 +46,7 @@
 		<div class="large-6 columns poem" id="translated-work">
 			<article class="translated">
 				<div class="poem-translated-title poem-info" data-equalizer-watch>
-					<% if $TranslatedTitle %><h1>$TranslatedTitle</h1><% else %>
-					<h1>$Title</h1>
+					<% if $TranslatedTitle && $TranslatedTitle %><h1>$TranslatedTitle</h1>
 					<% end_if %>
 					<span class="author">
 						Translated by 
