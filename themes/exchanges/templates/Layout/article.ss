@@ -1,13 +1,7 @@
 <% include Breadcrumb %>
 <div class="article">
 
-<% if $IsCompilation %>
-	<div class="row">
-		<div class="medium-12 columns">
-			 <h1 class="text-center compilation-title">$Title</h1>
-		</div>
-	</div>
-<% else_if $UntranslatedTitle && $TranslatedTitle %>
+<% if $UntranslatedTitle && $TranslatedTitle %>
 
 <% else %>
 	<div class="row">
