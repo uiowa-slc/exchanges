@@ -34,11 +34,11 @@
 					<% if $TranslatedTitle && $TranslatedTitle %><h1>$TranslatedTitle</h1>
 					<% end_if %>
 					<span class="author">
-						Translated by 
+						Translated <% if $OriginalLanguage %>from the {$OriginalLanguage} by <% end_if %>
 						<% loop $Translators %>
 						<a href="$Link">$Name</a><% if not $Last %>, <% end_if %>
 						<% end_loop %>
-						<% if $OriginalLanguage %>from the {$OriginalLanguage}. <% end_if %>
+						
 						<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
 					</span>
 
