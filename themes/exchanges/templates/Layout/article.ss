@@ -1,32 +1,23 @@
 <% include Breadcrumb %>
 <div class="article">
 
-<% if $UntranslatedTitle && $TranslatedTitle %>
-
-<% else %>
-	<div class="row">
-		<div class="medium-12 columns">
-			 <h1 class="text-center compilation-title">$Title</h1>
-		</div>
-	</div>
-<% end_if %>
-
-
 
 <div class="row">
 
 
 	<div id="poetry" data-equalizer>
 		<div class="large-6 columns poem" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
-			<article class="">
+			<article>
 				<div class="poem-unstranslated-title poem-info" data-equalizer-watch>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
 							<h1>$UntranslatedTitle</h1>
+						<% else %>
+							<h1>$Title</h1>
 						<% end_if %>
 					<span class="author">
-						<% if $Authors %>Written By
+						<% if $Authors %>By
 						<% loop $Authors %>
-						$Name<% if not $Last %>, <% end_if %>
+							<a href="$Link">$Name</a><% if not $Last %>, <% end_if %>
 						<% end_loop %> 
 						<% end_if %>
 					</span>
@@ -45,7 +36,7 @@
 					<span class="author">
 						Translated by 
 						<% loop $Translators %>
-						<a href="contributors/show/{$ID}">$Name</a><% if not $Last %>, <% end_if %>
+						<a href="$Link">$Name</a><% if not $Last %>, <% end_if %>
 						<% end_loop %>
 						<% if $OriginalLanguage %>from the {$OriginalLanguage}. <% end_if %>
 						<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>

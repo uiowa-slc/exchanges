@@ -3,7 +3,7 @@
 		<h2>Works contributed by {$Contributor.Name}:</h2>
 		<hr />
 		<% if $Contributor.Articles %>
-			<ul class="small-block-grid-1 large-block-grid-3 text-center">
+			<ul class="small-block-grid-1 large-block-grid-3">
 				<% loop $Contributor.Articles %>
 					<% include PoemCard %>
 				<% end_loop %>

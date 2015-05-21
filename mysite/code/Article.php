@@ -153,7 +153,7 @@ class Article extends Page {
 			$byline .= 'Original by ';
 
 			//Person A and Person B.
-			$byline .= $this->getWriterListNice("false", $this->Authors());
+			$byline .= $this->getWriterListNice("true", $this->Authors());
 			$byline .= '.';
 		}
 
