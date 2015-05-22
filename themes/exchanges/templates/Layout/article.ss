@@ -23,7 +23,7 @@
 						<% end_loop %> 
 						<% end_if %>
 					</span>
-					<p class="show-for-small-only author">
+					<p class="hide-for-large-up author">
 						<a href="#translated-work">View Translated Work &darr;</a>
 					</p>
 				</div>
@@ -48,12 +48,12 @@
 							<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
 						</span>
 
-					<p class="show-for-small-only author">
+					<p class="hide-for-large-up author">
 						<a href="#original-work">View Original Work &uarr;</a>
 					</p>
 				</div>
 				$Content2
-				<p class="show-for-small-only">
+				<p class="hide-for-large-up">
 					<br /><br /><a href="#original-work">View Original Work &uarr;</a>
 				</p>
 			</article>
