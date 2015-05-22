@@ -1,6 +1,6 @@
 <article>
 	<div class="row content-page">
-		<div class="large-10 columns">
+		<div class="large-12 columns">
 			<header>
 				<h1>Archive</h1>
 			</header>

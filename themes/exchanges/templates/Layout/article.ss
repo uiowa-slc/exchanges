@@ -9,11 +9,13 @@
 		<div class="large-6 columns poem" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article>
 				<div class="poem-unstranslated-title poem-info" data-equalizer-watch>
+					<div>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
 							<h1>$UntranslatedTitle</h1>
 						<% else %>
 							<h1>$Title</h1>
 						<% end_if %>
+					</div>
 					<span class="author">
 						<% if $Authors %>By
 						<% loop $Authors %>
@@ -31,16 +33,20 @@
 		<div class="large-6 columns poem" id="translated-work">
 			<article class="translated">
 				<div class="poem-translated-title poem-info" data-equalizer-watch>
-					<% if $TranslatedTitle && $TranslatedTitle %><h1>$TranslatedTitle</h1>
-					<% end_if %>
-					<span class="author">
-						Translated <% if $OriginalLanguage %>from the {$OriginalLanguage} by <% end_if %>
-						<% loop $Translators %>
-						<a href="$Link">$Name</a><% if not $Last %>, <% end_if %>
-						<% end_loop %>
-						
-						<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
-					</span>
+					<div>
+						<% if $TranslatedTitle && $TranslatedTitle %><h1>$TranslatedTitle</h1>
+						<% else %> 
+						<h1 style="visibility:hidden;">$Title</h1>
+						<% end_if %>
+					</div>
+						<span class="author">
+							Translated <% if $OriginalLanguage %>from the {$OriginalLanguage} by <% end_if %>
+							<% loop $Translators %>
+							<a href="$Link">$Name</a><% if not $Last %>, <% end_if %>
+							<% end_loop %>
+							
+							<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
+						</span>
 
 					<p class="show-for-small-only author">
 						<a href="#original-work">View Original Work &uarr;</a>

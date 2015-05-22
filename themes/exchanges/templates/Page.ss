@@ -1,11 +1,12 @@
 <!doctype html>
-<html class="no-js wf-loading" lang="$ContentLocale.ATT" dir="$i18nScriptDirection.ATT">
+<html lang="$ContentLocale.ATT" dir="$i18nScriptDirection.ATT">
 <head>
 	<% base_tag %>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="google" value="notranslate" />
 	<title><% if $MetaTitle %>$MetaTitle.NoHTML<% else %>$Title.NoHTML<% end_if %> - $SiteConfig.Title</title>
+	
 	<meta name="description" content="$MetaDescription.ATT" />
 	<%--http://ogp.me/--%>
 	<meta property="og:site_name" content="$SiteConfig.Title.ATT" />
@@ -76,7 +77,7 @@
 <script type="text/javascript">
 function downloadJSAtOnload() {
 var element = document.createElement("script");
-element.src = "themes/exchanges/build/build.js";
+element.src = "themes/exchanges/build/build.src.js";
 document.body.appendChild(element);
 }
 if (window.addEventListener)
@@ -85,7 +86,16 @@ else if (window.attachEvent)
 window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
 </script>
-<script src="//use.typekit.net/gor3pds.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+(function(d) {
+  var tkTimeout=3000;
+  if(window.sessionStorage){if(sessionStorage.getItem('useTypekit')==='false'){tkTimeout=0;}}
+  var config = {
+    kitId: 'gor3pds',
+    scriptTimeout: tkTimeout
+  },
+  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+"wf-inactive";if(window.sessionStorage){sessionStorage.setItem("useTypekit","false")}},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+="wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);
+</script>
 </body>
 </html>
