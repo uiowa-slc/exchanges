@@ -6,7 +6,7 @@
 
 
 	<div id="poetry" data-equalizer>
-		<div class="large-6 columns poem" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
+		<div class="large-6 columns poem {$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article>
 				<div class="poem-unstranslated-title poem-info" data-equalizer-watch>
 					<div>

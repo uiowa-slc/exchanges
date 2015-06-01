@@ -74,6 +74,12 @@
             	padding: 0 $article-poetry-padding/2;
             	//padding-right: $column-gutter;
             }
+
+            &.ar,&.ku{
+                font-size: rem-calc(17);
+            }
+
+
        
         }
         #translated-work {
