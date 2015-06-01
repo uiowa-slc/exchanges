@@ -12,7 +12,8 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="span6 column" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
+
+		<div class="span6 column" lang="{$defineLanguage($OriginalLanguage)}" id="original-work" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<h1>$UntranslatedTitle</h1>
 			<span class="author">
 				<% loop $Authors %>
