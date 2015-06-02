@@ -64,7 +64,7 @@
 		</div>
 		
 	</div>
-
+</div>
 	<% include ArticleSubNav %>
 
 	<div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
@@ -74,5 +74,5 @@
 		<p><% loop $Translators %><a href="$Link">$Name</a><br /><% end_loop %></p>
 		<a class="close-reveal-modal">&#215;</a>
 	</div>
-</div>
+
 </div>
