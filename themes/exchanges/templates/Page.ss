@@ -32,11 +32,11 @@
 		<meta property="og:image" content="<% with $Emblem %>$SetWidth(1200).AbsoluteURL.ATT<% end_with %>" />
 	<% else_if $ClassName == "Article" %>
 		<% with $Parent %>
-			<meta property="og:image" content="$AbsoluteURL.ATT" class="$Title" />
+			<meta property="og:image" content="$SetWidth(1200).AbsoluteURL.ATT" class="$Title" />
 		<% end_with %>
 	<% else %>
 		<% with $FeaturedIssue %>
-			<meta property="og:image" content="<% with $Emblem %>$AbsoluteURL.ATT<% end_with %>" />
+			<meta property="og:image" content="<% with $Emblem %>$SetWidth(1200).AbsoluteURL.ATT<% end_with %>" />
 		<% end_with %>
 	<% end_if %>
 
