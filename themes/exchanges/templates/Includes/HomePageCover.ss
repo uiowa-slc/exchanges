@@ -6,7 +6,7 @@
 		</div>
 		<div class="row cover-content">
 			<div class="large-12 columns">
-				<img src="{$ThemeDir}/images/exchanges-logo.png" />
+				<img src="{$ThemeDir}/images/exchanges-logo.png" alt="Exchanges Logo" />
 				<% with FeaturedIssue %>
 					<span>Read our latest issue: <br /> <a class="issue-title" href="$Link">$Title</a></span>
 				<% end_with %>
