@@ -18,7 +18,7 @@
 	<% if $URLSegment = 'home' %>
 		<meta property="og:title" content="$SiteConfig.Title.ATT" />
 	<% else %>
-		<meta property="og:title" content="$Title.ATT" />
+		<meta property="og:title" content="$Title.ATT - Exchanges Literary Journal" />
 	<% end_if %>
 	<% if $ClassName == "Article" %>
 		<meta property="og:description" content="$TranslatorByline("false").ATT" />
