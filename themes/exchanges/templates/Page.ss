@@ -29,7 +29,7 @@
 	<meta property="og:url" content="$AbsoluteLink.ATT" />
 
 	<% if $Emblem %>
-		<meta property="og:image" content="<% with $Emblem %>$AbsoluteURL.ATT<% end_with %>" />
+		<meta property="og:image" content="<% with $Emblem %>$SetWidth(1200).AbsoluteURL.ATT<% end_with %>" />
 	<% else_if $ClassName == "Article" %>
 		<% with $Parent %>
 			<meta property="og:image" content="$AbsoluteURL.ATT" class="$Title" />
