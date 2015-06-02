@@ -5,7 +5,11 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="google" value="notranslate" />
-	<title><% if $MetaTitle %>$MetaTitle.NoHTML<% else %>$Title.NoHTML<% end_if %> - $SiteConfig.Title</title>
+	<% if $URLSegment = 'home' %>
+		<title>$SiteConfig.Title - The University of Iowa</title>
+	<% else %>
+		<title>$Title - $SiteConfig.Title - The University of Iowa</title>
+	<% end_if %>
 	
 	<meta name="description" content="$MetaDescription.ATT" />
 	<%--http://ogp.me/--%>

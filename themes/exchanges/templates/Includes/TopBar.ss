@@ -1,6 +1,6 @@
 <div class="nav-container contain-to-grid" <% if $Parent.ClassName == "Issue" %>style="background-image:url('$Parent.Emblem.URL');"<% end_if %>">
 	<div class="nav-screen">
-		<nav class="top-bar" data-topbar role="navigation">
+		<nav class="top-bar" data-topbar role="navigation" data-options="align:right">
 			<ul class="title-area">
 				<li class="name">
 					<h1 class="show-for-large-up"><a href="{$baseUrl}">$SiteConfig.Title</a></h1>
