@@ -85,7 +85,7 @@
 <script type="text/javascript">
 function downloadJSAtOnload() {
 var element = document.createElement("script");
-element.src = "themes/exchanges/build/build.src.js";
+element.src = "themes/exchanges/build/build.js";
 document.body.appendChild(element);
 }
 if (window.addEventListener)
