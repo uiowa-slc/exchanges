@@ -15,7 +15,11 @@
 	<%--http://ogp.me/--%>
 	<meta property="og:site_name" content="$SiteConfig.Title.ATT" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="$Title.ATT" />
+	<% if $URLSegment = 'home' %>
+		<meta property="og:title" content="$SiteConfig.Title.ATT" />
+	<% else %>
+		<meta property="og:title" content="$Title.ATT" />
+	<% end_if %>
 	<% if $ClassName == "Article" %>
 		<meta property="og:description" content="$TranslatorByline("false").ATT" />
 	<% else %>
