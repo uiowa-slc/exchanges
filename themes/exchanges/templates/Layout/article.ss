@@ -27,7 +27,9 @@
 						<a href="#translated-work">View Translated Work &darr;</a>
 					</p>
 				</div>
-				$Content
+				<div class="poem-content">
+					$Content
+				</div>
 			</article>
 		</div>
 		<div class="large-6 columns poem" id="translated-work">
@@ -52,7 +54,9 @@
 						<a href="#original-work">View Original Work &uarr;</a>
 					</p>
 				</div>
+				<div class="poem-content">
 				$Content2
+				</div>
 				<p class="hide-for-large-up">
 					<br /><br /><a href="#original-work">View Original Work &uarr;</a>
 				</p>

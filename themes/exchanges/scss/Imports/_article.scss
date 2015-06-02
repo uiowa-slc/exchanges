@@ -74,9 +74,17 @@
             	padding: 0 $article-poetry-padding/2;
             	//padding-right: $column-gutter;
             }
-
             &.ar,&.ku{
-                font-size: rem-calc(17);
+                .poem-content{
+                    
+                    font-family: $arabic-font-family;
+
+                    h1,h2,h3,h4,h5,h6 {
+                        font-family: $arabic-font-family;
+                    }
+
+                    font-size: rem-calc(17);
+                }
             }
 
 
