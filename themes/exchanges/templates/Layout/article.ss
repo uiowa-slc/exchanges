@@ -5,7 +5,7 @@
 <div class="row">
 
 
-	<div id="poetry" data-equalizer>
+	<div id="poetry" data-equalizer data-equalizer-mq="large-up">
 		<div class="large-6 columns poem {$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article>
 				<div class="poem-unstranslated-title poem-info" data-equalizer-watch>
