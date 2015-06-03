@@ -18,7 +18,10 @@
 	}
 
 	.issue-title{
-		font-size: rem-calc(22);
+		font-size: rem-calc(26);
+		@media #{$medium-up}{
+			font-size: rem-calc(32);
+		}
 		@media #{$large-up}{
 			font-size: rem-calc(48);
 		}
