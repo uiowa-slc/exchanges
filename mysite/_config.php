@@ -20,3 +20,7 @@ HtmlEditorConfig::get('cms')->insertButtonsBefore(
     'styleselect',
     'removeformat'
 );
+
+if(Director::isLive()) {
+	Director::forceSSL(array('/^Security/','/^admin/'));
+}
