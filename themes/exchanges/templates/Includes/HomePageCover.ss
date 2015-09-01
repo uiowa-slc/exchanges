@@ -1,4 +1,4 @@
-<div class="cover-container b-lazy" data-src="$FeaturedIssue.Emblem.URL">
+<div class="cover-container b-lazy" data-src="$FeaturedIssue.Emblem.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $FeaturedIssue.Emblem.PercentageX% $FeaturedIssue.Emblem.PercentageY%; background-size: cover;">
 	<div class="cover-screen">
 		<% include TopBar %>
 		<div class="row issue-date">

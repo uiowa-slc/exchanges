@@ -10,36 +10,10 @@
 	<% else %>
 		<title>$Title - $SiteConfig.Title - The University of Iowa</title>
 	<% end_if %>
-	
-	<meta name="description" content="$MetaDescription.ATT" />
-	<%--http://ogp.me/--%>
-	<meta property="og:site_name" content="$SiteConfig.Title.ATT" />
-	<meta property="og:type" content="website" />
-	<% if $URLSegment = 'home' %>
-		<meta property="og:title" content="$SiteConfig.Title.ATT" />
-	<% else %>
-		<meta property="og:title" content="$Title.ATT - Exchanges Literary Journal" />
-	<% end_if %>
-	<% if $ClassName == "Article" %>
-		<meta property="og:description" content="$TranslatorByline("false").ATT" />
-	<% else %>
-		<meta property="og:description" content="Exchanges began in 1989-90, as a project of the Iowa Translation Workshop when I was director. The first issue was cyclostyled, the title being copied from Ulalume González de León’s short story “Intercambios,” translated by Stephanie Lovelady, a student in the Workshop. All texts were presented bilingually." />
-	<% end_if %>
-	
-	<meta property="og:url" content="$AbsoluteLink.ATT" />
+	<% include OpenGraph %>
 
-	<% if $Emblem %>
-		<meta property="og:image" content="<% with $Emblem %>$SetWidth(1200).AbsoluteURL.ATT<% end_with %>" />
-	<% else_if $ClassName == "Article" %>
-		<% with $Parent %>
-			<meta property="og:image" content="$SetWidth(1200).AbsoluteURL.ATT" class="$Title" />
-		<% end_with %>
-	<% else %>
-		<% with $FeaturedIssue %>
-			<meta property="og:image" content="<% with $Emblem %>$SetWidth(1200).AbsoluteURL.ATT<% end_with %>" />
-		<% end_with %>
-	<% end_if %>
-
+	<script src="https://use.typekit.net/gor3pds.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 	<style>
 		<% include CriticalCss %>
@@ -70,17 +44,6 @@
 	</div>
 	<% include Footer %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<%-- <script>
-  var cb = function() {
-    var l = document.createElement('link'); l.rel = 'stylesheet';
-    l.href = 'themes/exchanges/css/critical.css';
-    var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-  };
-  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-      webkitRequestAnimationFrame || msRequestAnimationFrame;
-  if (raf) raf(cb);
-  else window.addEventListener('load', cb);
-</script> --%>
 
 <script type="text/javascript">
 function downloadJSAtOnload() {
@@ -94,30 +57,6 @@ else if (window.attachEvent)
 window.attachEvent("onload", downloadJSAtOnload);
 else window.onload = downloadJSAtOnload;
 </script>
-<script type="text/javascript">
-(function(d) {
-  var tkTimeout=3000;
-  if(window.sessionStorage){if(sessionStorage.getItem('useTypekit')==='false'){tkTimeout=0;}}
-  var config = {
-    kitId: 'gor3pds',
-    scriptTimeout: tkTimeout
-  },
-  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+"wf-inactive";if(window.sessionStorage){sessionStorage.setItem("useTypekit","false")}},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+="wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-})(document);
-</script>
-<script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Noto+Serif:400,700,400italic,700italic:latin' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })(); </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

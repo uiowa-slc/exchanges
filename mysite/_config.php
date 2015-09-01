@@ -21,5 +21,5 @@ HtmlEditorConfig::get('cms')->insertButtonsBefore(
     'removeformat'
 );
 if(Director::isLive()) {
-	Director::forceSSL(array('/^Security/','/^admin/'));
+	Director::forceSSL();
 }

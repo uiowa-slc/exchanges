@@ -1,4 +1,4 @@
-<div class="cover-container b-lazy" data-src="$Emblem.URL">
+<div class="cover-container b-lazy" data-src="$Emblem.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $Emblem.PercentageX% $Emblem.PercentageY%; background-size: cover;">
 	<div class="cover-screen">
 		<% include TopBar %>
 

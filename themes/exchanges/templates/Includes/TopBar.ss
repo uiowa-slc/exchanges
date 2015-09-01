@@ -1,4 +1,4 @@
-<div class="nav-container contain-to-grid" <% if $Parent.ClassName == "Issue" %>style="background-image:url('$Parent.Emblem.URL');"<% end_if %>">
+<div class="nav-container contain-to-grid" <% if $Parent.ClassName == "Issue" %>style="background-image:url('$Parent.Emblem.URL');  background-position: $Parent.Emblem.PercentageX% $Parent.Emblem.PercentageY%; background-size: cover;"<% end_if %>">
 	<div class="nav-screen">
 		<nav class="top-bar" data-topbar role="navigation" data-options="align:right">
 			<ul class="title-area">
