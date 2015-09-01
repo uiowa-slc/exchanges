@@ -33,7 +33,5 @@ class Contributor extends DataObject {
         $fields->addFieldToTab('Root.Main', new HTMLEditorField('BiographicalDetails', 'Biographical Details'));
 
         return $fields;
-    }
-    
-
+    }  
 }

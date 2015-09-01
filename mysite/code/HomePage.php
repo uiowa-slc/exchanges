@@ -15,7 +15,7 @@ class HomePage extends Page {
 		
 		$fields = parent::getCMSFields();
 		
-		$fields->removeByName('Content');
+		$fields->renameField('Content', 'Right side content (e.g., "What we\'re reading)');
 		$fields->removeByName('LearnMorePageID'); //inherited from ExpressHomePage, I guess
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Carousel');
@@ -65,7 +65,7 @@ class HomePage_Controller extends Page_Controller {
 	}
 	
 	public function getNewsItems($limit = 3) {
-		$holder = NewsPage::get()>limit($limit)->sort("Date DESC");
+		$holder = NewsPage::get()->limit($limit)->sort("Date DESC");
 		return $holder;
 	}
 	

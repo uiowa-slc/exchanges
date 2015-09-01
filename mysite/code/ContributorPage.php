@@ -20,6 +20,7 @@ class ContributorPage extends Page {
 
 class ContributorPage_Controller extends Page_Controller {
 	private static $allowed_actions = array ("show");
+	
 	public function show(){
 		$contributorID = $this->request->param('ID');
 		if ($contributorID){
@@ -29,13 +30,13 @@ class ContributorPage_Controller extends Page_Controller {
 				);
 
 			if(isset($contributor)){
-				return $this->Customise($Data)->renderWith(array('ContributorPage_show','Page'));
+				return $this->Customise($Data)->renderWith(array('Contributor_show','Page'));
 			}else{
-
+				//return 404 page?
 			}		   
 		}
 		else {
-			return $this->renderWith('Page');
+			return $this->renderWith('Contributor_show','Page');
 		}
 	}
 	

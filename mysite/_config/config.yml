@@ -1,0 +1,6 @@
+Controller:
+ extensions:
+  - SS_MinifiedResponseExtension
+Page:
+  extensions:
+   - WidgetPageExtension
