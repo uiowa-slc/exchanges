@@ -17,15 +17,17 @@
 
 						<% if $ClassName == "NewsHolder" %>
 							<ul class="dropdown">
-								<% loop $BlogPosts %>
+								<% loop $BlogPosts.Limit(5) %>
 									<% include TopBarLinkDropdownItem %>
 								<% end_loop %>
+								<li><a href="$Link">See all posts &rarr;</a></li>
 							</ul>
 						<% else_if $Children %>
 							<ul class="dropdown">
 								<% loop $Children.Sort("Created DESC") %>
 									<% include TopBarLinkDropdownItem %>
 								<% end_loop %>
+								<li><a href="$Link">See all &rarr;</a></li>
 							</ul>
 						<% else_if $ClassName == "RedirectorPage" %>
 							<ul class="dropdown">
@@ -34,6 +36,7 @@
 										<% include TopBarLinkDropdownItem %>
 									<% end_with %>
 								<% end_if %>
+								<li><a href="$Link">See all &rarr;</a></li>
 							</ul>
 						<% end_if %>
 					</li>
