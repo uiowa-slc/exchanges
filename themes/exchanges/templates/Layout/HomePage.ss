@@ -43,7 +43,7 @@
 				</li>
 
 			<% end_loop %>
-			<li><h3 class="text-center"><a href="blog/">Blog Archive</a></h3></li>
+			<li><h3 class="text-center"><a href="blog/">Blog archive</a></h3></li>
 		</ul>
 
 	</div>
