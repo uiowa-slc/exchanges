@@ -130,7 +130,7 @@ class StringTagField extends DropdownField {
 
 		return $this
 			->customise($properties)
-			->renderWith(array("templates/StringTagField"));
+			->renderWith(array("templates/TagField"));
 	}
 
 	/**
@@ -177,7 +177,7 @@ class StringTagField extends DropdownField {
 
 		if($source instanceof DataObject) {
 			$name = $this->getName();
-			$value = $source->$name;
+			$value = explode(',', $source->$name);
 		}
 
 		if($source instanceof SS_List) {
