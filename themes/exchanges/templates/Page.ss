@@ -31,6 +31,10 @@
 	<% else %>
 		<% include TopBar %>
 	<% end_if %>
+	
+	<% if $ClassName == "Article" %>
+		<div class="cover-container b-lazy" data-src="$BannerImage.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $BannerImage.PercentageX% $BannerImage.PercentageY%; background-size: cover;"></div>
+	<% end_if %>
 
 	<div class="main typography" role="main">
 		$Layout

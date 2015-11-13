@@ -33,6 +33,11 @@ class StringTagField extends DropdownField {
 	protected $record;
 
 	/**
+	 * @var bool
+	 */
+	protected $isMultiple = true;
+
+	/**
 	 * @param string $name
 	 * @param string $title
 	 * @param array|SS_List $source
@@ -78,6 +83,24 @@ class StringTagField extends DropdownField {
 		return $this;
 	}
 
+    /**
+	 * @return bool
+	 */
+	public function getIsMultiple() {
+		return $this->isMultiple;
+	}
+
+	/**
+	 * @param bool $isMultiple
+	 *
+	 * @return static
+	 */
+	public function setIsMultiple($isMultiple) {
+		$this->isMultiple = $isMultiple;
+
+		return $this;
+	}
+
 	/**
 	 * @return null|DataObject
 	 */
@@ -118,7 +141,9 @@ class StringTagField extends DropdownField {
 
 		$this->addExtraClass('ss-tag-field');
 
-		$this->setAttribute('multiple', 'multiple');
+        if ($this->getIsMultiple()) {
+		    $this->setAttribute('multiple', 'multiple');
+        }
 
 		if($this->getShouldLazyLoad()) {
 			$this->setAttribute('data-ss-tag-field-suggest-url', $this->getSuggestURL());
@@ -130,7 +155,7 @@ class StringTagField extends DropdownField {
 
 		return $this
 			->customise($properties)
-			->renderWith(array("templates/StringTagField"));
+			->renderWith(array("templates/TagField"));
 	}
 
 	/**
@@ -177,7 +202,7 @@ class StringTagField extends DropdownField {
 
 		if($source instanceof DataObject) {
 			$name = $this->getName();
-			$value = $source->$name;
+			$value = explode(',', $source->$name);
 		}
 
 		if($source instanceof SS_List) {
@@ -282,4 +307,16 @@ class StringTagField extends DropdownField {
 
 		return $items;
 	}
+
+	/**
+	 * DropdownField assumes value will be a scalar so we must
+	 * override validate. This only applies to Silverstripe 3.2+
+	 *
+	 * @param Validator $validator
+	 * @return bool
+	 */
+	public function validate($validator) {
+		return true;
+	}
+
 }

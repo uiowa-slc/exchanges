@@ -15,7 +15,10 @@ class Article extends Page {
 		'IsCompilation' => 'Boolean',
 	);
 
-	private static $has_one = array('Image' => 'Image');
+	private static $has_one = array(
+		'BannerImage' => 'Image'
+		);
+
 	private static $plural_name = 'Articles';
 	private static $belongs_many_many = array(
 		'Issues' => 'Issue',
@@ -260,6 +263,7 @@ class Article extends Page {
 		$untranslatedTitleField = new HTMLEditorField('UntranslatedTitle', 'Original Title');
 		$untranslatedTitleField->setRows(1);
 
+		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for poem"));
 		$fields->addFieldToTab('Root.Main', $titleField);
 		$fields->addFieldToTab('Root.Main', $untranslatedTitleField);
 		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));

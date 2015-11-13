@@ -35,6 +35,11 @@ class TagField extends DropdownField {
 	protected $titleField = 'Title';
 
 	/**
+	 * @var bool
+	 */
+	protected $isMultiple = true;
+
+	/**
 	 * @param string $name
 	 * @param string $title
 	 * @param null|DataList $source
@@ -76,6 +81,24 @@ class TagField extends DropdownField {
 	 */
 	public function setLazyLoadItemLimit($lazyLoadItemLimit) {
 		$this->lazyLoadItemLimit = $lazyLoadItemLimit;
+
+		return $this;
+	}
+
+    /**
+	 * @return bool
+	 */
+	public function getIsMultiple() {
+		return $this->isMultiple;
+	}
+
+	/**
+	 * @param bool $isMultiple
+	 *
+	 * @return static
+	 */
+	public function setIsMultiple($isMultiple) {
+		$this->isMultiple = $isMultiple;
 
 		return $this;
 	}
@@ -130,7 +153,9 @@ class TagField extends DropdownField {
 
 		$this->addExtraClass('ss-tag-field');
 
-		$this->setAttribute('multiple', 'multiple');
+        if ($this->getIsMultiple()) {
+		    $this->setAttribute('multiple', 'multiple');
+        }
 
 		if($this->shouldLazyLoad) {
 			$this->setAttribute('data-ss-tag-field-suggest-url', $this->getSuggestURL());
@@ -207,6 +232,10 @@ class TagField extends DropdownField {
 			$value = $value->column('ID');
 		}
 
+		if(!is_array($value)) {
+			return parent::setValue($value);
+		}
+
 		return parent::setValue(array_filter($value));
 	}
 
@@ -230,8 +259,6 @@ class TagField extends DropdownField {
 		$titleField = $this->getTitleField();
 
 		$source = $this->getSource();
-
-		$dataClass = $source->dataClass();
 
 		$values = $this->Value();
 
@@ -258,10 +285,8 @@ class TagField extends DropdownField {
 					continue;
 				}
 
-				$record = new $dataClass();
-				$record->{$titleField} = $value;
-				$record->write();
-
+				// Get or create record
+				$record = $this->getOrCreateTag($value);
 				$values[$i] = $record->ID;
 			}
 		}
@@ -271,6 +296,31 @@ class TagField extends DropdownField {
 		}
 
 		$relation->setByIDList(array_filter($values));
+	}
+
+	/**
+	 * Get or create tag with the given value
+	 *
+	 * @param string $term
+	 * @return DataObject
+	 */
+	protected function getOrCreateTag($term) {
+		// Check if existing record can be found
+		$source = $this->getSource();
+		$titleField = $this->getTitleField();
+		$record = $source
+			->filter($titleField, $term)
+			->first();
+		if($record) {
+			return $record;
+		}
+
+		// Create new instance if not yet saved
+		$dataClass = $source->dataClass();
+		$record = Injector::inst()->create($dataClass);
+		$record->{$titleField} = $term;
+		$record->write();
+		return $record;
 	}
 
 	/**
@@ -303,28 +353,35 @@ class TagField extends DropdownField {
 		 */
 		$source = $this->getSource();
 
-		$dataClass = $source->dataClass();
-
 		$titleField = $this->getTitleField();
 
-		$term = Convert::raw2sql($term);
-
-		$query = $dataClass::get()
+		$query = $source
 			->filter($titleField . ':PartialMatch:nocase', $term)
 			->sort($titleField)
 			->limit($this->getLazyLoadItemLimit());
 
+		// Map into a distinct list
 		$items = array();
-
+		$titleField = $this->getTitleField();
 		foreach($query->map('ID', $titleField) as $id => $title) {
-			if(!in_array($title, $items)) {
-				$items[] = array(
-					'id' => $id,
-					'text' => $title
-				);
-			}
+			$items[$title] = array(
+				'id' => $id,
+				'text' => $title
+			);
 		}
 
-		return $items;
+		return array_values($items);
 	}
+
+	/**
+	 * DropdownField assumes value will be a scalar so we must
+	 * override validate. This only applies to Silverstripe 3.2+
+	 *
+	 * @param Validator $validator
+	 * @return bool
+	 */
+	public function validate($validator) {
+		return true;
+	}
+
 }
