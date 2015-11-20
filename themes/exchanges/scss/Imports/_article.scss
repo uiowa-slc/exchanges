@@ -97,6 +97,29 @@
             }
         }
     }
+
+    .cover-container {
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #666;
+
+        @media #{$small-up}{
+            min-height: 275px;
+        }
+
+        @media #{$medium-up}{
+            min-height: 350px;
+        }
+
+        @media #{$large-up}{
+            min-height: 425px;
+        }
+
+        @media #{$xlarge-up}{
+            min-height: 525px;
+        }
+    }
 	
 }
 
