@@ -3,33 +3,31 @@ class HomePage extends Page {
 
 	private static $db = array(
 
-	
 	);
 
 	private static $has_one = array(
-		'FeaturedIssue' => 'SiteTree'
+		'FeaturedIssue' => 'SiteTree',
 	);
-	
+
 	function getCMSFields() {
-	
-		
+
 		$fields = parent::getCMSFields();
-		
-		$fields->renameField('Content', 'Right side content (e.g., "What we\'re reading)');
-		$fields->removeByName('LearnMorePageID'); //inherited from ExpressHomePage, I guess
+
+		//$fields->renameField('Content', 'Right side content (e.g., "What we\'re reading)');
+		$fields->removeByName('Content');
+		$fields->removeByName('LearnMorePageID');//inherited from ExpressHomePage, I guess
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Carousel');
 		$fields->removeByName('Quicklinks');
 		$fields->removeByName('Features');
-		
+
 		$treedropdownfield = new TreeDropdownField("FeaturedIssueID", "Newest/Featured Issue", "SiteTree");
 		$fields->addFieldToTab('Root.Main', $treedropdownfield);
-		
+
 		return $fields;
-	}	
+	}
 
 }
-
 
 class HomePage_Controller extends Page_Controller {
 
@@ -48,46 +46,41 @@ class HomePage_Controller extends Page_Controller {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	private static $allowed_actions = array(
 	);
 
 	public function init() {
 		parent::init();
 
-		// Note: you should use SS template require tags inside your templates 
-		// instead of putting Requirements calls here.  However these are 
+		// Note: you should use SS template require tags inside your templates
+		// instead of putting Requirements calls here.  However these are
 		// included so that our older themes still work
 	}
-	
-	public function getDataObjectAsPage(){
+
+	public function getDataObjectAsPage() {
 		$set = DataObjectAsPage::get();
 		return $set;
 	}
-	
+
 	public function getNewsItems($limit = 3) {
 		$holder = NewsPage::get()->limit($limit)->sort("Date DESC");
 		return $holder;
 	}
-	
-	public function getLetterEditor(){
-	
-	
-		$siteTreeID = $this->FeaturedIssue()->ID; 
-		$issue = Issue::get()->byID($siteTreeID);		
+
+	public function getLetterEditor() {
+
+		$siteTreeID   = $this->FeaturedIssue()->ID;
+		$issue        = Issue::get()->byID($siteTreeID);
 		$editorLetter = $issue->LetterFromEditor()->First();
 		return $editorLetter;
 	}
-	
-	public function getFeaturedIssue(){
+
+	public function getFeaturedIssue() {
 		return $this->FeaturedIssue();
 	}
-	
-	public function getFeaturedSegment(){
+
+	public function getFeaturedSegment() {
 		return $this->FeaturedIssue()->URLSegment;
 	}
-	
-	
-
-	
 
 }
