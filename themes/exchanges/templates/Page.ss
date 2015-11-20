@@ -8,7 +8,7 @@
 	<% if $URLSegment = 'home' %>
 		<title>$SiteConfig.Title - The University of Iowa</title>
 	<% else %>
-		<title>$Title - $SiteConfig.Title - The University of Iowa</title>
+		<title>$Title.NoHTML - $SiteConfig.Title - The University of Iowa</title>
 	<% end_if %>
 	<% include OpenGraph %>
 
@@ -33,13 +33,17 @@
 	<% end_if %>
 	
 	<% if $ClassName == "Article" %>
+		<% if $BannerImage %>
 		<div class="cover-container b-lazy" data-src="$BannerImage.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $BannerImage.PercentageX% $BannerImage.PercentageY%; background-size: cover;"></div>
+		<% end_if %>
 	<% end_if %>
 
 	<div class="main typography" role="main">
 		$Layout
 	</div>
+
 	<% include Footer %>
+	$BetterNavigator
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script type="text/javascript">
