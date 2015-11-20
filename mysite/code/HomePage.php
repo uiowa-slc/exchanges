@@ -6,7 +6,7 @@ class HomePage extends Page {
 	);
 
 	private static $has_one = array(
-		'FeaturedIssue' => 'SiteTree',
+		//'FeaturedIssue' => 'SiteTree',
 	);
 
 	function getCMSFields() {
@@ -21,12 +21,19 @@ class HomePage extends Page {
 		$fields->removeByName('Quicklinks');
 		$fields->removeByName('Features');
 
-		$treedropdownfield = new TreeDropdownField("FeaturedIssueID", "Newest/Featured Issue", "SiteTree");
-		$fields->addFieldToTab('Root.Main', $treedropdownfield);
+		//$treedropdownfield = new TreeDropdownField("FeaturedIssueID", "Newest/Featured Issue", "SiteTree");
+		//$fields->addFieldToTab('Root.Main', $treedropdownfield);
 
 		return $fields;
 	}
 
+	public function getFeaturedIssue() {
+		return $this->FeaturedIssue();
+	}
+
+	public function getFeaturedSegment() {
+		return $this->FeaturedIssue()->URLSegment;
+	}
 }
 
 class HomePage_Controller extends Page_Controller {
@@ -73,14 +80,6 @@ class HomePage_Controller extends Page_Controller {
 		$issue        = Issue::get()->byID($siteTreeID);
 		$editorLetter = $issue->LetterFromEditor()->First();
 		return $editorLetter;
-	}
-
-	public function getFeaturedIssue() {
-		return $this->FeaturedIssue();
-	}
-
-	public function getFeaturedSegment() {
-		return $this->FeaturedIssue()->URLSegment;
 	}
 
 }
