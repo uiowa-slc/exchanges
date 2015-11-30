@@ -13,6 +13,7 @@ class Article extends Page {
 		"TranslationRTL" => "Boolean",
 		"OriginalRTL" => "Boolean",
 		'IsCompilation' => 'Boolean',
+		'Artist' => 'Text',
 	);
 
 	private static $has_one = array(
@@ -264,6 +265,7 @@ class Article extends Page {
 		$untranslatedTitleField->setRows(1);
 
 		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for poem"));
+		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Image Artist'));
 		$fields->addFieldToTab('Root.Main', $titleField);
 		$fields->addFieldToTab('Root.Main', $untranslatedTitleField);
 		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));

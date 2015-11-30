@@ -36,6 +36,17 @@
             padding: 0 $article-poetry-padding/2;
         }
     }
+
+    .credits {
+        color: white;
+        font-size: rem-calc(10);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+
     .nav-screen {
         background-color: rgba($topbar-base-color, 0.67);
     }
@@ -99,7 +110,7 @@
     }
 
     .cover-container {
-
+        position:relative;
         background-size: cover;
         background-repeat: no-repeat;
         background-color: #666;
