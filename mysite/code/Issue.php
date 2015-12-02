@@ -7,11 +7,12 @@ class Issue extends Page {
 		"IssueNumber" => "Text",
 		"LetterFromEditorCustomTitle" => "Text",
 		"LetterFromEditor" => "HTMLText",
-
+		"Transparency" => "Varchar(100)",
 	);
 
 	private static $has_one = array(
 		"Emblem" => "Image",
+		
 	);
 
 	private static $plural_name = 'Issues';
@@ -34,6 +35,27 @@ class Issue extends Page {
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Content');
 		$fields->addFieldToTab("Root.Main", new UploadField("Emblem", "Unique image for issue"));
+		
+		$alphadropdownfield = DropdownField::create(
+			'Transparency', 
+			'Cover transparency', 
+			array(
+				'1.0' => '0%',
+				'0.9' => '10%',
+				'0.8' => '20%',
+				'0.7' => '30%',
+				'0.6' => '40%',
+				'0.5' => '50%',
+				'0.4' => '60%',
+				'0.3' => 'Default - 70%',
+				'0.2' => '80%',
+				'0.1' => '90%',
+				'0' => '100%',
+				)
+			); 
+		$alphadropdownfield->setEmptyString("Default - 70%");
+		$fields->addFieldToTab('Root.Main', $alphadropdownfield);
+
 		$fields->addFieldToTab("Root.Main", $dateField = new TextField("IssueDate", "Issue date"));
 		$fields->addFieldToTab("Root.Main", new TextField("IssueNumber", "Issue number"));
 		$fields->addFieldToTab("Root.Main", new TextField("LetterFromEditorCustomTitle", "Letter From The Editors Custom Title (optional)"));
