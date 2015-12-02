@@ -1,226 +1,223 @@
 <?php
 class Article extends Page {
 	private static $db = array(
-		'Title' => 'HTMLText',
-		'IsPublished' => 'Boolean',
-		'OriginalLanguage' => 'Text',
+		'Title'             => 'HTMLText',
+		'IsPublished'       => 'Boolean',
+		'OriginalLanguage'  => 'Text',
 		'UntranslatedTitle' => 'HTMLText',
-		'TranslatedTitle' => 'HTMLText',
-		'Translator' => 'HTMLText',
-		"Content2" => "HTMLText",
-		"Content3" => "HTMLText",
-		"TranslatorNote" => "HTMLText",
-		"TranslationRTL" => "Boolean",
-		"OriginalRTL" => "Boolean",
-		'IsCompilation' => 'Boolean',
-		'Artist' => 'Text',
+		'TranslatedTitle'   => 'HTMLText',
+		'Translator'        => 'HTMLText',
+		"Content2"          => "HTMLText",
+		"Content3"          => "HTMLText",
+		"TranslatorNote"    => "HTMLText",
+		"TranslationRTL"    => "Boolean",
+		"OriginalRTL"       => "Boolean",
+		'IsCompilation'     => 'Boolean',
+		'Artist'            => 'Text',
 	);
 
 	private static $has_one = array(
-		'BannerImage' => 'Image'
-		);
+		'BannerImage' => 'Image',
+	);
 
-	private static $plural_name = 'Articles';
+	private static $plural_name       = 'Articles';
 	private static $belongs_many_many = array(
-		'Issues' => 'Issue',
-		'Authors' => 'Author',
+		'Issues'      => 'Issue',
+		'Authors'     => 'Author',
 		'Translators' => 'Translator',
 	);
 
 	private static $default_parent = "articles";
-	private static $can_be_root = false;
-	private static $defaults = array("ParentID" => 7);
+	private static $can_be_root    = false;
+	private static $defaults       = array("ParentID" => 7);
 
+	public function languageCode() {
 
-
-
-	public function languageCode(){
-		
 		$languageCodes = array(
-		 "aa" => "Afar",
-		 "ab" => "Abkhazian",
-		 "ae" => "Avestan",
-		 "af" => "Afrikaans",
-		 "ak" => "Akan",
-		 "am" => "Amharic",
-		 "an" => "Aragonese",
-		 "ar" => "Arabic",
-		 "as" => "Assamese",
-		 "av" => "Avaric",
-		 "ay" => "Aymara",
-		 "az" => "Azerbaijani",
-		 "ba" => "Bashkir",
-		 "be" => "Belarusian",
-		 "bg" => "Bulgarian",
-		 "bh" => "Bihari",
-		 "bi" => "Bislama",
-		 "bm" => "Bambara",
-		 "bn" => "Bengali",
-		 "bo" => "Tibetan",
-		 "br" => "Breton",
-		 "bs" => "Bosnian",
-		 "ca" => "Catalan",
-		 "ce" => "Chechen",
-		 "ch" => "Chamorro",
-		 "co" => "Corsican",
-		 "cr" => "Cree",
-		 "cs" => "Czech",
-		 "cu" => "Church Slavic",
-		 "cv" => "Chuvash",
-		 "cy" => "Welsh",
-		 "da" => "Danish",
-		 "de" => "German",
-		 "dv" => "Divehi",
-		 "dz" => "Dzongkha",
-		 "ee" => "Ewe",
-		 "el" => "Greek",
-		 "en" => "English",
-		 "eo" => "Esperanto",
-		 "es" => "Spanish",
-		 "et" => "Estonian",
-		 "eu" => "Basque",
-		 "fa" => "Persian",
-		 "ff" => "Fulah",
-		 "fi" => "Finnish",
-		 "fj" => "Fijian",
-		 "fo" => "Faroese",
-		 "fr" => "French",
-		 "fy" => "Western Frisian",
-		 "ga" => "Irish",
-		 "gd" => "Scottish Gaelic",
-		 "gl" => "Galician",
-		 "gn" => "Guarani",
-		 "gu" => "Gujarati",
-		 "gv" => "Manx",
-		 "ha" => "Hausa",
-		 "he" => "Hebrew",
-		 "hi" => "Hindi",
-		 "ho" => "Hiri Motu",
-		 "hr" => "Croatian",
-		 "ht" => "Haitian",
-		 "hu" => "Hungarian",
-		 "hy" => "Armenian",
-		 "hz" => "Herero",
-		 "ia" => "Interlingua (International Auxiliary Language Association)",
-		 "id" => "Indonesian",
-		 "ie" => "Interlingue",
-		 "ig" => "Igbo",
-		 "ii" => "Sichuan Yi",
-		 "ik" => "Inupiaq",
-		 "io" => "Ido",
-		 "is" => "Icelandic",
-		 "it" => "Italian",
-		 "iu" => "Inuktitut",
-		 "ja" => "Japanese",
-		 "jv" => "Javanese",
-		 "ka" => "Georgian",
-		 "kg" => "Kongo",
-		 "ki" => "Kikuyu",
-		 "kj" => "Kwanyama",
-		 "kk" => "Kazakh",
-		 "kl" => "Kalaallisut",
-		 "km" => "Khmer",
-		 "kn" => "Kannada",
-		 "ko" => "Korean",
-		 "kr" => "Kanuri",
-		 "ks" => "Kashmiri",
-		 "ku" => "Kurdish",
-		 "kv" => "Komi",
-		 "kw" => "Cornish",
-		 "ky" => "Kirghiz",
-		 "la" => "Latin",
-		 "lb" => "Luxembourgish",
-		 "lg" => "Ganda",
-		 "li" => "Limburgish",
-		 "ln" => "Lingala",
-		 "lo" => "Lao",
-		 "lt" => "Lithuanian",
-		 "lu" => "Luba-Katanga",
-		 "lv" => "Latvian",
-		 "mg" => "Malagasy",
-		 "mh" => "Marshallese",
-		 "mi" => "Maori",
-		 "mk" => "Macedonian",
-		 "ml" => "Malayalam",
-		 "mn" => "Mongolian",
-		 "mr" => "Marathi",
-		 "ms" => "Malay",
-		 "mt" => "Maltese",
-		 "my" => "Burmese",
-		 "na" => "Nauru",
-		 "nb" => "Norwegian Bokmal",
-		 "nd" => "North Ndebele",
-		 "ne" => "Nepali",
-		 "ng" => "Ndonga",
-		 "nl" => "Dutch",
-		 "nn" => "Norwegian Nynorsk",
-		 "no" => "Norwegian",
-		 "nr" => "South Ndebele",
-		 "nv" => "Navajo",
-		 "ny" => "Chichewa",
-		 "oc" => "Occitan",
-		 "oj" => "Ojibwa",
-		 "om" => "Oromo",
-		 "or" => "Oriya",
-		 "os" => "Ossetian",
-		 "pa" => "Panjabi",
-		 "pi" => "Pali",
-		 "pl" => "Polish",
-		 "ps" => "Pashto",
-		 "pt" => "Portuguese",
-		 "qu" => "Quechua",
-		 "rm" => "Raeto-Romance",
-		 "rn" => "Kirundi",
-		 "ro" => "Romanian",
-		 "ru" => "Russian",
-		 "rw" => "Kinyarwanda",
-		 "sa" => "Sanskrit",
-		 "sc" => "Sardinian",
-		 "sd" => "Sindhi",
-		 "se" => "Northern Sami",
-		 "sg" => "Sango",
-		 "si" => "Sinhala",
-		 "sk" => "Slovak",
-		 "sl" => "Slovenian",
-		 "sm" => "Samoan",
-		 "sn" => "Shona",
-		 "so" => "Somali",
-		 "sq" => "Albanian",
-		 "sr" => "Serbian",
-		 "ss" => "Swati",
-		 "st" => "Southern Sotho",
-		 "su" => "Sundanese",
-		 "sv" => "Swedish",
-		 "sw" => "Swahili",
-		 "ta" => "Tamil",
-		 "te" => "Telugu",
-		 "tg" => "Tajik",
-		 "th" => "Thai",
-		 "ti" => "Tigrinya",
-		 "tk" => "Turkmen",
-		 "tl" => "Tagalog",
-		 "tn" => "Tswana",
-		 "to" => "Tonga",
-		 "tr" => "Turkish",
-		 "ts" => "Tsonga",
-		 "tt" => "Tatar",
-		 "tw" => "Twi",
-		 "ty" => "Tahitian",
-		 "ug" => "Uighur",
-		 "uk" => "Ukrainian",
-		 "ur" => "Urdu",
-		 "uz" => "Uzbek",
-		 "ve" => "Venda",
-		 "vi" => "Vietnamese",
-		 "vo" => "Volapuk",
-		 "wa" => "Walloon",
-		 "wo" => "Wolof",
-		 "xh" => "Xhosa",
-		 "yi" => "Yiddish",
-		 "yo" => "Yoruba",
-		 "za" => "Zhuang",
-		 "zh" => "Chinese",
-		 "zu" => "Zulu"
+			"aa" => "Afar",
+			"ab" => "Abkhazian",
+			"ae" => "Avestan",
+			"af" => "Afrikaans",
+			"ak" => "Akan",
+			"am" => "Amharic",
+			"an" => "Aragonese",
+			"ar" => "Arabic",
+			"as" => "Assamese",
+			"av" => "Avaric",
+			"ay" => "Aymara",
+			"az" => "Azerbaijani",
+			"ba" => "Bashkir",
+			"be" => "Belarusian",
+			"bg" => "Bulgarian",
+			"bh" => "Bihari",
+			"bi" => "Bislama",
+			"bm" => "Bambara",
+			"bn" => "Bengali",
+			"bo" => "Tibetan",
+			"br" => "Breton",
+			"bs" => "Bosnian",
+			"ca" => "Catalan",
+			"ce" => "Chechen",
+			"ch" => "Chamorro",
+			"co" => "Corsican",
+			"cr" => "Cree",
+			"cs" => "Czech",
+			"cu" => "Church Slavic",
+			"cv" => "Chuvash",
+			"cy" => "Welsh",
+			"da" => "Danish",
+			"de" => "German",
+			"dv" => "Divehi",
+			"dz" => "Dzongkha",
+			"ee" => "Ewe",
+			"el" => "Greek",
+			"en" => "English",
+			"eo" => "Esperanto",
+			"es" => "Spanish",
+			"et" => "Estonian",
+			"eu" => "Basque",
+			"fa" => "Persian",
+			"ff" => "Fulah",
+			"fi" => "Finnish",
+			"fj" => "Fijian",
+			"fo" => "Faroese",
+			"fr" => "French",
+			"fy" => "Western Frisian",
+			"ga" => "Irish",
+			"gd" => "Scottish Gaelic",
+			"gl" => "Galician",
+			"gn" => "Guarani",
+			"gu" => "Gujarati",
+			"gv" => "Manx",
+			"ha" => "Hausa",
+			"he" => "Hebrew",
+			"hi" => "Hindi",
+			"ho" => "Hiri Motu",
+			"hr" => "Croatian",
+			"ht" => "Haitian",
+			"hu" => "Hungarian",
+			"hy" => "Armenian",
+			"hz" => "Herero",
+			"ia" => "Interlingua (International Auxiliary Language Association)",
+			"id" => "Indonesian",
+			"ie" => "Interlingue",
+			"ig" => "Igbo",
+			"ii" => "Sichuan Yi",
+			"ik" => "Inupiaq",
+			"io" => "Ido",
+			"is" => "Icelandic",
+			"it" => "Italian",
+			"iu" => "Inuktitut",
+			"ja" => "Japanese",
+			"jv" => "Javanese",
+			"ka" => "Georgian",
+			"kg" => "Kongo",
+			"ki" => "Kikuyu",
+			"kj" => "Kwanyama",
+			"kk" => "Kazakh",
+			"kl" => "Kalaallisut",
+			"km" => "Khmer",
+			"kn" => "Kannada",
+			"ko" => "Korean",
+			"kr" => "Kanuri",
+			"ks" => "Kashmiri",
+			"ku" => "Kurdish",
+			"kv" => "Komi",
+			"kw" => "Cornish",
+			"ky" => "Kirghiz",
+			"la" => "Latin",
+			"lb" => "Luxembourgish",
+			"lg" => "Ganda",
+			"li" => "Limburgish",
+			"ln" => "Lingala",
+			"lo" => "Lao",
+			"lt" => "Lithuanian",
+			"lu" => "Luba-Katanga",
+			"lv" => "Latvian",
+			"mg" => "Malagasy",
+			"mh" => "Marshallese",
+			"mi" => "Maori",
+			"mk" => "Macedonian",
+			"ml" => "Malayalam",
+			"mn" => "Mongolian",
+			"mr" => "Marathi",
+			"ms" => "Malay",
+			"mt" => "Maltese",
+			"my" => "Burmese",
+			"na" => "Nauru",
+			"nb" => "Norwegian Bokmal",
+			"nd" => "North Ndebele",
+			"ne" => "Nepali",
+			"ng" => "Ndonga",
+			"nl" => "Dutch",
+			"nn" => "Norwegian Nynorsk",
+			"no" => "Norwegian",
+			"nr" => "South Ndebele",
+			"nv" => "Navajo",
+			"ny" => "Chichewa",
+			"oc" => "Occitan",
+			"oj" => "Ojibwa",
+			"om" => "Oromo",
+			"or" => "Oriya",
+			"os" => "Ossetian",
+			"pa" => "Panjabi",
+			"pi" => "Pali",
+			"pl" => "Polish",
+			"ps" => "Pashto",
+			"pt" => "Portuguese",
+			"qu" => "Quechua",
+			"rm" => "Raeto-Romance",
+			"rn" => "Kirundi",
+			"ro" => "Romanian",
+			"ru" => "Russian",
+			"rw" => "Kinyarwanda",
+			"sa" => "Sanskrit",
+			"sc" => "Sardinian",
+			"sd" => "Sindhi",
+			"se" => "Northern Sami",
+			"sg" => "Sango",
+			"si" => "Sinhala",
+			"sk" => "Slovak",
+			"sl" => "Slovenian",
+			"sm" => "Samoan",
+			"sn" => "Shona",
+			"so" => "Somali",
+			"sq" => "Albanian",
+			"sr" => "Serbian",
+			"ss" => "Swati",
+			"st" => "Southern Sotho",
+			"su" => "Sundanese",
+			"sv" => "Swedish",
+			"sw" => "Swahili",
+			"ta" => "Tamil",
+			"te" => "Telugu",
+			"tg" => "Tajik",
+			"th" => "Thai",
+			"ti" => "Tigrinya",
+			"tk" => "Turkmen",
+			"tl" => "Tagalog",
+			"tn" => "Tswana",
+			"to" => "Tonga",
+			"tr" => "Turkish",
+			"ts" => "Tsonga",
+			"tt" => "Tatar",
+			"tw" => "Twi",
+			"ty" => "Tahitian",
+			"ug" => "Uighur",
+			"uk" => "Ukrainian",
+			"ur" => "Urdu",
+			"uz" => "Uzbek",
+			"ve" => "Venda",
+			"vi" => "Vietnamese",
+			"vo" => "Volapuk",
+			"wa" => "Walloon",
+			"wo" => "Wolof",
+			"xh" => "Xhosa",
+			"yi" => "Yiddish",
+			"yo" => "Yoruba",
+			"za" => "Zhuang",
+			"zh" => "Chinese",
+			"zu" => "Zulu",
 		);
 		//
 		return array_search($this->OriginalLanguage, $languageCodes);
@@ -235,7 +232,7 @@ class Article extends Page {
 	}
 
 	public function MoreThanOneTranslator() {
-		$translators = $this->Translators()->toArray();
+		$translators    = $this->Translators()->toArray();
 		$translatorSize = count($translators);
 
 		if ($translatorSize > 1) {
@@ -265,27 +262,27 @@ class Article extends Page {
 		$untranslatedTitleField->setRows(1);
 
 		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for poem"));
-		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Image Artist'));
+		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Unique image artist credit'));
 		$fields->addFieldToTab('Root.Main', $titleField);
 		$fields->addFieldToTab('Root.Main', $untranslatedTitleField);
 		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalRTL', 'Original language is read/written from right to left'));
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Original Work'));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Original work'));
 
-		$translatedTitleField = new HTMLEditorField('TranslatedTitle', ' Translated Title');
+		$translatedTitleField = new HTMLEditorField('TranslatedTitle', ' Translated title');
 		$translatedTitleField->setRows(1);
 
 		$fields->addFieldToTab('Root.Main', $translatedTitleField);
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Translated Work'));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Translated work'));
 
-		$fields->addFieldToTab('Root.TranslatorNote', new HTMLEditorField('TranslatorNote', 'Translator Note'));
+		$fields->addFieldToTab('Root.TranslatorNote', new HTMLEditorField('TranslatorNote', 'Translator note'));
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
-		$newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
+		$newGridField    = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
 		$fields->addFieldToTab('Root.Authors', $newGridField);
 
 		$gridFieldConfig2 = GridFieldConfig_RelationEditor::create();
-		$newGridField2 = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);
+		$newGridField2    = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);
 		$fields->addFieldToTab('Root.Translators', $newGridField2);
 
 		$fields->removeByName('Content3');
@@ -329,7 +326,7 @@ class Article extends Page {
 	}
 	private function removePTags($value) {
 		$array = array(
-			'<p>' => '',
+			'<p>'  => '',
 			'</p>' => '',
 		);
 		return strtr($value, $array);
@@ -337,7 +334,7 @@ class Article extends Page {
 	public function TranslatorByline($links = "true") {
 		//$TranslatorListNice(0)<% if OriginalLanguage %> $TranslatorBylineVerb from $OriginalLanguage<% end_if %><% if $Authors %><% loop $Authors %>. Original by $Name <% end_loop %> <% end_if %>
 		$bylineText = new HTMLText();
-		$byline = '';
+		$byline     = '';
 
 		//Person A, Person B, Person C
 		if ($this->Translators()->First()) {
@@ -345,7 +342,7 @@ class Article extends Page {
 		}
 		//translate(s) from OriginalLanguage.
 		if ($this->OriginalLanguage) {
-			$byline .= $this->TranslatorBylineVerb() . ' from the ' . $this->OriginalLanguage . '. ';
+			$byline .= $this->TranslatorBylineVerb().' from the '.$this->OriginalLanguage.'. ';
 		}
 
 		if ($this->Authors()->First()) {
@@ -371,14 +368,14 @@ class Article extends Page {
 		foreach ($writers as $writer) {
 
 			if ($links == "true") {
-				$writerArray[] = '<a href="' . $writer->Link() . '">' . $writer->Name . '</a>';
+				$writerArray[] = '<a href="'.$writer->Link().'">'.$writer->Name.'</a>';
 			} else {
 				$writerArray[] = $writer->Name;
 			}
 		}
 
 		if ($writers->Count() == 2) {
-			$writerString->setValue($writerArray[0] . ' and ' . $writerArray[1]);
+			$writerString->setValue($writerArray[0].' and '.$writerArray[1]);
 		} else {
 			$writerString->setValue(implode(', ', $writerArray));
 		}
@@ -392,17 +389,17 @@ class Article extends Page {
 class Article_Controller extends Page_Controller {
 
 	private static $allowed_actions = array("notes", "publishpage");
-	private static $url_handlers = array(
+	private static $url_handlers    = array(
 		'notes' => 'notes',
 	);
 
 	public function notes() {
 		$translatorNote = $this->TranslatorNote;
-		$translators = $this->Translators();
+		$translators    = $this->Translators();
 
 		$Data = array(
 			'TranslatorNote' => $translatorNote,
-			'Translators' => $translators,
+			'Translators'    => $translators,
 		);
 
 		if (isset($translatorNote)) {
