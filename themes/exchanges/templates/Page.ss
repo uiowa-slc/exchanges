@@ -34,7 +34,12 @@
 	
 	<% if $ClassName == "Article" %>
 		<% if $BannerImage %>
-		<div class="cover-container b-lazy" data-src="$BannerImage.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $BannerImage.PercentageX% $BannerImage.PercentageY%; background-size: cover;"></div>
+		<div class="cover-container b-lazy" data-src="$BannerImage.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $BannerImage.PercentageX% $BannerImage.PercentageY%; background-size: cover;">
+
+
+			<% if $Artist %><p class="credits">$Artist</p><% end_if %>
+
+		</div>
 		<% end_if %>
 	<% end_if %>
 

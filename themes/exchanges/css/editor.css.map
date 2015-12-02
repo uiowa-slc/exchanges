@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACC,aAAE,CACD,WAAW,CAAE,KAAK,CAClB,aAAa,CAAE,CAAC,CAGjB,cAAG,CACF,YAAY,CAAE,sBAAyB,CACvC,UAAU,CAAE,IAAI,CAChB,aAAa,CAAE,IAAI,CAGpB,sBAAW,CACV,YAAY,CAAE,UAAU",
+"mappings": "AACC,sBAAW,CACV,YAAY,CAAE,UAAU",
 "sources": ["../scss/editor.scss"],
 "names": [],
 "file": "editor.css"
