@@ -103,16 +103,4 @@ class Page_Controller extends ContentController {
 		return $issueArray;
 	}
 
-	public function getEmblem() {
-		$two  = 'one';
-		$page = Director::get_current_page();
-
-		while (($page) && ($page->ClassName != "Issue")) {
-			$page = $page->Parent;
-		}
-		if ($page) {
-			return $page;
-		}
-
-	}
 }

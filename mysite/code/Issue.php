@@ -40,16 +40,17 @@ class Issue extends Page {
 			'Transparency',
 			'Cover transparency',
 			array(
-				'0.9' => '10% (Mostly gray)',
-				'0.8' => '20%',
-				'0.7' => '30%',
-				'0.6' => '40%',
-				'0.5' => '50%',
-				'0.4' => '60%',
-				'0.3' => '70%',
-				'0.2' => '80%',
-				'0.1' => '90%',
 				'0'   => '100% (Original artwork color, no screen)',
+				'0.1' => '90%',
+				'0.2' => '80%',
+				'0.3' => '70%',
+				'0.4' => '60%',
+				'0.5' => '50%',
+				'0.6' => '40%',
+				'0.7' => '30%',
+				'0.8' => '20%',
+				'0.9' => '10% (Mostly gray)',
+
 			)
 		);
 		$alphadropdownfield->setEmptyString("Default (70%)");
