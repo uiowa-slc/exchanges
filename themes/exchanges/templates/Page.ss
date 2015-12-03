@@ -32,16 +32,13 @@
 		<% include TopBar %>
 	<% end_if %>
 	
-	<% if $ClassName == "Article" %>
-		<% if $BannerImage %>
-		<div class="cover-container b-lazy" data-src="$BannerImage.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $BannerImage.PercentageX% $BannerImage.PercentageY%; background-size: cover;">
-
-
-			<% if $Artist %><p class="credits">$Artist</p><% end_if %>
-
-		</div>
-		<% end_if %>
+	
+	<% if $BannerImage %>
+	<!--<div class="cover-container b-lazy" data-src="$BannerImage.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $BannerImage.PercentageX% $BannerImage.PercentageY%; background-size: cover;">-->
+		<img src="$BannerImage.Fill(1280,720).URL" style="width: 100%;" />
+	</div>
 	<% end_if %>
+
 
 	<div class="main typography" role="main">
 		$Layout

@@ -1,4 +1,4 @@
-<div class="nav-container contain-to-grid " >
+<div class="nav-container contain-to-grid">
 	<div class="nav-screen">
 		<nav class="top-bar <% if UseTitleDropShadow %>has-dropshadow<% end_if %>" data-topbar role="navigation" data-options="align:right">
 			<ul class="title-area">

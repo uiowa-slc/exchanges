@@ -146,6 +146,16 @@ hr {
 	font-style: italic;
 }
 
+.author {
+	color: $darkGray;
+	margin-top: .25em;
+	text-transform: uppercase;
+	font-size: rem-calc(14);
+	line-height: auto;
+	margin-bottom: 0px;
+	font-family: $header-font-family;
+}
+
 .category {
 	text-transform: uppercase;
 	display: block;

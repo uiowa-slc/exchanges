@@ -21,7 +21,7 @@
 						<% end_if %>
 					</div>
 					<div class="large-4 columns toc-container">
-						<% if $ClassName == "Article" %>
+						<% if $Parent.ClassName == "Issue" %>
 							<a href="$Parent.Link" class="toc-link">Table of Contents</a>
 						<% else_if $ClassName == "Issue" %>
 							<a href="$Parent.Link" class="toc-link">Issue Archive</a>
