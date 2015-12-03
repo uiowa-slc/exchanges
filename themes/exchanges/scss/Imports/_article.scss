@@ -3,21 +3,22 @@
     margin-bottom: $column-gutter;
 }
 
+.artist-credit {
+    color: #797979;
+    font-family: $header-font-family;
+    font-size: rem-calc(16);
+    font-style: italic;
+
+    @media #{$large-up} {
+        text-align: right;
+        padding-right: 75px;
+    }
+}
+
 .Article {
     .breadcrumb {
         @media #{$large-up} {
             margin-left: 60px;
-        }
-    }
-
-    .artist-credit {
-        color: #797979;
-        font-family: $header-font-family;
-        font-size: rem-calc(12);
-
-        @media #{$large-up} {
-            text-align: right;
-            padding-right: 75px;
         }
     }
 
