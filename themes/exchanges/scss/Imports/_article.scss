@@ -137,19 +137,15 @@
         }
 
         @media #{$medium-up} {
-            min-height: 450px;
+            min-height: 350px;
         }
 
         @media #{$large-up} {
-            min-height: 700px;
+            min-height: 425px;
         }
 
         @media #{$xlarge-up} {
-            min-height: 900px;
-        }
-
-        @media #{$xxlarge-up} {
-            min-height: 1000px;
+            min-height: 525px;
         }
     }
 }

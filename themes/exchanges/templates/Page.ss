@@ -34,8 +34,8 @@
 	
 	
 	<% if $BannerImage %>
-	<!--<div class="cover-container b-lazy" data-src="$BannerImage.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $BannerImage.PercentageX% $BannerImage.PercentageY%; background-size: cover;">-->
-		<img src="$BannerImage.Fill(1280,720).URL" style="width: 100%;" />
+	<div class="cover-container b-lazy" data-src="$BannerImage.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $BannerImage.PercentageX% $BannerImage.PercentageY%; background-size: cover;">
+		<%--<img src="$BannerImage.CroppedFocusedImage(1280,400).URL" style="width: 100%;" />--%>
 	</div>
 	<% end_if %>
 
