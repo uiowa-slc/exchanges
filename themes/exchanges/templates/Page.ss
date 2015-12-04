@@ -11,10 +11,6 @@
 		<title>$Title.NoHTML - $SiteConfig.Title - The University of Iowa</title>
 	<% end_if %>
 	<% include OpenGraph %>
-
-	<script src="https://use.typekit.net/gor3pds.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 	<link href="{$ThemeDir}/css/app.css?v=2016" rel="stylesheet">
 </head>
@@ -46,20 +42,12 @@
 
 	<% include Footer %>
 	$BetterNavigator
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-<script type="text/javascript">
-function downloadJSAtOnload() {
-var element = document.createElement("script");
-element.src = "themes/exchanges/build/build.js?v=2016";
-document.body.appendChild(element);
-}
-if (window.addEventListener)
-window.addEventListener("load", downloadJSAtOnload, false);
-else if (window.attachEvent)
-window.attachEvent("onload", downloadJSAtOnload);
-else window.onload = downloadJSAtOnload;
-</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="themes/exchanges/build/build.js?v=2016"></script>
+<script type="text/javascript" src="https://use.typekit.net/gor3pds.js"></script>
+<script type="text/javascript">try{Typekit.load({ async: true });}catch(e){}</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -70,5 +58,6 @@ else window.onload = downloadJSAtOnload;
   ga('send', 'pageview');
 
 </script>
+
 </body>
 </html>
