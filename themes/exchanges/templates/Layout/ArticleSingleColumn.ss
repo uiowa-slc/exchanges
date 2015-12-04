@@ -10,7 +10,7 @@
 			
 			<span class="author">By 
 			<% loop $Authors %>
-				<a href="$Link">$Name</a><% if not $Last %>, <% end_if %>
+				<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
 			<% end_loop %>
 			</span>
 		</p>

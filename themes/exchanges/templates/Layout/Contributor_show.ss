@@ -1,6 +1,6 @@
 <div class="row content-page">
 	<div class="small-12 columns">
-		<h2>Works contributed by {$Contributor.Name}:</h2>
+		<h2>Works contributed by <span class="text-nowrap">{$Contributor.Name}</span>:</h2>
 		<hr />
 		<% if $Contributor.Articles %>
 			<ul class="small-block-grid-1 large-block-grid-3">

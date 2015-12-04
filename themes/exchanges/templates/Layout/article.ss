@@ -18,7 +18,7 @@
 						<span class="author">
 							Translated <% if $OriginalLanguage %>from the {$OriginalLanguage} by <% end_if %>
 							<% loop $Translators %>
-							<a href="$Link">$Name</a><% if not $Last %>, <% end_if %>
+							<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
 							<% end_loop %>
 							
 							<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
@@ -50,7 +50,7 @@
 					<span class="author">
 						<% if $Authors %>By
 						<% loop $Authors %>
-							<a href="$Link">$Name</a><% if not $Last %>, <% end_if %>
+							<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
 						<% end_loop %> 
 						<% end_if %>
 					</span>
@@ -73,7 +73,11 @@
 		<h1>Translator Notes</h1>
 		$TranslatorNote
 		<hr />
-		<p><% loop $Translators %><a href="$Link">$Name</a><br /><% end_loop %></p>
+		<p class="author">
+			<% loop $Translators %>
+				<a href="$Link" class="text-nowrap">$Name</a><br />
+			<% end_loop %>
+		</p>
 		<a class="close-reveal-modal">&#215;</a>
 	</div>
 

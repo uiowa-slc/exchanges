@@ -367,8 +367,10 @@ class Article extends Page {
 
 		foreach ($writers as $writer) {
 
+			$writerFormattedName = str_replace(' ', '&nbsp;', $writer->Name);
+
 			if ($links == "true") {
-				$writerArray[] = '<a href="'.$writer->Link().'">'.$writer->Name.'</a>';
+				$writerArray[] = '<a href="'.$writer->Link().'" class="text-nowrap">'.$writerFormattedName.'</a>';
 			} else {
 				$writerArray[] = $writer->Name;
 			}
