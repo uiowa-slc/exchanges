@@ -1,4 +1,8 @@
 <% include Breadcrumb %>
+<noscript>
+    <style>.Article #poetry {opacity: 1;}</style>
+</noscript>
+
 <div class="article">
 
 

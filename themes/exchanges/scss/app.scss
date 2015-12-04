@@ -198,3 +198,11 @@ hr {
 	text-transform: uppercase;
 	font-family: $header-font-family;
 }
+
+p.hanging-indent {
+	padding-left: 20px;
+}
+
+p.hanging-indent:first-letter {
+	margin-left: -20px;
+}

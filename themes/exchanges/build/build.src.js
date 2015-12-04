@@ -6639,10 +6639,14 @@ y();setTimeout(a,50)}}var G=Date.now();n(p,"sans-serif",d);n(q,"serif",d);n(r,"m
     // Initialize
     var bLazy = new Blazy();
 })();
+
 $(document).foundation({
   equalizer : {
     // Specify if Equalizer should make elements equal height once they become stacked.
-    equalize_on_stack: true
+    equalize_on_stack: true,
+    after_height_change: function(){
+      $('body').addClass('equalized');
+    }
   }
 });
 

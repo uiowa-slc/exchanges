@@ -14,9 +14,9 @@
 
 	<script src="https://use.typekit.net/gor3pds.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
-	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
-	<link href="{$ThemeDir}/css/app.css" rel="stylesheet">
 
+	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
+	<link href="{$ThemeDir}/css/app.css?v=2016" rel="stylesheet">
 </head>
 <body class="$ClassName.ATT">
 	
@@ -51,7 +51,7 @@
 <script type="text/javascript">
 function downloadJSAtOnload() {
 var element = document.createElement("script");
-element.src = "themes/exchanges/build/build.js";
+element.src = "themes/exchanges/build/build.js?v=2016";
 document.body.appendChild(element);
 }
 if (window.addEventListener)
