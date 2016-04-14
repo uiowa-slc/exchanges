@@ -10,11 +10,11 @@ module.exports = function(grunt) {
     sass: {
       dist: { 
         files: {
-          'themes/exchanges/css/app.css' : 'themes/exchanges/scss/app.scss'
+          'themes/exchanges/css/app.css' : 'themes/exchanges/scss/app.scss',
+          'themes/exchanges/css/editor.css' : 'themes/exchanges/scss/editor.scss'
         },                  // Target
         options: {              // Target options
           style: 'compressed',
-          sourcemap: 'true',
           loadPath: ['themes/exchanges/bower_components/foundation/scss']
         }
       }
@@ -27,6 +27,7 @@ module.exports = function(grunt) {
         src: [
           'themes/exchanges/bower_components/foundation/js/foundation.js',
           'themes/exchanges/bower_components/blazy/blazy.js',
+          'node_modules/fontfaceobserver/fontfaceobserver.js',
           'themes/exchanges/javascript/*.js'
         ],
         dest: 'themes/exchanges/build/build.src.js'
@@ -40,6 +41,7 @@ module.exports = function(grunt) {
       my_target:{
         files:{
         'themes/exchanges/build/build.js': ['themes/exchanges/build/build.src.js'],
+        'themes/exchanges/templates/Includes/LoadCSS.ss': ['themes/exchanges/templates/Includes/LoadCSS.ss']
         }
       }
     },
@@ -72,10 +74,23 @@ module.exports = function(grunt) {
                     outputfile: "themes/exchanges/templates/Includes/CriticalCss.ss",
                     filename: "themes/exchanges/css/app.css", // Using path.resolve( path.join( ... ) ) is a good idea here
                     buffer: 800*1024,
-                    ignoreConsole: false
+                    ignoreConsole: false,
+                    forceInclude: ['.main', '.row', '.large-6', '.large-7', '.columns', '.breadcrumb', '.Article .row', '.issue-card-list', '.poem', '.Issue .issue-title', '.issue-title', '.Article .contain-to-grid .top-bar']
                 }
             }
+        },
+
+    cssmin: {
+        options: {
+          shorthandCompacting: false,
+          roundingPrecision: -1
+        },
+        target: {
+          files: {
+            'themes/exchanges/templates/Includes/CriticalCss.ss': ['themes/exchanges/templates/Includes/CriticalCss.ss']
+          }
         }
+      }
 
   });
 
@@ -86,11 +101,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-criticalcss');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   //grunt.loadNpmTasks('grunt-simple-watch');
 
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['sass', 'concat', 'uglify','criticalcss', 'watch']);
- //grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['sass', 'concat', 'uglify','criticalcss', 'cssmin', 'watch']);
 
 };

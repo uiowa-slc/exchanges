@@ -6,12 +6,13 @@
 	</header>
 	<div class="row content-text">
 		<div class="large-9 columns">
-			$Content
 				<ul>
 					<% loop Articles %>
 					<li><a href="$Link">$Title</a></li>
 					<% end_loop %>
 				</ul>
+			<hr />
+			$BiographicalDetails
 			$Form
 		</div>
 		<div class="large-3 columns">

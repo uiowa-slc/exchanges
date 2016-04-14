@@ -16,7 +16,22 @@ class Page extends SiteTree {
 		return $fields;
 	}
 
+	public function NextPage() {
+		$page = Page::get()->filter(array(
+				'ParentID'         => $this->ParentID,
+				'Sort:GreaterThan' => $this->Sort,
+			))                          ->First();
 
+		return $page;
+	}
+	public function PreviousPage() {
+		$page = Page::get()->filter(array(
+				'ParentID'      => $this->ParentID,
+				'Sort:LessThan' => $this->Sort,
+			))                       ->Last();
+
+		return $page;
+	}
 
 }
 class Page_Controller extends ContentController {
@@ -40,7 +55,7 @@ class Page_Controller extends ContentController {
 	function StatusMessage() {
 		if (Session::get('ActionMessage')) {
 			$message = Session::get('ActionMessage');
-			$status = Session::get('ActionStatus');
+			$status  = Session::get('ActionStatus');
 
 			Session::clear('ActionStatus');
 			Session::clear('ActionMessage');
@@ -56,7 +71,7 @@ class Page_Controller extends ContentController {
 
 	}
 
-	public function getBlog(){
+	public function getBlog() {
 		return NewsHolder::get()->First();
 	}
 
@@ -71,9 +86,8 @@ class Page_Controller extends ContentController {
 
 	}
 
-	public function FeaturedIssue() {
-		$homePage = HomePage::get()->First();
-		return $homePage->FeaturedIssue();
+	public function getFeaturedIssue() {
+		return Issue::get()->sort('Created DESC')->First();
 	}
 	public function getCurrentIssue() {
 		$sessionIssue = Session::get('issue');
@@ -89,16 +103,4 @@ class Page_Controller extends ContentController {
 		return $issueArray;
 	}
 
-	public function getEmblem() {
-		$two = 'one';
-		$page = Director::get_current_page();
-
-		while (($page) && ($page->ClassName != "Issue")) {
-			$page = $page->Parent;
-		}
-		if ($page) {
-			return $page;
-		}
-
-	}
 }

@@ -17,7 +17,7 @@
 
 <% with $FeaturedIssue %>
 	<div class="large-7 columns">
-		<h2 class="banner">$LetterTitle</h2>
+		<h2 class="banner text-center">$LetterTitle</h2>
 		$LetterFromEditor
 		<div class="row">
 			<div class="large-12 columns">
@@ -31,19 +31,19 @@
 	</div>
 
 <% end_with %>
-	<div class="large-5 columns" id="news">
-		<h2 class="banner">From the Blog:</h2>
+	<div class="large-4 columns" id="news">
+		<h2 class="banner text-center">From the Blog:</h2>
 		<ul class="large-block-grid-1 news-list">
 			<% loop $Blog.BlogPosts.Limit(4) %>
 				<li>
 					<article class="$FirstLast">
 						<h3><a href="$Link">$Title </a></h3>
-						<time>$Created.Format("F j, Y")</time>
+						<% include EntryMeta %>
 					</article>
 				</li>
 
 			<% end_loop %>
-			<li><h3 class="text-center"><a href="#">BLOG ARCHIVE</a></h3></li>
+			<li><h3 class="text-center"><a href="blog/">Blog archive</a></h3></li>
 		</ul>
 
 	</div>

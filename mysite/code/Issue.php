@@ -2,16 +2,17 @@
 class Issue extends Page {
 
 	private static $db = array(
-
-		"IssueDate" => "Text",
-		"IssueNumber" => "Text",
+		"IssueDate"                   => "Text",
+		"IssueNumber"                 => "Text",
 		"LetterFromEditorCustomTitle" => "Text",
-		"LetterFromEditor" => "HTMLText",
-
+		"LetterFromEditor"            => "HTMLText",
+		"Transparency"                => "Varchar(100)",
+		"UseTitleDropShadow"          => "Boolean",
 	);
 
 	private static $has_one = array(
 		"Emblem" => "Image",
+
 	);
 
 	private static $plural_name = 'Issues';
@@ -25,7 +26,7 @@ class Issue extends Page {
 
 	private static $can_be_root = false;
 
-	private static $allowed_children = array('Article');
+	private static $allowed_children = array('Article', 'ArticleSingleColumn');
 
 	//private static $icon = array("mysite/images/tree/toc","file");
 
@@ -33,9 +34,32 @@ class Issue extends Page {
 		$fields = parent::getCMSFields();
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Content');
-		$fields->addFieldToTab("Root.Main", new UploadField("Emblem", "Unique image for issue"));
+		$fields->addFieldToTab("Root.Main", new UploadField("Emblem", "Issue cover"));
+
+		$alphadropdownfield = DropdownField::create(
+			'Transparency',
+			'Cover transparency',
+			array(
+				'0'   => '100% (Original artwork color, no screen)',
+				'0.1' => '90%',
+				'0.2' => '80%',
+				'0.3' => '70%',
+				'0.4' => '60%',
+				'0.5' => '50%',
+				'0.6' => '40%',
+				'0.7' => '30%',
+				'0.8' => '20%',
+				'0.9' => '10% (Mostly gray)',
+
+			)
+		);
+		$alphadropdownfield->setEmptyString("Default (70%)");
+		$fields->addFieldToTab('Root.Main', $alphadropdownfield);
+
+		$fields->addFieldToTab('Root.Main', new CheckboxField('UseTitleDropShadow', 'Use a subtle shadow behind issue title (good if there\'s a lot of white in the artwork)'));
+
 		$fields->addFieldToTab("Root.Main", $dateField = new TextField("IssueDate", "Issue date"));
-		$fields->addFieldToTab("Root.Main", new TextField("IssueNumber", "Issue number"));
+		//$fields->addFieldToTab("Root.Main", new TextField("IssueNumber", "Issue number"));
 		$fields->addFieldToTab("Root.Main", new TextField("LetterFromEditorCustomTitle", "Letter From The Editors Custom Title (optional)"));
 		$fields->addFieldToTab("Root.Main", new HTMLEditorField("LetterFromEditor", "Letter From The Editors"));
 
@@ -46,15 +70,15 @@ class Issue extends Page {
 		return $this->Children();
 	}
 
-	public function getLetterTitle(){
-		if($this->LetterFromEditorCustomTitle){
+	public function getLetterTitle() {
+		if ($this->LetterFromEditorCustomTitle) {
 			return $this->LetterFromEditorCustomTitle;
-		}else{
+		} else {
 			return "Letter From The Editor";
 		}
 	}
 
-	public function getLetterLink(){
+	public function getLetterLink() {
 		return $this->Link().'letter/';
 	}
 
@@ -83,11 +107,11 @@ class Issue_Controller extends Page_Controller {
 		if ($letterText) {
 
 			$Data = array(
-				'Content' => $letterText,
-				'Parent' => $this,
-				'ClassName' => 'Article',
-				'NextPage' => $this->Children()->First,
-				'PreviousPage' => Page::get()->filter(array('URLSegment' => 'home'))->First
+				'Content'      => $letterText,
+				'Parent'       => $this,
+				'ClassName'    => 'Article',
+				'NextPage'     => $this->Children()->First,
+				'PreviousPage' => Page::get()->filter(array('URLSegment' => 'home'))->First,
 			);
 
 		} else {

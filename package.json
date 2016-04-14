@@ -1,17 +1,13 @@
 {
-  "name": "bindings",
+  "name": "exchanges",
   "version": "0.1.1",
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-concat": "~0.4.0",
-    "grunt-contrib-uglify": "~0.4.0",
-    "grunt-contrib-sass": "~0.7.3",
-    "gifsicle": "~0.1.5",
-    "optipng-bin": "~0.3.3",
-    "jpegtran-bin":"~0.2.6",
-    "grunt-contrib-imagemin": "~0.6.1",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-simple-watch": "~0.1.2",
-    "grunt-criticalcss": "*"
+    "grunt": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-criticalcss": "*",
+    "grunt-contrib-cssmin": "*"
   }
 }

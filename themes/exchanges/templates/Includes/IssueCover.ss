@@ -1,11 +1,9 @@
-<%-- <div class="cover-container" style="background-image: url('$FeaturedIssue.Emblem.URL');"> --%>
-<div class="cover-container" style="background-image: url('http://lorempixel.com/1240/300/');">
-
-	<div class="cover-screen">
+<div class="cover-container <% if $UseTitleDropShadow %>with-dropshadow<% end_if %> b-lazy" data-src="$Emblem.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $Emblem.PercentageX% $Emblem.PercentageY%; background-size: cover;">
+	<div class="cover-screen" <% if $Transparency %>style="background: rgba(68,68,68,{$Transparency});"<% end_if %>>
 		<% include TopBar %>
 
 		<div class="row issue-date">
-			<div class="large-12 columns"><span>$IssueDate</span></div>
+			<div class="large-12 columns"><span><a href="issues/">$IssueDate</a></span></div>
 		</div>
 
 		<div class="row cover-content">

@@ -7,25 +7,31 @@
 							<% with $PreviousPage %>
 								<a href="$Link" class="prev "> &larr; $Title</a>
 							<% end_with %>
+						<% else_if $Parent.LetterLink %>
+							<a href="$Parent.LetterLink" class="prev">&larr;&nbsp;$Parent.LetterTitle</a>
 						<% else %>
-							<a href="$Parent.LetterLink" class="prev">&larr; $Parent.LetterTitle</a>
+						&nbsp;
 						<% end_if %>
 					</div>
 					<div class="large-4 columns next-container hide-for-large-up">
 						<% if $NextPage %>
 							<% with $NextPage %>
-								<a href="$Link" class="next">$Title &rarr;</a><br />
+								<a href="$Link" class="next">$Title&nbsp;&rarr;</a><br />
 							<% end_with %>
 						<% end_if %>
 					</div>
 					<div class="large-4 columns toc-container">
-						<a href="$Parent.Link" class="toc-link">Table of Contents</a>
+						<% if $Parent.ClassName == "Issue" %>
+							<a href="$Parent.Link" class="toc-link">Table of Contents</a>
+						<% else_if $ClassName == "Issue" %>
+							<a href="$Parent.Link" class="toc-link">Issue Archive</a>
+						<% end_if %>
 					</div>
 
 					<div class="large-4 columns next-container show-for-large-up end">
 						<% if $NextPage %>
 							<% with $NextPage %>
-								<a href="$Link" class="next">$Title &rarr;</a><br />
+								<a href="$Link" class="next">$Title&nbsp;&rarr;</a><br />
 							<% end_with %>
 						<% end_if %>
 					</div>

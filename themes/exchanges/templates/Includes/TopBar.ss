@@ -1,6 +1,6 @@
-<div class="nav-container contain-to-grid" <% if $Parent.ClassName == "Issue" %>style="background-image:url('$Parent.Emblem.URL');"<% end_if %>">
+<div class="nav-container contain-to-grid">
 	<div class="nav-screen">
-		<nav class="top-bar" data-topbar role="navigation">
+		<nav class="top-bar <% if UseTitleDropShadow %>has-dropshadow<% end_if %>" data-topbar role="navigation" data-options="align:right">
 			<ul class="title-area">
 				<li class="name">
 					<h1 class="show-for-large-up"><a href="{$baseUrl}">$SiteConfig.Title</a></h1>
@@ -17,19 +17,27 @@
 
 						<% if $ClassName == "NewsHolder" %>
 							<ul class="dropdown">
-								<% loop $BlogPosts %>
+								<% loop $BlogPosts.Limit(5) %>
 									<% include TopBarLinkDropdownItem %>
 								<% end_loop %>
+								<li><a href="$Link">See all posts &rarr;</a></li>
 							</ul>
 						<% else_if $Children %>
-							<% include TopBarLinkDropdown %>
+							<ul class="dropdown">
+								<% loop $Children.Sort("Created DESC") %>
+									<% include TopBarLinkDropdownItem %>
+								<% end_loop %>
+								<li><a href="$Link">See all &rarr;</a></li>
+							</ul>
 						<% else_if $ClassName == "RedirectorPage" %>
-							<% if $LinkTo %>
-								<% with $LinkTo %>
-									<% include TopBarLinkDropdown %>
-								<% end_with %>
-							<% end_if %>
-
+							<ul class="dropdown">
+								<% if $LinkTo %>
+									<% with $LinkTo %>
+										<% include TopBarLinkDropdownItem %>
+									<% end_with %>
+								<% end_if %>
+								<li><a href="$Link">See all &rarr;</a></li>
+							</ul>
 						<% end_if %>
 					</li>
 					<%--<% if not $Last %><li class="divider"></li><% end_if %>--%>
