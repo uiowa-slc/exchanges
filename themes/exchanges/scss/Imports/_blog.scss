@@ -1,6 +1,33 @@
 .NewsHolder {
-	
-	.post-summary{
+	.post-summary {
 		margin: $column-gutter 0;
+	}
+}
+
+.NewsPage {
+	.blog-social {
+		list-style: none;
+		margin: 0;
+		font-size: 15px;
+		padding-top: 35px;
+
+		//font-family: "futura-pt","Arial Narrow",sans-serif;
+
+	}
+
+	.social-label {
+		font-family: "futura-pt","Arial Narrow",sans-serif;
+	}
+
+	.social-icon {
+		display: block;
+	}
+
+	.content {
+		padding-left: 85px;
+	}
+
+	.blog-post-meta {
+		padding-left: 85px;
 	}
 }
