@@ -12,7 +12,7 @@
             <div class="col-lg-1">
                 <div><% include BlogShareIcons %></div>
             </div>
-            <div class="content" style="padding-left: 85px;">$Content</div>
+            <div class="content">$Content</div>
 
             <% include EntryMeta %>
         </article>
