@@ -1,6 +1,10 @@
 <% include Breadcrumb %>
 <div class="row content-page">
 
+    <div class="large-1 columns">
+        <% include BlogShareIcons %>
+    </div>
+
     <div class="large-7 columns">
         <article>
 
@@ -9,9 +13,7 @@
             <% if $FeaturedImage %>
                 <p class="post-image">$FeaturedImage.setWidth(795)</p>
             <% end_if %>
-            <div class="col-lg-1">
-                <div><% include BlogShareIcons %></div>
-            </div>
+          
             <div class="content">$Content</div>
 
             <% include EntryMeta %>
