@@ -10,22 +10,32 @@
 		margin: 0;
 		font-size: 15px;
 		padding-top: 5px;
+		padding-left: 15px;
 		text-align: center;
 
 		//font-family: "futura-pt","Arial Narrow",sans-serif;
+		@media only screen and (max-width: 1000px) {
+			list-style: none;
+			margin: 0;
+			font-size: 13px;
+			padding: 0;
+			float: left;
+			text-align: left;
 
+			& li {
+				display: inline-block;
+				margin-right: 1em;
+			}
+		}
 	}
 
 	.social-label {
 		font-family: "futura-pt","Arial Narrow",sans-serif;
+		padding-left: 10px;
 	}
 
 	.social-icon {
 		display: block;
-	}
-
-	.content {
-		padding-left: 85px;
 	}
 
 	.blog-post-meta {
