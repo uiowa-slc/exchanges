@@ -1,35 +1,35 @@
 <?php
 class Article extends Page {
 	private static $db = array(
-		'Title'             => 'HTMLText',
-		'IsPublished'       => 'Boolean',
-		'OriginalLanguage'  => 'Text',
+		'Title' => 'HTMLText',
+		'IsPublished' => 'Boolean',
+		'OriginalLanguage' => 'Text',
 		'UntranslatedTitle' => 'HTMLText',
-		'TranslatedTitle'   => 'HTMLText',
-		'Translator'        => 'HTMLText',
-		"Content2"          => "HTMLText",
-		"Content3"          => "HTMLText",
-		"TranslatorNote"    => "HTMLText",
-		"TranslationRTL"    => "Boolean",
-		"OriginalRTL"       => "Boolean",
-		'IsCompilation'     => 'Boolean',
-		'Artist'            => 'Text',
+		'TranslatedTitle' => 'HTMLText',
+		'Translator' => 'HTMLText',
+		"Content2" => "HTMLText",
+		"Content3" => "HTMLText",
+		"TranslatorNote" => "HTMLText",
+		"TranslationRTL" => "Boolean",
+		"OriginalRTL" => "Boolean",
+		'IsCompilation' => 'Boolean',
+		'Artist' => 'Text',
 	);
 
 	private static $has_one = array(
 		'BannerImage' => 'Image',
 	);
 
-	private static $plural_name       = 'Articles';
+	private static $plural_name = 'Articles';
 	private static $belongs_many_many = array(
-		'Issues'      => 'Issue',
-		'Authors'     => 'Author',
+		'Issues' => 'Issue',
+		'Authors' => 'Author',
 		'Translators' => 'Translator',
 	);
 
 	private static $default_parent = "articles";
-	private static $can_be_root    = false;
-	private static $defaults       = array("ParentID" => 7);
+	private static $can_be_root = false;
+	private static $defaults = array("ParentID" => 7);
 
 	public function languageCode() {
 
@@ -232,7 +232,7 @@ class Article extends Page {
 	}
 
 	public function MoreThanOneTranslator() {
-		$translators    = $this->Translators()->toArray();
+		$translators = $this->Translators()->toArray();
 		$translatorSize = count($translators);
 
 		if ($translatorSize > 1) {
@@ -278,11 +278,11 @@ class Article extends Page {
 		$fields->addFieldToTab('Root.TranslatorNote', new HTMLEditorField('TranslatorNote', 'Translator note'));
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
-		$newGridField    = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
+		$newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
 		$fields->addFieldToTab('Root.Authors', $newGridField);
 
 		$gridFieldConfig2 = GridFieldConfig_RelationEditor::create();
-		$newGridField2    = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);
+		$newGridField2 = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);
 		$fields->addFieldToTab('Root.Translators', $newGridField2);
 
 		$fields->removeByName('Content3');
@@ -326,7 +326,7 @@ class Article extends Page {
 	}
 	private function removePTags($value) {
 		$array = array(
-			'<p>'  => '',
+			'<p>' => '',
 			'</p>' => '',
 		);
 		return strtr($value, $array);
@@ -334,7 +334,7 @@ class Article extends Page {
 	public function TranslatorByline($links = "true") {
 		//$TranslatorListNice(0)<% if OriginalLanguage %> $TranslatorBylineVerb from $OriginalLanguage<% end_if %><% if $Authors %><% loop $Authors %>. Original by $Name <% end_loop %> <% end_if %>
 		$bylineText = new HTMLText();
-		$byline     = '';
+		$byline = '';
 
 		//Person A, Person B, Person C
 		if ($this->Translators()->First()) {
@@ -342,7 +342,7 @@ class Article extends Page {
 		}
 		//translate(s) from OriginalLanguage.
 		if ($this->OriginalLanguage) {
-			$byline .= $this->TranslatorBylineVerb().' from the '.$this->OriginalLanguage.'. ';
+			$byline .= $this->TranslatorBylineVerb() . ' from the ' . $this->OriginalLanguage . '. ';
 		}
 
 		if ($this->Authors()->First()) {
@@ -370,14 +370,14 @@ class Article extends Page {
 			$writerFormattedName = str_replace(' ', '&nbsp;', $writer->Name);
 
 			if ($links == "true") {
-				$writerArray[] = '<a href="'.$writer->Link().'" class="text-nowrap">'.$writerFormattedName.'</a>';
+				$writerArray[] = '<a href="' . $writer->Link() . '" class="text-nowrap">' . $writerFormattedName . '</a>';
 			} else {
 				$writerArray[] = $writer->Name;
 			}
 		}
 
 		if ($writers->Count() == 2) {
-			$writerString->setValue($writerArray[0].' and '.$writerArray[1]);
+			$writerString->setValue($writerArray[0] . ' and ' . $writerArray[1]);
 		} else {
 			$writerString->setValue(implode(', ', $writerArray));
 		}
@@ -391,17 +391,17 @@ class Article extends Page {
 class Article_Controller extends Page_Controller {
 
 	private static $allowed_actions = array("notes", "publishpage");
-	private static $url_handlers    = array(
+	private static $url_handlers = array(
 		'notes' => 'notes',
 	);
 
 	public function notes() {
 		$translatorNote = $this->TranslatorNote;
-		$translators    = $this->Translators();
+		$translators = $this->Translators();
 
 		$Data = array(
 			'TranslatorNote' => $translatorNote,
-			'Translators'    => $translators,
+			'Translators' => $translators,
 		);
 
 		if (isset($translatorNote)) {
