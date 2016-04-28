@@ -25,7 +25,7 @@
     
 
 
-    <div class="large-4 columns">
+    <div class="large-3 large-offset-1 columns">
     <% include BlogSideBar %>
     </div>
 
