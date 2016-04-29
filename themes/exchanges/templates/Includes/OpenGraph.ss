@@ -5,12 +5,12 @@
 	<% if $URLSegment = 'home' %>
 		<meta property="og:title" content="$SiteConfig.Title.ATT" />
 	<% else %>
-		<meta property="og:title" content="$Title.ATT - Exchanges Literary Journal" />
+		<meta property="og:title" content="$Title.ATT - Exchanges Literary Journal <% if $ClassName == "NewsPage %>Blog<% end_if %>" />
 	<% end_if %>
 	<% if $ClassName == "Article" %>
-		<meta property="og:description" content="$TranslatorByline("false").ATT" />
+		<meta property="og:description" content="$TranslatorByline("false").NoHTML" />
 	<% else_if $Content %>
-		<meta property="og:description" content="$Content.ATT" />
+		<meta property="og:description" content="$Content.NoHTML" />
 	<% else %>
 		
 	<% end_if %>

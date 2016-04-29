@@ -5,14 +5,14 @@ class NewsPage extends BlogPost {
 	private static $db = array(
 		'Date' => 'SS_Datetime',
 		'Abstract' => 'Text',
-		'Author' => 'Varchar(255)'
+		'Author' => 'Varchar(255)',
 	);
 
 	private static $defaults = array(
-		'InheritSideBar' => true
+		'InheritSideBar' => true,
 	);
 }
 
 class NewsPage_Controller extends Page_Controller {
-	
+
 }
