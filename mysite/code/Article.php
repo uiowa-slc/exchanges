@@ -4,6 +4,7 @@ class Article extends Page {
 		'Title' => 'HTMLText',
 		'IsPublished' => 'Boolean',
 		'OriginalLanguage' => 'Text',
+		'OriginalTitleUseAltFont' => 'Boolean',
 		'UntranslatedTitle' => 'HTMLText',
 		'TranslatedTitle' => 'HTMLText',
 		'Translator' => 'HTMLText',
@@ -265,6 +266,7 @@ class Article extends Page {
 		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Unique image artist credit'));
 		$fields->addFieldToTab('Root.Main', $titleField);
 		$fields->addFieldToTab('Root.Main', $untranslatedTitleField);
+		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalTitleUseAltFont', 'Use an alternate font for the original title (only check if the original title looks strange)'));
 		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalRTL', 'Original language is read/written from right to left'));
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Original work'));

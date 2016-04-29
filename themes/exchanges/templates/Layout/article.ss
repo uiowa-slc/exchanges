@@ -43,7 +43,7 @@
 
 		<div class="large-6 large-pull-6 columns poem {$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article>
-				<div class="poem-unstranslated-title poem-info" data-equalizer-watch>
+				<div class="poem-untranslated-title poem-info <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
 					<div>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
 							<h1>$UntranslatedTitle</h1>
