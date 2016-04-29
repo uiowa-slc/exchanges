@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="google" value="notranslate" />
 	<% if $URLSegment = 'home' %>
-		<title>$SiteConfig.Title - The University of Iowa</title>
+		<title>$SiteConfig.Title</title>
 	<% else %>
-		<title>$Title.NoHTML - $SiteConfig.Title - The University of Iowa</title>
+		<title>$Title.NoHTML - $SiteConfig.Title</title>
 	<% end_if %>
 	<% include OpenGraph %>
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
