@@ -3,7 +3,7 @@
 	<meta property="og:site_name" content="$SiteConfig.Title.ATT" />
 	<meta property="og:type" content="website" />
 	<% if $ClassName == "HomePage" %>
-		<meta property="og:title" content="$FeaturedIssue.Title - $SiteConfig.Title.ATT" />
+		<meta property="og:title" content="$SiteConfig.Title.ATT" />
 	<% else %>
 		<meta property="og:title" content="$Title.ATT - Exchanges Literary Journal" />
 	<% end_if %>
