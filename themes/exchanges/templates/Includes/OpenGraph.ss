@@ -43,7 +43,7 @@
 		<% end_if %>
 	<% else_if $ClassName == "BlogPost" %>
 				<meta property="og:image" content="$FeaturedImage.SetWidth(1200).AbsoluteURL.ATT" class="$Title" />
-				<meta property="og:image:width" content="$FeaturedImageSetWidth(1200).Width">
+				<meta property="og:image:width" content="$FeaturedImage.SetWidth(1200).Width">
 				<meta property="og:image:height" content="$FeaturedImage.SetWidth(1200).Height">
 	<% else %>		
 		<% with $FeaturedIssue %>
