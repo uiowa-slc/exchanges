@@ -41,8 +41,11 @@
 				<meta property="og:image:height" content="$Emblem.SetWidth(1200).Height">
 			<% end_with %>
 		<% end_if %>
-	<% else %>
-
+	<% else_if $ClassName == "BlogPost" %>
+				<meta property="og:image" content="$FeaturedImage.SetWidth(1200).AbsoluteURL.ATT" class="$Title" />
+				<meta property="og:image:width" content="$FeaturedImageSetWidth(1200).Width">
+				<meta property="og:image:height" content="$FeaturedImage.SetWidth(1200).Height">
+	<% else %>		
 		<% with $FeaturedIssue %>
 			<meta property="og:image" content="<% with $Emblem %>$SetWidth(1200).AbsoluteURL.ATT<% end_with %>" />
 			<meta property="og:image:width" content="$Emblem.SetWidth(1200).Width">
