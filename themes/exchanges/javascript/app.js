@@ -1,6 +1,4 @@
-
-;(function() {
-    // Initialize
+(function() {
     var bLazy = new Blazy();
 })();
 
