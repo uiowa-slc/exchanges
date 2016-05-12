@@ -6,7 +6,6 @@ class HomePage extends Page {
 	);
 
 	private static $has_one = array(
-		//'FeaturedIssue' => 'SiteTree',
 	);
 
 	function getCMSFields() {
@@ -27,13 +26,7 @@ class HomePage extends Page {
 		return $fields;
 	}
 
-	public function getFeaturedIssue() {
-		return $this->FeaturedIssue();
-	}
 
-	public function getFeaturedSegment() {
-		return $this->FeaturedIssue()->URLSegment;
-	}
 }
 
 class HomePage_Controller extends Page_Controller {

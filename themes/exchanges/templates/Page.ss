@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="google" value="notranslate" />
-	<% if $URLSegment = 'home' %>
+	<% if $ClassName == "HomePage" %>
 		<title>$SiteConfig.Title</title>
 	<% else %>
 		<title>$Title.NoHTML - $SiteConfig.Title</title>

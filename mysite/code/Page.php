@@ -32,7 +32,22 @@ class Page extends SiteTree {
 
 		return $page;
 	}
+	public function getFeaturedIssue() {
+		return Issue::get()->sort('Created DESC')->First();
+	}
+	public function getCurrentIssue() {
+		$sessionIssue = Session::get('issue');
+		if (empty($sessionIssue)) {
+			$currentIssue = HomePage::get()->First();
+			$sessionIssue = $currentIssue->FeaturedIssue();
+		}
+		return $sessionIssue;
+	}
 
+	public function getAllIssues() {
+		$issueArray = Issue::get();
+		return $issueArray;
+	}
 }
 class Page_Controller extends ContentController {
 
@@ -86,21 +101,6 @@ class Page_Controller extends ContentController {
 
 	}
 
-	public function getFeaturedIssue() {
-		return Issue::get()->sort('Created DESC')->First();
-	}
-	public function getCurrentIssue() {
-		$sessionIssue = Session::get('issue');
-		if (empty($sessionIssue)) {
-			$currentIssue = HomePage::get()->First();
-			$sessionIssue = $currentIssue->FeaturedIssue();
-		}
-		return $sessionIssue;
-	}
 
-	public function getAllIssues() {
-		$issueArray = Issue::get();
-		return $issueArray;
-	}
 
 }
