@@ -10,7 +10,7 @@
 		"silverstripe/blog": "2.*",
 		"silverstripe/widgets": "*",
 		"jonom/focuspoint" : "*",
-		"jonom/silverstripe-betternavigator": "*"
+		"jonom/silverstripe-betternavigator": "2.1"
 	},
 
 	"minimum-stability": "dev"
