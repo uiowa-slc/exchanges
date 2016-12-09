@@ -12,33 +12,8 @@
 				<%-- Left Nav Section --%>
 				<ul class="right">
 					<% loop Menu(1) %>
-					<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children || $LinkTo.Children %> has-dropdown<% end_if %>">
+					<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %>">
 						<a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a>
-
-						<% if $ClassName == "NewsHolder" %>
-							<ul class="dropdown">
-								<% loop $BlogPosts.Limit(5) %>
-									<% include TopBarLinkDropdownItem %>
-								<% end_loop %>
-								<li><a href="$Link">See all posts &rarr;</a></li>
-							</ul>
-						<% else_if $Children %>
-							<ul class="dropdown">
-								<% loop $Children.Sort("Created DESC") %>
-									<% include TopBarLinkDropdownItem %>
-								<% end_loop %>
-								<li><a href="$Link">See all &rarr;</a></li>
-							</ul>
-						<% else_if $ClassName == "RedirectorPage" %>
-							<ul class="dropdown">
-								<% if $LinkTo %>
-									<% with $LinkTo %>
-										<% include TopBarLinkDropdownItem %>
-									<% end_with %>
-								<% end_if %>
-								<li><a href="$Link">See all &rarr;</a></li>
-							</ul>
-						<% end_if %>
 					</li>
 					<%--<% if not $Last %><li class="divider"></li><% end_if %>--%>
 					<% end_loop %>
