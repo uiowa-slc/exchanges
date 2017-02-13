@@ -40,8 +40,7 @@ module.exports = function(grunt) {
     uglify: {
       my_target:{
         files:{
-        'themes/exchanges/build/build.js': ['themes/exchanges/build/build.src.js'],
-        'themes/exchanges/templates/Includes/LoadCSS.ss': ['themes/exchanges/templates/Includes/LoadCSS.ss']
+        'themes/exchanges/build/build.js': ['themes/exchanges/build/build.src.js']
         }
       }
     },
@@ -106,6 +105,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   // Note: order of tasks is very important
-  grunt.registerTask('default', ['sass', 'concat', 'uglify','criticalcss', 'cssmin', 'watch']);
+  grunt.registerTask('default', ['sass', 'concat', 'uglify', 'cssmin', 'watch']);
 
 };

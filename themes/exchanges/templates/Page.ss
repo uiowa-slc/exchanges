@@ -12,7 +12,7 @@
 	<% end_if %>
 	<% include OpenGraph %>
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
-	<link href="{$ThemeDir}/css/app.css?v=2016" rel="stylesheet">
+	<link href="{$ThemeDir}/css/app.css" rel="stylesheet">
 </head>
 <body class="$ClassName.ATT">
 	
