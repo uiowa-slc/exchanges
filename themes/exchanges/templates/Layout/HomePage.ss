@@ -15,10 +15,10 @@
 
 <div class="row">
 
-<% with $FeaturedIssue %>
+<%-- <% with $FeaturedIssue %>
 	<div class="large-7 columns">
 		<h2 class="banner text-center">$LetterTitle</h2>
-		$LetterFromEditor
+ 		$LetterFromEditor
 		<div class="row">
 			<div class="large-12 columns">
 				<div class="article-subnav">
@@ -30,22 +30,22 @@
 		</div>
 	</div>
 
-<% end_with %>
-	<div class="large-4 columns" id="news">
+<% end_with %> --%>
+	<div class="container large-12 columns" id="news">
 		<h2 class="banner text-center">From the Blog:</h2>
-		<ul class="large-block-grid-1 news-list">
-			<% loop $Blog.BlogPosts.Limit(4) %>
-				<li>
-					<article class="$FirstLast">
-						<h3><a href="$Link">$Title </a></h3>
-						<% include EntryMeta %>
-					</article>
+		<ul class="large-block-grid-4 news-list">
+			<% loop $Blog.BlogPosts.Limit(8) %>
+				<% if $FeaturedImage %>
+				<li class="news-list__item">
+					<a href="$Link" class="news-list__link">
+						<img class="news-list__img" src="$FeaturedImage.URL">
+						<div class="news-list__overlay">&nbsp;</div>
+              			<div class="news-list__title"><h2>$Title</h2></div>
+					</a>
 				</li>
-
+				<% end_if %>
 			<% end_loop %>
-			<li><h3 class="text-center"><a href="blog/">Blog archive</a></h3></li>
 		</ul>
-
 	</div>
 </div>
 
