@@ -101,25 +101,10 @@ class Page_Controller extends ContentController {
 
 	}
 
-	public function PostsByTag() {
-		// $blogs = Blog::get();
-		// foreach ($blogs as $blog){
-		// 	if ($blog->Tag == 'Interviews'){
-
-		// 	}
-		// 	else if ($blog->Tag == 'Essays'){
-				
-		// 	}
-		// 	else if ($blog->Tag == 'Podcasts'){
-				
-		// 	}
-		// 	else if ($blog->Tag == 'Collaborations'){
-				
-		// 	}
-		// 	else if ($blog->Tag == 'Bookreviews'){
-				
-		// 	}
-		// }
+	public function PostsByTag($tag) {
+		$blogTag = BlogTag::get()->filter(array('Title' => $tag))->first();
+		$posts = $blogTag->BlogPosts();
+		return $posts;
 	}
 
 

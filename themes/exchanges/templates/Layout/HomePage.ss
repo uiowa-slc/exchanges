@@ -34,7 +34,7 @@
 	<div class="container large-12 columns" id="news">
 		<h2 class="banner text-center">From the Blog:</h2>
 		<ul class="large-block-grid-4 news-list">
-			<% loop $Blog.BlogPosts.Limit(8) %>
+			<% loop $PostsByTag("Interviews").Limit(8) %>
 				<% if $FeaturedImage %>
 				<li class="news-list__item">
 					<a href="$Link" class="news-list__link">
@@ -46,6 +46,7 @@
 				<% end_if %>
 			<% end_loop %>
 		</ul>
+		<%-- <a href="$Blog.Link"><h2 class="banner text-center">More from the blog</h2></a> --%>
 	</div>
 </div>
 
