@@ -10,8 +10,18 @@
 		"silverstripe/blog": "2.*",
 		"silverstripe/widgets": "*",
 		"jonom/focuspoint" : "*",
-		"jonom/silverstripe-betternavigator": "2.1"
+		"jonom/silverstripe-betternavigator": "2.1",
+		"jacobbuck/silverstripe-colorfulimage" : "*",
+		"heyday/silverstripe-colorpalette" :"*"
+
 	},
+
+	"repositories" : [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jacobbuck/silverstripe-colorfulimage"
+        }
+	],
 
 	"minimum-stability": "dev"
 }

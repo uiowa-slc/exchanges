@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d1c353ba9cee282ef3bd520af1fa47e5",
-    "content-hash": "dcd640835b00688d1272765cd1ccd62d",
+    "hash": "d96e2de6c45f731abe40677979fa141f",
+    "content-hash": "477c17fb658049fdb923151c64125225",
     "packages": [
         {
             "name": "composer/installers",
@@ -115,6 +115,81 @@
             "time": "2016-08-13 20:53:52"
         },
         {
+            "name": "heyday/silverstripe-colorpalette",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heyday/silverstripe-colorpalette.git",
+                "reference": "3c1f0f4920cc90fa66e85183a9d79ff525383174"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heyday/silverstripe-colorpalette/zipball/3c1f0f4920cc90fa66e85183a9d79ff525383174",
+                "reference": "3c1f0f4920cc90fa66e85183a9d79ff525383174",
+                "shasum": ""
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cam Spiers",
+                    "email": "camspiers@gmail.com"
+                },
+                {
+                    "name": "Kyle Beattie",
+                    "email": "kyle@heyday.co.nz"
+                }
+            ],
+            "description": "A coor palette picker for SilverStripe CMS",
+            "time": "2016-01-26 20:28:44"
+        },
+        {
+            "name": "jacobbuck/silverstripe-colorfulimage",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jacobbuck/silverstripe-colorfulimage.git",
+                "reference": "a063596f03e4bc740dacb7c72d483b0bb9ff8d5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jacobbuck/silverstripe-colorfulimage/zipball/a063596f03e4bc740dacb7c72d483b0bb9ff8d5b",
+                "reference": "a063596f03e4bc740dacb7c72d483b0bb9ff8d5b",
+                "shasum": ""
+            },
+            "require": {
+                "heyday/silverstripe-colorpalette": "~1.1",
+                "ksubileau/color-thief-php": "~1.3",
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "colorfulimage"
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Buck",
+                    "email": "buck.jacob@gmail.com"
+                }
+            ],
+            "description": "Enhance the Image class by providing the dominant color or a representative color palette from an image, and the contrast color of the dominant color.",
+            "keywords": [
+                "image",
+                "silverstripe"
+            ],
+            "support": {
+                "source": "https://github.com/jacobbuck/silverstripe-colorfulimage/tree/master",
+                "issues": "https://github.com/jacobbuck/silverstripe-colorfulimage/issues"
+            },
+            "time": "2016-05-19 22:43:37"
+        },
+        {
             "name": "jonom/focuspoint",
             "version": "dev-master",
             "source": {
@@ -192,6 +267,59 @@
                 "silverstripe"
             ],
             "time": "2015-12-18 03:34:13"
+        },
+        {
+            "name": "ksubileau/color-thief-php",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ksubileau/color-thief-php.git",
+                "reference": "a673d7d3fa815c70fa4bebdee74d337e9e6944fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ksubileau/color-thief-php/zipball/a673d7d3fa815c70fa4bebdee74d337e9e6944fa",
+                "reference": "a673d7d3fa815c70fa4bebdee74d337e9e6944fa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8|~5.7",
+                "squizlabs/php_codesniffer": "~2.7"
+            },
+            "suggest": {
+                "ext-gd": "to use the GD image adapter.",
+                "ext-gmagick": "to use the Gmagick image adapter.",
+                "ext-imagick": "to use the Imagick image adapter."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ColorThief\\": "lib/ColorThief"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC-BY-2.5"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Subileau",
+                    "homepage": "http://www.kevinsubileau.fr"
+                }
+            ],
+            "description": "Grabs the dominant color or a representative color palette from an image.",
+            "homepage": "http://www.kevinsubileau.fr/projets/color-thief-php",
+            "keywords": [
+                "color",
+                "dominant",
+                "palette",
+                "php",
+                "thief"
+            ],
+            "time": "2016-12-18 03:12:25"
         },
         {
             "name": "silverstripe/blog",

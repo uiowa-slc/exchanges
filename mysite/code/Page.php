@@ -48,6 +48,7 @@ class Page extends SiteTree {
 		$issueArray = Issue::get();
 		return $issueArray;
 	}
+
 }
 class Page_Controller extends ContentController {
 
@@ -88,6 +89,11 @@ class Page_Controller extends ContentController {
 
 	public function getBlog() {
 		return NewsHolder::get()->First();
+	}
+
+	public function Posts(){
+		$posts = BlogPost::get();
+		return $posts;
 	}
 
 	public function Pages() {

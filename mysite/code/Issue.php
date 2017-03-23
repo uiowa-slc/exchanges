@@ -8,6 +8,7 @@ class Issue extends Page {
 		"LetterFromEditor"            => "HTMLText",
 		"Transparency"                => "Varchar(100)",
 		"UseTitleDropShadow"          => "Boolean",
+		'LinkColor' => 'Varchar(16)'
 	);
 
 	private static $has_one = array(
@@ -35,6 +36,23 @@ class Issue extends Page {
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Content');
 		$fields->addFieldToTab("Root.Main", new UploadField("Emblem", "Issue cover"));
+		$color = $this->obj('Emblem')->Color;
+		$pallete = $this->obj('Emblem')->dominantColorPalette();
+
+		$options = array();
+		$options[$color] = $color;
+
+		foreach ($pallete as $color) {
+			$options[$color] = $color;
+		}
+		$fields->addFieldToTab('Root.Main',
+			ColorPaletteField::create(
+				$name = 'LinkColor',
+				$title = 'Choose a dominant link color',
+				$source = $options,
+				$value = $this->obj('Emblem')->Color
+			)
+		);
 
 		$alphadropdownfield = DropdownField::create(
 			'Transparency',

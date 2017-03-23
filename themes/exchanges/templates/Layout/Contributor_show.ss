@@ -1,4 +1,12 @@
-<div class="row content-page">
+<% if $Contributor.BiographicalDetails %>
+<div class="row">
+	<div class="small-12 large-8 large-centered columns">
+		<h2>About $Contributor.Name</h2>
+		<p>$Contributor.BiographicalDetails</p>
+	</div>
+</div>
+<% end_if %>
+<div class="row">
 	<div class="small-12 columns">
 		<h2>Works contributed by <span class="text-nowrap">{$Contributor.Name}</span>:</h2>
 		<hr />
@@ -9,6 +17,6 @@
 				<% end_loop %>
 			</ul>
 		<% end_if %>
-		<% if $Contributor.BiographicalDetails %><p>$Contributor.BiographicalDetails</p><% end_if %>		
+				
 	</div> 	
 </div>

@@ -1,39 +1,35 @@
-.NewsHolder {
-	.post-summary {
-		margin: $column-gutter 0;
+
+.post__summary {
+	margin: $column-gutter 0;
+}
+.post__social {
+	list-style: none;
+	margin: 0;
+	font-size: 15px;
+	padding-top: 5px;
+	padding-left: 15px;
+	text-align: center;
+
+	//font-family: "futura-pt","Arial Narrow",sans-serif;
+	@media only screen and (max-width: 1000px) {
+		list-style: none;
+		margin: 0;
+		font-size: 13px;
+		padding: 0;
+		float: left;
+		text-align: left;
+
+		& li {
+			display: inline-block;
+			margin-right: 1em;
+		}
 	}
 }
 
-.NewsPage {
-	.blog-social {
-		list-style: none;
-		margin: 0;
-		font-size: 15px;
-		padding-top: 5px;
-		padding-left: 15px;
-		text-align: center;
+.post__social-label {
+	font-family: "futura-pt","Arial Narrow",sans-serif;
+}
 
-		//font-family: "futura-pt","Arial Narrow",sans-serif;
-		@media only screen and (max-width: 1000px) {
-			list-style: none;
-			margin: 0;
-			font-size: 13px;
-			padding: 0;
-			float: left;
-			text-align: left;
-
-			& li {
-				display: inline-block;
-				margin-right: 1em;
-			}
-		}
-	}
-
-	.social-label {
-		font-family: "futura-pt","Arial Narrow",sans-serif;
-	}
-
-	.social-icon {
-		display: block;
-	}
+.post__social-icon {
+	display: block;
 }

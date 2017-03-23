@@ -1,4 +1,9 @@
-<div class="post-summary">
+<div class="post__summary">
+    <p class="post__image">
+        <a href="$Link" <%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>>
+            $FeaturedImage.setWidth(795)
+        </a>
+    </p>    
     <h2>
         <a href="$Link" title="<%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>">
             <% if $MenuTitle %>$MenuTitle
@@ -6,20 +11,14 @@
         </a>
     </h2>
 
-    <p class="post-image">
-        <a href="$Link" <%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>>
-            $FeaturedImage.setWidth(795)
-        </a>
-    </p>
-    
     <% if $Content %>
         <p>
-            $Content.Summary(50)
+            $Content.Summary(200)
             <a href="$Link">
                Continue Reading
             </a>
         </p>
     <% end_if %>
     
-    <% include EntryMeta %>
+    <% include PostMeta %>
 </div>

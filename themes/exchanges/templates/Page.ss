@@ -12,7 +12,16 @@
 	<% end_if %>
 	<% include OpenGraph %>
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
+	<script type="text/javascript" src="https://use.typekit.net/gor3pds.js"></script>
+	<script type="text/javascript">try{Typekit.load({ async: false });}catch(e){}</script>
 	<link href="{$ThemeDir}/css/app.css" rel="stylesheet">
+	<% if $LinkColor %>
+		<style>
+			a{
+				color: {$LinkColor};
+			}
+		</style>
+	<% end_if %>
 </head>
 <body class="$ClassName.ATT">
 	
@@ -46,8 +55,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="themes/exchanges/build/build.js?v=2016"></script>
-<script type="text/javascript" src="https://use.typekit.net/gor3pds.js"></script>
-<script type="text/javascript">try{Typekit.load({ async: true });}catch(e){}</script>
+
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
