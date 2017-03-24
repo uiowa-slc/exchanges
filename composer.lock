@@ -195,12 +195,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jonom/silverstripe-focuspoint.git",
-                "reference": "9f3b2dd59f31c3e5c66f44220aedc76035992f64"
+                "reference": "716a44b2d7f72d190121fa1e15da1f0b17ec147c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jonom/silverstripe-focuspoint/zipball/9f3b2dd59f31c3e5c66f44220aedc76035992f64",
-                "reference": "9f3b2dd59f31c3e5c66f44220aedc76035992f64",
+                "url": "https://api.github.com/repos/jonom/silverstripe-focuspoint/zipball/716a44b2d7f72d190121fa1e15da1f0b17ec147c",
+                "reference": "716a44b2d7f72d190121fa1e15da1f0b17ec147c",
                 "shasum": ""
             },
             "require": {
@@ -226,7 +226,7 @@
                 "image",
                 "silverstripe"
             ],
-            "time": "2016-12-13 15:51:46"
+            "time": "2017-03-22 23:16:19"
         },
         {
             "name": "jonom/silverstripe-betternavigator",
@@ -327,12 +327,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-blog.git",
-                "reference": "3e298b7b108c2a04d956716fe05bd05ba9703bc9"
+                "reference": "a5dee40fcbb0573997eba61c063a2af9a7a426c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/3e298b7b108c2a04d956716fe05bd05ba9703bc9",
-                "reference": "3e298b7b108c2a04d956716fe05bd05ba9703bc9",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-blog/zipball/a5dee40fcbb0573997eba61c063a2af9a7a426c4",
+                "reference": "a5dee40fcbb0573997eba61c063a2af9a7a426c4",
                 "shasum": ""
             },
             "require": {
@@ -372,7 +372,7 @@
                 "news",
                 "silverstripe"
             ],
-            "time": "2016-12-20 15:20:16"
+            "time": "2017-03-15 22:45:27"
         },
         {
             "name": "silverstripe/cms",

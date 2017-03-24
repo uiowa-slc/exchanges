@@ -1,0 +1,61 @@
+$icomoon-font-path: "../fonts" !default;
+
+$social-icon-podcast: "\e904";
+$social-icon-envelop: "\e900";
+$social-icon-facebook: "\e901";
+$social-icon-twitter: "\e902";
+$social-icon-soundcloud: "\e903";
+
+
+@font-face {
+  font-family: 'social';
+  src:  url('#{$icomoon-font-path}/social.eot?kv9tq9');
+  src:  url('#{$icomoon-font-path}/social.eot?kv9tq9#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/social.ttf?kv9tq9') format('truetype'),
+    url('#{$icomoon-font-path}/social.woff?kv9tq9') format('woff'),
+    url('#{$icomoon-font-path}/social.svg?kv9tq9#social') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="social-icon-"], [class*=" social-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'social' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.social-icon-podcast {
+  &:before {
+    content: $social-icon-podcast;
+  }
+}
+.social-icon-envelop {
+  &:before {
+    content: $social-icon-envelop;
+  }
+}
+.social-icon-facebook {
+  &:before {
+    content: $social-icon-facebook;
+  }
+}
+.social-icon-twitter {
+  &:before {
+    content: $social-icon-twitter;
+  }
+}
+.social-icon-soundcloud {
+  &:before {
+    content: $social-icon-soundcloud;
+  }
+}
+

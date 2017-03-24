@@ -3,20 +3,16 @@
     <style>.Article #poetry {opacity: 1;}</style>
 </noscript>
 
-<div class="article">
 
-
-<div class="row">
-
-
-	<div id="poetry" data-equalizer data-equalizer-mq="large-up">
-		<div class="large-6 large-push-6 columns poem" id="translated-work">
+<div class="row poem__wrap">
+	<div id="poem__container" class="poem__container" data-equalizer data-equalizer-mq="large-up">
+		<div class="large-6 large-push-6 columns poem__body" id="translated-work">
 			<article class="translated">
-				<div class="poem-translated-title poem-info" data-equalizer-watch>
+				<div class="poem__translated-title poem__info" data-equalizer-watch>
 					<div>
 						<% if $TranslatedTitle && $TranslatedTitle %><h1>$TranslatedTitle</h1>
 						<% else %> 
-						<h1 class="shared-title">$Title</h1>
+							<h1 class="poem__shared-title">$Title</h1>
 						<% end_if %>
 					</div>
 						<span class="author">
@@ -32,7 +28,7 @@
 						<a href="#original-work">View Original Work &darr;</a>
 					</p>
 				</div>
-				<div class="poem-content">
+				<div class="poem__text">
 				$Content2
 				</div>
 				<p class="hide-for-large-up">
@@ -41,9 +37,9 @@
 			</article>
 		</div>
 
-		<div class="large-6 large-pull-6 columns poem {$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
+		<div class="large-6 large-pull-6 columns poem__body {$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article>
-				<div class="poem-untranslated-title poem-info <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
+				<div class="poem__untranslated-title poem__info <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
 					<div>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
 							<h1>$UntranslatedTitle</h1>
@@ -62,7 +58,7 @@
 						<a href="#translated-work">View Translated Work &uarr;</a>
 					</p>
 				</div>
-				<div class="poem-content">
+				<div class="poem__text">
 					$Content
 				</div>
 			</article>
@@ -71,18 +67,16 @@
 		
 	</div>
 </div>
-	<% include ArticleSubNav %>
+<% include ArticleSubNav %>
 
-	<div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
-		<h1>Translator Notes</h1>
-		$TranslatorNote
-		<hr />
-		<p class="author">
-			<% loop $Translators %>
-				<a href="$Link" class="text-nowrap">$Name</a><br />
-			<% end_loop %>
-		</p>
-		<a class="close-reveal-modal">&#215;</a>
-	</div>
-
+<div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
+	<h1>Translator Notes</h1>
+	$TranslatorNote
+	<hr />
+	<p class="author">
+		<% loop $Translators %>
+			<a href="$Link" class="text-nowrap">$Name</a><br />
+		<% end_loop %>
+	</p>
+	<a class="close-reveal-modal">&#215;</a>
 </div>

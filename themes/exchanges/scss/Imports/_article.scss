@@ -29,20 +29,20 @@
             padding-top: 0;
         }
 
-        .poem-translated-title.shared-title {
+        .poem__translated-title.poem__shared-title {
             @media #{$large-up} {
                 visibility: hidden;
             }
         }
     }
 
-    .poem-untranslated-title.alt-font h1 {
+    .poem__untranslated-title.alt-font h1 {
         font-family: Helvetica, Arial, sans;
         font-weight: normal;
         font-size: 48px;
     }
 
-    .compilation-title {
+    .poem__compilation-title {
         padding: $column-gutter 0;
         margin: 0;
     }
@@ -91,11 +91,16 @@
         max-width: $article-row-width;
     }
 
-    &.equalized #poetry {
+    &.equalized .poem__container {
         opacity: 1;
     }
 
-    #poetry {
+    .poem__wrap {
+        background: white;
+        padding: rem-calc(40) 0;
+        border: 1px solid #eee;
+    }
+    .poem__container {
         @media #{$large-up} {
             opacity: 0;
         }
@@ -115,7 +120,7 @@
             margin-bottom: 1rem;
         }
 
-        .poem {
+        .poem__body {
             @media #{$large-up} {
                 padding: 0 ($article-poetry-padding / 2);
 
@@ -123,7 +128,7 @@
             }
 
             &.ar, &.ku {
-                .poem-content {
+                .poem__text {
                     font-family: $arabic-font-family;
 
                     h1, h2, h3, h4, h5, h6 {
@@ -174,7 +179,7 @@
     font-family: $header-font-family;
     line-height: 1.2;
 
-    .toc-container {
+    &__toc-container {
         text-align: center;
         padding-bottom: $column-gutter;
 

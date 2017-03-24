@@ -39,11 +39,9 @@
 	
 	
 	<% if $BannerImage %>
-	<div class="cover-container b-lazy" data-src="$BannerImage.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $BannerImage.PercentageX% $BannerImage.PercentageY%; background-size: cover;">
-		<%--<img src="$BannerImage.CroppedFocusedImage(1280,400).URL" style="width: 100%;" />--%>
-	</div>
+		<div class="cover-container b-lazy" data-src="$BannerImage.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $BannerImage.PercentageX% $BannerImage.PercentageY%; background-size: cover;">
+		</div>
 	<% end_if %>
-
 
 	<div class="main typography" role="main">
 		$Layout
@@ -52,11 +50,8 @@
 	<% include Footer %>
 	$BetterNavigator
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="themes/exchanges/build/build.js?v=2016"></script>
-
-
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
