@@ -52,7 +52,11 @@
 		line-height: rem-calc(30);
 	}
 }
-
+.blog-post-meta {
+	font-size: rem-calc(11);
+	text-transform: uppercase;
+	font-family: $header-font-family;
+}
 
 .post__container{
 

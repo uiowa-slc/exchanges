@@ -91,6 +91,12 @@ hr {
 	}
 }
 
+.pos-sticky{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
 /* Content padding so it doesn't run up against the sidenav  */
 
 .padded-content {
@@ -114,45 +120,6 @@ hr {
 	width: 100%;
 }
 
-.news-list {
-	article {
-		//padding: 20px 0;
-		time {
-			font-size: rem-calc(14);
-			line-height: 1em;
-			display: block;
-			text-transform: uppercase;
-			color: $darkGray;
-			font-family: $header-font-family;
-			margin: 0.4em 0;
-		}
-
-		header {
-			font-family: $header-font-family;
-
-			h1 {
-				text-transform: uppercase;
-			}
-
-			small {
-				font-weight: normal;
-				text-transform: none;
-				display: block;
-				padding: 0.1em 0;
-				line-height: 1;
-			}
-		}
-
-		.article-text, .content-text {
-			max-width: 720px;
-			min-height: 300px;
-		}
-
-		.content-text * {
-			font-size: rem-calc(18);
-		}
-	}
-}
 
 .button.view-translator-notes {
 	margin-bottom: 0;
@@ -262,11 +229,7 @@ hr {
 	}
 }
 
-.blog-post-meta {
-	font-size: rem-calc(11);
-	text-transform: uppercase;
-	font-family: $header-font-family;
-}
+
 
 p.hanging-indent {
 	padding-left: 20px;

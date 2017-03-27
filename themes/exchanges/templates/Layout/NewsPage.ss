@@ -1,6 +1,6 @@
 
 <div class="row">
-    <div class="large-1 columns">
+    <div class="large-1 columns pos-sticky">
         <a href="$Parent.Link" class="breadcrumb breadcrumb--full-width tiny">$Parent.Title</a>
         <% include BlogShareIcons %>
     </div>
@@ -44,7 +44,7 @@
         $PageComments
     </div>
 
-    <div class="large-2 columns">
+    <div class="large-2 columns pos-sticky">
         <% include BlogSideBar %>
     </div>
 </div>
