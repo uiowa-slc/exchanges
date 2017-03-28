@@ -26,25 +26,27 @@
 
 <div class="row">
 	<div class="large-9 columns">
-		<h2 class="banner">From the Blog:</h2>
-		<ul class="large-block-grid-2 card-list">
-			<% loop $Posts.Sort('RAND()').Limit(2,2) %>
-				
-				<li class="card-list__item">
-					<a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
-						<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
-						<div class="card-list__overlay"></div>
-              			<div class="card-list__text">
-              			<h2 class="card-list__header">$Title</h2>
-	              			<% if $Credits %>
-	              			<p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
-	              			<% end_if %>
-              			</div>
-					</a>
-				</li>
-				
-			<% end_loop %>
-		</ul>
+		<section class="card-section">
+			<h2 class="banner">From the Blog:</h2>
+			<ul class="large-block-grid-2 card-list">
+				<% loop $Posts.Sort('RAND()').Limit(2,2) %>
+					
+					<li class="card-list__item">
+						<a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+							<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
+							<div class="card-list__overlay"></div>
+	              			<div class="card-list__text">
+	              			<h2 class="card-list__header">$Title</h2>
+		              			<% if $Credits %>
+		              			<p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
+		              			<% end_if %>
+	              			</div>
+						</a>
+					</li>
+					
+				<% end_loop %>
+			</ul>
+		</section>
 		<h3 class="banner banner--no-bg">Interviews</h3>
 		<ul class="large-block-grid-3 card-list">
 			<% loop $Posts.Limit(3) %>
