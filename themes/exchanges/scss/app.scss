@@ -5,6 +5,7 @@
 @import "imports/footer/mixins";
 
 @import "components/cards";
+@import "components/issue-preview";
 
 @import "imports/fonts";
 @import "imports/header";
@@ -74,7 +75,7 @@ hr {
 	clear: both;
 }
 
-.main {
+.layout {
 	min-height: 320px;
 	padding-top: $column-gutter / 2;
 }
@@ -95,10 +96,12 @@ hr {
 	}
 }
 
-.pos-sticky{
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
+.exchanges-sticky{
+	@media #{$large-up} {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+	}
 }
 
 /* Content padding so it doesn't run up against the sidenav  */

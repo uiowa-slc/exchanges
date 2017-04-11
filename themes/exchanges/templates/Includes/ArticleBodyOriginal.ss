@@ -1,0 +1,31 @@
+	<div id="poem__container" class="poem__container">
+
+		<div class="large-6 large-centered columns poem__body poem__body--original-work poem__body--{$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
+			<article>
+				<div class="poem__untranslated-title poem__meta <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
+					<div>
+						<% if $UntranslatedTitle && $TranslatedTitle %>
+							<h1>$UntranslatedTitle</h1>
+						<% else %>
+							<h1>$Title</h1>
+						<% end_if %>
+					</div>
+					<span class="author">
+						<% if $Authors %>By
+						<% loop $Authors %>
+							<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
+						<% end_loop %> 
+						<% end_if %>
+					</span>
+					<p class="hide-for-large-up author">
+						<a href="#translated-work">View Translated Work &uarr;</a>
+					</p>
+				</div>
+				<div class="poem__text">
+					$Content
+				</div>
+			</article>
+		</div>
+
+		
+	</div>

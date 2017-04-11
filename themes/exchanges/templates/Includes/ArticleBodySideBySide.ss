@@ -1,14 +1,7 @@
-<% include Breadcrumb %>
-<noscript>
-    <style>.Article #poetry {opacity: 1;}</style>
-</noscript>
-
-
-<div class="row poem__wrap">
 	<div id="poem__container" class="poem__container" data-equalizer data-equalizer-mq="large-up">
-		<div class="large-6 large-push-6 columns poem__body" id="translated-work">
-			<article class="translated">
-				<div class="poem__translated-title poem__info" data-equalizer-watch>
+		<div class="large-6 large-push-6 columns poem__body poem__body--translated-work" id="translated-work">
+			<article class="poem__translated">
+				<div class="poem__translated-title poem__meta" data-equalizer-watch>
 					<div>
 						<% if $TranslatedTitle && $TranslatedTitle %><h1>$TranslatedTitle</h1>
 						<% else %> 
@@ -37,9 +30,9 @@
 			</article>
 		</div>
 
-		<div class="large-6 large-pull-6 columns poem__body {$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
+		<div class="large-6 large-pull-6 columns poem__body poem__body--original-work poem__body--{$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article>
-				<div class="poem__untranslated-title poem__info <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
+				<div class="poem__untranslated-title poem__meta <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
 					<div>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
 							<h1>$UntranslatedTitle</h1>
@@ -66,17 +59,3 @@
 
 		
 	</div>
-</div>
-<% include ArticleSubNav %>
-
-<div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
-	<h1>Translator Notes</h1>
-	$TranslatorNote
-	<hr />
-	<p class="author">
-		<% loop $Translators %>
-			<a href="$Link" class="text-nowrap">$Name</a><br />
-		<% end_loop %>
-	</p>
-	<a class="close-reveal-modal">&#215;</a>
-</div>

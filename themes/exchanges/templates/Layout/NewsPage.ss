@@ -1,6 +1,6 @@
 
 <div class="row">
-    <div class="large-1 columns pos-sticky">
+    <div class="large-1 columns exchanges-sticky">
         <a href="$Parent.Link" class="breadcrumb breadcrumb--full-width tiny">$Parent.Title</a>
         <% include BlogShareIcons %>
     </div>

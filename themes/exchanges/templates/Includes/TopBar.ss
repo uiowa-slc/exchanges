@@ -1,6 +1,6 @@
-<div class="nav-container contain-to-grid">
-	<div class="nav-screen">
-		<nav class="top-bar <% if UseTitleDropShadow %>has-dropshadow<% end_if %>" data-topbar role="navigation" data-options="align:right">
+<div class="nav-container nav-container--{$ClassName} contain-to-grid contain-to-grid--{$ClassName}">
+	<div class="nav-screen nav-screen--{$ClassName}">
+		<nav class="top-bar top-bar--{$ClassName} <% if UseTitleDropShadow %>has-dropshadow<% end_if %>" data-topbar role="navigation" data-options="align:right">
 			<ul class="title-area">
 				<li class="name">
 					<h1 class="show-for-large-up"><a href="{$baseUrl}">$SiteConfig.Title</a></h1>

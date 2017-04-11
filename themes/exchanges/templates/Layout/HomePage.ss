@@ -19,7 +19,7 @@
 				<% end_loop %>
 					
 			</ul>
-			<p class="start-reading text-center"><a href="$Link">Start reading &rarr;</a></p>
+			<p class="issue-preview__start-reading text-center"><a href="$Link">Start reading &rarr;</a></p>
 		</div>
 	</div>
 <% end_with %>

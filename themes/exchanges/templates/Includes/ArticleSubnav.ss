@@ -1,8 +1,8 @@
 	<div class="row">
 		<div class="large-12 columns">
-			<div class="article-subnav">
+			<div class="issue-nav">
 
-					<div class="large-4 columns prev-container show-for-large-up">
+					<div class="large-4 columns issue-nav__prev-container show-for-large-up">
 						<% if $PreviousPage %>
 							<% with $PreviousPage %>
 								<a href="$Link" class="prev "> &larr; $Title</a>
@@ -13,14 +13,14 @@
 						&nbsp;
 						<% end_if %>
 					</div>
-					<div class="large-4 columns next-container hide-for-large-up">
+					<div class="large-4 columns issue-nav__next-container hide-for-large-up">
 						<% if $NextPage %>
 							<% with $NextPage %>
 								<a href="$Link" class="next">$Title&nbsp;&rarr;</a><br />
 							<% end_with %>
 						<% end_if %>
 					</div>
-					<div class="large-4 columns toc-container">
+					<div class="large-4 columns issue-nav__toc-container">
 						<% if $Parent.ClassName == "Issue" %>
 							<a href="$Parent.Link" class="toc-link">Table of Contents</a>
 						<% else_if $ClassName == "Issue" %>
@@ -28,7 +28,7 @@
 						<% end_if %>
 					</div>
 
-					<div class="large-4 columns next-container show-for-large-up end">
+					<div class="large-4 columns issue-nav__next-container show-for-large-up end">
 						<% if $NextPage %>
 							<% with $NextPage %>
 								<a href="$Link" class="next">$Title&nbsp;&rarr;</a><br />

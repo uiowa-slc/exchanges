@@ -32,6 +32,13 @@ $podcast-color: rgb(255, 55, 34);
 	@include block-grid(
 	    $per-row: 1
 	);
+
+	@media #{$medium-up} {
+		@include block-grid(
+		    $per-row: 2,
+		    $spacing: rem-calc(10)
+		);
+	}
 	@media #{$large-up} {
 		@include block-grid(
 		    $per-row: 3,
@@ -40,30 +47,19 @@ $podcast-color: rgb(255, 55, 34);
 
 	}
 	&--two{
-		@media #{$large-up} {
+		@media #{$medium-up} {
 			@include block-grid(
 			    $per-row: 2,
 			    $spacing: rem-calc(10)
 			);	
-		}	
+		}		
 	}
 }
 
-.card-list>.card-list_item--single-row{
-		//padding-bottom: 0;
-	}	
-
-
 .card-list__item {
 
-
-	
 }
 
-.card-list__item--single-row{
-
-
-}
 .card-list__img {
 	border-radius: 5px;
 }
@@ -77,16 +73,29 @@ $podcast-color: rgb(255, 55, 34);
 	// border: 1px solid #eee;
 	height: rem-calc(200);
 
+	@media #{$large-up} {
+
+	}
+
 	&--small{
-		height: rem-calc(200);
+		
+		@media #{$large-up} {
+			height: rem-calc(200);
+		}
 	}
 
 	&--medium{
-		height: rem-calc(300);
+		
+		@media #{$large-up} {
+			height: rem-calc(300);
+		}
 	}
 
 	&--large{
-		height: rem-calc(400);
+		
+		@media #{$large-up} {
+			height: rem-calc(400);
+		}
 	}
 	&:hover {
 		.card-list__overlay {
@@ -111,7 +120,7 @@ $podcast-color: rgb(255, 55, 34);
 }
 
 .card-list__text {
-	opacity: 0;
+	
 	// position: absolute;
 	display: block;
 	left: 0;
@@ -121,6 +130,9 @@ $podcast-color: rgb(255, 55, 34);
 	line-height: 2;
 	position: relative;
 	z-index: 99;
+	@media #{$large-up} {
+		opacity: 0;
+	}
 	&--large{
 		// align-self: flex-start;
 		flex: 1;
@@ -134,7 +146,6 @@ $podcast-color: rgb(255, 55, 34);
 
 .card-list__flex-aligner{
 	position: absolute;
-
 	width: 100%;
 }
 .card-list__header{
@@ -161,7 +172,10 @@ $podcast-color: rgb(255, 55, 34);
 	transition: opacity .25s ease-in-out;
 	-moz-transition: opacity .25s ease-in-out;
 	-webkit-transition: opacity .25s ease-in-out;
-
+	opacity: 0.4;
+	@media #{$large-up} {
+		opacity: 0;
+	}
 	&--always-visible{
 		opacity: 0.4;
 	}
