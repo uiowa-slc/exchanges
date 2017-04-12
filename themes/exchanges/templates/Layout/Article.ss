@@ -22,20 +22,28 @@
 </noscript>
 
 
-<div class="row row--Article poem__wrap">
-	<div class="tabs-content">
-		  <section role="tabpanel" aria-hidden="false" class="content active" id="side-by-side">
-		    <% include ArticleBodySideBySide %>
-		  </section>
-		  <section role="tabpanel" aria-hidden="true" class="content" id="original">
-		    <% include ArticleBodyOriginal %>
-		  </section>
-		  <section role="tabpanel" aria-hidden="true" class="content" id="translated">
-		    <% include ArticleBodyTranslated %>
-		  </section>
-		  <section role="tabpanel" aria-hidden="true" class="content" id="translator-notes">
-		    <% include ArticleBodyTranslatorNotes %>
-		  </section>
+<div class="row row--large">
+
+	<div class="large-1 columns exchanges-sticky">
+		<% include BlogShareIcons %>
+	</div>
+	<div class="poem__wrap large-11 columns">
+		<div class="row">
+			<div class="tabs-content">
+				  <section role="tabpanel" aria-hidden="false" class="content active" id="side-by-side">
+				    <% include ArticleBodySideBySide %>
+				  </section>
+				  <section role="tabpanel" aria-hidden="true" class="content" id="original">
+				    <% include ArticleBodyOriginal %>
+				  </section>
+				  <section role="tabpanel" aria-hidden="true" class="content" id="translated">
+				    <% include ArticleBodyTranslated %>
+				  </section>
+				  <section role="tabpanel" aria-hidden="true" class="content" id="translator-notes">
+				    <% include ArticleBodyTranslatorNotes %>
+				  </section>
+			</div>
+		</div>
 	</div>
 
 </div>

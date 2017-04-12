@@ -30,7 +30,7 @@
 			</article>
 		</div>
 
-		<div class="large-6 large-pull-6 columns poem__body poem__body--original-work poem__body--{$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
+		<div class="large-6 large-pull-6 columns poem__body poem__body--original-work poem__body--lang-{$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article>
 				<div class="poem__untranslated-title poem__meta <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
 					<div>

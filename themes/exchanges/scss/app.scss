@@ -20,6 +20,10 @@
 
 @import "imports/footer/grid-simple";
 
+.row--large{
+	max-width: 1600px;
+}
+
 .exchanges-logo {
 	font-family: 'Libre Baskerville', serif, times;
 }
