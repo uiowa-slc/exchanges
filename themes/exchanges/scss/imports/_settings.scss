@@ -60,7 +60,7 @@ $base-line-height: 150%;
 // $include-html-grid-classes: $include-html-classes;
 $include-xl-html-grid-classes: true;
 
-$row-width: 1360px;
+$row-width: 1600px;
 $column-gutter: rem-calc(35);
 
 // $total-columns: 12;
@@ -1105,8 +1105,8 @@ $side-nav-font-family: $header-font-family;
  $tabs-navigation-active-bg-color: #1097ce;
 // $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
 // $tabs-navigation-font-color: #222;
-// $tabs-navigation-font-size: rem-calc(16);
-// $tabs-navigation-font-family: $body-font-family;
+ $tabs-navigation-font-size: rem-calc(13);
+$tabs-navigation-font-family: $header-font-family;
 
 // $tabs-content-margin-bottom: rem-calc(24);
 // $tabs-content-padding: $column-gutter/2;

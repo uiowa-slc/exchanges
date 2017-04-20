@@ -1,18 +1,16 @@
 <div class="row row--Article">
-	<div class="medium-2 columns">
-		<a href="$Parent.Link" class="button breadcrumb tiny">$Parent.Title</a>
+	<div class="small-6 medium-2 columns">
+		<a href="$Parent.Link" class="breadcrumb">$Parent.Title</a>
 	</div>
-	<div class="medium-8 columns <% if not $Artist %>end<%end_if %>">
-		<ul class="tabs translation-nav show-for-medium-up" data-tab role="tablist" data-options="scroll_to_content: false">
-		  <li class="tab-title translation-nav__item active" role="presentation"><a href="#side-by-side" role="tab" tabindex="0" aria-selected="true" aria-controls="side-by-side">Side-by-side</a></li>
-		  <li class="tab-title translation-nav__item" role="presentation"><a href='#original' role="tab" tabindex="0" aria-selected="false" aria-controls="original">Original</a></li>
-		  <li class="tab-title translation-nav__item" role="presentation"><a href='#translated' role="tab" tabindex="0" aria-selected="false" aria-controls="translated">Translated</a></li>
-		  <li class="tab-title translation-nav__item" role="presentation"><a href='#translator-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">Translator Notes</a></li>
+	<div class="medium-8 show-for-medium-up columns <% if not $Artist %>end<%end_if %>">
+		<ul class="tabs translation-nav " data-tab role="tablist" data-options="scroll_to_content: false">
+		  <li class="tab-title translation-nav__item active" role="presentation"><a href="#side-by-side" role="tab" tabindex="0" aria-selected="true" aria-controls="side-by-side">Side-by-side</a></li><li class="tab-title translation-nav__item" role="presentation"><a href='#original' role="tab" tabindex="0" aria-selected="false" aria-controls="original">Original</a>
+		  </li><li class="tab-title translation-nav__item" role="presentation"><a href='#translated' role="tab" tabindex="0" aria-selected="false" aria-controls="translated">Translated</a></li><li class="tab-title translation-nav__item" role="presentation"><a href='#translator-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">Translator Notes</a></li>
 		</ul>
 	</div>
 	<% if $Artist %>
-		<div class="medium-2 columns">
-			<p class="poem__artist-credit">Image credit: $Artist</p>
+		<div class="small-6 medium-2 columns">
+			<p class="article__artist-credit">Image credit: $Artist</p>
 		</div>
 	<% end_if %>
 </div>
@@ -27,8 +25,8 @@
 	<div class="large-1 columns exchanges-sticky">
 		<% include BlogShareIcons %>
 	</div>
-	<div class="poem__wrap large-11 columns">
-		<div class="row">
+	<div class="large-11 columns">
+		<div class="row article__wrap">
 			<div class="tabs-content">
 				  <section role="tabpanel" aria-hidden="false" class="content active" id="side-by-side">
 				    <% include ArticleBodySideBySide %>

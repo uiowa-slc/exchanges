@@ -1,9 +1,9 @@
 
-	<div id="poem__container" class="poem__container">
+	<div id="article__container" class="article__container">
 
-		<div class="large-6 large-centered columns poem__body poem__body--original-work poem__body--lang-{$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
+		<div class="large-6 large-centered columns article__body article__body--original-work article__body--lang-{$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article>
-				<div class="poem__untranslated-title poem__meta <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
+				<div class="article__untranslated-title article__meta <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
 					<div>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
 							<h1>$UntranslatedTitle</h1>
@@ -23,7 +23,7 @@
 					</p>
 				</div>
 
-				<div class="poem__text">
+				<div class="article__text">
 					$Content
 				</div>
 			</article>

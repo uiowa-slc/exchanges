@@ -118,10 +118,7 @@ $podcast-color: rgb(255, 55, 34);
 		}
 	}
 }
-
 .card-list__text {
-	
-	// position: absolute;
 	display: block;
 	left: 0;
 	top: 0;
@@ -134,16 +131,12 @@ $podcast-color: rgb(255, 55, 34);
 		opacity: 0;
 	}
 	&--large{
-		// align-self: flex-start;
 		flex: 1;
 	}
-
 	&--always-visible{
 		opacity: 1;
 	}
-
 }
-
 .card-list__flex-aligner{
 	position: absolute;
 	width: 100%;
@@ -155,7 +148,15 @@ $podcast-color: rgb(255, 55, 34);
 		font-size: rem-calc(42);
 		margin-bottom: rem-calc(20);
 	}
+	&--issue-title span{
+		text-transform: uppercase;
+		border-bottom: 3px white solid;
+		&:hover{
+			border-radius: 10px;
+		}
+	}
 }
+
 .card-list__byline{
 	color: #eee;
 	line-height: 1;
@@ -191,7 +192,7 @@ $podcast-color: rgb(255, 55, 34);
 .side-cards__header{
 	font-size: rem-calc(17);
 	line-height: 1.3;
-	padding: 0 rem-calc(10);
+	//padding: 0 rem-calc(10);
 	&--podcast{
 		color: rgb(255, 55, 34);
 	}

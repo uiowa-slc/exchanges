@@ -1,11 +1,11 @@
-	<div id="poem__container" class="poem__container">
-		<div class="large-6 large-centered columns poem__body poem__body--translated-work" id="translated-work">
-			<article class="poem__translated">
-				<div class="poem__translated-title poem__meta">
+	<div id="article__container" class="article__container">
+		<div class="large-6 large-centered columns article__body article__body--translated-work" id="translated-work">
+			<article class="article__translated">
+				<div class="article__translated-title article__meta">
 					<div>
 						<% if $TranslatedTitle && $TranslatedTitle %><h1>$TranslatedTitle</h1>
 						<% else %> 
-							<h1 class="poem__shared-title">$Title</h1>
+							<h1 class="article__shared-title">$Title</h1>
 						<% end_if %>
 					</div>
 						<span class="author">
@@ -21,7 +21,7 @@
 						<a href="#original-work">View Original Work &darr;</a>
 					</p>
 				</div>
-				<div class="poem__text">
+				<div class="article__text">
 				$Content2
 				</div>
 				<p class="hide-for-large-up">

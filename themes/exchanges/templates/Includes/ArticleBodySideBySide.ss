@@ -1,11 +1,11 @@
-	<div id="poem__container" class="poem__container" data-equalizer data-equalizer-mq="large-up">
-		<div class="large-6 large-push-6 columns poem__body poem__body--translated-work" id="translated-work">
-			<article class="poem__translated">
-				<div class="poem__translated-title poem__meta" data-equalizer-watch>
+	<div id="article__container" class="article__container article__container--sidebyside" data-equalizer data-equalizer-mq="large-up">
+		<div class="large-6 large-push-6 columns article__body article__body--translated-work" id="translated-work">
+			<article class="article__translated">
+				<div class="article__translated-title article__meta" data-equalizer-watch>
 					<div>
 						<% if $TranslatedTitle && $TranslatedTitle %><h1>$TranslatedTitle</h1>
 						<% else %> 
-							<h1 class="poem__shared-title">$Title</h1>
+							<h1 class="article__shared-title">$Title</h1>
 						<% end_if %>
 					</div>
 						<span class="author">
@@ -21,7 +21,7 @@
 						<a href="#original-work">View Original Work &darr;</a>
 					</p>
 				</div>
-				<div class="poem__text">
+				<div class="article__text">
 				$Content2
 				</div>
 				<p class="hide-for-large-up">
@@ -30,9 +30,9 @@
 			</article>
 		</div>
 
-		<div class="large-6 large-pull-6 columns poem__body poem__body--original-work poem__body--lang-{$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
+		<div class="large-6 large-pull-6 columns article__body article__body--original-work article__body--lang-{$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article>
-				<div class="poem__untranslated-title poem__meta <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
+				<div class="article__untranslated-title article__meta <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
 					<div>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
 							<h1>$UntranslatedTitle</h1>
@@ -51,7 +51,7 @@
 						<a href="#translated-work">View Translated Work &uarr;</a>
 					</p>
 				</div>
-				<div class="poem__text">
+				<div class="article__text">
 					$Content
 				</div>
 			</article>

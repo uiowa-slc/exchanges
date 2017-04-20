@@ -128,6 +128,7 @@ class Issue_Controller extends Page_Controller {
 				'Content'      => $letterText,
 				'Parent'       => $this,
 				'ClassName'    => 'Article',
+				'BannerImage'  => $this->obj('Emblem'),
 				'NextPage'     => $this->Children()->First,
 				'PreviousPage' => Page::get()->filter(array('URLSegment' => 'home'))->First,
 			);

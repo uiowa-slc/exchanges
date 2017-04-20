@@ -1,9 +1,9 @@
-.poem__meta {
+.article__meta {
     line-height: 1;
     margin-bottom: $column-gutter;
 }
 
-.poem__artist-credit {
+.article__artist-credit {
     color: #797979;
     font-family: $header-font-family;
     font-size: rem-calc(12);
@@ -15,47 +15,48 @@
     }
 }
 
-.poem__share-container{
+.article__share-container{
     padding-right: rem-calc(10);
 }
 
-.poem__subnav{
+.article__subnav{
 
 }
 
-.poem__translated{
+.article__translated{
         padding: ($column-gutter / 2) 0;
         @media #{$large-up} {
             padding-top: 0;
         } 
 }
-.poem__translated-title.poem__shared-title {
+.article__translated-title.article__shared-title {
     @media #{$large-up} {
         visibility: hidden;
     }
 }
 
-.poem__untranslated-title.alt-font h1 {
+.article__untranslated-title.alt-font h1 {
     font-family: Helvetica, Arial, sans;
     font-weight: normal;
     font-size: 48px;
 }
 
-.poem__compilation-title {
+.article__compilation-title {
     padding: $column-gutter 0;
     margin: 0;
 }
 
 
-.poem__wrap {
+.article__wrap {
     background: white;
-    padding: rem-calc(40) 0;
-    border: 1px solid #eee;
-}
-.poem__container {
     @media #{$large-up} {
-        opacity: 0;
+        padding: rem-calc(40) 0;
     }
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+.article__container {
+
 
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
@@ -71,15 +72,26 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
-}
-
-.poem__body {
-    @media #{$large-up} {
-        padding: 0 ($article-poetry-padding / 2);
+    &--sidebyside{
+        @media #{$large-up} {
+            opacity: 0;
+        }        
     }
 }
 
-.poem__body--original-work {
+.article__body {
+    img.leftAlone, img.rightAlone{
+        width: 100%;
+        margin: rem-calc(10) auto;
+        border: 1px solid #eee;
+    }
+    @media #{$large-up} {
+        padding: 0 ($article-poetry-padding / 2);
+    }
+
+}
+
+.article__body--original-work {
     padding-top: 30px;
 
     @media #{$medium-up} {
@@ -87,7 +99,7 @@
     }
 }
 
-.poem__body--lang-ar, .poem__body--lang-ku{
+.article__body--lang-ar, .article__body--lang-ku{
     font-family: $arabic-font-family;
 
     h1, h2, h3, h4, h5, h6 {
@@ -95,11 +107,11 @@
     }
 }
 
-.poem__text--lang-ar, .poem__text--lang-ku {
+.article__text--lang-ar, .article__text--lang-ku {
     font-size: rem-calc(17);
 }
 
-.poem__cover-container {
+.article__cover-container {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -199,7 +211,7 @@
 .layout--Article {
     padding-top: $column-gutter / 2;
 
-    &.equalized .poem__container {
+    &.equalized .article__container--sidebyside {
         opacity: 1;
     }
 }
@@ -212,11 +224,11 @@
 .top-bar--Article{
     background: none;    
 }
-.top-bar--Article .name h1 a, .top-bar--Article .name h2 a, .top-bar--Article .name h3 a, .top-bar--Article .name h4 a, .top-bar--Article .name p a, .top-bar--Article .name span a {
-    @media #{$large-up} {
-        padding: 0 ($article-poetry-padding / 2);
-    }
-}
+// .top-bar--Article .name h1 a, .top-bar--Article .name h2 a, .top-bar--Article .name h3 a, .top-bar--Article .name h4 a, .top-bar--Article .name p a, .top-bar--Article .name span a {
+//     // @media #{$large-up} {
+//     //     padding: 0 ($article-poetry-padding / 2);
+//     // }
+// }
 
 .nav-screen--Article {
     background-color: rgba($topbar-base-color, 0.67);

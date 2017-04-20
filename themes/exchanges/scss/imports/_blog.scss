@@ -4,17 +4,16 @@
 }
 .post__social {
 	list-style: none;
-	margin: 0;
+	margin: 0 auto;
 	font-size: 13px;
 	padding: 0;
-	float: left;
 	text-align: left;
 	@media only screen and (min-width: 1000px) {
 		list-style: none;
 		margin: 0;
 		font-size: 15px;
-		padding-top: 5px;
-		padding-left: 15px;
+		// padding-top: 5px;
+		// padding-left: 15px;
 
 	}
 }
@@ -59,7 +58,7 @@
 }
 
 .post__container{
-
+	overflow: scroll;
 	@media #{$large-up} {
 		background: white;
 		border: 1px solid #eee;
@@ -75,6 +74,10 @@
 .post__heading, .post__meta, .post__body{
 	@media #{$large-up} {
 		padding: 0 rem-calc(40);
+	}
+
+	@media #{$xlarge-up} {
+		padding: 0 rem-calc(100);
 	}
 }
 

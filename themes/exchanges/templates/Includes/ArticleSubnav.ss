@@ -1,5 +1,5 @@
 	<div class="row row--large">
-		<div class="large-11 large-push-1 columns">
+		<div class="large-11 large-push-1">
 
 
 			<ul class="text-center card-list">
@@ -17,7 +17,12 @@
 				<% end_if %>
 
 				<% if $Parent.ClassName == "Issue" %>
-					<li class="card-list__item"><a href="$Parent.Link" class="toc-link">Table of Contents</a></li>
+<%-- 					<li class="card-list__item">
+					<a href="$Parent.Link" class="toc-link">Table of Contents</a>
+					</li> --%>
+					<% with $Parent %>
+						<% include IssueCard %>
+					<% end_with %>
 				<% else_if $ClassName == "Issue" %>
 					<li class="card-list__item"><a href="$Parent.Link" class="toc-link">Issue Archive</a></li>
 				<% end_if %>

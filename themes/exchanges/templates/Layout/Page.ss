@@ -1,11 +1,13 @@
 <div class="row">
-	<div class="large-7 columns large-centered end">
-		<header>
-			<h1>$Title</h1>
-		</header>
-		<div class="content-text">
-			$Content
-			$Form
-		</div>
+	<div class="article__wrap large-7 columns large-centered end">
+		<article class="article__container" role="main">
+			<div class="article__body">
+				<header>
+					<h1>$Title</h1>
+				</header>
+				$Content
+				$Form
+			</div>
+		</article>
 	</div>
 </div>

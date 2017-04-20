@@ -44,7 +44,7 @@
         $PageComments
     </div>
 
-    <div class="large-2 columns pos-sticky">
+    <div class="large-2 columns exchanges-sticky">
         <% include BlogSideBar %>
     </div>
 </div>
