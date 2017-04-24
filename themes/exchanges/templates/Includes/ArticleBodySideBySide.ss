@@ -1,5 +1,5 @@
 	<div id="article__container" class="article__container article__container--sidebyside" data-equalizer data-equalizer-mq="large-up">
-		<div class="large-6 large-push-6 columns article__body article__body--translated-work" id="translated-work">
+		<div class="large-6 large-push-6 columns article__body article__body--poem-lineheight article__body--translated-work" id="translated-work">
 			<article class="article__translated">
 				<div class="article__translated-title article__meta" data-equalizer-watch>
 					<div>
@@ -30,7 +30,7 @@
 			</article>
 		</div>
 
-		<div class="large-6 large-pull-6 columns article__body article__body--original-work article__body--lang-{$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
+		<div class="large-6 large-pull-6 columns article__body article__body--poem-lineheight article__body--original-work article__body--lang-{$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article>
 				<div class="article__untranslated-title article__meta <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
 					<div>

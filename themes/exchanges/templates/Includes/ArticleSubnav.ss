@@ -1,12 +1,12 @@
-	<div class="row row--large">
-		<div class="large-11 large-push-1">
-
+<div class="article__subnav">
+	<div class="row row--fluid">
+		<div class="large-12">
 
 			<ul class="text-center card-list">
 
 				<% if $PreviousPage %>
 					<% with $PreviousPage %>
-						<% include PoemCard %>
+						<% include PoemCardPrev %>
 					<% end_with %>
 				<% else_if $Parent.LetterLink %>
 					<li class="card-list__item">
@@ -29,7 +29,7 @@
 
 				<% if $NextPage %>
 					<% with $NextPage %>
-						<% include PoemCard %>
+						<% include PoemCardNext %>
 					<% end_with %>				
 				<% end_if %>
 			</ul>
@@ -37,3 +37,4 @@
 
 		</div>
 	</div>
+</div>

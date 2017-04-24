@@ -64,6 +64,28 @@ $podcast-color: rgb(255, 55, 34);
 	border-radius: 5px;
 }
 
+.card-list__nextprev{
+	color: white;
+	
+
+
+	&--prev{
+		&:after{
+			 @include triangle(left,10px,10px,#fff);
+			 line-height: rem-calc(200);
+		}		
+	}
+
+	&--next{
+		&:after{
+			 @include triangle(right,10px,10px,#fff);
+			 line-height: rem-calc(200);
+		}			
+	}
+
+}
+
+
 .card-list__link {
 	position: relative;
 	display: flex;
@@ -71,7 +93,7 @@ $podcast-color: rgb(255, 55, 34);
 	justify-content: center;
 	background-size: cover;
 	// border: 1px solid #eee;
-	height: rem-calc(200);
+	min-height: rem-calc(200);
 
 	@media #{$large-up} {
 
@@ -80,21 +102,21 @@ $podcast-color: rgb(255, 55, 34);
 	&--small{
 		
 		@media #{$large-up} {
-			height: rem-calc(200);
+			min-height: rem-calc(200);
 		}
 	}
 
 	&--medium{
 		
 		@media #{$large-up} {
-			height: rem-calc(300);
+			min-height: rem-calc(300);
 		}
 	}
 
 	&--large{
 		
 		@media #{$large-up} {
-			height: rem-calc(400);
+			min-height: rem-calc(400);
 		}
 	}
 	&:hover {
@@ -130,7 +152,11 @@ $podcast-color: rgb(255, 55, 34);
 	@media #{$large-up} {
 		opacity: 0;
 	}
+	&--small{
+		font-size: 1em;
+	}
 	&--large{
+		font-size: 1.5em;
 		flex: 1;
 	}
 	&--always-visible{

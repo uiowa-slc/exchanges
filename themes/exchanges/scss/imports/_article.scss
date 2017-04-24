@@ -20,7 +20,7 @@
 }
 
 .article__subnav{
-
+    margin-top: $column-gutter/2;
 }
 
 .article__translated{
@@ -62,10 +62,10 @@
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
 
-    p {
-        line-height: 1.2em;
-        margin-bottom: 0;
-    }
+    // p {
+    //     line-height: 1.5em;
+    //     margin-bottom: rem-calc(10);
+    // }
 
     hr {
         border-color: rgba(152, 143, 120, 0.59);
@@ -77,9 +77,16 @@
             opacity: 0;
         }        
     }
+
 }
 
 .article__body {
+    &--poem-lineheight{
+        p {
+            line-height: 1.3em;
+            margin-bottom: 0;
+        }
+    }
     img.leftAlone, img.rightAlone{
         width: 100%;
         margin: rem-calc(10) auto;

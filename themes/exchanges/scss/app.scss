@@ -1,6 +1,8 @@
 @import "imports/settings";
 @import "foundation";
 
+@import "mixins/triangle";
+
 @import "imports/footer/config";
 @import "imports/footer/mixins";
 
@@ -8,12 +10,15 @@
 @import "components/issue-preview";
 @import "components/breadcrumb";
 
+
+
 @import "imports/fonts";
 @import "imports/header";
 @import "imports/homepage";
 @import "imports/article";
 @import "imports/cover";
 @import "imports/blog";
+
 @import "imports/issue";
 @import "imports/issue-holder";
 @import "imports/side-nav";
@@ -24,7 +29,21 @@
 .row--large{
 	max-width: 1600px;
 }
-
+.row--fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+.row--fluid:before, .row--fluid:after {
+  content: " ";
+  display: table;
+}
+.row--fluid:after {
+  clear: both;
+}
 .exchanges-logo {
 	font-family: 'Libre Baskerville', serif, times;
 }
@@ -39,7 +58,20 @@
 
 h1 {
 	font-weight: bold;
-	margin-bottom: 1rem;
+	margin-bottom: rem-calc(18);
+	margin-top: rem-calc(14);
+}
+
+h2{
+	color: #606060;
+	margin-top: rem-calc(13);
+	margin-bottom: rem-calc(16);
+}
+
+h3{
+	margin-top: rem-calc(10);
+	margin-bottom: rem-calc(14);
+	font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -66,6 +98,13 @@ h1, h2, h3, h4, h5, h6 {
 		color: rgb(255, 55, 34);
 		
 	}
+}
+
+.flex-center{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .WidgetHolder h3 {
 	@extend h3;
