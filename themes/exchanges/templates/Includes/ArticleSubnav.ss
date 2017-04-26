@@ -1,6 +1,6 @@
 <div class="article__subnav">
 	<div class="row row--fluid">
-		<div class="large-12">
+		<div class="large-12 columns">
 
 			<ul class="text-center card-list">
 

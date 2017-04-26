@@ -182,6 +182,14 @@ $podcast-color: rgb(255, 55, 34);
 		}
 	}
 }
+.card-list__issue-date{
+	color: white;
+	font-family: $header-font-family;
+}
+.card-list__issue-toc-text{
+	color: white;
+	font-family: $header-font-family;
+}
 
 .card-list__byline{
 	color: #eee;
