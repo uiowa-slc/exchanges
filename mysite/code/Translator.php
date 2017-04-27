@@ -10,7 +10,8 @@ class Translator extends Contributor {
  );
  
  private static $many_many = array(
- 	'Articles' => 'Article'
+ 	'Articles' => 'Article',
+ 	'SingleColumnArticles' => 'ArticleSingleColumn'
  );   
 
     

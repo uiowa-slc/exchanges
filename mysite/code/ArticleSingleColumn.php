@@ -2,7 +2,9 @@
 class ArticleSingleColumn extends Page {
 	private static $db = array(
 		'Title'  => 'HTMLText',
+		'TranslatedTitle' => 'HTMLText',
 		'Artist' => 'Text',
+		'OriginalLanguage' => 'Text',
 	);
 
 	private static $has_one = array(
@@ -12,6 +14,7 @@ class ArticleSingleColumn extends Page {
 	private static $plural_name       = 'Articles';
 	private static $belongs_many_many = array(
 		'Authors' => 'Author',
+		'Translators' => 'Translator',
 	);
 
 	private static $default_parent     = "articles";
@@ -19,6 +22,44 @@ class ArticleSingleColumn extends Page {
 	private static $defaults           = array("ParentID" => 7);
 	private static $listing_page_class = 'Issue';
 
+	public function TranslatorBylineVerb() {
+		$translatorCount = $this->Translators()->Count();
+		if ($translatorCount > 1) {
+			return " translate";
+		} else {
+			return " translates";
+		}
+	}
+
+	public function getMenuTitle() {
+		if ($value = parent::getMenuTitle()) {
+			return Convert::html2raw($value);
+		}
+	}
+
+	public function getTitle() {
+		if ($value = $this->getField("Title")) {
+			return $this->removePTags($value);
+		}
+	}
+	public function getUntranslatedTitle() {
+		if ($value = $this->getField("UntranslatedTitle")) {
+
+			return $this->removePTags($value);
+		}
+	}
+	public function getTranslatedTitle() {
+		if ($value = $this->getField("TranslatedTitle")) {
+			return $this->removePTags($value);
+		}
+	}
+	private function removePTags($value) {
+		$array = array(
+			'<p>' => '',
+			'</p>' => '',
+		);
+		return strtr($value, $array);
+	}
 	public function getArticleHolder() {
 		$holder = ArticleHolder::get()->First();
 
@@ -91,12 +132,22 @@ class ArticleSingleColumn extends Page {
 		$fields->removeByName('Image');
 		$fields->removeByName('Metadata');
 
-		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for essay"));
+		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for poem"));
 		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Unique image artist credit'));
+
+		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));
+
+		$translatedTitleField = new HTMLEditorField('TranslatedTitle', ' Translated title');
+		$translatedTitleField->setRows(1);
+		$fields->addFieldToTab('Root.Main', $translatedTitleField, 'Content');
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
 		$newGridField    = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
 		$fields->addFieldToTab('Root.Authors', $newGridField);
+
+		$gridFieldConfig2 = GridFieldConfig_RelationEditor::create();
+		$newGridField2 = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);
+		$fields->addFieldToTab('Root.Translators', $newGridField2);
 
 		return $fields;
 	}
