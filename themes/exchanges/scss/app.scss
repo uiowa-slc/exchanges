@@ -2,29 +2,32 @@
 @import "foundation";
 
 @import "mixins/triangle";
+@import "imports/fonts";
 
-@import "imports/footer/config";
-@import "imports/footer/mixins";
 
 @import "components/cards";
+@import "components/side-cards";
 @import "components/issue-preview";
 @import "components/breadcrumb";
+@import "components/header";
+@import "components/cover";
+@import "components/side-nav";
+@import "components/forms";
+
+
+@import "layouts/homepage";
+@import "layouts/article";
+@import "layouts/issue";
+@import "layouts/issue-holder";
+@import "layouts/footer/footer";
+@import "layouts/footer/grid-simple";
+@import "layouts/footer/config";
+@import "layouts/footer/mixins";
+@import "layouts/blog";
 
 
 
-@import "imports/fonts";
-@import "imports/header";
-@import "imports/homepage";
-@import "imports/article";
-@import "imports/cover";
-@import "imports/blog";
 
-@import "imports/issue";
-@import "imports/issue-holder";
-@import "imports/side-nav";
-@import "imports/footer/footer";
-
-@import "imports/footer/grid-simple";
 
 .row--large{
 	max-width: 1600px;

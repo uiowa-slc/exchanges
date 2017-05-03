@@ -17,9 +17,6 @@
 				<% end_if %>
 
 				<% if $Parent.ClassName == "Issue" %>
-<%-- 					<li class="card-list__item">
-					<a href="$Parent.Link" class="toc-link">Table of Contents</a>
-					</li> --%>
 					<% with $Parent %>
 						<% include IssueCard %>
 					<% end_with %>

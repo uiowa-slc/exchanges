@@ -11,6 +11,30 @@ class NewsPage extends BlogPost {
 	private static $defaults = array(
 		'InheritSideBar' => true,
 	);
+
+	public function RelatedPosts(){
+		$holder = Blog::get()->First();
+		$tags = $this->Tags()->limit(6);
+		$entries = new ArrayList();
+
+		foreach($tags as $tag){
+			$taggedEntries = $tag->BlogPosts()->exclude(array("ID"=>$this->ID))->sort('PublishDate', 'ASC')->Limit(3);
+			if($taggedEntries){
+				foreach($taggedEntries as $taggedEntry){
+					if($taggedEntry->ID){
+						$entries->push($taggedEntry);
+					}
+				}
+			}
+
+		}
+
+		if($entries->count() > 1){
+			$entries->removeDuplicates();
+		}
+
+		return $entries;
+	}
 }
 
 class NewsPage_Controller extends Page_Controller {

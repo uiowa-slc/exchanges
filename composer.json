@@ -6,13 +6,14 @@
 		"silverstripe/cms": "3.5.*@stable",
 		"silverstripe/framework": "3.5.*@stable",
 		"unclecheese/betterbuttons" : "1.3.*",
-		"undefinedoffset/sortablegridfield" : "*",
+		"undefinedoffset/sortablegridfield" : "0.6.*",
 		"silverstripe/blog": "2.*",
 		"silverstripe/widgets": "*",
-		"jonom/focuspoint" : "*",
+		"jonom/focuspoint" : "2.*",
 		"jonom/silverstripe-betternavigator": "2.1",
 		"jacobbuck/silverstripe-colorfulimage" : "*",
-		"heyday/silverstripe-colorpalette" :"*"
+		"heyday/silverstripe-colorpalette" :"*",
+		"studiobonito/silverstripe-typekit" : "*"
 
 	},
 

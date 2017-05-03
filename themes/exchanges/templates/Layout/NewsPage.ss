@@ -52,7 +52,7 @@
     <div class="large-9 large-offset-1 columns">
         <h2 class="banner text-center">Related Posts</h2>
             <ul class="large-block-grid-3 card-list">
-            <% loop $Posts.Limit(6) %>
+            <% loop $RelatedPosts.Limit(6) %>
                 <li class="card-list__item">
                     <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
                         <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>

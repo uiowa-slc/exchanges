@@ -1,4 +1,4 @@
-<li class="card-list__item">
+<li class="card-list__item card-list__item--issue">
 	<a href="$Link" class="card-list__link" style="background-image: url('{$Emblem.CroppedFocusedImage(690,440).URL}')">
 		<%-- <img class="card-list__img" src="$BannerImage.CroppedFocusedImage(690,440).URL"> --%>
 		<div class="card-list__overlay card-list__overlay--always-visible"></div>

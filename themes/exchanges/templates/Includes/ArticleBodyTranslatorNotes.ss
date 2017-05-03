@@ -22,9 +22,13 @@
 					<h2>Translator Notes</h2>
 					$TranslatorNote
 					<hr />
-					<% loop $Translators %>
-						<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
-					<% end_loop %>					
+					<% if $Translators %>
+						<p>
+						<% loop $Translators %>
+							<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
+						<% end_loop %>
+						</p>	
+					<% end_if %>				
 				</div>
 				<p class="hide-for-large-up">
 					<br /><br /><a href="#original-work">View Original Work &darr;</a>

@@ -1,3 +1,4 @@
+<% if $URLSegment %>
 <ul class="post__social">
 	
 	<li class="text-center post__social-item"><span class="post__social-label">Share:</span></li>
@@ -14,3 +15,4 @@
         <span class="post__social-icon social-icon-envelop"></span></a>
     </li>
 </ul>
+<% end_if %>

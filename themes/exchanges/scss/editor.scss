@@ -1,4 +1,11 @@
+@import "imports/settings";
+@import 'foundation/components/type';
+
 .typography {
+	background: $body-bg;
+	font-family: $body-font-family;
+	font-size: 16px;
+	padding: 10px;
 	.smallcaps {
 		font-variant: small-caps;
 	}

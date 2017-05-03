@@ -353,7 +353,7 @@ class Article extends Page {
 			$byline .= 'Original by ';
 
 			//Person A and Person B.
-			$byline .= $this->getWriterListNice("true", $this->Authors());
+			$byline .= $this->getWriterListNice($links, $this->Authors());
 			$byline .= '.';
 		}
 
@@ -369,7 +369,12 @@ class Article extends Page {
 
 		foreach ($writers as $writer) {
 
-			$writerFormattedName = str_replace(' ', '&nbsp;', $writer->Name);
+			if($links == "true"){
+				$writerFormattedName = str_replace(' ', '&nbsp;', $writer->Name);
+			}else{
+				$writerFormattedName = $writer->Name;
+			}
+				
 
 			if ($links == "true") {
 				$writerArray[] = '<a href="' . $writer->Link() . '" class="text-nowrap">' . $writerFormattedName . '</a>';

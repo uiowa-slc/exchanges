@@ -19,7 +19,7 @@
 				<% end_loop %>
 					
 			</ul>
-			<p class="issue-preview__start-reading text-center"><a href="$Link">Start reading &rarr;</a></p>
+			<p class="issue-preview__start-reading text-center"><a href="$Link" class="button large">Start reading &rarr;</a></p>
 		</div>
 	</div>
 <% end_with %>
@@ -29,7 +29,7 @@
 		<section class="card-section">
 			<h2 class="card-section__header">From the Blog:</h2>
 			<ul class="card-list card-list--two">
-				<% loop $Posts.Sort('RAND()').Limit(2,2) %>
+				<% loop $Posts.Limit(2) %>
 					<li class="card-list__item card-list__item--single-row">
 						<a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
 							<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
@@ -117,7 +117,7 @@
 				<% loop $Posts.Sort('RAND()').Limit(5) %>
 					<a href="$Link" class="side-cards__link">
 						<img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
-						<h2 class="side-cards__header side-cards__header--podcast">$Title</h2>				
+						<h2 class="side-cards__header side-cards__header--with-padding side-cards__header--podcast">$Title</h2>				
 					</a>
 				<% end_loop %>
 			</div>
