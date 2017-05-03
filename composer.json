@@ -6,7 +6,7 @@
 		"silverstripe/cms": "3.5.*@stable",
 		"silverstripe/framework": "3.5.*@stable",
 		"unclecheese/betterbuttons" : "*",
-		"undefinedoffset/sortablegridfield" : "*",
+		"undefinedoffset/sortablegridfield" : "^0.6.9",
 		"silverstripe/blog": "2.*",
 		"silverstripe/widgets": "*",
 		"jonom/focuspoint" : "*",

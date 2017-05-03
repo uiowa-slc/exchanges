@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d96e2de6c45f731abe40677979fa141f",
-    "content-hash": "477c17fb658049fdb923151c64125225",
+    "hash": "121ccc9f098083cc46438057c267bd42",
+    "content-hash": "b73c163e6d942a6a37040f5852907a2c",
     "packages": [
         {
             "name": "composer/installers",
@@ -739,16 +739,16 @@
         },
         {
             "name": "undefinedoffset/sortablegridfield",
-            "version": "dev-master",
+            "version": "0.6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "94e916b4d91c7c0672a138a6c0a5e82a17c69f91"
+                "reference": "1750b7b45a3b140cbcdac76707c17fc98eb8e99c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/94e916b4d91c7c0672a138a6c0a5e82a17c69f91",
-                "reference": "94e916b4d91c7c0672a138a6c0a5e82a17c69f91",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/1750b7b45a3b140cbcdac76707c17fc98eb8e99c",
+                "reference": "1750b7b45a3b140cbcdac76707c17fc98eb8e99c",
                 "shasum": ""
             },
             "require": {
@@ -775,7 +775,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2016-11-24 14:01:29"
+            "time": "2017-04-21 12:32:43"
         }
     ],
     "packages-dev": [],
