@@ -8,6 +8,15 @@ class HomePage extends Page {
 	private static $has_one = array(
 	);
 
+	private static $many_many = array(
+		'FeaturedTags' => 'BlogTag'
+	);
+	public static $many_many_extraFields=array(
+		'FeaturedTags'=>array(
+			'SortOrder'=>'Int'
+		)
+	);
+
 	function getCMSFields() {
 
 		$fields = parent::getCMSFields();
@@ -20,10 +29,21 @@ class HomePage extends Page {
 		$fields->removeByName('Quicklinks');
 		$fields->removeByName('Features');
 
+		$conf=GridFieldConfig_RelationEditor::create(10);
+		$conf->addComponent(new GridFieldSortableRows('SortOrder'));
+		
+		$fields->addFieldToTab('Root.Main', 
+            new GridField('FeaturedTags', 'Featured Tags', $this->FeaturedTags(), $conf)
+        );
+
 		//$treedropdownfield = new TreeDropdownField("FeaturedIssueID", "Newest/Featured Issue", "SiteTree");
 		//$fields->addFieldToTab('Root.Main', $treedropdownfield);
 
 		return $fields;
+	}
+
+	public function FeaturedTags() {
+    	return $this->getManyManyComponents('FeaturedTags')->sort('SortOrder');
 	}
 
 

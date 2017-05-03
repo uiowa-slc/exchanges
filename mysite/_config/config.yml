@@ -1,3 +1,4 @@
 Page:
   extensions:
    - WidgetPageExtension
+   - BlogTagExtension
