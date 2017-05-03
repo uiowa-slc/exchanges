@@ -46,113 +46,29 @@
 				<% end_loop %>
 			</ul>
 		</section>
-
-		<section class="card-section">
-		<h3 class="card-section__header">Featured Blogs</h3>
-		<ul class="card-list">
-			<% loop $FeaturedTags.Limit(3) %>
-				<% if $FeaturedImage %>
-				<li class="card-list__item card-list__item--single-row">
-					<a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
-						<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
-						<div class="card-list__overlay"></div>
-              			<div class="card-list__text">
-              			<h2 class="card-list__header">$Title</h2>
-	              			<% if $Credits %>
-	              			<p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
-	              			<% end_if %>
-              			</div>
-					</a>
-				</li>
-				<% end_if %>
-			<% end_loop %>
-		</ul>
-		</section>
-		<section class="card-section">
-		<h3 class="card-section__header">News</h3>
-		<ul class="card-list">
-			<% loop $FeaturedTags.Limit(3) %>
-				<% if $FeaturedImage %>
-				<li class="card-list__item card-list__item--single-row">
-					<a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
-						<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
-						<div class="card-list__overlay"></div>
-              			<div class="card-list__text">
-              			<h2 class="card-list__header">$Title</h2>
-	              			<% if $Credits %>
-	              			<p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
-	              			<% end_if %>
-              			</div>
-					</a>
-				</li>
-				<% end_if %>
-			<% end_loop %>
-		</ul>
-		</section>
-
-		<section class="card-section">
-		<h3 class="card-section__header">Interviews</h3>
-		<ul class="card-list">
-			<% loop $Posts.Limit(3) %>
-				<% if $FeaturedImage %>
-				<li class="card-list__item card-list__item--single-row">
-					<a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
-						<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
-						<div class="card-list__overlay"></div>
-              			<div class="card-list__text">
-              			<h2 class="card-list__header">$Title</h2>
-	              			<% if $Credits %>
-	              			<p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
-	              			<% end_if %>
-              			</div>
-					</a>
-				</li>
-				<% end_if %>
-			<% end_loop %>
-		</ul>
-		</section>
-		<section class="card-section">
-		<h3 class="card-section__header">Essays</h3>
-		<ul class="card-list">
-			<% loop $Posts.Sort('RAND()').Limit(3,4) %>
-				<% if $FeaturedImage %>
-				<li class="card-list__item card-list__item--single-row">
-					<a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
-						<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
-						<div class="card-list__overlay"></div>
-              			<div class="card-list__text">
-              			<h2 class="card-list__header">$Title</h2>
-	              			<% if $Credits %>
-	              			<p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
-	              			<% end_if %>
-              			</div>
-					</a>
-				</li>
-				<% end_if %>
-			<% end_loop %>
-		</ul>
-		</section>
-		<section class="card-section">
-		<h3 class="card-section__header">Book Reviews</h3>
-		<ul class="card-list">
-			<% loop $Posts.Sort('RAND()').Limit(3,6) %>
-				<% if $FeaturedImage %>
-				<li class="card-list__item card-list__item--single-row">
-					<a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
-						<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
-						<div class="card-list__overlay"></div>
-              			<div class="card-list__text">
-              			<h2 class="card-list__header">$Title</h2>
-	              			<% if $Credits %>
-	              			<p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
-	              			<% end_if %>
-              			</div>
-					</a>
-				</li>
-				<% end_if %>
-			<% end_loop %>
-		</ul>
-		</section>
+		<% loop $FeaturedTags %>
+			<section class="card-section">
+			<h3 class="card-section__header">$Title</h3>
+			<ul class="card-list">
+				<% loop $BlogPosts.Limit(3) %>
+					<% if $FeaturedImage %>
+					<li class="card-list__item card-list__item--single-row">
+						<a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+							<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
+							<div class="card-list__overlay"></div>
+		          			<div class="card-list__text">
+		          			<h2 class="card-list__header">$Title</h2>
+		              			<% if $Credits %>
+		              			<p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
+		              			<% end_if %>
+		          			</div>
+						</a>
+					</li>
+					<% end_if %>
+				<% end_loop %>
+			</ul>
+			</section>
+		<% end_loop %>
 	</div>
 	<div class="large-3 columns">
 		<section class="card-section card-section--podcast">

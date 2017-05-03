@@ -108,8 +108,7 @@
         
     </div>
     <div class="large-3 columns">
-        <h2 class="banner banner--no-bg banner--podcast"><span class="social-icon-podcast">
-    </span>Our Podcast</h2>
+        <h2 class="banner banner--no-bg banner--podcast"><span class="social-icon-podcast"></span>Our Podcast</h2>
         <div class="side-cards">
             <% loop $Posts.Sort('RAND()').Limit(5) %>
                 <a href="$Link" class="side-cards__link">
@@ -117,6 +116,19 @@
                     <h2 class="side-cards__header side-cards__header--podcast">$Title</h2>              
                 </a>
             <% end_loop %>
+            <div class="card-list__item card-list__item--issue">
+            <% loop $ChildrenOf("issues").Limit(3) %>
+                <a href="$Link" class="card-list__link" style="background-image: url('{$Emblem.CroppedFocusedImage(690,440).URL}')">
+                    <%-- <img class="card-list__img" src="$BannerImage.CroppedFocusedImage(690,440).URL"> --%>
+                    <div class="card-list__overlay card-list__overlay--always-visible"></div>
+                    <div class="card-list__text card-list__text--always-visible card-list__text--large">
+                        <h2 class="card-list__header card-list__header--issue-title"><span>$Title</span></h2>
+                            <p class="card-list__issue-date">$IssueDate</p>
+                            <p class="card-list__issue-toc-text">Table of Contents</p>
+                    </div>
+                </a>
+            <% end_loop %> 
+            </div>
         </div>
         <p><a class="banner banner--no-bg banner--podcast" href="#">See all podcasts &rarr;</a></p>
     </div>

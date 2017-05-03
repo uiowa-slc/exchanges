@@ -10,7 +10,25 @@
 					<% end_with %>
 				<% else_if $Parent.LetterLink %>
 					<li class="card-list__item">
-						<a href="$Parent.LetterLink" class="prev">&larr;&nbsp;$Parent.LetterTitle</a>
+						<a href="$Parent.LetterLink" class="card-list__link" style="background-image: url('{$Parent.Emblem.CroppedFocusedImage(690,440).URL}')">
+							<div class="card-list__overlay card-list__overlay--always-visible"></div>
+								<div class="card-list__text card-list__text--always-visible card-list__text--small">
+									<div class="row flex-center">
+										<div class="small-2 columns">
+											<span class="card-list__nextprev card-list__nextprev--prev"></span>
+										</div>
+										<div class="small-10 columns">
+											
+												<h2 class="card-list__header card-list__header--small">$Parent.LetterTitle</h2>
+											
+										</div>
+										<div class="small-2 columns">
+											
+										</div>
+									</div>
+								</div>
+							
+						</a>
 					</li>
 				<% else %>
 				&nbsp;
