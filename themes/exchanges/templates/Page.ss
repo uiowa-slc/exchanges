@@ -34,16 +34,22 @@
 		<% include HomePageCover %>
 	<% else_if $ClassName == "Issue" %>
 		<% include IssueCover %>
+	<% else_if $ClassName == "Article" %>
+		<% if $BannerImage %>
+			<% include ArticleCover %>
+		<% else %>
+			<% include TopBar %>
+		<% end_if %>		
+	<% else_if $ClassName == "ArticleSingleColumn" %>
+		<% if $BannerImage %>
+			<% include ArticleCover %>
+		<% else %>
+			<% include TopBar %>
+		<% end_if %>
 	<% else %>
 		<% include TopBar %>
 	<% end_if %>
 	
-	
-	<% if $BannerImage %>
-		<div class="article__cover-container b-lazy" data-src="$BannerImage.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $BannerImage.PercentageX% $BannerImage.PercentageY%; background-size: cover;">
-		</div>
-	<% end_if %>
-
 	<div class="layout layout--{$ClassName} typography">
 		$Layout
 	</div>

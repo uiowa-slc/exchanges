@@ -42,7 +42,7 @@ $podcast-color: rgb(255, 55, 34);
 	@media #{$large-up} {
 		@include block-grid(
 		    $per-row: 3,
-		    $spacing: rem-calc(10)
+		    $spacing: rem-calc(15)
 		);
 
 	}
@@ -50,7 +50,7 @@ $podcast-color: rgb(255, 55, 34);
 		@media #{$medium-up} {
 			@include block-grid(
 			    $per-row: 2,
-			    $spacing: rem-calc(10)
+			    $spacing: rem-calc(15)
 			);	
 		}		
 	}

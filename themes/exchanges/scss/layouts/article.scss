@@ -20,7 +20,7 @@
 }
 
 .article__subnav{
-    margin-top: $column-gutter/2;
+    margin-top: rem-calc(20);
 }
 
 .article__translated{
@@ -238,12 +238,14 @@
 // }
 
 .nav-screen--Article {
-    background-color: rgba($topbar-base-color, 0.67);
+    background-color: rgba($topbar-base-color, 0.3);
 }
 .row--Article {
     max-width: $article-row-width;
 }
-
+.contain-to-grid--Article{
+    background: none;
+}
 .contain-to-grid--Article .top-bar {
     max-width: $article-row-width;
 }
