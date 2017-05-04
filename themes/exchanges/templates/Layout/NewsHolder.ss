@@ -129,6 +129,30 @@
                 </a>
             <% end_loop %> 
             </div>
+
+            <% loop $FeaturedCategories %>
+            <section class="card-section">
+            <h3 class="card-section__header">$Title</h3>
+            <ul class="card-list">
+                <% loop $BlogPosts.Limit(3) %>
+                    <% if $FeaturedImage %>
+                    <li class="card-list__item card-list__item--single-row">
+                        <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+                            <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
+                            <div class="card-list__overlay"></div>
+                            <div class="card-list__text">
+                            <h2 class="card-list__header">$Title</h2>
+                                <% if $Credits %>
+                                <p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
+                                <% end_if %>
+                            </div>
+                        </a>
+                    </li>
+                    <% end_if %>
+                <% end_loop %>
+            </ul>
+            </section>
+        <% end_loop %>
         </div>
         <p><a class="banner banner--no-bg banner--podcast" href="#">See all podcasts &rarr;</a></p>
     </div>
