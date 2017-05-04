@@ -23,7 +23,7 @@ class NewsHolder_Controller extends Blog_Controller {
 
 		$conf=GridFieldConfig_RelationEditor::create(10);
 		$conf->addComponent(new GridFieldSortableRows('SortOrder'));
-		$config->removeComponentsByType($config->getComponentByType('GridFieldAddNewButton'));		
+		$conf->removeComponentsByType($conf->getComponentByType('GridFieldAddNewButton'));		
 		$fields->addFieldToTab('Root.Main', 
             new GridField('FeaturedCategories', 'Featured Categories', $this->FeaturedCategories(), $conf)
         );
