@@ -107,10 +107,12 @@ class Page_Controller extends ContentController {
 
 	}
 
-	public function PostsByTag($tag) {
-		$blogTag = BlogTag::get()->filter(array('Title' => $tag))->first();
-		$posts = $blogTag->BlogPosts();
-		return $posts;
+	public function PostsByCategory($category) {
+		$blogCategory = BlogCategory::get()->filter(array('Title' => $category))->first();
+		if ($blogCategory){
+			$posts = $blogCategory->BlogPosts();
+			return $posts;
+		}
 	}
 
 
