@@ -46,7 +46,7 @@
 				<% end_loop %>
 			</ul>
 		</section>
-		<% loop $FeaturedTags %>
+		<% loop $FeaturedCategories %>
 			<section class="card-section">
 			<h3 class="card-section__header">$Title</h3>
 			<ul class="card-list">

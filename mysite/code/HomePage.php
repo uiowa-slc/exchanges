@@ -9,10 +9,10 @@ class HomePage extends Page {
 	);
 
 	private static $many_many = array(
-		'FeaturedTags' => 'BlogTag'
+		'FeaturedCategories' => 'BlogCategory'
 	);
 	public static $many_many_extraFields=array(
-		'FeaturedTags'=>array(
+		'FeaturedCategories'=>array(
 			'SortOrder'=>'Int'
 		)
 	);
@@ -31,9 +31,9 @@ class HomePage extends Page {
 
 		$conf=GridFieldConfig_RelationEditor::create(10);
 		$conf->addComponent(new GridFieldSortableRows('SortOrder'));
-		
+		$config->removeComponentsByType($config->getComponentByType('GridFieldAddNewButton'));		
 		$fields->addFieldToTab('Root.Main', 
-            new GridField('FeaturedTags', 'Featured Tags', $this->FeaturedTags(), $conf)
+            new GridField('FeaturedCategories', 'Featured Categories', $this->FeaturedCategories(), $conf)
         );
 
 		//$treedropdownfield = new TreeDropdownField("FeaturedIssueID", "Newest/Featured Issue", "SiteTree");
@@ -42,8 +42,8 @@ class HomePage extends Page {
 		return $fields;
 	}
 
-	public function FeaturedTags() {
-    	return $this->getManyManyComponents('FeaturedTags')->sort('SortOrder');
+	public function FeaturedCategories() {
+    	return $this->getManyManyComponents('FeaturedCategories')->sort('SortOrder');
 	}
 
 
