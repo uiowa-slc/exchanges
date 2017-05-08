@@ -67,6 +67,7 @@
 					<% end_if %>
 				<% end_loop %>
 			</ul>
+			<p><a class="card-section__header card-section__header--featured" href="$Link">See all $Title blogs &rarr;</a></p>
 			</section>
 		<% end_loop %>
 	</div>
@@ -81,7 +82,8 @@
 					</a>
 				<% end_loop %>
 			</div>
-			<p><a class="card-section__header card-section__header--podcast" href="#">See all podcasts &rarr;</a></p>
+			<p><a class="card-section__header card-section__header--podcast" href="
+			blog/category/podcast">See all podcasts &rarr;</a></p>
 		</section>
 	</div>
 </div>
