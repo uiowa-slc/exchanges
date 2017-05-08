@@ -143,6 +143,7 @@ hr {
 	}
 }
 
+<<<<<<< HEAD
 .exchanges-sticky{
 	@media #{$large-up} {
 		position: -webkit-sticky;
@@ -151,6 +152,11 @@ hr {
 	}
 }
 
+=======
+.subheader{
+	font-size: rem-calc(26);
+}
+>>>>>>> master
 /* Content padding so it doesn't run up against the sidenav  */
 
 .padded-content {
