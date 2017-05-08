@@ -93,7 +93,7 @@
 					<% end_if %>
 				<% end_loop %>
 			</ul>
-			<p><a class="card-section__header card-section__header--featured" href="$Link">See all blog posts &rarr;</a></p>
+			<p><a class="card-section__header card-section__header--featured" href="blog/">See all posts &rarr;</a></p>
 			</section>
 		<% end_if %>
 			
