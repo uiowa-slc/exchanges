@@ -74,9 +74,9 @@
 
 		<% else %>
 			<section class="card-section">
-			<h3 class="card-section__header">$Title</h3>
+			<h3 class="card-section__header">More from Exchanges</h3>
 			<ul class="card-list">
-				<% loop $Posts.Sort('RAND()').Limit(9) %>
+				<% loop $Posts.Limit(9,2) %>
 					<% if $FeaturedImage %>
 					<li class="card-list__item card-list__item--single-row">
 						<a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
@@ -98,19 +98,23 @@
 		<% end_if %>
 			
 	</div>
-	<div class="large-3 columns">
+	<div class="large-3 columns exchanges-sticky">
 		<section class="card-section card-section--podcast">
 			<h2 class="card-section__header card-section__header--podcast"><span class="social-icon-podcast"></span> Our Podcast</h2>
 			<div class="side-cards">
 				<% loop $PostsByCategory('podcasts').Limit(5) %>
 					<a href="$Link" class="side-cards__link">
-						<img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
+                    <% if $FeaturedImage %>
+                        <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
+                    <% else %>
+                        <img class="side-cards__img" src="{$ThemeDir}/images/placeholder.png">
+                    <% end_if %>
 						<h2 class="side-cards__header side-cards__header--with-padding side-cards__header--podcast">$Title</h2>				
 					</a>
 				<% end_loop %>
 			</div>
 			<p><a class="card-section__header card-section__header--podcast" href="
-			blog/category/podcast">See all podcasts &rarr;</a></p>
+			blog/category/podcasts">See all podcasts &rarr;</a></p>
 		</section>
 	</div>
 </div>
