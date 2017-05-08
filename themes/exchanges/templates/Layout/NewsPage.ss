@@ -48,6 +48,7 @@
         <% include BlogSideBar %>
     </div>
 </div>
+<% if $RelatedPosts %>
 <div class="row">
     <div class="large-9 large-offset-1 columns">
         <h2 class="banner text-center">Related Posts</h2>
@@ -69,3 +70,4 @@
         </ul>
     </div>
 </div>
+<% end_if %>
