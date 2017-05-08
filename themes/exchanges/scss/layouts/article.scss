@@ -228,7 +228,7 @@
     background-repeat: no-repeat;   
 }
 
-.top-bar--Article{
+.top-bar--transparent{
     background: none;    
 }
 // .top-bar--Article .name h1 a, .top-bar--Article .name h2 a, .top-bar--Article .name h3 a, .top-bar--Article .name h4 a, .top-bar--Article .name p a, .top-bar--Article .name span a {
@@ -237,8 +237,12 @@
 //     // }
 // }
 
-.nav-screen--Article {
+.nav-screen--transparent {
     background-color: rgba($topbar-base-color, 0.3);
+}
+
+.nav-screen--opaque{
+    background-color: $topbar-base-color;
 }
 .row--Article {
     max-width: $article-row-width;

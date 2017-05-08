@@ -14,12 +14,9 @@ class NewsHolder extends Blog {
 		)
 	);
 
-}
-
-class NewsHolder_Controller extends Blog_Controller {
-
-	public function init() {
-		parent::init();
+	public function getCMSFields(){
+		
+		$fields = parent::getCMSFields();
 
 		$conf=GridFieldConfig_RelationEditor::create(10);
 		$conf->addComponent(new GridFieldSortableRows('SortOrder'));
@@ -27,6 +24,17 @@ class NewsHolder_Controller extends Blog_Controller {
 		$fields->addFieldToTab('Root.Main', 
             new GridField('FeaturedCategories', 'Featured Categories', $this->FeaturedCategories(), $conf)
         );
+
+        return $fields;
+	}
+}
+
+class NewsHolder_Controller extends Blog_Controller {
+
+	public function init() {
+		parent::init();
+
+
 
 	
 	}

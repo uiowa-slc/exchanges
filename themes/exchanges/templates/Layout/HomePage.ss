@@ -74,7 +74,7 @@
 		<section class="card-section card-section--podcast">
 			<h2 class="card-section__header card-section__header--podcast"><span class="social-icon-podcast"></span> Our Podcast</h2>
 			<div class="side-cards">
-				<% loop $PostsByCategory('podcast').Limit(5) %>
+				<% loop $PostsByCategory('podcasts').Limit(5) %>
 					<a href="$Link" class="side-cards__link">
 						<img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
 						<h2 class="side-cards__header side-cards__header--with-padding side-cards__header--podcast">$Title</h2>				
