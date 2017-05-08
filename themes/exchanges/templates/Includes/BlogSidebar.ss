@@ -1,4 +1,4 @@
-		<h2 class="banner">More</h2>
+		<h2 class="banner">More from Exchanges</h2>
 		<div class="side-cards">
 			<% loop $Posts.Limit(7) %>
 				<a href="$Link" class="side-cards__link">

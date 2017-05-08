@@ -18,7 +18,7 @@
             <div class="post__body">
                 $Content
 
-                <ul class="post__social post__social--horizontal">
+<%--                 <ul class="post__social post__social--horizontal">
                     
                     <li class="post__social-item post__social-item--horizontal"><span class="post__social-label">Share:</span></li>
                     <li class="post__social-item post__social-item--horizontal">
@@ -34,7 +34,7 @@
                         <span class="post__social-icon social-icon-envelop"></span></a>
                     </li>
 
-                </ul>              
+                </ul>  --%>             
             </div>
             
 

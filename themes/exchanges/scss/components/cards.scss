@@ -83,6 +83,7 @@ $podcast-color: rgb(255, 55, 34);
 		&:after{
 			 @include triangle(right,10px,10px,#fff);
 			 line-height: rem-calc(200);
+			 float: right;
 		}			
 	}
 

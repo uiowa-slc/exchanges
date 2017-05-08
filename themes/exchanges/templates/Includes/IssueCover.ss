@@ -1,6 +1,6 @@
 <div class="cover-container <% if $UseTitleDropShadow %>with-dropshadow<% end_if %> b-lazy" data-src="$Emblem.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $Emblem.PercentageX% $Emblem.PercentageY%; background-size: cover;">
 	<div class="cover-screen" <% if $Transparency %>style="background: rgba(68,68,68,{$Transparency});"<% end_if %>>
-		<% include TopBar %>
+		<% include IssueTopBar %>
 
 		<div class="row issue-date">
 			<div class="large-12 columns"><span><a href="issues/">$IssueDate</a></span></div>
