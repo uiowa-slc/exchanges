@@ -1,6 +1,7 @@
 <div class="row">
 	<div class="large-12 columns">
 		<h2 class="banner text-center">In this Issue:</h2>
+		<p class="text-center"><a class="link--dashed toc__letter-link"href="$LetterLink">$LetterTitle</a></p>
 		<ul class="text-center card-list card-list--two">
 			<% loop $Children %>
 			<li class="card-list__item">

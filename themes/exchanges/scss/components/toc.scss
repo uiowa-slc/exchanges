@@ -1,0 +1,13 @@
+.toc__letter-link{
+	font-size: rem-calc(32);
+	color: #222;
+	padding: rem-calc(20) 0;
+	border-color: #666;
+	text-align: center;
+	font-family: $header-font-family;
+}
+
+.link--dashed{
+	border-bottom: 2px dashed;
+	padding-bottom: 10px;
+}

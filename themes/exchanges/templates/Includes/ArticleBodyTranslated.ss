@@ -14,7 +14,7 @@
 							<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
 							<% end_loop %>
 							
-							<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
+							<% if $TranslatorNote %><br /><a role="button" class="link--dashed" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
 						</span>
 
 					<p class="hide-for-large-up author">

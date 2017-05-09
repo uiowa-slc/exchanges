@@ -3,7 +3,7 @@
 		<div class="large-12 columns">
 
 			<ul class="text-center card-list">
-
+				<li></li>
 
 					<% with $Parent %>
 						<% include IssueCard %>
