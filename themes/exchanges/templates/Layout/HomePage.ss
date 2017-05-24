@@ -44,9 +44,10 @@
 					</li>
 					
 				<% end_loop %>
-			</ul>
+			</ul>			
+
 			<ul class="card-list">
-				<% loop $Posts.Limit(6, 2) %>
+				<% loop $Posts.Limit(6,2) %>
 					<% if $FeaturedImage %>
 					<li class="card-list__item card-list__item--single-row">
 						<a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
@@ -64,24 +65,15 @@
 				<% end_loop %>
 			</ul>
 			<p><a class="card-section__header card-section__header--featured" href="blog/">See all posts &rarr;</a></p>
-			
+		</section>
+
 	</div>
 	<div class="large-3 columns">
 	    <% include BlogSideBar %>
-
-		<%-- <section class="card-section">
-			<h2 class="card-section__header">More from Exchanges</h2>
-			<div class="side-cards">
-				<% loop  $Posts.Sort('RAND()').Limit(8) %>
-					<a href="$Link" class="side-cards__link">
-						<img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
-						<h2 class="side-cards__header side-cards__header--with-padding">$Title</h2>				
-					</a>
-				<% end_loop %>
-			</div>
-			<p><a class="card-section__header" href="
-			blog">See all posts &rarr;</a></p>
-		</section> --%>
+                    
+	</div>
+			<p><a class="card-section__header card-section__header--podcast" href="
+			blog/category/podcasts">See all &rarr;</a></p>
 	</div>
 </div>
 

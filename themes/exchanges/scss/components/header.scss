@@ -25,7 +25,9 @@
 .top-bar {
 	background-color: $topbar-base-color;
 }
-
+.top-bar--transparent{
+    background: none;    
+}
 .contain-to-grid {
 	background-color: $topbar-base-color;
 }
@@ -34,6 +36,14 @@
 	background: rgba($topbar-base-color, 0.1);
 }
 
+
+.nav-screen--transparent {
+    background-color: rgba($topbar-base-color, 0.3);
+}
+
+.nav-screen--opaque{
+    background-color: $topbar-base-color;
+}
 .top-bar input {
 	font-family: $header-font-family;
 	font-size: 0.6em;

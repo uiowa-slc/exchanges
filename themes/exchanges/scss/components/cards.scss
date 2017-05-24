@@ -83,6 +83,7 @@ $podcast-color: rgb(255, 55, 34);
 		&:after{
 			 @include triangle(right,10px,10px,#fff);
 			 line-height: rem-calc(200);
+			 float: right;
 		}			
 	}
 
@@ -121,6 +122,9 @@ $podcast-color: rgb(255, 55, 34);
 		@media #{$large-up} {
 			min-height: rem-calc(400);
 		}
+	}
+	&--margin-bottom{
+		margin-bottom: rem-calc(20);
 	}
 	&:hover {
 		.card-list__overlay {
@@ -174,13 +178,16 @@ $podcast-color: rgb(255, 55, 34);
 .card-list__header{
 	color: white;
 	font-size: rem-calc(22);
+
 	&--large{
 		font-size: rem-calc(42);
 		margin-bottom: rem-calc(20);
 	}
 	&--issue-title span{
+		transition: all 0.4s linear;
+		padding-bottom: rem-calc(5);
 		text-transform: uppercase;
-		border-bottom: 3px white solid;
+		border-bottom: 2px white solid;
 		&:hover{
 			border-radius: 10px;
 		}

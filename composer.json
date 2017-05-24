@@ -13,8 +13,6 @@
 		"silverstripe/widgets": "*",
 		"jonom/focuspoint" : "2.*",
 		"jonom/silverstripe-betternavigator": "2.1",
-		"jacobbuck/silverstripe-colorfulimage" : "*",
-		"heyday/silverstripe-colorpalette" :"*",
 		"studiobonito/silverstripe-typekit" : "*"
 
 	},
