@@ -72,8 +72,6 @@
 	    <% include BlogSideBar %>
                     
 	</div>
-			<p><a class="card-section__header card-section__header--podcast" href="
-			blog/category/podcasts">See all &rarr;</a></p>
 	</div>
 </div>
 
