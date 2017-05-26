@@ -34,10 +34,11 @@ class NewsHolder_Controller extends Blog_Controller {
 	public function init() {
 		parent::init();
 
-
-
-	
 	}
+	// public function RandomPosts(){
+	// 	$posts = BlogPost::get()->exclude(array('FeaturedImageID' => 0));
+	// 	return $posts;
+	// }
 
 	public function FeaturedCategories() {
     	return $this->getManyManyComponents('FeaturedCategories')->sort('SortOrder');

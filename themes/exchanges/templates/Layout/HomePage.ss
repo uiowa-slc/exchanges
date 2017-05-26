@@ -47,7 +47,7 @@
 			</ul>			
 
 			<ul class="card-list">
-				<% loop $Posts.Limit(6,2) %>
+				<% loop $Posts.Limit(15,2) %>
 					<% if $FeaturedImage %>
 					<li class="card-list__item card-list__item--single-row">
 						<a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
@@ -69,8 +69,7 @@
 
 	</div>
 	<div class="large-3 columns">
-	    <% include BlogSideBar %>
-                    
+	    <% include BlogSideBar %>    
 	</div>
 	</div>
 </div>
