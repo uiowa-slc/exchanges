@@ -25,7 +25,7 @@
             <% end_loop %>
         </ul>
         <ul class="card-list">
-                <% loop $Posts.Limit(24,4) %>
+                <% loop $PaginatedList %>
                     <% if $FeaturedImage %>
                     <li class="card-list__item card-list__item--single-row">
                         <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">

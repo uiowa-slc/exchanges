@@ -40,6 +40,28 @@ class NewsHolder_Controller extends Blog_Controller {
 	// 	return $posts;
 	// }
 
+	public function PaginatedList()
+    {
+        $allPosts = $this->blogPosts ?: new ArrayList();
+
+        $posts = new PaginatedList($allPosts);
+
+        // Set appropriate page size
+        if ($this->PostsPerPage > 0) {
+            $pageSize = $this->PostsPerPage;
+        } elseif ($count = $allPosts->count()) {
+            $pageSize = $count;
+        } else {
+            $pageSize = 99999;
+        }
+        $posts->setPageLength($pageSize);
+        // Set current page
+        $start = $this->request->getVar($posts->getPaginationGetVar())+4;
+        $posts->setPageStart($start);
+
+        return $posts;
+    }
+
 	public function FeaturedCategories() {
     	return $this->getManyManyComponents('FeaturedCategories')->sort('SortOrder');
 	}
