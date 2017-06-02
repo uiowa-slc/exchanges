@@ -6,7 +6,7 @@
 			</div>
 		<% end_if %>
 		<div class="side-cards">
-			<% loop $Posts.Sort('RAND()').Limit(8) %>
+			<% loop $Posts.Sort('RAND()').Limit(5) %>
 				<a href="$Link" class="side-cards__link">
 					<img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
 					<h2 class="side-cards__header">$Title</h2>				

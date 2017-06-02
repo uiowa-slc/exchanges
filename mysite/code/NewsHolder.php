@@ -35,14 +35,15 @@ class NewsHolder_Controller extends Blog_Controller {
 		parent::init();
 
 	}
-	// public function RandomPosts(){
-	// 	$posts = BlogPost::get()->exclude(array('FeaturedImageID' => 0));
-	// 	return $posts;
-	// }
+	public function RandomPosts(){
+		$posts = BlogPost::get()->exclude(array('FeaturedImageID' => 0));
+		return $posts;
+	}
 
 	public function PaginatedList()
     {
-        $allPosts = $this->blogPosts ?: new ArrayList();
+        // $allPosts = $this->blogPosts ?: new ArrayList();
+        $allPosts = BlogPost::get();
 
         $posts = new PaginatedList($allPosts);
 
@@ -56,7 +57,7 @@ class NewsHolder_Controller extends Blog_Controller {
         }
         $posts->setPageLength($pageSize);
         // Set current page
-        $start = $this->request->getVar($posts->getPaginationGetVar())+4;
+        $start = $this->request->getVar($posts->getPaginationGetVar()) + 4;
         $posts->setPageStart($start);
 
         return $posts;

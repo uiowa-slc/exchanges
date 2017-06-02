@@ -26,7 +26,6 @@
         </ul>
         <ul class="card-list">
                 <% loop $PaginatedList %>
-                    <% if $FeaturedImage %>
                     <li class="card-list__item card-list__item--single-row">
                         <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
                             <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
@@ -39,17 +38,17 @@
                             </div>
                         </a>
                     </li>
-                    <% end_if %>
+                    
                 <% end_loop %>
             </ul>
+
     </div>
     
     <div class="large-3 columns">
-        <% include BlogSideBar %>
-                   
+        <% include BlogSideBar %>         
     </div>
-        
+    <% with $PaginatedList %>
+        <% include Pagination %>
+    <% end_with %>   
 </div>
-<% with $PaginatedList %>
-    <% include Pagination %>
-<% end_with %>
+
