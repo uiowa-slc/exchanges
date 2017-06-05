@@ -24,7 +24,7 @@
                 
             <% end_loop %>
         </ul>
-        <ul class="card-list">
+            <ul class="card-list">
                 <% loop $PaginatedList %>
                     <li class="card-list__item card-list__item--single-row">
                         <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
@@ -45,10 +45,45 @@
     </div>
     
     <div class="large-3 columns">
-        <% include BlogSideBar %>         
+        <h2 class="banner">More from Exchanges</h2>
+        <% if $SideBarView %>
+            <div class="blog-sidebar typography unit size1of4 lastUnit">
+                $SideBarView
+            </div>
+        <% end_if %>
+        <div class="side-cards">
+            <% loop $Posts.Sort('RAND()').Limit(5) %>
+                <a href="$Link" class="side-cards__link">
+                    <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
+                    <h2 class="side-cards__header">$Title</h2>              
+                </a>
+            <% end_loop %>
+        </div>         
     </div>
     <% with $PaginatedList %>
-        <% include Pagination %>
+        <% if $MoreThanOnePage %>
+            <p class="pagination">
+                <% if $NotFirstPage %>
+                    <a class="prev" href="{$PrevLink}">&larr;</a>
+                <% end_if %>
+
+                <% loop $PaginationSummary(4) %>
+                    <% if $CurrentBool %>
+                        <span class="pagination-link">$PageNum</span>
+                    <% else %>
+                        <% if $Link %>
+                            <a class="pagination-link" href="$Link">$PageNum</a>
+                        <% else %>
+                            <span>...</span>
+                        <% end_if %>
+                    <% end_if %>
+                <% end_loop %>
+
+                <% if $NotLastPage %>
+                    <a class="next" href="{$NextLink}">&rarr;</a>
+                <% end_if %>
+            </p>
+        <% end_if %>
     <% end_with %>   
 </div>
 

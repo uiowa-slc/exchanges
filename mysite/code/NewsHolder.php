@@ -46,6 +46,7 @@ class NewsHolder_Controller extends Blog_Controller {
         $allPosts = BlogPost::get();
 
         $posts = new PaginatedList($allPosts);
+        // $posts->setTotalItems($posts->getToalItems - 4);
 
         // Set appropriate page size
         if ($this->PostsPerPage > 0) {

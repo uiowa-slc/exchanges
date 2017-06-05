@@ -94,10 +94,14 @@
 	padding-bottom: rem-calc(40);
 }
 
+h2.banner {
+	margin-top: 0;
+}
+
 p.pagination {
 	padding-left: 50px;
 }
 
-a.pagination {
+.pagination-link {
 	margin-left: 10px;
 }
