@@ -94,8 +94,27 @@
 	padding-bottom: rem-calc(40);
 }
 
-h2.banner {
-	margin-top: 0;
+.blog-sidebar {
+	h3.banner {
+		margin-top: 0px;
+	}
+
+	li {
+		list-style: none;
+		margin-bottom: 20px;
+	}
+
+	ul {
+		margin-left: 0px;
+	}
+}
+
+.news-list {
+	margin-left: 0px;
+}
+
+.pagination {
+	font-size: 30px;
 }
 
 p.pagination {
@@ -104,4 +123,8 @@ p.pagination {
 
 .pagination-link {
 	margin-left: 10px;
+}
+
+.next {
+	padding-left: 5px;
 }

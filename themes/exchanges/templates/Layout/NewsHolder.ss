@@ -8,6 +8,7 @@
 <div class="row">
     <div class="large-9 columns">
         <ul class="card-list card-list--two">
+        <% if $PaginatedList.CurrentPage() == 1 %>
             <% loop $Posts.Limit(4) %>
                 <li class="card-list__item card-list__item--single-row">
                     <a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
@@ -21,8 +22,8 @@
                         </div>
                     </a>
                 </li>
-                
             <% end_loop %>
+        <% end_if %>
         </ul>
             <ul class="card-list">
                 <% loop $PaginatedList %>
@@ -44,14 +45,14 @@
 
     </div>
     
-    <div class="large-3 columns">
-        <h2 class="banner">More from Exchanges</h2>
+    <div class="blog-sidebar large-3 columns">
         <% if $SideBarView %>
             <div class="blog-sidebar typography unit size1of4 lastUnit">
                 $SideBarView
             </div>
         <% end_if %>
         <div class="side-cards">
+            <h2 class="banner">More from Exchanges</h2>
             <% loop $Posts.Sort('RAND()').Limit(5) %>
                 <a href="$Link" class="side-cards__link">
                     <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
@@ -60,11 +61,12 @@
             <% end_loop %>
         </div>         
     </div>
+
     <% with $PaginatedList %>
         <% if $MoreThanOnePage %>
             <p class="pagination">
                 <% if $NotFirstPage %>
-                    <a class="prev" href="{$PrevLink}">&larr;</a>
+                    <a class="prev" href="{$PrevLink}">&larr; Prev </a>
                 <% end_if %>
 
                 <% loop $PaginationSummary(4) %>
@@ -80,7 +82,7 @@
                 <% end_loop %>
 
                 <% if $NotLastPage %>
-                    <a class="next" href="{$NextLink}">&rarr;</a>
+                    <a class="next" href="{$NextLink}"> Next &rarr;</a>
                 <% end_if %>
             </p>
         <% end_if %>
