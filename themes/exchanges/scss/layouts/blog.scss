@@ -114,7 +114,12 @@
 }
 
 .pagination {
-	font-size: 30px;
+	.current {
+		background: $primary-color;
+		cursor: default;
+		border-radius: 5px;
+		padding: 6px 12px;
+	}
 }
 
 p.pagination {
@@ -126,5 +131,5 @@ p.pagination {
 }
 
 .next {
-	padding-left: 5px;
+	padding-left: 10px;
 }
