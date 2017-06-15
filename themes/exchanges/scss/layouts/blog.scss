@@ -114,6 +114,8 @@
 }
 
 .pagination {
+	padding-top: 20px;
+
 	.current {
 		background: $primary-color;
 		cursor: default;
@@ -122,12 +124,14 @@
 	}
 }
 
-p.pagination {
-	padding-left: 50px;
+.pagination {
+	p {
+		text-align: center;
+	}
 }
 
 .pagination-link {
-	margin-left: 10px;
+	margin-left: 15px;
 }
 
 .next {
