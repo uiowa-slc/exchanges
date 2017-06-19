@@ -114,17 +114,26 @@
 }
 
 .pagination {
-	font-size: 30px;
+	padding-top: 20px;
+
+	.current {
+		background: $primary-color;
+		cursor: default;
+		border-radius: 5px;
+		padding: 6px 12px;
+	}
 }
 
-p.pagination {
-	padding-left: 50px;
+.pagination {
+	p {
+		text-align: center;
+	}
 }
 
 .pagination-link {
-	margin-left: 10px;
+	margin-left: 15px;
 }
 
 .next {
-	padding-left: 5px;
+	padding-left: 10px;
 }

@@ -26,7 +26,7 @@
         <% end_if %>
         </ul>
             <ul class="card-list">
-                <% loop $PaginatedList %>
+                <% loop $BlogPagination(4) %>
                     <li class="card-list__item card-list__item--single-row">
                         <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
                             <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
@@ -39,10 +39,36 @@
                             </div>
                         </a>
                     </li>
-                    
                 <% end_loop %>
             </ul>
+        <div class="pagination">
+            <% with $PaginatedList %>
+                <% if $MoreThanOnePage %>
+                    <p class="pagination">
+                        <% if $NotFirstPage %>
+                            <a class="prev" href="{$PrevLink}">&larr; Prev </a>
+                        <% end_if %>
 
+                        <% loop $PaginationSummary(4) %>
+                            <% if $CurrentBool %>
+                                <button class="current pagination-link">$PageNum</button>
+                            <% else %>
+                                <% if $Link %>
+                                    <a class="pagination-link" href="$Link">$PageNum</a>
+                                <% else %>
+                                    <span>...</span>
+                                <% end_if %>
+                            <% end_if %>
+                        <% end_loop %>
+
+                        <% if $NotLastPage %>
+                            <a class="next" href="{$NextLink}"> Next &rarr;</a>
+                        <% end_if %>
+                    </p>
+                <% end_if %>
+            <% end_with %>
+        </div>
+    
     </div>
     
     <div class="blog-sidebar large-3 columns">
@@ -53,39 +79,25 @@
         <% end_if %>
         <div class="side-cards">
             <h2 class="banner">More from Exchanges</h2>
-            <% loop $Posts.Sort('RAND()').Limit(5) %>
-                <a href="$Link" class="side-cards__link">
-                    <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
-                    <h2 class="side-cards__header">$Title</h2>              
-                </a>
-            <% end_loop %>
+            <% if $PaginatedList.CurrentPage() == 1 %>
+                <% loop $Posts.Sort('RAND()').Limit(5) %>
+                    <a href="$Link" class="side-cards__link">
+                        <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
+                        <h2 class="side-cards__header">$Title</h2>              
+                    </a>
+                <% end_loop %>
+            <% else_if  $PaginatedList.CurrentPage() != 1  %>
+                <% loop $Posts.Sort('RAND()').Limit(2) %>
+                    <a href="$Link" class="side-cards__link">
+                        <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
+                        <h2 class="side-cards__header">$Title</h2>              
+                    </a>
+                <% end_loop %>
+            <% end_if %>
         </div>         
     </div>
 
-    <% with $PaginatedList %>
-        <% if $MoreThanOnePage %>
-            <p class="pagination">
-                <% if $NotFirstPage %>
-                    <a class="prev" href="{$PrevLink}">&larr; Prev </a>
-                <% end_if %>
 
-                <% loop $PaginationSummary(4) %>
-                    <% if $CurrentBool %>
-                        <span class="pagination-link">$PageNum</span>
-                    <% else %>
-                        <% if $Link %>
-                            <a class="pagination-link" href="$Link">$PageNum</a>
-                        <% else %>
-                            <span>...</span>
-                        <% end_if %>
-                    <% end_if %>
-                <% end_loop %>
 
-                <% if $NotLastPage %>
-                    <a class="next" href="{$NextLink}"> Next &rarr;</a>
-                <% end_if %>
-            </p>
-        <% end_if %>
-    <% end_with %>   
 </div>
 

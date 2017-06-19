@@ -40,7 +40,7 @@ class NewsHolder_Controller extends Blog_Controller {
 	// 	return $posts;
 	// }
 
-	public function PaginatedList()
+	public function BlogPagination($offset)
     {
         // $allPosts = $this->blogPosts ?: new ArrayList();
         $allPosts = BlogPost::get();
@@ -58,7 +58,7 @@ class NewsHolder_Controller extends Blog_Controller {
         $posts->setPageLength($pageSize);
         // Set current page
         $start = $this->request->getVar($posts->getPaginationGetVar());
-        $posts->setPageStart($start+4);
+        $posts->setPageStart($start+$offset);
 
         return $posts;
     }
