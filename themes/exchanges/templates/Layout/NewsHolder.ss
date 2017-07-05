@@ -30,8 +30,13 @@
                     <li class="card-list__item card-list__item--single-row">
                         <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
                             <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
-                            <div class="card-list__overlay"></div>
-                            <div class="card-list__text">
+                            <% if $FeaturedImage %>
+                                <div class="card-list__overlay"></div>
+                                <div class="card-list__text">
+                            <% else %>
+                                <div class="card-list__overlay card-list__overlay--always-visible"></div>
+                                <div class="card-list__text card-list__text--always-visible">
+                            <% end_if %>
                             <h2 class="card-list__header">$Title</h2>
                                 <% if $Credits %>
                                 <p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
