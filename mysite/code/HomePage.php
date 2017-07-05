@@ -32,9 +32,9 @@ class HomePage extends Page {
 		$conf=GridFieldConfig_RelationEditor::create(10);
 		$conf->addComponent(new GridFieldSortableRows('SortOrder'));
 		$conf->removeComponentsByType($conf->getComponentByType('GridFieldAddNewButton'));		
-		$fields->addFieldToTab('Root.Main', 
-            new GridField('FeaturedCategories', 'Featured Categories', $this->FeaturedCategories(), $conf)
-        );
+		// $fields->addFieldToTab('Root.Main', 
+  //           new GridField('FeaturedCategories', 'Featured Categories', $this->FeaturedCategories(), $conf)
+  //       );
 
 		//$treedropdownfield = new TreeDropdownField("FeaturedIssueID", "Newest/Featured Issue", "SiteTree");
 		//$fields->addFieldToTab('Root.Main', $treedropdownfield);
