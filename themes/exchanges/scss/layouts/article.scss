@@ -15,20 +15,22 @@
     }
 }
 
-.article__share-container{
+.article__share-container {
     padding-right: rem-calc(10);
 }
 
-.article__subnav{
+.article__subnav {
     margin-top: rem-calc(20);
 }
 
-.article__translated{
-        padding: ($column-gutter / 2) 0;
-        @media #{$large-up} {
-            padding-top: 0;
-        } 
+.article__translated {
+    padding: ($column-gutter / 2) 0;
+
+    @media #{$large-up} {
+        padding-top: 0;
+    }
 }
+
 .article__translated-title.article__shared-title {
     @media #{$large-up} {
         visibility: hidden;
@@ -46,56 +48,65 @@
     margin: 0;
 }
 
-
 .article__wrap {
-    background: white;
-    @media #{$large-up} {
-        padding: rem-calc(40) 0;
-    }
-    border: 1px solid #eee;
-    overflow: hidden;
-}
-.article__container {
+    // background: white;
 
-
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-
-    // p {
-    //     line-height: 1.5em;
-    //     margin-bottom: rem-calc(10);
+    // @media #{$large-up} {
+    //     padding: rem-calc(40) 0;
     // }
 
-    hr {
-        border-color: rgba(152, 143, 120, 0.59);
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-    &--sidebyside{
-        @media #{$large-up} {
-            opacity: 0;
-        }        
+    // border: 1px solid #eee;
+    // overflow: hidden;
+}
+
+.article__container {
+    overflow: scroll;
+
+    @media #{$large-up} {
+        background: white;
+        border: 1px solid #eee;
+        padding: rem-calc(40) 0;
     }
 
+    // transition: opacity .25s ease-in-out;
+    // -moz-transition: opacity .25s ease-in-out;
+    // -webkit-transition: opacity .25s ease-in-out;
+
+    // // p {
+    // //     line-height: 1.5em;
+    // //     margin-bottom: rem-calc(10);
+    // // }
+
+    // hr {
+    //     border-color: rgba(152, 143, 120, 0.59);
+    //     margin-top: 1rem;
+    //     margin-bottom: 1rem;
+    // }
+
+    // &--sidebyside {
+    //     @media #{$large-up} {
+    //         opacity: 0;
+    //     }
+    // }
 }
 
 .article__body {
-    &--poem-lineheight{
+    &--poem-lineheight {
         p {
             line-height: 1.3em;
             margin-bottom: 0;
         }
     }
-    img.leftAlone, img.rightAlone{
+
+    img.leftAlone, img.rightAlone {
         width: 100%;
         margin: rem-calc(10) auto;
         border: 1px solid #eee;
     }
+
     @media #{$large-up} {
         padding: 0 ($article-poetry-padding / 2);
     }
-
 }
 
 .article__body--original-work {
@@ -106,7 +117,7 @@
     }
 }
 
-.article__body--lang-ar, .article__body--lang-ku{
+.article__body--lang-ar, .article__body--lang-ku {
     font-family: $arabic-font-family;
 
     h1, h2, h3, h4, h5, h6 {
@@ -141,7 +152,6 @@
     }
 }
 
-
 .issue-nav {
     margin-top: $footer-padding;
     font-size: rem-calc(28);
@@ -156,9 +166,8 @@
             //margin-top: -30px;
             padding-bottom: 0;
         }
-
-
     }
+
     &__toc-link {
         font-size: rem-calc(24);
         text-transform: uppercase;
@@ -173,6 +182,7 @@
             // padding-bottom: rem-calc(10);
         }
     }
+
     &__prev-container {
         text-align: center;
 
@@ -198,21 +208,21 @@
     }
 }
 
-.translation-nav{
+.translation-nav {
     text-align: center;
 }
 
-.translation-nav__item{
-    &.tab-title{
-      float: none;
-      display: inline-block;      
+.translation-nav__item {
+    &.tab-title {
+        float: none;
+        display: inline-block;
     }
-
 }
 
-.translation-nav .translation-nav__item.active > a{
+.translation-nav .translation-nav__item.active > a {
     color: #fff;
 }
+
 //Change global layouts and nav using modifiers:
 
 .layout--Article {
@@ -223,18 +233,19 @@
     }
 }
 
-.nav-container--Article{
+.nav-container--Article {
     background-size: cover;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
 }
-
 
 .row--Article {
     max-width: $article-row-width;
 }
-.contain-to-grid--Article{
+
+.contain-to-grid--Article {
     background: none;
 }
+
 .contain-to-grid--Article .top-bar {
     max-width: $article-row-width;
 }
