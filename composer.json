@@ -10,8 +10,18 @@
 		"silverstripe/blog": "2.*",
 		"silverstripe/widgets": "*",
 		"jonom/focuspoint" : "*",
-		"jonom/silverstripe-betternavigator": "2.1"
+		"jonom/silverstripe-betternavigator": "2.1",
+		"silverstripe/activedirectory" : "3.*"
 	},
-
+	"repositories":[  
+		{
+		 "type": "vcs",
+		 "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
+		},
+		{
+		     "type": "vcs",
+		     "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-betternavigator"
+		}
+	],
 	"minimum-stability": "dev"
 }
