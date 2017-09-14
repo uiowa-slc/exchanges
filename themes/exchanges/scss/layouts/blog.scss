@@ -65,13 +65,15 @@
 }
 
 .post__container {
-	overflow: scroll;
-
 	@media #{$large-up} {
 		background: white;
 		border: 1px solid #eee;
 		padding: rem-calc(40) 0;
 	}
+}
+
+.post__body table {
+	width: 100% !important;
 }
 
 .post__meta {

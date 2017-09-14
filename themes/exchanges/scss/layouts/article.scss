@@ -48,46 +48,12 @@
     margin: 0;
 }
 
-.article__wrap {
-    // background: white;
-
-    // @media #{$large-up} {
-    //     padding: rem-calc(40) 0;
-    // }
-
-    // border: 1px solid #eee;
-    // overflow: hidden;
-}
-
 .article__container {
-    overflow: scroll;
-
     @media #{$large-up} {
         background: white;
         border: 1px solid #eee;
         padding: rem-calc(40) 0;
     }
-
-    // transition: opacity .25s ease-in-out;
-    // -moz-transition: opacity .25s ease-in-out;
-    // -webkit-transition: opacity .25s ease-in-out;
-
-    // // p {
-    // //     line-height: 1.5em;
-    // //     margin-bottom: rem-calc(10);
-    // // }
-
-    // hr {
-    //     border-color: rgba(152, 143, 120, 0.59);
-    //     margin-top: 1rem;
-    //     margin-bottom: 1rem;
-    // }
-
-    // &--sidebyside {
-    //     @media #{$large-up} {
-    //         opacity: 0;
-    //     }
-    // }
 }
 
 .article__body {
