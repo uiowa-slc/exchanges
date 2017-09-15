@@ -9,10 +9,15 @@
         <article class="post__container" role="main">
             <h1 class="post__heading">$Title</h1>
 
-            <% include PostMeta %>
 
             <% if $FeaturedImage %>
-                <img class="post__image" src="$FeaturedImage.setWidth(795).URL" />
+                <% if $FeaturedImageSmall %>
+                    <img class="post__image--small" src="$FeaturedImage.setWidth(795).URL" />
+                    <% include PostMeta %>
+                <% else %>
+                    <% include PostMeta %>
+                    <img class="post__image" src="$FeaturedImage.setWidth(795).URL" />
+                <% end_if %>
             <% end_if %>
             
             <div class="post__body">

@@ -6,6 +6,7 @@ class NewsPage extends BlogPost {
 		'Date' => 'SS_Datetime',
 		'Abstract' => 'Text',
 		'Author' => 'Varchar(255)',
+		'FeaturedImageSmall' => 'Boolean'
 	);
 
 	private static $defaults = array(
@@ -35,6 +36,15 @@ class NewsPage extends BlogPost {
 
 		return $entries;
 	}
+
+
+    public function getCMSFields(){
+    	$fields = parent::getCMSFields();
+    	$fields->addFieldToTab("Root.Main", new CheckboxField ("FeaturedImageSmall", "Show the featured image in a smaller format"));
+    	// $fields->removeDuplicates();
+    	return $fields;
+
+    }
 }
 
 class NewsPage_Controller extends Page_Controller {
