@@ -2,6 +2,7 @@
 class Page extends SiteTree {
 
 	private static $db = array(
+		'DropdownMenu' => 'Boolean',
 	);
 
 	private static $has_one = array(
@@ -13,6 +14,7 @@ class Page extends SiteTree {
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
+    	$fields->addFieldToTab("Root.Main", new CheckboxField ("DropdownMenu", "Show dropdown menu for this page"));
 		return $fields;
 	}
 
