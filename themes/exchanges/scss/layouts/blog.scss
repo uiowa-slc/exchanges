@@ -99,7 +99,7 @@
 .post__image-small {
 	width: 100%;
 	display: block;
-	@media #{$medium-up} {
+	@media #{$small-up} {
 		width: 45%;
 		padding-bottom: rem-calc(40);
 		float: right;
