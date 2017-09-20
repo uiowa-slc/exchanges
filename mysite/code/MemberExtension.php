@@ -22,7 +22,7 @@ class MemberExtension extends DataExtension
     {
         $fields->removeByName('BlogProfileSummary');
 
-        $fields->addFieldToTab('Root.Main', HTMLEditorField::create('BlogProfileSummaryHTML', 'Blog Profile ')->setRows(3), 'BlogProfileImage');
+        $fields->addFieldToTab('Root.Main', HTMLEditorField::create('BlogProfileSummaryHTML', 'Blog Profile ')->setRows(5), 'BlogProfileImage');
 
         return $fields;
     }
