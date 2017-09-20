@@ -4,10 +4,11 @@
         <section>
             <h1>$CurrentProfile.FirstName $CurrentProfile.Surname</h1>
                 <div class="profile-summary">
-                    <% if $CurrentProfile.BlogProfileImage %>
-                        <img src="$CurrentProfile.BlogProfileImage.setWidth(180).URL" alt="" role="presentation" class="profile-image" />
-                    <% end_if %>
+
                     <p>$CurrentProfile.BlogProfileSummaryHTML</p>
+                    <% if $CurrentProfile.BlogProfileImage %>
+                        <img src="$CurrentProfile.BlogProfileImage.setWidth(800).URL" alt="" role="presentation" class="profile-image" />
+                    <% end_if %>
                 </div>
 
         </section>

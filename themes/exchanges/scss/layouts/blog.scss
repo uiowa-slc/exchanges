@@ -152,12 +152,13 @@
 .profile-image{
 
 	display: block;
-	width: 100%;
+	width: 60%;
 	padding: 20px;
+	margin: auto;
 
-	@media #{$large-up} {
+	@media #{$medium-up} {
 		float: right;
-		width: 30%;
+		width: 40%;
 
 
 	}
