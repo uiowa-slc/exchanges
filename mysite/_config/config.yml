@@ -2,3 +2,11 @@ Page:
   extensions:
    - WidgetPageExtension
    - BlogCategoryExtension
+SiteConfig:
+  extensions:
+    - SiteConfigExtension
+Member:
+  extensions:
+    - MemberExtension
+TypeKit:
+  typekitID: gor3pds

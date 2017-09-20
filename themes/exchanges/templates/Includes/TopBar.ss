@@ -12,15 +12,17 @@
 				<%-- Left Nav Section --%>
 				<ul class="right">
 					<% loop Menu(1) %>
-					<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %>" <% if $DropdownMenu %>data-dropdown="hover" data-options="is_hover:true" <% end_if %>>
+					<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $DropdownMenu && Children %>has-dropdown<% end_if %>" >
 						<a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a>
 						<% if $DropdownMenu %>
 							<% if $Children %>
+								<ul class="dropdown">
 								<% loop $Children %>
-									<li id="hover" class="f-dropdown" data-dropdown-content aria-hidden="true">
+									<li id="hover">
 									  	<a href="$Link">$Title</a>
 									</li>
 								<% end_loop %>
+								</ul>
 							<% end_if %>
 						<% end_if %>
 					</li>

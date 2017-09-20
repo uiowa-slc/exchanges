@@ -23,3 +23,5 @@ HtmlEditorConfig::get('cms')->insertButtonsBefore(
 if(Director::isLive()) {
 	Director::forceSSL();
 }
+
+Authenticator::set_default_authenticator('SAMLAuthenticator');

@@ -11,15 +11,26 @@
 		"silverstripe/widgets": "*",
 		"jonom/focuspoint" : "2.*",
 		"jonom/silverstripe-betternavigator": "2.1",
-		"studiobonito/silverstripe-typekit" : "*"
+		"silverstripe/activedirectory" : "3.*",
+		"plato-creative/silverstripe-typekit" : "*"
 	},
-
-	"repositories" : [
+	"repositories":[
         {
             "type": "vcs",
             "url": "https://github.com/jacobbuck/silverstripe-colorfulimage"
-        }
+        },
+		{
+		 "type": "vcs",
+		 "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
+		},
+		{
+		     "type": "vcs",
+		     "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-betternavigator"
+		},
+	     {
+	          "type": "vcs",
+	          "url": "https://github.com/PlatoCreative/silverstripe-typekit"
+	     }  
 	],
-
 	"minimum-stability": "dev"
 }

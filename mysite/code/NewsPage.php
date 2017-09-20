@@ -40,7 +40,7 @@ class NewsPage extends BlogPost {
 
     public function getCMSFields(){
     	$fields = parent::getCMSFields();
-    	$fields->addFieldToTab("Root.Main", new CheckboxField ("FeaturedImageSmall", "Show the featured image in a smaller format"));
+    	$fields->addFieldToTab("Root.Main", new CheckboxField ("FeaturedImageSmall", "Show the featured image in a smaller format"), 'CustomSummary');
     	return $fields;
 
     }
