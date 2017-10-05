@@ -19,29 +19,29 @@
     <style>.Article #poetry {opacity: 1;}</style>
 </noscript>
 
-
 <div class="row row--large">
-
 	<div class="large-1 columns exchanges-sticky">
 		<% include BlogShareIcons %>
 	</div>
 	<div class="large-11 columns">
 		<div class="row article__wrap">
-			<div class="tabs-content">
-				  <section role="tabpanel" aria-hidden="false" class="content active" id="side-by-side">
-				    <% include ArticleBodySideBySide %>
-				  </section>
-				  <section role="tabpanel" aria-hidden="true" class="content" id="original">
-				    <% include ArticleBodyOriginal %>
-				  </section>
-				  <section role="tabpanel" aria-hidden="true" class="content" id="translated">
-				    <% include ArticleBodyTranslated %>
-				  </section>
-				  <% if $TranslatorNote %>
-				  <section role="tabpanel" aria-hidden="true" class="content" id="translator-notes">
-				    <% include ArticleBodyTranslatorNotes %>
-				  </section>
-				  <% end_if %>
+			<div class="large-12 columns">
+				<div class="tabs-content">
+					  <section role="tabpanel" aria-hidden="false" class="content active" id="side-by-side">
+					    <% include ArticleBodySideBySide %>
+					  </section>
+					  <section role="tabpanel" aria-hidden="true" class="content" id="original">
+					    <% include ArticleBodyOriginal %>
+					  </section>
+					  <section role="tabpanel" aria-hidden="true" class="content" id="translated">
+					    <% include ArticleBodyTranslated %>
+					  </section>
+					  <% if $TranslatorNote %>
+					  <section role="tabpanel" aria-hidden="true" class="content" id="translator-notes">
+					    <% include ArticleBodyTranslatorNotes %>
+					  </section>
+					  <% end_if %>
+				</div>
 			</div>
 		</div>
 	</div>
