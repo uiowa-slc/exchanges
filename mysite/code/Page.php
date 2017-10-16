@@ -94,7 +94,7 @@ class Page_Controller extends ContentController {
 	}
 
 	public function Posts(){
-		$posts = BlogPost::get()->exclude(array('FeaturedImageID' => 0));
+		$posts = BlogPost::get();
 		return $posts;
 	}
 
