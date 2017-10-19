@@ -7,9 +7,25 @@
 
 <div class="row">
     <div class="large-9 columns">
+        <h1>
+            <% if $ArchiveYear %>
+                <%t Blog.Archive 'Archive' %>:
+                <% if $ArchiveDay %>
+                    $ArchiveDate.Nice
+                <% else_if $ArchiveMonth %>
+                    $ArchiveDate.format('F, Y')
+                <% else %>
+                    $ArchiveDate.format('Y')
+                <% end_if %>
+            <% else_if $CurrentTag %>
+                <%t Blog.Tag 'Tag' %>: $CurrentTag.Title
+            <% else_if $CurrentCategory %>
+                <%t Blog.Category 'Category' %>: $CurrentCategory.Title
+            <% end_if %>
+        </h1>
         <ul class="card-list card-list--two">
         <% if $PaginatedList.CurrentPage() == 1 %>
-            <% loop $Posts.Limit(4) %>
+            <% loop $PaginatedList.Limit(4) %>
                 <li class="card-list__item card-list__item--single-row">
                     <a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
                         <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
@@ -26,7 +42,7 @@
         <% end_if %>
         </ul>
             <ul class="card-list">
-                <% loop $BlogPagination(4) %>
+                <% loop $PaginatedList.Limit(999,4) %>
                     <li class="card-list__item card-list__item--single-row">
                         <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
                             <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
