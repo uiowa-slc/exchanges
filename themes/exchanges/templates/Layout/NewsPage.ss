@@ -1,7 +1,6 @@
 
 <div class="row row--large">
     <div class="large-1 columns exchanges-sticky">
-        <a href="$Parent.Link" class="breadcrumb breadcrumb--full-width tiny">$Parent.Title</a>
         <% include BlogShareIcons %>
     </div>
 
@@ -23,31 +22,14 @@
             <div class="post__body">
                 $Content
 
-<%--                 <ul class="post__social post__social--horizontal">
-                    
-                    <li class="post__social-item post__social-item--horizontal"><span class="post__social-label">Share:</span></li>
-                    <li class="post__social-item post__social-item--horizontal">
-                        <a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u={$AbsoluteLink}', '_blank', 'width=400,height=500');void(0);" title="Share on Facebook">
-                        <span class="post__social-icon social-icon-facebook"></span></a>
-                    </li>
-                    <li class="post__social-item post__social-item--horizontal">
-                        <a href="https://twitter.com/intent/tweet?text={$AbsoluteLink}" title="Share on Twitter" target="_blank">
-                        <span class="post__social-icon social-icon-twitter"></span></a>
-                    </li>
-                    <li class="post__social-item post__social-item--horizontal">
-                        <a href="mailto:" title="Share via email" target="_blank">
-                        <span class="post__social-icon social-icon-envelop"></span></a>
-                    </li>
-
-                </ul>  --%>
-                <p class="post__meta post__meta--body">
                 <% if $Tags.exists %>
+                <p class="post__meta post__meta--body">
                     Tagged as:
                     <% loop $Tags %>
                         <a href="$Link" title="$Title">$Title</a><% if not Last %>, <% else %><% end_if %>
                     <% end_loop %>
-                <% end_if %>  
-                </p>        
+                </p> 
+                <% end_if %>        
             </div>
             
 
