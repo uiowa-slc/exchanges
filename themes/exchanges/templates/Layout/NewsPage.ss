@@ -39,7 +39,15 @@
                         <span class="post__social-icon social-icon-envelop"></span></a>
                     </li>
 
-                </ul>  --%>             
+                </ul>  --%>
+                <p class="post__meta post__meta--body">
+                <% if $Tags.exists %>
+                    Tagged as:
+                    <% loop $Tags %>
+                        <a href="$Link" title="$Title">$Title</a><% if not Last %>, <% else %><% end_if %>
+                    <% end_loop %>
+                <% end_if %>  
+                </p>        
             </div>
             
 
