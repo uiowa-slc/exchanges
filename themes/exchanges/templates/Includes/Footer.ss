@@ -26,16 +26,28 @@ Iowa City, IA 52242-1323
 					</div>
 				</div>
 				<div class="medium-5 large-7 end columns hide-print">
-					<%-- <p>Exchanges began in 1989-90, as a project of the Iowa Translation Workshop when I was director. The first issue was cyclostyled, the title being copied from Ulalume González de León’s short story “Intercambios,” translated by Stephanie Lovelady, a student in the Workshop. All texts were presented bilingually. <a href="about/">Continue reading...</a></p> --%>
+					<!-- Begin MailChimp Signup Form -->
+					<style type="text/css">
+
+					/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+					   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+					</style>
+					<div id="mc_embed_signup">
+					<form action="https://uiowa.us17.list-manage.com/subscribe/post?u=2d4241cf88fec795e33330428&amp;id=2766e7142c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					    <div id="mc_embed_signup_scroll">
+					<label for="mce-EMAIL">Subscribe to the Exchanges mailing list.</label>
+					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+					    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2d4241cf88fec795e33330428_2766e7142c" tabindex="-1" value=""></div>
+					    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+					    </div>
+					</form>
+					</div>
+
+				<!--End mc_embed_signup-->
 					$SiteConfig.FooterText
 				</div>
 			</div>
 		</div>
 	</div>
-	<!--<div class="row">
-		<div class="large-12 columns">
-	        <hr>
-	        <p>&copy; $Now.Year <a href="http://www.uiowa.edu/" target="_blank">The University of Iowa</a>. All Rights Reserved.</p>
-    	</div>
-    </div>-->
 </footer>
