@@ -23,26 +23,8 @@
                 <%t Blog.Category 'Category' %>: $CurrentCategory.Title
             <% end_if %>
         </h1>
-        <ul class="card-list card-list--two">
-        <% if $PaginatedList.CurrentPage() == 1 %>
-            <% loop $PaginatedList.Limit(4) %>
-                <li class="card-list__item card-list__item--single-row">
-                    <a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
-                        <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
-                        <div class="card-list__overlay card-list__overlay--always-visible"></div>
-                        <div class="card-list__text card-list__text--always-visible">
-                        <h2 class="card-list__header">$Title</h2>
-                            <% if $Credits %>
-                            <p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
-                            <% end_if %>
-                        </div>
-                    </a>
-                </li>
-            <% end_loop %>
-        <% end_if %>
-        </ul>
             <ul class="card-list">
-                <% loop $PaginatedList.Limit(999,4) %>
+                <% loop $PaginatedList %>
                     <li class="card-list__item card-list__item--single-row">
                         <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
                             <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>

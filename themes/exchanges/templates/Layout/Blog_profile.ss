@@ -15,7 +15,7 @@
 
         <% if $blogPosts %>
         <h2>Posts by $CurrentProfile.FirstName $CurrentProfile.Surname</h2>
-        <section class="card-section">
+        <section>
             <ul class="card-list card-list--two">
                 <% loop $blogPosts.Limit(2) %>
                     <li class="card-list__item card-list__item--single-row">

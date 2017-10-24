@@ -17,12 +17,14 @@
                     <% include PostMeta %>
                     <img class="post__image" src="$FeaturedImage.setWidth(795).URL" />
                 <% end_if %>
+            <% else %>
+                    <% include PostMeta %>
             <% end_if %>
             
             <div class="post__body">
                 $Content
 
-                <% if $Tags.exists %>
+                <% if $Tags %>
                 <p class="post__meta post__meta--body">
                     Tagged as:
                     <% loop $Tags %>
