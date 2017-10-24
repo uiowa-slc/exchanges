@@ -23,7 +23,7 @@ class MemberExtension extends DataExtension
         $fields->removeByName('BlogProfileSummary');
         $fields->removeByName('MemberAddInfo');
 
-        $memberLabel = '<p class="message good"><em>In order to add UI community members (those with HawkIDs), please enter their <strong>firstName-lastName@uiowa.edu</strong> email address below. For other authors or other non-UI contributors, add their first and last names and optionally email address (their email address is NOT visible on the website and can be left blank).</em></p>';
+        $memberLabel = '<p class="message good"><em>In order to add UI community members (those with HawkIDs), please enter their <strong>firstName-lastName@uiowa.edu</strong> email address below. For other authors or non-UI contributors, add their first and last names and optionally email address (their email address is NOT visible on the website and can be left blank). Leave any non-UI contributors\' password blank.</em></p>';
 
         $fields->addFieldToTab('Root', LiteralField::create('MemberAddLabel', $memberLabel), 'Email' );
         $fields->addFieldToTab('Root.Main', TextField::create('FirstName'), 'Email');
