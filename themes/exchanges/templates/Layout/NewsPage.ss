@@ -52,7 +52,11 @@
             <ul class="large-block-grid-3 card-list">
             <% loop $RelatedPosts.Limit(6) %>
                 <li class="card-list__item">
-                    <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+                    <% if $FeaturedImage %>
+                        <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+                        <% else %>
+                        <a href="$Link" class="card-list__link card-list__link--small card-list__link--no-featured-img" style="background-image: url('{$ThemeDir}/images/post-default.png')">
+                        <% end_if %>
                         <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
                         <div class="card-list__overlay"></div>
                         <div class="card-list__text">

@@ -51,6 +51,10 @@ class Page extends SiteTree {
 		return $issueArray;
 	}
 
+	public function BlogCategories(){
+		return BlogCategory::get()->sort('Title ASC');
+	}
+
 }
 class Page_Controller extends ContentController {
 
