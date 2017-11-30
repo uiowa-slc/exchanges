@@ -12,7 +12,7 @@
 
             <% if $FeaturedImage %>
                 <% if $FeaturedImageSmall %>
-                    <img class="post__image--small" src="$FeaturedImage.setWidth(795).URL" />
+                    <img class="post__image-small" src="$FeaturedImage.setWidth(795).URL" />
                     <% include PostMeta %>
                 <% else %>
                     <% include PostMeta %>

@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         },                  // Target
         options: {              // Target options
           outputStyle: 'compressed',
-          includePaths: ['themes/exchanges/bower_components/foundation/scss']
+          includePaths: ['themes/exchanges/bower_components/foundation/scss', 'themes/exchanges/scss/lib/scss']
         }
       }
     },
@@ -28,7 +28,8 @@ module.exports = function(grunt) {
           'themes/exchanges/bower_components/foundation/js/foundation.js',
           'themes/exchanges/bower_components/blazy/blazy.js',
           'node_modules/fontfaceobserver/fontfaceobserver.js',
-          'themes/exchanges/javascript/*.js'
+          'themes/exchanges/javascript/*.js',
+          'themes/exchanges/lib/jquery.magnific-popup.js'
         ],
         dest: 'themes/exchanges/build/build.src.js'
       }

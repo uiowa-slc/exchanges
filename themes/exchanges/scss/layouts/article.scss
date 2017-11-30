@@ -15,6 +15,32 @@
     }
 }
 
+.article__artwork-credit {
+    color: #797979;
+    font-family: $header-font-family;
+    font-size: rem-calc(12);
+    font-style: italic;
+    text-align: right;
+    float: right;
+
+    @media #{$large-up} {
+        //padding-right: 50px;
+    }
+}
+
+.article__full-size-image {
+    color: #797979;
+    font-family: $header-font-family;
+    font-size: rem-calc(12);
+    font-style: italic;
+    text-align: right;
+    float: right;
+
+    @media #{$large-up} {
+        //padding-right: 50px;
+    }
+}
+
 .article__share-container {
     padding-right: rem-calc(10);
 }

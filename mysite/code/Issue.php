@@ -7,7 +7,9 @@ class Issue extends Page {
 		'LetterFromEditorCustomTitle' => 'Text',
 		'LetterFromEditor'            => 'HTMLText',
 		'Transparency'                => 'Varchar(100)',
-		'UseTitleDropShadow'          => 'Boolean'
+		'UseTitleDropShadow'          => 'Boolean',
+		'ArtworkCredits'			  => 'HTMLText',
+		'ArtworkCreditsTitle'		  => 'Text',
 	);
 
 	private static $has_one = array(
@@ -64,11 +66,22 @@ class Issue extends Page {
 		$fields->addFieldToTab('Root.Main', new TextField('LetterFromEditorCustomTitle', 'Letter From The Editors Custom Title (optional)'));
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('LetterFromEditor', 'Letter From The Editors'));
 
+		$fields->addFieldToTab('Root.Main', new TextField('ArtworkCreditsTitle', 'Artwork Credits Title (optional)'));
+		$fields->addFieldToTab('Root.Main', new HTMLEditorField('ArtworkCredits', 'Artwork Credits'));
+
 		return $fields;
 	}
 
 	public function Articles() {
 		return $this->Children();
+	}
+
+	public function getCreditsTitle() {
+		if ($this->ArtworkCreditsTitle) {
+			return $this->ArtworkCreditsTitle;
+		} else {
+			return 'Artwork Credits';
+		}
 	}
 
 	public function getLetterTitle() {
@@ -77,6 +90,10 @@ class Issue extends Page {
 		} else {
 			return 'Letter From The Editor';
 		}
+	}
+
+	public function getCreditsLink() {
+		return $this->Link().'credits/';
 	}
 
 	public function getLetterLink() {
@@ -91,16 +108,37 @@ class Issue extends Page {
 
 class Issue_Controller extends Page_Controller {
 
-	private static $allowed_actions = array('letter');
+	private static $allowed_actions = array('letter', 'credits');
 
 	private static $url_handlers = array(
 		'letter' => 'letter',
+		'credits' => 'credits',
 	);
 
 	public function init() {
 		parent::init();
 		//print_r($this->getClassName());
 		//Session::set('issue', Issue::get_by_id('Issue', $this->ID));
+	}
+
+	public function credits() {
+		$credits = $this->ArtworkCredits;
+		if ($credits) {
+
+			$Data = array(
+				'Content'      => $credits,
+				'Parent'       => $this,
+				'ClassName'    => 'Article',
+				'BannerImage'  => $this->obj('Emblem'),
+				'NextPage'     => $this->Children()->First,
+				'PreviousPage' => Page::get()->filter(array('URLSegment' => 'home'))->First,
+			);
+
+		} else {
+			$Data = array('CreditsText' => '');
+		}
+
+		return $this->Customise($Data)->renderWith(array('Issue_credits', 'Page'));
 	}
 
 	public function letter() {

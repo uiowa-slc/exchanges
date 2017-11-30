@@ -26,7 +26,8 @@ Iowa City, IA 52242-1323
 					</div>
 				</div>
 				<div class="medium-5 large-7 end columns hide-print">
-					<p>Exchanges began in 1989-90, as a project of the Iowa Translation Workshop when I was director. The first issue was cyclostyled, the title being copied from Ulalume González de León’s short story “Intercambios,” translated by Stephanie Lovelady, a student in the Workshop. All texts were presented bilingually. <a href="about/">Continue reading...</a></p>
+					<%-- <p>Exchanges began in 1989-90, as a project of the Iowa Translation Workshop when I was director. The first issue was cyclostyled, the title being copied from Ulalume González de León’s short story “Intercambios,” translated by Stephanie Lovelady, a student in the Workshop. All texts were presented bilingually. <a href="about/">Continue reading...</a></p> --%>
+					$SiteConfig.FooterText
 				</div>
 			</div>
 		</div>

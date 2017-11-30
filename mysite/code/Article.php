@@ -15,10 +15,12 @@ class Article extends Page {
 		"OriginalRTL" => "Boolean",
 		'IsCompilation' => 'Boolean',
 		'Artist' => 'Text',
+		'ShowFullSizeImage' => 'Boolean',
 	);
 
 	private static $has_one = array(
 		'BannerImage' => 'Image',
+		'FullSizeImage' => 'Image',
 	);
 
 	private static $plural_name = 'Articles';
@@ -263,7 +265,13 @@ class Article extends Page {
 		$untranslatedTitleField->setRows(1);
 
 		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for poem"));
+
 		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Unique image artist credit'));
+
+
+		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowFullSizeImage', 'Enable full popup link to image'));
+		$fields->addFieldToTab("Root.Main", new UploadField("FullSizeImage", "Image to be used for full popup"));
+		
 		$fields->addFieldToTab('Root.Main', $titleField);
 		$fields->addFieldToTab('Root.Main', $untranslatedTitleField);
 		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalTitleUseAltFont', 'Use an alternate font for the original title (only check if the original title looks strange)'));

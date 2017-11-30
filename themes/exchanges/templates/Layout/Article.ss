@@ -11,6 +11,22 @@
 	<% if $Artist %>
 		<div class="small-6 large-2 columns">
 			<p class="article__artist-credit">Image credit: $Artist</p>
+			<% if $Parent.ArtworkCredits %>
+				<a class="article__artwork-credit" href="$Link">
+					<% if $Parent.ArtworkCreditsTitle %>
+	    				$Parent.ArtworkCreditsTitle
+			  		<% else %>
+			  			View artwork credits
+			  		<% end_if %>
+		  		</a>
+			<% end_if %>
+			<% if $ShowFullSizeImage %>
+				<% if $FullSizeImage %>
+					<a href="$FullSizeImage.Link" class="popup-link article__full-size-image">See full size image</a>
+				<% else %>
+					<a class="popup-link article__full-size-image" href="$BannerImage.Link">See full size image</a>
+				<% end_if %>
+			<% end_if %>
 		</div>
 	<% end_if %>
 </div>
