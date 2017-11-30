@@ -49,7 +49,6 @@
     </div>
     <%-- <div class="small-7 columns">
         <% include MemberDetails %>
-=======
         <section>
             <h1>$CurrentProfile.FirstName $CurrentProfile.Surname</h1>
                 <div class="profile-summary">
@@ -62,7 +61,6 @@
         </section>
 
         <% if $blogPosts %>
->>>>>>> 837b2a2bd8675f43faf2ee1c7e0133152cc21077
         <h2>Posts by $CurrentProfile.FirstName $CurrentProfile.Surname</h2>
         <section class="card-section">
             <ul class="card-list card-list--two">
