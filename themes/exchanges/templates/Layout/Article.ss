@@ -12,13 +12,11 @@
 		<div class="small-6 large-2 columns">
 			<p class="article__artist-credit">Image credit: $Artist</p>
 			<% if $Parent.ArtworkCredits %>
-				<a class="article__artwork-credit" href="$Link">
 					<% if $Parent.ArtworkCreditsTitle %>
-	    				$Parent.ArtworkCreditsTitle
+	    				<a class="article__artwork-credit" href="$Parent.CreditsLink">$Parent.ArtworkCreditsTitle</a>
 			  		<% else %>
-			  			View artwork credits
+	    				<a class="article__artwork-credit" href="$Parent.CreditsLink">View Artwork Credits</a>
 			  		<% end_if %>
-		  		</a>
 			<% end_if %>
 			<% if $ShowFullSizeImage %>
 				<% if $FullSizeImage %>
