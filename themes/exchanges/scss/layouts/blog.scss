@@ -147,3 +147,19 @@
 .next {
 	padding-left: 10px;
 }
+
+
+.profile-image{
+
+	display: block;
+	width: 100%;
+	padding: 20px;
+
+	@media #{$large-up} {
+		float: right;
+		width: 30%;
+
+
+	}
+
+}

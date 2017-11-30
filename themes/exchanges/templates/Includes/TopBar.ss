@@ -21,6 +21,7 @@
 									  	<a href="$Link">$Title</a>
 									</li>
 								<% end_loop %>
+
 							<% end_if %>
 						<% end_if %>
 					</li>

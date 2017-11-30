@@ -2,14 +2,14 @@
 
 class SiteConfigExtension extends DataExtension {
 
-	private static $belongs_many_many = array(
+	private static $db = array(
 		'FooterText' => 'HTMLText',
 	);
 
-	public function getCMSFields(){
-		$fields = parent::getCMSFields();
+	public function updateCMSFields(FieldList $fields){
+		
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('FooterText', 'Footer Text'));
-		return $fields;
+	
 	}
 
   
