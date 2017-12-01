@@ -12,25 +12,30 @@
 		"jonom/focuspoint" : "2.*",
 		"jonom/silverstripe-betternavigator": "2.1",
 		"silverstripe/activedirectory" : "3.*",
-		"plato-creative/silverstripe-typekit" : "*"
+		"plato-creative/silverstripe-typekit" : "*",
+		"md/division-analytics" : "1.*"
 	},
 	"repositories":[
-        {
-            "type": "vcs",
-            "url": "https://github.com/jacobbuck/silverstripe-colorfulimage"
-        },
+	    {
+			"type": "vcs",
+			"url": "https://github.com/jacobbuck/silverstripe-colorfulimage"
+	    },
 		{
-		 "type": "vcs",
-		 "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
+			 "type": "vcs",
+			 "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-activedirectory"
 		},
 		{
 		     "type": "vcs",
 		     "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-betternavigator"
 		},
-	     {
-	          "type": "vcs",
-	          "url": "https://github.com/PlatoCreative/silverstripe-typekit"
-	     }  
+		{
+			"type": "vcs",
+			"url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/PlatoCreative/silverstripe-typekit"
+		}  
 	],
 	"minimum-stability": "dev"
 }

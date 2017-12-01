@@ -52,17 +52,18 @@
         <section>
             <h1>$CurrentProfile.FirstName $CurrentProfile.Surname</h1>
                 <div class="profile-summary">
-                    <% if $CurrentProfile.BlogProfileImage %>
-                        <img src="$CurrentProfile.BlogProfileImage.setWidth(180).URL" alt="" role="presentation" class="profile-image" />
+                <% if $CurrentProfile.BlogProfileImage %>
+                        <img src="$CurrentProfile.BlogProfileImage.setWidth(800).URL" alt="" role="presentation" class="profile-image" />
                     <% end_if %>
-                    <p>$CurrentProfile.BlogProfileSummary</p>
+                    <p>$CurrentProfile.BlogProfileSummaryHTML</p>
+    
                 </div>
 
         </section>
 
         <% if $blogPosts %>
         <h2>Posts by $CurrentProfile.FirstName $CurrentProfile.Surname</h2>
-        <section class="card-section">
+        <section>
             <ul class="card-list card-list--two">
                 <% loop $blogPosts.Limit(2) %>
                     <li class="card-list__item card-list__item--single-row">

@@ -1,6 +1,5 @@
-
-	<div id="article__container" class="article__container">
-
+<div id="article__container" class="article__container">
+	<div class="row">
 		<div class="large-6 large-centered columns article__body article__body--poem-lineheight article__body--original-work article__body--lang-{$languageCode}" id="original-work" lang="{$languageCode}" <% if OriginalRTL %>dir="rtl"<% end_if %>>
 			<article>
 				<div class="article__untranslated-title article__meta <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
@@ -28,6 +27,5 @@
 				</div>
 			</article>
 		</div>
-
-		
 	</div>
+</div>

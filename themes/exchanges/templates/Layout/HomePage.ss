@@ -31,7 +31,11 @@
 			<ul class="card-list card-list--two">
 				<% loop $Posts.Limit(2) %>
 					<li class="card-list__item card-list__item--single-row">
+						<% if $FeaturedImage %>
 						<a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+						<% else %>
+						<a href="$Link" class="card-list__link card-list__link--medium card-list__link--no-featured-img" style="background-image: url('{$ThemeDir}/images/post-default.png')">
+						<% end_if %>
 							<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
 							<div class="card-list__overlay card-list__overlay--always-visible"></div>
 	              			<div class="card-list__text card-list__text--always-visible">

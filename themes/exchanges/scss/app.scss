@@ -26,6 +26,8 @@
 @import "layouts/footer/mixins";
 @import "layouts/blog";
 
+@import "components/mailchimp";
+
 .row--large {
 	max-width: 1600px;
 }

@@ -1,0 +1,8 @@
+---
+Name: memberextension
+After:
+  - '#iowatestsamlsettings'
+---
+Member:
+  extensions:
+    - MemberExtension

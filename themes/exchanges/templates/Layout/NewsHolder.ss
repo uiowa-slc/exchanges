@@ -7,26 +7,24 @@
 
 <div class="row">
     <div class="large-9 columns">
-        <ul class="card-list card-list--two">
-        <% if $PaginatedList.CurrentPage() == 1 %>
-            <% loop $Posts.Limit(4) %>
-                <li class="card-list__item card-list__item--single-row">
-                    <a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
-                        <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
-                        <div class="card-list__overlay card-list__overlay--always-visible"></div>
-                        <div class="card-list__text card-list__text--always-visible">
-                        <h2 class="card-list__header">$Title</h2>
-                            <% if $Credits %>
-                            <p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
-                            <% end_if %>
-                        </div>
-                    </a>
-                </li>
-            <% end_loop %>
-        <% end_if %>
-        </ul>
+        <h1>
+            <% if $ArchiveYear %>
+                <%t Blog.Archive 'Archive' %>:
+                <% if $ArchiveDay %>
+                    $ArchiveDate.Nice
+                <% else_if $ArchiveMonth %>
+                    $ArchiveDate.format('F, Y')
+                <% else %>
+                    $ArchiveDate.format('Y')
+                <% end_if %>
+            <% else_if $CurrentTag %>
+                <%t Blog.Tag 'Tag' %>: $CurrentTag.Title
+            <% else_if $CurrentCategory %>
+                <%t Blog.Category 'Category' %>: $CurrentCategory.Title
+            <% end_if %>
+        </h1>
             <ul class="card-list">
-                <% loop $BlogPagination(4) %>
+                <% loop $PaginatedList %>
                     <li class="card-list__item card-list__item--single-row">
                         <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
                             <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
@@ -77,6 +75,7 @@
     </div>
     
     <div class="blog-sidebar large-3 columns">
+
         <% if $SideBarView %>
             <div class="blog-sidebar typography unit size1of4 lastUnit">
                 $SideBarView
@@ -84,18 +83,29 @@
         <% end_if %>
         <div class="side-cards">
             <h2 class="banner">More from Exchanges</h2>
+            <div class="side-cards__cat-container">
+                <ul class="side-cards__list">
+                <% loop $BlogCategories %>
+                    <li><a href="$Link" class="side-cards__cat">$Title</a></li>
+                <% end_loop %>
+                </ul>
+            </div>
             <% if $PaginatedList.CurrentPage() == 1 %>
                 <% loop $Posts.Sort('RAND()').Limit(5) %>
                     <a href="$Link" class="side-cards__link">
-                        <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
+                        <% if $FeaturedImage %>
+                            <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
+                        <% end_if %>
                         <h2 class="side-cards__header">$Title</h2>              
                     </a>
                 <% end_loop %>
             <% else_if  $PaginatedList.CurrentPage() != 1  %>
                 <% loop $Posts.Sort('RAND()').Limit(2) %>
                     <a href="$Link" class="side-cards__link">
-                        <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
-                        <h2 class="side-cards__header">$Title</h2>              
+                        <% if $FeaturedImage %>
+                            <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
+                        <% end_if %>
+                            <h2 class="side-cards__header">$Title</h2>              
                     </a>
                 <% end_loop %>
             <% end_if %>

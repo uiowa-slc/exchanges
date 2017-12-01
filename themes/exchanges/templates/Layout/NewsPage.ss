@@ -1,7 +1,6 @@
 
 <div class="row row--large">
     <div class="large-1 columns exchanges-sticky">
-        <a href="$Parent.Link" class="breadcrumb breadcrumb--full-width tiny">$Parent.Title</a>
         <% include BlogShareIcons %>
     </div>
 
@@ -18,28 +17,21 @@
                     <% include PostMeta %>
                     <img class="post__image" src="$FeaturedImage.setWidth(795).URL" />
                 <% end_if %>
+            <% else %>
+                    <% include PostMeta %>
             <% end_if %>
             
             <div class="post__body">
                 $Content
 
-<%--                 <ul class="post__social post__social--horizontal">
-                    
-                    <li class="post__social-item post__social-item--horizontal"><span class="post__social-label">Share:</span></li>
-                    <li class="post__social-item post__social-item--horizontal">
-                        <a href="javascript:window.open('http://www.facebook.com/sharer/sharer.php?u={$AbsoluteLink}', '_blank', 'width=400,height=500');void(0);" title="Share on Facebook">
-                        <span class="post__social-icon social-icon-facebook"></span></a>
-                    </li>
-                    <li class="post__social-item post__social-item--horizontal">
-                        <a href="https://twitter.com/intent/tweet?text={$AbsoluteLink}" title="Share on Twitter" target="_blank">
-                        <span class="post__social-icon social-icon-twitter"></span></a>
-                    </li>
-                    <li class="post__social-item post__social-item--horizontal">
-                        <a href="mailto:" title="Share via email" target="_blank">
-                        <span class="post__social-icon social-icon-envelop"></span></a>
-                    </li>
-
-                </ul>  --%>             
+                <% if $Tags %>
+                <p class="post__meta post__meta--body">
+                    Tagged as:
+                    <% loop $Tags %>
+                        <a href="$Link" title="$Title">$Title</a><% if not Last %>, <% else %><% end_if %>
+                    <% end_loop %>
+                </p> 
+                <% end_if %>        
             </div>
             
 
@@ -60,7 +52,11 @@
             <ul class="large-block-grid-3 card-list">
             <% loop $RelatedPosts.Limit(6) %>
                 <li class="card-list__item">
-                    <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+                    <% if $FeaturedImage %>
+                        <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+                        <% else %>
+                        <a href="$Link" class="card-list__link card-list__link--small card-list__link--no-featured-img" style="background-image: url('{$ThemeDir}/images/post-default.png')">
+                        <% end_if %>
                         <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
                         <div class="card-list__overlay"></div>
                         <div class="card-list__text">

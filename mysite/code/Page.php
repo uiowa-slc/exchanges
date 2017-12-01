@@ -51,6 +51,10 @@ class Page extends SiteTree {
 		return $issueArray;
 	}
 
+	public function BlogCategories(){
+		return BlogCategory::get()->sort('Title ASC');
+	}
+
 }
 class Page_Controller extends ContentController {
 
@@ -94,7 +98,7 @@ class Page_Controller extends ContentController {
 	}
 
 	public function Posts(){
-		$posts = BlogPost::get()->exclude(array('FeaturedImageID' => 0));
+		$posts = BlogPost::get();
 		return $posts;
 	}
 
