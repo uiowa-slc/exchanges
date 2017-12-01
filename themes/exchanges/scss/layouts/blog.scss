@@ -6,7 +6,6 @@
 	list-style: none;
 	margin: 0 auto;
 	font-size: 13px;
-	padding: 0;
 	text-align: left;
 
 	@media only screen and (min-width: 1000px) {
@@ -148,9 +147,7 @@
 	padding-left: 10px;
 }
 
-
-.profile-image{
-
+.profile-image {
 	display: block;
 	width: 100%;
 	padding: 20px;
@@ -158,8 +155,5 @@
 	@media #{$large-up} {
 		float: right;
 		width: 30%;
-
-
 	}
-
 }
