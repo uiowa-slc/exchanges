@@ -28,8 +28,9 @@ module.exports = function(grunt) {
           'themes/exchanges/bower_components/foundation/js/foundation.js',
           'themes/exchanges/bower_components/blazy/blazy.js',
           'node_modules/fontfaceobserver/fontfaceobserver.js',
-          'themes/exchanges/javascript/*.js',
-          'themes/exchanges/lib/jquery.magnific-popup.js'
+          'themes/exchanges/lib/jquery.magnific-popup.js',
+          'themes/exchanges/javascript/*.js'
+          
         ],
         dest: 'themes/exchanges/build/build.src.js'
       }
