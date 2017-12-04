@@ -66,7 +66,7 @@ class Issue extends Page {
 		$fields->addFieldToTab('Root.Main', new TextField('LetterFromEditorCustomTitle', 'Letter From The Editors Custom Title (optional)'));
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('LetterFromEditor', 'Letter From The Editors'));
 
-		$fields->addFieldToTab('Root.Main', new TextField('ArtworkCreditsTitle', 'Artwork Credits Title (optional)'));
+		$fields->addFieldToTab('Root.Main', new TextField('ArtworkCreditsTitle', 'Artwork Credits Title (optional, defaults to "Artwork Credits")'));
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('ArtworkCredits', 'Artwork Credits'));
 
 		return $fields;
