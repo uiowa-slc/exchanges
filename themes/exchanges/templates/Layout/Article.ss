@@ -11,20 +11,23 @@
 	<% if $Artist %>
 		<div class="small-6 large-2 columns">
 			<p class="article__artist-credit">Image credit: $Artist</p>
-			<% if $Parent.ArtworkCredits %>
+			<p class="article__artist-credit">
+			<% if $ShowCreditsLink %>
 					<% if $Parent.ArtworkCreditsTitle %>
-	    				<a class="article__artwork-credit" href="$Parent.CreditsLink">$Parent.ArtworkCreditsTitle</a>
+	    				<a class="article__artwork-credit article__artwork-credit--small" href="$Parent.CreditsLink">$Parent.ArtworkCreditsTitle</a><% if $ShowFullSizeImage %><br /><% end_if %>
 			  		<% else %>
-	    				<a class="article__artwork-credit" href="$Parent.CreditsLink">View Artwork Credits</a>
+	    				<a class="article__artwork-credit artwork-credit__link article__artwork-credit--small" href="$Parent.CreditsLink" target="_blank">View Artwork Credits</a><% if $ShowFullSizeImage %><br /><% end_if %>
 			  		<% end_if %>
 			<% end_if %>
 			<% if $ShowFullSizeImage %>
 				<% if $FullSizeImage %>
-					<a href="$FullSizeImage.Link" class="popup-link article__full-size-image">See full size image</a>
+					<a href="$FullSizeImage.Link" class="popup-link link--dashed article__artwork-credit article__full-size-image">View full size</a><br />
 				<% else %>
-					<a class="popup-link article__full-size-image" href="$BannerImage.Link">See full size image</a>
+					<a class="popup-link link--dashed article__artwork-credit--small" href="$BannerImage.Link">View full size </a><br />
 				<% end_if %>
 			<% end_if %>
+
+			</p>
 		</div>
 	<% end_if %>
 </div>

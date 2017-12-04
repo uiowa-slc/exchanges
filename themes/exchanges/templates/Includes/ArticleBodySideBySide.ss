@@ -49,7 +49,7 @@
 						<% end_if %>
 					</span>
 					<p class="hide-for-large-up author">
-						<a href="#translated-work" class="link--dashed">View Translated Work &uarr;</a>
+						<a href="#translated-work">View Translated Work &uarr;</a>
 					</p>
 				</div>
 				<div class="article__text">

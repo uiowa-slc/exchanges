@@ -9,7 +9,7 @@
     font-size: rem-calc(12);
     font-style: italic;
     text-align: right;
-
+    margin-bottom: rem-calc(5);
     @media #{$large-up} {
         //padding-right: 50px;
     }
@@ -26,8 +26,15 @@
     @media #{$large-up} {
         //padding-right: 50px;
     }
+
+    &--small{
+        font-size: rem-calc(10);
+    }
 }
 
+.artwork-credit__link {
+    color: $primary-color;
+}
 .article__full-size-image {
     color: #797979;
     font-family: $header-font-family;

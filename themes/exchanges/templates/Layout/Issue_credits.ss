@@ -12,7 +12,12 @@
 			<div class="large-8 large-centered columns article__body">
 				<article>
 					<header>
-						<h1>$ArtworkCreditsTitle</h1>
+						<% if $ArtworkCreditsTitle %>
+							<h1>$ArtworkCreditsTitle</h1>
+						<% else %>
+							<h1>Artwork Credits</h1>
+						<% end_if %>
+						
 					</header>
 
 					<div class="article__text">

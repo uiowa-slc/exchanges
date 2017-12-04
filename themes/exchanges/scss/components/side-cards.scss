@@ -35,6 +35,12 @@
 	font-size: rem-calc(11);
 	text-transform: uppercase;
 	margin-bottom: rem-calc(10);
+	display: block;
+
+	&--border-top{
+		border-top: 1px solid #eee;
+		padding-top: rem-calc(10);
+	}
 }
 .side-cards__img{
 	border-top: 1px solid #eee;

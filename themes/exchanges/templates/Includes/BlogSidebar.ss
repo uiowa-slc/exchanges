@@ -10,6 +10,7 @@
 				<% loop $BlogCategories %>
 					<li><a href="$Link" class="side-cards__cat">$Title</a></li>
 				<% end_loop %>
+					<li><a href="blog/" class="side-cards__cat border-top">All posts</a>
 				</ul>
 			</div>
 			<% loop $Posts.Sort('RAND()').Limit(5) %>

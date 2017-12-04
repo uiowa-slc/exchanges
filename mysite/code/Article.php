@@ -16,6 +16,7 @@ class Article extends Page {
 		'IsCompilation' => 'Boolean',
 		'Artist' => 'Text',
 		'ShowFullSizeImage' => 'Boolean',
+		'ShowCreditsLink' => 'Boolean',
 	);
 
 	private static $has_one = array(
@@ -268,9 +269,9 @@ class Article extends Page {
 
 		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Unique image artist credit'));
 
-
+		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowCreditsLink', 'Show link to artwork credits on this piece <a href="admin/pages/edit/show/'.$this->Parent()->ID.'" target="_blank">(credits editable here &rarr;)</a>'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowFullSizeImage', 'Enable full popup link to image'));
-		$fields->addFieldToTab("Root.Main", new UploadField("FullSizeImage", "Image to be used for full popup"));
+		$fields->addFieldToTab("Root.Main", new UploadField("FullSizeImage", "Specific image to be used for full popup (optional, we use the 'unique image' field if this isn't filled out)"));
 		
 		$fields->addFieldToTab('Root.Main', $titleField);
 		$fields->addFieldToTab('Root.Main', $untranslatedTitleField);
