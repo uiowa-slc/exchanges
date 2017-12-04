@@ -19,6 +19,15 @@
 			<% end_loop %>
 		</ul>
 		<p class="text-center"><a href="$Children.First.Link" class="button large">Start reading &rarr;</a></p>
+		<% if $ArtworkCredits %>
+			<p class="text-center">
+				<% if $ArtworkCreditsTitle %>
+					<a href="$CreditsLink">$ArtworkCreditsTitle</a>
+		  		<% else %>
+					<a href="$CreditsLink" target="_blank">Artwork Credits</a>
+		  		<% end_if %>
+			</p>
+		<% end_if %>
 		<h2>Other issues</h2>
 		<ul class="card-list">
 			<% loop $Parent.Children.Sort("Created DESC") %>

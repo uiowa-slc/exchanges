@@ -125,7 +125,9 @@ hr {
 .clearfix {
 	clear: both;
 }
-
+.padding-top{
+	padding-top: rem-calc(20);
+}
 .layout {
 	min-height: 320px;
 	padding-top: $column-gutter / 2;

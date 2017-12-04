@@ -7,7 +7,9 @@
 	margin: 0 auto;
 	font-size: 13px;
 	text-align: left;
-
+	&--with-padding-top{
+		padding-top: rem-calc(10);
+	}
 	@media only screen and (min-width: 1000px) {
 		list-style: none;
 		margin: 0;
