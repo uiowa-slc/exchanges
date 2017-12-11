@@ -10,7 +10,7 @@
 	<% if $ClassName == "HomePage" %>
 		<meta property="og:description" content="Read our latest issue: $FeaturedIssue.Title" />
 	<% else_if $ClassName == "Article" %>
-		<meta property="og:description" content="$TranslatorByline("false").NoHTML" />
+		<meta property="og:description" content="$TranslatorByline(false).NoHTML" />
 	<% else_if $Content %>
 		<meta property="og:description" content="$Content.NoHTML" />
 	<% else %>
@@ -31,18 +31,18 @@
 		<meta property="og:image:height" content="$Emblem.SetWidth(1200).Height">
 	<% else_if $ClassName == "Article" %>
 		<% if $BannerImage %>
-			<meta property="og:image" content="$BannerImage.SetWidth(1200).AbsoluteURL.ATT" class="$Title" />
+			<meta property="og:image" content="$BannerImage.SetWidth(1200).AbsoluteURL.ATT" />
 			<meta property="og:image:width" content="$BannerImage.SetWidth(1200).Width">
 			<meta property="og:image:height" content="$BannerImage.SetWidth(1200).Height">
 		<% else %>
 			<% with $Parent %>
-				<meta property="og:image" content="$Emblem.SetWidth(1200).AbsoluteURL.ATT" class="$Title" />
+				<meta property="og:image" content="$Emblem.SetWidth(1200).AbsoluteURL.ATT"/>
 				<meta property="og:image:width" content="$Emblem.SetWidth(1200).Width">
 				<meta property="og:image:height" content="$Emblem.SetWidth(1200).Height">
 			<% end_with %>
 		<% end_if %>
 	<% else_if $ClassName == "NewsPage" %>
-				<meta property="og:image" content="$FeaturedImage.SetWidth(1200).AbsoluteURL.ATT" class="$Title" />
+				<meta property="og:image" content="$FeaturedImage.SetWidth(1200).AbsoluteURL.ATT" />
 				<meta property="og:image:width" content="$FeaturedImage.SetWidth(1200).Width">
 				<meta property="og:image:height" content="$FeaturedImage.SetWidth(1200).Height">
 	<% else %>		
