@@ -265,7 +265,7 @@ class Article extends Page {
 		$untranslatedTitleField = new HTMLEditorField('UntranslatedTitle', 'Original Title');
 		$untranslatedTitleField->setRows(1);
 
-		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for poem"));
+		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for poem (1920 x 640 pixels or 3:1 ratio preferred)"));
 
 		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Unique image artist credit'));
 
