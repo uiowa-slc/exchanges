@@ -19,7 +19,8 @@ HtmlEditorConfig::get('cms')->setOption('paste_text_sticky_default',true);
 
 HtmlEditorConfig::get('cms')->insertButtonsBefore(
     'styleselect',
-    'removeformat'
+    'removeformat',
+    'forecolor'
 );
 HtmlEditorConfig::get('cms')->setOption(
     'valid_elements',

@@ -1,9 +1,8 @@
 @import "imports/settings";
-@import 'foundation/components/type';
+//@import 'foundation/components/type';
 
-.typography {
-	background: $body-bg;
-	font-family: $body-font-family;
+body {
+	font-family: "garamond-premier-pro", serif;
 	font-size: 16px;
 	padding: 10px;
 	.smallcaps {
@@ -16,5 +15,9 @@
 
 	p.hanging-indent:first-letter {
 		margin-left: -20px;
+	}
+
+	.fixed-width{
+		font-family: Monaco, "Lucida Console", monospace;
 	}
 }
