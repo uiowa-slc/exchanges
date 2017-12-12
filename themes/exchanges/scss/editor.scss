@@ -11,15 +11,16 @@ body {
 
 	p{
 		margin-bottom: 0;
+		margin-top: 0;
 	}
 
-	p.hanging-indent {
-		padding-left: 20px;
-	}
+	// .hanging-indent {
+	// 	padding-left: 20px;
+	// }
 
-	p.hanging-indent:first-letter {
-		margin-left: -20px;
-	}
+	// .hanging-indent:first-letter {
+	// 	margin-left: -20px;
+	// }
 
 	.fixed-width{
 		font-size: 13px;
