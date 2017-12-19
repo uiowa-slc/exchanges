@@ -14,7 +14,7 @@
 	<% else_if $Content %>
 		<meta property="og:description" content="$Content.NoHTML" />
 	<% else %>
-		<meta property="og:description" content="$SiteConfig.FooterText.ATT" />
+		<meta property="og:description" content="$SiteConfig.FooterText.NoHTML.ATT" />
 	<% end_if %>
 	
 	<meta property="og:url" content="$AbsoluteLink.ATT" />
