@@ -2,7 +2,7 @@
     line-height: 1;
     margin-bottom: $column-gutter;
 }
-
+//Artist credit main
 .article__artist-credit {
     color: #797979;
     font-family: $header-font-family;
@@ -15,9 +15,10 @@
         //padding-right: 50px;
     }
 }
-
+//Artwork BIOS/CREDIT LINK (not actual credit)
 .article__artwork-credit {
     color: #797979;
+    font-weight: bold;
     font-family: $header-font-family;
     font-size: rem-calc(12);
     font-style: italic;
