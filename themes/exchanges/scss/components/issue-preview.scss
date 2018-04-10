@@ -1,9 +1,10 @@
 .issue-preview__wrap{
-	padding: rem-calc(20) rem-calc(40);
+	padding: rem-calc(10) rem-calc(10);
 	padding-bottom: 0;
 	background: white;
 	border: 1px solid #eee;
 	@media #{$large-up} {
+		padding: rem-calc(20) rem-calc(40);
 		margin-top: rem-calc(-150);
 		margin-bottom: rem-calc(30);
 	}
