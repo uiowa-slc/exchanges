@@ -7,7 +7,7 @@
                     <% if $CurrentProfile.BlogProfileImage %>
                         <img src="$CurrentProfile.BlogProfileImage.setWidth(180).URL" alt="" role="presentation" class="profile-image" />
                     <% end_if %>
-                    <p>$CurrentProfile.BlogProfileSummary</p>
+                    <p>$CurrentProfile.BlogProfileSummaryHTML</p>
                 </div>
 
         </section>
