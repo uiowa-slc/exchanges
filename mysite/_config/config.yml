@@ -7,3 +7,5 @@ SiteConfig:
     - SiteConfigExtension
 TypeKit:
   typekitID: gor3pds
+URLSegmentFilter:
+  default_allow_multibyte: true
