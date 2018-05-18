@@ -22,6 +22,9 @@ HtmlEditorConfig::get('cms')->insertButtonsBefore(
     'removeformat',
     'forecolor'
 );
+
+HtmlEditorConfig::get('cms')->addButtonsToLine(2, 'sup', 'separator');
+
 HtmlEditorConfig::get('cms')->setOption(
     'valid_elements',
 	"@[id|class|style|title],a[id|rel|rev|dir|tabindex|accesskey|type|name|href|target|title"
