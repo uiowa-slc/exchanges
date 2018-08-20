@@ -5,7 +5,7 @@
 	<% if $ClassName == "HomePage" %>
 		<meta property="og:title" content="$SiteConfig.Title.ATT" />
 	<% else %>
-		<meta property="og:title" content="$Title.ATT - Exchanges Literary Journal" />
+		<meta property="og:title" content="$Title.ATT | $SiteConfig.Title.ATT" />
 	<% end_if %>
 	<% if $ClassName == "HomePage" %>
 		<meta property="og:description" content="Read our latest issue: $FeaturedIssue.Title" />
