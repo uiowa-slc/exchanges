@@ -11,7 +11,7 @@
 		<title>$Title.NoHTML - $SiteConfig.Title</title>
 	<% end_if %>
 	<% include OpenGraph %>
-	<link rel="icon" type="image/png" href="{$ThemeDir}/favicon.ico" />
+	<link rel="icon" type="image/png" href="{$ThemeDir}/images/favicon.ico" />
 	<%-- <script type="text/javascript" src="https://use.typekit.net/gor3pds.js"></script>
 	<script type="text/javascript">try{Typekit.load({ async: false });}catch(e){}</script>--%>
 	$TypeKit
