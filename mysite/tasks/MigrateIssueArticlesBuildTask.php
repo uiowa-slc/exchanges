@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\Dev\BuildTask;
+
 class MigrateIssueArticlesBuildTask extends BuildTask {
 
 	protected $title = 'Migrate Issue Articles';

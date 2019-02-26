@@ -1,4 +1,12 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\CMS\Model\SiteTree;
 class Issue extends Page {
 
 	private static $db = array(
@@ -13,7 +21,7 @@ class Issue extends Page {
 	);
 
 	private static $has_one = array(
-		'Emblem' => 'Image',
+		'Emblem' => Image::class,
 
 	);
 
@@ -102,63 +110,6 @@ class Issue extends Page {
 
 	public function RandomArticles() {
 		return SiteTree::get()->filter('ParentID', $this->ID)->sort('RAND()');
-	}
-
-}
-
-class Issue_Controller extends Page_Controller {
-
-	private static $allowed_actions = array('letter', 'credits');
-
-	private static $url_handlers = array(
-		'letter' => 'letter',
-		'credits' => 'credits',
-	);
-
-	public function init() {
-		parent::init();
-		//print_r($this->getClassName());
-		//Session::set('issue', Issue::get_by_id('Issue', $this->ID));
-	}
-
-	public function credits() {
-		$credits = $this->ArtworkCredits;
-		if ($credits) {
-
-			$Data = array(
-				'Content'      => $credits,
-				'Parent'       => $this,
-				'ClassName'    => 'Article',
-				'BannerImage'  => $this->obj('Emblem'),
-				'NextPage'     => $this->Children()->First,
-				'PreviousPage' => Page::get()->filter(array('URLSegment' => 'home'))->First,
-			);
-
-		} else {
-			$Data = array('CreditsText' => '');
-		}
-
-		return $this->Customise($Data)->renderWith(array('Issue_credits', 'Page'));
-	}
-
-	public function letter() {
-		$letterText = $this->LetterFromEditor;
-		if ($letterText) {
-
-			$Data = array(
-				'Content'      => $letterText,
-				'Parent'       => $this,
-				'ClassName'    => 'Article',
-				'BannerImage'  => $this->obj('Emblem'),
-				'NextPage'     => $this->Children()->First,
-				'PreviousPage' => Page::get()->filter(array('URLSegment' => 'home'))->First,
-			);
-
-		} else {
-			$Data = array('LetterText' => '');
-		}
-
-		return $this->Customise($Data)->renderWith(array('Issue_letter', 'Page'));
 	}
 
 }

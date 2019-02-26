@@ -17,12 +17,3 @@ class ArticleHolder extends Page {
 		return $fields;
 	}
 }
-
-class ArticleHolder_Controller extends  Page_Controller {
-	
-    	
-	public function init() {
-		parent::init();
-	}
-	
-}

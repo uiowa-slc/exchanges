@@ -1,4 +1,8 @@
 <?php
+
+use SilverStripe\Forms\FormAction;
+use SilverStripe\Forms\GridField\GridFieldDetailForm_ItemRequest;
+use SilverStripe\ORM\DataExtension;
 class GridFieldPublish extends DataExtension
 {
 	public function updateItemEditForm($form){
@@ -16,10 +20,10 @@ class GridFieldPublish extends DataExtension
 		//user_error("breakpoint", E_USER_ERROR);
 	}
 		
-	public function updateCMSFields(){
-		//user_error("breakpoint", E_USER_ERROR);
-		print_r("ASDSDASD");
-	}
+	// public function updateCMSFields(FieldList $fields){
+	// 	//user_error("breakpoint", E_USER_ERROR);
+	// 	// print_r("ASDSDASD");
+	// }
 	
 	public function goPublish(){
 		$pageController = $this->getTopLevelController();

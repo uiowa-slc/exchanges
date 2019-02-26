@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-
+const sass = require('node-sass');
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -14,6 +14,7 @@ module.exports = function(grunt) {
           'themes/exchanges/css/editor.css' : 'themes/exchanges/scss/editor.scss'
         },                  // Target
         options: {              // Target options
+          implementation: sass,
           outputStyle: 'compressed',
           includePaths: ['themes/exchanges/bower_components/foundation/scss', 'themes/exchanges/scss/lib/scss']
         }

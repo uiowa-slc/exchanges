@@ -1,4 +1,12 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\Core\Convert;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\Forms\GridField\GridField;
 class ArticleSingleColumn extends Page {
 	private static $db = array(
 		'Title'  => 'HTMLText',
@@ -8,7 +16,7 @@ class ArticleSingleColumn extends Page {
 	);
 
 	private static $has_one = array(
-		'BannerImage' => 'Image',
+		'BannerImage' => Image::class,
 	);
 
 	private static $plural_name       = 'Articles';
@@ -136,7 +144,7 @@ class ArticleSingleColumn extends Page {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$fields->removeByName('Image');
+		$fields->removeByName(Image::class);
 		$fields->removeByName('Metadata');
 
 		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for poem"));
@@ -157,14 +165,6 @@ class ArticleSingleColumn extends Page {
 		$fields->addFieldToTab('Root.Translators', $newGridField2);
 
 		return $fields;
-	}
-
-}
-
-class ArticleSingleColumn_Controller extends Page_Controller {
-
-	public function init() {
-		parent::init();
 	}
 
 }

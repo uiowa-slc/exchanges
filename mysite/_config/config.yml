@@ -1,11 +1,16 @@
+---
+Name: myproject
+---
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: mysite
 Page:
   extensions:
-   - WidgetPageExtension
-   - BlogCategoryExtension
-SiteConfig:
+    - SilverStripe\Widgets\Extensions\WidgetPageExtension
+    - BlogCategoryExtension
+SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - SiteConfigExtension
 TypeKit:
   typekitID: gor3pds
-URLSegmentFilter:
+SilverStripe\View\Parsers\URLSegmentFilter:
   default_allow_multibyte: true

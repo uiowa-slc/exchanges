@@ -1,14 +1,20 @@
 <?php
 
+use SilverStripe\Blog\Model\BlogCategory;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\Forms\GridField\GridFieldAddNewButton;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Blog\Model\Blog;
+
 class NewsHolder extends Blog {
 	private static $allowed_children = array('NewsPage');
 	private static $default_child = 'NewsPage';
 
 	private static $many_many = array(
-		'FeaturedCategories' => 'BlogCategory'
+		'FeaturedCategories' => BlogCategory::class
 	);
 
-	public static $many_many_extraFields=array(
+	private static $many_many_extraFields = array(
 		'FeaturedCategories'=>array(
 			'SortOrder'=>'Int'
 		)
@@ -20,51 +26,11 @@ class NewsHolder extends Blog {
 
 		$conf=GridFieldConfig_RelationEditor::create(10);
 		$conf->addComponent(new GridFieldSortableRows('SortOrder'));
-		$conf->removeComponentsByType($conf->getComponentByType('GridFieldAddNewButton'));		
+		$conf->removeComponentsByType($conf->getComponentByType(GridFieldAddNewButton::class));		
 		$fields->addFieldToTab('Root.Main', 
             new GridField('FeaturedCategories', 'Featured Categories', $this->FeaturedCategories(), $conf)
         );
 
         return $fields;
 	}
-}
-
-class NewsHolder_Controller extends Blog_Controller {
-
-	public function init() {
-		parent::init();
-
-	}
-	// public function RandomPosts(){
-	// 	$posts = BlogPost::get()->exclude(array('FeaturedImageID' => 0));
-	// 	return $posts;
-	// }
-
-	public function BlogPagination($offset)
-    {
-        // $allPosts = $this->blogPosts ?: new ArrayList();
-        $allPosts = BlogPost::get();
-        // $allPosts = BlogPost::get()->exclude('ID'=>array());
-        $posts = new PaginatedList($allPosts);
-
-        // Set appropriate page size
-        if ($this->PostsPerPage > 0) {
-            $pageSize = $this->PostsPerPage;
-        } elseif ($count = $allPosts->count()) {
-            $pageSize = $count;
-        } else {
-            $pageSize = 99999;
-        }
-        $posts->setPageLength($pageSize);
-        // Set current page
-        $start = $this->request->getVar($posts->getPaginationGetVar());
-        $posts->setPageStart($start+$offset);
-
-        return $posts;
-    }
-
-	public function FeaturedCategories() {
-    	return $this->getManyManyComponents('FeaturedCategories')->sort('SortOrder');
-	}
-
 }

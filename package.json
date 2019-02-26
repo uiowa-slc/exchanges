@@ -4,10 +4,12 @@
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-imagemin": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-sass": "*",
     "grunt-contrib-watch": "*",
     "grunt-criticalcss": "*",
-    "grunt-contrib-cssmin": "*"
+    "grunt-sass": "*",
+    "node-sass": "^4.11.0"
   }
 }

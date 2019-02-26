@@ -2,6 +2,6 @@
 Name: mysiteroutes
 After: framework/routes#coreroutes
 ---
-Director:
+SilverStripe\Control\Director:
   rules:
-    'current-issue/': 'CurrentIssueController'
+    current-issue/: CurrentIssueController

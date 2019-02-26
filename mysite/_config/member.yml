@@ -3,6 +3,6 @@ Name: memberextension
 After:
   - '#iowatestsamlsettings'
 ---
-Member:
+SilverStripe\Security\Member:
   extensions:
     - MemberExtension

@@ -1,6 +1,14 @@
 <?php
+
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Control\Session;
+use SilverStripe\Blog\Model\BlogCategory;
+
+
 class Page extends SiteTree {
 
+	
 	private static $db = array(
 		'DropdownMenu' => 'Boolean',
 	);
@@ -54,73 +62,4 @@ class Page extends SiteTree {
 	public function BlogCategories(){
 		return BlogCategory::get()->sort('Title ASC');
 	}
-
-}
-class Page_Controller extends ContentController {
-
-	/**
-	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-	 * permissions or conditions required to allow the user to access it.
-	 *
-	 * <code>ff
-	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-	 * );
-	 * </code>
-	 *
-	 * @var array
-	 */
-
-	function StatusMessage() {
-		if (Session::get('ActionMessage')) {
-			$message = Session::get('ActionMessage');
-			$status  = Session::get('ActionStatus');
-
-			Session::clear('ActionStatus');
-			Session::clear('ActionMessage');
-
-			return new ArrayData(array('Message' => $message, 'Status' => $status));
-		}
-
-		return false;
-	}
-
-	public function init() {
-		parent::init();
-
-	}
-
-	public function getBlog() {
-		return NewsHolder::get()->First();
-	}
-
-	public function Posts(){
-		$posts = BlogPost::get();
-		return $posts;
-	}
-
-	public function Pages() {
-		$pages = Page::get();
-
-		if ($pages) {
-			return $pages;
-		} else {
-			return false;
-		}
-
-	}
-
-	public function PostsByCategory($category) {
-		$blogCategory = BlogCategory::get()->filter(array('Title' => $category))->first();
-		if ($blogCategory){
-			$posts = $blogCategory->BlogPosts();
-			return $posts;
-		}
-	}
-
-
-
 }

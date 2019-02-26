@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\ORM\DataObject;
+
 class NewsCategory extends DataObject {
 	private static $has_many = array(
 		'NewsItems' => 'NewsPage'

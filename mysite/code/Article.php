@@ -1,4 +1,13 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Core\Convert;
 class Article extends Page {
 	private static $db = array(
 		'Title' => 'HTMLText',
@@ -20,8 +29,8 @@ class Article extends Page {
 	);
 
 	private static $has_one = array(
-		'BannerImage' => 'Image',
-		'FullSizeImage' => 'Image',
+		'BannerImage' => Image::class,
+		'FullSizeImage' => Image::class,
 	);
 
 	private static $plural_name = 'Articles';
@@ -253,7 +262,7 @@ class Article extends Page {
 		$fields->removeByName('MenuTitle');
 		$fields->removeByName('Contributor');
 		$fields->removeByName('Issue');
-		$fields->removeByName('Image');
+		$fields->removeByName(Image::class);
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Content');
 
@@ -344,7 +353,7 @@ class Article extends Page {
 	}
 	public function TranslatorByline($links = "true") {
 		//$TranslatorListNice(0)<% if OriginalLanguage %> $TranslatorBylineVerb from $OriginalLanguage<% end_if %><% if $Authors %><% loop $Authors %>. Original by $Name <% end_loop %> <% end_if %>
-		$bylineText = new HTMLText();
+		$bylineText = new TextField(null);
 		$byline = '';
 
 		//Person A, Person B, Person C
@@ -374,7 +383,7 @@ class Article extends Page {
 
 	public function getWriterListNice($links = "true", $writers) {
 
-		$writerString = new HTMLText();
+		$writerString = new TextField(null);
 
 		foreach ($writers as $writer) {
 
@@ -400,35 +409,6 @@ class Article extends Page {
 
 		return $writerString;
 
-	}
-
-}
-
-class Article_Controller extends Page_Controller {
-
-	private static $allowed_actions = array("notes", "publishpage");
-	private static $url_handlers = array(
-		'notes' => 'notes',
-	);
-
-	public function notes() {
-		$translatorNote = $this->TranslatorNote;
-		$translators = $this->Translators();
-
-		$Data = array(
-			'TranslatorNote' => $translatorNote,
-			'Translators' => $translators,
-		);
-
-		if (isset($translatorNote)) {
-		} else {
-		}
-
-		return $this->Customise($Data)->renderWith(array('Article_notes', 'Page'));
-
-	}
-	public function init() {
-		parent::init();
 	}
 
 }

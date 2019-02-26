@@ -1,9 +1,15 @@
 <?php
 
+use SilverStripe\Blog\Model\Blog;
+use SilverStripe\ORM\ArrayList;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Blog\Model\BlogPost;
+use SilverStripe\ORM\FieldType\DBDatetime;
+
 class NewsPage extends BlogPost {
 	private static $default_parent = 'NewsHolderPage';
 	private static $db = array(
-		'Date' => 'SS_Datetime',
+		'Date' => 'DBDatetime',
 		'Abstract' => 'Text',
 		'Author' => 'Varchar(255)',
 		'FeaturedImageSmall' => 'Boolean'
@@ -44,8 +50,4 @@ class NewsPage extends BlogPost {
     	return $fields;
 
     }
-}
-
-class NewsPage_Controller extends Page_Controller {
-
 }

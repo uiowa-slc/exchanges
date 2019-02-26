@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\Dev\BuildTask;
+
 class MigrateNewsPagesBuildTask extends BuildTask {
 
 	protected $title = 'Migrate News Pages to Blog Posts';
