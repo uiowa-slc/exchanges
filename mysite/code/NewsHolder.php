@@ -1,6 +1,7 @@
 <?php
 
 use SilverStripe\Blog\Model\BlogCategory;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use SilverStripe\Forms\GridField\GridField;
