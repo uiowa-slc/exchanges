@@ -25,6 +25,8 @@ class Issue extends Page {
 
 	);
 
+	private static $icon_class = 'font-icon-book-open';
+
 	private static $plural_name = 'Issues';
 
 	/* Deprecated but still needed for older issues until they're migrated */
@@ -72,10 +74,10 @@ class Issue extends Page {
 		$fields->addFieldToTab('Root.Main', $dateField = new TextField('IssueDate', 'Issue date'));
 		//$fields->addFieldToTab('Root.Main', new TextField('IssueNumber', 'Issue number'));
 		$fields->addFieldToTab('Root.Main', new TextField('LetterFromEditorCustomTitle', 'Letter From The Editors Custom Title (optional)'));
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('LetterFromEditor', 'Letter From The Editors'));
+		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('LetterFromEditor', 'Letter From The Editors')->addExtraClass('stacked'));
 
 		$fields->addFieldToTab('Root.Main', new TextField('ArtworkCreditsTitle', 'Artwork Credits Title (optional, defaults to "Artwork Credits")'));
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('ArtworkCredits', 'Artwork Credits'));
+		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('ArtworkCredits', 'Artwork Credits')->addExtraClass('stacked'));
 
 		return $fields;
 	}

@@ -1,4 +1,4 @@
-<div class="cover-container  <% if $FeaturedIssue.UseTitleDropShadow %>with-dropshadow<% end_if %> b-lazy" data-src="$FeaturedIssue.Emblem.CroppedFocusedImage(1560, 861, false).URL" style="background-position: $FeaturedIssue.Emblem.PercentageX% $FeaturedIssue.Emblem.PercentageY%; background-size: cover;">
+<div class="cover-container  <% if $FeaturedIssue.UseTitleDropShadow %>with-dropshadow<% end_if %> b-lazy" data-src="$FeaturedIssue.Emblem.FocusFill(1560, 861, false).URL" style="background-position: $FeaturedIssue.Emblem.PercentageX% $FeaturedIssue.Emblem.PercentageY%; background-size: cover;">
 	<div class="cover-screen" <% if $FeaturedIssue.Transparency %>style="background: rgba(68,68,68,{$FeaturedIssue.Transparency});"<% end_if %>>
 		<% include HomePageTopBar %>
 		<div class="row issue-date">

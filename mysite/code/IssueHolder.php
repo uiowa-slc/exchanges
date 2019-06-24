@@ -11,6 +11,8 @@ class IssueHolder extends Page {
 
 	private static $allowed_children = array("Issue");
 
+	private static $icon_class = 'font-icon-book';
+
 	public function getCMSFields() {
 
 		$fields = parent::getCMSFields();

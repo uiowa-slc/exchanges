@@ -3,23 +3,25 @@
 	"description": "The SilverStripe Framework Installer",
 	"require": {
 		"php": ">=5.5",
-		"silverstripe/framework": "~4.3.1",
-        "silverstripe/cms": "~4.3.1",
-		"unclecheese/betterbuttons" : "2.x-dev",
+		"silverstripe/framework": "4.4.*@stable",
+	    "silverstripe/cms": "4.4.*@stable",
 		"undefinedoffset/sortablegridfield" : "*",
-		"silverstripe/blog": "3.2.3",
+		"silverstripe/blog": "*",
 		"silverstripe/widgets": "*",
 		"jonom/focuspoint" : "*",
-		"jonom/silverstripe-betternavigator": "4.1.1",
+		"jonom/silverstripe-betternavigator": "*",
 		"md/saml" : "dev-md",
-		"md/division-analytics" : "*"
+		"md/division-analytics" : "*",
+		"gorriecoe/silverstripe-webfonts" : "*"
 	},
 	"extra": {
+	"resources-dir": "_resources",
         "expose": [
             "themes/exchanges/css",
             "themes/exchanges/build",
-            "themes/exchanges/images"
-        ]
+            "themes/exchanges/images",
+            "themes/exchanges/fonts"
+        ]	
     },
 	"repositories":[
 	    {
@@ -30,10 +32,6 @@
        		"type":"vcs",
        		"url":"https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
     	},
-		{
-		     "type": "vcs",
-		     "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-betternavigator"
-		},
 		{
 			"type": "vcs",
 			"url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"

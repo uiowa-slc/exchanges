@@ -5,8 +5,8 @@
 			<ul class="text-center card-list card-list--two">
 				<% loop $RandomArticles.Limit(2) %>
 				<li class="card-list__item">
-					<a href="$Link" class="card-list__link card-list__link--large" style="background-image: url('{$BannerImage.CroppedFocusedImage(690,440).URL}')">
-						<%-- <img class="card-list__img" src="$BannerImage.CroppedFocusedImage(690,440).URL"> --%>
+					<a href="$Link" class="card-list__link card-list__link--large" style="background-image: url('{$BannerImage.FocusFill(690,440).URL}')">
+						<%-- <img class="card-list__img" src="$BannerImage.FocusFill(690,440).URL"> --%>
 						<div class="card-list__overlay card-list__overlay--always-visible"></div>
 			
 	              			<div class="card-list__text card-list__text--always-visible card-list__text--large">
@@ -32,7 +32,7 @@
 				<% loop $Posts.Limit(2) %>
 					<li class="card-list__item card-list__item--single-row">
 						<% if $FeaturedImage %>
-						<a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+						<a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.FocusFill(690,440).URL}')">
 						<% else %>
 						<a href="$Link" class="card-list__link card-list__link--medium card-list__link--no-featured-img" style="background-image: url('{$ThemeDir}/images/post-default.png')">
 						<% end_if %>
@@ -54,7 +54,7 @@
 				<% loop $Posts.Limit(15,2) %>
 					<% if $FeaturedImage %>
 					<li class="card-list__item card-list__item--single-row">
-						<a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+						<a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.FocusFill(690,440).URL}')">
 							<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
 							<div class="card-list__overlay"></div>
 		          			<div class="card-list__text">

@@ -26,7 +26,7 @@
             <ul class="card-list">
                 <% loop $PaginatedList %>
                     <li class="card-list__item card-list__item--single-row">
-                        <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+                        <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.FocusFill(690,440).URL}')">
                             <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
                             <% if $FeaturedImage %>
                                 <div class="card-list__overlay"></div>

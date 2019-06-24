@@ -1,7 +1,7 @@
 <div class="post__summary">
     <p class="post__image">
         <a href="$Link" <%t Blog.ReadMoreAbout "Read more about '{title}'..." title=$Title %>>
-            $FeaturedImage.setWidth(795)
+            $FeaturedImage.ScaleWidth(795)
         </a>
     </p>    
     <h2>

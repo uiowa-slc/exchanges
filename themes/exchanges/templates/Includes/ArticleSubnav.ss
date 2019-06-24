@@ -10,7 +10,7 @@
 					<% end_with %>
 				<% else_if $Parent.LetterLink %>
 					<li class="card-list__item">
-						<a href="$Parent.LetterLink" class="card-list__link" style="background-image: url('{$Parent.Emblem.CroppedFocusedImage(690,440).URL}')">
+						<a href="$Parent.LetterLink" class="card-list__link" style="background-image: url('{$Parent.Emblem.FocusFill(690,440).URL}')">
 							<div class="card-list__overlay card-list__overlay--always-visible"></div>
 								<div class="card-list__text card-list__text--always-visible card-list__text--small">
 									<div class="row flex-center">

@@ -10,7 +10,5 @@ Page:
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - SiteConfigExtension
-TypeKit:
-  typekitID: gor3pds
 SilverStripe\View\Parsers\URLSegmentFilter:
   default_allow_multibyte: true

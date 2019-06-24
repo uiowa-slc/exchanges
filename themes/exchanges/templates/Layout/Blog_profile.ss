@@ -5,7 +5,7 @@
             <h1>$CurrentProfile.FirstName $CurrentProfile.Surname</h1>
                 <div class="profile-summary">
                     <% if $CurrentProfile.BlogProfileImage %>
-                        <img src="$CurrentProfile.BlogProfileImage.setWidth(180).URL" alt="" role="presentation" class="profile-image" />
+                        <img src="$CurrentProfile.BlogProfileImage.ScaleWidth(180).URL" alt="" role="presentation" class="profile-image" />
                     <% end_if %>
                     <p>$CurrentProfile.BlogProfileSummaryHTML</p>
                 </div>
@@ -18,7 +18,7 @@
             <ul class="card-list card-list--two">
                 <% loop $blogPosts.Limit(2) %>
                     <li class="card-list__item card-list__item--single-row">
-                        <a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+                        <a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.FocusFill(690,440).URL}')">
                             <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
                             <div class="card-list__overlay card-list__overlay--always-visible"></div>
                             <div class="card-list__text card-list__text--always-visible">
@@ -37,7 +37,7 @@
                 <% loop $blogPosts.Limit(99999,2) %>
                     <% if $FeaturedImage %>
                     <li class="card-list__item card-list__item--single-row">
-                        <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+                        <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.FocusFill(690,440).URL}')">
                             <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
                             <div class="card-list__overlay"></div>
                             <div class="card-list__text">

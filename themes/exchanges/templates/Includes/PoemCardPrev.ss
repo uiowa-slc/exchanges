@@ -1,5 +1,5 @@
 <li class="card-list__item">
-	<a href="$Link" class="card-list__link" style="background-image: url('{$BannerImage.CroppedFocusedImage(690,440).URL}')">
+	<a href="$Link" class="card-list__link" style="background-image: url('{$BannerImage.FocusFill(690,440).URL}')">
 		<div class="card-list__overlay card-list__overlay--always-visible"></div>
 			<div class="card-list__text card-list__text--always-visible card-list__text--small">
 				<div class="row flex-center">

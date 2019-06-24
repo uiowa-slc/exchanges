@@ -1,6 +1,7 @@
 <?php
 
 use SilverStripe\Blog\Model\BlogCategory;
+use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 class HomePage extends Page {
@@ -20,8 +21,9 @@ class HomePage extends Page {
 			'SortOrder'=>'Int'
 		)
 	);
+	private static $icon_class = 'font-icon-p-home';
 
-	function getCMSFields() {
+	public function getCMSFields() {
 
 		$fields = parent::getCMSFields();
 

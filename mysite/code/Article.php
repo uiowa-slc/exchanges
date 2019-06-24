@@ -8,6 +8,8 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Core\Convert;
+use SilverStripe\ORM\FieldType\DBText;
+
 class Article extends Page {
 	private static $db = array(
 		'Title' => 'HTMLText',
@@ -39,6 +41,8 @@ class Article extends Page {
 		'Authors' => 'Author',
 		'Translators' => 'Translator',
 	);
+
+	private static $icon_class = 'font-icon-p-a';
 
 	private static $default_parent = "articles";
 	private static $can_be_root = false;
@@ -287,15 +291,15 @@ class Article extends Page {
 		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalTitleUseAltFont', 'Use an alternate font for the original title (only check if the original title looks strange)'));
 		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalRTL', 'Original language is read/written from right to left'));
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content', 'Original work'));
+		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('Content', 'Original work')->addExtraClass('stacked'));
 
 		$translatedTitleField = new HTMLEditorField('TranslatedTitle', ' Translated title');
 		$translatedTitleField->setRows(1);
 
 		$fields->addFieldToTab('Root.Main', $translatedTitleField);
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content2', 'Translated work'));
+		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('Content2', 'Translated work')->addExtraClass('stacked'));
 
-		$fields->addFieldToTab('Root.TranslatorNote', new HTMLEditorField('TranslatorNote', 'Translator note'));
+		$fields->addFieldToTab('Root.TranslatorNote',HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
 		$newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
@@ -353,7 +357,7 @@ class Article extends Page {
 	}
 	public function TranslatorByline($links = "true") {
 		//$TranslatorListNice(0)<% if OriginalLanguage %> $TranslatorBylineVerb from $OriginalLanguage<% end_if %><% if $Authors %><% loop $Authors %>. Original by $Name <% end_loop %> <% end_if %>
-		$bylineText = new TextField(null);
+		$bylineText = new DBText(null);
 		$byline = '';
 
 		//Person A, Person B, Person C
@@ -383,7 +387,7 @@ class Article extends Page {
 
 	public function getWriterListNice($links = "true", $writers) {
 
-		$writerString = new TextField(null);
+		$writerString = new DBText(null);
 
 		foreach ($writers as $writer) {
 

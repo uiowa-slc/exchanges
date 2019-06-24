@@ -11,11 +11,11 @@
 
             <% if $FeaturedImage %>
                 <% if $FeaturedImageSmall %>
-                    <img class="post__image-small" src="$FeaturedImage.setWidth(795).URL" />
+                    <img class="post__image-small" src="$FeaturedImage.ScaleWidth(795).URL" />
                     <% include PostMeta %>
                 <% else %>
                     <% include PostMeta %>
-                    <img class="post__image" src="$FeaturedImage.setWidth(795).URL" />
+                    <img class="post__image" src="$FeaturedImage.ScaleWidth(795).URL" />
                 <% end_if %>
             <% else %>
                     <% include PostMeta %>
@@ -53,7 +53,7 @@
             <% loop $RelatedPosts.Limit(6) %>
                 <li class="card-list__item">
                     <% if $FeaturedImage %>
-                        <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.CroppedFocusedImage(690,440).URL}')">
+                        <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.FocusFill(690,440).URL}')">
                         <% else %>
                         <a href="$Link" class="card-list__link card-list__link--small card-list__link--no-featured-img" style="background-image: url('{$ThemeDir}/images/post-default.png')">
                         <% end_if %>

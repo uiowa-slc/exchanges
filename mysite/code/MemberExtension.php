@@ -35,7 +35,7 @@ class MemberExtension extends DataExtension
         $fields->addFieldToTab('Root', LiteralField::create('MemberAddLabel', $memberLabel), Email::class );
         $fields->addFieldToTab('Root.Main', TextField::create('FirstName'), Email::class);
         $fields->addFieldToTab('Root.Main', TextField::create('Surname', 'Last Name'), Email::class);
-        $fields->addFieldToTab('Root.Main', HTMLEditorField::create('BlogProfileSummaryHTML', 'Blog Profile ')->setRows(5), 'BlogProfileImage');
+        $fields->addFieldToTab('Root.Main', HTMLEditorField::create('BlogProfileSummaryHTML', 'Blog Profile ')->addExtraClass('stacked')->setRows(10), 'BlogProfileImage');
 
         return $fields;
     }

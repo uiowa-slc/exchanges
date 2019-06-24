@@ -1,4 +1,4 @@
-	<li class="article-nav issue" style="background-image: url('$Emblem.SetWidth(400).URL')">
+	<li class="article-nav issue" style="background-image: url('$Emblem.ScaleWidth(400).URL')">
 		<div class="issue-nav-overlay">
 			<a href="$Link">
 			<section class="nav-li-content">
