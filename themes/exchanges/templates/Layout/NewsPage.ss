@@ -42,7 +42,7 @@
     </div>
 
     <div class="large-2 columns exchanges-sticky">
-        <% include BlogSideBar %>
+        <% include BlogSidebar %>
     </div>
 </div>
 <% if $RelatedPosts %>
