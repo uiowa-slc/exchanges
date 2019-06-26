@@ -73,7 +73,7 @@
 
 	</div>
 	<div class="large-3 columns">
-	    <% include BlogSideBar %>    
+	    <% include BlogSidebar %>    
 	</div>
 	</div>
 </div>

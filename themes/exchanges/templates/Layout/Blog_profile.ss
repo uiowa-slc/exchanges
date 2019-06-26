@@ -56,6 +56,6 @@
     </div>
 
     <div class="large-4 columns">
-    <% include BlogSideBar %>
+    <% include BlogSidebar %>
     </div>
 </div>
