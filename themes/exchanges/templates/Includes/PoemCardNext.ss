@@ -8,7 +8,7 @@
 					<div class="small-10 columns">
 						
 							<h2 class="card-list__header card-list__header--small">$Title</h2>
-							<p class="card-list__byline card-list__byline--small">$TranslatorByline(false).NoHTML</p>
+							<p class="card-list__byline card-list__byline--small">$TranslatorByline(false).Plain</p>
 						
 					</div>
 					<div class="small-2 columns">

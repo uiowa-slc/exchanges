@@ -104,7 +104,7 @@ class ArticleSingleColumn extends Page {
 		}
 
 		$bylineText->setValue($byline);
-
+		
 		return $bylineText;
 
 	}
