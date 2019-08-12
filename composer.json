@@ -5,6 +5,10 @@
         "php": ">=5.5",
         "silverstripe/framework": "4.4.*@stable",
         "silverstripe/cms": "4.4.*@stable",
+        "silverstripe/recipe-plugin": "*",
+        "silverstripe/recipe-cms": "*",
+        "silverstripe/reports": "*",
+        "silverstripe/siteconfig": "*",
         "undefinedoffset/sortablegridfield": "*",
         "silverstripe/blog": "*",
         "silverstripe/widgets": "*",
@@ -22,6 +26,20 @@
             "themes/exchanges/build",
             "themes/exchanges/images",
             "themes/exchanges/fonts"
+        ],
+        "project-files-installed": [
+            "app/.htaccess",
+            "app/_config.php",
+            "app/_config/mysite.yml",
+            "app/src/Page.php",
+            "app/src/PageController.php"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "web.config"
         ]
     },
     "repositories": {
