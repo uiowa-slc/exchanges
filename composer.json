@@ -1,45 +1,50 @@
 {
-	"name": "silverstripe/installer",
-	"description": "The SilverStripe Framework Installer",
-	"require": {
-		"php": ">=5.5",
-		"silverstripe/framework": "4.4.*@stable",
-	    "silverstripe/cms": "4.4.*@stable",
-		"undefinedoffset/sortablegridfield" : "*",
-		"silverstripe/blog": "*",
-		"silverstripe/widgets": "*",
-		"jonom/focuspoint" : "*",
-		"jonom/silverstripe-betternavigator": "*",
-		"md/saml" : "dev-md",
-		"md/division-analytics" : "*",
-		"gorriecoe/silverstripe-webfonts" : "*"
-	},
-	"extra": {
-	"resources-dir": "_resources",
+    "name": "silverstripe/installer",
+    "description": "The SilverStripe Framework Installer",
+    "require": {
+        "php": ">=5.5",
+        "silverstripe/framework": "4.4.*@stable",
+        "silverstripe/cms": "4.4.*@stable",
+        "undefinedoffset/sortablegridfield": "*",
+        "silverstripe/blog": "*",
+        "silverstripe/widgets": "*",
+        "jonom/focuspoint": "*",
+        "jonom/silverstripe-betternavigator": "*",
+        "md/saml": "dev-md",
+        "md/deploy-helper": "*",
+        "md/division-analytics": "*",
+        "gorriecoe/silverstripe-webfonts": "*"
+    },
+    "extra": {
+        "resources-dir": "_resources",
         "expose": [
             "themes/exchanges/css",
             "themes/exchanges/build",
             "themes/exchanges/images",
             "themes/exchanges/fonts"
-        ]	
+        ]
     },
-	"repositories":[
-	    {
-			"type": "vcs",
-			"url": "https://github.com/jacobbuck/silverstripe-colorfulimage"
-	    },
-        {  
-       		"type":"vcs",
-       		"url":"https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
-    	},
-		{
-			"type": "vcs",
-			"url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/PlatoCreative/silverstripe-typekit"
-		}  
-	],
-	"minimum-stability": "dev"
+    "repositories": {
+        "0": {
+            "type": "vcs",
+            "url": "https://github.com/jacobbuck/silverstripe-colorfulimage"
+        },
+        "1": {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
+        },
+        "2": {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
+        },
+        "3": {
+            "type": "vcs",
+            "url": "https://github.com/PlatoCreative/silverstripe-typekit"
+        },
+        "repo-name": {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
+        }
+    },
+    "minimum-stability": "dev"
 }
