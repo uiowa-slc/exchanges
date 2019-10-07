@@ -5,9 +5,9 @@
 				<div class="article__untranslated-title article__meta <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
 					<div>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
-							<h1>$UntranslatedTitle</h1>
+							<h1>$UntranslatedTitle.RAW</h1>
 						<% else %>
-							<h1>$Title</h1>
+							<h1>$Title.RAW</h1>
 						<% end_if %>
 					</div>
 					<span class="author">

@@ -22,7 +22,7 @@
 					</header>
 
 					<div class="article__text">
-						$Content
+						$Content.RAW
 					</div>
 				</article>
 			</div>

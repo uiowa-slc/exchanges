@@ -4,9 +4,9 @@
 			<article class="article__translated">
 				<div class="article__translated-title article__meta" data-equalizer-watch>
 					<div>
-						<% if $TranslatedTitle && $TranslatedTitle %><h1>$TranslatedTitle</h1>
+						<% if $TranslatedTitle && $TranslatedTitle %><h1>$TranslatedTitle.RAW</h1>
 						<% else %> 
-							<h1 class="article__shared-title">$Title</h1>
+							<h1 class="article__shared-title">$Title.RAW</h1>
 						<% end_if %>
 					</div>
 						<span class="author">
@@ -36,9 +36,9 @@
 				<div class="article__untranslated-title article__meta <% if $OriginalTitleUseAltFont %>alt-font<% end_if %>" data-equalizer-watch>
 					<div>
 						<% if $UntranslatedTitle && $TranslatedTitle %>
-							<h1>$UntranslatedTitle</h1>
+							<h1>$UntranslatedTitle.RAW</h1>
 						<% else %>
-							<h1>$Title</h1>
+							<h1>$Title.RAW</h1>
 						<% end_if %>
 					</div>
 					<span class="author">
