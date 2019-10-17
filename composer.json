@@ -17,18 +17,19 @@
 	"extra": {
 	"resources-dir": "_resources",
         "expose": [
-            "themes/exchanges/css",
-            "themes/exchanges/build",
-            "themes/exchanges/images",
-            "themes/exchanges/fonts"
-        ]	
+            "themes/exchanges/dist/favicons",
+            "themes/exchanges/dist/styles",
+            "themes/exchanges/dist/scripts",
+            "themes/exchanges/dist/images",
+            "themes/exchanges/dist/fonts"
+        ]
     },
 	"repositories":[
 	    {
 			"type": "vcs",
 			"url": "https://github.com/jacobbuck/silverstripe-colorfulimage"
 	    },
-        {  
+        {
        		"type":"vcs",
        		"url":"https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
     	},
@@ -39,7 +40,7 @@
 		{
 			"type": "vcs",
 			"url": "https://github.com/PlatoCreative/silverstripe-typekit"
-		}  
+		}
 	],
 	"minimum-stability": "dev"
 }

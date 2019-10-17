@@ -11,8 +11,9 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 import { create as bsCreate } from 'browser-sync';
 const browserSync = bsCreate();
 
+// Proxy value dependent on MAMP config
 browserSync.init({
-    proxy: "http://localhost:8888/iowa-law-review",
+    proxy: "http://localhost:8888/exchanges",
 });
 
 // import {output as pagespeed} from 'psi';
@@ -22,7 +23,7 @@ const $ = gulpLoadPlugins();
 
 // Lint JavaScript
 function lint(){
-  return gulp.src('./themes/iowa-law-review/scripts/**/*.js')
+  return gulp.src('./themes/exchanges/scripts/**/*.js')
     .pipe($.eslint())
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failOnError()));
@@ -31,13 +32,13 @@ function lint(){
 
 // Optimize images
 function images(){
-  return gulp.src('./themes/iowa-law-review/src/images/**/*')
+  return gulp.src('./themes/exchanges/src/images/**/*')
     .pipe($.imagemin({
       progressive: true,
       interlaced: true
     }))
-    .pipe(gulp.dest('./themes/iowa-law-review/dist/images'))
-    .pipe($.size({title: './themes/iowa-law-review/dist/images'}))
+    .pipe(gulp.dest('./themes/exchanges/dist/images'))
+    .pipe($.size({title: './themes/exchanges/dist/images'}))
     .pipe(browserSync.stream());
 }
 
@@ -46,17 +47,17 @@ function images(){
 function copy(){
 
   return gulp.src([
-       './themes/iowa-law-review/src/*',
-       './themes/iowa-law-review/src/**/*',
-       '!./themes/iowa-law-review/src/libs',
-       '!./themes/iowa-law-review/src/libs/**/*',
-       '!./themes/iowa-law-review/src/styles/**/*',
-       '!./themes/iowa-law-review/src/scripts/**/*',
-       '!./themes/iowa-law-review/templates',
-       '!./themes/iowa-law-review/templates/**/*',
-       '!./themes/iowa-law-review/*.html',
+       './themes/exchanges/src/*',
+       './themes/exchanges/src/**/*',
+       '!./themes/exchanges/src/libs',
+       '!./themes/exchanges/src/libs/**/*',
+       '!./themes/exchanges/src/styles/**/*',
+       '!./themes/exchanges/src/scripts/**/*',
+       '!./themes/exchanges/templates',
+       '!./themes/exchanges/templates/**/*',
+       '!./themes/exchanges/*.html',
      ],{dot: true})
-    .pipe(gulp.dest('./themes/iowa-law-review/dist/'))
+    .pipe(gulp.dest('./themes/exchanges/dist/'))
     .pipe($.size({title: 'copy'}));
 }
 
@@ -86,22 +87,16 @@ function styles(){
   // Compile SCSS to CSS
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
-    './themes/iowa-law-review/src/styles/main.scss',
-    './themes/iowa-law-review/src/styles/editor.scss'
+    './themes/exchanges/src/styles/main.scss',
+    './themes/exchanges/src/styles/editor.scss'
   ])
     .pipe($.newer('.tmp/styles'))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       precision: 10,
       includePaths: [
-        './themes/iowa-law-review/src/styles/bootstrap/',
-        './themes/iowa-law-review/src/libs/bourbon/',
-        './themes/iowa-law-review/src/libs/bootstrap-sass/',
-        './themes/iowa-law-review/src/libs/bigfoot/src/scss/',
-        './themes/iowa-law-review/src/libs/magnific-popup/src/css/',
-        './themes/iowa-law-review/src/styles/lib/bootstrap-block-grid/src/',
-        './themes/iowa-law-review/src/styles/lib/pagination/scss',
-        './vendor/md/uiowa-bar/scss',
+        './themes/exchanges/src/libs/foundation/scss',
+        './themes/exchanges/src/libs/jquery.magnific-popup',
         './node_modules/'
 
       ]
@@ -111,7 +106,7 @@ function styles(){
     .pipe($.if('*.css', $.postcss(plugins)))
     .pipe($.size({title: 'styles'}))
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('./themes/iowa-law-review/dist/styles'))
+    .pipe(gulp.dest('./themes/exchanges/dist/styles'))
     .pipe(browserSync.stream());
 };
 
@@ -123,12 +118,15 @@ function scripts(){
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      './themes/iowa-law-review/src/libs/jquery/dist/jquery.js',
-      './themes/iowa-law-review/src/libs/bootstrap-sass/assets/javascripts/bootstrap.js',
-      './themes/iowa-law-review/src/libs/bigfoot/dist/bigfoot.js',
-      './themes/iowa-law-review/src/libs/jquery-sticky/jquery.sticky.js',
-      './themes/iowa-law-review/src/libs/magnific-popup/dist/jquery.magnific-popup.js',
-      './themes/iowa-law-review/src/scripts/app.js'
+      // Brad:  Removed fontfaceobserver.js from Gruntfile b/c it wasn't a dep in package.json
+      //        Kept all scripts found in the original bower_components dir, except fastclick and modernizr.
+      './themes/exchanges/src/libs/jquery/dist/jquery.js',
+      './themes/exchanges/src/libs/jquery-placeholder/jquery.placeholder.js',
+      './themes/exchanges/src/libs/jquery.cookie/jquery.cookie.js',
+      './themes/exchanges/src/libs/foundation/js/foundation.js',
+      './themes/exchanges/src/libs/blazy/blazy.js',
+      './themes/exchanges/src/libs/jquery.magnific-popup/jquery.magnific-popup.js',
+      './themes/exchanges/src/scripts/app.js'
     ])
       // Enabling $.newer() only pipes through the script that changed, instead of the
       // whole chain. The $.newer() in the scss task works b/c sass has its own import
@@ -145,14 +143,14 @@ function scripts(){
       // Output files
       .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))
-      .pipe(gulp.dest('./themes/iowa-law-review/dist/scripts'))
+      .pipe(gulp.dest('./themes/exchanges/dist/scripts'))
       .pipe(browserSync.stream());
 };
 
 //Scan your HTML for assets & optimize them
 // No longer used as of 2019.10.01
 function html() {
-  return gulp.src('./themes/iowa-law-review/templates/**/*.ss')
+  return gulp.src('./themes/exchanges/templates/**/*.ss')
     .pipe($.useref({
       searchPath: '{.tmp,app}',
       noAssets: true
@@ -172,22 +170,22 @@ function html() {
     })))
     // Output files
     .pipe($.if('*.ss', $.size({title: 'ss', showFiles: true})))
-    .pipe(gulp.dest('./themes/iowa-law-review/templates/'))
+    .pipe(gulp.dest('./themes/exchanges/templates/'))
     .pipe(browserSync.stream());
 }
 
 
 // Clean output directory
 function clean(){
-  return del(['.tmp', './themes/iowa-law-review/dist/*', '!dist/.git'], {dot: true})
+  return del(['.tmp', './themes/exchanges/dist/*', '!dist/.git'], {dot: true})
 }
 
 function watch(){
-  // gulp.watch(['./themes/iowa-law-review/**/*.html'], reload);
-  // gulp.watch(['./themes/iowa-law-review/src/templates/**/*.ss'], gulp.series(html));
-  gulp.watch(['./themes/iowa-law-review/src/styles/**/*.{scss,css}'], gulp.series(styles));
-  gulp.watch(['./themes/iowa-law-review/src/scripts/**/*.js'], gulp.series(lint, scripts));
-  gulp.watch(['./themes/iowa-law-review/src/images/**/*'], gulp.series(images));
+  // gulp.watch(['./themes/exchanges/**/*.html'], reload);
+  // gulp.watch(['./themes/exchanges/src/templates/**/*.ss'], gulp.series(html));
+  gulp.watch(['./themes/exchanges/src/styles/**/*.{scss,css}'], gulp.series(styles));
+  gulp.watch(['./themes/exchanges/src/scripts/**/*.js'], gulp.series(lint, scripts));
+  gulp.watch(['./themes/exchanges/src/images/**/*'], gulp.series(images));
 }
 
 // Build production files, the default task

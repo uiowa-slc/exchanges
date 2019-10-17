@@ -20,7 +20,7 @@
             <% else %>
                     <% include PostMeta %>
             <% end_if %>
-            
+
             <div class="post__body">
                 $Content
 
@@ -30,13 +30,13 @@
                     <% loop $Tags %>
                         <a href="$Link" title="$Title">$Title</a><% if not Last %>, <% else %><% end_if %>
                     <% end_loop %>
-                </p> 
-                <% end_if %>        
+                </p>
+                <% end_if %>
             </div>
-            
+
 
         </article>
-        
+
         $Form
         $PageComments
     </div>
@@ -55,7 +55,7 @@
                     <% if $FeaturedImage %>
                         <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.FocusFill(690,440).URL}')">
                         <% else %>
-                        <a href="$Link" class="card-list__link card-list__link--small card-list__link--no-featured-img" style="background-image: url('{$ThemeDir}/images/post-default.png')">
+                        <a href="$Link" class="card-list__link card-list__link--small card-list__link--no-featured-img" style="background-image: url('{$ThemeDir}/dist/images/post-default.png')">
                         <% end_if %>
                         <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
                         <div class="card-list__overlay"></div>

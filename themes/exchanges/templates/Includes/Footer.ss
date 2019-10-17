@@ -4,8 +4,8 @@
     		<div class="row">
 		        <div class="small-8 medium-4 large-3 columns">
 
-						<a href="$absoluteBaseURL" class="hide-print logo"><img src="$ThemeDir/images/exchanges-logo.png" alt="Exchanges" style="margin-top: -20px;"></a><br />
-						<a href="http://www.uiowa.edu" class="hide-print uiowa logo"><img src="$ThemeDir/images/uiowa.png" alt="Division Of Student Life" style="margin-top: -20px;"></a><br />
+						<a href="$absoluteBaseURL" class="hide-print logo"><img src="$ThemeDir/dist/images/exchanges-logo.png" alt="Exchanges" style="margin-top: -20px;"></a><br />
+						<a href="http://www.uiowa.edu" class="hide-print uiowa logo"><img src="$ThemeDir/dist/images/uiowa.png" alt="Division Of Student Life" style="margin-top: -20px;"></a><br />
 
 
 
@@ -15,7 +15,7 @@
 Iowa City, IA 52242-1323
 </p>
 				</div>
-						
+
 				<div class="medium-3 large-2 columns">
 					<div class="colgroup">
 						<ul class="footer-nav">

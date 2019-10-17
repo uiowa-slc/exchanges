@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AACC,sBAAW,CACV,YAAY,CAAE,UAAU,CAGzB,4BAAiB,CAChB,YAAY,CAAE,IAAI,CAGnB,yCAA8B,CAC7B,WAAW,CAAE,KAAK",
-"sources": ["../scss/editor.scss"],
-"names": [],
-"file": "editor.css"
-}
+{"version":3,"sources":["editor.scss"],"names":[],"mappings":"AAGA,KACC,sCAA0C,CAC1C,cAAe,CACf,YAAa,CAHd,gBAKE,uBAAwB,CAL1B,OASE,eAAgB,CAChB,YAAa,CAVf,iBAsBE,cAAe,CAtBjB,kBA0BE,cAAe,CACf,2CAAgD","file":"editor.css","sourcesContent":["@import \"imports/settings\";\n//@import 'foundation/components/type';\n\nbody {\n\tfont-family: \"garamond-premier-pro\", serif;\n\tfont-size: 20px;\n\tpadding: 10px;\n\t.smallcaps {\n\t\tfont-variant: small-caps;\n\t}\n\n\tp{\n\t\tmargin-bottom: 0;\n\t\tmargin-top: 0;\n\t}\n\n\t// .hanging-indent {\n\t// \tpadding-left: 20px;\n\t// }\n\n\t// .hanging-indent:first-letter {\n\t// \tmargin-left: -20px;\n\t// }\n\n\t.small-text{\n\t\tfont-size: 11px;\n\t}\n\n\t.fixed-width{\n\t\tfont-size: 13px;\n\t\tfont-family: Monaco, \"Lucida Console\", monospace;\n\t}\n}"]}

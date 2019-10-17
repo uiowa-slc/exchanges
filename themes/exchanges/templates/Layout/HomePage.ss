@@ -8,16 +8,16 @@
 					<a href="$Link" class="card-list__link card-list__link--large" style="background-image: url('{$BannerImage.FocusFill(690,440).URL}')">
 						<%-- <img class="card-list__img" src="$BannerImage.FocusFill(690,440).URL"> --%>
 						<div class="card-list__overlay card-list__overlay--always-visible"></div>
-			
+
 	              			<div class="card-list__text card-list__text--always-visible card-list__text--large">
 	              				<h2 class="card-list__header card-list__header--large">$Title</h2>
 		              			<p class="card-list__byline">$TranslatorByline(false).NoHTML</p>
 	              			</div>
-              		
+
 					</a>
 				</li>
 				<% end_loop %>
-					
+
 			</ul>
 			<p class="issue-preview__start-reading text-center"><a href="$Link" class="button large">Start reading &rarr;</a></p>
 		</div>
@@ -34,7 +34,7 @@
 						<% if $FeaturedImage %>
 						<a href="$Link" class="card-list__link card-list__link--medium" style="background-image: url('{$FeaturedImage.FocusFill(690,440).URL}')">
 						<% else %>
-						<a href="$Link" class="card-list__link card-list__link--medium card-list__link--no-featured-img" style="background-image: url('{$ThemeDir}/images/post-default.png')">
+						<a href="$Link" class="card-list__link card-list__link--medium card-list__link--no-featured-img" style="background-image: url('{$ThemeDir}/dist/images/post-default.png')">
 						<% end_if %>
 							<%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
 							<div class="card-list__overlay card-list__overlay--always-visible"></div>
@@ -46,9 +46,9 @@
 	              			</div>
 						</a>
 					</li>
-					
+
 				<% end_loop %>
-			</ul>			
+			</ul>
 
 			<ul class="card-list">
 				<% loop $Posts.Limit(15,2) %>
@@ -73,9 +73,7 @@
 
 	</div>
 	<div class="large-3 columns">
-	    <% include BlogSideBar %>    
+	    <% include BlogSideBar %>
 	</div>
 	</div>
 </div>
-
-

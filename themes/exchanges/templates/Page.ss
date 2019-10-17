@@ -11,9 +11,9 @@
 		<title>$Title.Plain - $SiteConfig.Title</title>
 	<% end_if %>
 	<% include OpenGraph %>
-	<link rel="icon" type="image/png" href="{$ThemeDir}/images/favicon.ico" />
+	<link rel="icon" type="image/png" href="{$ThemeDir}/dist/favicons/favicon.ico" />
 	{$TypeKitScript}
-	<link href="{$ThemeDir}/css/app.css" rel="stylesheet">
+	<link href="{$ThemeDir}/dist/styles/main.css" rel="stylesheet">
 	<% if $LinkColor %>
 		<style>
 			a{
@@ -23,9 +23,9 @@
 	<% end_if %>
 </head>
 <body class="$ClassName.ATT">
-	
 
-	
+
+
 	<%-- include UiowaBar --%>
 
 	<% if $ClassName == "HomePage" %>
@@ -37,7 +37,7 @@
 			<% include ArticleCover %>
 		<% else %>
 			<% include TopBar %>
-		<% end_if %>		
+		<% end_if %>
 	<% else_if $ClassName == "ArticleSingleColumn" %>
 		<% if $BannerImage %>
 			<% include ArticleCover %>
@@ -47,7 +47,7 @@
 	<% else %>
 		<% include TopBar %>
 	<% end_if %>
-	
+
 	<div class="layout layout--{$ClassName} typography">
 		$Layout
 	</div>
@@ -55,8 +55,8 @@
 	<% include Footer %>
 	$BetterNavigator
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript" src="{$ThemeDir}/build/build.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+<script type="text/javascript" src="{$ThemeDir}/dist/scripts/main.min.js"></script>
 $Analytics
 
 </body>

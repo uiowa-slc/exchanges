@@ -4,7 +4,7 @@
 @import "mixins/triangle";
 @import "imports/fonts";
 
-@import "lib/magnific-popup";
+@import "../libs/jquery.magnific-popup/magnific-popup.scss";
 
 @import "components/cards";
 @import "components/side-cards";
