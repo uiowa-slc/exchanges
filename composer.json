@@ -1,46 +1,70 @@
 {
-	"name": "silverstripe/installer",
-	"description": "The SilverStripe Framework Installer",
-	"require": {
-		"php": ">=5.5",
-		"silverstripe/framework": "4.4.*@stable",
-	    "silverstripe/cms": "4.4.*@stable",
-		"undefinedoffset/sortablegridfield" : "*",
-		"silverstripe/blog": "*",
-		"silverstripe/widgets": "*",
-		"jonom/focuspoint" : "*",
-		"jonom/silverstripe-betternavigator": "*",
-		"md/saml" : "dev-md",
-		"md/division-analytics" : "*",
-		"gorriecoe/silverstripe-webfonts" : "*"
-	},
-	"extra": {
-	"resources-dir": "_resources",
+    "name": "silverstripe/installer",
+    "description": "The SilverStripe Framework Installer",
+    "require": {
+        "php": ">=5.5",
+        "silverstripe/framework": "4.4.*@stable",
+        "silverstripe/cms": "4.4.*@stable",
+        "silverstripe/recipe-plugin": "*",
+        "silverstripe/recipe-cms": "*",
+        "silverstripe/reports": "*",
+        "silverstripe/siteconfig": "*",
+        "undefinedoffset/sortablegridfield": "*",
+        "silverstripe/blog": "*",
+        "silverstripe/widgets": "*",
+        "jonom/focuspoint": "*",
+        "jonom/silverstripe-betternavigator": "*",
+        "md/saml": "dev-md",
+        "md/deploy-helper": "*",
+        "md/division-analytics": "*",
+        "gorriecoe/silverstripe-webfonts": "*"
+    },
+    "extra": {
+        "resources-dir": "_resources",
         "expose": [
             "themes/exchanges/dist/favicons",
             "themes/exchanges/dist/styles",
             "themes/exchanges/dist/scripts",
             "themes/exchanges/dist/images",
             "themes/exchanges/dist/fonts"
+        ],
+
+        "project-files-installed": [
+            "app/.htaccess",
+            "app/_config.php",
+            "app/_config/mysite.yml",
+            "app/src/Page.php",
+            "app/src/PageController.php"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "web.config"
         ]
     },
-	"repositories":[
-	    {
-			"type": "vcs",
-			"url": "https://github.com/jacobbuck/silverstripe-colorfulimage"
-	    },
-        {
-       		"type":"vcs",
-       		"url":"https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
-    	},
-		{
-			"type": "vcs",
-			"url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/PlatoCreative/silverstripe-typekit"
-		}
-	],
-	"minimum-stability": "dev"
+    "repositories": {
+        "0": {
+            "type": "vcs",
+            "url": "https://github.com/jacobbuck/silverstripe-colorfulimage"
+        },
+        "1": {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
+        },
+        "2": {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
+        },
+        "3": {
+            "type": "vcs",
+            "url": "https://github.com/PlatoCreative/silverstripe-typekit"
+        },
+        "repo-name": {
+            "type": "vcs",
+            "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
+        }
+    },
+    "minimum-stability": "dev"
 }

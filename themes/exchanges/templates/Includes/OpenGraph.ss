@@ -12,9 +12,9 @@
 	<% else_if $ClassName == "Article" %>
 		<meta property="og:description" content="$TranslatorByline(false).ATT" />
 	<% else_if $Content %>
-		<meta property="og:description" content="$Content.NoHTML" />
+		<meta property="og:description" content="$Content.Plain" />
 	<% else %>
-		<meta property="og:description" content="$SiteConfig.FooterText.NoHTML.ATT" />
+		<meta property="og:description" content="$SiteConfig.FooterText.Plain.ATT" />
 	<% end_if %>
 	
 	<meta property="og:url" content="$AbsoluteLink.ATT" />

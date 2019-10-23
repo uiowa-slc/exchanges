@@ -12,3 +12,8 @@ SilverStripe\SiteConfig\SiteConfig:
     - SiteConfigExtension
 SilverStripe\View\Parsers\URLSegmentFilter:
   default_allow_multibyte: true
+SilverStripe\Assets\Flysystem\AssetAdapter:
+  file_permissions:
+    'file':
+      'public': '0644'
+      'private': '0600'

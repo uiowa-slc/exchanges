@@ -7,6 +7,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\ORM\FieldType\DBHTMLText;
 class ArticleSingleColumn extends Page {
 	private static $db = array(
 		'Title'  => 'HTMLText',
@@ -90,7 +91,7 @@ class ArticleSingleColumn extends Page {
 
 	public function TranslatorByline($links = "true") {
 		//$TranslatorListNice(0)<% if OriginalLanguage %> $TranslatorBylineVerb from $OriginalLanguage<% end_if %><% if $Authors %><% loop $Authors %>. Original by $Name <% end_loop %> <% end_if %>
-		$bylineText = new HTMLText();
+		$bylineText = new DBHTMLText();
 		$byline     = '';
 
 		if ($this->Authors()->First()) {
@@ -104,14 +105,14 @@ class ArticleSingleColumn extends Page {
 		}
 
 		$bylineText->setValue($byline);
-
+		
 		return $bylineText;
 
 	}
 
 	public function getWriterListNice($links = "true", $writers) {
 
-		$writerString = new HTMLText();
+		$writerString = new DBHTMLText();
 
 		foreach ($writers as $writer) {
 
