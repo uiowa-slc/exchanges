@@ -25,6 +25,10 @@ class Issue extends Page {
 
 	);
 
+	private static $owns = array(
+		'Emblem'
+	);
+
 	private static $icon_class = 'font-icon-book-open';
 
 	private static $plural_name = 'Issues';

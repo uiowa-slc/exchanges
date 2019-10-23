@@ -48,6 +48,10 @@ class HomePage extends Page {
 		return $fields;
 	}
 
+	public function FeaturedIssue(){
+		return IssueHolder::get()->First()->Children()->Last();
+	}
+
 	public function FeaturedCategories() {
     	return $this->getManyManyComponents('FeaturedCategories')->sort('SortOrder');
 	}

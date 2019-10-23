@@ -42,9 +42,9 @@ class Page extends SiteTree {
 
 		return $page;
 	}
-	public function getFeaturedIssue() {
-		return Issue::get()->sort('Created DESC')->First();
-	}
+	// public function getFeaturedIssue() {
+	// 	return Issue::get()->sort('Created DESC')->First();
+	// }
 	public function getCurrentIssue() {
 		$sessionIssue = Session::get('issue');
 		if (empty($sessionIssue)) {

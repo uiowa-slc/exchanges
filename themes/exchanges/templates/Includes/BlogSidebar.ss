@@ -7,11 +7,21 @@
 			<h2 class="banner">More from Exchanges</h2>
 			<div class="side-cards__cat-container">
 				<ul class="side-cards__list">
-				<% loop $BlogCategories %>
-					<li><a href="$Link" class="side-cards__cat">$Title</a></li>
-				<% end_loop %>
-					<li><a href="blog/" class="side-cards__cat border-top">All posts</a>
-				</ul>
+               
+                
+                    <li><a href="blog/category/briefly-mentioned" class="side-cards__cat">Briefly Mentioned</a></li>
+                
+                    <li><a href="blog/category/dispatches" class="side-cards__cat">Dispatches</a></li>
+                
+                    <li><a href="blog/category/essays" class="side-cards__cat">Essays</a></li>
+                
+                    <li><a href="blog/category/interviews" class="side-cards__cat">Interviews</a></li>
+                
+                    <li><a href="blog/category/reviews" class="side-cards__cat">Reviews</a></li>
+                
+
+                
+                </ul>
 			</div>
 			<% loop $Posts.Sort('RAND()').Limit(5) %>
 				<a href="$Link" class="side-cards__link">

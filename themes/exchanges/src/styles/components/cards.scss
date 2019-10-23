@@ -163,9 +163,7 @@ $podcast-color: rgb(255, 55, 34);
 	position: relative;
 	z-index: 99;
 	flex: 1;
-	@media #{$large-up} {
-		opacity: 0;
-	}
+
 	&--small{
 		font-size: 1em;
 	}
@@ -230,9 +228,7 @@ $podcast-color: rgb(255, 55, 34);
 	-moz-transition: opacity .25s ease-in-out;
 	-webkit-transition: opacity .25s ease-in-out;
 	opacity: 0.4;
-	@media #{$large-up} {
-		opacity: 0;
-	}
+	
 	&--always-visible{
 		opacity: 0.4;
 	}

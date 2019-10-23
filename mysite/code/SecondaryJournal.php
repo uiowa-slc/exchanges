@@ -1,17 +1,15 @@
 <?php
-class IssueHolder extends Page {
+class SecondaryJournal extends IssueHolder {
 
 	private static $db = array(
+
 
 	);
 
 	private static $has_one = array(
-		'Issue' => 'Issue',
+		'Image' => 'Image'
 	);
 
-	private static $allowed_children = array("Issue");
-
-	private static $icon_class = 'font-icon-book';
 
 	public function getCMSFields() {
 
@@ -22,6 +20,5 @@ class IssueHolder extends Page {
 
 	public function FeaturedIssue(){
 		return $this->Children()->First();
-		
 	}
 }

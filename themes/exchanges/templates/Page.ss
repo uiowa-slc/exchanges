@@ -24,33 +24,7 @@
 </head>
 <body class="$ClassName.ATT">
 
-
-
-	<%-- include UiowaBar --%>
-
-	<% if $ClassName == "HomePage" %>
-		<% include HomePageCover %>
-	<% else_if $ClassName == "Issue" %>
-		<% include IssueCover %>
-	<% else_if $ClassName == "Article" %>
-		<% if $BannerImage %>
-			<% include ArticleCover %>
-		<% else %>
-			<% include TopBar %>
-		<% end_if %>
-	<% else_if $ClassName == "ArticleSingleColumn" %>
-		<% if $BannerImage %>
-			<% include ArticleCover %>
-		<% else %>
-			<% include TopBar %>
-		<% end_if %>
-	<% else %>
-		<% include TopBar %>
-	<% end_if %>
-
-	<div class="layout layout--{$ClassName} typography">
 		$Layout
-	</div>
 
 	<% include Footer %>
 	$BetterNavigator
