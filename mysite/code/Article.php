@@ -22,6 +22,7 @@ class Article extends Page {
 		"Content2" => "HTMLText",
 		"Content3" => "HTMLText",
 		"TranslatorNote" => "HTMLText",
+		"InTheClassroom" => "HTMLText",
 		"TranslationRTL" => "Boolean",
 		"OriginalRTL" => "Boolean",
 		'IsCompilation' => 'Boolean',
@@ -285,7 +286,7 @@ class Article extends Page {
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowCreditsLink', 'Show link to artwork credits on this piece <a href="admin/pages/edit/show/'.$this->Parent()->ID.'" target="_blank">(credits editable here &rarr;)</a>'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowFullSizeImage', 'Enable full popup link to image'));
 		$fields->addFieldToTab("Root.Main", new UploadField("FullSizeImage", "Specific image to be used for full popup (optional, we use the 'unique image' field if this isn't filled out)"));
-		
+
 		$fields->addFieldToTab('Root.Main', $titleField);
 		$fields->addFieldToTab('Root.Main', $untranslatedTitleField);
 		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalTitleUseAltFont', 'Use an alternate font for the original title (only check if the original title looks strange)'));
@@ -300,6 +301,8 @@ class Article extends Page {
 		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('Content2', 'Translated work')->addExtraClass('stacked'));
 
 		$fields->addFieldToTab('Root.TranslatorNote',HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
+
+		$fields->addFieldToTab('Root.InTheClassroom',HTMLEditorField::create('InTheClassroom', 'In the Classroom')->addExtraClass('stacked'));
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
 		$newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
@@ -396,7 +399,7 @@ class Article extends Page {
 			}else{
 				$writerFormattedName = $writer->Name;
 			}
-				
+
 
 			if ($links == "true") {
 				$writerArray[] = '<a href="' . $writer->Link() . '" class="text-nowrap">' . $writerFormattedName . '</a>';
