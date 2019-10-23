@@ -102,7 +102,7 @@
 	    </div>
 
 	</div>
-	<% include ArticleSubNav %>
+	<% include ArticleSubnav %>
 
 	<div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
 	    <h1>Translator Notes</h1>
