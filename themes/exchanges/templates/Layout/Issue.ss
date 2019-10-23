@@ -31,12 +31,12 @@
 			  		<% end_if %>
 				</p>
 			<% end_if %>
-			<h2>Other issues</h2>
+<%-- 			<h2>Other issues</h2>
 			<ul class="card-list">
 				<% loop $Parent.Children.Sort("Created DESC") %>
 					<% include IssueCard %>
 				<% end_loop %>
-			</ul>
+			</ul> --%>
 		</div>
 	</div>
 </div>
