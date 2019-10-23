@@ -49,7 +49,7 @@ class HomePage extends Page {
 	}
 
 	public function FeaturedIssue(){
-		return IssueHolder::get()->First()->Children()->Last();
+		return IssueHolder::get()->Last()->Children()->Last();
 	}
 
 	public function FeaturedCategories() {
