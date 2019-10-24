@@ -42,32 +42,32 @@ class Page extends SiteTree {
 
 		return $page;
 	}
-	//public function getFeaturedIssue() {
-	public function getFeaturedIssue( $holderClasses = array( "IssueHolder" ) ) {
+	public function getFeaturedIssue() {
+        // Add hard-coded class names of additional journals to be
+        // included in the Featured Issue pool on the home page.
+        $holderClasses = array( 'IssueHolder' );
+        $candidateIssues = array();
         $featureIssue = NULL;
 
-        // enforce argument type
-        if( is_array( $holderClasses ) ) {
-            // find all requested IssueHolder classes
-            $holders = IssueHolder::get()
-                ->filter( 'ClassName', $holderClasses );
-
-            $holderIDs = array();
-
-            // build array of desired IssueHolder record IDs
-            foreach( $holders as $holder ) {
-                array_push( $holderIDs, $holder->ID );
-            }
-
-            // find all possible Issues using desired IssueHolder(s) and return the most recent one
-            $featureIssue = Issue::get()
-                ->filter( 'ParentID', $holderIDs )
-                ->sort('Created DESC')
-                ->First();
+        // find all requested IssueHolder classes
+        foreach( $holderClasses as $holderClass ) {
+            array_push( $candidateIssues, $holderClass::FeaturedIssue() );
         }
 
+        $featureIDs = array();
+
+        // build array of candidate issue record IDs
+        foreach( $candidateIssues as $issue ) {
+            array_push( $featureIDs, $issue->ID );
+        }
+
+        // find Featured Issue using most recent Issue from candidate issues
+        $featureIssue = Issue::get()
+            ->filter( 'ID', $featureIDs )
+            ->sort('Created DESC')
+            ->First();
+
         return $featureIssue;
-        //return Issue::get()->sort('Created DESC')->First();
 	}
 	public function getCurrentIssue() {
 		$sessionIssue = Session::get('issue');
