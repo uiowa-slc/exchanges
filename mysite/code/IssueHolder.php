@@ -21,7 +21,6 @@ class IssueHolder extends Page {
 	}
 
 	public function FeaturedIssue(){
-		return $this->Children()->First();
-		
+		return $this->Children()->sort('Created DESC')->First();
 	}
 }

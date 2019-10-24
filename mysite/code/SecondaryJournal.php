@@ -10,15 +10,10 @@ class SecondaryJournal extends IssueHolder {
 		'Image' => 'Image'
 	);
 
-
 	public function getCMSFields() {
 
 		$fields = parent::getCMSFields();
 
 		return $fields;
-	}
-
-	public function FeaturedIssue(){
-		return $this->Children()->First();
 	}
 }
