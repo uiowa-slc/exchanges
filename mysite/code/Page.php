@@ -8,7 +8,7 @@ use SilverStripe\Blog\Model\BlogCategory;
 
 class Page extends SiteTree {
 
-	
+
 	private static $db = array(
 		'DropdownMenu' => 'Boolean',
 	);
@@ -42,9 +42,33 @@ class Page extends SiteTree {
 
 		return $page;
 	}
-	// public function getFeaturedIssue() {
-	// 	return Issue::get()->sort('Created DESC')->First();
-	// }
+	//public function getFeaturedIssue() {
+	public function getFeaturedIssue( $holderClasses = array( "IssueHolder" ) ) {
+        $featureIssue = NULL;
+
+        // enforce argument type
+        if( is_array( $holderClasses ) ) {
+            // find all requested IssueHolder classes
+            $holders = IssueHolder::get()
+                ->filter( 'ClassName', $holderClasses );
+
+            $holderIDs = array();
+
+            // build array of desired IssueHolder record IDs
+            foreach( $holders as $holder ) {
+                array_push( $holderIDs, $holder->ID );
+            }
+
+            // find all possible Issues using desired IssueHolder(s) and return the most recent one
+            $featureIssue = Issue::get()
+                ->filter( 'ParentID', $holderIDs )
+                ->sort('Created DESC')
+                ->First();
+        }
+
+        return $featureIssue;
+        //return Issue::get()->sort('Created DESC')->First();
+	}
 	public function getCurrentIssue() {
 		$sessionIssue = Session::get('issue');
 		if (empty($sessionIssue)) {
