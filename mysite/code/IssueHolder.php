@@ -20,9 +20,7 @@ class IssueHolder extends Page {
 		return $fields;
 	}
 
-	public static function FeaturedIssue(){
-		//return $this->Children()->filter(['ParentID' => $this->ID])->sort('Created DESC')->First();
-        $parentID = IssueHolder::get()->filter(['ClassName' => 'IssueHolder'])->sort('Created DESC')->First()->ID;
-        return Issue::get()->filter(['ParentID' => $parentID])->sort('Created DESC')->First();
+	public function FeaturedIssue(){
+        return Issue::get()->filter(['ParentID' => $this->ID])->sort('Created DESC')->First();
 	}
 }

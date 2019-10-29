@@ -48,9 +48,9 @@ class HomePage extends Page {
 		return $fields;
 	}
 
-	//public function FeaturedIssue(){
-	//	return IssueHolder::get()->Last()->Children()->Last();
-	//}
+	public function FeaturedIssue(){
+		return IssueHolder::get()->Filter(['ClassName' => 'IssueHolder'])->First()->FeaturedIssue();
+	}
 
 	public function FeaturedCategories() {
     	return $this->getManyManyComponents('FeaturedCategories')->sort('SortOrder');

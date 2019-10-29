@@ -1,10 +1,10 @@
 <?php
 
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\ORM\DataList;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Control\Session;
 use SilverStripe\Blog\Model\BlogCategory;
-
 
 class Page extends SiteTree {
 
@@ -41,33 +41,6 @@ class Page extends SiteTree {
 			))                       ->Last();
 
 		return $page;
-	}
-	public function getFeaturedIssue() {
-        // Add hard-coded class names of additional journals to be
-        // included in the Featured Issue pool on the home page.
-        $holderClasses = array( 'IssueHolder' );
-        $candidateIssues = array();
-        $featureIssue = NULL;
-
-        // find all requested IssueHolder classes
-        foreach( $holderClasses as $holderClass ) {
-            array_push( $candidateIssues, $holderClass::FeaturedIssue() );
-        }
-
-        $featureIDs = array();
-
-        // build array of candidate issue record IDs
-        foreach( $candidateIssues as $issue ) {
-            array_push( $featureIDs, $issue->ID );
-        }
-
-        // find Featured Issue using most recent Issue from candidate issues
-        $featureIssue = Issue::get()
-            ->filter( 'ID', $featureIDs )
-            ->sort('Created DESC')
-            ->First();
-
-        return $featureIssue;
 	}
 	public function getCurrentIssue() {
 		$sessionIssue = Session::get('issue');
