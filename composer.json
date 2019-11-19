@@ -28,7 +28,6 @@
             "themes/exchanges/dist/images",
             "themes/exchanges/dist/fonts"
         ],
-
         "project-files-installed": [
             "app/.htaccess",
             "app/_config.php",
