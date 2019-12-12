@@ -18,3 +18,4 @@ smtp.yml
 /cache
 .python-version
 .tmp
+.phpintel
