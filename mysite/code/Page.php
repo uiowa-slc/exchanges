@@ -1,14 +1,14 @@
 <?php
 
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\ORM\DataList;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Control\Session;
 use SilverStripe\Blog\Model\BlogCategory;
 
-
 class Page extends SiteTree {
 
-	
+
 	private static $db = array(
 		'DropdownMenu' => 'Boolean',
 	);
@@ -42,9 +42,6 @@ class Page extends SiteTree {
 
 		return $page;
 	}
-	// public function getFeaturedIssue() {
-	// 	return Issue::get()->sort('Created DESC')->First();
-	// }
 	public function getCurrentIssue() {
 		$sessionIssue = Session::get('issue');
 		if (empty($sessionIssue)) {

@@ -37,8 +37,8 @@ class HomePage extends Page {
 
 		$conf=GridFieldConfig_RelationEditor::create(10);
 		$conf->addComponent(new GridFieldSortableRows('SortOrder'));
-		$conf->removeComponentsByType($conf->getComponentByType(GridFieldAddNewButton::class));		
-		// $fields->addFieldToTab('Root.Main', 
+		$conf->removeComponentsByType($conf->getComponentByType(GridFieldAddNewButton::class));
+		// $fields->addFieldToTab('Root.Main',
   //           new GridField('FeaturedCategories', 'Featured Categories', $this->FeaturedCategories(), $conf)
   //       );
 
@@ -49,7 +49,7 @@ class HomePage extends Page {
 	}
 
 	public function FeaturedIssue(){
-		return IssueHolder::get()->Last()->Children()->Last();
+		return IssueHolder::get()->Filter(['ClassName' => 'IssueHolder'])->First()->FeaturedIssue();
 	}
 
 	public function FeaturedCategories() {
