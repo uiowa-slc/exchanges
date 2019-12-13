@@ -43,11 +43,8 @@ class Page extends SiteTree {
 		return $page;
 	}
 	public function getCurrentIssue() {
-		$sessionIssue = Session::get('issue');
-		if (empty($sessionIssue)) {
-			$currentIssue = HomePage::get()->First();
-			$sessionIssue = $currentIssue->FeaturedIssue();
-		}
+		$currentIssue = HomePage::get()->First();
+		$sessionIssue = $currentIssue->FeaturedIssue();
 		return $sessionIssue;
 	}
 

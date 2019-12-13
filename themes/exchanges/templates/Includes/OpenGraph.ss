@@ -16,7 +16,7 @@
 	<% else %>
 		<meta property="og:description" content="$SiteConfig.FooterText.Plain.ATT" />
 	<% end_if %>
-	
+
 	<meta property="og:url" content="$AbsoluteLink.ATT" />
 
 	<% if $ClassName == "HomePage" %>
@@ -45,8 +45,8 @@
 				<meta property="og:image" content="$FeaturedImage.ScaleWidth(1200).AbsoluteURL.ATT" />
 				<meta property="og:image:width" content="$FeaturedImage.ScaleWidth(1200).Width">
 				<meta property="og:image:height" content="$FeaturedImage.ScaleWidth(1200).Height">
-	<% else %>		
-		<% with $FeaturedIssue %>
+	<% else %>
+		<% with $CurrentIssue %>
 			<meta property="og:image" content="<% with $Emblem %>$ScaleWidth(1200).AbsoluteURL.ATT<% end_with %>" />
 			<meta property="og:image:width" content="$Emblem.ScaleWidth(1200).Width">
 			<meta property="og:image:height" content="$Emblem.ScaleWidth(1200).Height">
