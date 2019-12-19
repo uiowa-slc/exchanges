@@ -17,7 +17,8 @@
         "md/saml": "dev-md",
         "md/deploy-helper": "*",
         "md/division-analytics": "*",
-        "gorriecoe/silverstripe-webfonts": "*"
+        "gorriecoe/silverstripe-webfonts": "*",
+        "silverstripe/sharedraftcontent": "dev-master"
     },
     "extra": {
         "resources-dir": "_resources",
