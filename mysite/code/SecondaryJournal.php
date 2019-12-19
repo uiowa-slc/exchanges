@@ -18,6 +18,10 @@ class SecondaryJournal extends Page {
 		return $fields;
 	}
 	public function FeaturedIssue(){
-		return $this->Children()->filter(array('ClassName' => 'Issue'))->First();
+		$holder = $this->Children()->filter(array('ClassName' => 'IssueHolder'))->First();
+
+		if($holder){
+			return $holder->Children()->filter(array('ClassName' => 'Issue'))->First();
+		}
 	}
 }
