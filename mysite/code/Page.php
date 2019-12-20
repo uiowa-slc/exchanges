@@ -38,7 +38,7 @@ class Page extends SiteTree {
 		$page = Page::get()->filter(array(
 				'ParentID'      => $this->ParentID,
 				'Sort:LessThan' => $this->Sort,
-			))                       ->Last();
+			))->Last();
 
 		return $page;
 	}
@@ -46,11 +46,8 @@ class Page extends SiteTree {
 	// 	return Issue::get()->sort('Created DESC')->First();
 	// }
 	public function getCurrentIssue() {
-		$sessionIssue = Session::get('issue');
-		if (empty($sessionIssue)) {
-			$currentIssue = HomePage::get()->First();
-			$sessionIssue = $currentIssue->FeaturedIssue();
-		}
+		$currentIssue = HomePage::get()->First();
+		$sessionIssue = $currentIssue->FeaturedIssue();
 		return $sessionIssue;
 	}
 

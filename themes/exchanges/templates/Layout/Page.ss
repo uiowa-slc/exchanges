@@ -1,4 +1,9 @@
-<% include TopBar %>
+<% if ID == 260 %>
+	<% include TopBarAncient %>
+<% else %>
+	<% include TopBar %>
+<% end_if %>
+
 <div class="layout layout--{$ClassName} typography">
 	<div class="row">
 		<div class="large-1 columns exchanges-sticky">
