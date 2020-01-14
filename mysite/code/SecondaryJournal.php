@@ -1,5 +1,5 @@
 <?php
-class SecondaryJournal extends IssueHolder {
+class SecondaryJournal extends Page {
 
 	private static $db = array(
 

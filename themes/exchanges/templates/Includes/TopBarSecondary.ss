@@ -3,7 +3,7 @@
 		<nav class="top-bar top-bar--{$ClassName} <% if $BannerImage %>top-bar--transparent<% end_if %> has-dropshadow" data-topbar role="navigation" data-options="align:right">
 			<ul class="title-area">
 				<li class="name">
-					<h1><a href="ancient/">Ancient Exchanges</a></h1>
+					<h1><a href="{$BaseURL}ancient-exchanges">Ancient Exchanges</a></h1>
 				</li>
 			</ul>
 		</nav>
