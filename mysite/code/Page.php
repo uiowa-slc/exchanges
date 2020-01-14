@@ -5,6 +5,7 @@ use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Control\Session;
 use SilverStripe\Blog\Model\BlogCategory;
 use SilverStripe\ORM\ArrayList;
+use SilverStripe\Dev\Debug;
 
 class Page extends SiteTree {
 
@@ -73,4 +74,15 @@ class Page extends SiteTree {
 		}
 		return false;
 	}
+
+	//public function getSecondaryChildren() {
+    //    $parentID = Page::get()->filter(array(
+    //        'ClassName' => 'SecondaryJournal',
+    //    ))->sort()->First()->ID;
+	//	$children = Page::get()->filter(array(
+    //        'ParentID' => $parentID,
+    //    ));
+    //    //Debug::show($children);
+    //    return $children;
+	//}
 }
