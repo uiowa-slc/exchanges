@@ -10,8 +10,10 @@
 				<section class="top-bar-section">
 					<%-- Left Nav Section --%>
 					<ul class="right">
-						<% loop secChilds %>
-							<li><a href="{$BaseURL}$URLSegment" title="Go to the $Title">$Title</a></li>
+						<% loop $getSecondaryChildren %>
+							<li class="<% if $Top.ID == $ID  %>active<% end_if %>">
+								<a href="{$BaseURL}$URLSegment" title="Go to the $Title">$Title</a>
+							</li>
 						<% end_loop %>
 					</ul>
 				</section>

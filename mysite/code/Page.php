@@ -75,14 +75,14 @@ class Page extends SiteTree {
 		return false;
 	}
 
-	//public function getSecondaryChildren() {
-    //    $parentID = Page::get()->filter(array(
-    //        'ClassName' => 'SecondaryJournal',
-    //    ))->sort()->First()->ID;
-	//	$children = Page::get()->filter(array(
-    //        'ParentID' => $parentID,
-    //    ));
-    //    //Debug::show($children);
-    //    return $children;
-	//}
+	public function getSecondaryChildren() {
+		$parentID = Page::get()->filter(array(
+			'ClassName' => 'SecondaryJournal',
+		))->sort()->First()->ID;
+		$children = Page::get()->filter(array(
+			'ParentID' => $parentID,
+		));
+		Debug::show($children);
+		return $children;
+	}
 }
