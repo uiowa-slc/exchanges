@@ -40,9 +40,10 @@ class Page extends SiteTree {
 		return $page;
 	}
 
-	// public function getFeaturedIssue() {
-	// 	return Issue::get()->sort('Created DESC')->First();
-	// }
+	public function FeaturedIssue() {
+	 	//return Issue::get()->sort('Created DESC')->First();
+        return $this->getCurrentIssue();
+	}
 
 	public function getCurrentIssue() {
 		$currentIssue = HomePage::get()->First();
@@ -75,6 +76,7 @@ class Page extends SiteTree {
 		return false;
 	}
 
+    // TODO relate this to $this and the ancestry of $this
 	public function getSecondaryChildren() {
 		$parentID = Page::get()->filter(array(
 			'ClassName' => 'SecondaryJournal',
@@ -82,7 +84,7 @@ class Page extends SiteTree {
 		$children = Page::get()->filter(array(
 			'ParentID' => $parentID,
 		));
-		Debug::show($children);
+		//Debug::show($children);
 		return $children;
 	}
 }
