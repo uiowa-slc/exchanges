@@ -40,6 +40,7 @@ class Page extends SiteTree {
 		return $page;
 	}
 
+    // Wrapper hack for missing FeaturedIssue() calls somewhere in the codebase
 	public function FeaturedIssue() {
         return $this->getCurrentIssue();
 	}
@@ -73,17 +74,5 @@ class Page extends SiteTree {
 			}
 		}
 		return false;
-	}
-
-    // TODO relate this to $this and the ancestry of $this
-	public function getSecondaryChildren() {
-		$parentID = Page::get()->filter(array(
-			'ClassName' => 'SecondaryJournal',
-		))->sort()->First()->ID;
-		$children = Page::get()->filter(array(
-			'ParentID' => $parentID,
-		));
-		//Debug::show($children);
-		return $children;
 	}
 }
