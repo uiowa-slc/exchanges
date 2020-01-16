@@ -10,10 +10,20 @@
 				<section class="top-bar-section">
 					<%-- Left Nav Section --%>
 					<ul class="right">
-						<% loop $getSecondaryChildren %>
-							<li class="<% if $Top.ID == $ID  %>active<% end_if %>">
-								<a href="{$BaseURL}$URLSegment" title="Go to the $Title">$Title</a>
+						<% loop Menu(2) %>
+							<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %>" <% if $DropdownMenu %>data-dropdown="hover" data-options="is_hover:true" <% end_if %>>
+								<a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a>
+								<% if $DropdownMenu %>
+									<% if $Children %>
+										<% loop $Children %>
+											<li id="hover" class="f-dropdown" data-dropdown-content aria-hidden="true">
+												<a href="$Link">$Title</a>
+											</li>
+										<% end_loop %>
+									<% end_if %>
+								<% end_if %>
 							</li>
+							<%--<% if not $Last %><li class="divider"></li><% end_if %>--%>
 						<% end_loop %>
 					</ul>
 				</section>

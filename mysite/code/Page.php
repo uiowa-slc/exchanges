@@ -41,7 +41,6 @@ class Page extends SiteTree {
 	}
 
 	public function FeaturedIssue() {
-	 	//return Issue::get()->sort('Created DESC')->First();
         return $this->getCurrentIssue();
 	}
 
