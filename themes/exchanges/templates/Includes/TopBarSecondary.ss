@@ -3,8 +3,9 @@
 		<nav class="top-bar top-bar--{$ClassName} <% if $BannerImage %>top-bar--transparent<% end_if %> has-dropshadow" data-topbar role="navigation" data-options="align:right">
 			<ul class="title-area">
 				<li class="name">
-					<h1 class="show-for-large-up"><a href="{$BaseURL}ancient-exchanges">Ancient Exchanges</a></h1>
-					<h1 class="hide-for-large-up"><a href="{$BaseURL}ancient-exchanges">Ancient</a></h1>
+					<% with $getSecondaryJournal %>
+						<h1><a href="$Link">$Title</a></h1>
+					<% end_with %>
 				</li>
 				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 				<section class="top-bar-section">

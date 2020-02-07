@@ -19,6 +19,6 @@ class SecondaryJournal extends Page {
 	}
 
 	public function FeaturedIssue(){
-		return $this->Children()->First();
+		//return $this->Children()->First();
 	}
 }

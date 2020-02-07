@@ -60,6 +60,28 @@ class Page extends SiteTree {
 		return BlogCategory::get()->sort('Title ASC');
 	}
 
+	public function getSecondaryJournal(){
+
+		if(!$this->isSecondaryJournal()){
+			return null;
+		}
+
+		if($this->ClassName == 'SecondaryJournal')
+			return $this;
+
+		$parent = false;
+
+		while($parent == false){
+			$parent = $this->Parent();
+			if(($parent) && ($parent->ClassName == 'SecondaryJournal')){
+				return $parent;
+			}
+		}
+
+
+
+	}
+
 	public function isSecondaryJournal() {
 		$ancestors = new ArrayList();
 		$ancestors = $this->getAncestors();

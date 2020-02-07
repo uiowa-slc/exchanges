@@ -20,6 +20,9 @@
         "gorriecoe/silverstripe-webfonts": "*",
         "silverstripe/sharedraftcontent": "dev-master"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
     "extra": {
         "resources-dir": "_resources",
         "expose": [

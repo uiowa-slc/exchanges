@@ -24,6 +24,28 @@ class PageController extends ContentController {
 	 *
 	 * @var array
 	 */
+	// public function getViewer($action = null) {
+	// 	$viewer = parent::getViewer($action);
+
+	// 	if(!$this->isSecondaryJournal()){
+
+	// 		return $viewer;
+			
+	// 	}
+	// 	//echo 'true';
+	// 	$viewerTemplates = $viewer->templates();
+
+	// 	// Set your new theme
+	// 	$original = Config::inst()->get("SilverStripe\View\SSViewer", "themes");
+	// 	Config::inst()->set("SilverStripe\View\SSViewer", "themes",array('exchanges-sec-theme'));
+	// 	//print_r(Config::inst()->get('SilverStripe\View\SSViewer'));
+	// 	$pageTheme = parent::getViewer($action);
+	// 	$pageTheme->setTemplateFile("main", $viewerTemplates['main']);
+		
+	// 	// Reset to original 
+	// 	//Config::inst()->set("SilverStripe\View\SSViewer", "themes", $original);
+	// 	return $pageTheme;
+	// }
 
 	function StatusMessage() {
 		if (Session::get('ActionMessage')) {

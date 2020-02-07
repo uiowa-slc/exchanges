@@ -1,0 +1,36 @@
+
+$highlight: #e31f2d;
+
+body{
+	background: black;
+	color: white;
+}
+
+.article__container{
+	background: black;
+	border: none;
+}
+
+h1,h2,h3,h4,h5{
+	color: white;
+}
+
+a{
+	color: $highlight;
+
+	&:hover{
+		color: lighten($highlight, 10);
+	}
+}
+
+.contain-to-grid,.top-bar{
+	background: #111;
+}
+
+.post__social-icon{
+	background: $highlight;
+
+	&:hover{
+		background: lighten($highlight, 10);
+	}
+}
