@@ -14,7 +14,13 @@ body{
 h1,h2,h3,h4,h5{
 	color: white;
 }
+.button, button{
+	background: $highlight;
 
+	&:hover{
+		background: lighten($highlight, 20);
+	}
+}
 a{
 	color: $highlight;
 
@@ -33,4 +39,12 @@ a{
 	&:hover{
 		background: lighten($highlight, 10);
 	}
+}
+
+.footer{
+	background: #121212;
+}
+
+.toc__letter-link{
+	color :white;
 }

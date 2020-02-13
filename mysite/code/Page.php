@@ -69,16 +69,15 @@ class Page extends SiteTree {
 		if($this->ClassName == 'SecondaryJournal')
 			return $this;
 
-		$parent = false;
+		$ancestors = new ArrayList();
+		$ancestors = $this->getAncestors();
 
-		while($parent == false){
-			$parent = $this->Parent();
-			if(($parent) && ($parent->ClassName == 'SecondaryJournal')){
-				return $parent;
+		foreach( $ancestors as $ancestor ) {
+			if (strcmp($ancestor->ClassName, "SecondaryJournal") == 0) {
+				return $ancestor;
 			}
 		}
-
-
+		return false;
 
 	}
 
