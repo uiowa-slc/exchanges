@@ -11,7 +11,7 @@ $article-poetry-padding: 150px;
 
 // Default Colors
 //$primary-color: #1A79AB;
-$primary-color: #1097ce;
+$primary-color: #e31f2d;
 $secondary-color: #746457;
 $primary-brown: #28201A;
 
@@ -66,8 +66,8 @@ $column-gutter: rem-calc(35);
 // $total-columns: 12;
 
 // We use these to control various global styles
-$body-bg: #f8f8f8;
-// $body-font-color: #222;
+$body-bg: #222;
+$body-font-color: #fff;
 $body-font-family: "garamond-premier-pro", serif;
 $arabic-font-family: "Noto Serif", serif;
 
@@ -137,11 +137,11 @@ $arabic-font-family: "Noto Serif", serif;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: "futura-pt", "Arial Narrow", sans-serif;
+$header-font-family: "garamond-premier-pro", "serif";
 
 // $header-font-weight: normal;
 // $header-font-style: normal;
-$header-font-color: #372B21;
+$header-font-color: #eee;
 $header-line-height: 0.95;
 
 // $header-top-margin: .2rem;
@@ -662,7 +662,7 @@ $button-pip-lrg: rem-calc(11);
 
 // Off-canvas
 
-$tabbar-bg: #fff;
+$tabbar-bg: #222;
 
 // $tabbar-height: rem-calc(45);
 // $tabbar-line-height: $tabbar-height;
@@ -1101,10 +1101,10 @@ $side-nav-font-family: $header-font-family;
 // $include-html-tabs-classes: $include-html-classes;
 
  $tabs-navigation-padding: rem-calc(10);
-// $tabs-navigation-bg-color: #efefef  ;
- $tabs-navigation-active-bg-color: #1097ce;
+$tabs-navigation-bg-color: $body-bg;
+ $tabs-navigation-active-bg-color: $primary-color;
 // $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
-// $tabs-navigation-font-color: #222;
+$tabs-navigation-font-color: $body-font-color;
  $tabs-navigation-font-size: rem-calc(13);
 $tabs-navigation-font-family: $header-font-family;
 

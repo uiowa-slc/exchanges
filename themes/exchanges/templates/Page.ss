@@ -13,9 +13,11 @@
 	<% include OpenGraph %>
 	<link rel="icon" type="image/png" href="{$ThemeDir}/dist/favicons/favicon.ico" />
 	{$TypeKitScript}
-	<link href="{$ThemeDir}/dist/styles/main.css" rel="stylesheet">
+
 	<% if $isSecondaryJournal %>
-	<link href="{$ThemeDir}/dist/styles/ancient.css" rel="stylesheet">
+	   <link href="{$ThemeDir}/dist/styles/ancient.css" rel="stylesheet">
+    <% else %>
+        <link href="{$ThemeDir}/dist/styles/main.css" rel="stylesheet">
 	<% end_if %>
 
 	<% if $LinkColor %>

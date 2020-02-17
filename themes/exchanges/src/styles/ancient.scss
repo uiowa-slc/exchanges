@@ -1,4 +1,5 @@
-@import "imports/settings";
+@import "imports/ancient-settings";
+
 @import "foundation";
 
 @import "mixins/triangle";
@@ -27,5 +28,7 @@
 @import "layouts/footer/mixins";
 @import "layouts/blog";
 @import "layouts/common";
+
+@import "subjournals/ancient";
 
 @import "components/mailchimp";
