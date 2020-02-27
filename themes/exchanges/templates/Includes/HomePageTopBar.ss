@@ -1,4 +1,4 @@
-<% if $isSecondaryJournal %>
+<% if $isSubjournal %>
     <% include TopBarSecondary %>
 <% else %>
 <div class="nav-container nav-container--{$ClassName} contain-to-grid contain-to-grid--{$ClassName} <% if $FeaturedIssue.Emblem %>contain-to-grid--transparent<% end_if %>">

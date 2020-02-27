@@ -1,6 +1,6 @@
 /* Site Specific Settings: */
 $footer-padding: 180px;
-$topbar-base-color: #444;
+$topbar-base-color: #111;
 $article-row-width: 1600px;
 $article-poetry-padding: 150px;
 
@@ -11,7 +11,7 @@ $article-poetry-padding: 150px;
 
 // Default Colors
 //$primary-color: #1A79AB;
-$primary-color: #e31f2d;
+$primary-color: #ba071f;
 $secondary-color: #746457;
 $primary-brown: #28201A;
 
@@ -137,7 +137,8 @@ $arabic-font-family: "Noto Serif", serif;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: "garamond-premier-pro", "serif";
+//$header-font-family: "century-gothic", "sans-serif";
+$header-font-family: mrs-eaves-xl-serif, serif;
 
 // $header-font-weight: normal;
 // $header-font-style: normal;

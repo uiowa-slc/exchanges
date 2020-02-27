@@ -60,20 +60,20 @@ class Page extends SiteTree {
 		return BlogCategory::get()->sort('Title ASC');
 	}
 
-	public function getSecondaryJournal(){
+	public function getSubjournal(){
 
-		if(!$this->isSecondaryJournal()){
+		if(!$this->isSubjournal()){
 			return null;
 		}
 
-		if($this->ClassName == 'SecondaryJournal')
+		if($this->ClassName == 'Subjournal')
 			return $this;
 
 		$ancestors = new ArrayList();
 		$ancestors = $this->getAncestors();
 
 		foreach( $ancestors as $ancestor ) {
-			if (strcmp($ancestor->ClassName, "SecondaryJournal") == 0) {
+			if (strcmp($ancestor->ClassName, "Subjournal") == 0) {
 				return $ancestor;
 			}
 		}
@@ -81,16 +81,16 @@ class Page extends SiteTree {
 
 	}
 
-	public function isSecondaryJournal() {
+	public function isSubjournal() {
 		$ancestors = new ArrayList();
 		$ancestors = $this->getAncestors();
 
-		if( strcmp( $this->ClassName, "SecondaryJournal" ) == 0 ) {
+		if( strcmp( $this->ClassName, "Subjournal" ) == 0 ) {
 			return true;
 		}
 
 		foreach( $ancestors as $ancestor ) {
-			if (strcmp($ancestor->ClassName, "SecondaryJournal") == 0) {
+			if (strcmp($ancestor->ClassName, "Subjournal") == 0) {
 				return true;
 			}
 		}

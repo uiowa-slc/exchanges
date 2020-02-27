@@ -98,6 +98,17 @@ class Issue extends Page {
 		}
 	}
 
+	public function HasArticleImages(){
+		$children = $this->Children();
+
+		foreach($children as $child){
+
+			if($child->BannerImageID != 0){
+				return true;
+			}
+		}
+	}
+
 	public function getLetterTitle() {
 		if ($this->LetterFromEditorCustomTitle) {
 			return $this->LetterFromEditorCustomTitle;

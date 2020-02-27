@@ -1,6 +1,7 @@
 
 .article__container{
 	border: none;
+	background: none;
 }
 
 .byline, .author {
@@ -13,4 +14,9 @@
 
 .toc__letter-link{
 	color :white;
+}
+
+
+.cover-content h1{
+	font-weight: bold;
 }

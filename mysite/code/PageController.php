@@ -27,7 +27,7 @@ class PageController extends ContentController {
 	// public function getViewer($action = null) {
 	// 	$viewer = parent::getViewer($action);
 
-	// 	if(!$this->isSecondaryJournal()){
+	// 	if(!$this->isSubjournal()){
 
 	// 		return $viewer;
 			

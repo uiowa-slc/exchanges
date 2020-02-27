@@ -14,8 +14,8 @@
 	<link rel="icon" type="image/png" href="{$ThemeDir}/dist/favicons/favicon.ico" />
 	{$TypeKitScript}
 
-	<% if $isSecondaryJournal %>
-	   <link href="{$ThemeDir}/dist/styles/ancient.css" rel="stylesheet">
+	<% if $isSubjournal %>
+	   	<link href="{$ThemeDir}/dist/styles/{$Subjournal.Identifier}.css" rel="stylesheet">
     <% else %>
         <link href="{$ThemeDir}/dist/styles/main.css" rel="stylesheet">
 	<% end_if %>

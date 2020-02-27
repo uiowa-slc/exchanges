@@ -3,7 +3,7 @@
 		<nav class="top-bar top-bar--{$ClassName} <% if $BannerImage %>top-bar--transparent<% end_if %> has-dropshadow" data-topbar role="navigation" data-options="align:right">
 			<ul class="title-area">
 				<li class="name">
-					<% with $getSecondaryJournal %>
+					<% with $getSubjournal %>
 						<h1><a href="$Link">$Title</a></h1>
 					<% end_with %>
 				</li>
