@@ -1,9 +1,6 @@
 ---
 Name: myproject
----
-Only:
-  environment: 'dev'
----
+
 SilverStripe\Core\Manifest\ModuleManifest:
   project: mysite
 Page:
