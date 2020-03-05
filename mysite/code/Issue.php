@@ -107,6 +107,7 @@ class Issue extends Page {
 				return true;
 			}
 		}
+		return false;
 	}
 
 	public function getLetterTitle() {

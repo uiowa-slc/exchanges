@@ -1,5 +1,5 @@
 <% if $isSubjournal %>
-	<% include TopBarSecondary %>
+	<% include TopBarSubjournal %>
 <% else %>
 	<div class="nav-container nav-container--{$ClassName} contain-to-grid contain-to-grid--{$ClassName} <% if $BannerImage || $Emblem %>contain-to-grid--transparent<% end_if %>">
 		<div class="nav-screen nav-screen--{$ClassName} <% if $BannerImage %>nav-screen--transparent<% else %>nav-screen--opaque<% end_if %>">

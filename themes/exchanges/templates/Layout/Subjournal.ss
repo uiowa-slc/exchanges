@@ -22,6 +22,8 @@
 
 	<div class="layout layout--{$ClassName} typography">
 		<% with $FeaturedIssue %>
+
+			<% if $HasArticleImages %>
 			<div class="row issue-preview__wrap">
 				<div class="large-12 issue-preview columns">
 					<h2 class="banner text-center">In this Issue:</h2>
@@ -42,15 +44,25 @@
 						<% end_loop %>
 
 					</ul>
-					<p class="issue-preview__start-reading text-center"><a href="$Link" class="button large">Start reading &rarr;</a></p>
+	
 				</div>
 			</div>
+			<% else %>
+				<% include IssueTocNoImages %>
+			<% end_if %>
+
+			<p class="issue-preview__start-reading text-center"><a href="$Link" class="button large">Start reading &rarr;</a></p>
 		<% end_with %>
 
 		<div class="row">
 			<div class="large-8 columns large-centered">
-				<h2 class="text-center">About $Title</h2>
 				$Content
+
+				<% loop $Menu(2) %>
+					<h3><a href="$Link">$Title</a></h3>
+					<p>$Content.Summary <a href="$Link">Continue reading...</a></p>
+
+				<% end_loop %>
 			</div>
 		</div>
 	</div>

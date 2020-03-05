@@ -1,3 +1,7 @@
+body{
+	background-image: url('../images/dark_wall.png');
+}
+
 
 .article__container{
 	border: none;
@@ -19,4 +23,8 @@
 
 .cover-content h1{
 	font-weight: bold;
+}
+
+.top-bar-section ul li>a{
+	text-transform: none;
 }
