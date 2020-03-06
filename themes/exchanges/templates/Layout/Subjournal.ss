@@ -59,10 +59,35 @@
 				$Content
 
 				<% loop $Menu(2) %>
-					<h3><a href="$Link">$Title</a></h3>
-					<p>$Content.Summary <a href="$Link">Continue reading...</a></p>
+					<% if $ClassName == "IssueHolder" %>
+						
+					<% else %>
+						<h3><a href="$Link">$Title</a></h3>
+						<p>$Content.Summary <a href="$Link">Continue reading...</a></p>
+					<% end_if %>
 
 				<% end_loop %>
+
+				<% with $IssueHolder %>
+					<% if $Children.Count > 1 %>
+						<h3><a href="$Link">Issue Archive</a></h3>
+							<ul class="card-list">
+								<% loop Children.Sort("Created DESC").Limit(4) %>
+									<li class="card-list__item card-list__item--issue">
+										<a href="$Link" class="card-list__link" style="background-image: url('{$Emblem.FocusFill(690,440).URL}')">
+											<%-- <img class="card-list__img" src="$BannerImage.FocusFill(690,440).URL"> --%>
+											<div class="card-list__overlay card-list__overlay--always-visible"></div>
+											<div class="card-list__text card-list__text--always-visible card-list__text--large">
+												<h2 class="card-list__header card-list__header--issue-title"><span>$Title</span></h2>
+													<p class="card-list__issue-date">$IssueDate</p>
+											</div>
+										</a>
+									</li>
+								<% end_loop %>
+							</ul>
+						<% end_if %>
+				<% end_with %>
+
 			</div>
 		</div>
 	</div>

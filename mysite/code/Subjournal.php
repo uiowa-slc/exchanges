@@ -26,12 +26,16 @@ class Subjournal extends Page {
 	}
 
 	public function FeaturedIssue(){
-		$holder = $this->Children()->filter(array('ClassName' => 'IssueHolder'))->First();
+		$holder = $this->IssueHolder();
 
 		if($holder && $holder->Children()){
 			return $holder->Children()->First();
 		}
-		
+	}
+
+	public function IssueHolder(){
+		$holder = $this->Children()->filter(array('ClassName' => 'IssueHolder'))->First();
+		return $holder;
 
 	}
 }
