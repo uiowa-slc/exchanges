@@ -69,7 +69,7 @@
 	    <style>.Article #poetry {opacity: 1;}</style>
 	</noscript>
 
-	<div class="row row--large">
+	<div class="row row--large article__columns">
 	    <div class="large-1 columns exchanges-sticky">
 	        <% include BlogShareIcons %>
 	    </div>
