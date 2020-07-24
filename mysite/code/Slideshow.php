@@ -12,7 +12,7 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 class Slideshow extends Article {
 
     private static $db = array(
-        'SlideshowButtonText' => 'Text'
+        'SlideshowButtonText' => 'HTMLText'
     );
 
     private static $has_one = array(
@@ -34,14 +34,22 @@ class Slideshow extends Article {
         $conf = GridFieldConfig_RelationEditor::create(10);
         $conf->addComponent(new GridFieldSortableRows('SortOrder'));
 
-        $conf->removeByName('Content');
+        $fields->removeByName('Content');
 
 
-        $fields->addFieldToTab('Root.Slideshow', TextField::create('SlideshowButtonText', 'View slideshow button text (default: "View Slideshow")'));
+        $buttonTextField = new HTMLEditorField('SlideshowButtonText', 'View slideshow button text (default: "View Slideshow")');
+        $buttonTextField->setRows(1);
+
+
+        $fields->addFieldToTab('Root.Slideshow', $buttonTextField );
         $fields->addFieldToTab('Root.Slideshow', new GridField('SlideshowImages', 'Images', $this->SlideshowImages(), $conf, 'Content'));
         $fields->removeByName('Widgets');
 
         $fields->addFieldToTab('Root.Main', HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
+
+        $gridFieldConfig2 = GridFieldConfig_RelationEditor::create();
+        $newGridField2 = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);
+        $fields->addFieldToTab('Root.Translators', $newGridField2);
 
         return $fields;
     }
