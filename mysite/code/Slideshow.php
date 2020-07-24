@@ -26,6 +26,8 @@ class Slideshow extends Article {
         ]
     ];
 
+    private static $owns = array('SlideshowImages');
+
     public function getCMSFields() {
 
         $fields = SiteTree::getCMSFields();
