@@ -1,8 +1,4 @@
-<% if ID == 260 %>
-	<% include TopBarAncient %>
-<% else %>
-	<% include TopBar %>
-<% end_if %>
+<% include TopBar %>
 
 <div class="layout layout--{$ClassName} typography">
 	<div class="row">

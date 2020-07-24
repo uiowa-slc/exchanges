@@ -21,8 +21,7 @@
 						</li>
 					<% end_loop %>
 				</ul>
-				
-				<h2>Older Issues</h2>
+
 				$Content
 			</div>
 		</div>

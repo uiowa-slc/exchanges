@@ -1,3 +1,6 @@
+<% if $isSubjournal %>
+    <% include TopBarSubjournal %>
+<% else %>
 <div class="nav-container nav-container--{$ClassName} contain-to-grid contain-to-grid--{$ClassName} <% if $Emblem %>contain-to-grid--transparent<% end_if %>">
 	<div class="nav-screen nav-screen--{$ClassName} <% if $Emblem %>nav-screen--transparent<% else %>nav-screen--opaque<% end_if %>">
 		<nav class="top-bar top-bar--{$ClassName} <% if $Emblem %>top-bar--transparent<% end_if %> has-dropshadow" data-topbar role="navigation" data-options="align:right">
@@ -18,7 +21,7 @@
 							<% if $Children %>
 								<% loop $Children %>
 									<li id="hover" class="f-dropdown" data-dropdown-content aria-hidden="true">
-									  	<a href="$Link">$Title</a>
+										<a href="$Link">$Title</a>
 									</li>
 								<% end_loop %>
 							<% end_if %>
@@ -31,3 +34,4 @@
 		</nav>
 	</div><!-- end nav-screen -->
 </div><!-- end nav-container -->
+<% end_if %>

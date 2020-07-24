@@ -28,7 +28,10 @@
                     <div class="slideshow">
                         <% loop $SlideshowImages %>
                             <% if $First %>
-                                <a href="$Image.URL" class="button large">View Slideshow</a>
+
+                                 <a href="$Image.URL" title="$Caption"><img style="display: block; margin: auto; padding-bottom: 20px;" src="$Image.ScaleWidth(300).URL">
+                                <span href="$Image.URL" class="button large">View Slideshow</span>
+                                </a>
                             <% else %>
                                 <a href="$Image.URL" title="$Caption" style="display:none;"><img src="$Image.URL" width="75" height="75"></a>
                             <% end_if %>
@@ -37,10 +40,23 @@
 
                     </div>
 
-
                     <% if $TranslatorNote %>
-                        <a href="#">View notes</a>
+                            <a role="button" class="link--dashed" href="#" data-reveal-id="translator-notes-modal">
+                                View Translator Notes
+                            </a>
                     <% end_if %>
+                    <div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
+                        <h1>Translator Notes</h1>
+                        $TranslatorNote
+                        <hr />
+                        <p class="author">
+                            <% loop $Translators %>
+                                <a href="$Link" class="text-nowrap">$Name</a><br />
+                            <% end_loop %>
+                        </p>
+                        <a class="close-reveal-modal">&#215;</a>
+                    </div>
+
                 </div>
             </div>
         </div>

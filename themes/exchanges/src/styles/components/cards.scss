@@ -8,7 +8,7 @@ $podcast-color: rgb(255, 55, 34);
 	border-bottom: 1px solid #eee;
 	border-top: 2px solid darken($primary-color,10);
 
-	background: #fff;
+	background: $body-bg;
 	margin-bottom: $column-gutter;
 
 	&--podcast{

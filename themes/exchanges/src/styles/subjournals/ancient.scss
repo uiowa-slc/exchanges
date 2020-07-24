@@ -1,0 +1,41 @@
+body{
+	background-image: url('../images/dark_wall.png');
+}
+
+.article__columns{
+    background: white;
+    color: #222;
+
+    h1,h2,h3,h4,h6,h6{
+        color: #333;
+    }
+
+    .author, .byline{
+        color: #666;
+    }
+}
+.article__container{
+	border: none;
+	background: none;
+}
+
+.byline, .author {
+    color: #eee;
+}
+
+.footer{
+	background: #121212;
+}
+
+.toc__letter-link{
+	color :white;
+}
+
+
+.cover-content h1{
+	font-weight: bold;
+}
+
+.top-bar-section ul li>a{
+	text-transform: none;
+}

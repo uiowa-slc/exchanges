@@ -8,7 +8,7 @@ use SilverStripe\Blog\Model\BlogCategory;
 
 class PageController extends ContentController {
 
-	
+
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
 	 * permissions or conditions required to allow the user to access it.
@@ -24,6 +24,28 @@ class PageController extends ContentController {
 	 *
 	 * @var array
 	 */
+	// public function getViewer($action = null) {
+	// 	$viewer = parent::getViewer($action);
+
+	// 	if(!$this->isSubjournal()){
+
+	// 		return $viewer;
+			
+	// 	}
+	// 	//echo 'true';
+	// 	$viewerTemplates = $viewer->templates();
+
+	// 	// Set your new theme
+	// 	$original = Config::inst()->get("SilverStripe\View\SSViewer", "themes");
+	// 	Config::inst()->set("SilverStripe\View\SSViewer", "themes",array('exchanges-sec-theme'));
+	// 	//print_r(Config::inst()->get('SilverStripe\View\SSViewer'));
+	// 	$pageTheme = parent::getViewer($action);
+	// 	$pageTheme->setTemplateFile("main", $viewerTemplates['main']);
+		
+	// 	// Reset to original 
+	// 	//Config::inst()->set("SilverStripe\View\SSViewer", "themes", $original);
+	// 	return $pageTheme;
+	// }
 
 	function StatusMessage() {
 		if (Session::get('ActionMessage')) {
@@ -71,5 +93,4 @@ class PageController extends ContentController {
 			return $posts;
 		}
 	}
-
 }

@@ -88,6 +88,8 @@ function styles(){
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
     './themes/exchanges/src/styles/main.scss',
+    './themes/exchanges/src/styles/ancient.scss',
+    // './themes/exchanges/src/styles/subjournals/ancient.scss',
     './themes/exchanges/src/styles/editor.scss'
   ])
     .pipe($.newer('.tmp/styles'))

@@ -267,7 +267,7 @@ class Article extends Page {
 		$fields->removeByName('MenuTitle');
 		$fields->removeByName('Contributor');
 		$fields->removeByName('Issue');
-		$fields->removeByName(Image::class);
+		$fields->removeByName('Image');
 		$fields->removeByName('Metadata');
 		$fields->removeByName('Content');
 
