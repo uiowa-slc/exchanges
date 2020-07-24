@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "54c181344f03b37f66df07739961d323",
+    "content-hash": "ab8203d862fe778cbc383ccb5a9f87bd",
     "packages": [
         {
             "name": "bramus/ansi-php",
@@ -87,6 +87,62 @@
             ],
             "description": "Colored Line Formatter for Monolog",
             "time": "2015-01-07T22:12:35+00:00"
+        },
+        {
+            "name": "bummzack/sortablefile",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bummzack/sortablefile.git",
+                "reference": "0028923180b10d7613ff239a0fd56acdf96872ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bummzack/sortablefile/zipball/0028923180b10d7613ff239a0fd56acdf96872ab",
+                "reference": "0028923180b10d7613ff239a0fd56acdf96872ab",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/asset-admin": "^1.1",
+                "silverstripe/assets": "^1.1",
+                "silverstripe/config": "^1",
+                "silverstripe/framework": "^4.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                },
+                "expose": [
+                    "client/dist"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bummzack\\SortableFile\\": "src/",
+                    "Bummzack\\SortableFile\\Tests\\": "tests/php/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "bummzack"
+                }
+            ],
+            "description": "An extension for SilverStripe 4 that adds sorting to UploadField.",
+            "keywords": [
+                "cms",
+                "file",
+                "silverstripe",
+                "sortable"
+            ],
+            "time": "2018-10-22T14:59:25+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -3765,7 +3821,8 @@
         "silverstripe/framework": 0,
         "silverstripe/cms": 0,
         "md/saml": 20,
-        "silverstripe/sharedraftcontent": 20
+        "silverstripe/sharedraftcontent": 20,
+        "bummzack/sortablefile": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
