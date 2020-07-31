@@ -8,18 +8,14 @@
                             <h1 class="article__shared-title">$Title.RAW</h1>
                         <% end_if %>
                     </div>
-                    <p class="hide-for-large-up author">
-                        <a href="#original-work">View Original Work &darr;</a>
-                    </p>
+
                 </div>
                 <div class="article__text">
                     <h2>Artist Notes</h2>
                     $ArtistNotes
                     <hr />
                 </div>
-                <p class="hide-for-large-up">
-                    <br /><br /><a href="#original-work">View Original Work &darr;</a>
-                </p>
+
             </article>
         </div>
 

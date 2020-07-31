@@ -8,7 +8,7 @@
         <div class="small-6 large-2 columns">
             <a href="$Parent.Link" class="breadcrumb">$Parent.Title</a>
         </div>
-        <div class="medium-8 show-for-large-up columns <% if not $Artist %>end<%end_if %>">
+        <div class="medium-8 columns <% if not $Artist %>end<%end_if %>">
             <ul class="tabs translation-nav " data-tab role="tablist" data-options="scroll_to_content: false">
             <li class="tab-title translation-nav__item active" role="presentation">
                 <a href="#main" role="tab" tabindex="0" aria-selected="true" aria-controls="side-by-side">
@@ -79,7 +79,7 @@
                           </section>
                           <% if $TranslatorNote %>
                           <section role="tabpanel" aria-hidden="true" class="content" id="translator-notes">
-                            <% include ArticleBodyTranslatorNotes %>
+                            <% include ArticleBodyTranslatorNotes_nolinks %>
                           </section>
                           <% end_if %>
                           <% if $ArtistNotes %>
