@@ -47,7 +47,11 @@ class Slideshow extends Article {
         $fields->addFieldToTab('Root.Slideshow', new GridField('SlideshowImages', 'Images', $this->SlideshowImages(), $conf, 'Content'));
         $fields->removeByName('Widgets');
 
+        $fields->addFieldToTab('Root.Main', new TextField('Artist', 'Artist credit'));
+
         $fields->addFieldToTab('Root.Main', HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
+
+
 
         $gridFieldConfig2 = GridFieldConfig_RelationEditor::create();
         $newGridField2 = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);

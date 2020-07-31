@@ -43,6 +43,10 @@
 
                     </div>
 
+                    <% if $Artist %>
+                        <p>Artwork by $Artist</p>
+                    <% end_if %>
+
                     <% if $TranslatorNote %>
                             <a role="button" class="link--dashed" href="#" data-reveal-id="translator-notes-modal">
                                 View Translator Notes
