@@ -45,6 +45,8 @@ class ArticleFreeform extends Article {
         $newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
         $fields->addFieldToTab('Root.Authors', $newGridField);
 
+        $fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));
+
         return $fields;
     }
 

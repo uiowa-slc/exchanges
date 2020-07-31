@@ -10,7 +10,7 @@
 					</div>
                     <% if $Translators %>
 						<span class="author">
-							Translated <% if $OriginalLanguage %>from the {$OriginalLanguage} by <% end_if %>
+							Translated <% if $OriginalLanguage %>from the {$OriginalLanguage} <% end_if %>by
 							<% loop $Translators %>
 							<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
 							<% end_loop %>
