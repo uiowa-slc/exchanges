@@ -10,7 +10,7 @@
                     </div>
                     <% if $Artist %>
                         <span class="author">
-                            Artwork by: $Artist
+                            Artwork by $Artist
                         </span>
                     <% end_if %>
                 </div>
