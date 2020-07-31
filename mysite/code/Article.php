@@ -27,6 +27,7 @@ class Article extends Page {
 		"OriginalRTL" => "Boolean",
 		'IsCompilation' => 'Boolean',
 		'Artist' => 'Text',
+        'ArtistNotes' => 'HTMLText',
 		'ShowFullSizeImage' => 'Boolean',
 		'ShowCreditsLink' => 'Boolean',
 	);
@@ -283,7 +284,10 @@ class Article extends Page {
 
 		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Unique image artist credit'));
 
-		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowCreditsLink', 'Show link to artwork credits on this piece <a href="admin/pages/edit/show/'.$this->Parent()->ID.'" target="_blank">(credits editable here &rarr;)</a>'));
+        //TODO: Make sure this shows up on Article.ss, currently used only in ArticleFreeform page type:
+        //$fields->addFieldToTab('Root.ArtistInfo', new HTMLEditorField('ArtistNotes', 'Artist Notes'));
+
+		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowCreditsLink', 'Show link to artwork credits on this piece'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowFullSizeImage', 'Enable full popup link to image'));
 		$fields->addFieldToTab("Root.Main", new UploadField("FullSizeImage", "Specific image to be used for full popup (optional, we use the 'unique image' field if this isn't filled out)"));
 
