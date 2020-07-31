@@ -41,6 +41,10 @@ class ArticleFreeform extends Article {
         $newGridField2 = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);
         $fields->addFieldToTab('Root.Translators', $newGridField2);
 
+        $gridFieldConfig = GridFieldConfig_RelationEditor::create();
+        $newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
+        $fields->addFieldToTab('Root.Authors', $newGridField);
+
         return $fields;
     }
 
