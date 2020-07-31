@@ -8,7 +8,11 @@
                             <h1 class="article__shared-title">$Title.RAW</h1>
                         <% end_if %>
                     </div>
-
+                    <% if $Artist %>
+                        <span class="author">
+                            $Artist
+                        </span>
+                    <% end_if %>
                 </div>
                 <div class="article__text">
                     <h2>Artist Notes</h2>
