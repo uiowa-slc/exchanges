@@ -38,6 +38,11 @@
             <% end_if %>
             </ul>
         </div>
+
+            <div class="small-6 large-2 columns">
+
+            </div>
+        <% end_if %>
     </div>
 
     <noscript>
