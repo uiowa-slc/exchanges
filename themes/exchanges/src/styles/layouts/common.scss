@@ -203,3 +203,9 @@ p.hanging-indent {
 p.hanging-indent:first-letter {
     margin-left: -20px;
 }
+
+#SAMLLoginForm_LoginForm fieldset{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
