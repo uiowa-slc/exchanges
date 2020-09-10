@@ -12,4 +12,3 @@ SilverStripe\SiteConfig\SiteConfig:
     - SiteConfigExtension
 SilverStripe\View\Parsers\URLSegmentFilter:
   default_allow_multibyte: true
-

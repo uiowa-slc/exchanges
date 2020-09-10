@@ -22,6 +22,7 @@ class Article extends Page {
 		"Content2" => "HTMLText",
 		"Content3" => "HTMLText",
 		"TranslatorNote" => "HTMLText",
+        "TranslatorNoteButtonText" => "Text",
 		"InTheClassroom" => "HTMLText",
 		"TranslationRTL" => "Boolean",
 		"OriginalRTL" => "Boolean",
@@ -31,6 +32,8 @@ class Article extends Page {
 		'ShowFullSizeImage' => 'Boolean',
 		'ShowCreditsLink' => 'Boolean',
 	);
+
+
 
 	private static $has_one = array(
 		'BannerImage' => Image::class,
@@ -304,6 +307,7 @@ class Article extends Page {
 		$fields->addFieldToTab('Root.Main', $translatedTitleField);
 		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('Content2', 'Translated work')->addExtraClass('stacked'));
 
+        $fields->addFieldToTab('Root.TranslatorNote', TextField::create('TranslatorNoteButtonText', 'Translator note button text (default: "Translator Notes" if left blank)'));
 		$fields->addFieldToTab('Root.TranslatorNote',HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
 
 		$fields->addFieldToTab('Root.InTheClassroom',HTMLEditorField::create('InTheClassroom', 'In the Classroom')->addExtraClass('stacked'));

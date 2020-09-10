@@ -49,11 +49,11 @@
 
                     <% if $TranslatorNote %>
                             <a role="button" class="link--dashed" href="#" data-reveal-id="translator-notes-modal">
-                                View Translator Notes
+                                <% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %>
                             </a>
                     <% end_if %>
                     <div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
-                        <h1>Translator Notes</h1>
+                        <h1><% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %></h1>
                         $TranslatorNote
                         <hr />
                         <p class="author">
@@ -75,7 +75,7 @@
 
 
     <div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
-        <h1>Translator Notes</h1>
+        <h1><% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %></h1>
         $TranslatorNote
         <hr />
         <p class="author">

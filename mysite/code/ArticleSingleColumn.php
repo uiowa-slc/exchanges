@@ -105,7 +105,7 @@ class ArticleSingleColumn extends Page {
 		}
 
 		$bylineText->setValue($byline);
-		
+
 		return $bylineText;
 
 	}
@@ -121,7 +121,7 @@ class ArticleSingleColumn extends Page {
 			}else{
 				$writerFormattedName = $writer->Name;
 			}
-				
+
 
 			if ($links == "true") {
 				$writerArray[] = '<a href="' . $writer->Link() . '" class="text-nowrap">' . $writerFormattedName . '</a>';

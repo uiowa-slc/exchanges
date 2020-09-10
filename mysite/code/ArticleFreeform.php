@@ -34,7 +34,7 @@ class ArticleFreeform extends Article {
 
         // $fields->removeByName('Content');
         $fields->removeByName('Widgets');
-
+        $fields->addFieldToTab('Root.TranslatorNote', TextField::create('TranslatorNoteButtonText', 'Translator note button text (default: "Translator Notes" if left blank)'));
         $fields->addFieldToTab('Root.TranslatorNote', HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
 
         $gridFieldConfig2 = GridFieldConfig_RelationEditor::create();

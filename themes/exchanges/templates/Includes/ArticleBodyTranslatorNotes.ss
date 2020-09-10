@@ -21,7 +21,7 @@
 					</p>
 				</div>
 				<div class="article__text">
-					<h2>Translator Notes</h2>
+					<h2><% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %></h2>
 					$TranslatorNote
 					<hr />
 					<% if $Translators %>

@@ -17,7 +17,7 @@
                             <% if $TranslatorNote %>
                                 <br />
                                 <a role="button" class="link--dashed" href="#" data-reveal-id="translator-notes-modal">
-                                    View Translator Notes
+                                    <% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %>
                                 </a>
                             <% end_if %>
                             <% if $InTheClassroom %>

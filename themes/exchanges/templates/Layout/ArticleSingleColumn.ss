@@ -42,7 +42,7 @@
 									<% if $Title %>
 									<p class="subheader">$Title</p>
 									<% end_if %>
-								<% else %> 
+								<% else %>
 									<h1>$Title</h1>
 								<% end_if %>
 							</header>
@@ -50,24 +50,24 @@
 							<p class="poem-info">
 								<% if $Translators %>
 									<span class="author">
-										Translated <% if $OriginalLanguage %>from the {$OriginalLanguage} <% end_if %> by 
+										Translated <% if $OriginalLanguage %>from the {$OriginalLanguage} <% end_if %> by
 										<% loop $Translators %>
 										<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
 										<% end_loop %>
-										
-										<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal">View Translator Notes</a><% end_if %>
+
+										<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal"><% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %></a><% end_if %>
 									</span>
 								<% else %>
-						
+
 								<% end_if %>
-									<% if $Translators %><br /><% end_if %><span class="author">Original By 
+									<% if $Translators %><br /><% end_if %><span class="author">Original By
 									<% loop $Authors %>
 										<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
 									<% end_loop %>
-									</span>		
+									</span>
 							</p>
 							<% end_if %>
-							
+
 								$Content
 								$Form
 
@@ -75,7 +75,7 @@
 					</div>
 
 				</div>
-				
+
 			</div>
 		</div>
 
@@ -83,7 +83,7 @@
 	<% include ArticleSubnav %>
 
 	<div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
-		<h1>Translator Notes</h1>
+		<h1><% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %></h1>
 		$TranslatorNote
 		<hr />
 		<p class="author">

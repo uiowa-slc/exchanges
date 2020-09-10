@@ -1,74 +1,84 @@
 {
-    "name": "silverstripe/installer",
-    "description": "The SilverStripe Framework Installer",
-    "require": {
-        "php": ">=5.5",
-        "silverstripe/framework": "4.5.*@stable",
-        "silverstripe/cms": "4.5.*@stable",
-        "silverstripe/recipe-plugin": "*",
-        "silverstripe/recipe-cms": "*",
-        "silverstripe/reports": "*",
-        "silverstripe/siteconfig": "*",
-        "undefinedoffset/sortablegridfield": "*",
-        "silverstripe/blog": "*",
-        "silverstripe/widgets": "*",
-        "jonom/focuspoint": "*",
-        "jonom/silverstripe-betternavigator": "*",
-        "md/saml": "dev-md",
-        "md/deploy-helper": "*",
-        "md/division-analytics": "*",
-        "gorriecoe/silverstripe-webfonts": "*",
-        "silverstripe/sharedraftcontent": "dev-master",
-        "bummzack/sortablefile": "^2.0@dev"
+  "name": "silverstripe/installer",
+  "description": "The SilverStripe Framework Installer",
+  "require":
+  {
+    "php": ">=5.5",
+    "silverstripe/framework": "4.6.*@stable",
+    "silverstripe/cms": "4.6.*@stable",
+    "silverstripe/recipe-plugin": "*",
+    "silverstripe/recipe-cms": "*",
+    "silverstripe/reports": "*",
+    "silverstripe/siteconfig": "*",
+    "undefinedoffset/sortablegridfield": "*",
+    "silverstripe/blog": "*",
+    "silverstripe/widgets": "*",
+    "jonom/focuspoint": "*",
+    "jonom/silverstripe-betternavigator": "*",
+    "md/saml": "dev-md",
+    "md/deploy-helper": "*",
+    "md/division-analytics": "*",
+    "gorriecoe/silverstripe-webfonts": "*",
+    "silverstripe/sharedraftcontent": "dev-master",
+    "bummzack/sortablefile": "^2.0@dev"
+  },
+  "require-dev":
+  {
+    "phpunit/phpunit": "^5.7"
+  },
+  "extra":
+  {
+    "resources-dir": "_resources",
+    "expose": [
+      "themes/exchanges/dist/favicons",
+      "themes/exchanges/dist/styles",
+      "themes/exchanges/dist/scripts",
+      "themes/exchanges/dist/images",
+      "themes/exchanges/dist/fonts"
+    ],
+    "project-files-installed": [
+      "app/.htaccess",
+      "app/_config.php",
+      "app/_config/mimevalidator.yml",
+      "app/_config/mysite.yml",
+      "app/src/Page.php",
+      "app/src/PageController.php"
+    ],
+    "public-files-installed": [
+      ".htaccess",
+      "index.php",
+      "install-frameworkmissing.html",
+      "install.php",
+      "web.config"
+    ]
+  },
+  "repositories":
+  {
+    "0":
+    {
+      "type": "vcs",
+      "url": "https://github.com/jacobbuck/silverstripe-colorfulimage"
     },
-    "require-dev": {
-        "phpunit/phpunit": "^5.7"
+    "1":
+    {
+      "type": "vcs",
+      "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
     },
-    "extra": {
-        "resources-dir": "_resources",
-        "expose": [
-            "themes/exchanges/dist/favicons",
-            "themes/exchanges/dist/styles",
-            "themes/exchanges/dist/scripts",
-            "themes/exchanges/dist/images",
-            "themes/exchanges/dist/fonts"
-        ],
-        "project-files-installed": [
-            "app/.htaccess",
-            "app/_config.php",
-            "app/_config/mysite.yml",
-            "app/src/Page.php",
-            "app/src/PageController.php"
-        ],
-        "public-files-installed": [
-            ".htaccess",
-            "index.php",
-            "install-frameworkmissing.html",
-            "install.php",
-            "web.config"
-        ]
+    "2":
+    {
+      "type": "vcs",
+      "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
     },
-    "repositories": {
-        "0": {
-            "type": "vcs",
-            "url": "https://github.com/jacobbuck/silverstripe-colorfulimage"
-        },
-        "1": {
-            "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
-        },
-        "2": {
-            "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
-        },
-        "3": {
-            "type": "vcs",
-            "url": "https://github.com/PlatoCreative/silverstripe-typekit"
-        },
-        "repo-name": {
-            "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
-        }
+    "3":
+    {
+      "type": "vcs",
+      "url": "https://github.com/PlatoCreative/silverstripe-typekit"
     },
-    "minimum-stability": "dev"
+    "repo-name":
+    {
+      "type": "vcs",
+      "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
+    }
+  },
+  "minimum-stability": "dev"
 }

@@ -49,6 +49,7 @@ class Slideshow extends Article {
 
         $fields->addFieldToTab('Root.Main', new TextField('Artist', 'Artist credit'));
 
+        $fields->addFieldToTab('Root.Main', new TextField('TranslatorNoteButtonText', 'Translator note button text ("default: "Translator Notes" when left blank)'));
         $fields->addFieldToTab('Root.Main', HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
 
 
