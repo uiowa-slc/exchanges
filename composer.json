@@ -34,7 +34,8 @@
       "themes/exchanges/dist/styles",
       "themes/exchanges/dist/scripts",
       "themes/exchanges/dist/images",
-      "themes/exchanges/dist/fonts"
+      "themes/exchanges/dist/fonts",
+      "themes/exchanges/css"
     ],
     "project-files-installed": [
       "app/.htaccess",

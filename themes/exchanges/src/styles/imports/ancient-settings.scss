@@ -68,8 +68,10 @@ $column-gutter: rem-calc(35);
 // We use these to control various global styles
 $body-bg: #222;
 $body-font-color: #fff;
-$body-font-family: "garamond-premier-pro", serif;
-$arabic-font-family: "Noto Serif", serif;
+$body-font-family: "garamond-premier-pro",
+serif;
+$arabic-font-family: "Noto Serif",
+serif;
 
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -138,7 +140,8 @@ $arabic-font-family: "Noto Serif", serif;
 
 // We use these to control header font styles
 //$header-font-family: "century-gothic", "sans-serif";
-$header-font-family: mrs-eaves-xl-serif, serif;
+$header-font-family: mrs-eaves-xl-serif,
+serif;
 
 // $header-font-weight: normal;
 // $header-font-style: normal;
@@ -151,11 +154,10 @@ $header-line-height: 0.95;
 
 // We use these to control header font sizes
 // $h1-font-size: rem-calc(44);
- $h2-font-size: rem-calc(31);
- $h3-font-size: rem-calc(22);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h2-font-size: rem-calc(31);
+$h3-font-size: rem-calc(22);
+$h4-font-size: rem-calc(18);
+$h5-font-size: rem-calc(16);
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
@@ -722,7 +724,8 @@ $off-canvas-overlay-box-shadow: none;
 // Off Canvas Back-Link Overlay
 // $off-canvas-overlay-transition: background 300ms ease;
 // $off-canvas-overlay-cursor: pointer;
-$off-canvas-overlay-box-shadow: -1px 0 4px rgba(#000, 0.5), 4px 0 4px rgba(#000, 0.5);
+$off-canvas-overlay-box-shadow: -1px 0 4px rgba(#000, 0.5),
+4px 0 4px rgba(#000, 0.5);
 
 // $off-canvas-overlay-background: rgba(#FFF, 0.2);
 // $off-canvas-overlay-background-hover: rgba(#FFF, 0.05);
@@ -1101,12 +1104,12 @@ $side-nav-font-family: $header-font-family;
 
 // $include-html-tabs-classes: $include-html-classes;
 
- $tabs-navigation-padding: rem-calc(10);
+$tabs-navigation-padding: rem-calc(10);
 $tabs-navigation-bg-color: $body-bg;
- $tabs-navigation-active-bg-color: $primary-color;
+$tabs-navigation-active-bg-color: $primary-color;
 // $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
 $tabs-navigation-font-color: $body-font-color;
- $tabs-navigation-font-size: rem-calc(13);
+$tabs-navigation-font-size: rem-calc(13);
 $tabs-navigation-font-family: $header-font-family;
 
 // $tabs-content-margin-bottom: rem-calc(24);

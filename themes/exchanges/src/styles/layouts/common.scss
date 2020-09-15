@@ -1,4 +1,3 @@
-
 .row--large {
     max-width: 1600px;
 }
@@ -12,7 +11,8 @@
     max-width: 100%;
 }
 
-.row--fluid:before, .row--fluid:after {
+.row--fluid:before,
+.row--fluid:after {
     content: " ";
     display: table;
 }
@@ -51,7 +51,12 @@ h3 {
     font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     letter-spacing: 0.7;
 }
 
@@ -96,9 +101,11 @@ hr {
 .clearfix {
     clear: both;
 }
-.padding-top{
+
+.padding-top {
     padding-top: rem-calc(20);
 }
+
 .layout {
     min-height: 65vh;
     padding-top: $column-gutter / 2;
@@ -193,8 +200,37 @@ hr {
         font-size: 90%;
     }
 
-    .columns, .column {}
+    .columns,
+    .column {}
 }
+
+
+
+.heading-sized-betwixt {
+    font-family: $header-font-family;
+    font-size: rem-calc(40);
+}
+
+.heading-sized-between {
+    font-family: $header-font-family;
+    font-size: rem-calc(36);
+}
+
+.smallcaps {
+    font-variant: small-caps;
+}
+
+
+
+.small-text {
+    font-size: 11px;
+}
+
+.fixed-width {
+    font-size: 13px;
+    font-family: Monaco, "Lucida Console", monospace;
+}
+
 
 p.hanging-indent {
     padding-left: 20px;
@@ -204,7 +240,7 @@ p.hanging-indent:first-letter {
     margin-left: -20px;
 }
 
-#SAMLLoginForm_LoginForm fieldset{
+#SAMLLoginForm_LoginForm fieldset {
     border: none;
     margin: 0;
     padding: 0;

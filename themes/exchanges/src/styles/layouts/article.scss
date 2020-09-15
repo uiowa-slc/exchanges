@@ -2,6 +2,7 @@
     line-height: 1;
     margin-bottom: $column-gutter;
 }
+
 //Artist credit main
 .article__artist-credit {
     color: #797979;
@@ -11,10 +12,12 @@
     text-align: right;
     margin-bottom: rem-calc(5);
     line-height: 1.2;
+
     @media #{$large-up} {
         //padding-right: 50px;
     }
 }
+
 //Artwork BIOS/CREDIT LINK (not actual credit)
 .article__artwork-credit {
     color: #797979;
@@ -29,7 +32,7 @@
         //padding-right: 50px;
     }
 
-    &--small{
+    &--small {
         font-size: rem-calc(10);
     }
 }
@@ -37,6 +40,7 @@
 .artwork-credit__link {
     color: $primary-color;
 }
+
 .article__full-size-image {
     color: #797979;
     font-family: $header-font-family;
@@ -92,15 +96,19 @@
 }
 
 .article__body {
+
+
     &--poem-lineheight {
         p {
             line-height: 1.3em;
             margin-bottom: 0;
         }
     }
-    .small-text{
+
+    .small-text {
         font-size: 11px;
     }
+
     .hanging-indent {
         padding-left: 20px;
     }
@@ -108,12 +116,14 @@
     .hanging-indent:first-letter {
         margin-left: -20px;
     }
-    .fixed-width{
+
+    .fixed-width {
         font-size: 13px;
         font-family: Monaco, "Lucida Console", monospace;
     }
 
-    img.leftAlone, img.rightAlone {
+    img.leftAlone,
+    img.rightAlone {
         width: 100%;
         margin: rem-calc(10) auto;
         border: 1px solid #eee;
@@ -132,15 +142,22 @@
     }
 }
 
-.article__body--lang-ar, .article__body--lang-ku {
+.article__body--lang-ar,
+.article__body--lang-ku {
     font-family: $arabic-font-family;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: $arabic-font-family;
     }
 }
 
-.article__text--lang-ar, .article__text--lang-ku {
+.article__text--lang-ar,
+.article__text--lang-ku {
     font-size: rem-calc(17);
 }
 
@@ -151,6 +168,7 @@
     background-color: #666;
     width: 100%;
     height: 33.33vw;
+
     @media #{$small-up} {
         height: 275px;
         height: 33.33vw;
@@ -239,7 +257,7 @@
     }
 }
 
-.translation-nav .translation-nav__item.active > a {
+.translation-nav .translation-nav__item.active>a {
     color: #fff;
 }
 

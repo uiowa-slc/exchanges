@@ -1,33 +1,55 @@
 @import "imports/settings";
-//@import 'foundation/components/type';
+// @import 'foundation/components/type';
+
+
 
 body {
-	font-family: "garamond-premier-pro", serif;
-	font-size: 20px;
-	padding: 10px;
-	.smallcaps {
-		font-variant: small-caps;
-	}
+    font-family: "garamond-premier-pro", serif;
+    font-size: 20px;
+    padding: 10px;
 
-	p{
-		margin-bottom: 0;
-		margin-top: 0;
-	}
 
-	// .hanging-indent {
-	// 	padding-left: 20px;
-	// }
 
-	// .hanging-indent:first-letter {
-	// 	margin-left: -20px;
-	// }
+}
 
-	.small-text{
-		font-size: 11px;
-	}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $header-font-family;
+}
 
-	.fixed-width{
-		font-size: 13px;
-		font-family: Monaco, "Lucida Console", monospace;
-	}
+.heading-sized-betwixt {
+    font-family: $header-font-family;
+    font-size: rem-calc(40);
+}
+
+.heading-sized-between {
+    font-family: $header-font-family;
+    font-size: rem-calc(36);
+}
+
+.smallcaps {
+    font-variant: small-caps;
+}
+
+
+.hanging-indent {
+    padding-left: 20px;
+}
+
+.hanging-indent:first-letter {
+    margin-left: -20px;
+}
+
+
+.small-text {
+    font-size: 11px;
+}
+
+.fixed-width {
+    font-size: 13px;
+    font-family: Monaco, "Lucida Console", monospace;
 }
