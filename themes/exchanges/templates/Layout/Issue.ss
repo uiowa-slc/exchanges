@@ -6,11 +6,15 @@
 			<h2 class="banner text-center">In this Issue:</h2>
 
 			<p class="text-center"><a class="link--dashed toc__letter-link"href="$LetterLink">$LetterTitle</a></p>
-			<% if $HasArticleImages %>
-				<% include IssueTocImages %>
-			<% else %>
-				<% include IssueTocNoImages %>
-			<% end_if %>
+
+            <% if $UseCenteredToc %>
+                <% include IssueTocNoImages %>
+            <% else_if $HasArticleImages %>
+                <% include IssueTocImages %>
+            <% else %>
+                <% include IssueTocNoImages %>
+            <% end_if %>
+
 			<p class="text-center"><a href="$Children.First.Link" class="button large">Start reading &rarr;</a></p>
 			<% if $ArtworkCredits %>
 				<p class="text-center">

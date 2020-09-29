@@ -1,23 +1,25 @@
 <?php
 
-use SilverStripe\Assets\Image;
 use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Forms\DropdownField;
-use SilverStripe\Forms\CheckboxField;
-use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Assets\Image;
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\DropdownField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextField;
+
 class Issue extends Page {
 
 	private static $db = array(
-		'IssueDate'                   => 'Text',
-		'IssueNumber'                 => 'Text',
+		'IssueDate' => 'Text',
+		'IssueNumber' => 'Text',
 		'LetterFromEditorCustomTitle' => 'Text',
-		'LetterFromEditor'            => 'HTMLText',
-		'Transparency'                => 'Varchar(100)',
-		'UseTitleDropShadow'          => 'Boolean',
-		'ArtworkCredits'			  => 'HTMLText',
-		'ArtworkCreditsTitle'		  => 'Text',
+		'LetterFromEditor' => 'HTMLText',
+		'Transparency' => 'Varchar(100)',
+		'UseTitleDropShadow' => 'Boolean',
+		'UseCenteredToc' => 'Boolean',
+		'ArtworkCredits' => 'HTMLText',
+		'ArtworkCreditsTitle' => 'Text',
 	);
 
 	private static $has_one = array(
@@ -26,7 +28,7 @@ class Issue extends Page {
 	);
 
 	private static $owns = array(
-		'Emblem'
+		'Emblem',
 	);
 
 	private static $icon_class = 'font-icon-book-open';
@@ -52,12 +54,11 @@ class Issue extends Page {
 		$fields->removeByName('Content');
 		$fields->addFieldToTab('Root.Main', new UploadField('Emblem', 'Issue cover'));
 
-
 		$alphadropdownfield = DropdownField::create(
 			'Transparency',
 			'Cover transparency',
 			array(
-				'0'   => '100% (Original artwork color, no screen)',
+				'0' => '100% (Original artwork color, no screen)',
 				'0.1' => '90%',
 				'0.2' => '80%',
 				'0.3' => '70%',
@@ -74,7 +75,7 @@ class Issue extends Page {
 		$fields->addFieldToTab('Root.Main', $alphadropdownfield);
 
 		$fields->addFieldToTab('Root.Main', new CheckboxField('UseTitleDropShadow', 'Use a subtle shadow behind issue title (works well when there\'s a lot of white or bright colors in the artwork)'));
-
+		$fields->addFieldToTab('Root.Main', new CheckboxField('UseCenteredToc', 'Use the centered table of contents (no images shown)'));
 		$fields->addFieldToTab('Root.Main', $dateField = new TextField('IssueDate', 'Issue date'));
 		//$fields->addFieldToTab('Root.Main', new TextField('IssueNumber', 'Issue number'));
 		$fields->addFieldToTab('Root.Main', new TextField('LetterFromEditorCustomTitle', 'Letter From The Editors Custom Title (optional)'));
@@ -98,12 +99,12 @@ class Issue extends Page {
 		}
 	}
 
-	public function HasArticleImages(){
+	public function HasArticleImages() {
 		$children = $this->Children();
 
-		foreach($children as $child){
+		foreach ($children as $child) {
 
-			if($child->BannerImageID != 0){
+			if ($child->BannerImageID != 0) {
 				return true;
 			}
 		}
@@ -119,11 +120,11 @@ class Issue extends Page {
 	}
 
 	public function getCreditsLink() {
-		return $this->Link().'credits/';
+		return $this->Link() . 'credits/';
 	}
 
 	public function getLetterLink() {
-		return $this->Link().'letter/';
+		return $this->Link() . 'letter/';
 	}
 
 	public function RandomArticles() {
