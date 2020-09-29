@@ -1,53 +1,50 @@
 <?php
-use SilverStripe\Assets\Image;
-use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\TextField;
-use Bummzack\SortableFile\Forms\SortableUploadField;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
-use UndefinedOffset\SortableGridField\Forms\GridFieldSortableRows;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextField;
 
 class ArticleFreeform extends Article {
 
-    private static $db = array(
+	private static $db = array(
 
-    );
+	);
 
-    private static $has_one = array(
-    );
-    private static $many_many = [
+	private static $has_one = array(
+	);
+	private static $many_many = [
 
-    ];
-    private static $many_many_extraFields = [
+	];
+	private static $many_many_extraFields = [
 
-    ];
+	];
 
-    public function getCMSFields() {
+	public function getCMSFields() {
 
-        $fields = SiteTree::getCMSFields();
+		$fields = SiteTree::getCMSFields();
 
+		$fields->addFieldToTab('Root.ArtistInfo', new TextField('Artist', 'Artist Credit'));
+		$fields->addFieldToTab('Root.ArtistInfo', new HTMLEditorField('ArtistNotes', 'Artist Notes'));
 
-        $fields->addFieldToTab('Root.ArtistInfo', new TextField('Artist', 'Artist Credit'));
-        $fields->addFieldToTab('Root.ArtistInfo', new HTMLEditorField('ArtistNotes', 'Artist Notes'));
+		// $fields->removeByName('Content');
+		$fields->removeByName('Widgets');
+		$fields->addFieldToTab('Root.TranslatorNote', TextField::create('TranslatorNoteButtonText', 'Translator note button text (default: "Translator Notes" if left blank)'));
+		$fields->addFieldToTab('Root.TranslatorNote', HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
 
-        // $fields->removeByName('Content');
-        $fields->removeByName('Widgets');
-        $fields->addFieldToTab('Root.TranslatorNote', TextField::create('TranslatorNoteButtonText', 'Translator note button text (default: "Translator Notes" if left blank)'));
-        $fields->addFieldToTab('Root.TranslatorNote', HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
+		$fields->addFieldToTab('Root.InTheClassroom', HTMLEditorField::create('InTheClassroom', 'In the Classroom')->addExtraClass('stacked'));
 
-        $gridFieldConfig2 = GridFieldConfig_RelationEditor::create();
-        $newGridField2 = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);
-        $fields->addFieldToTab('Root.Translators', $newGridField2);
+		$gridFieldConfig2 = GridFieldConfig_RelationEditor::create();
+		$newGridField2 = new GridField('Translators', 'Translators', $this->Translators(), $gridFieldConfig2);
+		$fields->addFieldToTab('Root.Translators', $newGridField2);
 
-        $gridFieldConfig = GridFieldConfig_RelationEditor::create();
-        $newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
-        $fields->addFieldToTab('Root.Authors', $newGridField);
+		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
+		$newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
+		$fields->addFieldToTab('Root.Authors', $newGridField);
 
-        $fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'), 'Content');
+		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'), 'Content');
 
-        return $fields;
-    }
+		return $fields;
+	}
 
 }
