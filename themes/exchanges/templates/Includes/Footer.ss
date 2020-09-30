@@ -5,11 +5,9 @@
 		        <div class="small-8 medium-4 large-3 columns">
 
 						<a href="$absoluteBaseURL" class="hide-print logo"><img src="$ThemeDir/dist/images/exchanges-logo.png" alt="Exchanges" style="margin-top: -20px;"></a><br />
-						<a href="http://www.uiowa.edu" class="hide-print uiowa logo"><img src="$ThemeDir/dist/images/uiowa.png" alt="Division Of Student Life" style="margin-top: -20px;"></a><br />
 
 
-
-						<p><a href="http://clas.uiowa.edu" target="_blank">College of Liberal Arts & Sciences</a><br />
+						<p><a href="https://www.uiowa.edu">The University of Iowa</a><br /><a href="http://clas.uiowa.edu" target="_blank">College of Liberal Arts & Sciences</a><br />
 						<a href="http://clas.uiowa.edu/dwllc" target="_blank">Division of World Languages, Literatures & Cultures</a><br />
 111 Phillips Hall<br />
 Iowa City, IA 52242-1323
