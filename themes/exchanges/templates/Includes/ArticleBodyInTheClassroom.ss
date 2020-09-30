@@ -21,8 +21,8 @@
             <div class="article__text">
                 <h2>In the Classroom</h2>
                 $InTheClassroom
-                <hr />
-<%--                 <% if $Translators %>
+                <%--<hr />
+                 <% if $Translators %>
                     <p>
                     <% loop $Translators %>
                         <a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
