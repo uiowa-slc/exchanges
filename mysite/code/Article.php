@@ -1,13 +1,13 @@
 <?php
 
-use SilverStripe\Assets\Image;
-use SilverStripe\Forms\CheckboxField;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
-use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Assets\Image;
 use SilverStripe\Core\Convert;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\FieldType\DBText;
 
 class Article extends Page {
@@ -19,21 +19,20 @@ class Article extends Page {
 		'UntranslatedTitle' => 'HTMLText',
 		'TranslatedTitle' => 'HTMLText',
 		'Translator' => 'HTMLText',
-		"Content2" => "HTMLText",
-		"Content3" => "HTMLText",
-		"TranslatorNote" => "HTMLText",
-        "TranslatorNoteButtonText" => "Text",
-		"InTheClassroom" => "HTMLText",
-		"TranslationRTL" => "Boolean",
-		"OriginalRTL" => "Boolean",
+		'Content2' => 'HTMLText',
+		'Content3' => 'HTMLText',
+		'TranslatorNote' => 'HTMLText',
+		'TranslatorNoteButtonText' => 'Text',
+		'OriginalWorkButtonText' => 'Text',
+		'InTheClassroom' => 'HTMLText',
+		'TranslationRTL' => 'Boolean',
+		'OriginalRTL' => 'Boolean',
 		'IsCompilation' => 'Boolean',
 		'Artist' => 'Text',
-        'ArtistNotes' => 'HTMLText',
+		'ArtistNotes' => 'HTMLText',
 		'ShowFullSizeImage' => 'Boolean',
 		'ShowCreditsLink' => 'Boolean',
 	);
-
-
 
 	private static $has_one = array(
 		'BannerImage' => Image::class,
@@ -287,8 +286,8 @@ class Article extends Page {
 
 		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Unique image artist credit'));
 
-        //TODO: Make sure this shows up on Article.ss, currently used only in ArticleFreeform page type:
-        //$fields->addFieldToTab('Root.ArtistInfo', new HTMLEditorField('ArtistNotes', 'Artist Notes'));
+		//TODO: Make sure this shows up on Article.ss, currently used only in ArticleFreeform page type:
+		//$fields->addFieldToTab('Root.ArtistInfo', new HTMLEditorField('ArtistNotes', 'Artist Notes'));
 
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowCreditsLink', 'Show link to artwork credits on this piece'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowFullSizeImage', 'Enable full popup link to image'));
@@ -299,6 +298,7 @@ class Article extends Page {
 		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalTitleUseAltFont', 'Use an alternate font for the original title (only check if the original title looks strange)'));
 		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalRTL', 'Original language is read/written from right to left'));
+		$fields->addFieldToTab('Root.Main', TextField::create('OriginalWorkButtonText', 'Original Work Button Text')->setDescription(' (default: "Original" if left blank)'));
 		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('Content', 'Original work')->addExtraClass('stacked'));
 
 		$translatedTitleField = new HTMLEditorField('TranslatedTitle', ' Translated title');
@@ -307,10 +307,10 @@ class Article extends Page {
 		$fields->addFieldToTab('Root.Main', $translatedTitleField);
 		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('Content2', 'Translated work')->addExtraClass('stacked'));
 
-        $fields->addFieldToTab('Root.TranslatorNote', TextField::create('TranslatorNoteButtonText', 'Translator note button text (default: "Translator Notes" if left blank)'));
-		$fields->addFieldToTab('Root.TranslatorNote',HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
+		$fields->addFieldToTab('Root.TranslatorNote', TextField::create('TranslatorNoteButtonText', 'Translator note button text (default: "Translator Notes" if left blank)'));
+		$fields->addFieldToTab('Root.TranslatorNote', HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
 
-		$fields->addFieldToTab('Root.InTheClassroom',HTMLEditorField::create('InTheClassroom', 'In the Classroom')->addExtraClass('stacked'));
+		$fields->addFieldToTab('Root.InTheClassroom', HTMLEditorField::create('InTheClassroom', 'In the Classroom')->addExtraClass('stacked'));
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
 		$newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
@@ -335,6 +335,15 @@ class Article extends Page {
 		} else {
 			return " translates";
 		}
+	}
+
+	public function getOriginalWorkButtonTextCustom() {
+		if ($this->OriginalWorkButtonText) {
+			return $this->OriginalWorkButtonText;
+		} else {
+			return 'Original';
+		}
+
 	}
 
 	public function getMenuTitle() {
@@ -402,12 +411,11 @@ class Article extends Page {
 
 		foreach ($writers as $writer) {
 
-			if($links == "true"){
+			if ($links == "true") {
 				$writerFormattedName = str_replace(' ', '&nbsp;', $writer->Name);
-			}else{
+			} else {
 				$writerFormattedName = $writer->Name;
 			}
-
 
 			if ($links == "true") {
 				$writerArray[] = '<a href="' . $writer->Link() . '" class="text-nowrap">' . $writerFormattedName . '</a>';
