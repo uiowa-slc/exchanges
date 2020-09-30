@@ -119,12 +119,12 @@
 	<div id="in-the-classroom-modal" class="reveal-modal medium" data-reveal>
 	    <h1>In the Classroom</h1>
 	    $InTheClassroom
-	    <hr />
+<%-- 	    <hr />
 	    <p class="author">
 	        <% loop $Translators %>
 	            <a href="$Link" class="text-nowrap">$Name</a><br />
 	        <% end_loop %>
-	    </p>
+	    </p> --%>
 	    <a class="close-reveal-modal">&#215;</a>
 	</div>
 </div>
