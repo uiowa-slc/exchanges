@@ -346,6 +346,16 @@ class Article extends Page {
 
 	}
 
+	public function getTranslatorNoteButtonTextCustom() {
+
+		if ($this->TranslatorNoteButtonText) {
+			return $this->TranslatorNoteButtonText;
+		} else {
+			return 'Translator Note';
+		}
+
+	}
+
 	public function getMenuTitle() {
 		if ($value = parent::getMenuTitle()) {
 			return Convert::html2raw($value);
@@ -390,9 +400,9 @@ class Article extends Page {
 		}
 
 		if ($this->Authors()->First()) {
-
+			$originalButtonText = $this->getOriginalWorkButtonTextCustom();
 			//Original by:
-			$byline .= 'Original by ';
+			$byline .= $originalButtonText . ' by ';
 
 			//Person A and Person B.
 			$byline .= $this->getWriterListNice($links, $this->Authors());

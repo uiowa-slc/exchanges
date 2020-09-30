@@ -17,11 +17,11 @@
                         </span>
                     <% end_if %>
                     <p class="hide-for-large-up author">
-                        <a href="#original-work">View Original Work &darr;</a>
+                        <a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>
                     </p>
                 </div>
                 <div class="article__text">
-                    <h2><% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %></h2>
+                    <h2>$TranslatorNoteButtonTextCustom</h2>
                     $TranslatorNote
                     <hr />
                     <% if $Translators %>
@@ -33,7 +33,7 @@
                     <% end_if %>
                 </div>
                 <p class="hide-for-large-up">
-                    <br /><br /><a href="#original-work">View Original Work &darr;</a>
+                    <br /><br /><a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>
                 </p>
             </article>
         </div>

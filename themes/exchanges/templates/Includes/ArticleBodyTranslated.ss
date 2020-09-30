@@ -16,7 +16,7 @@
                         <% if $TranslatorNote %>
                             <br />
                             <a role="button" class="link--dashed" href="#" data-reveal-id="translator-notes-modal">
-                                <% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %>
+                                $TranslatorNoteButtonTextCustom
                             </a>
                         <% end_if %>
                         <% if $InTheClassroom %>
@@ -27,14 +27,14 @@
                         <% end_if %>
                     </span>
                 <p class="hide-for-large-up author">
-                    <a href="#original-work">View Original Work &darr;</a>
+                    <a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>
                 </p>
             </div>
             <div class="article__text">
             $Content2
             </div>
             <p class="hide-for-large-up">
-                <br /><br /><a href="#original-work">View Original Work &darr;</a>
+                <br /><br /><a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>
             </p>
         </article>
     </div>

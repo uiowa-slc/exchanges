@@ -15,7 +15,7 @@
                     <% end_loop %>
                 </span>
                 <p class="hide-for-large-up author">
-                    <a href="#original-work">View Original Work &darr;</a>
+                    <a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>
                 </p>
             </div>
             <div class="article__text">
@@ -31,7 +31,7 @@
                 <% end_if %> --%>
             </div>
             <p class="hide-for-large-up">
-                <br /><br /><a href="#original-work">View Original Work &darr;</a>
+                <br /><br /><a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>
             </p>
         </article>
     </div>

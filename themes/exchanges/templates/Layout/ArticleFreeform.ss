@@ -18,7 +18,7 @@
             <% if $TranslatorNote %>
                 <li class="tab-title translation-nav__item" role="presentation">
                     <a href='#translator-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
-                        <% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %>
+                        $TranslatorNoteButtonTextCustom
                     </a>
                 </li>
             <% end_if %>
@@ -84,7 +84,7 @@
     <% include ArticleSubnav %>
 
     <div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
-        <h1><% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %></h1>
+        <h1>$TranslatorNoteButtonTextCustom</h1>
         $TranslatorNote
         <hr />
         <p class="author">

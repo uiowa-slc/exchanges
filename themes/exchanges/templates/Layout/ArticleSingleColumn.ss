@@ -55,7 +55,7 @@
 										<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
 										<% end_loop %>
 
-										<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal"><% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %></a><% end_if %>
+										<% if $TranslatorNote %><br /><a role="button" class="" href="#" data-reveal-id="translator-notes-modal">$TranslatorNoteButtonTextCustom</a><% end_if %>
 									</span>
 								<% else %>
 
@@ -83,7 +83,7 @@
 	<% include ArticleSubnav %>
 
 	<div id="translator-notes-modal" class="reveal-modal medium" data-reveal>
-		<h1><% if $TranslatorNoteButtonText %>$TranslatorNoteButtonText<% else %>Translator Notes<%end_if %></h1>
+		<h1>$TranslatorNoteButtonTextCustom</h1>
 		$TranslatorNote
 		<hr />
 		<p class="author">
