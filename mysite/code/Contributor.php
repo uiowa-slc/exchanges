@@ -1,13 +1,14 @@
 <?php
 
 use SilverStripe\Assets\Image;
-use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataObject;
+
 class Contributor extends DataObject {
 
 	private static $db = array(
-		'Name'                => 'Text',
+		'Name' => 'Text',
 		'BiographicalDetails' => 'HTMLText',
 	);
 
@@ -22,12 +23,12 @@ class Contributor extends DataObject {
 	public function Link() {
 		$contributorPage = ContributorPage::get()->First();
 		if ($contributorPage) {
-			return $contributorPage->Link().'show/'.$this->ID;
+			return $contributorPage->Link('show/' . $this->ID);
 		}
 	}
 
 	public function getFormattedName() {
-		$name          = $this->Name;
+		$name = $this->Name;
 		$formattedName = str_replace('/\s+/', '&nbsp;', $this->Name);
 		return $formattedName;
 
