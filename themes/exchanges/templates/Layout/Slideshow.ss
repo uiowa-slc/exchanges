@@ -64,7 +64,7 @@
                     </div>
 
                     <% if $Artist %>
-                        <p>Artwork by $Artist</p>
+                        <p>Art by: $Artist</p>
                     <% end_if %>
 
                     <% if $TranslatorNote %>
