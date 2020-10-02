@@ -1,16 +1,18 @@
 <?php
 
+use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Core\Convert;
-use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Forms\TextField;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
-use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
+
 class ArticleSingleColumn extends Page {
 	private static $db = array(
-		'Title'  => 'HTMLText',
+		'Title' => 'HTMLText',
 		'TranslatedTitle' => 'HTMLText',
 		'Artist' => 'Text',
 		'OriginalLanguage' => 'Text',
@@ -20,15 +22,15 @@ class ArticleSingleColumn extends Page {
 		'BannerImage' => Image::class,
 	);
 
-	private static $plural_name       = 'Articles';
+	private static $plural_name = 'Articles';
 	private static $belongs_many_many = array(
 		'Authors' => 'Author',
 		'Translators' => 'Translator',
 	);
 
-	private static $default_parent     = "articles";
-	private static $can_be_root        = false;
-	private static $defaults           = array("ParentID" => 7);
+	private static $default_parent = "articles";
+	private static $can_be_root = false;
+	private static $defaults = array("ParentID" => 7);
 	private static $listing_page_class = 'Issue';
 
 	public function TranslatorBylineVerb() {
@@ -78,7 +80,7 @@ class ArticleSingleColumn extends Page {
 	}
 
 	public function MoreThanOneTranslator() {
-		$translators    = $this->Translators()->toArray();
+		$translators = $this->Translators()->toArray();
 		$translatorSize = count($translators);
 
 		if ($translatorSize > 1) {
@@ -92,7 +94,7 @@ class ArticleSingleColumn extends Page {
 	public function TranslatorByline($links = "true") {
 		//$TranslatorListNice(0)<% if OriginalLanguage %> $TranslatorBylineVerb from $OriginalLanguage<% end_if %><% if $Authors %><% loop $Authors %>. Original by $Name <% end_loop %> <% end_if %>
 		$bylineText = new DBHTMLText();
-		$byline     = '';
+		$byline = '';
 
 		if ($this->Authors()->First()) {
 
@@ -116,12 +118,11 @@ class ArticleSingleColumn extends Page {
 
 		foreach ($writers as $writer) {
 
-			if($links == "true"){
+			if ($links == "true") {
 				$writerFormattedName = str_replace(' ', '&nbsp;', $writer->Name);
-			}else{
+			} else {
 				$writerFormattedName = $writer->Name;
 			}
-
 
 			if ($links == "true") {
 				$writerArray[] = '<a href="' . $writer->Link() . '" class="text-nowrap">' . $writerFormattedName . '</a>';
@@ -140,8 +141,6 @@ class ArticleSingleColumn extends Page {
 
 	}
 
-
-
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
@@ -150,6 +149,7 @@ class ArticleSingleColumn extends Page {
 
 		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for poem"));
 		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Unique image artist credit'));
+		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowArtworkCreditsInToc', 'Show artwork credits in ToC'));
 
 		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));
 
@@ -158,7 +158,7 @@ class ArticleSingleColumn extends Page {
 		$fields->addFieldToTab('Root.Main', $translatedTitleField, 'Content');
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
-		$newGridField    = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
+		$newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
 		$fields->addFieldToTab('Root.Authors', $newGridField);
 
 		$gridFieldConfig2 = GridFieldConfig_RelationEditor::create();

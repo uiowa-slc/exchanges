@@ -30,6 +30,9 @@ class Article extends Page {
 		'IsCompilation' => 'Boolean',
 		'Artist' => 'Text',
 		'ArtistNotes' => 'HTMLText',
+		//This has to be in Article.php:
+		'ShowArtworkCreditsInToc' => 'Boolean',
+		//... In order to accomodate  Article objects that are mainly Artist-based anyway and the artist is listed under "translator".
 		'ShowFullSizeImage' => 'Boolean',
 		'ShowCreditsLink' => 'Boolean',
 	);
@@ -290,6 +293,7 @@ class Article extends Page {
 		//$fields->addFieldToTab('Root.ArtistInfo', new HTMLEditorField('ArtistNotes', 'Artist Notes'));
 
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowCreditsLink', 'Show link to artwork credits on this piece'));
+		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowArtworkCreditsInToc', 'Show artwork credits in ToC'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowFullSizeImage', 'Enable full popup link to image'));
 		$fields->addFieldToTab("Root.Main", new UploadField("FullSizeImage", "Specific image to be used for full popup (optional, we use the 'unique image' field if this isn't filled out)"));
 
@@ -407,6 +411,11 @@ class Article extends Page {
 			//Person A and Person B.
 			$byline .= $this->getWriterListNice($links, $this->Authors());
 			$byline .= '.';
+		}
+
+		if ($this->ShowArtworkCreditsInToc && $this->Artist) {
+			//echo 'hello';
+			$byline .= " Art by " . $this->Artist . '.';
 		}
 
 		$bylineText->setValue($byline);

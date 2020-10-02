@@ -1,5 +1,6 @@
 <?php
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
@@ -25,6 +26,7 @@ class ArticleFreeform extends Article {
 		$fields = SiteTree::getCMSFields();
 
 		$fields->addFieldToTab('Root.ArtistInfo', new TextField('Artist', 'Artist Credit'));
+		$fields->addFieldToTab('Root.ArtistInfo', new CheckboxField('ShowArtworkCreditsInToc', 'Show artwork credits in ToC'));
 		$fields->addFieldToTab('Root.ArtistInfo', new HTMLEditorField('ArtistNotes', 'Artist Notes'));
 
 		// $fields->removeByName('Content');
