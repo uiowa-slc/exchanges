@@ -16,6 +16,7 @@ class ArticleSingleColumn extends Page {
 		'TranslatedTitle' => 'HTMLText',
 		'Artist' => 'Text',
 		'OriginalLanguage' => 'Text',
+		'OriginalWorkButtonText' => 'Text',
 	);
 
 	private static $has_one = array(
@@ -90,16 +91,24 @@ class ArticleSingleColumn extends Page {
 			return false;
 		}
 	}
+	public function getOriginalWorkButtonTextCustom() {
+		if ($this->OriginalWorkButtonText) {
+			return $this->OriginalWorkButtonText;
+		} else {
+			return 'Original';
+		}
 
+	}
 	public function TranslatorByline($links = "true") {
-		//$TranslatorListNice(0)<% if OriginalLanguage %> $TranslatorBylineVerb from $OriginalLanguage<% end_if %><% if $Authors %><% loop $Authors %>. Original by $Name <% end_loop %> <% end_if %>
+
 		$bylineText = new DBHTMLText();
 		$byline = '';
 
 		if ($this->Authors()->First()) {
 
+			$originalButtonText = $this->getOriginalWorkButtonTextCustom();
 			//Original by:
-			$byline .= 'Original by ';
+			$byline .= $originalButtonText . ' by ';
 
 			//Person A and Person B.
 			$byline .= $this->getWriterListNice($links, $this->Authors());
@@ -150,7 +159,7 @@ class ArticleSingleColumn extends Page {
 		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for poem"));
 		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Unique image artist credit'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowArtworkCreditsInToc', 'Show artwork credits in ToC'));
-
+		$fields->addFieldToTab('Root.Main', TextField::create('OriginalWorkButtonText', 'Original Work Button Text')->setDescription(' (default: "Original" if left blank)'));
 		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));
 
 		$translatedTitleField = new HTMLEditorField('TranslatedTitle', ' Translated title');

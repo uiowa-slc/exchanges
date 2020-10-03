@@ -60,7 +60,7 @@
 								<% else %>
 
 								<% end_if %>
-									<% if $Translators %><br /><% end_if %><span class="author">Original By
+									<% if $Translators %><br /><% end_if %><span class="author">{$OriginalWorkButtonTextCustom} By
 									<% loop $Authors %>
 										<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
 									<% end_loop %>
