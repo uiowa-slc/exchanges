@@ -122,11 +122,11 @@ class Issue extends Page {
 	}
 
 	public function getCreditsLink() {
-		return $this->Link() . 'credits/';
+		return $this->Link('credits/');
 	}
 
 	public function getLetterLink() {
-		return $this->Link() . 'letter/';
+		return $this->Link('letter/');
 	}
 
 	public function RandomArticles() {
