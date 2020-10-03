@@ -1,3 +1,6 @@
-.sj__journal-title{
-	font-size: 80px;
+.sj__journal-title {
+
+    @media #{$medium-up} {
+        font-size: 80px;
+    }
 }
