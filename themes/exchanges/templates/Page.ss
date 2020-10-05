@@ -7,7 +7,13 @@
 	<meta name="google" value="notranslate" />
 	<% if $ClassName == "HomePage" %>
 		<title>$SiteConfig.Title</title>
-	<% else %>
+	<% else_if $isSubjournal %>
+        <% if $ClassName == "Subjournal" %>
+            <title>$Subjournal.Title</title>
+        <% else %>
+            <title>$Title.Plain - $Subjournal.Title</title>
+        <% end_if %>
+    <% else %>
 		<title>$Title.Plain - $SiteConfig.Title</title>
 	<% end_if %>
 	<% include OpenGraph %>
