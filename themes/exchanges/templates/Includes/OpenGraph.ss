@@ -9,17 +9,13 @@
         <% if $ClassName == "Subjournal" %>
             <meta property="og:title" content="$Subjournal.Title.ATT" />
         <% else %>
-            <meta property="og:title" content="$Title.Plain - $Subjournal.Title" />
+            <meta property="og:title" content="$Title.Plain | $Subjournal.Title" />
         <% end_if %>
     <% else %>
-        <meta property="og:title" content="$Title.Plain - $SiteConfig.Title" />
+        <meta property="og:title" content="$Title.Plain | $SiteConfig.Title" />
     <% end_if %>
 
-	<% if $ClassName == "HomePage" %>
-		<meta property="og:title" content="$SiteConfig.Title.ATT" />
-	<% else %>
-		<meta property="og:title" content="$Title.ATT | $SiteConfig.Title.ATT" />
-	<% end_if %>
+
 	<% if $ClassName == "HomePage" %>
 		<meta property="og:description" content="Read our latest issue: $FeaturedIssue.Title" />
 	<% else_if $ClassName == "Article" %>
