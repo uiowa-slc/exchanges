@@ -15,7 +15,7 @@
                     <% end_if %>
                 </div>
                 <div class="article__text">
-                    <h2>Artist Notes</h2>
+                    <h2>Artist's Note</h2>
                     $ArtistNotes
                     <hr />
                 </div>
