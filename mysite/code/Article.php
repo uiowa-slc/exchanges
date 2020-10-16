@@ -355,7 +355,7 @@ class Article extends Page {
 		if ($this->TranslatorNoteButtonText) {
 			return $this->TranslatorNoteButtonText;
 		} else {
-			return 'Translator Note';
+			return "Translator's Note";
 		}
 
 	}

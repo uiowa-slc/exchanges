@@ -25,7 +25,7 @@
             <% if $ArtistNotes %>
                 <li class="tab-title translation-nav__item" role="presentation">
                     <a href='#artist-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="artist-notes">
-                        Artist Notes
+                        Artist's Note
                     </a>
                 </li>
             <% end_if %>
