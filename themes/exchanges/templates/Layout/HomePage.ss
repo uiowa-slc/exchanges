@@ -6,6 +6,16 @@
 		<div class="row issue-preview__wrap">
 			<div class="large-12 issue-preview columns">
 				<h2 class="banner text-center">In this Issue:</h2>
+            <p class="text-center"><a class="link--dashed toc__letter-link"href="$LetterLink">$LetterTitle</a></p>
+            <% if $ArtworkCredits %>
+                <p class="text-center">
+                    <% if $ArtworkCreditsTitle %>
+                        <a href="$CreditsLink">$ArtworkCreditsTitle</a>
+                    <% else %>
+                        <a href="$CreditsLink" target="_blank">Artwork Credits</a>
+                    <% end_if %>
+                </p>
+            <% end_if %>
 				<ul class="text-center card-list card-list--two">
 					<% loop $RandomArticles.Limit(2) %>
 					<li class="card-list__item">
@@ -76,8 +86,8 @@
 			</section>
 
 		</div>
-		<div class="large-3 columns"> 
-		    <% include BlogSidebar %>    
+		<div class="large-3 columns">
+		    <% include BlogSidebar %>
 		</div>
 	</div>
 </div>
