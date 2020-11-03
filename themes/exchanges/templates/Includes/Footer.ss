@@ -48,4 +48,8 @@ Iowa City, IA 52242-1323
 			</div>
 		</div>
 	</div>
+
 </footer>
+    <div class="footer__info">
+        <p><a href="http://www.uiowa.edu/homepage/online-privacy-information" class="footer__bar-link" target="_blank" rel="noopener">Privacy Information</a> <a href="https://opsmanual.uiowa.edu/community-policies/nondiscrimination-statement" class="footer__bar-link" target="_blank" rel="noopener">Nondiscrimination Statement</a> <a href="https://uiowa.edu/accessibility" target="_blank">Accessibility</a></p>
+    </div>
