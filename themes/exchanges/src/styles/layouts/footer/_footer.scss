@@ -74,6 +74,10 @@ $break-xlarge: 1140px;
     padding: 1em 0 0;
 
     @media screen and (min-width: $break-small) {}
+
+    li {
+        display: inline-block;
+    }
 }
 
 .footer-nav:first-child {
@@ -83,13 +87,6 @@ $break-xlarge: 1140px;
 .footer-nav a {
     display: block;
     padding: 10px 0;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-
-    &:hover {
-        border-left: 1px solid #28acb6;
-    }
 
     @media screen and (min-width: $break-small) {
         font-size: rem-calc(13);
