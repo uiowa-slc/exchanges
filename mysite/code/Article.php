@@ -30,9 +30,8 @@ class Article extends Page {
 		'IsCompilation' => 'Boolean',
 		'Artist' => 'Text',
 		'ArtistNotes' => 'HTMLText',
-		//This has to be in Article.php:
+		//This has to be in Article.php in order to accomodate Article objects that are mainly Artist-based anyway and the artist is listed under "translator".
 		'ShowArtworkCreditsInToc' => 'Boolean',
-		//... In order to accomodate  Article objects that are mainly Artist-based anyway and the artist is listed under "translator".
 		'ShowFullSizeImage' => 'Boolean',
 		'ShowCreditsLink' => 'Boolean',
 	);
