@@ -25,9 +25,12 @@
                 <div class="post__body">
 
                     <% if $AudioClip %>
-                        <div class="post__audio">
+                        <div class="post__audio-container">
                             <h2>Listen to the audio:</h2>
-                            <p><audio src="$AudioClip.URL" controls="controls" preload="none"></audio></p>
+                            <p style="margin: 0"><audio src="$AudioClip.URL" controls="controls" preload="none"></audio></p>
+                            <% if $AudioClipTranscript %>
+                            <p class="post__audio-link"><a href="$AudioClipTranscript.URL">Download the transcript</a></p>
+                            <% end_if %>
                         </div>
                     <% end_if %>
 

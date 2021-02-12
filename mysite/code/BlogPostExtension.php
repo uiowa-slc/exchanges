@@ -8,6 +8,7 @@ use SilverStripe\ORM\DataExtension;
 class BlogPostExtension extends DataExtension {
 
 	private static $has_one = array(
+		'AudioClipTranscript' => File::class,
 		'AudioClip' => File::class,
 	);
 
@@ -17,6 +18,7 @@ class BlogPostExtension extends DataExtension {
 
 	public function updateCMSFields(FieldList $fields) {
 		$fields->addFieldToTab('Root.Main', $upload = new UploadField('AudioClip', 'Audio File'), 'CustomSummary');
+		$fields->addFieldToTab('Root.Main', $upload = new UploadField('AudioClipTranscript', 'Audio Transcript'), 'CustomSummary');
 		$featuredImageField = $fields->fieldByName('FeaturedImage');
 		$fields->remove($featuredImageField);
 
