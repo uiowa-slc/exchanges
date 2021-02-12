@@ -14,6 +14,7 @@ class BlogPostExtension extends DataExtension {
 
 	private static $owns = array(
 		'AudioClip',
+		'AudioClipTranscript',
 	);
 
 	public function updateCMSFields(FieldList $fields) {
