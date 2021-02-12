@@ -1,0 +1,13 @@
+---
+Name: exchanges-extensions
+---
+Page:
+  extensions:
+    - SilverStripe\Widgets\Extensions\WidgetPageExtension
+    - BlogCategoryExtension
+SilverStripe\Blog\Model\BlogPost:
+  extensions:
+    - BlogPostExtension
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - SiteConfigExtension

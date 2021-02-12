@@ -23,6 +23,14 @@
                 <% end_if %>
 
                 <div class="post__body">
+
+                    <% if $AudioClip %>
+                        <div class="post__audio">
+                            <h2>Listen to the audio:</h2>
+                            <p><audio src="$AudioClip.URL" controls="controls" preload="none"></audio></p>
+                        </div>
+                    <% end_if %>
+
                     $Content
 
                     <% if $Tags %>

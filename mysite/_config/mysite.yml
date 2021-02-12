@@ -3,13 +3,7 @@ Name: myproject
 
 SilverStripe\Core\Manifest\ModuleManifest:
   project: mysite
-Page:
-  extensions:
-    - SilverStripe\Widgets\Extensions\WidgetPageExtension
-    - BlogCategoryExtension
-SilverStripe\SiteConfig\SiteConfig:
-  extensions:
-    - SiteConfigExtension
+
 SilverStripe\View\Parsers\URLSegmentFilter:
   default_allow_multibyte: true
 SilverStripe\Forms\HTMLEditor\TinyMCEConfig:
