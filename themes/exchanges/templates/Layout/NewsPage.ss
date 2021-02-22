@@ -29,7 +29,7 @@
                             <h2>Listen to the audio:</h2>
                             <p style="margin: 0"><audio src="$AudioClip.URL" controls="controls" preload="none"></audio></p>
                             <% if $AudioClipTranscript %>
-                            <p class="post__audio-link"><a href="$AudioClipTranscript.URL">Download the transcript</a></p>
+                            <p class="post__transcript-link"><a href="$AudioClipTranscript.URL">Download the transcript</a></p>
                             <% end_if %>
                         </div>
                     <% end_if %>
@@ -60,7 +60,11 @@
     <% if $RelatedPosts %>
     <div class="row">
         <div class="large-9 large-offset-1 columns">
-            <h2 class="banner text-center">Related Posts</h2>
+            <% if $AudioClip %>
+                <h2 class="banner text-center">More Episodes</h2>
+            <% else %>
+                <h2 class="banner text-center">Related Posts</h2>
+            <% end_if %>
                 <ul class="large-block-grid-3 card-list">
                 <% loop $RelatedPosts.Limit(6) %>
                     <li class="card-list__item">

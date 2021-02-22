@@ -20,27 +20,38 @@ class NewsPage extends BlogPost {
 	);
 
 	public function RelatedPosts() {
-		$holder = Blog::get()->First();
-		$tags = $this->Tags()->limit(6);
+
 		$entries = new ArrayList();
 
-		foreach ($tags as $tag) {
-			$taggedEntries = $tag->BlogPosts()->exclude(array("ID" => $this->ID))->sort('PublishDate', 'ASC')->Limit(3);
-			if ($taggedEntries) {
-				foreach ($taggedEntries as $taggedEntry) {
-					if ($taggedEntry->ID) {
-						$entries->push($taggedEntry);
+		if ($this->AudioClipID != 0) {
+
+			$entries = $this->PostsWithAudio()->filter(array('ID:not' => $this->ID));
+
+		} else {
+
+			$holder = Blog::get()->First();
+			$tags = $this->Tags()->limit(6);
+
+			foreach ($tags as $tag) {
+				$taggedEntries = $tag->BlogPosts()->exclude(array("ID" => $this->ID))->sort('PublishDate', 'ASC')->Limit(3);
+				if ($taggedEntries) {
+					foreach ($taggedEntries as $taggedEntry) {
+						if ($taggedEntry->ID) {
+							$entries->push($taggedEntry);
+						}
 					}
 				}
+
+			}
+
+			if ($entries->count() > 1) {
+				$entries->removeDuplicates();
 			}
 
 		}
 
-		if ($entries->count() > 1) {
-			$entries->removeDuplicates();
-		}
-
 		return $entries;
+
 	}
 
 	public function getCMSFields() {

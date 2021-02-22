@@ -9,21 +9,9 @@
     <div class="row">
         <div class="large-9 columns">
             <h1>
-                <% if $ArchiveYear %>
-                    <%t Blog.Archive 'Archive' %>:
-                    <% if $ArchiveDay %>
-                        $ArchiveDate.Nice
-                    <% else_if $ArchiveMonth %>
-                        $ArchiveDate.format('F, Y')
-                    <% else %>
-                        $ArchiveDate.format('Y')
-                    <% end_if %>
-                <% else_if $CurrentTag %>
-                    <%t Blog.Tag 'Tag' %>: $CurrentTag.Title
-                <% else_if $CurrentCategory %>
-                    <%t Blog.Category 'Category' %>: $CurrentCategory.Title
-                <% end_if %>
+                $Title
             </h1>
+            $Content
                 <ul class="card-list">
                     <% loop $PaginatedList %>
                         <li class="card-list__item card-list__item--single-row">
@@ -45,7 +33,7 @@
                         </li>
                     <% end_loop %>
                 </ul>
-            <div class="pagination">
+<%--             <div class="pagination">
                 <% with $PaginatedList %>
                     <% if $MoreThanOnePage %>
                         <p class="pagination">
@@ -71,21 +59,16 @@
                         </p>
                     <% end_if %>
                 <% end_with %>
-            </div>
+            </div> --%>
 
         </div>
 
         <div class="blog-sidebar large-3 columns">
 
-            <% if $SideBarView %>
-                <div class="blog-sidebar typography unit size1of4 lastUnit">
-                    $SideBarView
-                </div>
-            <% end_if %>
             <div class="side-cards">
                 <h2 class="banner">More from Exchanges</h2>
                 <% include SideCards %>
-                <% if $PaginatedList.CurrentPage() == 1 %>
+               <%--  <% if $PaginatedList.CurrentPage() == 1 %>
                     <% loop $Posts.Sort('RAND()').Limit(5) %>
                         <a href="$Link" class="side-cards__link">
                             <% if $FeaturedImage %>
@@ -103,7 +86,7 @@
                                 <h2 class="side-cards__header">$Title</h2>
                         </a>
                     <% end_loop %>
-                <% end_if %>
+                <% end_if %> --%>
             </div>
         </div>
 

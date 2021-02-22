@@ -1,180 +1,185 @@
 .post__summary {
-	margin: $column-gutter 0;
+    margin: $column-gutter 0;
 }
 
 .post__social {
-	list-style: none;
-	margin: 0 auto;
-	font-size: 13px;
-	text-align: left;
-	&--with-padding-top{
-		padding-top: rem-calc(10);
-	}
-	@media only screen and (min-width: 1000px) {
-		list-style: none;
-		margin: 0;
-		font-size: 15px;
+    list-style: none;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: left;
 
-		// padding-top: 5px;
-		// padding-left: 15px;
-	}
+    &--with-padding-top {
+        padding-top: rem-calc(10);
+    }
+
+    @media only screen and (min-width: 1000px) {
+        list-style: none;
+        margin: 0;
+        font-size: 15px;
+
+        // padding-top: 5px;
+        // padding-left: 15px;
+    }
 }
 
 .post__social--horizontal {
-	float: none;
+    float: none;
 }
 
 .post__social-item {
-	display: inline-block;
-	margin-right: 1em;
+    display: inline-block;
+    margin-right: 1em;
 
-	@media #{$large-up} {
-		margin: 0;
-		display: block;
-	}
+    @media #{$large-up} {
+        margin: 0;
+        display: block;
+    }
 }
 
 .post__social-item--horizontal {
-	display: inline-block;
-	margin-right: 1em;
+    display: inline-block;
+    margin-right: 1em;
 }
 
-.post__social-label {
-	font-family: "futura-pt","Arial Narrow",sans-serif;
+.post__social-label,
+.post__transcript-link {
+    font-family: "futura-pt", "Arial Narrow", sans-serif;
 }
 
 .post__social-icon {
-	display: block;
-	text-align: center;
-	background: $primary-color;
-	border-radius: 50%;
-	margin: rem-calc(10) auto;
-	height: rem-calc(30);
-	width: rem-calc(30);
+    display: block;
+    text-align: center;
+    background: $primary-color;
+    border-radius: 50%;
+    margin: rem-calc(10) auto;
+    height: rem-calc(30);
+    width: rem-calc(30);
 
-	&:before {
-		color: white;
-		font-size: rem-calc(18);
-		line-height: rem-calc(30);
-	}
+    &:before {
+        color: white;
+        font-size: rem-calc(18);
+        line-height: rem-calc(30);
+    }
 }
 
 .blog-post-meta {
-	font-size: rem-calc(11);
-	text-transform: uppercase;
-	font-family: $header-font-family;
+    font-size: rem-calc(11);
+    text-transform: uppercase;
+    font-family: $header-font-family;
 }
 
 .post__container {
-	@media #{$large-up} {
-		background: white;
-		border: 1px solid #eee;
-		padding: rem-calc(40) 0;
-	}
+    @media #{$large-up} {
+        background: white;
+        border: 1px solid #eee;
+        padding: rem-calc(40) 0;
+    }
 }
 
 .post__body table {
-	width: 100% !important;
+    width: 100% !important;
 }
 
 .post__meta {
-	font-family: "futura-pt","Arial Narrow",sans-serif;
-	text-transform: uppercase;
-	font-size: rem-calc(12);
-	color: #888;
+    font-family: "futura-pt", "Arial Narrow", sans-serif;
+    text-transform: uppercase;
+    font-size: rem-calc(12);
+    color: #888;
 }
 
-.post__heading, .post__meta, .post__body {
-	@media #{$large-up} {
-		padding: 0 rem-calc(40);
-	}
+.post__heading,
+.post__meta,
+.post__body {
+    @media #{$large-up} {
+        padding: 0 rem-calc(40);
+    }
 
-	@media #{$xlarge-up} {
-		padding: 0 rem-calc(100);
-	}
+    @media #{$xlarge-up} {
+        padding: 0 rem-calc(100);
+    }
 }
 
 .post__meta--body {
-	padding: 0;
-	border-top: 1px solid #eee;
-	padding-top: rem-calc(40);
-	margin-top: rem-calc(40);
+    padding: 0;
+    border-top: 1px solid #eee;
+    padding-top: rem-calc(40);
+    margin-top: rem-calc(40);
 }
 
 .post__image {
-	width: 100%;
-	padding-bottom: rem-calc(40);
+    width: 100%;
+    padding-bottom: rem-calc(40);
 }
 
 .post__image-small {
-	width: 100%;
-	display: block;
+    width: 100%;
+    display: block;
 
-	@media only screen and (min-width: 320px) {
-		width: 45%;
-		float: right;
-		padding-bottom: 20px;
-		padding-right: 20px;
-		padding-left: 20px;
-	}
+    @media only screen and (min-width: 320px) {
+        width: 45%;
+        float: right;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
 
-	@media only screen and (min-width: 480px) {
-		width: 45%;
-	}
+    @media only screen and (min-width: 480px) {
+        width: 45%;
+    }
 }
 
 .blog-sidebar {
-	h3.banner {
-		margin-top: 0px;
-	}
+    h3.banner {
+        margin-top: 0px;
+    }
 
-	.blog-sidebar__post {
-		list-style: none;
-		margin-bottom: 20px;
-	}
+    .blog-sidebar__post {
+        list-style: none;
+        margin-bottom: 20px;
+    }
 
-	ul {
-		margin-left: 0px;
-	}
+    ul {
+        margin-left: 0px;
+    }
 }
 
 .news-list {
-	margin-left: 0px;
+    margin-left: 0px;
 }
 
 .pagination {
-	padding-top: 20px;
+    padding-top: 20px;
 
-	.current {
-		background: $primary-color;
-		cursor: default;
-		border-radius: 5px;
-		padding: 6px 12px;
-	}
+    .current {
+        background: $primary-color;
+        cursor: default;
+        border-radius: 5px;
+        padding: 6px 12px;
+    }
 }
 
 .pagination {
-	p {
-		text-align: center;
-	}
+    p {
+        text-align: center;
+    }
 }
 
 .pagination-link {
-	margin-left: 15px;
+    margin-left: 15px;
 }
 
 .next {
-	padding-left: 10px;
+    padding-left: 10px;
 }
 
 .profile-image {
-	display: block;
-	width: 60%;
-	padding: 20px;
-	margin: auto;
+    display: block;
+    width: 60%;
+    padding: 20px;
+    margin: auto;
 
-	@media #{$medium-up} {
-		float: right;
-		width: 40%;
-	}
+    @media #{$medium-up} {
+        float: right;
+        width: 40%;
+    }
 }

@@ -1,13 +1,11 @@
 <?php
-use SilverStripe\Core\Config\Config;
+use SilverStripe\Blog\Model\BlogCategory;
+use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\CMS\Controllers\ContentController;
 use SilverStripe\Control\Session;
 use SilverStripe\View\ArrayData;
-use SilverStripe\Blog\Model\BlogPost;
-use SilverStripe\Blog\Model\BlogCategory;
 
 class PageController extends ContentController {
-
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -30,7 +28,7 @@ class PageController extends ContentController {
 	// 	if(!$this->isSubjournal()){
 
 	// 		return $viewer;
-			
+
 	// 	}
 	// 	//echo 'true';
 	// 	$viewerTemplates = $viewer->templates();
@@ -41,8 +39,8 @@ class PageController extends ContentController {
 	// 	//print_r(Config::inst()->get('SilverStripe\View\SSViewer'));
 	// 	$pageTheme = parent::getViewer($action);
 	// 	$pageTheme->setTemplateFile("main", $viewerTemplates['main']);
-		
-	// 	// Reset to original 
+
+	// 	// Reset to original
 	// 	//Config::inst()->set("SilverStripe\View\SSViewer", "themes", $original);
 	// 	return $pageTheme;
 	// }
@@ -50,7 +48,7 @@ class PageController extends ContentController {
 	function StatusMessage() {
 		if (Session::get('ActionMessage')) {
 			$message = Session::get('ActionMessage');
-			$status  = Session::get('ActionStatus');
+			$status = Session::get('ActionStatus');
 
 			Session::clear('ActionStatus');
 			Session::clear('ActionMessage');
@@ -70,7 +68,7 @@ class PageController extends ContentController {
 		return NewsHolder::get()->First();
 	}
 
-	public function Posts(){
+	public function Posts() {
 		$posts = BlogPost::get();
 		return $posts;
 	}
@@ -88,7 +86,7 @@ class PageController extends ContentController {
 
 	public function PostsByCategory($category) {
 		$blogCategory = BlogCategory::get()->filter(array('Title' => $category))->first();
-		if ($blogCategory){
+		if ($blogCategory) {
 			$posts = $blogCategory->BlogPosts();
 			return $posts;
 		}
