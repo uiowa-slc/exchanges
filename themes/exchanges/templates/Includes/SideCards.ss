@@ -2,7 +2,7 @@
                 <ul class="side-cards__list">
 
                     <% if $PostsWithAudio %>
-                    <li><a href="podcast/" class="side-cards__cat">Translators Note: Exchanges Audio</a></li>
+                    <li><a href="translators-note/" class="side-cards__cat">Translators Note: Exchanges Audio</a></li>
                     <% end_if %>
 
                     <li><a href="blog/category/briefly-mentioned" class="side-cards__cat">Briefly Mentioned</a></li>
