@@ -48,7 +48,7 @@
 
                     <% if $AudioClip %>
                         <div class="post__audio-container">
-                            <h2>Listen to the audio:</h2>
+                            <h3>Listen to the audio:</h3>
                             <p style="margin: 0"><audio src="$AudioClip.URL" controls="controls" preload="none"></audio></p>
                             <% if $AudioClipTranscript %>
                             <p class="post__transcript-link"><a href="$AudioClipTranscript.URL">Download the transcript</a></p>
