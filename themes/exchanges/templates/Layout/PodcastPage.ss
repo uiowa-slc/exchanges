@@ -13,10 +13,9 @@
             </h1>
             $Content
                 <ul class="card-list">
-                    <% loop $PaginatedList %>
+<%--                     <% loop $PaginatedList %>
                         <li class="card-list__item card-list__item--single-row">
                             <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.FocusFill(690,440).URL}')">
-                                <%-- <img class="card-list__img" src="$FeaturedImage.FocusFill(640,400).URL"> --%>
                                 <% if $FeaturedImage %>
                                     <div class="card-list__overlay"></div>
                                     <div class="card-list__text">
@@ -31,8 +30,50 @@
                                 </div>
                             </a>
                         </li>
-                    <% end_loop %>
+                    <% end_loop %> --%>
                 </ul>
+                <% loop $PaginatedList %>
+            <article class="post__container" style="margin-bottom: 5px">
+                <h2 class="post__heading"><a href="$Link">$Title</a></h1>
+
+
+                <% if $FeaturedImage %>
+                        <img class="post__image-small" src="$FeaturedImage.ScaleWidth(795).URL" />
+                        <% include PostMeta %>
+                <% else %>
+                        <% include PostMeta %>
+                <% end_if %>
+
+                <div class="post__body">
+
+                    <% if $AudioClip %>
+                        <div class="post__audio-container">
+                            <h2>Listen to the audio:</h2>
+                            <p style="margin: 0"><audio src="$AudioClip.URL" controls="controls" preload="none"></audio></p>
+                            <% if $AudioClipTranscript %>
+                            <p class="post__transcript-link"><a href="$AudioClipTranscript.URL">Download the transcript</a></p>
+                            <% end_if %>
+                        </div>
+                    <% end_if %>
+
+                    <p>$Content.Summary</p>
+                    <p><a href="$Link">Continue Reading...</a></p>
+                    <% if $Tags %>
+                    <p class="post__meta post__meta--body">
+                        Tagged as:
+                        <% loop $Tags %>
+                            <a href="$Link" title="$Title">$Title</a><% if not Last %>, <% else %><% end_if %>
+                        <% end_loop %>
+                    </p>
+                    <% end_if %>
+                </div>
+
+
+            </article>
+                   <%--  <h2><a href="$Link">$Title</a></h2>
+                    $Content.Summary --%>
+
+                <% end_loop %>
 <%--             <div class="pagination">
                 <% with $PaginatedList %>
                     <% if $MoreThanOnePage %>
