@@ -3,6 +3,7 @@
 use SilverStripe\Blog\Model\Blog;
 use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\ArrayList;
 
 class NewsPage extends BlogPost {
@@ -13,11 +14,16 @@ class NewsPage extends BlogPost {
 		'Abstract' => 'Text',
 		'Author' => 'Varchar(255)',
 		'FeaturedImageSmall' => 'Boolean',
+		'FeaturedImageCaption' => 'Text',
 	);
 
 	private static $defaults = array(
 		'InheritSideBar' => true,
 	);
+
+	private static $singular_name = "post";
+
+	private static $plural_name = "posts";
 
 	public function RelatedPosts() {
 
@@ -56,7 +62,9 @@ class NewsPage extends BlogPost {
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab("Root.Main", new CheckboxField("FeaturedImageSmall", "Show the featured image in a smaller format"), 'FeaturedImage');
+		$fields->addFieldToTab("Root.Main", new CheckboxField("FeaturedImageSmall", "Show the featured image in a smaller format"), 'AudioClip');
+		$fields->addFieldToTab("Root.Main", new TextField("FeaturedImageCaption", "Image Caption"), 'AudioClip');
+
 		return $fields;
 
 	}

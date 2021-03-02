@@ -7,22 +7,35 @@
 
         <div class="large-9 columns">
             <article class="post__container" role="main">
-                <h1 class="post__heading">$Title</h1>
+                <h1 class="post__heading post-padding">$Title</h1>
 
 
                 <% if $FeaturedImage %>
                     <% if $FeaturedImageSmall %>
-                        <img class="post__image-small" src="$FeaturedImage.ScaleWidth(795).URL" />
+                        <div class="post__image-float-container">
+                            <img class="post__image post__image--small <% if $FeaturedImageCaption%>post__image--with-caption<% end_if %>" src="$FeaturedImage.ScaleWidth(795).URL" />
+                            <% if $FeaturedImageCaption %>
+                                <p class="post__image-caption">$FeaturedImageCaption</p>
+                            <% end_if %>
+                        </div>
                         <% include PostMeta %>
+
                     <% else %>
                         <% include PostMeta %>
-                        <img class="post__image" src="$FeaturedImage.ScaleWidth(795).URL" />
+                        <img class="post__image <% if $FeaturedImageCaption%>post__image--with-caption<% end_if %>" src="
+                        $FeaturedImage.ScaleWidth(795).URL" />
+
+                        <% if $FeaturedImageCaption %>
+                            <p class="post__image-caption post-padding">$FeaturedImageCaption</p>
+                        <% end_if %>
+
                     <% end_if %>
+
                 <% else %>
                         <% include PostMeta %>
                 <% end_if %>
 
-                <div class="post__body">
+                <div class="post__body post-padding">
 
                     <% if $AudioClip %>
                         <div class="post__audio-container">
@@ -46,7 +59,7 @@
                     <% end_if %>
                 </div>
 
-
+                <div class="clearfix"></div>
             </article>
 
             $Form

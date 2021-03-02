@@ -76,6 +76,7 @@
     }
 }
 
+
 .post__body table {
     width: 100% !important;
 }
@@ -87,9 +88,28 @@
     color: #888;
 }
 
-.post__heading,
-.post__meta,
-.post__body {
+.post__image-caption {
+    font-family: "futura-pt", "Arial Narrow", sans-serif;
+    font-size: rem-calc(12);
+    color: #222;
+}
+
+// .post__heading,
+// .post__meta,
+// .post__body,
+// .post__image-caption {
+//     @media #{$large-up} {
+//         padding: 0 rem-calc(40);
+//     }
+
+//     @media #{$xlarge-up} {
+//         padding: 0 rem-calc(100);
+//     }
+// }
+
+
+//easy way to pad everything
+.post-padding {
     @media #{$large-up} {
         padding: 0 rem-calc(40);
     }
@@ -97,6 +117,7 @@
     @media #{$xlarge-up} {
         padding: 0 rem-calc(100);
     }
+
 }
 
 .post__meta--body {
@@ -109,12 +130,21 @@
 .post__image {
     width: 100%;
     padding-bottom: rem-calc(40);
+
+    &--with-caption {
+        padding-bottom: 0;
+    }
+
+
+    &--small {
+        width: 100%;
+        display: block;
+
+
+    }
 }
 
-.post__image-small {
-    width: 100%;
-    display: block;
-
+.post__image-float-container {
     @media only screen and (min-width: 320px) {
         width: 45%;
         float: right;
@@ -126,7 +156,14 @@
     @media only screen and (min-width: 480px) {
         width: 45%;
     }
+
+    &:after {
+        content: "";
+        clear: both;
+    }
 }
+
+.post__image-small {}
 
 .blog-sidebar {
     h3.banner {
