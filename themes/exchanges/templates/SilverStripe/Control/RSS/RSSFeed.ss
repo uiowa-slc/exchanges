@@ -16,7 +16,7 @@
             <itunes:email>studorg-exchanges@uiowa.edu</itunes:email>
         </itunes:owner>
         <itunes:explicit>clean</itunes:explicit>
-        <itunes:image href="" />
+        <itunes:image href="https://exchanges.uiowa.edu/themes/exchanges/dist/images/exchanges-podcast-poster.jpg" />
         <itunes:category text="Literature" />
         <% loop $Entries %>
         <% if $AudioClip %>
