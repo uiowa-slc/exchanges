@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-<!-- htmlmin:ignore -->
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
         <title>Translators Note</title>
@@ -10,7 +9,6 @@
         <itunes:author>Exchanges is edited by current students of the Iowa Translation Workshop</itunes:author>
         <itunes:summary>Exchanges is an online journal of literary translation published biannually. Founded in 1989 by poet and translator Daniel Weissbort, Exchanges has published the work of award-winning writers and translators across the country and the globe, including Deborah Smith, Jennifer Croft, Jeremy Tiang, Aron Aji, Yvette Siegert, Aviya Kushner, Ottilie Mulzet, Urayoán Noel, Craig Santos Perez, Lawrence Venuti, and many others.</itunes:summary>
         <description>Exchanges is an online journal of literary translation published biannually. Founded in 1989 by poet and translator Daniel Weissbort, Exchanges has published the work of award-winning writers and translators across the country and the globe, including Deborah Smith, Jennifer Croft, Jeremy Tiang, Aron Aji, Yvette Siegert, Aviya Kushner, Ottilie Mulzet, Urayoán Noel, Craig Santos Perez, Lawrence Venuti, and many others.</description>
-        <!-- <atom:link href="$Link" rel="self" type="application/rss+xml"/> -->
         <itunes:owner>
             <itunes:name>Translators Note: Exchanges Audio</itunes:name>
             <itunes:email>studorg-exchanges@uiowa.edu</itunes:email>
@@ -42,4 +40,3 @@
         <% end_loop %>
     </channel>
 </rss>
-<!-- htmlmin:ignore -->
