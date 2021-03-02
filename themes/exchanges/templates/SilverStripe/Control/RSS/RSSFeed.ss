@@ -15,7 +15,8 @@
         </itunes:owner>
         <itunes:explicit>clean</itunes:explicit>
         <itunes:image href="https://exchanges.uiowa.edu/_resources/themes/exchanges/dist/images/exchanges-podcast-poster.png" />
-        <itunes:category text="Literature" />
+        <itunes:category text="Education" />
+        <itunes:category text="Language Learning" />
         <% loop $Entries %>
         <% if $AudioClip %>
         <item>
