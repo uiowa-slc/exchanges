@@ -30,7 +30,7 @@
             <itunes:author>Exchanges is edited by current students of the Iowa Translation Workshop</itunes:author>
             <itunes:subtitle>$Description.Plain.LimitCharacters(180)</itunes:subtitle>
             <itunes:summary>$Description.Plain</itunes:summary>
-            <enclosure url="$AudioClip.AbsoluteURL" length="0" type="audio/x-m4a" />
+            <enclosure url="$AudioClip.AbsoluteURL" length="$AudioClip.AbsoluteSize" type="$AudioClip.MimeType" />
             <% if $Date %>
             <pubDate>$Date.Rfc822</pubDate>
             <% else %>
