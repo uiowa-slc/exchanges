@@ -12,39 +12,23 @@
                 $Title
             </h1>
             $Content
-                <ul class="card-list">
-<%--                     <% loop $PaginatedList %>
-                        <li class="card-list__item card-list__item--single-row">
-                            <a href="$Link" class="card-list__link card-list__link--small" style="background-image: url('{$FeaturedImage.FocusFill(690,440).URL}')">
-                                <% if $FeaturedImage %>
-                                    <div class="card-list__overlay"></div>
-                                    <div class="card-list__text">
-                                <% else %>
-                                    <div class="card-list__overlay card-list__overlay--always-visible"></div>
-                                    <div class="card-list__text card-list__text--always-visible">
-                                <% end_if %>
-                                <h2 class="card-list__header">$Title</h2>
-                                    <% if $Credits %>
-                                    <p class="card-list__byline"><% loop $Credits %><% if not $First && not $Last %>, <% end_if %><% if not $First && $Last %> <%t Blog.AND "and" %> <% end_if %>$Name.XML<% end_loop %></p>
-                                    <% end_if %>
-                                </div>
-                            </a>
-                        </li>
-                    <% end_loop %> --%>
-                </ul>
-                <% loop $PaginatedList %>
+
+        <% loop $PaginatedList %>
             <article class="post__container" style="margin-bottom: 5px">
-                <h2 class="post__heading"><a href="$Link">$Title</a></h1>
+                <h2 class="post__heading post-padding"><a href="$Link">$Title</a></h1>
 
 
                 <% if $FeaturedImage %>
                         <img class="post__image-small" src="$FeaturedImage.ScaleWidth(795).URL" />
+                        <% if $FeaturedImageCaption %>
+                            <p class="post__image-caption">$FeaturedImageCaption</p>
+                        <% end_if %>
                         <% include PostMeta %>
                 <% else %>
                         <% include PostMeta %>
                 <% end_if %>
 
-                <div class="post__body">
+                <div class="post__body post-padding">
 
                     <% if $AudioClip %>
                         <div class="post__audio-container">
