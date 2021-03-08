@@ -1,7 +1,7 @@
 {
-  "name": "md-engage-website",
+  "name": "exchanges-frontend",
   "version": "1.0.0",
-  "description": "SilverStripe Theme using Bootstrap 4",
+  "description": "SilverStripe Theme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
     "bootstrap": "^4.3.1",

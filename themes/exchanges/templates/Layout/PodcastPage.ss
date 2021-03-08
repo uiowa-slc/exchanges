@@ -7,11 +7,17 @@
     </div>
 
     <div class="row">
-        <div class="large-9 columns">
+        <div class="large-9 large-centered columns">
             <h1>
                 $Title
             </h1>
-            $Content
+            <div class="podcast-intro">
+                <% if $CoverImage %>
+                    <img src="$CoverImage.URL" class="podcast-cover" />
+                <% end_if %>
+                $Content
+                 <div class="clearfix"></div>
+            </div>
 
         <% loop $PaginatedList %>
             <article class="post__container" style="margin-bottom: 5px">
@@ -19,13 +25,15 @@
 
 
                 <% if $FeaturedImage %>
-                        <img class="post__image-small" src="$FeaturedImage.ScaleWidth(795).URL" />
-                        <% if $FeaturedImageCaption %>
-                            <p class="post__image-caption">$FeaturedImageCaption</p>
-                        <% end_if %>
-                        <% include PostMeta %>
+                        <div class="post__image-float-container">
+                            <img class="post__image post__image--small <% if $FeaturedImageCaption%>post__image--with-caption<% end_if %>" src="$FeaturedImage.ScaleWidth(795).URL" />
+                            <% if $FeaturedImageCaption %>
+                                <p class="post__image-caption">$FeaturedImageCaption</p>
+                            <% end_if %>
+                        </div>
+                    <% include PostMeta %>
                 <% else %>
-                        <% include PostMeta %>
+                    <% include PostMeta %>
                 <% end_if %>
 
                 <div class="post__body post-padding">
@@ -54,66 +62,19 @@
 
 
             </article>
-                   <%--  <h2><a href="$Link">$Title</a></h2>
-                    $Content.Summary --%>
 
-                <% end_loop %>
-<%--             <div class="pagination">
-                <% with $PaginatedList %>
-                    <% if $MoreThanOnePage %>
-                        <p class="pagination">
-                            <% if $NotFirstPage %>
-                                <a class="prev" href="{$PrevLink}">&larr; Prev </a>
-                            <% end_if %>
-
-                            <% loop $PaginationSummary(4) %>
-                                <% if $CurrentBool %>
-                                    <button class="current pagination-link">$PageNum</button>
-                                <% else %>
-                                    <% if $Link %>
-                                        <a class="pagination-link" href="$Link">$PageNum</a>
-                                    <% else %>
-                                        <span>...</span>
-                                    <% end_if %>
-                                <% end_if %>
-                            <% end_loop %>
-
-                            <% if $NotLastPage %>
-                                <a class="next" href="{$NextLink}"> Next &rarr;</a>
-                            <% end_if %>
-                        </p>
-                    <% end_if %>
-                <% end_with %>
-            </div> --%>
+        <% end_loop %>
 
         </div>
 
-        <div class="blog-sidebar large-3 columns">
+<%--         <div class="blog-sidebar large-3 columns">
 
             <div class="side-cards">
                 <h2 class="banner">More from Exchanges</h2>
                 <% include SideCards %>
-               <%--  <% if $PaginatedList.CurrentPage() == 1 %>
-                    <% loop $Posts.Sort('RAND()').Limit(5) %>
-                        <a href="$Link" class="side-cards__link">
-                            <% if $FeaturedImage %>
-                                <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
-                            <% end_if %>
-                            <h2 class="side-cards__header">$Title</h2>
-                        </a>
-                    <% end_loop %>
-                <% else_if  $PaginatedList.CurrentPage() != 1  %>
-                    <% loop $Posts.Sort('RAND()').Limit(2) %>
-                        <a href="$Link" class="side-cards__link">
-                            <% if $FeaturedImage %>
-                                <img class="side-cards__img" src="$FeaturedImage.FocusFill(640,400).URL">
-                            <% end_if %>
-                                <h2 class="side-cards__header">$Title</h2>
-                        </a>
-                    <% end_loop %>
-                <% end_if %> --%>
+
             </div>
-        </div>
+        </div> --%>
 
 
 

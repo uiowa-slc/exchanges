@@ -1,0 +1,14 @@
+.podcast-cover {
+    display: block;
+
+    @media #{$large-up} {
+
+        float: right;
+        padding-left: 10px;
+        max-width: 40%;
+    }
+}
+
+.podcast-intro {
+    margin-bottom: 30px;
+}
