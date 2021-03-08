@@ -24,7 +24,7 @@
 	<% if $isSubjournal %>
 	   	<link href="{$ThemeDir}/dist/styles/{$Subjournal.Identifier}.css" rel="stylesheet">
     <% else %>
-        <link href="{$ThemeDir}/dist/styles/main.css" rel="stylesheet">
+        <link href="{$ThemeDir}/dist/styles/main.css?v=$Now.URLDate" rel="stylesheet">
 	<% end_if %>
 
 	<% if $LinkColor %>
