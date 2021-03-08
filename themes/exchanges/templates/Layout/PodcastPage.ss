@@ -8,15 +8,19 @@
 
     <div class="row">
         <div class="large-9 large-centered columns">
-            <h1>
-                $Title
-            </h1>
-            <div class="podcast-intro">
-                <% if $CoverImage %>
-                    <img src="$CoverImage.URL" class="podcast-cover" />
-                <% end_if %>
-                $Content
-                 <div class="clearfix"></div>
+
+            <div class="podcast-intro-grid">
+                <div class="podcast-intro-item">
+                    <h1>
+                        $Title
+                    </h1>
+                     $Content
+                </div>
+                <div class="podcast-intro-item">
+                    <% if $CoverImage %>
+                        <img src="$CoverImage.URL" class="podcast-cover" />
+                    <% end_if %>
+                </div>
             </div>
 
         <% loop $PaginatedList %>

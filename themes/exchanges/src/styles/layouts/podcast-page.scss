@@ -1,14 +1,18 @@
 .podcast-cover {
     display: block;
-
-    @media #{$large-up} {
-
-        float: right;
-        padding-left: 10px;
-        max-width: 40%;
-    }
+    padding-left: 10px;
+    width: 100%;
 }
 
-.podcast-intro {
-    margin-bottom: 30px;
+.podcast-intro {}
+
+.podcast-intro-grid {
+
+    @media #{$medium-up} {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 50% 50%;
+
+        margin-bottom: 30px;
+    }
 }
