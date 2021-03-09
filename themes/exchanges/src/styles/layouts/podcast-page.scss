@@ -1,7 +1,11 @@
 .podcast-cover {
     display: block;
-    padding-left: 20px;
+
     width: 100%;
+
+    @media #{$medium-up} {
+        padding-left: 20px;
+    }
 }
 
 .podcast-intro {}
