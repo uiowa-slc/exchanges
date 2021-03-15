@@ -6,7 +6,7 @@
         <language>en-us</language>
         <copyright></copyright>
         <itunes:subtitle>Exchanges Audio</itunes:subtitle>
-        <itunes:author>Exchanges is edited by current students of the Iowa Translation Workshop</itunes:author>
+        <itunes:author>Exchanges: Journal of Literary Translation</itunes:author>
         <itunes:summary>Exchanges is an online journal of literary translation published biannually. Founded in 1989 by poet and translator Daniel Weissbort, Exchanges has published the work of award-winning writers and translators across the country and the globe, including Deborah Smith, Jennifer Croft, Jeremy Tiang, Aron Aji, Yvette Siegert, Aviya Kushner, Ottilie Mulzet, Urayoán Noel, Craig Santos Perez, Lawrence Venuti, and many others.</itunes:summary>
         <description>Exchanges is an online journal of literary translation published biannually. Founded in 1989 by poet and translator Daniel Weissbort, Exchanges has published the work of award-winning writers and translators across the country and the globe, including Deborah Smith, Jennifer Croft, Jeremy Tiang, Aron Aji, Yvette Siegert, Aviya Kushner, Ottilie Mulzet, Urayoán Noel, Craig Santos Perez, Lawrence Venuti, and many others.</description>
         <itunes:owner>
