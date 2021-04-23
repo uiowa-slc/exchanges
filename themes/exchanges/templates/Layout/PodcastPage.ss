@@ -53,6 +53,7 @@
                     <% end_if %>
 
                     <p>$Content.Summary</p>
+                    <div class="clearfix"></div>
                     <p><a href="$Link">Continue Reading...</a></p>
                     <% if $Tags %>
                     <p class="post__meta post__meta--body">
