@@ -16,6 +16,16 @@
         background: rgba($topbar-base-color, 0.95);
     }
 
+    .top-bar-section ul li>a {
+        @media #{$medium-up} {
+            font-size: 10px;
+        }
+
+        @media #{$large-up} {
+            font-size: 13px;
+        }
+    }
+
     .toggle-topbar {
         font-family: $header-font-family;
         z-index: 1000;
