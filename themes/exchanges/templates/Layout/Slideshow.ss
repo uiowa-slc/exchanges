@@ -23,8 +23,9 @@
             <div class="row article__wrap">
                 <div class="large-12 columns text-center">
                     <h1>$Title</h1>
-
-                    <p></p>
+                    <% if $CustomByline %>
+                        $CustomByline
+                    <% end_if %>
                     <div class="slideshow">
                         <% loop $SlideshowImages %>
                             <% if $First %>

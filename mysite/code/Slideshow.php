@@ -44,7 +44,8 @@ class Slideshow extends Article {
 
 		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Artist credit'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowArtworkCreditsInToc', 'Show artwork credits in ToC'));
-		$fields->addFieldToTab('Root.Main', new TextField('TranslatorNoteButtonText', 'Translator note button text ("default: "Translator Notes" when left blank)'));
+		$fields->addFieldToTab('Root.Main', TextField::create('TranslatorNoteButtonText', 'Translator note button text')->setDescription('Default is "Translator Notes" when left blank'));
+		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('CustomByline', 'Custom byline')->setRows(3)->addExtraClass('stacked')->setDescription('Replaces the typical "X translates from Y"-type byline in the table of contents and on this page'));
 		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
 
 		$gridFieldConfig2 = GridFieldConfig_RelationEditor::create();

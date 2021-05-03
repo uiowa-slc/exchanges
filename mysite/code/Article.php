@@ -34,6 +34,7 @@ class Article extends Page {
 		'ShowArtworkCreditsInToc' => 'Boolean',
 		'ShowFullSizeImage' => 'Boolean',
 		'ShowCreditsLink' => 'Boolean',
+		'CustomByline' => 'HTMLText',
 	);
 
 	private static $has_one = array(
@@ -317,6 +318,8 @@ class Article extends Page {
 
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
 		$newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
+
+		$fields->addFieldToTab('Root.Authors', HTMLEditorField::create('CustomByline', 'Custom byline')->setRows(3)->addExtraClass('stacked')->setDescription('Replaces the typical "X translates from Y"-type byline in the table of contents and on this page'));
 		$fields->addFieldToTab('Root.Authors', $newGridField);
 
 		$gridFieldConfig2 = GridFieldConfig_RelationEditor::create();
