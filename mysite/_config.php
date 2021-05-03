@@ -23,6 +23,5 @@ if (Director::isLive()) {
 }
 HtmlEditorConfig::get('cms')->setOption(
 	'extended_valid_elements',
-	'audio[*]',
-	'video[*]'
+	'audio[*],video[*],iframe[*]'
 );
