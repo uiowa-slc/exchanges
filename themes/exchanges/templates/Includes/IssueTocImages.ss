@@ -12,7 +12,7 @@
                                         <p class="card-list__byline">$CustomByline</p>
 
                                     <% else %>
-                                        <p class="card-list__byline">$TranslatorByline(false)</p>
+                                        <p class="card-list__byline">$TranslatorByline(false).RAW</p>
                                     <% end_if %>
 								</div>
 
