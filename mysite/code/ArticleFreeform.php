@@ -28,7 +28,7 @@ class ArticleFreeform extends Article {
 		$fields->addFieldToTab('Root.ArtistInfo', new TextField('Artist', 'Artist Credit'));
 		$fields->addFieldToTab('Root.ArtistInfo', new CheckboxField('ShowArtworkCreditsInToc', 'Show artwork credits in ToC'));
 		$fields->addFieldToTab('Root.ArtistInfo', new HTMLEditorField('ArtistNotes', 'Artist Notes'));
-
+		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('CustomByline', 'Custom byline in the table of contents')->setRows(3)->addExtraClass('stacked')->setDescription('Replaces the typical "X translates from Y"-type byline in the table of contents'), 'Content');
 		// $fields->removeByName('Content');
 		$fields->removeByName('Widgets');
 		$fields->addFieldToTab('Root.TranslatorNote', TextField::create('TranslatorNoteButtonText', 'Translator note button text (default: "Translator Notes" if left blank)'));

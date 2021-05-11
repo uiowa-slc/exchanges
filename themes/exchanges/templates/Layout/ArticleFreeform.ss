@@ -9,34 +9,37 @@
             <a href="$Parent.Link" class="breadcrumb">$Parent.Title</a>
         </div>
         <div class="medium-8 columns <% if not $Artist %>end<%end_if %>">
-            <ul class="tabs translation-nav " data-tab role="tablist" data-options="scroll_to_content: false">
-            <li class="tab-title translation-nav__item active" role="presentation">
-                <a href="#main" role="tab" tabindex="0" aria-selected="true" aria-controls="side-by-side">
-                    $Title
-                </a>
-            </li>
-            <% if $TranslatorNote %>
-                <li class="tab-title translation-nav__item" role="presentation">
-                    <a href='#translator-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
-                        $TranslatorNoteButtonTextCustom
+            <% if $TranslatorNote || $ArtistNotes || $InTheClassroom %>
+                <ul class="tabs translation-nav " data-tab role="tablist" data-options="scroll_to_content: false">
+
+                <li class="tab-title translation-nav__item active" role="presentation">
+                    <a href="#main" role="tab" tabindex="0" aria-selected="true" aria-controls="side-by-side">
+                        $Title
                     </a>
                 </li>
+                <% if $TranslatorNote %>
+                    <li class="tab-title translation-nav__item" role="presentation">
+                        <a href='#translator-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
+                            $TranslatorNoteButtonTextCustom
+                        </a>
+                    </li>
+                <% end_if %>
+                <% if $ArtistNotes %>
+                    <li class="tab-title translation-nav__item" role="presentation">
+                        <a href='#artist-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="artist-notes">
+                            Artist's Note
+                        </a>
+                    </li>
+                <% end_if %>
+                <% if $InTheClassroom %>
+                    <li class="tab-title translation-nav__item" role="presentation">
+                        <a href='#in-the-classroom' role="tab" tabindex="0" aria-selected="false" aria-controls="in-the-classroom">
+                            In the Classroom
+                        </a>
+                    </li>
+                <% end_if %>
+                </ul>
             <% end_if %>
-            <% if $ArtistNotes %>
-                <li class="tab-title translation-nav__item" role="presentation">
-                    <a href='#artist-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="artist-notes">
-                        Artist's Note
-                    </a>
-                </li>
-            <% end_if %>
-            <% if $InTheClassroom %>
-                <li class="tab-title translation-nav__item" role="presentation">
-                    <a href='#in-the-classroom' role="tab" tabindex="0" aria-selected="false" aria-controls="in-the-classroom">
-                        In the Classroom
-                    </a>
-                </li>
-            <% end_if %>
-            </ul>
         </div>
 
             <div class="small-6 large-2 columns">
