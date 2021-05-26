@@ -8,7 +8,7 @@
         <div class="small-6 large-2 columns">
             <a href="$Parent.Link" class="breadcrumb">$Parent.Title</a>
         </div>
-        <div class="medium-8 columns <% if not $Artist %>end<%end_if %>">
+        <div class="small-12 columns <% if not $Artist %>end<%end_if %>">
             <% if $TranslatorNote || $ArtistNotes || $InTheClassroom %>
                 <ul class="tabs translation-nav " data-tab role="tablist" data-options="scroll_to_content: false">
 
