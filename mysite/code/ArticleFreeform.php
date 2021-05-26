@@ -31,7 +31,14 @@ class ArticleFreeform extends Article {
 		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('CustomByline', 'Custom byline in the table of contents')->setRows(3)->addExtraClass('stacked')->setDescription('Replaces the typical "X translates from Y"-type byline in the table of contents'), 'Content');
 		// $fields->removeByName('Content');
 		$fields->removeByName('Widgets');
-		$fields->addFieldToTab('Root.TranslatorNote', TextField::create('TranslatorNoteButtonText', 'Translator note button text (default: "Translator Notes" if left blank)'));
+
+        $fields->addFieldToTab('Root.Original', TextField::create('OriginalWorkButtonText', 'Original button text')->setDescription('Default: "Original" if left blank'));
+
+        $fields->addFieldToTab('Root.Original', HTMLEditorField::create('Content3', 'Original')->addExtraClass('stacked'));
+
+        $fields->addFieldToTab('Root.TranslatorNote', HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
+
+		$fields->addFieldToTab('Root.TranslatorNote', TextField::create('TranslatorNoteButtonText', 'Translator note button text')->setDescription('Default: "Translator Notes" if left blank'));
 		$fields->addFieldToTab('Root.TranslatorNote', HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
 
 		$fields->addFieldToTab('Root.InTheClassroom', HTMLEditorField::create('InTheClassroom', 'In the Classroom')->addExtraClass('stacked'));

@@ -17,6 +17,13 @@
                         $Title
                     </a>
                 </li>
+                <% if $Content3 %>
+                    <li class="tab-title translation-nav__item" role="presentation">
+                        <a href='#original' role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
+                            $OriginalWorkButtonTextCustom
+                        </a>
+                    </li>
+                <% end_if %>
                 <% if $TranslatorNote %>
                     <li class="tab-title translation-nav__item" role="presentation">
                         <a href='#translator-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
@@ -63,6 +70,11 @@
                           <section role="tabpanel" aria-hidden="false" class="content active" id="main">
                             $Content
                           </section>
+                          <% if $Content3 %>
+                          <section role="tabpanel" aria-hidden="true" class="content" id="original">
+                            $Content3
+                          </section>
+                          <% end_if %>
                           <% if $TranslatorNote %>
                           <section role="tabpanel" aria-hidden="true" class="content" id="translator-notes">
                             <% include ArticleBodyTranslatorNotes_nolinks %>
