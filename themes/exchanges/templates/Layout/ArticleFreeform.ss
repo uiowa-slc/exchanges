@@ -68,11 +68,15 @@
                 <div class="large-12 columns">
                     <div class="tabs-content">
                           <section role="tabpanel" aria-hidden="false" class="content active" id="main">
-                            $Content
+                            <div class="article__container">
+                                $Content
+                            </div>
                           </section>
                           <% if $Content3 %>
                           <section role="tabpanel" aria-hidden="true" class="content" id="original">
-                            $Content3
+                            <div class="article__container">
+                                $Content3
+                            </div>
                           </section>
                           <% end_if %>
                           <% if $TranslatorNote %>
