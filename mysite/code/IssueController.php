@@ -1,4 +1,7 @@
 <?php
+
+use SilverStripe\ORM\FieldType\DBHTMLText;
+
 class IssueController extends PageController {
 
 	private static $allowed_actions = array('letter', 'credits');
@@ -15,7 +18,8 @@ class IssueController extends PageController {
 	}
 
 	public function credits() {
-		$credits = $this->ArtworkCredits;
+		$credits = $this->obj('ArtworkCredits');
+
 		if ($credits) {
 
 			$Data = array(
