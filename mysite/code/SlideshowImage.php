@@ -6,6 +6,7 @@ use SilverStripe\Versioned\Versioned;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Security\Permission;
 class SlideshowImage extends DataObject
 {
     private static $db = [
@@ -25,7 +26,25 @@ class SlideshowImage extends DataObject
     private static $owns = [
         'Image'
     ];
+    public function canView($member = null)
+    {
+        return Permission::check('CMS_ACCESS_CMSMain', 'any', $member);
+    }
 
+    public function canEdit($member = null)
+    {
+        return Permission::check('CMS_ACCESS_CMSMain', 'any', $member);
+    }
+
+    public function canDelete($member = null)
+    {
+        return Permission::check('CMS_ACCESS_CMSMain', 'any', $member);
+    }
+
+    public function canCreate($member = null, $context = [])
+    {
+        return Permission::check('CMS_ACCESS_CMSMain', 'any', $member);
+    }
     // It's important that you add the Versioned extension to this!
     private static $extensions = [
         Versioned::class
