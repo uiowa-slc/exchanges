@@ -4,6 +4,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataObject;
+use SilverStripe\Security\Permission;
 
 class Contributor extends DataObject {
 
