@@ -5,6 +5,8 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Security\Permission;
+use SilverStripe\Forms\LiteralField;
+use SilverStripe\Control\Director;
 
 class Contributor extends DataObject {
 
@@ -46,6 +48,14 @@ class Contributor extends DataObject {
 		}
 	}
 
+    public function AbsoluteLink(){
+        $base = Director::absoluteBaseURL();
+        return $base.'contributors/show/'.$this->ID;
+
+    }
+    public function CMSEditLink() {
+        return '/admin/';
+    }
 	public function getFormattedName() {
 		$name = $this->Name;
 		$formattedName = str_replace('/\s+/', '&nbsp;', $this->Name);
@@ -62,7 +72,13 @@ class Contributor extends DataObject {
 		$fields->removeByName('Articles');
 
 		$fields->addFieldToTab('Root.Main', new TextField('Name'));
+
+        if($this->isInDB()){
+            $fields->addFieldToTab('Root.Main', new LiteralField('LinkField', '<p>Link: <a href="'.$this->AbsoluteLink().'">'.$this->AbsoluteLink().'</a></p>'));
+        }
 		$fields->addFieldToTab('Root.Main', new HTMLEditorField('BiographicalDetails', 'Biographical Details'));
+
+
 
 		return $fields;
 	}

@@ -35,6 +35,7 @@ class Article extends Page {
 		'ShowFullSizeImage' => 'Boolean',
 		'ShowCreditsLink' => 'Boolean',
 		'CustomByline' => 'HTMLText',
+        'OriginalCustomByline' => 'HTMLText'
 	);
 
 	private static $has_one = array(
@@ -279,39 +280,42 @@ class Article extends Page {
 
 		$fields->addFieldToTab('Root.Main', new CheckboxField('IsCompilation', 'This is a compilation of more than one poem'));
 
-		$titleField = new HTMLEditorField('Title', 'Page Title');
+		$titleField = HTMLEditorField::create('Title', 'Page Title')->setDescription('Appears above both the original and translated title')->addExtraClass('stacked');
 		$titleField->setRows(1);
 
-		$untranslatedTitleField = new HTMLEditorField('UntranslatedTitle', 'Original Title');
+		$untranslatedTitleField = HTMLEditorField::create('UntranslatedTitle', 'Original Title')->addExtraClass('stacked');
 		$untranslatedTitleField->setRows(1);
 
-		$fields->addFieldToTab("Root.Main", new UploadField("BannerImage", "Unique image for poem (1920 x 640 pixels or 3:1 ratio preferred)"));
+		$fields->addFieldToTab("Root.Main", UploadField::create("BannerImage", "Unique image for work")->addExtraClass('stacked')->setDescription('(1920 x 640 pixels or 3:1 ratio preferred)'));
 
-		$fields->addFieldToTab('Root.Main', new TextField('Artist', 'Unique image artist credit'));
+		$fields->addFieldToTab('Root.Main', TextField::create('Artist', 'Unique image artist credit')->addExtraClass('stacked'));
 
 		//TODO: Make sure this shows up on Article.ss, currently used only in ArticleFreeform page type:
 		//$fields->addFieldToTab('Root.ArtistInfo', new HTMLEditorField('ArtistNotes', 'Artist Notes'));
 
-		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowCreditsLink', 'Show link to artwork credits on this piece'));
+        //This field doesn't seem to appear anywhere:
+		//$fields->addFieldToTab('Root.Main', new CheckboxField('ShowCreditsLink', 'Show link to artwork credits on this piece'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowArtworkCreditsInToc', 'Show artwork credits in ToC'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('ShowFullSizeImage', 'Enable full popup link to image'));
-		$fields->addFieldToTab("Root.Main", new UploadField("FullSizeImage", "Specific image to be used for full popup (optional, we use the 'unique image' field if this isn't filled out)"));
+		$fields->addFieldToTab("Root.Main", UploadField::create("FullSizeImage", "Larger unique image to be used for full popup")->addExtraClass('stacked')->setDescription("Optional field for a larger resolution version of the unique artwork image, we use the 'unique image' field if this isn't filled out."));
 
 		$fields->addFieldToTab('Root.Main', $titleField);
 		$fields->addFieldToTab('Root.Main', $untranslatedTitleField);
-		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalTitleUseAltFont', 'Use an alternate font for the original title (only check if the original title looks strange)'));
+
+		$fields->addFieldToTab('Root.Main', CheckboxField::create('OriginalTitleUseAltFont', 'Use an alternate font for the original title')->setDescription('Uses the Helvetica font file for the original title\'s  instead of Futura. Helvetica has a larger set of characters from other languages and may be preferable for some languages.'));
 		$fields->addFieldToTab('Root.Main', new TextField('OriginalLanguage', 'Original Language'));
 		$fields->addFieldToTab('Root.Main', new CheckboxField('OriginalRTL', 'Original language is read/written from right to left'));
-		$fields->addFieldToTab('Root.Main', TextField::create('OriginalWorkButtonText', 'Original Work Button Text')->setDescription(' (default: "Original" if left blank)'));
+		$fields->addFieldToTab('Root.Main', TextField::create('OriginalWorkButtonText', 'Original Work Button Text')->setDescription('Default: "Original" if left blank)'));
 		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('Content', 'Original work')->addExtraClass('stacked'));
 
-		$translatedTitleField = new HTMLEditorField('TranslatedTitle', ' Translated title');
+
+		$translatedTitleField = HTMLEditorField::create('TranslatedTitle', ' Translated title')->addExtraClass('stacked');
 		$translatedTitleField->setRows(1);
 
 		$fields->addFieldToTab('Root.Main', $translatedTitleField);
 		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('Content2', 'Translated work')->addExtraClass('stacked'));
 
-		$fields->addFieldToTab('Root.TranslatorNote', TextField::create('TranslatorNoteButtonText', 'Translator note button text (default: "Translator Notes" if left blank)'));
+		$fields->addFieldToTab('Root.TranslatorNote', TextField::create('TranslatorNoteButtonText', 'Translator note button text')->setDescription('Default: "Translator Notes" if left blank'));
 		$fields->addFieldToTab('Root.TranslatorNote', HTMLEditorField::create('TranslatorNote', 'Translator note')->addExtraClass('stacked'));
 
 		$fields->addFieldToTab('Root.InTheClassroom', HTMLEditorField::create('InTheClassroom', 'In the Classroom')->addExtraClass('stacked'));
@@ -319,7 +323,8 @@ class Article extends Page {
 		$gridFieldConfig = GridFieldConfig_RelationEditor::create();
 		$newGridField = new GridField('Authors', 'Authors', $this->Authors(), $gridFieldConfig);
 
-		$fields->addFieldToTab('Root.Authors', HTMLEditorField::create('CustomByline', 'Custom byline')->setRows(3)->addExtraClass('stacked')->setDescription('Replaces the typical "X translates from Y"-type byline in the table of contents and on this page'));
+		$fields->addFieldToTab('Root.Authors', HTMLEditorField::create('CustomByline', 'Custom byline')->setRows(3)->addExtraClass('stacked')->setDescription('Replaces the "X translates from Y"-type byline in the table of contents and on this page'));
+        $fields->addFieldToTab('Root.Authors', HTMLEditorField::create('OriginalCustomByline', 'Original work custom byline')->setRows(3)->addExtraClass('stacked')->setDescription('Replaces the "By Y"-type byline on this piece\'s page'));
 		$fields->addFieldToTab('Root.Authors', $newGridField);
 
 		$gridFieldConfig2 = GridFieldConfig_RelationEditor::create();

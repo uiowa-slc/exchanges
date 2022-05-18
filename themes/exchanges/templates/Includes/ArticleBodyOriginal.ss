@@ -11,8 +11,9 @@
 						<% end_if %>
 					</div>
 					<span class="author">
-						<% if $Authors %>By
-						<% loop $Authors %>
+						<% if $OriginalCustomByline %>
+                            $OriginalCustomByline
+                        <% else_if $Authors %>By
 							<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
 						<% end_loop %>
 						<% end_if %>

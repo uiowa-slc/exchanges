@@ -5,7 +5,14 @@
 
 				<div class="card-list__text card-list__text--always-visible card-list__text--large">
 					<h2 class="card-list__header card-list__header--large">$Title</h2>
-	  			<p class="card-list__byline card-list__byline--small">$TranslatorByline(false).Plain</p>
+
+	  			<p class="card-list__byline card-list__byline--small">
+                <% if $CustomByline %>
+                    $CustomByline.Plain
+                <% else %>
+                    $TranslatorByline(false).Plain
+                <% end_if %>
+            </p>
 				</div>
 		
 	</a>

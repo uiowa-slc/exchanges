@@ -181,6 +181,10 @@ hr {
     line-height: auto;
     margin-bottom: 0px;
     font-family: $header-font-family;
+
+    p{
+        font-size: rem-calc(14);
+    }
 }
 
 .category {
