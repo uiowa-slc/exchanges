@@ -19,7 +19,6 @@ class Subjournal extends Page {
 	public function getSettingsFields() {
 
 		$fields = parent::getSettingsFields();
-
 		$fields->addFieldToTab('Root.Settings', new TextField('Identifier'));
 
 		return $fields;
