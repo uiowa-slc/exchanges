@@ -10,6 +10,7 @@ import gulpLoadPlugins from 'gulp-load-plugins';
 
 import { create as bsCreate } from 'browser-sync';
 const browserSync = bsCreate();
+const sass = require('gulp-sass')(require('node-sass'));
 
 // Proxy value dependent on MAMP config
 browserSync.init({
@@ -20,6 +21,7 @@ browserSync.init({
 import pkg from './package.json';
 
 const $ = gulpLoadPlugins();
+
 
 // Lint JavaScript
 function lint(){
@@ -89,12 +91,13 @@ function styles(){
   return gulp.src([
     './themes/exchanges/src/styles/main.scss',
     './themes/exchanges/src/styles/ancient.scss',
+    './themes/exchanges/src/styles/turkoslavia.scss',
     // './themes/exchanges/src/styles/subjournals/ancient.scss',
     './themes/exchanges/src/styles/editor.scss'
   ])
     .pipe($.newer('.tmp/styles'))
     .pipe($.sourcemaps.init())
-    .pipe($.sass({
+    .pipe(sass({
       precision: 10,
       includePaths: [
         './themes/exchanges/src/libs/foundation/scss',
@@ -102,7 +105,7 @@ function styles(){
         './node_modules/'
 
       ]
-    }).on('error', $.sass.logError))
+    }).on('error', sass.logError))
     .pipe(gulp.dest('.tmp/styles'))
     // Concatenate and minify styles
     .pipe($.if('*.css', $.postcss(plugins)))
