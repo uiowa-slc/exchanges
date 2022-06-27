@@ -1,7 +1,15 @@
 body{
-	background-image: url('../images/dark_wall.png');
+
 }
 
+.subjournal-logo{
+    display: block;
+    max-width: 300px;
+    padding: 23px 0;
+}
+.top-bar.has-dropshadow{
+    text-shadow: none;
+}
 .top-bar .name h1{
     font-size: rem-calc(18);
 }
@@ -21,27 +29,27 @@ body{
     }
 }
 .article__container{
-	border: none;
-	background: none;
+    border: none;
+    background: none;
 }
 
 .byline, .author {
-    color: #eee;
+    // color: #eee;
 }
 
 .footer{
-	background: #121212;
+    background: #121212;
 }
 
-.toc__letter-link{
-	color :white;
-}
+// .toc__letter-link{
+//     color :white;
+// }
 
 
 .cover-content h1{
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .top-bar-section ul li>a{
-	text-transform: none;
+    text-transform: none;
 }

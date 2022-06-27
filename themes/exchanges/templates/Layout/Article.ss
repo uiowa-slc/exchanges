@@ -10,11 +10,14 @@
 	    </div>
 	    <div class="medium-8 show-for-large-up columns <% if not $Artist %>end<%end_if %>">
 	        <ul class="tabs translation-nav " data-tab role="tablist" data-options="scroll_to_content: false">
+
+            <% if not $Subjournal.HideSideBySide %>
 	        <li class="tab-title translation-nav__item active" role="presentation">
 	            <a href="#side-by-side" role="tab" tabindex="0" aria-selected="true" aria-controls="side-by-side">
 	                Side-by-side
 	            </a>
 	        </li>
+            <% end_if %>
 	        <li class="tab-title translation-nav__item" role="presentation">
 	            <a href='#original' role="tab" tabindex="0" aria-selected="false" aria-controls="original">
 	                $OriginalWorkButtonTextCustom

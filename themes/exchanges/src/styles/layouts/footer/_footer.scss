@@ -42,88 +42,45 @@ $break-xlarge: 1140px;
 
         }
     }
-}
 
-.footer p {
-    @media screen and (min-width: $break-small) {
-        font-size: rem-calc(13);
+    &__logo{
+        display: block;
+        max-width: 400px;
+        margin: auto;
     }
 
-}
+    &__nav {
+        list-style: none;
+        margin: 0;
+        padding: 1em 0 0;
 
-.footer a {
-    color: lighten($primary-color, 50);
+        li {
+            display: inline-block;
+        }
+        &:first-child {
+            padding-top: 0;
+        }
 
-    &:hover {}
-}
+        a {
+            display: block;
+            padding: 10px 0;
 
-.footer h4 {
-    color: #eee;
-    font-weight: 300;
-
-    text-transform: uppercase;
-
-    @media screen and (min-width: $break-small) {
-        margin-top: 0;
+            @media screen and (min-width: $break-small) {
+                font-size: rem-calc(13);
+                padding: 5px 0 5px 10px;
+            }
+        }
     }
-}
+    p {
+        @media screen and (min-width: $break-small) {
+            font-size: rem-calc(13);
+        }
 
-.footer-nav {
-    list-style: none;
-    margin: 0;
-    padding: 1em 0 0;
-
-    @media screen and (min-width: $break-small) {}
-
-    li {
-        display: inline-block;
     }
-}
 
-.footer-nav:first-child {
-    padding-top: 0;
-}
+    a {
+        color: lighten($primary-color, 50);
 
-.footer-nav a {
-    display: block;
-    padding: 10px 0;
-
-    @media screen and (min-width: $break-small) {
-        font-size: rem-calc(13);
-        padding: 5px 0 5px 10px;
-    }
-}
-
-@media only screen and (max-width: $break-small) {
-    .mobile-half {
-        float: left;
-        width: 50%;
-    }
-}
-
-.footer .btn {
-    color: #333;
-}
-
-.appt-btn {
-    border: 3px solid #eee;
-    color: #fff;
-    display: block;
-    margin-top: 12px;
-    padding: 5px;
-    text-align: center;
-
-    &:hover {
-        background: #fff;
-        color: #333;
-        text-decoration: none;
-    }
-}
-
-.footer .logo {
-    display: block;
-
-    &.uiowa {
-        max-width: 200px;
+        &:hover {}
     }
 }

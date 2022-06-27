@@ -1,6 +1,6 @@
 /* Site Specific Settings: */
 $footer-padding: 180px;
-$topbar-base-color: #111;
+$topbar-base-color: #fff;
 $article-row-width: 1600px;
 $article-poetry-padding: 150px;
 
@@ -11,7 +11,7 @@ $article-poetry-padding: 150px;
 
 // Default Colors
 //$primary-color: #1A79AB;
-$primary-color: #03a3be;
+$primary-color: #991003;
 $secondary-color: #746457;
 $primary-brown: #28201A;
 
@@ -66,8 +66,8 @@ $column-gutter: rem-calc(35);
 // $total-columns: 12;
 
 // We use these to control various global styles
-$body-bg: #222;
-$body-font-color: #fff;
+$body-bg: #fff;
+$body-font-color: #333;
 $body-font-family: "garamond-premier-pro",
 serif;
 $arabic-font-family: "Noto Serif",
@@ -145,7 +145,7 @@ serif;
 
 // $header-font-weight: normal;
 // $header-font-style: normal;
-$header-font-color: #eee;
+$header-font-color: #222;
 $header-line-height: 0.95;
 
 // $header-top-margin: .2rem;
@@ -1170,7 +1170,7 @@ $tabs-navigation-font-family: $header-font-family;
 // Background color for the top bar
 // $topbar-bg-color: #fff;
 
-$topbar-bg-color: rgba(0, 0, 0, 0);
+$topbar-bg-color: #efefef;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1184,7 +1184,7 @@ $topbar-height: rem-calc(60);
 
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: none;
-$topbar-dropdown-link-color: lighten($primary-color, 30);
+$topbar-dropdown-link-color: $primary-color;
 $topbar-dropdown-link-bg: $topbar-bg;
 
 // $topbar-dropdown-link-weight: normal;
@@ -1194,10 +1194,10 @@ $topbar-dropdown-toggle-color: #eee;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: white;
-$topbar-link-color-hover: lighten($primary-color, 30);
-$topbar-link-color-active: lighten($primary-color, 40);
-$topbar-link-color-active-hover: lighten($primary-color, 15);
+$topbar-link-color: #666;
+$topbar-link-color-hover: $primary-color;
+$topbar-link-color-active: $primary-color;
+$topbar-link-color-active-hover: $primary-color;
 
 // $topbar-link-weight: normal;
 $topbar-link-font-size: rem-calc(13);

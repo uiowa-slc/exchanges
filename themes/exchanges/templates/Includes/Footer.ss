@@ -1,25 +1,23 @@
 <footer class="footer clearfix" role="contentinfo">
 	<div class="row">
-        <div class="large-3 columns large-centered">
+        <div class="large-4 columns large-centered">
             <div class="text-center">
-    			<p><a href="$absoluteBaseURL" class="hide-print logo"><img src="$ThemeDir/dist/images/exchanges-logo.svg" alt="Exchanges" style="margin-top: -20px;"></a></p>
+                <% if $Subjournal %>
+                    <p>In collaboration with:</p>
+                <% end_if %>
+    			<p><a href="$absoluteBaseURL" class="hide-print"><img class="footer__logo" src="$ThemeDir/dist/images/exchanges-logo.svg" alt="Exchanges" style="margin-top: -20px;"></a></p>
     			<p>
                     <a href="https://www.uiowa.edu">The University of Iowa</a><br /><a href="http://clas.uiowa.edu" target="_blank">College of Liberal Arts &amp; Sciences</a><br />
                     <a href="http://clas.uiowa.edu/dwllc" target="_blank">Division of World Languages, Literatures &amp; Cultures</a><br />
                     111 Phillips Hall<br />
                     Iowa City, IA 52242-1323
                  </p>
-                <ul class="footer-nav">
+                <ul class="footer__nav">
                     <% loop Menu(1) %>
                         <li><a href="$Link">$MenuTitle</a></li>
                     <% end_loop %>
                 </ul>
             </div>
-    	</div>
-    	<div class="large-9 columns">
-    		<div class="colgroup">
-
-    		</div>
     	</div>
 	</div>
 </footer>

@@ -4,7 +4,11 @@
 			<ul class="title-area">
 				<li class="name">
 					<% with $getSubjournal %>
-						<h1><a href="$Link">$Title</a></h1>
+                        <% if $UseImageForLogo %>
+                         <h1><a href="$Link"><img class="subjournal-logo" src="{$ThemeDir}/dist/images/{$Identifier}-logo.png" alt="$Title" /></a></h1>
+                        <% else %>
+						  <h1><a href="$Link">$Title</a></h1>
+                        <% end_if %>
 					<% end_with %>
 				</li>
 				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
