@@ -8,14 +8,11 @@
 							<h1 class="article__shared-title">$Title.RAW</h1>
 						<% end_if %>
 					</div>
-                    <% if $Translators %>
+
 						<span class="author">
-							Translated <% if $OriginalLanguage %>from the {$OriginalLanguage} <% end_if %>by
-							<% loop $Translators %>
-							<a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
-							<% end_loop %>
+	                       <% include BylineTranslators %>
 						</span>
-                    <% end_if %>
+
 					<p class="hide-for-large-up author">
 						<a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>
 					</p>

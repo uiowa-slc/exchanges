@@ -13,13 +13,13 @@
 
             <% if not $Subjournal.HideSideBySide %>
 	        <li class="tab-title translation-nav__item active" role="presentation">
-	            <a href="#side-by-side" role="tab" tabindex="0" aria-selected="true" aria-controls="side-by-side">
+	            <a href="#side-by-side" role="tab" tabindex="0" <% if $Subjournal.HideSideBySide %>aria-selected="false"<% else %>aria-selected="true"<% end_if %> aria-controls="side-by-side">
 	                Side-by-side
 	            </a>
 	        </li>
             <% end_if %>
-	        <li class="tab-title translation-nav__item" role="presentation">
-	            <a href='#original' role="tab" tabindex="0" aria-selected="false" aria-controls="original">
+	        <li class="tab-title translation-nav__item <% if $Subjournal.HideSideBySide %>active<% end_if %>" role="presentation">
+	            <a href='#original' role="tab" tabindex="0" <% if $Subjournal.HideSideBySide %>aria-selected="true"<% else %>aria-selected="false"<% end_if %> aria-controls="original">
 	                $OriginalWorkButtonTextCustom
 	            </a>
 	        </li>
@@ -80,10 +80,12 @@
 	        <div class="row article__wrap">
 	            <div class="large-12 columns">
 	                <div class="tabs-content">
+                        <% if not $Subjournal.HideSideBySide %>
 	                      <section role="tabpanel" aria-hidden="false" class="content active" id="side-by-side">
 	                        <% include ArticleBodySideBySide %>
 	                      </section>
-	                      <section role="tabpanel" aria-hidden="true" class="content" id="original">
+                        <% end_if %>
+	                      <section role="tabpanel" aria-hidden="true" class="content <% if $Subjournal.HideSideBySide %>active<% end_if %>" id="original">
 	                        <% include ArticleBodyOriginal %>
 	                      </section>
 	                      <section role="tabpanel" aria-hidden="true" class="content" id="translated">

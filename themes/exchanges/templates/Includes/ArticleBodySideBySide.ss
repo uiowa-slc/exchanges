@@ -9,11 +9,9 @@
                             <h1 class="article__shared-title">$Title.RAW</h1>
                         <% end_if %>
                     </div>
+
                         <span class="author">
-                            Translated <% if $OriginalLanguage %>from the {$OriginalLanguage} by <% end_if %>
-                            <% loop $Translators %>
-                            <a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
-                            <% end_loop %>
+                            <% include BylineTranslators %>
                             <% if $TranslatorNote %>
                                 <br />
                                 <a role="button" class="link--dashed" href="#" data-reveal-id="translator-notes-modal">
@@ -27,6 +25,7 @@
                                 </a>
                             <% end_if %>
                         </span>
+
                     <p class="hide-for-large-up author">
                         <a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>
                     </p>
@@ -51,14 +50,7 @@
                         <% end_if %>
                     </div>
                     <span class="author">
-
-                        <% if $OriginalCustomByline %>
-                            $OriginalCustomByline
-                        <% else_if $Authors %>By
-                        <% loop $Authors %>
-                            <a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
-                        <% end_loop %>
-                        <% end_if %>
+                        <% include BylineAuthors %>
                     </span>
                     <p class="hide-for-large-up author">
                         <a href="#translated-work">View Translated Work &uarr;</a>

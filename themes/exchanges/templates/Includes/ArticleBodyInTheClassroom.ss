@@ -9,10 +9,7 @@
                     <% end_if %>
                 </div>
                 <span class="author">
-                    Translated <% if $OriginalLanguage %>from the {$OriginalLanguage} by <% end_if %>
-                    <% loop $Translators %>
-                    <a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
-                    <% end_loop %>
+                    <% include BylineTranslators %>
                 </span>
                 <p class="hide-for-large-up author">
                     <a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>
@@ -21,14 +18,6 @@
             <div class="article__text">
                 <h2>In the Classroom</h2>
                 $InTheClassroom
-                <%--<hr />
-                 <% if $Translators %>
-                    <p>
-                    <% loop $Translators %>
-                        <a href="$Link" class="text-nowrap">$Name</a><% if not $Last %>, <% end_if %>
-                    <% end_loop %>
-                    </p>
-                <% end_if %> --%>
             </div>
             <p class="hide-for-large-up">
                 <br /><br /><a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>

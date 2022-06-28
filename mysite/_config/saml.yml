@@ -11,6 +11,4 @@ SilverStripe\Core\Injector\Injector:
   SilverStripe\Security\Security:
     properties:
       Authenticators:
-        hawkid: '%$SilverStripe\SAML\Authenticators\SAMLAuthenticator'
-SilverStripe\SAML\Authenticators\SAMLAuthenticator:
-  'name': 'HawkID'
+        default: '%$SilverStripe\SAML\Authenticators\SAMLAuthenticator'
