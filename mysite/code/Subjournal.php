@@ -9,7 +9,8 @@ class Subjournal extends Page {
 	private static $db = array(
 		'Identifier' => 'Varchar(155)',
         'UseImageForLogo' => 'Boolean',
-        'HideSideBySide' => 'Boolean'
+        'HideSideBySide' => 'Boolean',
+        'HideSubNavigationFooter' => 'Boolean'
 
 	);
 
@@ -22,8 +23,8 @@ class Subjournal extends Page {
 		$fields = parent::getSettingsFields();
 		$fields->addFieldToTab('Root.Settings', TextField::create('Identifier')->setDescription('Unique identifier for this subjournal, used for automatically pulling in CSS and image files in the frontend.'));
         $fields->addFieldToTab('Root.Settings', CheckboxField::create('UseImageForLogo', 'Use image file for logo')->setDescription('Uses the unique identifier to find a logo image in dist/images/[identifier]-logo.png.'));
-        $fields->addFieldToTab('Root.Settings', CheckboxField::create('HideSideBySide', 'Hide side-by-side columns')->setDescription('Hides side-by-side column'));
-
+        $fields->addFieldToTab('Root.Settings', CheckboxField::create('HideSideBySide', 'Hide side-by-side columns')->setDescription('Hides the left and right columns that show both the original and translated piece.'));
+        $fields->addFieldToTab('Root.Settings', CheckboxField::create('HideSubNavigationFooter', 'Hide subnavigation in footer')->setDescription('Hides the links that show the subnavigation on the journal\'s homepage.'));
 		return $fields;
 	}
 

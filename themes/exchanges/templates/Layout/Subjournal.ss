@@ -57,16 +57,17 @@
 		<div class="row">
 			<div class="large-8 columns large-centered">
 				$Content
+                <% if not $HideSubNavigationFooter %>
+    				<% loop $Menu(2) %>
+    					<% if $ClassName == "IssueHolder" %>
 
-				<% loop $Menu(2) %>
-					<% if $ClassName == "IssueHolder" %>
-						
-					<% else %>
-						<h3><a href="$Link">$Title</a></h3>
-						<p>$Content.Summary <a href="$Link">Continue reading...</a></p>
-					<% end_if %>
+    					<% else %>
+    						<h3><a href="$Link">$Title</a></h3>
+    						<p>$Content.Summary <a href="$Link">Continue reading...</a></p>
+    					<% end_if %>
 
-				<% end_loop %>
+    				<% end_loop %>
+                <% end_if %>
 
 				<% with $IssueHolder %>
 					<% if $Children.Count > 1 %>

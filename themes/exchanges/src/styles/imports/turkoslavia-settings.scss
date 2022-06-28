@@ -3,7 +3,7 @@ $footer-padding: 180px;
 $topbar-base-color: #fff;
 $article-row-width: 1600px;
 $article-poetry-padding: 150px;
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400&display=swap');
 /* Foundation Settings: */
 
 // The latest settings can be found here:
@@ -68,8 +68,7 @@ $column-gutter: rem-calc(35);
 // We use these to control various global styles
 $body-bg: #fff;
 $body-font-color: #333;
-$body-font-family: "garamond-premier-pro",
-serif;
+$body-font-family: 'Barlow', sans-serif;
 $arabic-font-family: "Noto Serif",
 serif;
 
@@ -140,8 +139,7 @@ serif;
 
 // We use these to control header font styles
 //$header-font-family: "century-gothic", "sans-serif";
-$header-font-family: mrs-eaves-xl-serif,
-serif;
+$header-font-family: Barlow, sans-serif;
 
 // $header-font-weight: normal;
 // $header-font-style: normal;
@@ -1170,7 +1168,7 @@ $tabs-navigation-font-family: $header-font-family;
 // Background color for the top bar
 // $topbar-bg-color: #fff;
 
-$topbar-bg-color: #efefef;
+$topbar-bg-color: #fff;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
