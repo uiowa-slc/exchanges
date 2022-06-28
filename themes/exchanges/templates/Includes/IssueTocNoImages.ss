@@ -6,10 +6,9 @@
                 <% if $Content %>$Content<% end_if %>
             <% end_if %>
             <% if $CustomByline %>
-
-               <p class="card-list__byline">$CustomByline</p>
+               <p class="card-list__byline card-list__byline--text-only">$CustomByline</p>
             <% else %>
-                <p class="card-list__byline">$TranslatorByline(false).RAW</p>
+                <p class="card-list__byline card-list__byline--text-only">$TranslatorByline(false).RAW</p>
             <% end_if %>
 		</li>
 	<% end_loop %>
