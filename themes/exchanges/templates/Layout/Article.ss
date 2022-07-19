@@ -17,7 +17,6 @@
 	                Side-by-side
 	            </a>
 	        </li>
-            <% end_if %>
 	        <li class="tab-title translation-nav__item <% if $Subjournal.HideSideBySide %>active<% end_if %>" role="presentation">
 	            <a href='#original' role="tab" tabindex="0" <% if $Subjournal.HideSideBySide %>aria-selected="true"<% else %>aria-selected="false"<% end_if %> aria-controls="original">
 	                $OriginalWorkButtonTextCustom
@@ -25,9 +24,22 @@
 	        </li>
 	        <li class="tab-title translation-nav__item" role="presentation">
 	            <a href='#translated' role="tab" tabindex="0" aria-selected="false" aria-controls="translated">
-	                Translated
+	                Translation
 	            </a>
 	        </li>
+            <% else %>
+
+            <li class="tab-title translation-nav__item <% if $Subjournal.HideSideBySide %>active<% end_if %>" role="presentation">
+                <a href='#translated' role="tab" tabindex="0" aria-selected="false" aria-controls="translated">
+                    Translation
+                </a>
+            </li>
+            <li class="tab-title translation-nav__item" role="presentation">
+                <a href='#original' role="tab" tabindex="0" <% if $Subjournal.HideSideBySide %>aria-selected="true"<% else %>aria-selected="false"<% end_if %> aria-controls="original">
+                    $OriginalWorkButtonTextCustom
+                </a>
+            </li>
+            <% end_if %>
 	        <% if $TranslatorNote %>
 	            <li class="tab-title translation-nav__item" role="presentation">
 	                <a href='#translator-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
@@ -73,22 +85,24 @@
 	</noscript>
 
 	<div class="row row--large article__columns">
+        <% if not $Subjournal.HideShareLinks %>
 	    <div class="large-1 columns exchanges-sticky">
 	        <% include BlogShareIcons %>
 	    </div>
-	    <div class="large-11 columns">
+        <% end_if %>
+	    <div class="<% if $Subjournal.HideShareLinks %>large-12<% else %>large-11<% end_if %> columns">
 	        <div class="row article__wrap">
-	            <div class="large-12 columns">
+	            <div class="<% if $Subjournal.HideShareLinks %>large-10 large-centered<% else %>large-11<% end_if %> columns">
 	                <div class="tabs-content">
                         <% if not $Subjournal.HideSideBySide %>
 	                      <section role="tabpanel" aria-hidden="false" class="content active" id="side-by-side">
 	                        <% include ArticleBodySideBySide %>
 	                      </section>
                         <% end_if %>
-	                      <section role="tabpanel" aria-hidden="true" class="content <% if $Subjournal.HideSideBySide %>active<% end_if %>" id="original">
+	                      <section role="tabpanel" aria-hidden="true" class="content" id="original">
 	                        <% include ArticleBodyOriginal %>
 	                      </section>
-	                      <section role="tabpanel" aria-hidden="true" class="content" id="translated">
+	                      <section role="tabpanel" aria-hidden="true" class="content <% if $Subjournal.HideSideBySide %>active<% end_if %>" id="translated">
 	                        <% include ArticleBodyTranslated %>
 	                      </section>
 	                      <% if $TranslatorNote %>

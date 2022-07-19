@@ -10,7 +10,8 @@ class Subjournal extends Page {
 		'Identifier' => 'Varchar(155)',
         'UseImageForLogo' => 'Boolean',
         'HideSideBySide' => 'Boolean',
-        'HideSubNavigationFooter' => 'Boolean'
+        'HideSubNavigationFooter' => 'Boolean',
+        'HideShareLinks' => 'Boolean'
 
 	);
 
@@ -25,6 +26,8 @@ class Subjournal extends Page {
         $fields->addFieldToTab('Root.Settings', CheckboxField::create('UseImageForLogo', 'Use image file for logo')->setDescription('Uses the unique identifier to find a logo image in dist/images/[identifier]-logo.png.'));
         $fields->addFieldToTab('Root.Settings', CheckboxField::create('HideSideBySide', 'Hide side-by-side columns')->setDescription('Hides the left and right columns that show both the original and translated piece.'));
         $fields->addFieldToTab('Root.Settings', CheckboxField::create('HideSubNavigationFooter', 'Hide subnavigation in footer')->setDescription('Hides the links that show the subnavigation on the journal\'s homepage.'));
+        $fields->addFieldToTab('Root.Settings', CheckboxField::create('HideShareLinks', 'Hide social media share links')->setDescription('Hides the social media share links in the body of the articles'));
+
 		return $fields;
 	}
 
