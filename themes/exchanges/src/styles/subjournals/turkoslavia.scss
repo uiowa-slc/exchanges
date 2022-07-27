@@ -20,6 +20,9 @@ body{
 .top-bar .top-bar-section ul li>a {
     font-size: rem-calc(13);
 }
+.nav-screen--transparent{
+    background: white;
+}
 .article__columns{
     background: white;
     color: #222;
@@ -43,6 +46,27 @@ body{
 
 .footer{
     background: #121212;
+}
+
+.footer__logo{
+    max-width: 200px;
+}
+
+.tabs .tab-title.active>a, .tabs dd.active>a {
+    background: #fff;
+    color: #222;
+    border-bottom: 2px solid $primary-color;
+}
+
+.tabs .tab-title>a:hover, .tabs dd>a:hover {
+    background: #fff;
+}
+
+.exchanges-sticky{
+    display: none;
+}
+.cover-content span{
+    display: none;
 }
 
 // .toc__letter-link{
