@@ -1,3 +1,13 @@
+<p class="text-center"><a class="link--dashed toc__letter-link"href="$LetterLink">$LetterTitle</a></p>
+        <% if $ArtworkCredits %>
+            <p class="text-center">
+                <% if $ArtworkCreditsTitle %>
+                    <a href="$CreditsLink">$ArtworkCreditsTitle</a>
+                <% else %>
+                    <a href="$CreditsLink" target="_blank">Artwork Credits</a>
+                <% end_if %>
+            </p>
+        <% end_if %>
 <ul class="toc-no-images">
 	<% loop $Children %>
 		<li class="toc-no-images__item">

@@ -21,6 +21,7 @@ class Issue extends Page {
 		'ArtworkCredits' => 'HTMLText',
 		'ArtworkCreditsTitle' => 'Text',
 		'ShowArtworkCreditsInToc' => 'Boolean',
+		'CoverImageOnly' => 'Boolean'
 	);
 
 	private static $has_one = array(
@@ -46,8 +47,6 @@ class Issue extends Page {
 	private static $can_be_root = false;
 
 	private static $allowed_children = array('Article', 'ArticleSingleColumn');
-
-	//private static $icon = array('mysite/images/tree/toc','file');
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
@@ -88,6 +87,13 @@ class Issue extends Page {
 
 		return $fields;
 	}
+
+	public function getSettingsFields() {
+		$fields = parent::getSettingsFields();
+		$fields->push(CheckboxField::create('CoverImageOnly', 'Show only the uncropped cover image')->setDescription('Show the full cover image without cropping it, hides the journal title and subheaders'));
+		return $fields;
+	}
+
 
 	public function Articles() {
 		return $this->Children();

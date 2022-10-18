@@ -1,7 +1,13 @@
 
 <% if $FeaturedIssue %>
 
-
+	
+	<% if $FeaturedIssue.CoverImageOnly %>
+		<% include IssueTopBar %>
+		<% with $FeaturedIssue %>
+			<% include CoverImageOnly %>
+		<% end_with %>
+	<% else %>
 	<div class="cover-container  <% if $FeaturedIssue.UseTitleDropShadow %>with-dropshadow<% end_if %> b-lazy" data-src="$FeaturedIssue.Emblem.FocusFill(1560, 861, false).URL" style="background-position: $FeaturedIssue.Emblem.FocusPoint.PercentageX% $FeaturedIssue.Emblem.FocusPoint.PercentageY%; background-size: cover;">
 		<div class="cover-screen" <% if $FeaturedIssue.Transparency %>style="background: rgba(68,68,68,{$FeaturedIssue.Transparency});"<% end_if %>>
 			<% include HomePageTopBar %>
@@ -18,6 +24,7 @@
 			</div>
 		</div>
 	</div>
+	<% end_if %>
 
 
 	<div class="layout layout--{$ClassName} typography">
@@ -27,6 +34,19 @@
 			<div class="row issue-preview__wrap">
 				<div class="large-12 issue-preview columns">
 					<h2 class="banner text-center">In this Issue:</h2>
+
+					
+
+					<p class="text-center"><a class="link--dashed toc__letter-link"href="$LetterLink">$LetterTitle</a></p>
+		            <% if $ArtworkCredits %>
+		                <p class="text-center">
+		                    <% if $ArtworkCreditsTitle %>
+		                        <a href="$CreditsLink">$ArtworkCreditsTitle</a>
+		                    <% else %>
+		                        <a href="$CreditsLink" target="_blank">Artwork Credits</a>
+		                    <% end_if %>
+		                </p>
+		            <% end_if %>
 					<ul class="text-center card-list card-list--two">
 						<% loop $Children.Limit(2) %>
 						<li class="card-list__item">
@@ -50,8 +70,6 @@
 			<% else %>
 				<% include IssueTocNoImages %>
 			<% end_if %>
-
-			<p class="issue-preview__start-reading text-center"><a href="$Link" class="button large">Start reading &rarr;</a></p>
 		<% end_with %>
 
 		<div class="row">

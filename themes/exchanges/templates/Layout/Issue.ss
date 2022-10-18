@@ -23,14 +23,6 @@
                 <% include IssueTocNoImages %>
             <% end_if %>
 
-			<p class="text-center"><a href="$Children.First.Link" class="button large">Start reading &rarr;</a></p>
-
-<%-- 			<h2>Other issues</h2>
-			<ul class="card-list">
-				<% loop $Parent.Children.Sort("Created DESC") %>
-					<% include IssueCard %>
-				<% end_loop %>
-			</ul> --%>
 		</div>
 	</div>
 </div>
