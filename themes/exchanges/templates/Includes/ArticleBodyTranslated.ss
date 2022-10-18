@@ -1,6 +1,6 @@
 <div id="article__container" class="article__container">
     <div class="row">
-        <div class="large-6 large-centered columns article__body--poem-lineheight article__body article__body--translated-work" id="translated-work">
+        <div class="large-8 large-centered columns article__body--poem-lineheight article__body article__body--translated-work" id="translated-work">
             <article class="article__translated">
                 <div class="article__translated-title article__meta">
                     <div>
