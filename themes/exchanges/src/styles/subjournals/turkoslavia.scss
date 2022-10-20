@@ -75,6 +75,9 @@ body{
 
 .article__body {
   padding: 0 0;
+  p{
+    font-weight: 300;
+  }
 }
 
 .cover-content h1{
@@ -83,4 +86,8 @@ body{
 
 .top-bar-section ul li>a{
     text-transform: none;
+}
+
+.translator-note-link{
+    display: none;
 }

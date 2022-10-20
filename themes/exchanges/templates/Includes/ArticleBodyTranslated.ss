@@ -13,13 +13,13 @@
                             <% include BylineTranslators %>
                             <% if $TranslatorNote %>
                                 <br />
-                                <a role="button" class="link--dashed" href="#" data-reveal-id="translator-notes-modal">
+                                <a role="button" class="translator-note-link link--dashed" href="#" data-reveal-id="translator-notes-modal">
                                     $TranslatorNoteButtonTextCustom
                                 </a>
                             <% end_if %>
                             <% if $InTheClassroom %>
                                 <br />
-                                <a role="button" class="link--dashed" href="#" data-reveal-id="in-the-classroom-modal">
+                                <a role="button" class="translator-note-link link--dashed" href="#" data-reveal-id="in-the-classroom-modal">
                                     In the Classroom
                                 </a>
                             <% end_if %>
