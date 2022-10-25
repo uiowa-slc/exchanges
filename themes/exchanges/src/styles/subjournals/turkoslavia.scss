@@ -74,7 +74,10 @@ body{
 // }
 
 .article__body {
-  padding: 0 0;
+    @media #{$large-up} {
+      padding: 0 0;
+    }
+
   p{
     font-weight: 300;
   }
@@ -90,4 +93,17 @@ body{
 
 .translator-note-link{
     display: none;
+}
+
+.toc-no-images__header{
+    font-size: 32px;
+}
+
+.toc-no-images__item{
+    padding: 5px 0;
+}
+
+.card-list__byline--text-only{
+    font-size: 18px;
+
 }
