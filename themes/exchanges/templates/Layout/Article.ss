@@ -5,10 +5,33 @@
 <% end_if %>
 <div class="layout layout--{$ClassName} typography">
 	<div class="row row--Article">
-	    <div class="small-6 large-2 columns">
+	    <div class="small-2 large-2 columns">
 	        <a href="$Parent.Link" class="breadcrumb">$Parent.Title</a>
 	    </div>
-	    <div class="medium-8 show-for-large-up columns <% if not $Artist %>end<%end_if %>">
+	    
+	    <% if $Artist %>
+	        <div class="small-12 medium-push-8 medium-2 columns">
+	            <p class="article__artist-credit">Image credit: $Artist</p>
+	            <p class="article__artist-credit">
+	            <% if $ShowCreditsLink %>
+	                    <% if $Parent.ArtworkCreditsTitle %>
+	                        <a class="article__artwork-credit article__artwork-credit--small" href="$Parent.CreditsLink">$Parent.ArtworkCreditsTitle</a><% if $ShowFullSizeImage %><br /><% end_if %>
+	                    <% else %>
+	                        <a class="article__artwork-credit artwork-credit__link article__artwork-credit--small" href="$Parent.CreditsLink" target="_blank">View Artwork Credits</a><% if $ShowFullSizeImage %><br /><% end_if %>
+	                    <% end_if %>
+	            <% end_if %>
+	            <% if $ShowFullSizeImage %>
+	                <% if $FullSizeImage %>
+	                    <a href="$FullSizeImage.Link" class="popup-link link--dashed article__artwork-credit article__full-size-image">View full size</a><br />
+	                <% else %>
+	                    <a class="popup-link link--dashed article__artwork-credit--small" href="$BannerImage.Link">View full size </a><br />
+	                <% end_if %>
+	            <% end_if %>
+
+	            </p>
+	        </div>
+	    <% end_if %>
+	    <div class="small-12 medium-8 medium-pull-2 large-8 columns <% if not $Artist %>end<%end_if %>">
 	        <ul class="tabs translation-nav " data-tab role="tablist" data-options="scroll_to_content: false">
 
             <% if not $Subjournal.HideSideBySide %>
@@ -56,28 +79,6 @@
 	        <% end_if %>
 	        </ul>
 	    </div>
-	    <% if $Artist %>
-	        <div class="small-6 large-2 columns">
-	            <p class="article__artist-credit">Image credit: $Artist</p>
-	            <p class="article__artist-credit">
-	            <% if $ShowCreditsLink %>
-	                    <% if $Parent.ArtworkCreditsTitle %>
-	                        <a class="article__artwork-credit article__artwork-credit--small" href="$Parent.CreditsLink">$Parent.ArtworkCreditsTitle</a><% if $ShowFullSizeImage %><br /><% end_if %>
-	                    <% else %>
-	                        <a class="article__artwork-credit artwork-credit__link article__artwork-credit--small" href="$Parent.CreditsLink" target="_blank">View Artwork Credits</a><% if $ShowFullSizeImage %><br /><% end_if %>
-	                    <% end_if %>
-	            <% end_if %>
-	            <% if $ShowFullSizeImage %>
-	                <% if $FullSizeImage %>
-	                    <a href="$FullSizeImage.Link" class="popup-link link--dashed article__artwork-credit article__full-size-image">View full size</a><br />
-	                <% else %>
-	                    <a class="popup-link link--dashed article__artwork-credit--small" href="$BannerImage.Link">View full size </a><br />
-	                <% end_if %>
-	            <% end_if %>
-
-	            </p>
-	        </div>
-	    <% end_if %>
 	</div>
 
 	<noscript>

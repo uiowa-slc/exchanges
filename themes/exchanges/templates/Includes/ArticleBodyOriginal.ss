@@ -13,9 +13,6 @@
 					<span class="author">
                         <% include BylineAuthors %>
 					</span>
-					<p class="hide-for-large-up author">
-						<a href="#translated-work">View Translated Work &uarr;</a>
-					</p>
 				</div>
 
 				<div class="article__text article__text--poem">

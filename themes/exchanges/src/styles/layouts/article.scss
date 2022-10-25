@@ -251,9 +251,12 @@
 }
 
 .translation-nav__item {
+
     &.tab-title {
         float: none;
         display: inline-block;
+         margin-bottom: 3px !important;
+
     }
 }
 

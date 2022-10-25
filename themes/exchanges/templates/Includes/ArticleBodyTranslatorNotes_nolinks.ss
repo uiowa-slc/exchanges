@@ -12,10 +12,6 @@
                         <span class="author">
                             <% include BylineTranslators %>
                         </span>
-
-                    <p class="hide-for-large-up author">
-                        <a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>
-                    </p>
                 </div>
                 <div class="article__text">
                     <h2>$TranslatorNoteButtonTextCustom</h2>
@@ -29,9 +25,7 @@
                         </p>
                     <% end_if %>
                 </div>
-                <p class="hide-for-large-up">
-                    <br /><br /><a href="#original-work">$OriginalWorkButtonTextCustom &darr;</a>
-                </p>
+
             </article>
         </div>
 
