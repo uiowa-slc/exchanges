@@ -69,6 +69,15 @@ body{
     display: none;
 }
 
+.link--dashed{
+    border: none;
+    color: $primary-color;
+}
+
+.toc__artwork-credits{
+    display: none;
+}
+
 // .toc__letter-link{
 //     color :white;
 // }

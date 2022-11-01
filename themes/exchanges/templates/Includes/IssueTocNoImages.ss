@@ -1,6 +1,6 @@
 <p class="text-center"><a class="link--dashed toc__letter-link"href="$LetterLink">$LetterTitle</a></p>
         <% if $ArtworkCredits %>
-            <p class="text-center">
+            <p class="text-center toc__artwork-credits">
                 <% if $ArtworkCreditsTitle %>
                     <a href="$CreditsLink">$ArtworkCreditsTitle</a>
                 <% else %>
