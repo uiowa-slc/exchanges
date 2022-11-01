@@ -56,11 +56,11 @@
         },
         "1": {
             "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/silverstripe-saml"
+            "url": "https://github.com/uiowa-slc/silverstripe-saml"
         },
         "2": {
             "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/division-analytics"
+            "url": "https://github.com/uiowa-slc/division-analytics"
         },
         "3": {
             "type": "vcs",
@@ -68,7 +68,7 @@
         },
         "repo-name": {
             "type": "vcs",
-            "url": "https://github.com/StudentLifeMarketingAndDesign/deploy-helper"
+            "url": "https://github.com/uiowa-slc/deploy-helper"
         }
     },
     "prefer-stable": true,
