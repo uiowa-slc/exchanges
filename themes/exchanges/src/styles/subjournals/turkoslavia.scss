@@ -74,7 +74,15 @@ body{
     color: $primary-color;
 }
 
+.toc__letter-link{
+    font-size: 32px;
+}
+
 .toc__artwork-credits{
+    display: none;
+}
+
+.article__subnav{
     display: none;
 }
 
