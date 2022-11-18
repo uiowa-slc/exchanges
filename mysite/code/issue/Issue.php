@@ -14,6 +14,7 @@ class Issue extends Page {
 		'IssueDate' => 'Text',
 		'IssueNumber' => 'Text',
 		'LetterFromEditorCustomTitle' => 'Text',
+        'LetterFromEditorSubtitle' => 'Text',
 		'LetterFromEditor' => 'HTMLText',
 		'Transparency' => 'Varchar(100)',
 		'UseTitleDropShadow' => 'Boolean',
@@ -79,6 +80,7 @@ class Issue extends Page {
 		$fields->addFieldToTab('Root.Main', $dateField = new TextField('IssueDate', 'Issue date'));
 		//$fields->addFieldToTab('Root.Main', new TextField('IssueNumber', 'Issue number'));
 		$fields->addFieldToTab('Root.Main', new TextField('LetterFromEditorCustomTitle', 'Letter From The Editors Custom Title (optional)'));
+        $fields->addFieldToTab('Root.Main', new TextField('LetterFromEditorSubtitle', 'Letter From The Editors Subtitle'));
 		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('LetterFromEditor', 'Letter From The Editors')->addExtraClass('stacked'));
 
 		$fields->addFieldToTab('Root.Main', new TextField('ArtworkCreditsTitle', 'Artwork Credits Title (optional, defaults to "Artwork Credits")'));

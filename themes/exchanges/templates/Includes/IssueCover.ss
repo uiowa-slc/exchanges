@@ -17,6 +17,9 @@
 			<div class="large-12 columns">
 				<span><h1 class="issue-title">$Title</h1></span>
 				<span><a href="$LetterLink">$LetterTitle &rarr;</a></span>
+                <% if $LetterCustomSubtitle %>
+                <span class="card-list__byline card-list__byline--text-only">$LetterCustomSubtitle</span>
+                <% end_if %>
 			</div>
 		</div>
 	</div>
