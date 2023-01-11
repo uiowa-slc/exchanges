@@ -31,7 +31,7 @@
 	            </p>
 	        </div>
 	    <% end_if %>
-	    <div class="small-12 medium-8 medium-pull-2 large-8 columns <% if not $Artist %>end<%end_if %>">
+	    <div class="small-12 <% if $Artist %>medium-8 medium-pull-2 <% else %>small-12<% end_if %> large-8 columns <% if not $Artist %>end<%end_if %>">
 	        <ul class="tabs translation-nav " data-tab role="tablist" data-options="scroll_to_content: false">
 
             <% if not $Subjournal.HideSideBySide %>
