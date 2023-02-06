@@ -5,7 +5,7 @@
 <% else %>
 
 
-<div class="cover-container <% if $UseTitleDropShadow %>with-dropshadow<% end_if %> b-lazy" data-src="$Emblem.FocusFill(1560, 861, false).URL" style="background-position: $Emblem.FocusPoint.PercentageX% $Emblem.FocusPoint.PercentageY%; background-size: cover;">
+<div class="cover-container <% if $UseTitleDropShadow %>with-dropshadow<% end_if %>" style=" background-image: url($Emblem.FocusFill(1560, 861, false).URL);background-position: $Emblem.FocusPoint.PercentageX% $Emblem.FocusPoint.PercentageY%; background-size: cover;">
 	<div class="cover-screen" <% if $Transparency %>style="background: rgba(68,68,68,{$Transparency});"<% end_if %>>
 		<% include IssueTopBar %>
 
