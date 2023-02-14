@@ -121,7 +121,7 @@ class ArticleSingleColumn extends Page {
 
 	}
 
-	public function getWriterListNice($links = "true", $writers) {
+	public function getWriterListNice($links = "true", $writers = array()) {
 
 		$writerString = new DBHTMLText();
 

@@ -431,7 +431,7 @@ class Article extends Page {
 
 	}
 
-	public function getWriterListNice($links = "true", $writers) {
+	public function getWriterListNice($links = "true", $writers = array()) {
 
 		$writerString = new DBText(null);
 
