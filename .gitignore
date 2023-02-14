@@ -19,3 +19,5 @@ smtp.yml
 .python-version
 .tmp
 .phpintel
+.graphql-generated/
+public/_graphql/
