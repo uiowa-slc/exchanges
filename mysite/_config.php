@@ -18,9 +18,9 @@ TinyMCEConfig::get('cms')
 
 HtmlEditorConfig::get('cms')->insertButtonsAfter('code', 'superscript');
 
-if (Director::isLive()) {
-	Director::forceSSL();
-}
+// if (Director::isLive()) {
+// 	Director::forceSSL();
+// }
 HtmlEditorConfig::get('cms')->setOption(
 	'extended_valid_elements',
 	'audio[*],video[*],iframe[*]'
