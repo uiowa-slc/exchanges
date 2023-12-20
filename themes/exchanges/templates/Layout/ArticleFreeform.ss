@@ -13,34 +13,34 @@
                 <ul class="tabs translation-nav " data-tab role="tablist" data-options="scroll_to_content: false">
 
                 <li class="tab-title translation-nav__item active" role="presentation">
-                    <a href="#main" role="tab" tabindex="0" aria-selected="true" aria-controls="side-by-side">
+                    <a href="{$Link}#main" role="tab" tabindex="0" aria-selected="true" aria-controls="side-by-side">
                         $Title
                     </a>
                 </li>
                 <% if $Content3 %>
                     <li class="tab-title translation-nav__item" role="presentation">
-                        <a href='#original' role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
+                        <a href="{$Link}#original" role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
                             $OriginalWorkButtonTextCustom
                         </a>
                     </li>
                 <% end_if %>
                 <% if $TranslatorNote %>
                     <li class="tab-title translation-nav__item" role="presentation">
-                        <a href='#translator-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
+                        <a href="{$Link}#translator-notes" role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
                             $TranslatorNoteButtonTextCustom
                         </a>
                     </li>
                 <% end_if %>
                 <% if $ArtistNotes %>
                     <li class="tab-title translation-nav__item" role="presentation">
-                        <a href='#artist-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="artist-notes">
+                        <a href="{$Link}#artist-notes" role="tab" tabindex="0" aria-selected="false" aria-controls="artist-notes">
                             Artist's Note
                         </a>
                     </li>
                 <% end_if %>
                 <% if $InTheClassroom %>
                     <li class="tab-title translation-nav__item" role="presentation">
-                        <a href='#in-the-classroom' role="tab" tabindex="0" aria-selected="false" aria-controls="in-the-classroom">
+                        <a href="{$Link}#in-the-classroom" role="tab" tabindex="0" aria-selected="false" aria-controls="in-the-classroom">
                             In the Classroom
                         </a>
                     </li>

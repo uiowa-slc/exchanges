@@ -36,43 +36,43 @@
 
             <% if not $Subjournal.HideSideBySide %>
 	        <li class="tab-title translation-nav__item active" role="presentation">
-	            <a href="#side-by-side" role="tab" tabindex="0" <% if $Subjournal.HideSideBySide %>aria-selected="false"<% else %>aria-selected="true"<% end_if %> aria-controls="side-by-side">
+	            <a href="{$Link}#side-by-side" role="tab" tabindex="0" <% if $Subjournal.HideSideBySide %>aria-selected="false"<% else %>aria-selected="true"<% end_if %> aria-controls="side-by-side">
 	                Side-by-side
 	            </a>
 	        </li>
 	        <li class="tab-title translation-nav__item <% if $Subjournal.HideSideBySide %>active<% end_if %>" role="presentation">
-	            <a href='#original' role="tab" tabindex="0" <% if $Subjournal.HideSideBySide %>aria-selected="true"<% else %>aria-selected="false"<% end_if %> aria-controls="original">
+	            <a href="{$Link}#original" role="tab" tabindex="0" <% if $Subjournal.HideSideBySide %>aria-selected="true"<% else %>aria-selected="false"<% end_if %> aria-controls="original">
 	                $OriginalWorkButtonTextCustom
 	            </a>
 	        </li>
 	        <li class="tab-title translation-nav__item" role="presentation">
-	            <a href='#translated' role="tab" tabindex="0" aria-selected="false" aria-controls="translated">
+	            <a href="{$Link}#translated" role="tab" tabindex="0" aria-selected="false" aria-controls="translated">
 	                Translation
 	            </a>
 	        </li>
             <% else %>
 
             <li class="tab-title translation-nav__item <% if $Subjournal.HideSideBySide %>active<% end_if %>" role="presentation">
-                <a href='#translated' role="tab" tabindex="0" aria-selected="false" aria-controls="translated">
+                <a href="{$Link}#translated" role="tab" tabindex="0" aria-selected="false" aria-controls="translated">
                     Translation
                 </a>
             </li>
             <li class="tab-title translation-nav__item" role="presentation">
-                <a href='#original' role="tab" tabindex="0" <% if $Subjournal.HideSideBySide %>aria-selected="true"<% else %>aria-selected="false"<% end_if %> aria-controls="original">
+                <a href="{$Link}#original" role="tab" tabindex="0" <% if $Subjournal.HideSideBySide %>aria-selected="true"<% else %>aria-selected="false"<% end_if %> aria-controls="original">
                     $OriginalWorkButtonTextCustom
                 </a>
             </li>
             <% end_if %>
 	        <% if $TranslatorNote %>
 	            <li class="tab-title translation-nav__item" role="presentation">
-	                <a href='#translator-notes' role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
+	                <a href="{$Link}#translator-notes" role="tab" tabindex="0" aria-selected="false" aria-controls="translator-notes">
 	                    $TranslatorNoteButtonTextCustom
 	                </a>
 	            </li>
 	        <% end_if %>
 	        <% if $InTheClassroom %>
 	            <li class="tab-title translation-nav__item" role="presentation">
-	                <a href='#in-the-classroom' role="tab" tabindex="0" aria-selected="false" aria-controls="in-the-classroom">
+	                <a href="{$Link}#in-the-classroom" role="tab" tabindex="0" aria-selected="false" aria-controls="in-the-classroom">
 	                    In the Classroom
 	                </a>
 	            </li>

@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="$ContentLocale.ATT" dir="$i18nScriptDirection.ATT">
 <head>
-    $GlobalAnalytics
 	<% base_tag %>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,6 +33,7 @@
 			}
 		</style>
 	<% end_if %>
+<script type="text/javascript" src="{$ThemeDir}/dist/scripts/main.min.js" defer></script>
 </head>
 <body class="$ClassName.ATT">
 
@@ -41,8 +41,6 @@
 
 	<% include Footer %>
 	$BetterNavigator
-<script type="text/javascript" src="{$ThemeDir}/dist/scripts/main.min.js"></script>
-$Analytics
 
 </body>
 </html>
